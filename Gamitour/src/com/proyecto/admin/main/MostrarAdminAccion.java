@@ -1,8 +1,11 @@
 package com.proyecto.admin.main;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.proyecto.modelo.Premio;
 import com.proyecto.service.ServiceActividadesImp;
 import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceItinerarios;
@@ -11,6 +14,8 @@ import com.proyecto.service.ServiceNoticias;
 import com.proyecto.service.ServiceNoticiasImp;
 import com.proyecto.service.ServiceParadas;
 import com.proyecto.service.ServiceParadasImp;
+import com.proyecto.service.ServicePremios;
+import com.proyecto.service.ServicePremiosImp;
 import com.proyecto.service.ServicePruebasCulturales;
 import com.proyecto.service.ServicePruebasCulturalesImp;
 import com.proyecto.service.ServicePruebasDeportivas;
@@ -33,16 +38,18 @@ public class MostrarAdminAccion extends Accion {
 		ServicePruebasCulturales spc = new ServicePruebasCulturalesImp();
 		ServicePruebasDeportivas spd = new ServicePruebasDeportivasImp();
 		ServiceVotos sv = new ServiceVotosImp();
+		ServicePremiosImp spr = new ServicePremiosImp();
 
+		request.setAttribute("listaPremios", spr.buscarTodos());
 		request.setAttribute("listaVotos", sv.buscarTodos());
 		request.setAttribute("listaPruebasDeportivas", spd.buscarTodos());
 		request.setAttribute("listaPruebasCulturales", spc.buscarTodos());
 		request.setAttribute("listaActividades", sa.buscarTodos());
 		request.setAttribute("listaNoticias", sn.buscarTodos());
-		request.setAttribute("listaClientes", sc.buscarTodos());
 		request.setAttribute("listaNoticias", sn.buscarTodos());
 
 		// Guardo estos en sesion puesto que los necesito además en otros formularios
+		request.getSession().setAttribute("listaClientes", sc.buscarTodos());
 		request.getSession().setAttribute("listaItinerarios", si.buscarTodos());
 		request.getSession().setAttribute("listaParadas", sp.buscarTodos());
 		request.getSession().setAttribute("listaRoles", sr.buscarTodos());

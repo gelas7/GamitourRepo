@@ -279,6 +279,39 @@
 					</table>
 					<a id="insertar" href="Procesos/InsertarPruebasDeportivas.jsp">Insertar una prueba deportiva nueva</a>
 				</div>
+				
+				<div id="divpremios">
+					<h1>Listado de Premios</h1>
+					<table>
+						<tr>
+							<th>Cliente</th>
+							<th>Nombre</th>
+							<th>Descripcion</th>
+							<th>Imagen</th>
+							<th>Fecha Activacion</th>
+							<th>Fecha Consumo</th>
+							<th>Puntos</th>
+						</tr>
+						<c:forEach items="${listaPremios}" var="premio">
+							<tr>
+								<td>${premio.cliente.getNombre()}</td>
+								<td>${premio.nombre}</td>
+								<td>${premio.descripcion}</td>
+								<td>${premio.imagen}</td>
+								<td>${premio.fechaactivacion}</td>
+								<td>${premio.fechaconsumo}</td>
+								<td>${premio.puntos}</td>
+
+								<td><a id="eliminar"
+									href="EliminarPremios.do?id=${premio.idpremio}">Eliminar</a></td>
+								<td><a id="actualizar"
+									href="Procesos/ModificarPremios.jsp?id=${premio.idpremio}">Modificar</a></td>
+							</tr>
+						</c:forEach>
+					</table>
+					<a id="insertar" href="Procesos/InsertarPremios.jsp">Insertar
+						un premio nuevo</a>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -16,6 +16,7 @@ import com.proyecto.admin.insert.InsertarClientesAccion;
 import com.proyecto.admin.insert.InsertarItinerariosAccion;
 import com.proyecto.admin.insert.InsertarNoticiasAccion;
 import com.proyecto.admin.insert.InsertarParadasAccion;
+import com.proyecto.admin.insert.InsertarPremiosAccion;
 import com.proyecto.admin.insert.InsertarPruebasCulturalesAccion;
 import com.proyecto.admin.insert.InsertarPruebasDeportivasAccion;
 import com.proyecto.admin.insert.InsertarRolesAccion;
@@ -25,6 +26,7 @@ import com.proyecto.admin.update.ModificarClientesAccion;
 import com.proyecto.admin.update.ModificarItinerariosAccion;
 import com.proyecto.admin.update.ModificarNoticiasAccion;
 import com.proyecto.admin.update.ModificarParadasAccion;
+import com.proyecto.admin.update.ModificarPremiosAccion;
 import com.proyecto.admin.update.ModificarPruebasCulturalesAccion;
 import com.proyecto.admin.update.ModificarPruebasDeportivasAccion;
 import com.proyecto.admin.update.ModificarRolesAccion;
@@ -113,6 +115,13 @@ public abstract class Accion {
 		case "ModificarPruebasCulturales":
 			accion = new ModificarPruebasCulturalesAccion();
 			break;
+		case "InsertarPremios":
+			accion = new InsertarPremiosAccion();
+			break;
+		case "ModificarPremios":
+			accion = new ModificarPremiosAccion();
+			break;
+			
 		default:
 			System.out.println("Error en Accion.java");
 			break;
