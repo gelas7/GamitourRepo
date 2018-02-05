@@ -8,6 +8,7 @@ import com.proyecto.admin.delete.EliminarClientesAccion;
 import com.proyecto.admin.delete.EliminarItinerariosAccion;
 import com.proyecto.admin.delete.EliminarNoticiasAccion;
 import com.proyecto.admin.delete.EliminarParadasAccion;
+import com.proyecto.admin.delete.EliminarPremiosAccion;
 import com.proyecto.admin.delete.EliminarPruebasCulturalesAccion;
 import com.proyecto.admin.delete.EliminarPruebasDeportivasAccion;
 import com.proyecto.admin.delete.EliminarRolesAccion;
@@ -120,6 +121,9 @@ public abstract class Accion {
 			break;
 		case "ModificarPremios":
 			accion = new ModificarPremiosAccion();
+			break;
+		case "EliminarPremios":
+			accion = new EliminarPremiosAccion();
 			break;
 			
 		default:

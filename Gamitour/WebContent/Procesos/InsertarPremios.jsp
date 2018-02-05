@@ -63,9 +63,11 @@
 						Ubicación: <input type="text" name="ubicacion" required="required">
 					</p>
 					<p>
+						Puntos: <input type="number" name="puntos" required="required">
+					</p>
+					<p>
 						Imagen: <input type="text" name="imagen" required="required">
 					</p>
-
 					<p>
 						Fecha de activacion: <input type="date" name="fechaactivacion"
 							required="required">
@@ -75,8 +77,6 @@
 						Fecha de consumo: <input type="date" name="fechaconsumo"
 							required="required">
 					</p>
-
-
 					<p>
 						<input type="submit" value="Enviar" id="enviar">
 					</p>

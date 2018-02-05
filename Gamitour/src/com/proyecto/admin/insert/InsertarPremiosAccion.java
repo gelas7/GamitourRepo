@@ -36,7 +36,6 @@ public class InsertarPremiosAccion extends Accion {
 		Date date2 = null;
 
 		try {
-
 			if (fechaactivacion != "")
 				date1 = formatter.parse(fechaactivacion);
 

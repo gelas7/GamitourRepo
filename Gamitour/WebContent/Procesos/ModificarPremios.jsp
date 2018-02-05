@@ -62,7 +62,8 @@
 							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getImagen()%>">
 					</p>
 					<p>
-						Puntos: <input type="number" name="puntos">
+						Puntos: <input type="number" name="puntos"
+							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 					</p>
 					<p>
 						Fecha de activacion: <input type="date" name="fechaactivacion">
@@ -79,13 +80,10 @@
 							</c:forEach>
 						</select>
 					</p>
-
 					<p>
 						<input type="submit" value="Enviar" id="enviar">
 					</p>
-
 				</form>
-
 			</div>
 		</div>
 	</div>
