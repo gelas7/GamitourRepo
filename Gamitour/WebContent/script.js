@@ -61,7 +61,6 @@ window.onload = function() {
 	function mostrar() {
 		ocultarTodos();
 		var concateno = "div" + this.id;
-		alert(concateno);
 		document.getElementById(concateno).style.display = "block";
 	}
 
