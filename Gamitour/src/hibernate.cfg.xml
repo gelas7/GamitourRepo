@@ -5,14 +5,11 @@
 		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		
-		<property name="hibernate.connection.url">jdbc:mysql://localhost/gamitour</property>
-		<property name="hibernate.connection.username">root</property>
-		
-		<!-- 
-		<property name="hibernate.connection.url">jdbc:mysql://10.142.60.36:3306/gamitour</property>
+	
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gamitour</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">temporal</property>
-		-->
+	
 		<property name="hibernate.current_session_context_class">thread</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.search.autoregister_listeners">true</property>
