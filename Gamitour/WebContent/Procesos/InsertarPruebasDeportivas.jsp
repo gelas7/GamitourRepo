@@ -23,7 +23,6 @@
 		</h1>
 	</div>
 	<div id="menu">
-		<nav>
 		<ul>
 			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
@@ -38,7 +37,6 @@
 			<li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
 			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
 		</ul>
-		</nav>
 	</div>
 	<hr />
 
