@@ -42,8 +42,6 @@
 
 	<div id="page">
 
-
-
 		<form action="../ModificarRoles.do" method="get">
 
 			<h2 id="modificar">Modifique los campos que considere oportunos</h2>
@@ -62,6 +60,6 @@
 		</form>
 
 	</div>
-
+	
 </body>
 </html>
