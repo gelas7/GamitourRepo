@@ -72,8 +72,8 @@
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPrecio()%>">
 				</p>
 				<p>
-					Imagen: <input type="text" name="imagen"
-						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getImagen()%>">
+					Imagen: <input type="file" name="imagen"
+						onchange="handleFiles(this.files)">
 				</p>
 				<p>
 					Puntos: <input type="text" name="puntos"

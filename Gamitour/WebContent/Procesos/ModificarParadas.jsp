@@ -84,8 +84,7 @@
 						</select>
 					</p>
 					<p>
-						Imagen: <input type="text" name="imagen"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getImagen()%>">
+						Imagen: <input type="text" name="imagen"  onchange="handleFiles(this.files)">
 					</p>
 					<p>
 						<input type="submit" value="Enviar" id="enviar">

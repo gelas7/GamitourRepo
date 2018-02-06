@@ -29,7 +29,6 @@
 			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
 			<li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
 			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		
 		</ul>
 	</div>
 	<hr />
@@ -58,15 +57,12 @@
 					<p>
 						Precio: <input type="number" name="precio" required="required">
 					</p>
-
 					<p>
 						Puntos: <input type="number" name="puntos" required="required">
 					</p>
 					<p>
-					<div class="upload-btn-wrapper">
-						<button class="btn">Seleccione una imagen</button>
-						<input type="file" name="imagen" required="required" />
-					</div>
+						Imagen: <input type="file" name="imagen"
+							onchange="handleFiles(this.files)" required="required">
 					</p>
 					<p>
 						<input type="submit" value="Enviar" id="enviar">

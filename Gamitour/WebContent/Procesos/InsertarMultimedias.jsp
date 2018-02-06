@@ -62,10 +62,10 @@
 							required="required">
 					</p>
 					<p>
-						Imagen: <input type="text" name="imagen" required="required">
+						Imagen: <input type="file" name="imagen" onchange="handleFiles(this.files)" required="required">
 					</p>
 					<p>
-						Video: <input type="text" name="video" required="required">
+						Video: <input type="file" name="video" onchange="handleFiles(this.files)" required="required">
 					</p>
 					<p>
 						Prueba Deportiva: <select name="pruebaD">

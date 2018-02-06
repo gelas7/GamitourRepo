@@ -76,7 +76,7 @@
 					</p>
 
 					<p>
-						Imagen: <input type="text" name="imagen" required="required">
+						Imagen: <input type="file" name="imagen"  onchange="handleFiles(this.files)" required="required">
 					</p>
 					<p>
 						<input type="submit" value="Enviar" id="enviar">

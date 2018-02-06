@@ -83,7 +83,7 @@
 						</select>
 					</p>
 					<p>
-						Avatar: <input type="text" name="avatar" required="required">
+						Avatar: <input type="file" name="avatar" onchange="handleFiles(this.files)" required="required">	
 					</p>
 
 					<p>

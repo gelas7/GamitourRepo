@@ -68,10 +68,10 @@
 							placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getComentario()%>">
 					</p>
 					<p>
-						Imagen: <input type="text" name="imagen" placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getImagen()%>" >
+						Imagen: <input type="text" name="imagen" onchange="handleFiles(this.files)">
 					</p>
 					<p>
-						Video: <input type="text" name="video" placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getVideo()%>">
+						Video: <input type="text" name="video" onchange="handleFiles(this.files)">
 					</p>
 					<p>
 						Prueba Deportiva: <select name="pruebaD">

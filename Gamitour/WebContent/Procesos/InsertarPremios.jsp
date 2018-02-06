@@ -68,7 +68,7 @@
 						Puntos: <input type="number" name="puntos" required="required">
 					</p>
 					<p>
-						Imagen: <input type="text" name="imagen" required="required">
+						Imagen: <input type="file" name="imagen"  onchange="handleFiles(this.files)" required="required">
 					</p>
 					<p>
 						Fecha de activacion: <input type="date" name="fechaactivacion"

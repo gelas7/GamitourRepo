@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -86,8 +86,7 @@
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
 				</p>
 				<p>
-					Avatar: <input type="text" name="avatar"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAvatar()%>">
+					Avatar: <input type="text" name="avatar"  onchange="handleFiles(this.files)">
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">
