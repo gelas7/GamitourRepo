@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -32,9 +32,9 @@
 			<li><a href="../MostrarAdmin.do?div=premios">Premios</a></li>
 			<li><a href="../MostrarAdmin.do?div=roles">Roles</a></li>
 			<li><a href="../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
 			<li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+			<li><a href="../MostrarAdmin.do?div=multimedias">Multimedias</a></li>
 			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
 		</ul>
 	</div>
@@ -43,41 +43,29 @@
 	<div id="page">
 		<div id="content">
 			<div class="post">
-				<p>Insertar Parada</p>
+				<p>Insertar Voto</p>
 
-				<form action="../InsertarParadas.do" method="get">
+				<form action="../InsertarVotos.do" method="get">
+
 					<p>
-						Nombre: <input type="text" name="nombre" required="required">
+						Cliente: <select name="cliente">
+							<c:forEach items="${listaClientes}" var="cliente">
+								<option value="${cliente.idcliente}">${cliente.nombre}</option>
+							</c:forEach>
+						</select>
 					</p>
 					<p>
-						Numero de parada: <input type="number" name="numeroParada"
-							required="required">
-					</p>
-					<p>
-						Ubicación: <input type="text" name="ubicacion" required="required">
-					</p>
-					<p>
-						Historia: <input type="text" name="historia" required="required">
-					</p>
-					<p>
-						Anecdotario: <input type="text" name="anecdotario"
-							required="required">
-					</p>
-					<p>
-						Gastronomia: <input type="text" name="gastronomia"
-							required="required">
-					</p>
-					<p>
-						Itinerario: <select name="itinerario">
-							<c:forEach items="${listaItinerarios}" var="itinerario">
-								<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
+						Multimedia: <select name="cliente">
+							<c:forEach items="${listaMultimedias}" var="multimedia">
+								<option value="${multimedia.idmultimedia}">${multimedia.nombre}</option>
 							</c:forEach>
 						</select>
 					</p>
 
 					<p>
-						Imagen: <input type="text" name="imagen" required="required">
+						Puntos: <input type="number" name="puntos" required="required">
 					</p>
+
 					<p>
 						<input type="submit" value="Enviar" id="enviar">
 					</p>

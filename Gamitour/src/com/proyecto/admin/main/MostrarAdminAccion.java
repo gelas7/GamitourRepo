@@ -47,9 +47,7 @@ public class MostrarAdminAccion extends Accion {
 		request.setAttribute("listaActividades", sa.buscarTodos());
 		request.setAttribute("listaNoticias", sn.buscarTodos());
 		request.setAttribute("listaComentarios", scom.buscarTodos());
-		
-		System.out.println(scom.buscarTodos().toString());
-		
+				
 		// Guardo estos en sesion puesto que los necesito además en otros formularios
 		request.getSession().setAttribute("listaClientes", sc.buscarTodos());
 		request.getSession().setAttribute("listaItinerarios", si.buscarTodos());
