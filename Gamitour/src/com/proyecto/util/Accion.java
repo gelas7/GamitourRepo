@@ -39,6 +39,7 @@ import com.proyecto.admin.update.ModificarPremiosAccion;
 import com.proyecto.admin.update.ModificarPruebasCulturalesAccion;
 import com.proyecto.admin.update.ModificarPruebasDeportivasAccion;
 import com.proyecto.admin.update.ModificarRolesAccion;
+import com.proyecto.admin.update.ModificarVotosAccion;
 
 public abstract class Accion {
 
@@ -155,7 +156,7 @@ public abstract class Accion {
 			accion = new InsertarVotosAccion();
 			break;
 		case "ModificarVotos":
-			//accion = new ModificarVotosAccion();
+			accion = new ModificarVotosAccion();
 			break;
 		case "EliminarVotos":
 			accion = new EliminarVotosAccion();

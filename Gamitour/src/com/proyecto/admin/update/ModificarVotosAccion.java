@@ -4,15 +4,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.proyecto.modelo.Cliente;
-import com.proyecto.modelo.Comentario;
-import com.proyecto.modelo.Itinerario;
 import com.proyecto.modelo.Multimedia;
+import com.proyecto.modelo.Voto;
 import com.proyecto.service.ServiceClientesImp;
-import com.proyecto.service.ServiceComentariosImp;
 import com.proyecto.service.ServiceMultimediasImp;
+import com.proyecto.service.ServiceVotosImp;
 import com.proyecto.util.Accion;
 
-public class ModificarComentariosAccion extends Accion {
+public class ModificarVotosAccion extends Accion {
 
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
@@ -20,29 +19,29 @@ public class ModificarComentariosAccion extends Accion {
 		String id = request.getParameter("id");
 		String cliente = request.getParameter("cliente");
 		String multimedia = request.getParameter("multimedia");
-		String texto = request.getParameter("texto");
+		String puntos = request.getParameter("puntos");
 
-		ServiceComentariosImp scom = new ServiceComentariosImp();
+		ServiceVotosImp sv = new ServiceVotosImp();
 
-		Comentario com = scom.buscarPorClave(Integer.parseInt(id));
+		Voto v = sv.buscarPorClave(Integer.parseInt(id));
 
 		if (cliente != "") {
 			ServiceClientesImp scli = new ServiceClientesImp();
 			Cliente cli = scli.buscarPorClave(Integer.parseInt(cliente));
-			com.setCliente(cli);
+			v.setCliente(cli);
 		}
 		if (multimedia != "") {
 			ServiceMultimediasImp sm = new ServiceMultimediasImp();
 			Multimedia m = sm.buscarPorClave(Integer.parseInt(multimedia));
-			com.setMultimedia(m);
+			v.setMultimedia(m);
 		}
 		
-		if(texto!="")
-			com.setTexto(texto);
+		if(puntos!="")
+			v.setPuntos(Integer.parseInt(puntos));
 		
-		scom.actualizar(com);
+		sv.actualizar(v);
 		
-		return "MostrarAdmin.do?div=comentarios";
+		return "MostrarAdmin.do?div=votos";
 	}
 
 }

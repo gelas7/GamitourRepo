@@ -4,6 +4,8 @@
 <%@ page import="com.proyecto.service.*"%>
 <%@ page import="com.proyecto.modelo.*"%>
 <%@ page import="java.util.*"%>
+<%!ServiceVotosImp sv = new ServiceVotosImp();%>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -46,10 +48,10 @@
 				<p>Insertar Voto</p>
 
 				<form action="../ModificarVotos.do" method="get">
-					
+
 					<input type="hidden" value="<%=request.getParameter("id")%>"
 						name="id">
-						
+
 					<p>
 						Cliente: <select name="cliente">
 							<c:forEach items="${listaClientes}" var="cliente">
@@ -58,15 +60,16 @@
 						</select>
 					</p>
 					<p>
-						Multimedia: <select name="cliente">
+						Multimedia: <select name="multimedia">
 							<c:forEach items="${listaMultimedias}" var="multimedia">
-								<option value="${multimedia.idmultimedia}">${multimedia.nombre}</option>
+								<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
 							</c:forEach>
 						</select>
 					</p>
 
 					<p>
-						Puntos: <input type="number" name="puntos">
+						Puntos: <input type="number" name="puntos"
+							placeholder="<%=sv.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 					</p>
 
 					<p>
