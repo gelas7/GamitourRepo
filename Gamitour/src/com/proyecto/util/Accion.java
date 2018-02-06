@@ -154,7 +154,6 @@ public abstract class Accion {
 			System.out.println("Error en Accion.java");
 			break;
 		}
-
 		return accion;
 	}
 }

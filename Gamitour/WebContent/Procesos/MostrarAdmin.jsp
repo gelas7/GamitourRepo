@@ -29,12 +29,13 @@
 			<li><button id="paradas">Paradas</button></li>
 			<li><button id="premios">Premios</button></li>
 			<li><button id="roles">Roles</button></li>
-			<li><button id="votos">Votos</button></li>
 			<li><button id="multimedias">Multimedias</button></li>
 			<li><button id="comentarios">Comentarios</button></li>
 			<li><button id="pruebasdeportivas">PD</button></li>
 			<li><button id="pruebasculturales">PC</button></li>
 		</ul>
+		<button id="divActual" value="${divActual}" hidden=""></button>
+
 	</div>
 	<hr />
 
