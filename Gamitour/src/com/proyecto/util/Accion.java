@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.proyecto.admin.delete.EliminarActividadesAccion;
 import com.proyecto.admin.delete.EliminarClientesAccion;
+import com.proyecto.admin.delete.EliminarComentariosAccion;
 import com.proyecto.admin.delete.EliminarItinerariosAccion;
 import com.proyecto.admin.delete.EliminarMultimediasAccion;
 import com.proyecto.admin.delete.EliminarNoticiasAccion;

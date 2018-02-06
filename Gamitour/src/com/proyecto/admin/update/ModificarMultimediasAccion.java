@@ -76,7 +76,7 @@ public class ModificarMultimediasAccion extends Accion {
 
 		sm.actualizar(m);
 
-		return "MostrarAdmin.do?div=premios";
+		return "MostrarAdmin.do?div=multimedias";
 	}
 
 }
