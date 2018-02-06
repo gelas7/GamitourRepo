@@ -42,7 +42,6 @@ public class MostrarAdminAccion extends Accion {
 		request.setAttribute("listaMultimedias", sm.buscarTodos());
 		request.setAttribute("listaPremios", spr.buscarTodos());
 		request.setAttribute("listaVotos", sv.buscarTodos());
-		request.setAttribute("listaPruebasDeportivas", spd.buscarTodos());
 		request.setAttribute("listaPruebasCulturales", spc.buscarTodos());
 		request.setAttribute("listaActividades", sa.buscarTodos());
 		request.setAttribute("listaNoticias", sn.buscarTodos());
@@ -53,6 +52,8 @@ public class MostrarAdminAccion extends Accion {
 		request.getSession().setAttribute("listaItinerarios", si.buscarTodos());
 		request.getSession().setAttribute("listaParadas", sp.buscarTodos());
 		request.getSession().setAttribute("listaRoles", sr.buscarTodos());
+		request.getSession().setAttribute("listaPruebasDeportivas", spd.buscarTodos());
+
 
 		// Aqui guardo el nombre de la tabla que se esta manejando actualmente
 		request.setAttribute("divActual", request.getParameter("div"));
