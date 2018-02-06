@@ -39,7 +39,6 @@ public class MostrarAdminAccion extends Accion {
 		ServicePremiosImp spr = new ServicePremiosImp();
 		ServiceMultimedias sm = new ServiceMultimediasImp();
 
-		request.setAttribute("listaMultimedias", sm.buscarTodos());
 		request.setAttribute("listaPremios", spr.buscarTodos());
 		request.setAttribute("listaVotos", sv.buscarTodos());
 		request.setAttribute("listaPruebasCulturales", spc.buscarTodos());
@@ -53,11 +52,11 @@ public class MostrarAdminAccion extends Accion {
 		request.getSession().setAttribute("listaParadas", sp.buscarTodos());
 		request.getSession().setAttribute("listaRoles", sr.buscarTodos());
 		request.getSession().setAttribute("listaPruebasDeportivas", spd.buscarTodos());
-
+		request.getSession().setAttribute("listaMultimedias", sm.buscarTodos());
 
 		// Aqui guardo el nombre de la tabla que se esta manejando actualmente
 		request.setAttribute("divActual", request.getParameter("div"));
-		
+
 		return "Procesos/MostrarAdmin.jsp";
 	}
 

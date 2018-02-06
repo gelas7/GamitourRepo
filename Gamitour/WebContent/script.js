@@ -12,7 +12,7 @@ window.onload = function() {
 	// var votos = document.getElementById("votos");
 	var multimedias = document.getElementById("multimedias");
 	var premios = document.getElementById("premios");
-	// var comentarios = document.getElementById("comentarios");
+	var comentarios = document.getElementById("comentarios");
 
 	/** DIVS TABLAS* */
 	var divBienvenida = document.getElementById("divBienvenida");
@@ -27,7 +27,7 @@ window.onload = function() {
 	var divMultimedias = document.getElementById("divmultimedias");
 	var divPremios = document.getElementById("divpremios");
 	// var divVotos = document.getElementById("divvotos");
-	// var divComentarios = document.getElementById("divcomentarios");
+	var divComentarios = document.getElementById("divcomentarios");
 
 	/** EVENT LISTENERS BOTONES MENU* */
 	clientes.addEventListener("click", mostrar, false);
@@ -41,7 +41,7 @@ window.onload = function() {
 	multimedias.addEventListener("click", mostrar, false);
 	premios.addEventListener("click", mostrar, false);
 	// votos.addEventListener("click", mostrar, false);
-	// comentarios.addEventListener("click", mostrar, false);
+	comentarios.addEventListener("click", mostrar, false);
 
 	/** DIV ACTUAL* */
 	var divActual = document.getElementById("divActual");
@@ -76,7 +76,7 @@ window.onload = function() {
 		divPruebasdeportivas.style.display = "none";
 		divPremios.style.display = "none";
 		divMultimedias.style.display = "none";
-		// divComentarios.style.display = "none";
+		divComentarios.style.display = "none";
 		// divVotos.style.display = "none";
 	}
 }
