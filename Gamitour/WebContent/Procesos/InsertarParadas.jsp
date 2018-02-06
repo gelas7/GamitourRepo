@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -36,6 +36,7 @@
 			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
 			<li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
 			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			<li><a href="../MostrarAdmin.do?div=votos">Votos</a></li>
 		</ul>
 	</div>
 	<hr />
