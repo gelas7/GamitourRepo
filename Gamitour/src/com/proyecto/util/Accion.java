@@ -15,6 +15,7 @@ import com.proyecto.admin.delete.EliminarPruebasDeportivasAccion;
 import com.proyecto.admin.delete.EliminarRolesAccion;
 import com.proyecto.admin.insert.InsertarActividadesAccion;
 import com.proyecto.admin.insert.InsertarClientesAccion;
+import com.proyecto.admin.insert.InsertarComentariosAccion;
 import com.proyecto.admin.insert.InsertarItinerariosAccion;
 import com.proyecto.admin.insert.InsertarMultimediasAccion;
 import com.proyecto.admin.insert.InsertarNoticiasAccion;
@@ -26,6 +27,7 @@ import com.proyecto.admin.insert.InsertarRolesAccion;
 import com.proyecto.admin.main.MostrarAdminAccion;
 import com.proyecto.admin.update.ModificarActividadesAccion;
 import com.proyecto.admin.update.ModificarClientesAccion;
+import com.proyecto.admin.update.ModificarComentariosAccion;
 import com.proyecto.admin.update.ModificarItinerariosAccion;
 import com.proyecto.admin.update.ModificarMultimediasAccion;
 import com.proyecto.admin.update.ModificarNoticiasAccion;
@@ -137,7 +139,16 @@ public abstract class Accion {
 		case "EliminarMultimedias":
 			accion = new EliminarMultimediasAccion();
 			break;
-			
+		case "InsertarComentarios":
+			accion = new InsertarComentariosAccion();
+			break;
+		case "ModificarComentarios":
+			accion = new ModificarComentariosAccion();
+			break;
+		case "EliminarComentarios":
+			accion = new EliminarComentariosAccion();
+			break;
+
 		default:
 			System.out.println("Error en Accion.java");
 			break;

@@ -323,7 +323,6 @@
 						un premio nuevo</a>
 				</div>
 
-
 				<div id="divmultimedias">
 					<h1>Listado de Elementos Multimedia</h1>
 					<table>
@@ -355,6 +354,30 @@
 					</table>
 					<a id="insertar" href="Procesos/InsertarMultimedias.jsp">Insertar
 						una elemento multimedia nuevo</a>
+				</div>
+				
+				<div id="divcomentarios">
+					<h1>Listado de Comentarios</h1>
+					<table>
+						<tr>
+							<th>Cliente</th>
+							<th>Multimedia</th>
+							<th>Comentario</th>
+						</tr>
+						<c:forEach items="${listaComentarios}" var="com">
+							<tr>
+								<td>${com.cliente.getNombre()}</td>
+								<td>${com.multimedia.getIdmultimedia()}</td>
+								<td>${com.texto}</td>
+								<td><a id="eliminar"
+									href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
+								<td><a id="actualizar"
+									href="Procesos/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
+							</tr>
+						</c:forEach>
+					</table>
+					<a id="insertar" href="Procesos/InsertarComentarios.jsp">Insertar
+						un comentario nuevo</a>
 				</div>
 
 			</div>
