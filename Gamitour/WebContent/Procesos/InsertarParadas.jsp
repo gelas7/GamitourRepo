@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+	<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>

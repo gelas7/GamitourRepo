@@ -35,8 +35,7 @@
 			<li><a href="../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
 			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
 			<li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-			<li><a href="../MostrarAdmin.do?div=votos">Votos</a></li>
+			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>i>
 		</ul>
 	</div>
 	<hr />
