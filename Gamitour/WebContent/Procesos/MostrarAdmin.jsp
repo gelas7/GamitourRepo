@@ -366,8 +366,17 @@
 							<th>Comentario</th>
 						</tr>
 						<c:forEach items="${listaComentarios}" var="com">
-							<tr>
+							<%-- <tr>
 								<td>${com.cliente.getNombre()}</td>
+								<td>${com.multimedia.getIdmultimedia()}</td>
+								<td>${com.texto}</td>
+								<td><a id="eliminar"
+									href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
+								<td><a id="actualizar"
+									href="Procesos/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
+							</tr> --%>
+							<tr>
+								<td>HOLA</td>
 								<td>${com.multimedia.getIdmultimedia()}</td>
 								<td>${com.texto}</td>
 								<td><a id="eliminar"

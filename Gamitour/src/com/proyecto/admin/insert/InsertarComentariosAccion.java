@@ -18,7 +18,7 @@ public class InsertarComentariosAccion extends Accion {
 
 		String cliente = request.getParameter("cliente");
 		String multimedia = request.getParameter("multimedia");
-		String texto = request.getParameter("comentario");
+		String texto = request.getParameter("texto");
 	
 		ServiceComentariosImp scom = new ServiceComentariosImp();
 		ServiceClientesImp scli = new ServiceClientesImp();

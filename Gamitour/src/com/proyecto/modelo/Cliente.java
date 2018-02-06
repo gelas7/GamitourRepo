@@ -97,25 +97,6 @@ public class Cliente implements java.io.Serializable {
 				+ ", password=" + password + ", telefono=" + telefono + ", direccion=" + direccion + ", codigopostal="
 				+ codigopostal + ", avatar=" + avatar + ", puntosacumulados=" + puntosacumulados + "]";
 	}
-	
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((apellidos == null) ? 0 : apellidos.hashCode());
-		result = prime * result + ((avatar == null) ? 0 : avatar.hashCode());
-		result = prime * result + ((codigopostal == null) ? 0 : codigopostal.hashCode());
-		result = prime * result + ((comentarios == null) ? 0 : comentarios.hashCode());
-		result = prime * result + ((direccion == null) ? 0 : direccion.hashCode());
-		result = prime * result + ((email == null) ? 0 : email.hashCode());
-		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + ((puntosacumulados == null) ? 0 : puntosacumulados.hashCode());
-		result = prime * result + ((rol == null) ? 0 : rol.hashCode());
-		result = prime * result + ((telefono == null) ? 0 : telefono.hashCode());
-		return result;
-	}
 
 	@Override
 	public boolean equals(Object obj) {

@@ -60,21 +60,6 @@ public class Multimedia implements java.io.Serializable {
 		this.comentarios = comentarios;
 		this.votos = votos;
 	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((cliente == null) ? 0 : cliente.hashCode());
-		result = prime * result + ((comentario == null) ? 0 : comentario.hashCode());
-		result = prime * result + idmultimedia;
-		result = prime * result + ((imagen == null) ? 0 : imagen.hashCode());
-		result = prime * result + pruebaDeportivaIdpruebadeportiva;
-		result = prime * result + ((puntosacumulados == null) ? 0 : puntosacumulados.hashCode());
-		result = prime * result + ((video == null) ? 0 : video.hashCode());
-		return result;
-	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
