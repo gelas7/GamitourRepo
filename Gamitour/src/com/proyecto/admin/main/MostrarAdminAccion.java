@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.proyecto.service.ServiceActividadesImp;
 import com.proyecto.service.ServiceClientesImp;
+import com.proyecto.service.ServiceComentariosImp;
 import com.proyecto.service.ServiceItinerarios;
 import com.proyecto.service.ServiceItinerariosImp;
 import com.proyecto.service.ServiceMultimedias;
@@ -38,14 +39,15 @@ public class MostrarAdminAccion extends Accion {
 		ServiceVotos sv = new ServiceVotosImp();
 		ServicePremiosImp spr = new ServicePremiosImp();
 		ServiceMultimedias sm = new ServiceMultimediasImp();
+		ServiceComentariosImp scom = new ServiceComentariosImp();
 
 		request.setAttribute("listaPremios", spr.buscarTodos());
 		request.setAttribute("listaVotos", sv.buscarTodos());
 		request.setAttribute("listaPruebasCulturales", spc.buscarTodos());
 		request.setAttribute("listaActividades", sa.buscarTodos());
 		request.setAttribute("listaNoticias", sn.buscarTodos());
-		request.setAttribute("listaComentarios", sn.buscarTodos());
-
+		request.setAttribute("listaComentarios", scom.buscarTodos());
+		
 		// Guardo estos en sesion puesto que los necesito además en otros formularios
 		request.getSession().setAttribute("listaClientes", sc.buscarTodos());
 		request.getSession().setAttribute("listaItinerarios", si.buscarTodos());

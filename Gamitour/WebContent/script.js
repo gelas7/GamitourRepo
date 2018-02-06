@@ -40,7 +40,7 @@ window.onload = function() {
 	pruebasdeportivas.addEventListener("click", mostrar, false);
 	multimedias.addEventListener("click", mostrar, false);
 	premios.addEventListener("click", mostrar, false);
-	// votos.addEventListener("click", mostrar, false);
+	//votos.addEventListener("click", mostrar, false);
 	comentarios.addEventListener("click", mostrar, false);
 
 	/** DIV ACTUAL* */
@@ -77,6 +77,6 @@ window.onload = function() {
 		divPremios.style.display = "none";
 		divMultimedias.style.display = "none";
 		divComentarios.style.display = "none";
-		// divVotos.style.display = "none";
+		//divVotos.style.display = "none";
 	}
 }
