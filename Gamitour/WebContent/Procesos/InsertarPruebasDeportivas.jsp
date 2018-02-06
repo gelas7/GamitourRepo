@@ -42,9 +42,11 @@
 
 	<div id="page">
 
-		<p>Insertar Prueba Deportiva</p>
+
 
 		<form action="../InsertarPruebasDeportivas.do" method="get">
+
+			<h2>Insertar Prueba Deportiva</h2>
 			<p>
 				Nombre: <input type="text" name="nombre" required="required">
 			</p>

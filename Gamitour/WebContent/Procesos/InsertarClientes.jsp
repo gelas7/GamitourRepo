@@ -41,6 +41,7 @@
 
 	<div id="page">
 		<form action="../InsertarClientes.do" method="get">
+			<h2>Insertar Cliente</h2>
 			<p>
 				Nombre: <input type="text" name="nombre" required="required">
 			</p>

@@ -41,10 +41,10 @@
 	<hr />
 
 	<div id="page">
-		<p>Insertar Premio</p>
+
 
 		<form action="../InsertarPremios.do" method="get">
-
+			<h2>Insertar Premio</h2>
 			<p>
 				Cliente: <select name="cliente">
 					<c:forEach items="${listaClientes}" var="cliente">

@@ -42,6 +42,9 @@
 
 	<div id="page">
 		<form action="../InsertarMultimedias.do" method="get">
+		
+		<h2>Insertar Multimedia</h2>
+		
 			<p>
 				Cliente: <select name="cliente">
 					<option value="">Seleccione un cliente</option>

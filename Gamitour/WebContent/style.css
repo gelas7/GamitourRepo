@@ -25,8 +25,9 @@ h1 {
 	text-decoration: none;
 }
 
-h2{
-	margin:0 auto;
+h2 {
+	margin: 0 auto;
+	font-size: 28px;
 }
 
 p, ul, ol {

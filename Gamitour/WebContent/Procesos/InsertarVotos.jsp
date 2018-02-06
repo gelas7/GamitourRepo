@@ -42,10 +42,10 @@
 
 	<div id="page">
 
-		<p>Insertar Voto</p>
+
 
 		<form action="../InsertarVotos.do" method="get">
-
+			<h2>Insertar Voto</h2>
 			<p>
 				Cliente: <select name="cliente">
 					<c:forEach items="${listaClientes}" var="cliente">

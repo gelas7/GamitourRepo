@@ -41,9 +41,10 @@
 	<hr />
 
 	<div class="page">
-		<p>Insertar Parada</p>
+
 
 		<form action="../InsertarParadas.do" method="get">
+			<h2>Insertar Parada</h2>
 			<p>
 				Nombre: <input type="text" name="nombre" required="required">
 			</p>
@@ -82,6 +83,6 @@
 			</p>
 		</form>
 	</div>
-	
+
 </body>
 </html>
