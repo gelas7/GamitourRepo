@@ -33,9 +33,9 @@
 			<li><button id="comentarios">Comentarios</button></li>
 			<li><button id="pruebasdeportivas">PD</button></li>
 			<li><button id="pruebasculturales">PC</button></li>
+			<li><button id="votos">Votos</button></li>
 		</ul>
 		<button id="divActual" value="${divActual}" hidden=""></button>
-
 	</div>
 	<hr />
 
@@ -366,17 +366,8 @@
 							<th>Comentario</th>
 						</tr>
 						<c:forEach items="${listaComentarios}" var="com">
-							<%-- <tr>
-								<td>${com.cliente.getNombre()}</td>
-								<td>${com.multimedia.getIdmultimedia()}</td>
-								<td>${com.texto}</td>
-								<td><a id="eliminar"
-									href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
-								<td><a id="actualizar"
-									href="Procesos/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
-							</tr> --%>
 							<tr>
-								<td>HOLA</td>
+								<td>${com.cliente.getNombre()}</td>
 								<td>${com.multimedia.getIdmultimedia()}</td>
 								<td>${com.texto}</td>
 								<td><a id="eliminar"
@@ -389,12 +380,12 @@
 					<a id="insertar" href="Procesos/InsertarComentarios.jsp">Insertar
 						un comentario nuevo</a>
 				</div>
-
 			</div>
 		</div>
 	</div>
 
 	<div id="footer"></div>
+
 </body>
 </html>
 
