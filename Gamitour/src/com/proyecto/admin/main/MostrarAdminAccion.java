@@ -7,6 +7,8 @@ import com.proyecto.service.ServiceActividadesImp;
 import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceItinerarios;
 import com.proyecto.service.ServiceItinerariosImp;
+import com.proyecto.service.ServiceMultimedias;
+import com.proyecto.service.ServiceMultimediasImp;
 import com.proyecto.service.ServiceNoticias;
 import com.proyecto.service.ServiceNoticiasImp;
 import com.proyecto.service.ServiceParadas;
@@ -35,7 +37,9 @@ public class MostrarAdminAccion extends Accion {
 		ServicePruebasDeportivas spd = new ServicePruebasDeportivasImp();
 		ServiceVotos sv = new ServiceVotosImp();
 		ServicePremiosImp spr = new ServicePremiosImp();
+		ServiceMultimedias sm = new ServiceMultimediasImp();
 
+		request.setAttribute("listaMultimedias", sm.buscarTodos());
 		request.setAttribute("listaPremios", spr.buscarTodos());
 		request.setAttribute("listaVotos", sv.buscarTodos());
 		request.setAttribute("listaPruebasDeportivas", spd.buscarTodos());

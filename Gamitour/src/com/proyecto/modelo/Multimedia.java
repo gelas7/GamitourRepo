@@ -34,11 +34,16 @@ public class Multimedia implements java.io.Serializable {
 
 	public Multimedia() {
 	}
-
-	public Multimedia(int idmultimedia, Cliente cliente, int pruebaDeportivaIdpruebadeportiva) {
+	public Multimedia(int idmultimedia, Cliente cliente, Date fecha, String comentario, String imagen, String video,
+			int pruebaDeportivaIdpruebadeportiva, Integer puntosacumulados) {
 		this.idmultimedia = idmultimedia;
 		this.cliente = cliente;
+		this.fecha = fecha;
+		this.comentario = comentario;
+		this.imagen = imagen;
+		this.video = video;
 		this.pruebaDeportivaIdpruebadeportiva = pruebaDeportivaIdpruebadeportiva;
+		this.puntosacumulados = puntosacumulados;
 	}
 
 	public Multimedia(int idmultimedia, Cliente cliente, Date fecha, String comentario, String imagen, String video,
