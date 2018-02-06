@@ -29,15 +29,15 @@ public class Voto implements java.io.Serializable {
 		this.multimedia = multimedia;
 	}
 
-	@Override
-	public String toString() {
-		return "Voto [cliente=" + cliente + ", multimedia=" + multimedia + ", puntos=" + puntos + "]";
-	}
-
 	public Voto(Cliente cliente, Multimedia multimedia, Integer puntos) {
 		this.cliente = cliente;
 		this.multimedia = multimedia;
 		this.puntos = puntos;
+	}
+	
+	@Override
+	public String toString() {
+		return "Voto [cliente=" + cliente + ", multimedia=" + multimedia + ", puntos=" + puntos + "]";
 	}
 
 	@Id

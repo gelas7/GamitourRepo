@@ -36,6 +36,7 @@
 			<li><button id="votos">Votos</button></li>
 		</ul>
 		<button id="divActual" value="${divActual}" hidden=""></button>
+
 	</div>
 	<hr />
 
@@ -380,12 +381,38 @@
 					<a id="insertar" href="Procesos/InsertarComentarios.jsp">Insertar
 						un comentario nuevo</a>
 				</div>
+
+				<div id="divvotos">
+					<h1>Listado de Votos</h1>
+					<table>
+						<tr>
+							<th>Cliente</th>
+							<th>Multimedia</th>
+							<th>Puntos</th>
+
+						</tr>
+						<c:forEach items="${listaVotos}" var="v">
+							<tr>
+								<td>${v.cliente.getNombre()}</td>
+								<td>${v.multimedia.getIdmultimedia()}</td>
+								<td>${v.puntos}</td>
+
+								<td><a id="eliminar"
+									href="EliminarVotos.do?id=${v.idvoto}">Eliminar</a></td>
+								<td><a id="actualizar"
+									href="Procesos/ModificarVotos.jsp?id=${v.idvoto}">Modificar</a></td>
+							</tr>
+						</c:forEach>
+					</table>
+					<a id="insertar" href="Procesos/InsertarVotos.jsp">Insertar
+						un voto nuevo</a>
+				</div>
+
 			</div>
 		</div>
 	</div>
 
 	<div id="footer"></div>
-
 </body>
 </html>
 
