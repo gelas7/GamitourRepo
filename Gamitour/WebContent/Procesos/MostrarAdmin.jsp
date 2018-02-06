@@ -41,9 +41,7 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
-
+		<div id="contenedor">
 				<div id="divBienvenida">
 					<h1>Bienvenido. Seleccione una opción del menu superior.</h1>
 				</div>

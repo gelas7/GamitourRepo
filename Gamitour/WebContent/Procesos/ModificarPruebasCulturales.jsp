@@ -40,8 +40,6 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
 				<p>Modificando Prueba Cultural</p>
 
 				<form action="../ModificarPruebasCulturales.do" method="get">
@@ -76,8 +74,6 @@
 					</p>
 				</form>
 			</div>
-		</div>
-	</div>
 
 	<div id="footer"></div>
 

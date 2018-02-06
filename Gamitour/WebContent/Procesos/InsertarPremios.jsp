@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -41,50 +41,48 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
-				<p>Insertar Premio</p>
+		<p>Insertar Premio</p>
 
-				<form action="../InsertarPremios.do" method="get">
+		<form action="../InsertarPremios.do" method="get">
 
-					<p>
-						Cliente: <select name="cliente">
-							<c:forEach items="${listaClientes}" var="cliente">
-								<option value="${cliente.idcliente}">${cliente.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						Nombre: <input type="text" name="nombre" required="required">
-					</p>
-					<p>
-						Descripcion: <input type="textarea" name="descripcion"
-							required="required">
-					</p>
-					<p>
-						Ubicación: <input type="text" name="ubicacion" required="required">
-					</p>
-					<p>
-						Puntos: <input type="number" name="puntos" required="required">
-					</p>
-					<p>
-						Imagen: <input type="file" name="imagen"  onchange="handleFiles(this.files)" required="required">
-					</p>
-					<p>
-						Fecha de activacion: <input type="date" name="fechaactivacion"
-							required="required">
-					</p>
+			<p>
+				Cliente: <select name="cliente">
+					<c:forEach items="${listaClientes}" var="cliente">
+						<option value="${cliente.idcliente}">${cliente.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				Nombre: <input type="text" name="nombre" required="required">
+			</p>
+			<p>
+				Descripcion: <input type="textarea" name="descripcion"
+					required="required">
+			</p>
+			<p>
+				Ubicación: <input type="text" name="ubicacion" required="required">
+			</p>
+			<p>
+				Puntos: <input type="number" name="puntos" required="required">
+			</p>
+			<p>
+				Imagen: <input type="file" name="imagen"
+					onchange="handleFiles(this.files)" required="required">
+			</p>
+			<p>
+				Fecha de activacion: <input type="date" name="fechaactivacion"
+					required="required">
+			</p>
 
-					<p>
-						Fecha de consumo: <input type="date" name="fechaconsumo"
-							required="required">
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
-		</div>
+			<p>
+				Fecha de consumo: <input type="date" name="fechaconsumo"
+					required="required">
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
 	</div>
+
 </body>
 </html>

@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -35,65 +35,62 @@
 			<li><a href="../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
 			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
 			<li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>i>
+			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
 		</ul>
 	</div>
 	<hr />
-	
+
 	<div id="page">
-		<div id="content">
-			<div class="post">
 
-				<h2>Modifique los campos que considere oportunos</h2>
+		<h2>Modifique los campos que considere oportunos</h2>
 
-				<form action="../ModificarParadas.do" method="get">
+		<form action="../ModificarParadas.do" method="get">
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
 
-					<p>
-						Nombre: <input type="text" name="nombre"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-					</p>
-					<p>
-						Numero de parada: <input type="number" name="numeroParada"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
-					</p>
-					<p>
-						Ubicación: <input type="text" name="ubicacion"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
-					</p>
-					<p>
-						Historia: <input type="text" name="historia"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>">
-					</p>
-					<p>
-						Anecdotario: <input type="text" name="anecdotario"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAnecdotario()%>">
-					</p>
-					<p>
-						Gastronomia: <input type="text" name="gastronomia"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getGastronomia()%>">
-					</p>
-					<p>
-						Itinerario: <select name="itinerario">
-							<option value ="">Seleccione un itinerario</option>
-							<c:forEach items="${listaItinerarios}" var="itinerario">
-								<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						Imagen: <input type="text" name="imagen"  onchange="handleFiles(this.files)">
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
+			<p>
+				Nombre: <input type="text" name="nombre"
+					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+			</p>
+			<p>
+				Numero de parada: <input type="number" name="numeroParada"
+					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
+			</p>
+			<p>
+				Ubicación: <input type="text" name="ubicacion"
+					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
+			</p>
+			<p>
+				Historia: <input type="text" name="historia"
+					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>">
+			</p>
+			<p>
+				Anecdotario: <input type="text" name="anecdotario"
+					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAnecdotario()%>">
+			</p>
+			<p>
+				Gastronomia: <input type="text" name="gastronomia"
+					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getGastronomia()%>">
+			</p>
+			<p>
+				Itinerario: <select name="itinerario">
+					<option value="">Seleccione un itinerario</option>
+					<c:forEach items="${listaItinerarios}" var="itinerario">
+						<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				Imagen: <input type="text" name="imagen"
+					onchange="handleFiles(this.files)">
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
 
-				</form>
+		</form>
 
-			</div>
-		</div>
 	</div>
 
 	<div id="footer"></div>

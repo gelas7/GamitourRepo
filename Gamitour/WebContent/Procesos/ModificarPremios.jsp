@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -41,8 +41,6 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
 
 				<h2>Modifique los campos que considere oportunos</h2>
 
@@ -60,7 +58,8 @@
 							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>">
 					</p>
 					<p>
-						Imagen: <input type="file" name="imagen"  onchange="handleFiles(this.files)">
+						Imagen: <input type="file" name="imagen"
+							onchange="handleFiles(this.files)">
 					</p>
 					<p>
 						Puntos: <input type="number" name="puntos"
@@ -86,8 +85,6 @@
 					</p>
 				</form>
 			</div>
-		</div>
-	</div>
 
 	<div id="footer"></div>
 </body>

@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -39,47 +39,42 @@
 		</ul>
 	</div>
 	<hr />
-	
+
 	<div id="page">
-		<div id="content">
-			<div class="post">
 
-				<h2>Modifique los campos que considere oportunos</h2>
+		<h2>Modifique los campos que considere oportunos</h2>
 
-				<form action="../ModificarComentarios.do" method="get">
+		<form action="../ModificarComentarios.do" method="get">
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
 
-					<p>
-						Cliente: <select name="cliente">
-							<c:forEach items="${listaClientes}" var="cliente">
-								<option value="${cliente.idcliente}">${cliente.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					
-					<p>
-						ID Multimedia: <select name="multimedia">
-							<c:forEach items="${listaMultimedias}" var="multimedia">
-								<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
-							</c:forEach>
-						</select>
-					</p>
-					
-					<p>
-						Texto: <input type="text" name="texto">
-					</p>
+			<p>
+				Cliente: <select name="cliente">
+					<c:forEach items="${listaClientes}" var="cliente">
+						<option value="${cliente.idcliente}">${cliente.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
 
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
+			<p>
+				ID Multimedia: <select name="multimedia">
+					<c:forEach items="${listaMultimedias}" var="multimedia">
+						<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
+					</c:forEach>
+				</select>
+			</p>
 
-			</div>
-		</div>
+			<p>
+				Texto: <input type="text" name="texto">
+			</p>
+
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
+
 	</div>
-
 	<div id="footer"></div>
 </body>
 </html>

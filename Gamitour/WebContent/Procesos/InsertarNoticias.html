@@ -34,40 +34,35 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
-				<form action="../InsertarNoticias.do" method="get">
-					<p>
-						Nombre: <input type="text" name="nombre" required="required">
-					</p>
-					<p>
-						Texto: <input type="text" name="texto" required="required">
-					</p>
-					<p>
-						Fecha de Alta: <input type="date" name="fechaalta"
-							required="required">
-					</p>
-					<p>
-						Fecha de Caducidad: <input type="date" name="fechacaducidad"
-							required="required">
-					</p>
-					<p>
-					<div class="upload-btn-wrapper">
-						<button class="btn">Seleccione una imagen</button>
-						<input type="file" name="imagen" />
-					</div>
-
-					</p>
-
-
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-
-				</form>
-
+		<form action="../InsertarNoticias.do" method="get">
+			<p>
+				Nombre: <input type="text" name="nombre" required="required">
+			</p>
+			<p>
+				Texto: <input type="text" name="texto" required="required">
+			</p>
+			<p>
+				Fecha de Alta: <input type="date" name="fechaalta"
+					required="required">
+			</p>
+			<p>
+				Fecha de Caducidad: <input type="date" name="fechacaducidad"
+					required="required">
+			</p>
+			<p>
+			<div class="upload-btn-wrapper">
+				<button class="btn">Seleccione una imagen</button>
+				<input type="file" name="imagen" />
 			</div>
-		</div>
+
+			</p>
+
+
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+
+		</form>
 	</div>
 	<div id="footer"></div>
 </body>

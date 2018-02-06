@@ -21,10 +21,10 @@
 		</h1>
 
 	</div>
-	
+
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -41,27 +41,24 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
 
-				<h2>Modifique los campos que considere oportunos</h2>
+		<h2>Modifique los campos que considere oportunos</h2>
 
-				<form action="../ModificarRoles.do" method="get">
+		<form action="../ModificarRoles.do" method="get">
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
-					<p>
-						Nombre:* <input type="text" name="nombreN"
-							placeholder="<%=sr.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
+			<p>
+				Nombre:* <input type="text" name="nombreN"
+					placeholder="<%=sr.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
 
-				</form>
+		</form>
 
-			</div>
-		</div>
 	</div>
+
 </body>
 </html>

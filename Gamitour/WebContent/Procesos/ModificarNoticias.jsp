@@ -23,7 +23,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-	<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -40,45 +40,40 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
 
-				<h2>Modifique los campos que considere oportunos</h2>
+		<h2>Modifique los campos que considere oportunos</h2>
 
-				<form action="../ModificarNoticias.do" method="get">
+		<form action="../ModificarNoticias.do" method="get">
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
-					<p>
-						Nombre: <input type="text" name="nombreN"
-							placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-					</p>
-					<p>
-						Texto: <input type="text" name="texto"
-							placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
-					</p>
-					<p>
-						Fecha de Alta: <input type="date" name="fechaalta"
-							placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechaalta()%>">
-					</p>
-					<p>
-						Fecha de Caducidad: <input type="date" name="fechacaducidad"
-							placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechacaducidad()%>">
-					</p>
-					<p>
-						Imagen: <input type="text" name="imagen"
-							placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getImagen()%>">
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
+			<p>
+				Nombre: <input type="text" name="nombreN"
+					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+			</p>
+			<p>
+				Texto: <input type="text" name="texto"
+					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
+			</p>
+			<p>
+				Fecha de Alta: <input type="date" name="fechaalta"
+					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechaalta()%>">
+			</p>
+			<p>
+				Fecha de Caducidad: <input type="date" name="fechacaducidad"
+					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechacaducidad()%>">
+			</p>
+			<p>
+				Imagen: <input type="text" name="imagen"
+					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getImagen()%>">
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
 
-				</form>
+		</form>
 
-			</div>
-		</div>
 	</div>
-
 	<div id="footer"></div>
 </body>
 </html>

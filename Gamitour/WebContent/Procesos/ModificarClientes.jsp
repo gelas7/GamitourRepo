@@ -41,7 +41,6 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
 
 			<h2>Modifique los campos que considere oportunos</h2>
 
@@ -93,7 +92,6 @@
 				</p>
 			</form>
 		</div>
-	</div>
 	<div id="footer"></div>
 </body>
 </html>

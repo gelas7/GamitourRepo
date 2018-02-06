@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-	<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -40,50 +40,48 @@
 	</div>
 	<hr />
 
-	<div id="page">
-		<div id="content">
-			<div class="post">
-				<p>Insertar Parada</p>
+	<div class="page">
+		<p>Insertar Parada</p>
 
-				<form action="../InsertarParadas.do" method="get">
-					<p>
-						Nombre: <input type="text" name="nombre" required="required">
-					</p>
-					<p>
-						Numero de parada: <input type="number" name="numeroParada"
-							required="required">
-					</p>
-					<p>
-						Ubicación: <input type="text" name="ubicacion" required="required">
-					</p>
-					<p>
-						Historia: <input type="text" name="historia" required="required">
-					</p>
-					<p>
-						Anecdotario: <input type="text" name="anecdotario"
-							required="required">
-					</p>
-					<p>
-						Gastronomia: <input type="text" name="gastronomia"
-							required="required">
-					</p>
-					<p>
-						Itinerario: <select name="itinerario">
-							<c:forEach items="${listaItinerarios}" var="itinerario">
-								<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
+		<form action="../InsertarParadas.do" method="get">
+			<p>
+				Nombre: <input type="text" name="nombre" required="required">
+			</p>
+			<p>
+				Numero de parada: <input type="number" name="numeroParada"
+					required="required">
+			</p>
+			<p>
+				Ubicación: <input type="text" name="ubicacion" required="required">
+			</p>
+			<p>
+				Historia: <input type="text" name="historia" required="required">
+			</p>
+			<p>
+				Anecdotario: <input type="text" name="anecdotario"
+					required="required">
+			</p>
+			<p>
+				Gastronomia: <input type="text" name="gastronomia"
+					required="required">
+			</p>
+			<p>
+				Itinerario: <select name="itinerario">
+					<c:forEach items="${listaItinerarios}" var="itinerario">
+						<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
 
-					<p>
-						Imagen: <input type="file" name="imagen"  onchange="handleFiles(this.files)" required="required">
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
-		</div>
+			<p>
+				Imagen: <input type="file" name="imagen"
+					onchange="handleFiles(this.files)" required="required">
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
 	</div>
+	
 </body>
 </html>

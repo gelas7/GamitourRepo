@@ -40,8 +40,7 @@
 	</div>
 	<hr />
 	<div id="page">
-		<div id="content">
-			<div class="post">
+		
 				<p>Insertar Prueba Cultural</p>
 
 				<form action="../InsertarPruebasCulturales.do" method="get">
@@ -70,8 +69,7 @@
 
 				</form>
 			</div>
-		</div>
-	</div>
+		
 
 </body>
 </html>

@@ -23,7 +23,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-	<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -40,38 +40,35 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
 
-				<h2>Modifique los campos que considere oportunos</h2>
+		<h2>Modifique los campos que considere oportunos</h2>
 
-				<form action="../ModificarItinerarios.do" method="get">
+		<form action="../ModificarItinerarios.do" method="get">
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
 
-					<p>
-						Nuevo nombre: <input type="text" name="nombreN"
-							placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-					</p>
-					<p>
-						Categoria: <input type="text" name="categoria"
-							placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCategoria()%>">
-					</p>
-					<p>
-						Duracion: <input type="text" name="duracion"
-							placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDuracion()%>">
-					</p>
-					<p>
-						Ubicacion: <input type="text" name="ubicacion"
-							placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
-		</div>
+			<p>
+				Nuevo nombre: <input type="text" name="nombreN"
+					placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+			</p>
+			<p>
+				Categoria: <input type="text" name="categoria"
+					placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCategoria()%>">
+			</p>
+			<p>
+				Duracion: <input type="text" name="duracion"
+					placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDuracion()%>">
+			</p>
+			<p>
+				Ubicacion: <input type="text" name="ubicacion"
+					placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
 	</div>
+
 </body>
 </html>

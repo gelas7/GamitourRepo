@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -41,56 +41,54 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
 
-				<h2>Modifique los campos que considere oportunos</h2>
+		<h2>Modifique los campos que considere oportunos</h2>
 
-				<form action="../ModificarMultimedias.do" method="get">
+		<form action="../ModificarMultimedias.do" method="get">
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
 
-					<p>
-						Cliente: <select name="cliente">
-							<option value="">Seleccione un cliente</option>
-							<c:forEach items="${listaClientes}" var="cliente">
-								<option value="${cliente.idcliente}">${cliente.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						Fecha: <input type="date" name="fecha">
-					</p>
-	
-					<p>
-						Comentario: <input type="text" name="comentario"
-							placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getComentario()%>">
-					</p>
-					<p>
-						Imagen: <input type="text" name="imagen" onchange="handleFiles(this.files)">
-					</p>
-					<p>
-						Video: <input type="text" name="video" onchange="handleFiles(this.files)">
-					</p>
-					<p>
-						Prueba Deportiva: <select name="pruebaD">
-							<option value="">Seleccione una Prueba Deportiva</option>
-							<c:forEach items="${listaPruebasDeportivas}" var="pruebaD">
-								<option value="${pruebaD.idpruebadeportiva}">${pruebaD.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						Puntos Acumulados: <input type="number" name="puntos"
-							placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
-		</div>
+			<p>
+				Cliente: <select name="cliente">
+					<option value="">Seleccione un cliente</option>
+					<c:forEach items="${listaClientes}" var="cliente">
+						<option value="${cliente.idcliente}">${cliente.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				Fecha: <input type="date" name="fecha">
+			</p>
+
+			<p>
+				Comentario: <input type="text" name="comentario"
+					placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getComentario()%>">
+			</p>
+			<p>
+				Imagen: <input type="text" name="imagen"
+					onchange="handleFiles(this.files)">
+			</p>
+			<p>
+				Video: <input type="text" name="video"
+					onchange="handleFiles(this.files)">
+			</p>
+			<p>
+				Prueba Deportiva: <select name="pruebaD">
+					<option value="">Seleccione una Prueba Deportiva</option>
+					<c:forEach items="${listaPruebasDeportivas}" var="pruebaD">
+						<option value="${pruebaD.idpruebadeportiva}">${pruebaD.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				Puntos Acumulados: <input type="number" name="puntos"
+					placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
 	</div>
 
 	<div id="footer"></div>

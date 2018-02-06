@@ -24,7 +24,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -41,46 +41,38 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
 
-				<p>Insertar Prueba Deportiva</p>
+		<p>Insertar Prueba Deportiva</p>
 
-				<form action="../InsertarPruebasDeportivas.do" method="get">
-					<p>
-						Nombre: <input type="text" name="nombre"
-							required="required">
-					</p>
-					<p>
-						Fecha de Inicio: <input type="date"
-							name="fechaInicio" required="required">
-					</p>
-					<p>
-						Fecha de Fin: <input type="date" name="fechaFin"
-							required="required">
-					</p>
-					<p>
-						Explicación: <input type="text" name="explicacion"
-							required="required">
-					</p>
-					<p>
-						Puntos: <input type="number" name="puntos"
-							required="required">
-					</p>
-					<p>
-						Parada: <select name="parada">
-							<c:forEach items="${listaParadas}" var="parada">
-								<option value="${parada.idparada}">${parada.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
-		</div>
+		<form action="../InsertarPruebasDeportivas.do" method="get">
+			<p>
+				Nombre: <input type="text" name="nombre" required="required">
+			</p>
+			<p>
+				Fecha de Inicio: <input type="date" name="fechaInicio"
+					required="required">
+			</p>
+			<p>
+				Fecha de Fin: <input type="date" name="fechaFin" required="required">
+			</p>
+			<p>
+				Explicación: <input type="text" name="explicacion"
+					required="required">
+			</p>
+			<p>
+				Puntos: <input type="number" name="puntos" required="required">
+			</p>
+			<p>
+				Parada: <select name="parada">
+					<c:forEach items="${listaParadas}" var="parada">
+						<option value="${parada.idparada}">${parada.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
 	</div>
-
 </body>
 </html>

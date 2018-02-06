@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Panel Admin</title>
-<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="../style.css" rel="stylesheet" type="text/css"
+	media="screen" />
 </head>
 
 
@@ -16,7 +17,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-	<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -33,32 +34,29 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
-				<form action="../InsertarItinerarios.do" method="get">
-					<p>
-						<label>Nombre: <input type="text" name="nombre"
-							required="required"></label>
-					</p>
-					<p>
-						<label>Categoria: <input type="text" name="categoria"
-							required="required"></label>
-					</p>
-					<p>
-						<label>Duracion: <input type="text" name="duracion"
-							required="required"></label>
-					</p>
-					<p>
-						<label>Ubicacion: <input type="text" name="ubicacion"
-							required="required"></label>
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
 
-				</form>
-			</div>
-		</div>
+		<form action="../InsertarItinerarios.do" method="get">
+			<p>
+				<label>Nombre: <input type="text" name="nombre"
+					required="required"></label>
+			</p>
+			<p>
+				<label>Categoria: <input type="text" name="categoria"
+					required="required"></label>
+			</p>
+			<p>
+				<label>Duracion: <input type="text" name="duracion"
+					required="required"></label>
+			</p>
+			<p>
+				<label>Ubicacion: <input type="text" name="ubicacion"
+					required="required"></label>
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+
+		</form>
 	</div>
 </body>
 </html>

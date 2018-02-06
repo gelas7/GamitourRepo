@@ -41,51 +41,48 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
-				<form action="../InsertarMultimedias.do" method="get">
-					<p>
-						Cliente: <select name="cliente">
-							<option value="">Seleccione un cliente</option>
-							<c:forEach items="${listaClientes}" var="cliente">
-								<option value="${cliente.idcliente}">${cliente.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
+		<form action="../InsertarMultimedias.do" method="get">
+			<p>
+				Cliente: <select name="cliente">
+					<option value="">Seleccione un cliente</option>
+					<c:forEach items="${listaClientes}" var="cliente">
+						<option value="${cliente.idcliente}">${cliente.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
 
-					<p>
-						Fecha: <input type="date" name="fecha" required="required">
-					</p>
+			<p>
+				Fecha: <input type="date" name="fecha" required="required">
+			</p>
 
-					<p>
-						Comentario: <input type="text" name="comentario"
-							required="required">
-					</p>
-					<p>
-						Imagen: <input type="file" name="imagen" onchange="handleFiles(this.files)" required="required">
-					</p>
-					<p>
-						Video: <input type="file" name="video" onchange="handleFiles(this.files)" required="required">
-					</p>
-					<p>
-						Prueba Deportiva: <select name="pruebaD">
-							<option value="">Seleccione una Prueba Deportiva</option>
-							<c:forEach items="${listaPruebasDeportivas}" var="pruebaD">
-								<option value="${pruebaD.idpruebadeportiva}">${pruebaD.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						Puntos Acumulados: <input type="number" name="puntos"
-							required="required">
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
+			<p>
+				Comentario: <input type="text" name="comentario" required="required">
+			</p>
+			<p>
+				Imagen: <input type="file" name="imagen"
+					onchange="handleFiles(this.files)" required="required">
+			</p>
+			<p>
+				Video: <input type="file" name="video"
+					onchange="handleFiles(this.files)" required="required">
+			</p>
+			<p>
+				Prueba Deportiva: <select name="pruebaD">
+					<option value="">Seleccione una Prueba Deportiva</option>
+					<c:forEach items="${listaPruebasDeportivas}" var="pruebaD">
+						<option value="${pruebaD.idpruebadeportiva}">${pruebaD.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				Puntos Acumulados: <input type="number" name="puntos"
+					required="required">
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
 
-				</form>
-			</div>
-		</div>
+		</form>
 	</div>
 </body>
 </html>

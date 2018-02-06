@@ -41,8 +41,7 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
+		
 				<p>Insertar Comentario</p>
 
 				<form action="../InsertarComentarios.do" method="get">
@@ -70,7 +69,6 @@
 					</p>
 				</form>
 			</div>
-		</div>
-	</div>
+		
 </body>
 </html>

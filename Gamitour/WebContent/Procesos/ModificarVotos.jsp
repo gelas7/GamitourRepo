@@ -43,41 +43,39 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
-				<p>Insertar Voto</p>
 
-				<form action="../ModificarVotos.do" method="get">
+		<p>Insertar Voto</p>
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
+		<form action="../ModificarVotos.do" method="get">
 
-					<p>
-						Cliente: <select name="cliente">
-							<c:forEach items="${listaClientes}" var="cliente">
-								<option value="${cliente.idcliente}">${cliente.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						Multimedia: <select name="multimedia">
-							<c:forEach items="${listaMultimedias}" var="multimedia">
-								<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
-							</c:forEach>
-						</select>
-					</p>
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
 
-					<p>
-						Puntos: <input type="number" name="puntos"
-							placeholder="<%=sv.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
-					</p>
+			<p>
+				Cliente: <select name="cliente">
+					<c:forEach items="${listaClientes}" var="cliente">
+						<option value="${cliente.idcliente}">${cliente.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				Multimedia: <select name="multimedia">
+					<c:forEach items="${listaMultimedias}" var="multimedia">
+						<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
+					</c:forEach>
+				</select>
+			</p>
 
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
-		</div>
+			<p>
+				Puntos: <input type="number" name="puntos"
+					placeholder="<%=sv.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
+			</p>
+
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
 	</div>
+
 </body>
 </html>

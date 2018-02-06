@@ -2,75 +2,67 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Panel Admin</title>
-<link href="../style.css" rel="stylesheet" type="text/css"
-	media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Panel Admin</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 
 <body>
-	<div id="logo">
-		<h1>
-			<a href="../MostrarAdmin.do">Panel de administración Gamitour</a>
-		</h1>
+    <div id="logo">
+        <h1>
+            <a href="../MostrarAdmin.do">Panel de administración Gamitour</a>
+        </h1>
 
-	</div>
-	<div id="menu">
-		<ul>
-			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../MostrarAdmin.do?div=roles">Roles</a></li>
-			<li><a href="../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
-	<hr />
-	<div id="page">
-		<div id="content">
-			<div class="post">
-				<form action="../InsertarActividades.do" method="get">
-					<p>
-						Nombre: <input type="text" name="nombre" required="required">
-					</p>
-					<p>
-						Fecha de inicio: <input type="date" name="fechainicio"
-							required="required">
-					</p>
-					<p>
-						Fecha de fin: <input type="date" name="fechafin"
-							required="required">
-					</p>
-					<p>
-						Ubicacion: <input type="text" name="ubicacion" required="required">
-					</p>
-					<p>
-						Número de participantes: <input type="number" name="participantes"
-							required="required">
-					</p>
-					<p>
-						Precio: <input type="number" name="precio" required="required">
-					</p>
-					<p>
-						Puntos: <input type="number" name="puntos" required="required">
-					</p>
-					<p>
-						Imagen: <input type="file" name="imagen"
-							onchange="handleFiles(this.files)" required="required">
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
-		</div>
-	</div>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+            <li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
+            <li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+            <li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
+            <li><a href="../MostrarAdmin.do?div=paradas">Paradas</a></li>
+            <li><a href="../MostrarAdmin.do?div=premios">Premios</a></li>
+            <li><a href="../MostrarAdmin.do?div=roles">Roles</a></li>
+            <li><a href="../MostrarAdmin.do?div=votos">Votos</a></li>
+            <li><a href="../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+            <li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+            <li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+            <li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+        </ul>
+    </div>
+    <hr />
+    <div id="page">
+            <form action="../InsertarActividades.do" method="get">
+                <p>
+                    Nombre: <input type="text" name="nombre" required="required">
+                </p>
+                <p>
+                    Fecha de inicio: <input type="date" name="fechainicio" required="required">
+                </p>
+                <p>
+                    Fecha de fin: <input type="date" name="fechafin" required="required">
+                </p>
+                <p>
+                    Ubicacion: <input type="text" name="ubicacion" required="required">
+                </p>
+                <p>
+                    Número de participantes: <input type="number" name="participantes" required="required">
+                </p>
+                <p>
+                    Precio: <input type="number" name="precio" required="required">
+                </p>
+                <p>
+                    Puntos: <input type="number" name="puntos" required="required">
+                </p>
+                <p>
+                    Imagen: <input type="file" name="imagen" onchange="handleFiles(this.files)" required="required">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar" id="enviar">
+                </p>
+            </form>
+    </div>
 
 </body>
+
 </html>

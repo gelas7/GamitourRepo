@@ -22,7 +22,7 @@
 	</div>
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -39,48 +39,45 @@
 	<hr />
 
 	<div id="page">
-		<div id="content">
-			<div class="post">
-				<p>Modificando Prueba Deportiva</p>
 
-				<form action="../ModificarPruebasDeportivas.do" method="get">
+		<p>Modificando Prueba Deportiva</p>
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
-					<p>
-						<label>Nombre: <input type="text" name="nombre"
-							placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>"></label>
-					</p>
-					<p>
-						<label>Fecha de Inicio: <input type="date"
-							name="fechaInicio"
-							placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechainicio()%>"></label>
-					</p>
-					<p>
-						<label>Fecha de Fin: <input type="date" name="fechaFin"
-							placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>"></label>
-					</p>
-					<p>
-						<label>Explicación: <input type="text" name="explicacion"
-							placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getExplicacion()%>"></label>
-					</p>
-					<p>
-						<label>Puntos: <input type="text" name="puntos"
-							placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>"></label>
-					</p>
-					<p>
-						Parada: <select name="parada">
-							<c:forEach items="${listaParadas}" var="parada">
-								<option value="${parada.idparada}">${parada.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
-		</div>
+		<form action="../ModificarPruebasDeportivas.do" method="get">
+
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
+			<p>
+				<label>Nombre: <input type="text" name="nombre"
+					placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>"></label>
+			</p>
+			<p>
+				<label>Fecha de Inicio: <input type="date"
+					name="fechaInicio"
+					placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechainicio()%>"></label>
+			</p>
+			<p>
+				<label>Fecha de Fin: <input type="date" name="fechaFin"
+					placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>"></label>
+			</p>
+			<p>
+				<label>Explicación: <input type="text" name="explicacion"
+					placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getExplicacion()%>"></label>
+			</p>
+			<p>
+				<label>Puntos: <input type="text" name="puntos"
+					placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>"></label>
+			</p>
+			<p>
+				Parada: <select name="parada">
+					<c:forEach items="${listaParadas}" var="parada">
+						<option value="${parada.idparada}">${parada.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
 	</div>
 
 	<div id="footer"></div>
