@@ -57,7 +57,7 @@
 					<p>
 						Multimedia: <select name="cliente">
 							<c:forEach items="${listaMultimedias}" var="multimedia">
-								<option value="${multimedia.idmultimedia}">${multimedia.nombre}</option>
+								<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
 							</c:forEach>
 						</select>
 					</p>

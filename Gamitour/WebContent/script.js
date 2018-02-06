@@ -12,6 +12,7 @@ window.onload = function() {
 	var multimedias = document.getElementById("multimedias");
 	var premios = document.getElementById("premios");
 	var comentarios = document.getElementById("comentarios");
+	var votos = document.getElementById("votos");
 
 	/** DIVS TABLAS* */
 	var divBienvenida = document.getElementById("divBienvenida");
@@ -26,6 +27,7 @@ window.onload = function() {
 	var divMultimedias = document.getElementById("divmultimedias");
 	var divPremios = document.getElementById("divpremios");
 	var divComentarios = document.getElementById("divcomentarios");
+	var divVotos = document.getElementById("divvotos");
 
 	/** EVENT LISTENERS BOTONES MENU* */
 	clientes.addEventListener("click", mostrar, false);
@@ -39,11 +41,11 @@ window.onload = function() {
 	multimedias.addEventListener("click", mostrar, false);
 	premios.addEventListener("click", mostrar, false);
 	comentarios.addEventListener("click", mostrar, false);
-	
-	
+	votos.addEventListener("click", mostrar, false);
+
 	/** DIV ACTUAL* */
 	var divActual = document.getElementById("divActual");
-		
+
 	if (divActual.value != "") {
 		mostrarDivActual(divActual.value);
 	} else {
@@ -57,6 +59,7 @@ window.onload = function() {
 	}
 
 	function mostrar() {
+		alert(this.id);
 		ocultarTodos();
 		var concateno = "div" + this.id;
 		document.getElementById(concateno).style.display = "block";
@@ -75,5 +78,6 @@ window.onload = function() {
 		divPremios.style.display = "none";
 		divMultimedias.style.display = "none";
 		divComentarios.style.display = "none";
+		divVotos.style.display = "none";
 	}
 }
