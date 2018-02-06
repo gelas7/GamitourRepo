@@ -41,8 +41,6 @@
 	<hr />
 
 	<div class="page">
-
-
 		<form action="../InsertarParadas.do" method="get">
 			<h2>Insertar Parada</h2>
 			<p>

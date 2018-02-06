@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.proyecto.modelo.Cliente;
 import com.proyecto.modelo.Comentario;
-import com.proyecto.modelo.Itinerario;
 import com.proyecto.modelo.Multimedia;
 import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceComentariosImp;
