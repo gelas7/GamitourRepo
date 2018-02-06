@@ -49,12 +49,11 @@ public class InsertarMultimediasAccion extends Accion {
 
 		Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
 
-		sm.insertar(
-				new Multimedia(c, date1, comentario, imagen, video, Integer.parseInt(idPd), Integer.parseInt(puntos)));
+		sm.insertar(new Multimedia(c, date1, comentario, imagen, video, Integer.parseInt(idPd), Integer.parseInt(puntos)));
 
 		request.setAttribute("listaMultimedias", sm.buscarTodos());
 
-		return "mostrarMultimedias.jsp";
+		return "MostrarAdmin.do?div=multimedias";
 	}
 
 }

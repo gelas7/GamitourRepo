@@ -24,9 +24,9 @@ window.onload = function() {
 	var divItinerarios = document.getElementById("divitinerarios");
 	var divPruebasdeportivas = document.getElementById("divpruebasdeportivas");
 	var divPruebasculturales = document.getElementById("divpruebasculturales");
-	// var divVotos = document.getElementById("divvotos");
 	var divMultimedias = document.getElementById("divmultimedias");
 	var divPremios = document.getElementById("divpremios");
+	// var divVotos = document.getElementById("divvotos");
 	// var divComentarios = document.getElementById("divcomentarios");
 
 	/** EVENT LISTENERS BOTONES MENU* */
@@ -38,9 +38,9 @@ window.onload = function() {
 	roles.addEventListener("click", mostrar, false);
 	pruebasculturales.addEventListener("click", mostrar, false);
 	pruebasdeportivas.addEventListener("click", mostrar, false);
-	// votos.addEventListener("click", mostrar, false);
 	multimedia.addEventListener("click", mostrar, false);
 	premios.addEventListener("click", mostrar, false);
+	// votos.addEventListener("click", mostrar, false);
 	// comentarios.addEventListener("click", mostrar, false);
 
 	/** DIV ACTUAL* */
@@ -74,10 +74,9 @@ window.onload = function() {
 		divItinerarios.style.display = "none";
 		divPruebasculturales.style.display = "none";
 		divPruebasdeportivas.style.display = "none";
-		// divVotos.style.display = "none";
 		divPremios.style.display = "none";
-		// divComentarios.style.display = "none";
 		divMultimedias.style.display = "none";
-
+		// divComentarios.style.display = "none";
+		// divVotos.style.display = "none";
 	}
 }

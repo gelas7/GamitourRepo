@@ -34,6 +34,7 @@ public class Multimedia implements java.io.Serializable {
 
 	public Multimedia() {
 	}
+	
 	public Multimedia(Cliente cliente, Date fecha, String comentario, String imagen, String video,
 			int pruebaDeportivaIdpruebadeportiva, Integer puntosacumulados) {
 	

@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.proyecto.admin.delete.EliminarActividadesAccion;
 import com.proyecto.admin.delete.EliminarClientesAccion;
 import com.proyecto.admin.delete.EliminarItinerariosAccion;
+import com.proyecto.admin.delete.EliminarMultimediasAccion;
 import com.proyecto.admin.delete.EliminarNoticiasAccion;
 import com.proyecto.admin.delete.EliminarParadasAccion;
 import com.proyecto.admin.delete.EliminarPremiosAccion;
@@ -15,6 +16,7 @@ import com.proyecto.admin.delete.EliminarRolesAccion;
 import com.proyecto.admin.insert.InsertarActividadesAccion;
 import com.proyecto.admin.insert.InsertarClientesAccion;
 import com.proyecto.admin.insert.InsertarItinerariosAccion;
+import com.proyecto.admin.insert.InsertarMultimediasAccion;
 import com.proyecto.admin.insert.InsertarNoticiasAccion;
 import com.proyecto.admin.insert.InsertarParadasAccion;
 import com.proyecto.admin.insert.InsertarPremiosAccion;
@@ -25,6 +27,7 @@ import com.proyecto.admin.main.MostrarAdminAccion;
 import com.proyecto.admin.update.ModificarActividadesAccion;
 import com.proyecto.admin.update.ModificarClientesAccion;
 import com.proyecto.admin.update.ModificarItinerariosAccion;
+import com.proyecto.admin.update.ModificarMultimediasAccion;
 import com.proyecto.admin.update.ModificarNoticiasAccion;
 import com.proyecto.admin.update.ModificarParadasAccion;
 import com.proyecto.admin.update.ModificarPremiosAccion;
@@ -124,6 +127,15 @@ public abstract class Accion {
 			break;
 		case "EliminarPremios":
 			accion = new EliminarPremiosAccion();
+			break;
+		case "InsertarMultimedias":
+			accion = new InsertarMultimediasAccion();
+			break;
+		case "ModificarMultimedias":
+			accion = new ModificarMultimediasAccion();
+			break;
+		case "EliminarMultimedias":
+			accion = new EliminarMultimediasAccion();
 			break;
 			
 		default:

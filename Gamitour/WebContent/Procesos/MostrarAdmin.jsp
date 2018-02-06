@@ -43,7 +43,7 @@
 				<div id="divBienvenida">
 					<h1>Bienvenido. Seleccione una opción del menu superior.</h1>
 				</div>
-				
+
 				<div id="divclientes">
 					<h1>Listado de Clientes</h1>
 					<table>
@@ -82,7 +82,8 @@
 							</tr>
 						</c:forEach>
 					</table>
-					<a id="insertar" href="Procesos/InsertarClientes.jsp">Insertar un cliente nuevo</a>
+					<a id="insertar" href="Procesos/InsertarClientes.jsp">Insertar
+						un cliente nuevo</a>
 
 				</div>
 
@@ -117,7 +118,8 @@
 							</tr>
 						</c:forEach>
 					</table>
-					<a id="insertar" href="Procesos/InsertarActividades.html">Insertar una actividad nueva </a>
+					<a id="insertar" href="Procesos/InsertarActividades.html">Insertar
+						una actividad nueva </a>
 				</div>
 
 				<div id="divitinerarios">
@@ -142,7 +144,8 @@
 							</tr>
 						</c:forEach>
 					</table>
-					<a id="insertar" href="Procesos/InsertarItinerarios.html">Insertar un itinerario nuevo</a>
+					<a id="insertar" href="Procesos/InsertarItinerarios.html">Insertar
+						un itinerario nuevo</a>
 				</div>
 
 				<div id="divnoticias">
@@ -169,7 +172,8 @@
 							</tr>
 						</c:forEach>
 					</table>
-					<a id="insertar" href="Procesos/InsertarNoticias.html">Insertar una noticia nueva</a>
+					<a id="insertar" href="Procesos/InsertarNoticias.html">Insertar
+						una noticia nueva</a>
 				</div>
 
 				<div id="divparadas">
@@ -202,7 +206,8 @@
 							</tr>
 						</c:forEach>
 					</table>
-					<a id="insertar" href="Procesos/InsertarParadas.jsp">Insertar una parada nueva</a>
+					<a id="insertar" href="Procesos/InsertarParadas.jsp">Insertar
+						una parada nueva</a>
 				</div>
 
 				<div id="divroles">
@@ -221,7 +226,8 @@
 							</tr>
 						</c:forEach>
 					</table>
-					<a id="insertar" href="Procesos/InsertarRoles.html">Insertar un rol nuevo</a>
+					<a id="insertar" href="Procesos/InsertarRoles.html">Insertar un
+						rol nuevo</a>
 				</div>
 
 				<div id="divpruebasculturales">
@@ -248,7 +254,8 @@
 							</tr>
 						</c:forEach>
 					</table>
-					<a id="insertar" href="Procesos/InsertarPruebasCulturales.jsp">Insertar una prueba cultural nueva</a>
+					<a id="insertar" href="Procesos/InsertarPruebasCulturales.jsp">Insertar
+						una prueba cultural nueva</a>
 				</div>
 
 				<div id="divpruebasdeportivas">
@@ -277,9 +284,10 @@
 							</tr>
 						</c:forEach>
 					</table>
-					<a id="insertar" href="Procesos/InsertarPruebasDeportivas.jsp">Insertar una prueba deportiva nueva</a>
+					<a id="insertar" href="Procesos/InsertarPruebasDeportivas.jsp">Insertar
+						una prueba deportiva nueva</a>
 				</div>
-				
+
 				<div id="divpremios">
 					<h1>Listado de Premios</h1>
 					<table>
@@ -312,6 +320,41 @@
 					<a id="insertar" href="Procesos/InsertarPremios.jsp">Insertar
 						un premio nuevo</a>
 				</div>
+
+
+				<div id="divmultimedias">
+					<h1>Listado de Elementos Multimedia</h1>
+					<table>
+						<tr>
+							<th>Cliente</th>
+							<th>Fecha</th>
+							<th>Comentario</th>
+							<th>Imagen</th>
+							<th>Video</th>
+							<th>Puntos</th>
+							<th>Prueba Deportiva</th>
+						</tr>
+						<c:forEach items="${listaMultimedias}" var="m">
+							<tr>
+								<td>${m.cliente.getNombre()}</td>
+								<td>${m.fecha}</td>
+								<td>${m.comentario}</td>
+								<td>${m.imagen}</td>
+								<td>${m.video}</td>
+								<td>${m.puntos}</td>
+								<td><%=spd.buscarPorClave("${m.pruebaDeportivaIdpruebadeportiva}"")%></td>
+
+								<td><a id="eliminar"
+									href="EliminarMultimedias.do?id=${m.idmultimedia}">Eliminar</a></td>
+								<td><a id="actualizar"
+									href="Procesos/ModificarMultimedias.jsp?id=${m.idmultimedia}">Modificar</a></td>
+							</tr>
+						</c:forEach>
+					</table>
+					<a id="insertar" href="Procesos/InsertarMultimedias.jsp">Insertar
+						una elemento multimedia nuevo</a>
+				</div>
+
 			</div>
 		</div>
 	</div>
