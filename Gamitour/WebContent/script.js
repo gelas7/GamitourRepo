@@ -59,7 +59,6 @@ window.onload = function() {
 	}
 
 	function mostrar() {
-		alert(this.id);
 		ocultarTodos();
 		var concateno = "div" + this.id;
 		document.getElementById(concateno).style.display = "block";
