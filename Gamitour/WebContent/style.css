@@ -1,5 +1,6 @@
 * {
-	margin: 0 auto;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -22,6 +23,10 @@ h1 {
 	letter-spacing: -0.05em;
 	font-family: Optima, sans-serif;
 	text-decoration: none;
+}
+
+h2{
+	margin:0 auto;
 }
 
 p, ul, ol {

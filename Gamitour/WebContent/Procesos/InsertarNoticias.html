@@ -50,13 +50,8 @@
 					required="required">
 			</p>
 			<p>
-			<div class="upload-btn-wrapper">
-				<button class="btn">Seleccione una imagen</button>
-				<input type="file" name="imagen" />
-			</div>
-
+				Imagen: <input type="file" name="imagen" required="required" onchange="handleFiles(this.files)">
 			</p>
-
 
 			<p>
 				<input type="submit" value="Enviar" id="enviar">

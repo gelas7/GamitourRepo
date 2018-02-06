@@ -56,16 +56,14 @@
 					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
 			</p>
 			<p>
-				Fecha de Alta: <input type="date" name="fechaalta"
-					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechaalta()%>">
+				Fecha de Alta: <input type="date" name="fechaalta">
 			</p>
 			<p>
-				Fecha de Caducidad: <input type="date" name="fechacaducidad"
-					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechacaducidad()%>">
+				Fecha de Caducidad: <input type="date" name="fechacaducidad">
 			</p>
 			<p>
 				Imagen: <input type="text" name="imagen"
-					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getImagen()%>">
+					onchange="handleFiles(this.files)">
 			</p>
 			<p>
 				<input type="submit" value="Enviar" id="enviar">
