@@ -42,12 +42,11 @@
 
 	<div id="page">
 
-	
-
 		<form action="../ModificarMultimedias.do" method="get">
-
-	<h2 id="modificar">Modifique los campos que quiera</h2>
-			<h3>Los campos en blanco no sufriran cambios</h3>
+		
+			<h2 id="modificar">Modifique los campos que considere oportunos</h2>
+			<h3>Los campos en blanco no sufrirán cambios</h3>
+			
 			<input type="hidden" value="<%=request.getParameter("id")%>"
 				name="id">
 
@@ -68,12 +67,8 @@
 					placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getComentario()%>">
 			</p>
 			<p>
-				Imagen: <input type="text" name="imagen"
-					onchange="handleFiles(this.files)">
-			</p>
-			<p>
-				Video: <input type="text" name="video"
-					onchange="handleFiles(this.files)">
+				Puntos Acumulados: <input type="number" name="puntos"
+					placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
 			</p>
 			<p>
 				Prueba Deportiva: <select name="pruebaD">
@@ -84,8 +79,12 @@
 				</select>
 			</p>
 			<p>
-				Puntos Acumulados: <input type="number" name="puntos"
-					placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
+				Imagen: <input type="text" name="imagen"
+					onchange="handleFiles(this.files)">
+			</p>
+			<p>
+				Video: <input type="text" name="video"
+					onchange="handleFiles(this.files)">
 			</p>
 			<p>
 				<input type="submit" value="Enviar" id="enviar">

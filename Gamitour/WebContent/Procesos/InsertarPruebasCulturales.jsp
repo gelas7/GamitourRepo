@@ -40,10 +40,9 @@
 	</div>
 	<hr />
 	<div id="page">
-
-
-
+	
 		<form action="../InsertarPruebasCulturales.do" method="get">
+		
 			<h2>Insertar Prueba Cultural</h2>
 			<p>
 				Nombre: <input type="text" name="nombre" required="required">
