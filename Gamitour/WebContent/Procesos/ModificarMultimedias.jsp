@@ -67,12 +67,8 @@
 					placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getComentario()%>">
 			</p>
 			<p>
-				Imagen: <input type="text" name="imagen"
-					onchange="handleFiles(this.files)">
-			</p>
-			<p>
-				Video: <input type="text" name="video"
-					onchange="handleFiles(this.files)">
+				Puntos Acumulados: <input type="number" name="puntos"
+					placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
 			</p>
 			<p>
 				Prueba Deportiva: <select name="pruebaD">
@@ -83,8 +79,12 @@
 				</select>
 			</p>
 			<p>
-				Puntos Acumulados: <input type="number" name="puntos"
-					placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
+				Imagen: <input type="text" name="imagen"
+					onchange="handleFiles(this.files)">
+			</p>
+			<p>
+				Video: <input type="text" name="video"
+					onchange="handleFiles(this.files)">
 			</p>
 			<p>
 				<input type="submit" value="Enviar" id="enviar">

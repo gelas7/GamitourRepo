@@ -53,7 +53,6 @@
 					</c:forEach>
 				</select>
 			</p>
-
 			<p>
 				Fecha: <input type="date" name="fecha" required="required">
 			</p>
@@ -62,12 +61,8 @@
 				Comentario: <input type="text" name="comentario" required="required">
 			</p>
 			<p>
-				Imagen: <input type="file" name="imagen"
-					onchange="handleFiles(this.files)" required="required">
-			</p>
-			<p>
-				Video: <input type="file" name="video"
-					onchange="handleFiles(this.files)" required="required">
+				Puntos Acumulados: <input type="number" name="puntos"
+					required="required">
 			</p>
 			<p>
 				Prueba Deportiva: <select name="pruebaD">
@@ -78,8 +73,12 @@
 				</select>
 			</p>
 			<p>
-				Puntos Acumulados: <input type="number" name="puntos"
-					required="required">
+				Imagen: <input type="file" name="imagen"
+					onchange="handleFiles(this.files)" required="required">
+			</p>
+			<p>
+				Video: <input type="file" name="video"
+					onchange="handleFiles(this.files)" required="required">
 			</p>
 			<p>
 				<input type="submit" value="Enviar" id="enviar">
