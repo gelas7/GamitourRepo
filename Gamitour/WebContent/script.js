@@ -38,7 +38,7 @@ window.onload = function() {
 	roles.addEventListener("click", mostrar, false);
 	pruebasculturales.addEventListener("click", mostrar, false);
 	pruebasdeportivas.addEventListener("click", mostrar, false);
-	multimedia.addEventListener("click", mostrar, false);
+	multimedias.addEventListener("click", mostrar, false);
 	premios.addEventListener("click", mostrar, false);
 	// votos.addEventListener("click", mostrar, false);
 	// comentarios.addEventListener("click", mostrar, false);

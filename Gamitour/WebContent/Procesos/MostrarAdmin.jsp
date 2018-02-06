@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -29,6 +30,7 @@
 			<li><button id="premios">Premios</button></li>
 			<li><button id="roles">Roles</button></li>
 			<li><button id="votos">Votos</button></li>
+			<li><button id="multimedias">Multimedias</button></li>
 			<li><button id="pruebasdeportivas">PD</button></li>
 			<li><button id="pruebasculturales">PC</button></li>
 		</ul>
@@ -332,7 +334,7 @@
 							<th>Imagen</th>
 							<th>Video</th>
 							<th>Puntos</th>
-							<th>Prueba Deportiva</th>
+							<th>ID Prueba Deportiva</th>
 						</tr>
 						<c:forEach items="${listaMultimedias}" var="m">
 							<tr>
@@ -341,8 +343,8 @@
 								<td>${m.comentario}</td>
 								<td>${m.imagen}</td>
 								<td>${m.video}</td>
-								<td>${m.puntos}</td>
-								<td><%=spd.buscarPorClave("${m.pruebaDeportivaIdpruebadeportiva}"")%></td>
+								<td>${m.puntosacumulados}</td>
+								<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 
 								<td><a id="eliminar"
 									href="EliminarMultimedias.do?id=${m.idmultimedia}">Eliminar</a></td>

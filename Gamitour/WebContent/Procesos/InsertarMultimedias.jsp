@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="com.proyecto.service.*"%>
+<%@ page import="com.proyecto.modelo.*"%>
+<%@ page import="java.util.*"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +18,7 @@
 <body>
 	<div id="logo">
 		<h1>
-			<a href="../MostrarAdmin.do"">Panel de administración Gamitour</a>
+			<a href="../MostrarAdmin.do">Panel de administración Gamitour</a>
 		</h1>
 
 	</div>
@@ -44,11 +51,11 @@
 							</c:forEach>
 						</select>
 					</p>
-					
+
 					<p>
 						Fecha: <input type="date" name="fecha" required="required">
 					</p>
-					
+
 					<p>
 						Comentario: <input type="text" name="comentario"
 							required="required">
