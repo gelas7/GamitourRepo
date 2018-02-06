@@ -44,56 +44,57 @@
 
 
 
-			<form action="../ModificarClientes.do" method="get">
-				<h2 id="modificar">Modifique los campos que quiera</h2>
-			<h3>Los campos en blanco no sufriran cambios</h3>
+		<form action="../ModificarClientes.do" method="get">
+			<h2 id="modificar">Modifique los campos que considere oportunos</h2>
+			<h3>Los campos en blanco no sufrirán cambios</h3>
 
-				<input type="hidden" value="<%=request.getParameter("id")%>"
-					name="id">
-				<p>
-					Nombre: <input type="text" name="nombre"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-				</p>
-				<p>
-					Apellidos: <input type="text" name="apellidos"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getApellidos()%>">
-				</p>
-				<p>
-					Fecha de nacimiento: <input type="date" name="fechanacimiento"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechanacimiento()%>">
-				</p>
-				<p>
-					Email: <input type="text" name="email"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getEmail()%>">
-				</p>
-				<p>
-					Password: <input type="password" name="password"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPassword()%>">
-				</p>
-				<p>
-					Telefono: <input type="text" name="telefono"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTelefono()%>">
-				</p>
-				<p>
-					Direccion: <input type="text" name="direccion"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDireccion()%>">
-				</p>
-				<p>
-					Codigo Postal: <input type="text" name="codigopostal"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCodigopostal()%>">
-				</p>
-				<p>
-					Puntos Acumulados: <input type="text" name="puntosacumulados"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
-				</p>
-				<p>
-					Avatar: <input type="text" name="avatar"  onchange="handleFiles(this.files)">
-				</p>
-				<p>
-					<input type="submit" value="Enviar" id="enviar">
-				</p>
-			</form>
-		</div>
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
+			<p>
+				Nombre: <input type="text" name="nombre"
+					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+			</p>
+			<p>
+				Apellidos: <input type="text" name="apellidos"
+					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getApellidos()%>">
+			</p>
+			<p>
+				Fecha de nacimiento: <input type="date" name="fechanacimiento"
+					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechanacimiento()%>">
+			</p>
+			<p>
+				Email: <input type="text" name="email"
+					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getEmail()%>">
+			</p>
+			<p>
+				Password: <input type="password" name="password"
+					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPassword()%>">
+			</p>
+			<p>
+				Telefono: <input type="text" name="telefono"
+					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTelefono()%>">
+			</p>
+			<p>
+				Direccion: <input type="text" name="direccion"
+					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDireccion()%>">
+			</p>
+			<p>
+				Codigo Postal: <input type="text" name="codigopostal"
+					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCodigopostal()%>">
+			</p>
+			<p>
+				Puntos Acumulados: <input type="text" name="puntosacumulados"
+					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
+			</p>
+			<p>
+				Avatar: <input type="text" name="avatar"
+					onchange="handleFiles(this.files)">
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
+	</div>
 	<div id="footer"></div>
 </body>
 </html>

@@ -20,10 +20,10 @@
 		</h1>
 
 	</div>
-	
+
 	<div id="menu">
 		<ul>
-		<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
 			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
@@ -40,43 +40,43 @@
 	<hr />
 
 	<div id="page">
-				
 
-				<form action="../ModificarPruebasCulturales.do" method="get">
-				
-					<h2 id="modificar">Modifique los campos que quiera</h2>
-			<h3>Los campos en blanco no sufriran cambios</h3>
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
-					<p>
-						Nombre: <input type="text" name="nombre" 
-							placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-					</p>
-					<p>
-						Pregunta: <input type="text" name="pregunta"
-							placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPregunta()%>">
-					</p>
-					<p>
-						Respuesta: <input type="text" name="respuesta"
-							placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getRespuesta()%>">
-					</p>
-					<p>
-						Puntos: <input type="text" name="puntos"
-							placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
-					</p>
-					<p>
-						Parada: <select name="parada">
-							<c:forEach items="${listaParadas}" var="parada">
-								<option value="${parada.idparada}">${parada.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
+		<form action="../ModificarPruebasCulturales.do" method="get">
+
+			<h2 id="modificar">Modifique los campos que considere oportunos</h2>
+			<h3>Los campos en blanco no sufrirán cambios</h3>
+
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
+			<p>
+				Nombre: <input type="text" name="nombre"
+					placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+			</p>
+			<p>
+				Pregunta: <input type="text" name="pregunta"
+					placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPregunta()%>">
+			</p>
+			<p>
+				Respuesta: <input type="text" name="respuesta"
+					placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getRespuesta()%>">
+			</p>
+			<p>
+				Puntos: <input type="text" name="puntos"
+					placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
+			</p>
+			<p>
+				Parada: <select name="parada">
+					<c:forEach items="${listaParadas}" var="parada">
+						<option value="${parada.idparada}">${parada.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
+	</div>
 
 	<div id="footer"></div>
 
