@@ -35,7 +35,6 @@
 			<li><button id="pruebasdeportivas">PD</button></li>
 			<li><button id="pruebasculturales">PC</button></li>
 		</ul>
-		<button id="divActual" hidden value="${divActual}"></button>
 	</div>
 	<hr />
 
@@ -356,7 +355,7 @@
 					<a id="insertar" href="Procesos/InsertarMultimedias.jsp">Insertar
 						una elemento multimedia nuevo</a>
 				</div>
-				
+
 				<div id="divcomentarios">
 					<h1>Listado de Comentarios</h1>
 					<table>
