@@ -40,9 +40,12 @@
 	<hr />
 
 	<div id="page">
-				<p>Modificando Prueba Cultural</p>
+				
 
 				<form action="../ModificarPruebasCulturales.do" method="get">
+				
+					<h2 id="modificar">Modifique los campos que quiera</h2>
+			<h3>Los campos en blanco no sufriran cambios</h3>
 
 					<input type="hidden" value="<%=request.getParameter("id")%>"
 						name="id">

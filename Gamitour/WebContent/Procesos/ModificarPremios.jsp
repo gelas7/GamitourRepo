@@ -42,49 +42,52 @@
 
 	<div id="page">
 
-				<h2>Modifique los campos que considere oportunos</h2>
+		<
 
-				<form action="../ModificarPremios.do" method="get">
+		<form action="../ModificarPremios.do" method="get">
 
-					<input type="hidden" value="<%=request.getParameter("id")%>"
-						name="id">
+			<h2 id="modificar">Modifique los campos que quiera</h2>
+			<h3>Los campos en blanco no sufriran cambios</h3>
 
-					<p>
-						Nombre: <input type="text" name="nombre"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-					</p>
-					<p>
-						Descripcion: <input type="number" name="descripcion"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>">
-					</p>
-					<p>
-						Imagen: <input type="file" name="imagen"
-							onchange="handleFiles(this.files)">
-					</p>
-					<p>
-						Puntos: <input type="number" name="puntos"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
-					</p>
-					<p>
-						Fecha de activacion: <input type="date" name="fechaactivacion">
-					</p>
+			<input type="hidden" value="<%=request.getParameter("id")%>"
+				name="id">
 
-					<p>
-						Fecha de consumo: <input type="date" name="fechaconsumo">
-					</p>
-					<p>
-						Cliente: <select name="cliente">
-							<option value="">Seleccione un cliente</option>
-							<c:forEach items="${listaClientes}" var="cliente">
-								<option value="${cliente.idcliente}">${cliente.nombre}</option>
-							</c:forEach>
-						</select>
-					</p>
-					<p>
-						<input type="submit" value="Enviar" id="enviar">
-					</p>
-				</form>
-			</div>
+			<p>
+				Nombre: <input type="text" name="nombre"
+					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+			</p>
+			<p>
+				Descripcion: <input type="number" name="descripcion"
+					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>">
+			</p>
+			<p>
+				Imagen: <input type="file" name="imagen"
+					onchange="handleFiles(this.files)">
+			</p>
+			<p>
+				Puntos: <input type="number" name="puntos"
+					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
+			</p>
+			<p>
+				Fecha de activacion: <input type="date" name="fechaactivacion">
+			</p>
+
+			<p>
+				Fecha de consumo: <input type="date" name="fechaconsumo">
+			</p>
+			<p>
+				Cliente: <select name="cliente">
+					<option value="">Seleccione un cliente</option>
+					<c:forEach items="${listaClientes}" var="cliente">
+						<option value="${cliente.idcliente}">${cliente.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
+				<input type="submit" value="Enviar" id="enviar">
+			</p>
+		</form>
+	</div>
 
 	<div id="footer"></div>
 </body>
