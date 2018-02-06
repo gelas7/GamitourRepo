@@ -220,12 +220,6 @@ button:hover {
     line-height: normal;
 }
 
-.upload-btn-wrapper {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-
 .btn {
     border: 2px solid gray;
     color: gray;
@@ -234,14 +228,6 @@ button:hover {
     border-radius: 8px;
     font-size: 17px;
     font-weight: bold;
-}
-
-.upload-btn-wrapper input[type=file] {
-    font-size: 100px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
 }
 
 input[type=submit] {
