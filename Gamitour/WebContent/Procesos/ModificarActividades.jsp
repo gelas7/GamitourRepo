@@ -28,6 +28,7 @@
 			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
 			<li><a href="../MostrarAdmin.do?div=paradas">Paradas</a></li>
 			<li><a href="../MostrarAdmin.do?div=premios">Premios</a></li>
+			<li><a href="../MostrarAdmin.do?div=roles">Roles</a></li>
 			<li><a href="../MostrarAdmin.do?div=votos">Votos</a></li>
 			<li><a href="../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
 			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>

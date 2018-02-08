@@ -28,6 +28,7 @@
 			<li><button id="noticias">Noticias</button></li>
 			<li><button id="paradas">Paradas</button></li>
 			<li><button id="premios">Premios</button></li>
+			<li><button id="roles">Roles</button></li>
 			<li><button id="multimedias">Multimedias</button></li>
 			<li><button id="comentarios">Comentarios</button></li>
 			<li><button id="pruebasdeportivas">PD</button></li>
