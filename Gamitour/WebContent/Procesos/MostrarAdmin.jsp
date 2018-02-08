@@ -211,8 +211,8 @@
 					una parada nueva</a>
 			</div>
 
-		<!-- 	 <div id="divroles">
-			<h1>Listado de Roles</h1>
+			<div id="divroles">
+				<h1>Listado de Roles</h1>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -229,7 +229,7 @@
 				<a id="insertar" href="Procesos/InsertarRoles.html">Insertar un
 					rol nuevo</a>
 			</div>
- -->	
+
 			<div id="divpruebasculturales">
 				<h1>Listado de Pruebas Culturales</h1>
 				<table>
