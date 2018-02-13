@@ -44,7 +44,7 @@
 
 		<form action="../ModificarPruebasCulturales.do" method="get">
 
-			<h2 id="modificar">Modifique los campos que quiera</h2>
+			<h2 id="modificar">Modifique los campos que necesite</h2>
 			<h3>Los campos en blanco no sufriran cambios</h3>
 			
 		 <input type="hidden" value="<%=request.getParameter("id")%>"
