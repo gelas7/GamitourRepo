@@ -12,5 +12,4 @@ public class MySQLMultimediasDAOImp extends GenericDAOImp<Multimedia, Integer> i
 	public MySQLMultimediasDAOImp(SessionFactory sf) {
 		super(sf);
 	}
-
 }
