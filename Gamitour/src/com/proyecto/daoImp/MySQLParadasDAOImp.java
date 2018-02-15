@@ -15,14 +15,14 @@ public class MySQLParadasDAOImp extends GenericDAOImp<Parada, Integer> implement
 		super(sf);
 	}
 	
-	public List<Parada> buscarParadasPorIt(Itinerario i){
+	public List<Parada> buscarParadasPorIt(String i){
 		
 		List<Parada> lista = null;
 		try {
 			sf.getCurrentSession().beginTransaction();
 		
 			Query q = sf.getCurrentSession().createQuery("select p from Parada p where itinerario_iditinerario=:id ");
-			q.setParameter("id", i.getIditinerario());
+			q.setParameter("id", i);
 			lista = q.getResultList();
 			sf.getCurrentSession().getTransaction().commit();
 			
@@ -32,4 +32,5 @@ public class MySQLParadasDAOImp extends GenericDAOImp<Parada, Integer> implement
 		return lista;
 		
 	}
+
 }

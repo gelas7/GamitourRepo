@@ -80,7 +80,7 @@ public class ServiceParadasImp implements ServiceParadas {
 	}
 
 	@Override
-	public List<Parada> buscarParadasPorIt(Itinerario i) {
+	public List<Parada> buscarParadasPorIt(String i) {
 		
 		return pd.buscarParadasPorIt(i);
 	}
