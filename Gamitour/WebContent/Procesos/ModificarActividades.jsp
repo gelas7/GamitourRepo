@@ -40,8 +40,6 @@
 
 	<div id="page">
 
-
-
 		<form action="../ModificarActividades.do" method="get">
 
 			<h2 id="modificar">Modifique los campos que necesite</h2>

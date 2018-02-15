@@ -22,28 +22,26 @@
 
 	<div id="menu">
 		<ul>
-			<li><button id="actividades">Actividades</button></li>
-			<li><button id="clientes">Clientes</button></li>
-			<li><button id="itinerarios">Itinerarios</button></li>
-			<li><button id="noticias">Noticias</button></li>
-			<li><button id="paradas">Paradas</button></li>
-			<li><button id="premios">Premios</button></li>
-			<li><button id="roles">Roles</button></li>
-			<li><button id="multimedias">Multimedias</button></li>
-			<li><button id="comentarios">Comentarios</button></li>
-			<li><button id="pruebasdeportivas">PD</button></li>
-			<li><button id="pruebasculturales">PC</button></li>
-			<li><button id="votos">Votos</button></li>
+			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
+			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
+			<li><a href="../MostrarAdmin.do?div=paradas">Paradas</a></li>
+			<li><a href="../MostrarAdmin.do?div=premios">Premios</a></li>
+			<li><a href="../MostrarAdmin.do?div=roles">Roles</a></li>
+			<li><a href="../MostrarAdmin.do?div=votos">Votos</a></li>
+			<li><a href="../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+			<li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
 		</ul>
-		<button id="divActual" value="${divActual}" hidden=""></button>
-
 	</div>
 	<hr />
 
 	<div id="page">
 		<div id="contenedor">
 
-			<h1>Listado de Paradas</h1>
+			<h1>Listado de Paradas en ${nombreItinerario}</h1>
 			<table>
 				<tr>
 					<th>Nombre</th>

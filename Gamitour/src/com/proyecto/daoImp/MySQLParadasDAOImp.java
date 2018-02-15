@@ -6,7 +6,6 @@ import javax.persistence.Query;
 
 import org.hibernate.SessionFactory;
 import com.proyecto.dao.ParadasDAO;
-import com.proyecto.modelo.Itinerario;
 import com.proyecto.modelo.Parada;
 
 public class MySQLParadasDAOImp extends GenericDAOImp<Parada, Integer> implements ParadasDAO {
