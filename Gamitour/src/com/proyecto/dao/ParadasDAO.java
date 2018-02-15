@@ -21,6 +21,6 @@ public interface ParadasDAO extends GenericDAO<Parada, Integer> {
 
 	public List<Parada> buscarTodos();
 
-	public List<Parada> buscarParadasPorIt(Itinerario i);
+	public List<Parada> buscarParadasPorIt(String i);
 
 }
