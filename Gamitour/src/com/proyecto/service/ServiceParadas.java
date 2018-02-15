@@ -2,7 +2,7 @@ package com.proyecto.service;
 
 import java.util.List;
 
-import com.proyecto.modelo.Itinerario;
+
 import com.proyecto.modelo.Parada;
 
 public interface ServiceParadas {

@@ -3,7 +3,7 @@ package com.proyecto.service;
 import java.util.List;
 
 import com.proyecto.dao.ParadasDAO;
-import com.proyecto.modelo.Itinerario;
+
 import com.proyecto.modelo.Parada;
 import com.proyecto.modelo.PruebaCultural;
 import com.proyecto.modelo.PruebaDeportiva;
@@ -15,7 +15,6 @@ public class ServiceParadasImp implements ServiceParadas {
 	ServicePruebasCulturalesImp spc;
 	ServicePruebasDeportivasImp spd;
 	MySQLDAOFactory f;
-	
 
 	public ServiceParadasImp() {
 		f = new MySQLDAOFactory();
@@ -28,24 +27,20 @@ public class ServiceParadasImp implements ServiceParadas {
 	public void insertar(Parada p) {
 		System.out.println("ENTRO EN INSERTAR PARADA");
 		pd.insertar(p);
-		for(PruebaDeportiva pd : p.getPruebadeportivas())
-		{
+		for (PruebaDeportiva pd : p.getPruebadeportivas()) {
 			spd.insertar(pd);
 		}
-		for(PruebaCultural pc : p.getPruebaculturals())
-		{
+		for (PruebaCultural pc : p.getPruebaculturals()) {
 			spc.insertar(pc);
 		}
 	}
 
 	@Override
 	public void eliminar(Parada p) {
-		for(PruebaDeportiva pd : p.getPruebadeportivas())
-		{
+		for (PruebaDeportiva pd : p.getPruebadeportivas()) {
 			spd.eliminar(pd);
 		}
-		for(PruebaCultural pc : p.getPruebaculturals())
-		{
+		for (PruebaCultural pc : p.getPruebaculturals()) {
 			spc.eliminar(pc);
 		}
 		pd.eliminar(p);
@@ -53,12 +48,10 @@ public class ServiceParadasImp implements ServiceParadas {
 
 	@Override
 	public void actualizar(Parada p) {
-		for(PruebaDeportiva pd : p.getPruebadeportivas())
-		{
+		for (PruebaDeportiva pd : p.getPruebadeportivas()) {
 			spd.actualizar(pd);
 		}
-		for(PruebaCultural pc : p.getPruebaculturals())
-		{
+		for (PruebaCultural pc : p.getPruebaculturals()) {
 			spc.actualizar(pc);
 		}
 		pd.actualizar(p);
@@ -81,7 +74,7 @@ public class ServiceParadasImp implements ServiceParadas {
 
 	@Override
 	public List<Parada> buscarParadasPorIt(String i) {
-		
+
 		return pd.buscarParadasPorIt(i);
 	}
 }
