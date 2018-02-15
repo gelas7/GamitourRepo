@@ -3,6 +3,7 @@ package com.proyecto.service;
 import java.util.List;
 
 import com.proyecto.dao.ParadasDAO;
+import com.proyecto.modelo.Itinerario;
 import com.proyecto.modelo.Parada;
 import com.proyecto.modelo.PruebaCultural;
 import com.proyecto.modelo.PruebaDeportiva;
@@ -76,5 +77,11 @@ public class ServiceParadasImp implements ServiceParadas {
 	@Override
 	public Parada buscarPorNombre(String nombre) {
 		return pd.buscarPorNombre(nombre);
+	}
+
+	@Override
+	public List<Parada> buscarParadasPorIt(Itinerario i) {
+		
+		return pd.buscarParadasPorIt(i);
 	}
 }
