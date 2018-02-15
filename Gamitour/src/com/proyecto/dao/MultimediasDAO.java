@@ -18,5 +18,7 @@ public interface MultimediasDAO extends GenericDAO<Multimedia, Integer> {
 	public Multimedia buscarPorNombre(String nombre);
 	
 	public List<Multimedia> buscarTodos();
+	
+	public List<Multimedia> mostrarMultimediasPorPd(String idprueba);
 
 }

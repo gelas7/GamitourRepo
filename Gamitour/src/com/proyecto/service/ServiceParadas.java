@@ -19,6 +19,6 @@ public interface ServiceParadas {
 
 	public List<Parada> buscarTodos();
 	
-	public List<Parada> buscarParadasPorIt(String i);
+	public List<Parada> buscarParadasPorIt(String idItinerario);
 
 }

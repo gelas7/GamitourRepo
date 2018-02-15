@@ -58,7 +58,7 @@
 				</select>
 			</p>
 			<p>
-				Fecha: <input type="date" name="fecha">
+				Fecha: <input type="date" name="fecha" placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFecha()%>">
 			</p>
 
 			<p>

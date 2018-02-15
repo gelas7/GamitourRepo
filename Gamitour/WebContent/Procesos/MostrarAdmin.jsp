@@ -36,7 +36,6 @@
 			<li><button id="votos">Votos</button></li>
 		</ul>
 		<button id="divActual" value="${divActual}" hidden=""></button>
-
 	</div>
 	<hr />
 
@@ -143,8 +142,9 @@
 								href="EliminarItinerarios.do?id=${itinerario.iditinerario}">Eliminar</a></td>
 							<td><a id="actualizar"
 								href="Procesos/Modificar/ModificarItinerarios.jsp?id=${itinerario.iditinerario}">Modificar</a></td>
-								<td><a id="actualizar"
-								href="MostrarParadas.do?id=${itinerario.iditinerario}">Mostrar paradas</a></td>
+							<td><a id="mostrar"
+								href="MostrarParadas.do?id=${itinerario.iditinerario}">Mostrar
+									paradas</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -229,8 +229,8 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarRoles.html">Insertar un
-					rol nuevo</a>
+				<a id="insertar" href="Procesos/Insertar/InsertarRoles.html">Insertar
+					un rol nuevo</a>
 			</div>
 
 			<div id="divpruebasculturales">
@@ -257,7 +257,8 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarPruebasCulturales.jsp">Insertar
+				<a id="insertar"
+					href="Procesos/Insertar/InsertarPruebasCulturales.jsp">Insertar
 					una prueba cultural nueva</a>
 			</div>
 
@@ -284,10 +285,14 @@
 								href="EliminarPruebasDeportivas.do?id=${pD.idpruebadeportiva}">Eliminar</a></td>
 							<td><a id="actualizar"
 								href="Procesos/Modificar/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}">Modificar</a></td>
+							<td><a id="mostrar"
+								href="MostrarMultimedias.do?id=${pD.idpruebadeportiva}">
+									Mostrar multimedia</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarPruebasDeportivas.jsp">Insertar
+				<a id="insertar"
+					href="Procesos/Insertar/InsertarPruebasDeportivas.jsp">Insertar
 					una prueba deportiva nueva</a>
 			</div>
 
@@ -320,8 +325,8 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarPremios.jsp">Insertar un
-					premio nuevo</a>
+				<a id="insertar" href="Procesos/Insertar/InsertarPremios.jsp">Insertar
+					un premio nuevo</a>
 			</div>
 
 			<div id="divmultimedias">
@@ -362,14 +367,14 @@
 				<table>
 					<tr>
 						<th>Cliente</th>
-						<th>Multimedia</th>
 						<th>Comentario</th>
+						<th>Multimedia</th>
 					</tr>
 					<c:forEach items="${listaComentarios}" var="com">
 						<tr>
 							<td>${com.cliente.getNombre()}</td>
-							<td>${com.multimedia.getIdmultimedia()}</td>
 							<td>${com.texto}</td>
+							<td>${com.multimedia.getIdmultimedia()}</td>
 							<td><a id="eliminar"
 								href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
 							<td><a id="actualizar"
@@ -402,8 +407,8 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarVotos.jsp">Insertar un
-					voto nuevo</a>
+				<a id="insertar" href="Procesos/Insertar/InsertarVotos.jsp">Insertar
+					un voto nuevo</a>
 			</div>
 
 		</div>

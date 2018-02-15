@@ -28,6 +28,7 @@ import com.proyecto.admin.insert.InsertarPruebasDeportivasAccion;
 import com.proyecto.admin.insert.InsertarRolesAccion;
 import com.proyecto.admin.insert.InsertarVotosAccion;
 import com.proyecto.admin.search.MostrarAdminAccion;
+import com.proyecto.admin.search.MostrarMultimediasAccion;
 import com.proyecto.admin.search.MostrarParadasAccion;
 import com.proyecto.admin.update.ModificarActividadesAccion;
 import com.proyecto.admin.update.ModificarClientesAccion;
@@ -56,6 +57,9 @@ public abstract class Accion {
 			break;
 		case "MostrarParadas":
 			accion = new MostrarParadasAccion();
+			break;
+		case "MostrarMultimedias":
+			accion = new MostrarMultimediasAccion();
 			break;
 		case "InsertarNoticias":
 			accion = new InsertarNoticiasAccion();

@@ -47,4 +47,9 @@ public class ServiceMultimediasImp implements ServiceMultimedias{
 		return mtd.buscarPorNombre(nombre);
 	}
 
+	@Override
+	public List<Multimedia> mostrarMultimediasPorPd(String idprueba) {
+		return mtd.mostrarMultimediasPorPd(idprueba);
+	}
+
 }
