@@ -1,4 +1,4 @@
-package com.proyecto.admin.main;
+package com.proyecto.admin.search;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
