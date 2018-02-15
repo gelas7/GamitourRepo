@@ -66,7 +66,7 @@
 			</p>
 
 			<p>
-				Texto: <input type="text" name="texto">
+				Texto: <input type="text" name="texto" placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
 			</p>
 
 			<p>
