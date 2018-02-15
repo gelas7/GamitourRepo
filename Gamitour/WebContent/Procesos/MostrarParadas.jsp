@@ -66,11 +66,11 @@
 						<td><a id="eliminar"
 							href="EliminarParadas.do?id=${parada.idparada}">Eliminar</a></td>
 						<td><a id="actualizar"
-							href="Procesos/ModificarParadas.jsp?id=${parada.idparada}">Modificar</a></td>
+							href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}">Modificar</a></td>
 					</tr>
 				</c:forEach>
 			</table>
-			<a id="insertar" href="Procesos/InsertarParadas.jsp">Insertar una
+			<a id="insertar" href="Procesos/Insertar/InsertarParadas.jsp">Insertar una
 				parada nueva</a>
 		</div>
 

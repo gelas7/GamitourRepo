@@ -80,7 +80,7 @@
 							<td><a id="eliminar"
 								href="EliminarClientes.do?id=${cliente.idcliente}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarClientes.jsp?id=${cliente.idcliente}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarClientes.jsp?id=${cliente.idcliente}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -116,7 +116,7 @@
 							<td><a id="eliminar"
 								href="EliminarActividades.do?id=${actividad.idactividad}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarActividades.jsp?id=${actividad.idactividad}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarActividades.jsp?id=${actividad.idactividad}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -142,9 +142,9 @@
 							<td><a id="eliminar"
 								href="EliminarItinerarios.do?id=${itinerario.iditinerario}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarItinerarios.jsp?id=${itinerario.iditinerario}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarItinerarios.jsp?id=${itinerario.iditinerario}">Modificar</a></td>
 								<td><a id="actualizar"
-								href="MostrarParadas.do?id=${itinerario.iditinerario}" target="_blank">Mostrar paradas</a></td>
+								href="MostrarParadas.do?id=${itinerario.iditinerario}">Mostrar paradas</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -172,7 +172,7 @@
 							<td><a id="eliminar"
 								href="EliminarNoticias.do?id=${noticia.idnoticia}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarNoticias.jsp?id=${noticia.idnoticia}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarNoticias.jsp?id=${noticia.idnoticia}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -206,7 +206,7 @@
 							<td><a id="eliminar"
 								href="EliminarParadas.do?id=${parada.idparada}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarParadas.jsp?id=${parada.idparada}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -225,7 +225,7 @@
 							<td>${rol.nombre}</td>
 							<td><a id="eliminar" href="EliminarRoles.do?id=${rol.idrol}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarRoles.jsp?id=${rol.idrol}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarRoles.jsp?id=${rol.idrol}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -253,7 +253,7 @@
 							<td><a id="eliminar"
 								href="EliminarPruebasCulturales.do?id=${pC.idpruebacultural}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarPruebasCulturales.jsp?id=${pC.idpruebacultural}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarPruebasCulturales.jsp?id=${pC.idpruebacultural}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -283,7 +283,7 @@
 							<td><a id="eliminar"
 								href="EliminarPruebasDeportivas.do?id=${pD.idpruebadeportiva}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -316,7 +316,7 @@
 							<td><a id="eliminar"
 								href="EliminarPremios.do?id=${premio.idpremio}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarPremios.jsp?id=${premio.idpremio}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarPremios.jsp?id=${premio.idpremio}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -349,7 +349,7 @@
 							<td><a id="eliminar"
 								href="EliminarMultimedias.do?id=${m.idmultimedia}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarMultimedias.jsp?id=${m.idmultimedia}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -373,7 +373,7 @@
 							<td><a id="eliminar"
 								href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -398,7 +398,7 @@
 
 							<td><a id="eliminar" href="EliminarVotos.do?id=${v.idvoto}">Eliminar</a></td>
 							<td><a id="actualizar"
-								href="Procesos/ModificarVotos.jsp?id=${v.idvoto}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
