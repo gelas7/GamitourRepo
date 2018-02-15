@@ -2,6 +2,7 @@ package com.proyecto.service;
 
 import java.util.List;
 
+import com.proyecto.modelo.Itinerario;
 import com.proyecto.modelo.Parada;
 
 public interface ServiceParadas {
@@ -17,5 +18,7 @@ public interface ServiceParadas {
 	public Parada buscarPorNombre(String nombre);
 
 	public List<Parada> buscarTodos();
+	
+	public List<Parada> buscarParadasPorIt(Itinerario i);
 
 }
