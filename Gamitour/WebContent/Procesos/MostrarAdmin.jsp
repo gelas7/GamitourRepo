@@ -144,7 +144,7 @@
 							<td><a id="actualizar"
 								href="Procesos/ModificarItinerarios.jsp?id=${itinerario.iditinerario}">Modificar</a></td>
 								<td><a id="actualizar"
-								href="MostrarParadas.do?id=${itinerario.iditinerario}">Mostrar paraddas</a></td>
+								href="MostrarParadas.do?id=${itinerario.iditinerario}">Mostrar paradas</a></td>
 						</tr>
 					</c:forEach>
 				</table>
