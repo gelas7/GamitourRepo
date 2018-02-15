@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Inserción Prueba Deportiva</title>
-<link href="../style.css" rel="stylesheet" type="text/css"
+<link href="../../style.css" rel="stylesheet" type="text/css"
 	media="screen" />
 </head>
 
@@ -19,23 +19,24 @@
 
 	<div id="logo">
 		<h1>
-			<a href="../MostrarAdmin.do">Panel de administracion Gamitour</a>
+			<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
 		</h1>
+
 	</div>
 	<div id="menu">
 		<ul>
-			<li><a href="../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../MostrarAdmin.do?div=roles">Roles</a></li>
-			<li><a href="../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+			<li><a href="../../MostrarAdmin.do?div=roles">Roles</a></li>
+			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
 		</ul>
 	</div>
 	<hr />
@@ -44,7 +45,7 @@
 
 
 
-		<form action="../InsertarPruebasDeportivas.do" method="get">
+		<form action="../../InsertarPruebasDeportivas.do" method="get">
 
 			<h2>Insertar Prueba Deportiva</h2>
 			<p>

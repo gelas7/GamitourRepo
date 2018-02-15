@@ -84,7 +84,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarClientes.jsp">Insertar
+				<a id="insertar" href="Procesos/Insertar/InsertarClientes.jsp">Insertar
 					un cliente nuevo</a>
 
 			</div>
@@ -120,7 +120,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarActividades.html">Insertar
+				<a id="insertar" href="Procesos/Insertar/InsertarActividades.html">Insertar
 					una actividad nueva </a>
 			</div>
 
@@ -148,7 +148,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarItinerarios.html">Insertar
+				<a id="insertar" href="Procesos/Insertar/InsertarItinerarios.html">Insertar
 					un itinerario nuevo</a>
 			</div>
 
@@ -176,7 +176,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarNoticias.html">Insertar
+				<a id="insertar" href="Procesos/Insertar/InsertarNoticias.html">Insertar
 					una noticia nueva</a>
 			</div>
 
@@ -210,7 +210,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarParadas.jsp">Insertar
+				<a id="insertar" href="Procesos/Insertar/InsertarParadas.jsp">Insertar
 					una parada nueva</a>
 			</div>
 
@@ -229,7 +229,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarRoles.html">Insertar un
+				<a id="insertar" href="Procesos/Insertar/InsertarRoles.html">Insertar un
 					rol nuevo</a>
 			</div>
 
@@ -257,7 +257,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarPruebasCulturales.jsp">Insertar
+				<a id="insertar" href="Procesos/Insertar/InsertarPruebasCulturales.jsp">Insertar
 					una prueba cultural nueva</a>
 			</div>
 
@@ -287,7 +287,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarPruebasDeportivas.jsp">Insertar
+				<a id="insertar" href="Procesos/Insertar/InsertarPruebasDeportivas.jsp">Insertar
 					una prueba deportiva nueva</a>
 			</div>
 
@@ -320,7 +320,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarPremios.jsp">Insertar un
+				<a id="insertar" href="Procesos/Insertar/InsertarPremios.jsp">Insertar un
 					premio nuevo</a>
 			</div>
 
@@ -353,7 +353,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarMultimedias.jsp">Insertar
+				<a id="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp">Insertar
 					una elemento multimedia nuevo</a>
 			</div>
 
@@ -377,7 +377,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarComentarios.jsp">Insertar
+				<a id="insertar" href="Procesos/Insertar/InsertarComentarios.jsp">Insertar
 					un comentario nuevo</a>
 			</div>
 
@@ -402,7 +402,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/InsertarVotos.jsp">Insertar un
+				<a id="insertar" href="Procesos/Insertar/InsertarVotos.jsp">Insertar un
 					voto nuevo</a>
 			</div>
 
