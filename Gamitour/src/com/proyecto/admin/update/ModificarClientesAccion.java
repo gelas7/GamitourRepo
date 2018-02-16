@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.proyecto.modelo.Cliente;
-import com.proyecto.modelo.Itinerario;
 import com.proyecto.modelo.Rol;
 import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceRolesImp;

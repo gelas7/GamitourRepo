@@ -17,7 +17,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "multimedia", catalog = "gamitour")
-public class Multimedia implements java.io.Serializable {
+public class Multimedia implements java.io.Serializable, Comparable<Multimedia> {
 
 
 	private static final long serialVersionUID = 1L;
@@ -200,6 +200,11 @@ public class Multimedia implements java.io.Serializable {
 		return "Multimedia [cliente=" + cliente + ", comentario=" + comentario + ", imagen=" + imagen + ", video="
 				+ video + ", pruebaDeportivaIdpruebadeportiva=" + pruebaDeportivaIdpruebadeportiva
 				+ ", puntosacumulados=" + puntosacumulados + "]";
+	}
+
+	@Override
+	public int compareTo(Multimedia o) {
+		return this.fecha.compareTo(o.fecha);
 	}
 
 }

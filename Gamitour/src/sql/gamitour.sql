@@ -45,8 +45,8 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`parada` (
   CONSTRAINT `fk_parada_itinerario`
     FOREIGN KEY (`itinerario_iditinerario`)
     REFERENCES `gamitour`.`itinerario` (`iditinerario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -82,8 +82,7 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`pruebaCultural` (
   CONSTRAINT `fk_pruebaCultural_parada1`
     FOREIGN KEY (`parada_idparada`)
     REFERENCES `gamitour`.`parada` (`idparada`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -103,8 +102,7 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`pruebaDeportiva` (
   CONSTRAINT `fk_pruebaDeportiva_parada1`
     FOREIGN KEY (`parada_idparada`)
     REFERENCES `gamitour`.`parada` (`idparada`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -140,8 +138,7 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`cliente` (
   CONSTRAINT `fk_cliente_rol1`
     FOREIGN KEY (`rol_idrol`)
     REFERENCES `gamitour`.`rol` (`idrol`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -157,13 +154,11 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`cliente_has_actividad` (
   CONSTRAINT `fk_cliente_has_actividad_cliente1`
     FOREIGN KEY (`cliente_idcliente`)
     REFERENCES `gamitour`.`cliente` (`idcliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_cliente_has_actividad_actividad1`
     FOREIGN KEY (`actividad_idactividad`)
     REFERENCES `gamitour`.`actividad` (`idactividad`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -185,13 +180,11 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`multimedia` (
   CONSTRAINT `fk_multimedia_cliente1`
     FOREIGN KEY (`cliente_idcliente`)
     REFERENCES `gamitour`.`cliente` (`idcliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_multimedia_pruebaDeportiva1`
     FOREIGN KEY (`pruebaDeportiva_idpruebadeportiva`)
     REFERENCES `gamitour`.`pruebaDeportiva` (`idpruebadeportiva`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -209,13 +202,11 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`comentario` (
   CONSTRAINT `fk_comentario_cliente1`
     FOREIGN KEY (`cliente_idcliente`)
     REFERENCES `gamitour`.`cliente` (`idcliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_comentario_multimedia1`
     FOREIGN KEY (`multimedia_idmultimedia`)
     REFERENCES `gamitour`.`multimedia` (`idmultimedia`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -233,13 +224,11 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`voto` (
   CONSTRAINT `fk_voto_cliente1`
     FOREIGN KEY (`cliente_idcliente`)
     REFERENCES `gamitour`.`cliente` (`idcliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_voto_multimedia1`
     FOREIGN KEY (`multimedia_idmultimedia`)
     REFERENCES `gamitour`.`multimedia` (`idmultimedia`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -260,8 +249,7 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`premio` (
   CONSTRAINT `fk_premio_cliente1`
     FOREIGN KEY (`cliente_idcliente`)
     REFERENCES `gamitour`.`cliente` (`idcliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 

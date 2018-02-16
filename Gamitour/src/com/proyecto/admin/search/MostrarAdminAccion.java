@@ -6,8 +6,17 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.proyecto.modelo.Actividad;
 import com.proyecto.modelo.Cliente;
+import com.proyecto.modelo.Comentario;
+import com.proyecto.modelo.Itinerario;
+import com.proyecto.modelo.Multimedia;
+import com.proyecto.modelo.Noticia;
 import com.proyecto.modelo.Parada;
+import com.proyecto.modelo.Premio;
+import com.proyecto.modelo.PruebaCultural;
+import com.proyecto.modelo.PruebaDeportiva;
+import com.proyecto.modelo.Voto;
 import com.proyecto.service.ServiceActividadesImp;
 import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceComentariosImp;
@@ -46,24 +55,49 @@ public class MostrarAdminAccion extends Accion {
 		ServiceMultimedias sm = new ServiceMultimediasImp();
 		ServiceComentariosImp scom = new ServiceComentariosImp();
 
-		request.setAttribute("listaPremios", spr.buscarTodos());
-		request.setAttribute("listaVotos", sv.buscarTodos());
-		request.setAttribute("listaPruebasCulturales", spc.buscarTodos());
-		request.setAttribute("listaActividades", sa.buscarTodos());
-		request.setAttribute("listaNoticias", sn.buscarTodos());
-		request.setAttribute("listaComentarios", scom.buscarTodos());
-				
-		// Guardo estos en sesion puesto que los necesito además en otros formularios
-		List<Parada> listaParadas = sp.buscarTodos();
+		List<Noticia> listaNoticias = sn.buscarTodos();
 		List<Cliente> listaClientes = sc.buscarTodos();
-		Collections.sort(listaParadas); //Ordeno las listas
+		List<Itinerario> listaItinerarios = si.buscarTodos();
+		List<Parada> listaParadas = sp.buscarTodos();
+		List<Actividad> listaActividades = sa.buscarTodos();
+		List<Comentario> listaComentarios = scom.buscarTodos();
+		List<Premio> listaPremios = spr.buscarTodos();
+		List<PruebaCultural> listaPruebasCulturales = spc.buscarTodos();
+		List<PruebaDeportiva> listaPruebasDeportivas = spd.buscarTodos();
+		List<Voto> listaVotos = sv.buscarTodos();
+		List<Multimedia> listaMultimedias = sm.buscarTodos();
+
+		
+		// Ordeno las listas
+		Collections.sort(listaParadas); 
 		Collections.sort(listaClientes);
+		Collections.sort(listaItinerarios);
+		Collections.sort(listaNoticias);
+		Collections.sort(listaActividades);
+		Collections.sort(listaComentarios);
+		Collections.sort(listaPremios);
+		Collections.sort(listaPruebasCulturales);
+		Collections.sort(listaPruebasDeportivas);
+		Collections.sort(listaVotos);
+		Collections.sort(listaMultimedias);
+
+
+		// Guardo estos como atributos puesto que solo los necesito 
+		// en Mostrar y no en otras paginas
+		request.setAttribute("listaPremios", listaPremios);
+		request.setAttribute("listaVotos", listaVotos);
+		request.setAttribute("listaPruebasCulturales", listaPruebasCulturales);
+		request.setAttribute("listaActividades", listaActividades);
+		request.setAttribute("listaNoticias", listaNoticias);
+		request.setAttribute("listaComentarios",listaComentarios);
+
+		// Guardo estos en sesion puesto que los necesito además en otros formularios
 		request.getSession().setAttribute("listaClientes", listaClientes);
-		request.getSession().setAttribute("listaItinerarios", si.buscarTodos());
+		request.getSession().setAttribute("listaItinerarios", listaItinerarios);
 		request.getSession().setAttribute("listaParadas", listaParadas);
 		request.getSession().setAttribute("listaRoles", sr.buscarTodos());
-		request.getSession().setAttribute("listaPruebasDeportivas", spd.buscarTodos());
-		request.getSession().setAttribute("listaMultimedias", sm.buscarTodos());
+		request.getSession().setAttribute("listaPruebasDeportivas", listaPruebasDeportivas);
+		request.getSession().setAttribute("listaMultimedias", listaMultimedias);
 
 		// Aqui guardo el nombre de la tabla que se esta manejando actualmente
 		request.setAttribute("divActual", request.getParameter("div"));
