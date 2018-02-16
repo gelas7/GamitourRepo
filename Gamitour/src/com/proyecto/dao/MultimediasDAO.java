@@ -20,5 +20,7 @@ public interface MultimediasDAO extends GenericDAO<Multimedia, Integer> {
 	public List<Multimedia> buscarTodos();
 	
 	public List<Multimedia> mostrarMultimediasPorPd(String idprueba);
+	
+	public List<Multimedia> mostrarMultimediasPorComent(String idcomentario);
 
 }
