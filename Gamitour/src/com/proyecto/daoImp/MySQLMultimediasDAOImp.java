@@ -19,9 +19,8 @@ public class MySQLMultimediasDAOImp extends GenericDAOImp<Multimedia, Integer> i
 		List<Multimedia> lista = null;
 		try {
 			sf.getCurrentSession().beginTransaction();
-		
-			Query q = sf.getCurrentSession().createQuery("select m from Multimedia m where pruebaDeportivaIdpruebadeportiva=:idprueba");
-			q.setParameter("idprueba", idprueba);
+			Query q = sf.getCurrentSession().createQuery("select m from Multimedia m where pruebaDeportiva_idpruebadeportiva=:id");
+			q.setParameter("id", idprueba);
 			lista = q.getResultList();
 			sf.getCurrentSession().getTransaction().commit();
 			
