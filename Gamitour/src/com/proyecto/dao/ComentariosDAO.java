@@ -19,4 +19,6 @@ public interface ComentariosDAO extends GenericDAO<Comentario, Integer> {
 
 	public List<Comentario> buscarTodos();
 
+	public List<Comentario> buscarComentPorMultimedia(String idmultimedia);
+
 }

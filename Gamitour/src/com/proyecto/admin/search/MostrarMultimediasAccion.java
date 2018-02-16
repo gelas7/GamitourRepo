@@ -13,12 +13,12 @@ public class MostrarMultimediasAccion extends Accion {
 
 		ServiceMultimediasImp sm = new ServiceMultimediasImp();
 		ServicePruebasDeportivasImp spd = new ServicePruebasDeportivasImp();
-		
+
 		String id = request.getParameter("id");
 		request.getSession().setAttribute("listaMultimedias", sm.mostrarMultimediasPorPd(id));
-		System.out.println("ID: "+sm.mostrarMultimediasPorPd(id).size());
+
 		request.setAttribute("nombrePruebaDeportiva", spd.buscarPorClave(Integer.parseInt(id)).getNombre());
-		
+
 		return "Procesos/MostrarMultimedias.jsp";
 	}
 
