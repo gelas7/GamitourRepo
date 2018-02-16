@@ -18,12 +18,10 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
 @Entity
 @Table(name = "cliente", catalog = "gamitour")
-public class Cliente implements java.io.Serializable {
+public class Cliente implements java.io.Serializable, Comparable<Cliente> {
 
-	
 	private static final long serialVersionUID = 1L;
 	private Integer idcliente;
 	private Rol rol;
@@ -50,6 +48,7 @@ public class Cliente implements java.io.Serializable {
 	public Cliente(Rol rol) {
 		this.rol = rol;
 	}
+
 	public Cliente(Rol rol, String nombre, String apellidos, Date fechanacimiento, String email, String password,
 			String telefono, String direccion, String codigopostal, String avatar, Integer puntosacumulados,
 			Date fecharegistro) {
@@ -65,12 +64,13 @@ public class Cliente implements java.io.Serializable {
 		this.avatar = avatar;
 		this.puntosacumulados = puntosacumulados;
 		this.fecharegistro = fecharegistro;
-	
+
 	}
 
 	public Cliente(Rol rol, String nombre, String apellidos, Date fechanacimiento, String email, String password,
 			String telefono, String direccion, String codigopostal, String avatar, Integer puntosacumulados,
-			Date fecharegistro, Set<Premio> premios, Set<Voto> votos, Set<Comentario> comentarios, Set<Actividad> actividades, Set<Multimedia> multimedias) {
+			Date fecharegistro, Set<Premio> premios, Set<Voto> votos, Set<Comentario> comentarios,
+			Set<Actividad> actividades, Set<Multimedia> multimedias) {
 		this.rol = rol;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -88,81 +88,6 @@ public class Cliente implements java.io.Serializable {
 		this.comentarios = comentarios;
 		this.actividades = actividades;
 		this.multimedias = multimedias;
-	}
-
-
-	@Override
-	public String toString() {
-		return "Cliente [rol=" + rol + ", nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email
-				+ ", password=" + password + ", telefono=" + telefono + ", direccion=" + direccion + ", codigopostal="
-				+ codigopostal + ", avatar=" + avatar + ", puntosacumulados=" + puntosacumulados + "]";
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Cliente other = (Cliente) obj;
-		if (apellidos == null) {
-			if (other.apellidos != null)
-				return false;
-		} else if (!apellidos.equals(other.apellidos))
-			return false;
-		if (avatar == null) {
-			if (other.avatar != null)
-				return false;
-		} else if (!avatar.equals(other.avatar))
-			return false;
-		if (codigopostal == null) {
-			if (other.codigopostal != null)
-				return false;
-		} else if (!codigopostal.equals(other.codigopostal))
-			return false;
-		if (comentarios == null) {
-			if (other.comentarios != null)
-				return false;
-		} else if (!comentarios.equals(other.comentarios))
-			return false;
-		if (direccion == null) {
-			if (other.direccion != null)
-				return false;
-		} else if (!direccion.equals(other.direccion))
-			return false;
-		if (email == null) {
-			if (other.email != null)
-				return false;
-		} else if (!email.equals(other.email))
-			return false;
-		if (nombre == null) {
-			if (other.nombre != null)
-				return false;
-		} else if (!nombre.equals(other.nombre))
-			return false;
-		if (password == null) {
-			if (other.password != null)
-				return false;
-		} else if (!password.equals(other.password))
-			return false;
-		if (puntosacumulados == null) {
-			if (other.puntosacumulados != null)
-				return false;
-		} else if (!puntosacumulados.equals(other.puntosacumulados))
-			return false;
-		if (rol == null) {
-			if (other.rol != null)
-				return false;
-		} else if (!rol.equals(other.rol))
-			return false;
-		if (telefono == null) {
-			if (other.telefono != null)
-				return false;
-		} else if (!telefono.equals(other.telefono))
-			return false;
-		return true;
 	}
 
 	@Id
@@ -334,6 +259,85 @@ public class Cliente implements java.io.Serializable {
 
 	public void setMultimedias(Set<Multimedia> multimedias) {
 		this.multimedias = multimedias;
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente [rol=" + rol + ", nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email
+				+ ", password=" + password + ", telefono=" + telefono + ", direccion=" + direccion + ", codigopostal="
+				+ codigopostal + ", avatar=" + avatar + ", puntosacumulados=" + puntosacumulados + "]";
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cliente other = (Cliente) obj;
+		if (apellidos == null) {
+			if (other.apellidos != null)
+				return false;
+		} else if (!apellidos.equals(other.apellidos))
+			return false;
+		if (avatar == null) {
+			if (other.avatar != null)
+				return false;
+		} else if (!avatar.equals(other.avatar))
+			return false;
+		if (codigopostal == null) {
+			if (other.codigopostal != null)
+				return false;
+		} else if (!codigopostal.equals(other.codigopostal))
+			return false;
+		if (comentarios == null) {
+			if (other.comentarios != null)
+				return false;
+		} else if (!comentarios.equals(other.comentarios))
+			return false;
+		if (direccion == null) {
+			if (other.direccion != null)
+				return false;
+		} else if (!direccion.equals(other.direccion))
+			return false;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		if (password == null) {
+			if (other.password != null)
+				return false;
+		} else if (!password.equals(other.password))
+			return false;
+		if (puntosacumulados == null) {
+			if (other.puntosacumulados != null)
+				return false;
+		} else if (!puntosacumulados.equals(other.puntosacumulados))
+			return false;
+		if (rol == null) {
+			if (other.rol != null)
+				return false;
+		} else if (!rol.equals(other.rol))
+			return false;
+		if (telefono == null) {
+			if (other.telefono != null)
+				return false;
+		} else if (!telefono.equals(other.telefono))
+			return false;
+		return true;
+	}
+
+	@Override
+	public int compareTo(Cliente o) {
+		return this.nombre.compareTo(o.nombre);
 	}
 
 }

@@ -1,8 +1,13 @@
 package com.proyecto.admin.search;
 
+import java.util.Collections;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.proyecto.modelo.Cliente;
+import com.proyecto.modelo.Parada;
 import com.proyecto.service.ServiceActividadesImp;
 import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceComentariosImp;
@@ -49,9 +54,13 @@ public class MostrarAdminAccion extends Accion {
 		request.setAttribute("listaComentarios", scom.buscarTodos());
 				
 		// Guardo estos en sesion puesto que los necesito además en otros formularios
-		request.getSession().setAttribute("listaClientes", sc.buscarTodos());
+		List<Parada> listaParadas = sp.buscarTodos();
+		List<Cliente> listaClientes = sc.buscarTodos();
+		Collections.sort(listaParadas); //Ordeno las listas
+		Collections.sort(listaClientes);
+		request.getSession().setAttribute("listaClientes", listaClientes);
 		request.getSession().setAttribute("listaItinerarios", si.buscarTodos());
-		request.getSession().setAttribute("listaParadas", sp.buscarTodos());
+		request.getSession().setAttribute("listaParadas", listaParadas);
 		request.getSession().setAttribute("listaRoles", sr.buscarTodos());
 		request.getSession().setAttribute("listaPruebasDeportivas", spd.buscarTodos());
 		request.getSession().setAttribute("listaMultimedias", sm.buscarTodos());
