@@ -41,6 +41,12 @@ public class Itinerario implements java.io.Serializable, Comparable<Itinerario> 
 		this.ubicacion = ubicacion;
 	}
 
+	@Override
+	public String toString() {
+		return "Itinerario [iditinerario=" + iditinerario + ", nombre=" + nombre + ", categoria=" + categoria
+				+ ", duracion=" + duracion + ", ubicacion=" + ubicacion;
+	}
+
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 

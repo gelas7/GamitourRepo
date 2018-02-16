@@ -120,7 +120,7 @@ public class Voto implements java.io.Serializable,Comparable<Voto> {
 
 	@Override
 	public int compareTo(Voto o) {
-		return this.multimedia.getIdmultimedia().compareTo(o.multimedia.getIdmultimedia());
+		return this.cliente.getIdcliente().compareTo(o.cliente.getIdcliente());
 	}
 
 }

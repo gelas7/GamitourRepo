@@ -25,7 +25,7 @@ public class ServiceParadasImp implements ServiceParadas {
 
 	@Override
 	public void insertar(Parada p) {
-		System.out.println("ENTRO EN INSERTAR PARADA");
+		System.out.println(p.toString());
 		pd.insertar(p);
 		for (PruebaDeportiva pd : p.getPruebadeportivas()) {
 			spd.insertar(pd);

@@ -21,7 +21,7 @@ public class Multimedia implements java.io.Serializable {
 
 
 	private static final long serialVersionUID = 1L;
-	private Integer idmultimedia;
+	private int idmultimedia;
 	private Cliente cliente;
 	private Date fecha;
 	private String comentario;
@@ -47,7 +47,7 @@ public class Multimedia implements java.io.Serializable {
 		this.puntosacumulados = puntosacumulados;
 	}
 
-	public Multimedia(Integer idmultimedia, Cliente cliente, Date fecha, String comentario, String imagen, String video,
+	public Multimedia(int idmultimedia, Cliente cliente, Date fecha, String comentario, String imagen, String video,
 			int pruebaDeportivaIdpruebadeportiva, Integer puntosacumulados, Set<Comentario> comentarios, Set<Voto> votos) {
 		this.idmultimedia = idmultimedia;
 		this.cliente = cliente;
@@ -104,11 +104,11 @@ public class Multimedia implements java.io.Serializable {
 	@Id
 
 	@Column(name = "idmultimedia", unique = true, nullable = false)
-	public Integer getIdmultimedia() {
+	public int getIdmultimedia() {
 		return this.idmultimedia;
 	}
 
-	public void setIdmultimedia(Integer idmultimedia) {
+	public void setIdmultimedia(int idmultimedia) {
 		this.idmultimedia = idmultimedia;
 	}
 

@@ -156,7 +156,7 @@ public class PruebaDeportiva implements java.io.Serializable,Comparable<PruebaDe
 
 	@Override
 	public int compareTo(PruebaDeportiva o) {
-		return this.parada.getIdparada().compareTo(o.parada.getIdparada());
+		return this.parada.getNumeroParada().compareTo(o.parada.getNumeroParada());
 	}
 
 }

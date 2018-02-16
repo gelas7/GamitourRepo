@@ -16,7 +16,7 @@ import javax.persistence.Table;
 public class Parada implements java.io.Serializable, Comparable<Parada> {
 
 	private static final long serialVersionUID = 1L;
-	private Integer idparada;
+	private int idparada;
 	private Itinerario itinerario;
 	private String nombre;
 	private Integer numeroParada;
@@ -31,12 +31,12 @@ public class Parada implements java.io.Serializable, Comparable<Parada> {
 	public Parada() {
 	}
 
-	public Parada(Integer idparada, Itinerario itinerario) {
+	public Parada(int idparada, Itinerario itinerario) {
 		this.idparada = idparada;
 		this.itinerario = itinerario;
 	}
 
-	public Parada(Integer idparada, Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion,
+	public Parada(int idparada, Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion,
 			String historia, String anecdotario, String gastronomia, String imagen,
 			Set<PruebaCultural> pruebaculturales, Set<PruebaDeportiva> pruebadeportivas) {
 		this.idparada = idparada;
@@ -64,14 +64,21 @@ public class Parada implements java.io.Serializable, Comparable<Parada> {
 		this.imagen = imagen;
 	}
 
+	@Override
+	public String toString() {
+		return "Parada [idparada=" + idparada + ", itinerario=" + itinerario + ", nombre=" + nombre + ", numeroParada="
+				+ numeroParada + ", ubicacion=" + ubicacion + ", historia=" + historia + ", anecdotario=" + anecdotario
+				+ ", gastronomia=" + gastronomia + ", imagen=" + imagen + "]";
+	}
+
 	@Id
 
 	@Column(name = "idparada", unique = true, nullable = false)
-	public Integer getIdparada() {
+	public int getIdparada() {
 		return this.idparada;
 	}
 
-	public void setIdparada(Integer idparada) {
+	public void setIdparada(int idparada) {
 		this.idparada = idparada;
 	}
 

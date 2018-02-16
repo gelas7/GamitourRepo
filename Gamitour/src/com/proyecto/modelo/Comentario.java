@@ -123,7 +123,7 @@ public class Comentario implements java.io.Serializable,Comparable<Comentario> {
 
 	@Override
 	public int compareTo(Comentario o) {
-		return this.multimedia.getIdmultimedia().compareTo(o.multimedia.getIdmultimedia());
+		return this.cliente.getIdcliente().compareTo(o.cliente.getIdcliente());
 	}
 
 }
