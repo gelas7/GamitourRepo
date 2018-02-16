@@ -30,4 +30,22 @@ public class MySQLMultimediasDAOImp extends GenericDAOImp<Multimedia, Integer> i
 		return lista;
 		
 	}
+	public List<Multimedia> mostrarMultimediasPorComent(String idcomentario)
+	{
+		List<Multimedia> lista = null;
+		try {
+			sf.getCurrentSession().beginTransaction();
+		
+			Query q = sf.getCurrentSession().createQuery("select m from Multimedia m where idcomentario=:idcomentario");
+			
+			q.setParameter("idcomentario", idcomentario);
+			lista = q.getResultList();
+			sf.getCurrentSession().getTransaction().commit();
+			
+		} catch (RuntimeException e) {
+			sf.getCurrentSession().getTransaction().rollback();
+		}
+		return lista;
+		
+	}
 }

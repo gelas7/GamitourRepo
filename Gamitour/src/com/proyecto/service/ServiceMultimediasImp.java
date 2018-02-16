@@ -51,5 +51,9 @@ public class ServiceMultimediasImp implements ServiceMultimedias{
 	public List<Multimedia> mostrarMultimediasPorPd(String idprueba) {
 		return mtd.mostrarMultimediasPorPd(idprueba);
 	}
+	
+	public List<Multimedia> mostrarMultimediasPorComent(String idcomentario){
+		return mtd.mostrarMultimediasPorComent(idcomentario);
+	}
 
 }
