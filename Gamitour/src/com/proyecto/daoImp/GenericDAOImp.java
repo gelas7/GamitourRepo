@@ -76,7 +76,6 @@ public abstract class GenericDAOImp<T, Id extends Serializable> implements Gener
 
 	public T buscarPorClave(Id id) {
 		T objeto = null;
-
 		sf.getCurrentSession().beginTransaction();
 		Query q = sf.getCurrentSession().createQuery("select c from "+clase.getSimpleName()+" c where id=:id");
 		q.setParameter("id", id);
@@ -94,7 +93,6 @@ public abstract class GenericDAOImp<T, Id extends Serializable> implements Gener
 	
 	public T buscarPorNombre(String nombre) {
 		T objeto = null;
-
 		sf.getCurrentSession().beginTransaction();
 		Query q = sf.getCurrentSession().createQuery("select c from "+ clase.getSimpleName() +" c where nombre=:nombre");
 		q.setParameter("nombre", nombre);

@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "parada", catalog = "gamitour")
-public class Parada implements java.io.Serializable {
+public class Parada implements java.io.Serializable, Comparable<Parada> {
 
 	private static final long serialVersionUID = 1L;
 	private int idparada;
@@ -231,6 +231,11 @@ public class Parada implements java.io.Serializable {
 
 	public void setPruebadeportivas(Set<PruebaDeportiva> pruebadeportivas) {
 		this.pruebadeportivas = pruebadeportivas;
+	}
+
+	@Override
+	public int compareTo(Parada p) {//Comparo por ids de itinerario
+		return this.itinerario.getIditinerario().compareTo(p.itinerario.getIditinerario());
 	}
 
 }

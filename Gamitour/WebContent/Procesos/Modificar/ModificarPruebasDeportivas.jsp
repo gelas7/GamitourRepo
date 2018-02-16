@@ -37,7 +37,7 @@
 		</ul>
 	</div>
 	<hr />
-	
+
 	<div id="page">
 
 		<form action="../../ModificarPruebasDeportivas.do" method="get">
