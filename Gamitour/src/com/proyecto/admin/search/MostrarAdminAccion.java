@@ -51,13 +51,12 @@ public class MostrarAdminAccion extends Accion {
 		request.setAttribute("listaActividades", sa.buscarTodos());
 		request.setAttribute("listaNoticias", sn.buscarTodos());
 		request.setAttribute("listaComentarios", scom.buscarTodos());
-		
-		List<Parada> listaParadas = sp.buscarTodos();
-		Collections.sort(listaParadas); //Ordeno paradas por idItinerario
 				
 		// Guardo estos en sesion puesto que los necesito además en otros formularios
 		request.getSession().setAttribute("listaClientes", sc.buscarTodos());
 		request.getSession().setAttribute("listaItinerarios", si.buscarTodos());
+		List<Parada> listaParadas = sp.buscarTodos();
+		Collections.sort(listaParadas);
 		request.getSession().setAttribute("listaParadas", listaParadas);
 		request.getSession().setAttribute("listaRoles", sr.buscarTodos());
 		request.getSession().setAttribute("listaPruebasDeportivas", spd.buscarTodos());
