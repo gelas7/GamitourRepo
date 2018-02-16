@@ -6,7 +6,6 @@ window.onload = function() {
 	var itinerarios = document.getElementById("itinerarios");
 	var noticias = document.getElementById("noticias");
 	var paradas = document.getElementById("paradas");
-	var roles = document.getElementById("roles");
 	var pruebasdeportivas = document.getElementById("pruebasdeportivas");
 	var pruebasculturales = document.getElementById("pruebasculturales");
 	var multimedias = document.getElementById("multimedias");
@@ -20,7 +19,6 @@ window.onload = function() {
 	var divActividades = document.getElementById("divactividades");
 	var divNoticias = document.getElementById("divnoticias");
 	var divParadas = document.getElementById("divparadas");
-	var divRoles = document.getElementById("divroles");
 	var divItinerarios = document.getElementById("divitinerarios");
 	var divPruebasdeportivas = document.getElementById("divpruebasdeportivas");
 	var divPruebasculturales = document.getElementById("divpruebasculturales");
@@ -35,7 +33,6 @@ window.onload = function() {
 	itinerarios.addEventListener("click", mostrar, false);
 	noticias.addEventListener("click", mostrar, false);
 	paradas.addEventListener("click", mostrar, false);
-	roles.addEventListener("click", mostrar, false);
 	pruebasculturales.addEventListener("click", mostrar, false);
 	pruebasdeportivas.addEventListener("click", mostrar, false);
 	multimedias.addEventListener("click", mostrar, false);
@@ -70,7 +67,6 @@ window.onload = function() {
 		divClientes.style.display = "none";
 		divNoticias.style.display = "none";
 		divParadas.style.display = "none";
-		divRoles.style.display = "none";
 		divItinerarios.style.display = "none";
 		divPruebasculturales.style.display = "none";
 		divPruebasdeportivas.style.display = "none";

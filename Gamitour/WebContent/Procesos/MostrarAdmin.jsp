@@ -28,7 +28,6 @@
 			<li><button id="noticias">Noticias</button></li>
 			<li><button id="paradas">Paradas</button></li>
 			<li><button id="premios">Premios</button></li>
-			<li><button id="roles">Roles</button></li>
 			<li><button id="multimedias">Multimedias</button></li>
 			<li><button id="comentarios">Comentarios</button></li>
 			<li><button id="pruebasdeportivas">PD</button></li>
@@ -212,25 +211,6 @@
 				</table>
 				<a id="insertar" href="Procesos/Insertar/InsertarParadas.jsp">Insertar
 					una parada nueva</a>
-			</div>
-
-			<div id="divroles">
-				<h1>Listado de Roles</h1>
-				<table>
-					<tr>
-						<th>Nombre</th>
-					</tr>
-					<c:forEach items="${listaRoles}" var="rol">
-						<tr>
-							<td>${rol.nombre}</td>
-							<td><a id="eliminar" href="EliminarRoles.do?id=${rol.idrol}">Eliminar</a></td>
-							<td><a id="actualizar"
-								href="Procesos/Modificar/ModificarRoles.jsp?id=${rol.idrol}">Modificar</a></td>
-						</tr>
-					</c:forEach>
-				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarRoles.html">Insertar
-					un rol nuevo</a>
 			</div>
 
 			<div id="divpruebasculturales">
