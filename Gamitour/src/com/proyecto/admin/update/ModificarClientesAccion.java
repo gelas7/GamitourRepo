@@ -8,7 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.proyecto.modelo.Cliente;
+import com.proyecto.modelo.Itinerario;
+import com.proyecto.modelo.Rol;
 import com.proyecto.service.ServiceClientesImp;
+import com.proyecto.service.ServiceRolesImp;
 import com.proyecto.util.Accion;
 
 public class ModificarClientesAccion extends Accion {
@@ -27,6 +30,7 @@ public class ModificarClientesAccion extends Accion {
 		String direccion = request.getParameter("direccion");
 		String codigopostal = request.getParameter("codigopostal");
 		String puntosacumulados = request.getParameter("puntosacumulados");
+		String rol = request.getParameter("rol");
 		String avatar = request.getParameter("avatar");
 		Date date1 = null;
 
@@ -38,6 +42,8 @@ public class ModificarClientesAccion extends Accion {
 		}
 
 		ServiceClientesImp sc = new ServiceClientesImp();
+		ServiceRolesImp sr = new ServiceRolesImp();
+
 		Cliente c = sc.buscarPorClave(Integer.parseInt(id));
 
 		if (nombre != "")
@@ -58,6 +64,10 @@ public class ModificarClientesAccion extends Accion {
 			c.setCodigopostal(codigopostal);
 		if (puntosacumulados != "")
 			c.setPuntosacumulados(Integer.parseInt(puntosacumulados));
+		if (rol != "") {
+			Rol r = sr.buscarPorClave(Integer.parseInt(rol));
+			c.setRol(r);
+		}
 		if (avatar != "")
 			c.setAvatar(avatar);
 

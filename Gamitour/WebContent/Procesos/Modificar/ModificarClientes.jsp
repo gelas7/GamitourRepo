@@ -84,6 +84,14 @@
 					placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
 			</p>
 			<p>
+				Rol: <select name="rol">
+					<option value="">Seleccione un rol</option>
+					<c:forEach items="${listaRoles}" var="rol">
+						<option value="${rol.idrol}">${rol.nombre}</option>
+					</c:forEach>
+				</select>
+			</p>
+			<p>
 				Avatar: <input type="text" name="avatar"
 					onchange="handleFiles(this.files)">
 			</p>
