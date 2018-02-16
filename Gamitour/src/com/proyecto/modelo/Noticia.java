@@ -12,7 +12,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "noticia", catalog = "gamitour")
-public class Noticia implements java.io.Serializable {
+public class Noticia implements java.io.Serializable,Comparable<Noticia> {
 
 	private static final long serialVersionUID = 1L;
 	private Integer idnoticia;
@@ -138,6 +138,11 @@ public class Noticia implements java.io.Serializable {
 	@Override
 	public String toString() {
 		return "Noticia [nombre=" + nombre + ", texto=" + texto + ", imagen=" + imagen + "]";
+	}
+
+	@Override
+	public int compareTo(Noticia o) {
+		return this.fechaalta.compareTo(o.fechaalta);
 	}
 
 }

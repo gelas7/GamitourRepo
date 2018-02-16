@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "premio", catalog = "gamitour")
-public class Premio implements java.io.Serializable {
+public class Premio implements java.io.Serializable,Comparable<Premio> {
 
 	
 	private static final long serialVersionUID = 1L;
@@ -178,6 +178,11 @@ public class Premio implements java.io.Serializable {
 	public String toString() {
 		return "Premio [cliente=" + cliente + ", nombre=" + nombre + ", descripcion=" + descripcion + ", imagen="
 				+ imagen + ", puntos=" + puntos + "]";
+	}
+
+	@Override
+	public int compareTo(Premio o) {
+		return this.fechaactivacion.compareTo(o.fechaactivacion);
 	}
 
 	

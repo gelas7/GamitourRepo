@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "pruebaCultural", catalog = "gamitour")
-public class PruebaCultural implements java.io.Serializable {
+public class PruebaCultural implements java.io.Serializable,Comparable<PruebaCultural> {
 
 	private static final long serialVersionUID = 1L;
 	private Integer idpruebacultural;
@@ -143,6 +143,11 @@ public class PruebaCultural implements java.io.Serializable {
 		} else if (!respuesta.equals(other.respuesta))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(PruebaCultural o) {
+		return this.nombre.compareTo(o.nombre);
 	}
 
 }

@@ -16,7 +16,7 @@ import javax.persistence.Table;
 public class Parada implements java.io.Serializable, Comparable<Parada> {
 
 	private static final long serialVersionUID = 1L;
-	private int idparada;
+	private Integer idparada;
 	private Itinerario itinerario;
 	private String nombre;
 	private Integer numeroParada;
@@ -31,79 +31,12 @@ public class Parada implements java.io.Serializable, Comparable<Parada> {
 	public Parada() {
 	}
 
-	public Parada(int idparada, Itinerario itinerario) {
+	public Parada(Integer idparada, Itinerario itinerario) {
 		this.idparada = idparada;
 		this.itinerario = itinerario;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((anecdotario == null) ? 0 : anecdotario.hashCode());
-		result = prime * result + ((gastronomia == null) ? 0 : gastronomia.hashCode());
-		result = prime * result + ((historia == null) ? 0 : historia.hashCode());
-		result = prime * result + ((imagen == null) ? 0 : imagen.hashCode());
-		result = prime * result + ((itinerario == null) ? 0 : itinerario.hashCode());
-		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
-		result = prime * result + ((numeroParada == null) ? 0 : numeroParada.hashCode());
-		result = prime * result + ((ubicacion == null) ? 0 : ubicacion.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Parada other = (Parada) obj;
-		if (anecdotario == null) {
-			if (other.anecdotario != null)
-				return false;
-		} else if (!anecdotario.equals(other.anecdotario))
-			return false;
-		if (gastronomia == null) {
-			if (other.gastronomia != null)
-				return false;
-		} else if (!gastronomia.equals(other.gastronomia))
-			return false;
-		if (historia == null) {
-			if (other.historia != null)
-				return false;
-		} else if (!historia.equals(other.historia))
-			return false;
-		if (imagen == null) {
-			if (other.imagen != null)
-				return false;
-		} else if (!imagen.equals(other.imagen))
-			return false;
-		if (itinerario == null) {
-			if (other.itinerario != null)
-				return false;
-		} else if (!itinerario.equals(other.itinerario))
-			return false;
-		if (nombre == null) {
-			if (other.nombre != null)
-				return false;
-		} else if (!nombre.equals(other.nombre))
-			return false;
-		if (numeroParada == null) {
-			if (other.numeroParada != null)
-				return false;
-		} else if (!numeroParada.equals(other.numeroParada))
-			return false;
-		if (ubicacion == null) {
-			if (other.ubicacion != null)
-				return false;
-		} else if (!ubicacion.equals(other.ubicacion))
-			return false;
-		return true;
-	}
-
-	public Parada(int idparada, Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion,
+	public Parada(Integer idparada, Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion,
 			String historia, String anecdotario, String gastronomia, String imagen,
 			Set<PruebaCultural> pruebaculturales, Set<PruebaDeportiva> pruebadeportivas) {
 		this.idparada = idparada;
@@ -134,11 +67,11 @@ public class Parada implements java.io.Serializable, Comparable<Parada> {
 	@Id
 
 	@Column(name = "idparada", unique = true, nullable = false)
-	public int getIdparada() {
+	public Integer getIdparada() {
 		return this.idparada;
 	}
 
-	public void setIdparada(int idparada) {
+	public void setIdparada(Integer idparada) {
 		this.idparada = idparada;
 	}
 
@@ -234,7 +167,74 @@ public class Parada implements java.io.Serializable, Comparable<Parada> {
 	}
 
 	@Override
-	public int compareTo(Parada p) {//Comparo por ids de itinerario
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((anecdotario == null) ? 0 : anecdotario.hashCode());
+		result = prime * result + ((gastronomia == null) ? 0 : gastronomia.hashCode());
+		result = prime * result + ((historia == null) ? 0 : historia.hashCode());
+		result = prime * result + ((imagen == null) ? 0 : imagen.hashCode());
+		result = prime * result + ((itinerario == null) ? 0 : itinerario.hashCode());
+		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+		result = prime * result + ((numeroParada == null) ? 0 : numeroParada.hashCode());
+		result = prime * result + ((ubicacion == null) ? 0 : ubicacion.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Parada other = (Parada) obj;
+		if (anecdotario == null) {
+			if (other.anecdotario != null)
+				return false;
+		} else if (!anecdotario.equals(other.anecdotario))
+			return false;
+		if (gastronomia == null) {
+			if (other.gastronomia != null)
+				return false;
+		} else if (!gastronomia.equals(other.gastronomia))
+			return false;
+		if (historia == null) {
+			if (other.historia != null)
+				return false;
+		} else if (!historia.equals(other.historia))
+			return false;
+		if (imagen == null) {
+			if (other.imagen != null)
+				return false;
+		} else if (!imagen.equals(other.imagen))
+			return false;
+		if (itinerario == null) {
+			if (other.itinerario != null)
+				return false;
+		} else if (!itinerario.equals(other.itinerario))
+			return false;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		if (numeroParada == null) {
+			if (other.numeroParada != null)
+				return false;
+		} else if (!numeroParada.equals(other.numeroParada))
+			return false;
+		if (ubicacion == null) {
+			if (other.ubicacion != null)
+				return false;
+		} else if (!ubicacion.equals(other.ubicacion))
+			return false;
+		return true;
+	}
+
+	@Override
+	public int compareTo(Parada p) {// Comparo por ids de itinerario
 		return this.itinerario.getIditinerario().compareTo(p.itinerario.getIditinerario());
 	}
 

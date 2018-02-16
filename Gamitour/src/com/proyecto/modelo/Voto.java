@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "voto", catalog = "gamitour")
-public class Voto implements java.io.Serializable {
+public class Voto implements java.io.Serializable,Comparable<Voto> {
 
 	private static final long serialVersionUID = 1L;
 	private Integer idvoto;
@@ -116,6 +116,11 @@ public class Voto implements java.io.Serializable {
 		} else if (!puntos.equals(other.puntos))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Voto o) {
+		return this.multimedia.getIdmultimedia().compareTo(o.multimedia.getIdmultimedia());
 	}
 
 }
