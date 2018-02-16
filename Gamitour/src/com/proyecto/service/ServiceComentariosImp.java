@@ -46,6 +46,13 @@ public class ServiceComentariosImp implements ServiceComentarios{
 	public Comentario buscarPorNombre(String nombre) {
 		return cmd.buscarPorNombre(nombre);
 	}
+
+	
+
+	@Override
+	public List<Comentario> buscarComentPorMultimedia(String idmultimedia) {
+		 return cmd.buscarComentPorMultimedia( idmultimedia);
+	}
 	
 
 }

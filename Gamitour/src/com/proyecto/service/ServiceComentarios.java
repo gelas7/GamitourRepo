@@ -17,5 +17,9 @@ public interface ServiceComentarios {
 	public Comentario buscarPorNombre(String nombre);
 
 	public List<Comentario> buscarTodos();
+	
+	public List<Comentario> buscarComentPorMultimedia(String idmultimedia);
+	
+	
 
 }

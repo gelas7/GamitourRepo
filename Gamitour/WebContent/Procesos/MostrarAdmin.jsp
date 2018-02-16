@@ -335,6 +335,9 @@
 								href="EliminarMultimedias.do?id=${m.idmultimedia}">Eliminar</a></td>
 							<td><a id="actualizar"
 								href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}">Modificar</a></td>
+							<td><a id="mostrar"
+								href="MostrarComentarios.do?id=${m.idmultimedia}">
+									Mostrar comentarios</a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -359,6 +362,7 @@
 								href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
 							<td><a id="actualizar"
 								href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
+
 						</tr>
 					</c:forEach>
 				</table>

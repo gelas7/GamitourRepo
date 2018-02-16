@@ -18,5 +18,7 @@ public interface ServiceMultimedias {
 	public List<Multimedia> buscarTodos();
 	
 	public List<Multimedia> mostrarMultimediasPorPd(String idprueba);
+	
+
 
 }
