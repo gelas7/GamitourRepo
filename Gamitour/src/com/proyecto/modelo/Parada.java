@@ -234,7 +234,7 @@ public class Parada implements java.io.Serializable, Comparable<Parada> {
 	}
 
 	@Override
-	public int compareTo(Parada p) {//Comparo por ids de itinerario
+	public int compareTo(Parada p) { //Comparo por ids de itinerario
 		return this.itinerario.getIditinerario().compareTo(p.itinerario.getIditinerario());
 	}
 
