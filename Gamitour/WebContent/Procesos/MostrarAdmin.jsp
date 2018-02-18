@@ -21,17 +21,17 @@
 
 	<div id="menu">
 		<ul>
-			<li><button id="actividades">Actividades</button></li>
-			<li><button id="clientes">Clientes</button></li>
-			<li><button id="itinerarios">Itinerarios</button></li>
-			<li><button id="noticias">Noticias</button></li>
-			<li><button id="paradas">Paradas</button></li>
-			<li><button id="premios">Premios</button></li>
-			<li><button id="multimedias">Multimedias</button></li>
-			<li><button id="comentarios">Comentarios</button></li>
-			<li><button id="pruebasdeportivas">PD</button></li>
-			<li><button id="pruebasculturales">PC</button></li>
-			<li><button id="votos">Votos</button></li>
+			<li><button class="botonMenu" id="actividades">Actividades</button></li>
+			<li><button class="botonMenu" id="clientes">Clientes</button></li>
+			<li><button class="botonMenu" id="itinerarios">Itinerarios</button></li>
+			<li><button class="botonMenu" id="noticias">Noticias</button></li>
+			<li><button class="botonMenu" id="paradas">Paradas</button></li>
+			<li><button class="botonMenu" id="premios">Premios</button></li>
+			<li><button class="botonMenu" id="multimedias">Multimedias</button></li>
+			<li><button class="botonMenu" id="comentarios">Comentarios</button></li>
+			<li><button class="botonMenu" id="pruebasdeportivas">PD</button></li>
+			<li><button class="botonMenu" id="pruebasculturales">PC</button></li>
+			<li><button class="botonMenu" id="votos">Votos</button></li>
 		</ul>
 		<button id="divActual" value="${divActual}" hidden></button>
 	</div>

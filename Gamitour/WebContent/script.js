@@ -1,19 +1,6 @@
 window.onload = function() {
 
-	/** BOTONES MENU * */
-	var actividades = document.getElementById("actividades");
-	var clientes = document.getElementById("clientes");
-	var itinerarios = document.getElementById("itinerarios");
-	var noticias = document.getElementById("noticias");
-	var paradas = document.getElementById("paradas");
-	var pruebasdeportivas = document.getElementById("pruebasdeportivas");
-	var pruebasculturales = document.getElementById("pruebasculturales");
-	var multimedias = document.getElementById("multimedias");
-	var premios = document.getElementById("premios");
-	var comentarios = document.getElementById("comentarios");
-	var votos = document.getElementById("votos");
-
-	/** DIVS TABLAS* */
+	/** DIVS TABLAS**/ 
 	var divBienvenida = document.getElementById("divBienvenida");
 	var divClientes = document.getElementById("divclientes");
 	var divActividades = document.getElementById("divactividades");
@@ -27,20 +14,7 @@ window.onload = function() {
 	var divComentarios = document.getElementById("divcomentarios");
 	var divVotos = document.getElementById("divvotos");
 
-	/** EVENT LISTENERS BOTONES MENU* */
-	clientes.addEventListener("click", mostrar, false);
-	actividades.addEventListener("click", mostrar, false);
-	itinerarios.addEventListener("click", mostrar, false);
-	noticias.addEventListener("click", mostrar, false);
-	paradas.addEventListener("click", mostrar, false);
-	pruebasculturales.addEventListener("click", mostrar, false);
-	pruebasdeportivas.addEventListener("click", mostrar, false);
-	multimedias.addEventListener("click", mostrar, false);
-	premios.addEventListener("click", mostrar, false);
-	comentarios.addEventListener("click", mostrar, false);
-	votos.addEventListener("click", mostrar, false);
-
-	/** DIV ACTUAL* */
+	/** DIV ACTUAL (Para regresar al div correcto tras insertar/modificar/eliminar **/
 	var divActual = document.getElementById("divActual");
 
 	if (divActual.value != "") {
@@ -48,6 +22,14 @@ window.onload = function() {
 	} else {
 		divBienvenida.style.display = "block";
 	}
+	/** BOTONES MENU (Para asignar la funcion mostrar a todos los botones **/
+
+	var botonesMenu = document.getElementsByClassName("botonMenu");
+
+	for (var i = 0; i < botonesMenu.length; i++) {
+		botonesMenu[i].addEventListener("click", mostrar, false);
+	}
+
 
 	function mostrarDivActual(div) { // Funcion mostrar con 1 param
 		ocultarTodos();
