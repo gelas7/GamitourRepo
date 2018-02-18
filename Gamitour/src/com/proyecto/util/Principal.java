@@ -65,7 +65,6 @@ public class Principal {
 
 	public void init() {
 
-	
 	}
 
 }

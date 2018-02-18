@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -10,7 +9,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Panel de Administración</title>
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-<script src="script.js"></script>
+<script src="script.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -34,7 +33,7 @@
 			<li><button id="pruebasculturales">PC</button></li>
 			<li><button id="votos">Votos</button></li>
 		</ul>
-		<button id="divActual" value="${divActual}" hidden=""></button>
+		<button id="divActual" value="${divActual}" hidden></button>
 	</div>
 	<hr />
 
@@ -75,14 +74,15 @@
 							<td>${cliente.fecharegistro}</td>
 							<td>${cliente.rol.getNombre()}</td>
 							<td>${cliente.avatar}</td>
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar?' Los comentarios, votos y premios asociados al cliente también se eliminarán.)"
 								href="EliminarClientes.do?id=${cliente.idcliente}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarClientes.jsp?id=${cliente.idcliente}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarClientes.jsp">Insertar
+				<a class="insertar" href="Procesos/Insertar/InsertarClientes.jsp">Insertar
 					un cliente nuevo</a>
 
 			</div>
@@ -111,15 +111,17 @@
 							<td>${actividad.precio}</td>
 							<td>${actividad.imagen}</td>
 							<td>${actividad.puntos}</td>
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar?')"
 								href="EliminarActividades.do?id=${actividad.idactividad}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarActividades.jsp?id=${actividad.idactividad}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarActividades.html">Insertar
-					una actividad nueva </a>
+				<a class="insertar"
+					href="Procesos/Insertar/InsertarActividades.html">Insertar una
+					actividad nueva </a>
 			</div>
 
 			<div id="divitinerarios">
@@ -137,18 +139,20 @@
 							<td>${itinerario.categoria}</td>
 							<td>${itinerario.duracion}</td>
 							<td>${itinerario.ubicacion}</td>
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar? Las paradas asociadas a este itinerario también se eliminarán.')"
 								href="EliminarItinerarios.do?id=${itinerario.iditinerario}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarItinerarios.jsp?id=${itinerario.iditinerario}">Modificar</a></td>
-							<td><a id="mostrar"
+							<td><a class="mostrar"
 								href="MostrarParadas.do?id=${itinerario.iditinerario}">Mostrar
 									paradas</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarItinerarios.html">Insertar
-					un itinerario nuevo</a>
+				<a class="insertar"
+					href="Procesos/Insertar/InsertarItinerarios.html">Insertar un
+					itinerario nuevo</a>
 			</div>
 
 			<div id="divnoticias">
@@ -168,14 +172,15 @@
 							<td>${noticia.fechaalta}</td>
 							<td>${noticia.fechacaducidad}</td>
 							<td>${noticia.imagen}</td>
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar?')"
 								href="EliminarNoticias.do?id=${noticia.idnoticia}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarNoticias.jsp?id=${noticia.idnoticia}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarNoticias.html">Insertar
+				<a class="insertar" href="Procesos/Insertar/InsertarNoticias.html">Insertar
 					una noticia nueva</a>
 			</div>
 
@@ -202,14 +207,15 @@
 							<td>${parada.gastronomia}</td>
 							<td>${parada.imagen}</td>
 							<td>${parada.itinerario.getNombre()}</td>
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar? Las pruebas culturales asociadas a esta parada también se eliminarán.')"
 								href="EliminarParadas.do?id=${parada.idparada}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarParadas.jsp">Insertar
+				<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp">Insertar
 					una parada nueva</a>
 			</div>
 
@@ -230,14 +236,15 @@
 							<td>${pC.respuesta}</td>
 							<td>${pC.puntos}</td>
 							<td>${pC.parada.getNombre()}</td>
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar?')"
 								href="EliminarPruebasCulturales.do?id=${pC.idpruebacultural}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarPruebasCulturales.jsp?id=${pC.idpruebacultural}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar"
+				<a class="insertar"
 					href="Procesos/Insertar/InsertarPruebasCulturales.jsp">Insertar
 					una prueba cultural nueva</a>
 			</div>
@@ -261,17 +268,18 @@
 							<td>${pD.explicacion}</td>
 							<td>${pD.puntos}</td>
 							<td>${pD.parada.getNombre()}</td>
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar?')"
 								href="EliminarPruebasDeportivas.do?id=${pD.idpruebadeportiva}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}">Modificar</a></td>
-							<td><a id="mostrar"
+							<td><a class="mostrar"
 								href="MostrarMultimedias.do?id=${pD.idpruebadeportiva}">
 									Mostrar multimedia</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar"
+				<a class="insertar"
 					href="Procesos/Insertar/InsertarPruebasDeportivas.jsp">Insertar
 					una prueba deportiva nueva</a>
 			</div>
@@ -297,15 +305,15 @@
 							<td>${premio.fechaactivacion}</td>
 							<td>${premio.fechaconsumo}</td>
 							<td>${premio.puntos}</td>
-
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar?')"
 								href="EliminarPremios.do?id=${premio.idpremio}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarPremios.jsp?id=${premio.idpremio}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarPremios.jsp">Insertar
+				<a class="insertar" href="Procesos/Insertar/InsertarPremios.jsp">Insertar
 					un premio nuevo</a>
 			</div>
 
@@ -330,18 +338,18 @@
 							<td>${m.video}</td>
 							<td>${m.puntosacumulados}</td>
 							<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
-
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar?' Los comentarios y votos asociados a este elemento multimedia también se eliminarán.)"
 								href="EliminarMultimedias.do?id=${m.idmultimedia}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}">Modificar</a></td>
-							<td><a id="mostrar"
-								href="MostrarComentarios.do?id=${m.idmultimedia}">
-									Mostrar comentarios</a></td>
+							<td><a class="mostrar"
+								href="MostrarComentarios.do?id=${m.idmultimedia}"> Mostrar
+									comentarios</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp">Insertar
+				<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp">Insertar
 					una elemento multimedia nuevo</a>
 			</div>
 
@@ -358,15 +366,16 @@
 							<td>${com.cliente.getNombre()}</td>
 							<td>${com.texto}</td>
 							<td>${com.multimedia.getIdmultimedia()}</td>
-							<td><a id="eliminar"
+							<td><a class="eliminar"
+								onclick="return confirm('¿Está seguro de que quiere continuar?')"
 								href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
 
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarComentarios.jsp">Insertar
+				<a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp">Insertar
 					un comentario nuevo</a>
 			</div>
 
@@ -384,14 +393,15 @@
 							<td>${v.cliente.getNombre()}</td>
 							<td>${v.multimedia.getIdmultimedia()}</td>
 							<td>${v.puntos}</td>
-
-							<td><a id="eliminar" href="EliminarVotos.do?id=${v.idvoto}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="eliminar"
+								href="EliminarVotos.do?id=${v.idvoto}"
+								onclick="return confirm('¿Está seguro de que quiere continuar?')">Eliminar</a></td>
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarVotos.jsp">Insertar
+				<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp">Insertar
 					un voto nuevo</a>
 			</div>
 
