@@ -75,7 +75,7 @@
 							<td>${cliente.rol.getNombre()}</td>
 							<td>${cliente.avatar}</td>
 							<td><a class="eliminar"
-								onclick="return confirm('¿Está seguro de que quiere continuar?' Los comentarios, votos y premios asociados al cliente también se eliminarán.)"
+								onclick="return confirm('¿Está seguro de que quiere continuar? Los comentarios, votos y premios asociados al cliente también se eliminarán.')"
 								href="EliminarClientes.do?id=${cliente.idcliente}">Eliminar</a></td>
 							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarClientes.jsp?id=${cliente.idcliente}">Modificar</a></td>
