@@ -53,15 +53,15 @@
 						<td>${com.cliente.getNombre()}</td>
 						<td>${com.texto}</td>
 						<td>${com.multimedia.getIdmultimedia()}</td>
-						<td><a id="eliminar"
+						<td><a class="eliminar" onclick="return confirm('¿Está seguro de que quiere continuar?')"
 							href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
-						<td><a id="actualizar"
+						<td><a class="actualizar"
 							href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
 
 					</tr>
 				</c:forEach>
 			</table>
-			<a id="insertar" href="Procesos/Insertar/InsertarComentarios.jsp">Insertar
+			<a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp">Insertar
 				un comentario nuevo</a>
 		</div>
 

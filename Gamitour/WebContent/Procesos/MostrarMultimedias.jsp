@@ -61,14 +61,14 @@
 							<td>${m.puntosacumulados}</td>
 							<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 
-							<td><a id="eliminar"
+							<td><a class="eliminar" onclick="return confirm('¿Está seguro de que quiere continuar?')"
 								href="EliminarMultimedias.do?id=${m.idmultimedia}">Eliminar</a></td>
-							<td><a id="actualizar"
+							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}">Modificar</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-				<a id="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp">Insertar
+				<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp">Insertar
 					una elemento multimedia nuevo</a>
 		</div>
 
