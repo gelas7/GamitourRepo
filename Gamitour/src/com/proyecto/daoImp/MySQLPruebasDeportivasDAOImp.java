@@ -1,6 +1,5 @@
 package com.proyecto.daoImp;
 
-
 import org.hibernate.SessionFactory;
 import com.proyecto.dao.PruebasDeportivasDAO;
 import com.proyecto.modelo.PruebaDeportiva;

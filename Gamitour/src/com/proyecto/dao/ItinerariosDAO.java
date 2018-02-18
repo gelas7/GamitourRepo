@@ -17,8 +17,6 @@ public interface ItinerariosDAO extends GenericDAO<Itinerario, Integer> {
 
 	public List<Itinerario> buscarTodos();
 
-	public Itinerario buscarPorNombre(String nombre);
-	
-	
+	public Itinerario buscarPorNombre(String nombre);	
 
 }
