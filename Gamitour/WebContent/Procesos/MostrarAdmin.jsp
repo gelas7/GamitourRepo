@@ -39,11 +39,11 @@
 
 	<div id="page">
 		<div id="contenedor">
-			<div id="divBienvenida">
+			<div class="tablas" id="divBienvenida">
 				<h1>Bienvenido. Seleccione una opción del menu superior.</h1>
 			</div>
 
-			<div id="divclientes">
+			<div class="tablas" id="divclientes">
 				<h1>Listado de Clientes</h1>
 				<table>
 					<tr>
@@ -87,7 +87,7 @@
 
 			</div>
 
-			<div id="divactividades">
+			<div class="tablas" id="divactividades">
 				<h1>Listado de Actividades</h1>
 				<table>
 					<tr>
@@ -124,7 +124,7 @@
 					actividad nueva </a>
 			</div>
 
-			<div id="divitinerarios">
+			<div class="tablas" id="divitinerarios">
 				<h1>Listado de Itinerarios</h1>
 				<table>
 					<tr>
@@ -155,7 +155,7 @@
 					itinerario nuevo</a>
 			</div>
 
-			<div id="divnoticias">
+			<div class="tablas" id="divnoticias">
 				<h1>Listado de Noticias</h1>
 				<table>
 					<tr>
@@ -184,7 +184,7 @@
 					una noticia nueva</a>
 			</div>
 
-			<div id="divparadas">
+			<div class="tablas" id="divparadas">
 				<h1>Listado de Paradas</h1>
 				<table>
 					<tr>
@@ -219,7 +219,7 @@
 					una parada nueva</a>
 			</div>
 
-			<div id="divpruebasculturales">
+			<div class="tablas" id="divpruebasculturales">
 				<h1>Listado de Pruebas Culturales</h1>
 				<table>
 					<tr>
@@ -249,7 +249,7 @@
 					una prueba cultural nueva</a>
 			</div>
 
-			<div id="divpruebasdeportivas">
+			<div class="tablas" id="divpruebasdeportivas">
 				<h1>Listado de Pruebas Deportivas</h1>
 				<table>
 					<tr>
@@ -284,7 +284,7 @@
 					una prueba deportiva nueva</a>
 			</div>
 
-			<div id="divpremios">
+			<div class="tablas" id="divpremios">
 				<h1>Listado de Premios</h1>
 				<table>
 					<tr>
@@ -317,7 +317,7 @@
 					un premio nuevo</a>
 			</div>
 
-			<div id="divmultimedias">
+			<div class="tablas" id="divmultimedias">
 				<h1>Listado de Elementos Multimedia</h1>
 				<table>
 					<tr>
@@ -353,7 +353,7 @@
 					una elemento multimedia nuevo</a>
 			</div>
 
-			<div id="divcomentarios">
+			<div class="tablas" id="divcomentarios">
 				<h1>Listado de Comentarios</h1>
 				<table>
 					<tr>
@@ -379,7 +379,7 @@
 					un comentario nuevo</a>
 			</div>
 
-			<div id="divvotos">
+			<div class="tablas" id="divvotos">
 				<h1>Listado de Votos</h1>
 				<table>
 					<tr>

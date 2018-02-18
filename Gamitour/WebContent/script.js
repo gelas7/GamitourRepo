@@ -1,37 +1,20 @@
 window.onload = function() {
 
-	/** DIVS TABLAS**/ 
-	var divBienvenida = document.getElementById("divBienvenida");
-	var divClientes = document.getElementById("divclientes");
-	var divActividades = document.getElementById("divactividades");
-	var divNoticias = document.getElementById("divnoticias");
-	var divParadas = document.getElementById("divparadas");
-	var divItinerarios = document.getElementById("divitinerarios");
-	var divPruebasdeportivas = document.getElementById("divpruebasdeportivas");
-	var divPruebasculturales = document.getElementById("divpruebasculturales");
-	var divMultimedias = document.getElementById("divmultimedias");
-	var divPremios = document.getElementById("divpremios");
-	var divComentarios = document.getElementById("divcomentarios");
-	var divVotos = document.getElementById("divvotos");
+	var tablas = document.getElementsByClassName("tablas");//Cargo divs de tablas
+	var divActual = document.getElementById("divActual");//Almaceno div que se está mostrando
+	var botonesMenu = document.getElementsByClassName("botonMenu"); //Todos los botones del menu
 
-	/** DIV ACTUAL (Para regresar al div correcto tras insertar/modificar/eliminar **/
-	var divActual = document.getElementById("divActual");
-
-	if (divActual.value != "") {
-		mostrarDivActual(divActual.value);
-	} else {
-		divBienvenida.style.display = "block";
-	}
-	/** BOTONES MENU (Para asignar la funcion mostrar a todos los botones **/
-
-	var botonesMenu = document.getElementsByClassName("botonMenu");
-
-	for (var i = 0; i < botonesMenu.length; i++) {
+	for (var i = 0; i < botonesMenu.length; i++) {//Event listeners botones de menu
 		botonesMenu[i].addEventListener("click", mostrar, false);
 	}
 
+	if (divActual.value != "") { //Si hay divActual lo muestro al recargar
+		mostrarDivActual(divActual.value);
+	} else { //Si no lo hay muestro la bienvenida
+		divBienvenida.style.display = "block";
+	}
 
-	function mostrarDivActual(div) { // Funcion mostrar con 1 param
+	function mostrarDivActual(div) { // Funcion mostrar con 1 parametro
 		ocultarTodos();
 		var concateno = "div" + div;
 		document.getElementById(concateno).style.display = "block";
@@ -43,18 +26,9 @@ window.onload = function() {
 		document.getElementById(concateno).style.display = "block";
 	}
 
-	function ocultarTodos() {
-		divBienvenida.style.display = "none";
-		divActividades.style.display = "none";
-		divClientes.style.display = "none";
-		divNoticias.style.display = "none";
-		divParadas.style.display = "none";
-		divItinerarios.style.display = "none";
-		divPruebasculturales.style.display = "none";
-		divPruebasdeportivas.style.display = "none";
-		divPremios.style.display = "none";
-		divMultimedias.style.display = "none";
-		divComentarios.style.display = "none";
-		divVotos.style.display = "none";
+	function ocultarTodos() { //Oculto todos los divs de tablas
+		for (var i = 0; i < tablas.length; i++) {
+			tablas[i].style.display = "none";
+		}
 	}
 }
