@@ -78,8 +78,6 @@
 					</tr>
 				</c:forEach>
 			</table>
-			<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp">Insertar
-				una parada nueva</a>
 		</div>
 	</div>
 

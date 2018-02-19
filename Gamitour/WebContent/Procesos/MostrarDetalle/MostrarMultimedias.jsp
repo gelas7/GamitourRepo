@@ -76,10 +76,7 @@
 					</tr>
 				</c:forEach>
 			</table>
-			<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp">Insertar
-				una elemento multimedia nuevo</a>
 		</div>
-
 	</div>
 
 	<div id="footer"></div>

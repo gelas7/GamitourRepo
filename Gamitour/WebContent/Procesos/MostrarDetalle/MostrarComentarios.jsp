@@ -70,10 +70,7 @@
 					</tr>
 				</c:forEach>
 			</table>
-			<a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp">Insertar
-				un comentario nuevo</a>
 		</div>
-
 	</div>
 
 	<div id="footer"></div>
