@@ -61,15 +61,18 @@
 						<td>${parada.gastronomia}</td>
 						<td>${parada.imagen}</td>
 						<td>${parada.itinerario.getNombre()}</td>
-						<td><a class="eliminar" onclick="return confirm('¿Está seguro de que quiere continuar?')"
-							href="EliminarParadas.do?id=${parada.idparada}">Eliminar</a></td>
+						<td><a class="eliminar"
+							onclick="return confirm('¿Está seguro de que quiere continuar?')"
+							href="EliminarParadas.do?id=${parada.idparada}"><i
+								class="fas fa-trash-alt"></i></a></td>
 						<td><a class="actualizar"
-							href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}">Modificar</a></td>
+							href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
+								class="fas fa-edit"></i> </a></td>
 					</tr>
 				</c:forEach>
 			</table>
-			<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp">Insertar una
-				parada nueva</a>
+			<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp">Insertar
+				una parada nueva</a>
 		</div>
 	</div>
 

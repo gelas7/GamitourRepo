@@ -40,36 +40,39 @@
 	<div id="page">
 		<div id="contenedor">
 
-			<h1>Listado de Multimedias en ${nombrePruebaDeportiva} </h1>
-				<table>
+			<h1>Listado de Multimedias en ${nombrePruebaDeportiva}</h1>
+			<table>
+				<tr>
+					<th>Cliente</th>
+					<th>Fecha</th>
+					<th>Comentario</th>
+					<th>Imagen</th>
+					<th>Video</th>
+					<th>Puntos</th>
+					<th>ID Prueba Deportiva</th>
+				</tr>
+				<c:forEach items="${listaMultimedias}" var="m">
 					<tr>
-						<th>Cliente</th>
-						<th>Fecha</th>
-						<th>Comentario</th>
-						<th>Imagen</th>
-						<th>Video</th>
-						<th>Puntos</th>
-						<th>ID Prueba Deportiva</th>
-					</tr>
-					<c:forEach items="${listaMultimedias}" var="m">
-						<tr>
-							<td>${m.cliente.getNombre()}</td>
-							<td>${m.fecha}</td>
-							<td>${m.comentario}</td>
-							<td>${m.imagen}</td>
-							<td>${m.video}</td>
-							<td>${m.puntosacumulados}</td>
-							<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
+						<td>${m.cliente.getNombre()}</td>
+						<td>${m.fecha}</td>
+						<td>${m.comentario}</td>
+						<td>${m.imagen}</td>
+						<td>${m.video}</td>
+						<td>${m.puntosacumulados}</td>
+						<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 
-							<td><a class="eliminar" onclick="return confirm('¿Está seguro de que quiere continuar?')"
-								href="EliminarMultimedias.do?id=${m.idmultimedia}">Eliminar</a></td>
-							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}">Modificar</a></td>
-						</tr>
-					</c:forEach>
-				</table>
-				<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp">Insertar
-					una elemento multimedia nuevo</a>
+						<td><a class="eliminar"
+							onclick="return confirm('¿Está seguro de que quiere continuar?')"
+							href="EliminarMultimedias.do?id=${m.idmultimedia}"><i
+								class="fas fa-trash-alt"></i></a></td>
+						<td><a class="actualizar"
+							href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}"><i
+								class="fas fa-edit"></i> </a></td>
+					</tr>
+				</c:forEach>
+			</table>
+			<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp">Insertar
+				una elemento multimedia nuevo</a>
 		</div>
 
 	</div>

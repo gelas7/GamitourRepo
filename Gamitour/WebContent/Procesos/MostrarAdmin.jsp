@@ -10,6 +10,8 @@
 <title>Panel de Administración</title>
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="script.js" type="text/javascript"></script>
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>
@@ -76,9 +78,11 @@
 							<td>${cliente.avatar}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar? Los comentarios, votos y premios asociados al cliente también se eliminarán.')"
-								href="EliminarClientes.do?id=${cliente.idcliente}">Eliminar</a></td>
+								href="EliminarClientes.do?id=${cliente.idcliente}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarClientes.jsp?id=${cliente.idcliente}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarClientes.jsp?id=${cliente.idcliente}"><i
+									class="fas fa-edit"></i> </a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -113,9 +117,11 @@
 							<td>${actividad.puntos}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar?')"
-								href="EliminarActividades.do?id=${actividad.idactividad}">Eliminar</a></td>
+								href="EliminarActividades.do?id=${actividad.idactividad}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarActividades.jsp?id=${actividad.idactividad}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarActividades.jsp?id=${actividad.idactividad}"><i
+									class="fas fa-edit"></i> </a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -141,9 +147,11 @@
 							<td>${itinerario.ubicacion}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar? Las paradas asociadas a este itinerario también se eliminarán.')"
-								href="EliminarItinerarios.do?id=${itinerario.iditinerario}">Eliminar</a></td>
+								href="EliminarItinerarios.do?id=${itinerario.iditinerario}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarItinerarios.jsp?id=${itinerario.iditinerario}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarItinerarios.jsp?id=${itinerario.iditinerario}"><i
+									class="fas fa-edit"></i> </a></td>
 							<td><a class="mostrar"
 								href="MostrarParadas.do?id=${itinerario.iditinerario}">Mostrar
 									paradas</a></td>
@@ -174,9 +182,11 @@
 							<td>${noticia.imagen}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar?')"
-								href="EliminarNoticias.do?id=${noticia.idnoticia}">Eliminar</a></td>
+								href="EliminarNoticias.do?id=${noticia.idnoticia}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarNoticias.jsp?id=${noticia.idnoticia}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarNoticias.jsp?id=${noticia.idnoticia}"><i
+									class="fas fa-edit"></i> </a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -209,9 +219,11 @@
 							<td>${parada.itinerario.getNombre()}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar? Las pruebas culturales asociadas a esta parada también se eliminarán.')"
-								href="EliminarParadas.do?id=${parada.idparada}">Eliminar</a></td>
+								href="EliminarParadas.do?id=${parada.idparada}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
+									class="fas fa-edit"></i> </a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -238,9 +250,11 @@
 							<td>${pC.parada.getNombre()}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar?')"
-								href="EliminarPruebasCulturales.do?id=${pC.idpruebacultural}">Eliminar</a></td>
+								href="EliminarPruebasCulturales.do?id=${pC.idpruebacultural}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarPruebasCulturales.jsp?id=${pC.idpruebacultural}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarPruebasCulturales.jsp?id=${pC.idpruebacultural}"><i
+									class="fas fa-edit"></i> </a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -270,9 +284,11 @@
 							<td>${pD.parada.getNombre()}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar?')"
-								href="EliminarPruebasDeportivas.do?id=${pD.idpruebadeportiva}">Eliminar</a></td>
+								href="EliminarPruebasDeportivas.do?id=${pD.idpruebadeportiva}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}"><i
+									class="fas fa-edit"></i> </a></td>
 							<td><a class="mostrar"
 								href="MostrarMultimedias.do?id=${pD.idpruebadeportiva}">
 									Mostrar multimedia</a></td>
@@ -307,9 +323,11 @@
 							<td>${premio.puntos}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar?')"
-								href="EliminarPremios.do?id=${premio.idpremio}">Eliminar</a></td>
+								href="EliminarPremios.do?id=${premio.idpremio}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarPremios.jsp?id=${premio.idpremio}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarPremios.jsp?id=${premio.idpremio}"><i
+									class="fas fa-edit"></i> </a></td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -340,9 +358,11 @@
 							<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar?' Los comentarios y votos asociados a este elemento multimedia también se eliminarán.)"
-								href="EliminarMultimedias.do?id=${m.idmultimedia}">Eliminar</a></td>
+								href="EliminarMultimedias.do?id=${m.idmultimedia}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}"><i
+									class="fas fa-edit"></i> </a></td>
 							<td><a class="mostrar"
 								href="MostrarComentarios.do?id=${m.idmultimedia}"> Mostrar
 									comentarios</a></td>
@@ -368,9 +388,11 @@
 							<td>${com.multimedia.getIdmultimedia()}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar?')"
-								href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
+								href="EliminarComentarios.do?id=${com.idcomentario}"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}"><i
+									class="fas fa-edit"></i> </a></td>
 
 						</tr>
 					</c:forEach>
@@ -395,9 +417,11 @@
 							<td>${v.puntos}</td>
 							<td><a class="eliminar"
 								href="EliminarVotos.do?id=${v.idvoto}"
-								onclick="return confirm('¿Está seguro de que quiere continuar?')">Eliminar</a></td>
+								onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
+									class="fas fa-trash-alt"></i></a></td>
 							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}">Modificar</a></td>
+								href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
+									class="fas fa-edit"></i> </a></td>
 						</tr>
 					</c:forEach>
 				</table>

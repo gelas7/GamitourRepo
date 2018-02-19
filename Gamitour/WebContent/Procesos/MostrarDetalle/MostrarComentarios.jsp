@@ -53,10 +53,13 @@
 						<td>${com.cliente.getNombre()}</td>
 						<td>${com.texto}</td>
 						<td>${com.multimedia.getIdmultimedia()}</td>
-						<td><a class="eliminar" onclick="return confirm('¿Está seguro de que quiere continuar?')"
-							href="EliminarComentarios.do?id=${com.idcomentario}">Eliminar</a></td>
+						<td><a class="eliminar"
+							onclick="return confirm('¿Está seguro de que quiere continuar?')"
+							href="EliminarComentarios.do?id=${com.idcomentario}"><i
+								class="fas fa-trash-alt"></i></a></td>
 						<td><a class="actualizar"
-							href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}">Modificar</a></td>
+							href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}"><i
+								class="fas fa-edit"></i> </a></td>
 
 					</tr>
 				</c:forEach>
