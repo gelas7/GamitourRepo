@@ -18,9 +18,16 @@ input, textarea {
 	color: #6E6E6E;
 }
 
+.logo {
+	margin:50px 0 0 10px;
+}
+.logo a{
+	text-decoration:none;
+}
+
 .page {
 	width: 700px;
-	margin-left: 15%;
+	margin-left:160px;
 }
 
 .contenedor {
@@ -29,32 +36,17 @@ input, textarea {
 }
 
 h1 {
-	font-size: 38px;
+	font-size: 29px;
 	margin-bottom: 1.2em;
 	font-family: Optima, sans-serif;
 	text-decoration: none;
-	text-align: center;
+	text-align: right;
 	width:100%;
 }
 
 h2 {
-	margin: 0 auto;
 	font-size: 23px;
-	text-align: center;
-	width:100%;
-}
-
-p, ul, ol {
-	margin-top: 1.5em;
-	line-height: 190%;
-}
-
-ul, ol {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	width: 200px;
-	background-color: #f1f1f1;
+	margin:0 auto;
 }
 
 a {
@@ -125,37 +117,25 @@ table a:hover {
 	color: white;
 }
 
-.logo {
-	width: 870px;
-	height: 135px;
-	margin: 0 auto;
-}
-
-.logo h1 {
-	margin: 0;
-	float: left;
-	padding-top: 75px;
-}
-
-.logo a {
-	text-decoration: none;
-	color: rgb(63, 62, 62);
+p, ul{
+	line-height: 190%;
 }
 
 ul {
+	margin-left:10px;
 	list-style-type: none;
 	padding-top: 10px;
-	margin: 50px 20px;
-	width: 10%;
-	background-color: #f1f1f1;
+	width: 130px;
+	height:100%;
+	background-color: #666666;
 	position: fixed;
 	overflow: auto;
+	border-radius: 20px;
 }
 
 li {
+	margin-top:20px;
 	display: block;
-	color: black;
-	text-decoration: none;
 	padding: 0 5px 0 5px;
 	text-align: center;
 }
@@ -164,8 +144,8 @@ li a {
 	font-family: Optima, sans-serif;
 	border: none;
 	background-color: transparent;
-	color: black;
-	font-size: 22px;
+	color: white;
+	font-size: 18px;
 	outline: none;
 	text-decoration: none;
 	font-weight: 500;
@@ -173,22 +153,8 @@ li a {
 
 li a:hover {
 	transition: 0.5s;
-	font-size: 23px;
-	cursor: pointer;
-	outline: none;
-}
-
-button {
-	border: none;
-	background-color: transparent;
-	color: black;
-	font-size: 20px;
-	outline: none;
-}
-
-button:hover {
-	transition: 0.5s;
-	font-size: 21px;
+	color:#a1c3ff;
+	font-size: 19px;
 	cursor: pointer;
 	outline: none;
 }

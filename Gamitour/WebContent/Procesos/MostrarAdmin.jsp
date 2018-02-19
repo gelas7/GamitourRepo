@@ -17,17 +17,17 @@
 <body>
 	<div class="menu">
 		<ul>
-			<li><button class="botonMenu" id="actividades">Actividades</button></li>
-			<li><button class="botonMenu" id="clientes">Clientes</button></li>
-			<li><button class="botonMenu" id="itinerarios">Itinerarios</button></li>
-			<li><button class="botonMenu" id="noticias">Noticias</button></li>
-			<li><button class="botonMenu" id="paradas">Paradas</button></li>
-			<li><button class="botonMenu" id="premios">Premios</button></li>
-			<li><button class="botonMenu" id="votos">Votos</button></li>
-			<li><button class="botonMenu" id="multimedias">Multimedias</button></li>
-			<li><button class="botonMenu" id="pruebasculturales">PC</button></li>
-			<li><button class="botonMenu" id="pruebasdeportivas">PD</button></li>
-			<li><button class="botonMenu" id="comentarios">Comentarios</button></li>
+			<li><a class="botonMenu" id="actividades">Actividades</a></li>
+			<li><a class="botonMenu" id="clientes">Clientes</a></li>
+			<li><a class="botonMenu" id="itinerarios">Itinerarios</a></li>
+			<li><a class="botonMenu" id="noticias">Noticias</a></li>
+			<li><a class="botonMenu" id="paradas">Paradas</a></li>
+			<li><a class="botonMenu" id="premios">Premios</a></li>
+			<li><a class="botonMenu" id="votos">Votos</a></li>
+			<li><a class="botonMenu" id="multimedias">Multimedias</a></li>
+			<li><a class="botonMenu" id="pruebasculturales">PC</a></li>
+			<li><a class="botonMenu" id="pruebasdeportivas">PD</a></li>
+			<li><a class="botonMenu" id="comentarios">Comentarios</a></li>
 		</ul>
 		<button id="divActual" value="${divActual}" hidden></button>
 	</div>
@@ -35,13 +35,13 @@
 	<div class="page">
 		<div class="logo">
 			<h1>
-				<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
+				<a href="MostrarAdmin.do">Panel de administración Gamitour</a>
 			</h1>
 		</div>
-
 		<div class="contenedor">
 			<div class="tablas" id="divBienvenida">
-				<h2>Bienvenido. Seleccione una opción del menu superior.</h2>
+				<hr></hr>
+				<h2>Bienvenido. Seleccione una opción del menu lateral.</h2>
 			</div>
 
 			<div class="tablas" id="divclientes">
@@ -74,7 +74,9 @@
 							<td>${cliente.puntosacumulados}</td>
 							<td>${cliente.fecharegistro}</td>
 							<td>${cliente.rol.getNombre()}</td>
-							<td>${cliente.avatar}</td>
+							<td><i class="far fa-file-image" title="${cliente.avatar}"></i>
+
+							</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar? Los comentarios, votos y premios asociados al cliente también se eliminarán.')"
 								href="EliminarClientes.do?id=${cliente.idcliente}"><i
@@ -112,7 +114,7 @@
 							<td>${actividad.ubicacion}</td>
 							<td>${actividad.numparticipantes}</td>
 							<td>${actividad.precio}</td>
-							<td>${actividad.imagen}</td>
+							<td><i class="far fa-file-image" title="${actividad.imagen}"></i></td>
 							<td>${actividad.puntos}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar?')"
@@ -178,7 +180,7 @@
 							<td>${noticia.texto}</td>
 							<td>${noticia.fechaalta}</td>
 							<td>${noticia.fechacaducidad}</td>
-							<td>${noticia.imagen}</td>
+							<td><i class="far fa-file-image" title="${noticia.imagen}"></i></td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar?')"
 								href="EliminarNoticias.do?id=${noticia.idnoticia}"><i
@@ -214,7 +216,7 @@
 							<td>${parada.historia}</td>
 							<td>${parada.anecdotario}</td>
 							<td>${parada.gastronomia}</td>
-							<td>${parada.imagen}</td>
+							<td><i class="far fa-file-image" title="${parada.imagen}"></i></td>
 							<td>${parada.itinerario.getNombre()}</td>
 							<td><a class="eliminar"
 								onclick="return confirm('¿Está seguro de que quiere continuar? Las pruebas culturales asociadas a esta parada también se eliminarán.')"
@@ -316,7 +318,7 @@
 							<td>${premio.cliente.getNombre()}</td>
 							<td>${premio.nombre}</td>
 							<td>${premio.descripcion}</td>
-							<td>${premio.imagen}</td>
+							<td><i class="far fa-file-image" title="${premio.imagen}"></i></td>
 							<td>${premio.fechaactivacion}</td>
 							<td>${premio.fechaconsumo}</td>
 							<td>${premio.puntos}</td>
@@ -351,8 +353,8 @@
 							<td>${m.cliente.getNombre()}</td>
 							<td>${m.fecha}</td>
 							<td>${m.comentario}</td>
-							<td>${m.imagen}</td>
-							<td>${m.video}</td>
+							<td><i class="far fa-file-image" title="${m.imagen}"></i></td>
+							<td><i class="fas fa-file-video" title="${m.video}"></i></td>
 							<td>${m.puntosacumulados}</td>
 							<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 							<td><a class="eliminar"
