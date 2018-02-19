@@ -7,6 +7,7 @@ body {
 	background: #FFFFFF url(images/img01.gif) repeat-x;
 	color: #6E6E6E;
 	font-size: 13px;
+	font-family: Optima, sans-serif;
 }
 
 input, textarea {
@@ -38,13 +39,7 @@ h1 {
 h2 {
 	margin: 0 auto;
 	font-size: 28px;
-}
-
-h3 {
-	margin: 0 auto;
-	font-size: 12px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #909497;
+	font-family: Optima, sans-serif;
 }
 
 p, ul, ol {
@@ -147,7 +142,7 @@ table a:hover {
 
 ul {
 	list-style-type: none;
-	padding-top:10px;
+	padding-top: 10px;
 	margin: 50px 20px;
 	width: 10%;
 	background-color: #f1f1f1;
@@ -193,7 +188,6 @@ button:hover {
 	cursor: pointer;
 	outline: none;
 }
-
 
 form {
 	padding: 2px;

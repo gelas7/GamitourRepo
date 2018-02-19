@@ -23,11 +23,11 @@
 			<li><button class="botonMenu" id="noticias">Noticias</button></li>
 			<li><button class="botonMenu" id="paradas">Paradas</button></li>
 			<li><button class="botonMenu" id="premios">Premios</button></li>
-			<li><button class="botonMenu" id="multimedias">Multimedias</button></li>
-			<li><button class="botonMenu" id="comentarios">Comentarios</button></li>
-			<li><button class="botonMenu" id="pruebasdeportivas">PD</button></li>
-			<li><button class="botonMenu" id="pruebasculturales">PC</button></li>
 			<li><button class="botonMenu" id="votos">Votos</button></li>
+			<li><button class="botonMenu" id="multimedias">Multimedias</button></li>
+			<li><button class="botonMenu" id="pruebasculturales">PC</button></li>
+			<li><button class="botonMenu" id="pruebasdeportivas">PD</button></li>
+			<li><button class="botonMenu" id="comentarios">Comentarios</button></li>
 		</ul>
 		<button id="divActual" value="${divActual}" hidden></button>
 	</div>
@@ -38,7 +38,7 @@
 				<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
 			</h1>
 		</div>
-		
+
 		<div class="contenedor">
 			<div class="tablas" id="divBienvenida">
 				<h1>Bienvenido. Seleccione una opción del menu superior.</h1>
