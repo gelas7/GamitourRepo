@@ -45,9 +45,12 @@
 			</div>
 
 			<div class="tablas" id="divclientes">
-				<h1>Listado de Clientes 	<a class="insertar" href="Procesos/Insertar/InsertarClientes.jsp"><i
-									class="fas fa-plus"></i></a> </h1>
-			
+				<h1>
+					Listado de Clientes <a class="insertar"
+						href="Procesos/Insertar/InsertarClientes.jsp"><i
+						class="fas fa-plus"></i></a>
+				</h1>
+
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -63,7 +66,7 @@
 						<th>Rol</th>
 						<th>Avatar</th>
 					</tr>
-					
+
 					<c:forEach items="${listaClientes}" var="cliente">
 						<tr>
 							<td>${cliente.nombre}</td>
@@ -90,13 +93,16 @@
 						</tr>
 					</c:forEach>
 				</table>
-				
+
 
 			</div>
 
 			<div class="tablas" id="divactividades">
-				<h1>Listado de Actividades <a class="insertar" href="Procesos/Insertar/InsertarActividades.html"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de Actividades <a class="insertar"
+						href="Procesos/Insertar/InsertarActividades.html"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -129,12 +135,15 @@
 						</tr>
 					</c:forEach>
 				</table>
-				
+
 			</div>
 
 			<div class="tablas" id="divitinerarios">
-				<h1>Listado de Itinerarios <a class="insertar" href="Procesos/Insertar/InsertarItinerarios.html"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de Itinerarios <a class="insertar"
+						href="Procesos/Insertar/InsertarItinerarios.html"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -161,12 +170,15 @@
 						</tr>
 					</c:forEach>
 				</table>
-			
+
 			</div>
 
 			<div class="tablas" id="divnoticias">
-			<h1>Listado de Noticias <a class="insertar" href="Procesos/Insertar/InsertarNoticias.html"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de Noticias <a class="insertar"
+						href="Procesos/Insertar/InsertarNoticias.html"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -196,8 +208,11 @@
 			</div>
 
 			<div class="tablas" id="divparadas">
-				<h1>Listado de Paradas <a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de Paradas <a class="insertar"
+						href="Procesos/Insertar/InsertarParadas.jsp"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -229,12 +244,15 @@
 						</tr>
 					</c:forEach>
 				</table>
-		
+
 			</div>
 
 			<div class="tablas" id="divpruebasculturales">
-				<h1>Listado de Pruebas Culturales <a class="insertar" href="Procesos/Insertar/InsertarPruebasCulturales.jsp"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de Pruebas Culturales <a class="insertar"
+						href="Procesos/Insertar/InsertarPruebasCulturales.jsp"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -260,12 +278,15 @@
 						</tr>
 					</c:forEach>
 				</table>
-				
+
 			</div>
 
 			<div class="tablas" id="divpruebasdeportivas">
-					<h1>Listado de Pruebas Deportivas <a class="insertar" href="Procesos/Insertar/InsertarPruebasDeportivas.jsp"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de Pruebas Deportivas <a class="insertar"
+						href="Procesos/Insertar/InsertarPruebasDeportivas.jsp"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -296,12 +317,15 @@
 						</tr>
 					</c:forEach>
 				</table>
-			
+
 			</div>
 
 			<div class="tablas" id="divpremios">
-						<h1>Listado de Premios <a class="insertar" href="Procesos/Insertar/InsertarPremios.jsp"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de Premios <a class="insertar"
+						href="Procesos/Insertar/InsertarPremios.jsp"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Cliente</th>
@@ -331,12 +355,15 @@
 						</tr>
 					</c:forEach>
 				</table>
-		
+
 			</div>
 
 			<div class="tablas" id="divmultimedias">
-				<h1>Listado de elementos Multimedia <a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de elementos Multimedia <a class="insertar"
+						href="Procesos/Insertar/InsertarMultimedias.jsp"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Cliente</th>
@@ -369,12 +396,15 @@
 						</tr>
 					</c:forEach>
 				</table>
-			
+
 			</div>
 
 			<div class="tablas" id="divcomentarios">
-				<h1>Listado de Comentarios <a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de Comentarios <a class="insertar"
+						href="Procesos/Insertar/InsertarComentarios.jsp"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Cliente</th>
@@ -397,12 +427,15 @@
 						</tr>
 					</c:forEach>
 				</table>
-				
+
 			</div>
 
 			<div class="tablas" id="divvotos">
-				<h1>Listado de votos <a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
-									class="fas fa-plus"></i></a> </h1>
+				<h1>
+					Listado de votos <a class="insertar"
+						href="Procesos/Insertar/InsertarVotos.jsp"><i
+						class="fas fa-plus"></i></a>
+				</h1>
 				<table>
 					<tr>
 						<th>Cliente</th>
@@ -425,7 +458,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-			
+
 			</div>
 
 		</div>

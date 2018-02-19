@@ -43,7 +43,11 @@
 		</div>
 		<div class="contenedor">
 
-			<h1>Listado de Comentarios en el multimedia</h1>
+			<h1>Listado de Comentarios en el multimedia
+			<a class="insertar"
+						href="Procesos/Insertar/InsertarComentarios.jsp"><i
+						class="fas fa-plus"></i></a>
+			</h1>
 			<table>
 				<tr>
 					<th>Cliente</th>

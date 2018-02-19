@@ -43,7 +43,10 @@
 		
 		<div class="contenedor">
 
-			<h1>Listado de Paradas en ${nombreItinerario}</h1>
+			<h1>Listado de Paradas en ${nombreItinerario}
+			<a class="insertar"
+						href="Procesos/Insertar/InsertarParadas.jsp"><i
+						class="fas fa-plus"></i></a></h1>
 			<table>
 				<tr>
 					<th>Nombre</th>
