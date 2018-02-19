@@ -41,7 +41,7 @@
 
 		<div class="contenedor">
 			<div class="tablas" id="divBienvenida">
-				<h1>Bienvenido. Seleccione una opción del menu superior.</h1>
+				<h2>Bienvenido. Seleccione una opción del menu superior.</h2>
 			</div>
 
 			<div class="tablas" id="divclientes">
