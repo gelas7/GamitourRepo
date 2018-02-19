@@ -17,6 +17,16 @@ input, textarea {
 	color: #6E6E6E;
 }
 
+.page {
+	width: 700px;
+	margin-left: 15%;
+}
+
+.contenedor {
+	float: left;
+	width: 600px;
+}
+
 h1 {
 	font-size: 38px;
 	margin-bottom: 1.2em;
@@ -137,7 +147,8 @@ table a:hover {
 
 ul {
 	list-style-type: none;
-	padding-top: 50px;
+	padding-top:10px;
+	margin: 50px 20px;
 	width: 10%;
 	background-color: #f1f1f1;
 	position: fixed;
@@ -183,15 +194,6 @@ button:hover {
 	outline: none;
 }
 
-.page {
-	width: 700px;
-	margin-left: 10%;
-}
-
-.contenedor {
-	float: left;
-	width: 600px;
-}
 
 form {
 	padding: 2px;
@@ -200,16 +202,6 @@ form {
 	width: 290px;
 	margin: 0 auto;
 	text-align: left;
-}
-
-.btn {
-	border: 2px solid gray;
-	color: gray;
-	background-color: white;
-	padding: 8px 20px;
-	border-radius: 8px;
-	font-size: 17px;
-	font-weight: bold;
 }
 
 input[type=submit] {
