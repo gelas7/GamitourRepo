@@ -40,13 +40,12 @@
 				<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
 			</h1>
 		</div>
-		
+
 		<div class="contenedor">
 
-			<h1>Listado de Paradas en ${nombreItinerario}
-			<a class="insertar"
-						href="Procesos/Insertar/InsertarParadas.jsp"><i
-						class="fas fa-plus"></i></a></h1>
+			<h1>Listado de Paradas en ${nombreItinerario}</h1>
+			<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp"><i
+				class="fas fa-plus"></i></a>
 			<table>
 				<tr>
 					<th>Nombre</th>

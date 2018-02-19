@@ -42,11 +42,9 @@
 		</div>
 		<div class="contenedor">
 
-			<h1>
-				Listado de Multimedias en ${nombrePruebaDeportiva} <a
-					class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp"><i
-					class="fas fa-plus"></i></a>
-			</h1>
+			<h1>Listado de Multimedias en ${nombrePruebaDeportiva}</h1>
+			<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp"><i
+				class="fas fa-plus"></i></a>
 			<table>
 				<tr>
 					<th>Cliente</th>

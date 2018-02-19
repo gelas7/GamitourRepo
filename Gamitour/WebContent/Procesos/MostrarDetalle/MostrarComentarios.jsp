@@ -35,7 +35,7 @@
 	</div>
 
 	<div class="page">
-	
+
 		<div class="logo">
 			<h1>
 				<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
@@ -43,11 +43,9 @@
 		</div>
 		<div class="contenedor">
 
-			<h1>Listado de Comentarios en el multimedia
-			<a class="insertar"
-						href="Procesos/Insertar/InsertarComentarios.jsp"><i
-						class="fas fa-plus"></i></a>
-			</h1>
+			<h1>Listado de Comentarios en el multimedia</h1>
+			<a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp"><i
+				class="fas fa-plus"></i></a>
 			<table>
 				<tr>
 					<th>Cliente</th>

@@ -35,7 +35,7 @@
 	</div>
 
 	<div class="page">
-	
+
 		<div class="logo">
 			<h1>
 				<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
@@ -43,32 +43,30 @@
 		</div>
 		<div class="contenedor">
 
-			<h1>Listado de Votos en el multimedia
-			<a class="insertar"
-						href="Procesos/Insertar/InsertarVotos.jsp"><i
-						class="fas fa-plus"></i></a>
-			</h1>
+			<h1>Listado de Votos en el multimedia</h1>
+			<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
+				class="fas fa-plus"></i></a>
 			<table>
+				<tr>
+					<th>Cliente</th>
+					<th>Multimedia</th>
+					<th>Puntos</th>
+				</tr>
+				<c:forEach items="${listaVotos}" var="v">
 					<tr>
-						<th>Cliente</th>
-						<th>Multimedia</th>
-						<th>Puntos</th>
+						<td>${v.cliente.getNombre()}</td>
+						<td>${v.multimedia.getIdmultimedia()}</td>
+						<td>${v.puntos}</td>
+						<td><a class="eliminar"
+							href="EliminarVotos.do?id=${v.idvoto}"
+							onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
+								class="fas fa-trash-alt"></i></a></td>
+						<td><a class="actualizar"
+							href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
+								class="fas fa-edit"></i> </a></td>
 					</tr>
-					<c:forEach items="${listaVotos}" var="v">
-						<tr>
-							<td>${v.cliente.getNombre()}</td>
-							<td>${v.multimedia.getIdmultimedia()}</td>
-							<td>${v.puntos}</td>
-							<td><a class="eliminar"
-								href="EliminarVotos.do?id=${v.idvoto}"
-								onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
-									class="fas fa-trash-alt"></i></a></td>
-							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
-									class="fas fa-edit"></i> </a></td>
-						</tr>
-					</c:forEach>
-				</table>
+				</c:forEach>
+			</table>
 		</div>
 	</div>
 
