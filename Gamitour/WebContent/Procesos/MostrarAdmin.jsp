@@ -61,6 +61,7 @@
 						<th>Rol</th>
 						<th>Avatar</th>
 					</tr>
+					
 					<c:forEach items="${listaClientes}" var="cliente">
 						<tr>
 							<td>${cliente.nombre}</td>
