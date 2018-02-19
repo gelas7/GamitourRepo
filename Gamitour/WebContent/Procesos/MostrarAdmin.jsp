@@ -39,11 +39,16 @@
 			</h1>
 		</div>
 		<div class="contenedor">
+		
+						<!-- DIV BIENVENIDA -->
+						
 			<div class="tablas" id="divBienvenida">
 				<hr></hr>
 				<h2>Bienvenido. Seleccione una opción del menu lateral.</h2>
 			</div>
-
+						
+						<!-- DIV CLIENTES -->
+						
 			<div class="tablas" id="divclientes">
 				<h1>
 					Listado de Clientes <a class="insertar"
@@ -96,6 +101,7 @@
 
 
 			</div>
+							<!-- DIV ACTIVIDADES -->
 
 			<div class="tablas" id="divactividades">
 				<h1>
@@ -137,7 +143,8 @@
 				</table>
 
 			</div>
-
+								<!-- DIV ITINERARIOS -->
+								
 			<div class="tablas" id="divitinerarios">
 				<h1>
 					Listado de Itinerarios <a class="insertar"
@@ -172,7 +179,9 @@
 				</table>
 
 			</div>
-
+								
+								<!-- DIV NOTICIAS -->
+								
 			<div class="tablas" id="divnoticias">
 				<h1>
 					Listado de Noticias <a class="insertar"
@@ -206,7 +215,7 @@
 				</table>
 				>
 			</div>
-
+									<!-- DIV PARADAS -->
 			<div class="tablas" id="divparadas">
 				<h1>
 					Listado de Paradas <a class="insertar"
@@ -246,7 +255,8 @@
 				</table>
 
 			</div>
-
+									<!-- DIV PRUEBAS CULTURALES -->
+									
 			<div class="tablas" id="divpruebasculturales">
 				<h1>
 					Listado de Pruebas Culturales <a class="insertar"
@@ -280,7 +290,8 @@
 				</table>
 
 			</div>
-
+									<!-- DIV PRUEBAS DEPORTIVAS -->
+									
 			<div class="tablas" id="divpruebasdeportivas">
 				<h1>
 					Listado de Pruebas Deportivas <a class="insertar"
@@ -320,6 +331,8 @@
 
 			</div>
 
+									<!-- DIV PREMIOS -->
+
 			<div class="tablas" id="divpremios">
 				<h1>
 					Listado de Premios <a class="insertar"
@@ -357,6 +370,8 @@
 				</table>
 
 			</div>
+
+									<!-- DIV  MULTIMEDIAS -->
 
 			<div class="tablas" id="divmultimedias">
 				<h1>
@@ -399,6 +414,8 @@
 
 			</div>
 
+									<!-- DIV COMENTARIOS -->
+
 			<div class="tablas" id="divcomentarios">
 				<h1>
 					Listado de Comentarios <a class="insertar"
@@ -429,6 +446,8 @@
 				</table>
 
 			</div>
+
+									<!-- DIV VOTOS -->
 
 			<div class="tablas" id="divvotos">
 				<h1>
