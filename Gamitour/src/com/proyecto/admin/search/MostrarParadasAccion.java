@@ -18,7 +18,7 @@ public class MostrarParadasAccion extends Accion {
 		request.getSession().setAttribute("listaParadas", sp.buscarParadasPorIt(id));
 		request.setAttribute("nombreItinerario", si.buscarPorClave(Integer.parseInt(id)).getNombre());
 		
-		return "Procesos/MostrarParadas.jsp";
+		return "Procesos/MostrarDetalle/MostrarParadas.jsp";
 	}
 
 }

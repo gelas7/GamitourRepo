@@ -19,7 +19,7 @@ public class MostrarMultimediasAccion extends Accion {
 
 		request.setAttribute("nombrePruebaDeportiva", spd.buscarPorClave(Integer.parseInt(id)).getNombre());
 
-		return "Procesos/MostrarMultimedias.jsp";
+		return "Procesos/MostrarDetalle/MostrarMultimedias.jsp";
 	}
 
 }
