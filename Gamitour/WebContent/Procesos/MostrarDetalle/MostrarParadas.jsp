@@ -15,13 +15,8 @@
 </head>
 
 <body>
-	<div id="logo">
-		<h1>
-			<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
-		</h1>
-	</div>
 
-	<div id="menu">
+	<div class="menu">
 		<ul>
 			<li><a href="MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="MostrarAdmin.do?div=clientes">Clientes</a></li>
@@ -38,8 +33,15 @@
 	</div>
 	<hr />
 
-	<div id="page">
-		<div id="contenedor">
+	<div class="page">
+
+		<div class="logo">
+			<h1>
+				<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
+			</h1>
+		</div>
+		
+		<div class="contenedor">
 
 			<h1>Listado de Paradas en ${nombreItinerario}</h1>
 			<table>

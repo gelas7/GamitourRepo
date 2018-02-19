@@ -30,11 +30,6 @@ h2 {
 	font-size: 28px;
 }
 
-#modificar {
-	margin: 0 auto;
-	font-size: 18px;
-}
-
 h3 {
 	margin: 0 auto;
 	font-size: 12px;
@@ -48,7 +43,11 @@ p, ul, ol {
 }
 
 ul, ol {
-	margin-left: 3em;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #f1f1f1;
 }
 
 a {
@@ -119,86 +118,71 @@ table a:hover {
 	color: white;
 }
 
-#logo {
+.logo {
 	width: 870px;
 	height: 135px;
 	margin: 0 auto;
 }
 
-#logo h1 {
+.logo h1 {
 	margin: 0;
 	float: left;
 	padding-top: 75px;
 }
 
-#logo a {
+.logo a {
 	text-decoration: none;
 	color: rgb(63, 62, 62);
 }
 
-#menu {
-	width: 100%;
-	height: 62px;
-	margin: 0 auto;
-	background: rgb(63, 62, 62);
-	border-radius: 29px;
+ul {
+    list-style-type: none;
+    padding-top: 50px;
+    width: 10%;
+    background-color: #f1f1f1;
+    position: fixed;
+    overflow: auto;
 }
 
-#menu ul {
-	margin: 0;
-	padding: 21px 0 0 30px;
-	list-style: none;
-	line-height: normal;
+li {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding:0 5px 0 5px;
+    text-align:center;
 }
 
-#menu li {
-	float: left;
-	padding: 0 20px 0 22px;
+li a.active {
+    background-color: #4CAF50;
+    color: black;
 }
 
-#menu li.first {
-	background: none;
-}
-
-#menu li a {
-	text-decoration: none;
-	font-weigth: 200;
-	font-family: Optima, sans-serif;
-	border: none;
-	color: white;
-	font-size: 16px;
-	outline: none;
-}
-
-#menu li a:hover {
-	transition: 0.5s;
-	font-size: 17px;
-	cursor: pointer;
-	outline: none;
+li a:hover:not(.active) {
+    background-color: #555;
+    color: black;
 }
 
 button {
 	border: none;
 	background-color: transparent;
-	color: white;
-	font-size: 15px;
+	color: black;
+	font-size: 20px;
 	outline: none;
 }
 
 button:hover {
 	transition: 0.5s;
-	font-size: 16px;
+	font-size: 21px;
 	cursor: pointer;
 	outline: none;
 }
 
-#page {
-	width: 1100px;
-	margin: 0 auto;
-	padding: 45px 35px 45px 25px;
+.page {
+	width: 700px;
+	margin-left:10%;
 }
 
-#contenedor {
+.contenedor {
 	float: left;
 	width: 600px;
 }
@@ -245,5 +229,4 @@ input[type=submit] {
 	#divparadas, #divroles, #divcomentarios, #divvotos, #divmultimedias,
 	#divpruebasculturales, #divpruebasdeportivas, #divpremios {
 	display: none;
-	width: 100%;
 }

@@ -14,13 +14,7 @@
 </head>
 
 <body>
-	<div id="logo">
-		<h1>
-			<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-		</h1>
-
-	</div>
-	<div id="menu">
+	<div class="menu">
 		<ul>
 			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
 			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
@@ -35,9 +29,13 @@
 			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
 		</ul>
 	</div>
-	<hr />
 
-	<div id="page">
+	<div class="page">
+		<div class="logo">
+			<h1>
+				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
+			</h1>
+		</div>
 
 		<form action="../../ModificarPruebasCulturales.do" method="get">
 

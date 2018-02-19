@@ -15,13 +15,7 @@
 </head>
 
 <body>
-	<div id="logo">
-		<h1>
-			<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
-		</h1>
-	</div>
-
-	<div id="menu">
+	<div class="menu">
 		<ul>
 			<li><button class="botonMenu" id="actividades">Actividades</button></li>
 			<li><button class="botonMenu" id="clientes">Clientes</button></li>
@@ -37,10 +31,15 @@
 		</ul>
 		<button id="divActual" value="${divActual}" hidden></button>
 	</div>
-	<hr />
 
-	<div id="page">
-		<div id="contenedor">
+	<div class="page">
+		<div class="logo">
+			<h1>
+				<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
+			</h1>
+		</div>
+		
+		<div class="contenedor">
 			<div class="tablas" id="divBienvenida">
 				<h1>Bienvenido. Seleccione una opción del menu superior.</h1>
 			</div>
