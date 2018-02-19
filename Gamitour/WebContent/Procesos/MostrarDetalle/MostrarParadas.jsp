@@ -10,6 +10,8 @@
 <title>Panel de Administración</title>
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="script.js"></script>
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>

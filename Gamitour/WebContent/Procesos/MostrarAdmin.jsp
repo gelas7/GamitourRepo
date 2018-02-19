@@ -58,7 +58,7 @@
 						<th>Direccion</th>
 						<th>Código Postal</th>
 						<th>Puntos</th>
-						<th>Fecha de Registro</th>
+						<th>Fecha Registro</th>
 						<th>Rol</th>
 						<th>Avatar</th>
 					</tr>

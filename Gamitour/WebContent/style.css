@@ -39,8 +39,7 @@ h3 {
 	margin: 0 auto;
 	font-size: 12px;
 	font-family: Arial, Helvetica, sans-serif;
-	color:  #909497;
-
+	color: #909497;
 }
 
 p, ul, ol {
@@ -80,23 +79,28 @@ hr {
 
 table {
 	color: #333;
-	width: 1100px;
+	width: 1000px;
 	border-collapse: collapse;
 }
 
 td, th {
-	border: 1px solid transparent;
+	border: 1px solid black;
 	height: 30px;
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
 th {
 	background: #D3D3D3;
 	font-weight: bold;
+	font-size: 17px;
 }
 
 td {
 	background: #FAFAFA;
 	text-align: center;
+	min-width: 30px;
+	font-size: 14px;
 }
 
 tr td:hover {
@@ -241,5 +245,5 @@ input[type=submit] {
 	#divparadas, #divroles, #divcomentarios, #divvotos, #divmultimedias,
 	#divpruebasculturales, #divpruebasdeportivas, #divpremios {
 	display: none;
+	width: 100%;
 }
-
