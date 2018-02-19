@@ -25,6 +25,7 @@
 			<li><a href="MostrarAdmin.do?div=noticias">Noticias</a></li>
 			<li><a href="MostrarAdmin.do?div=paradas">Paradas</a></li>
 			<li><a href="MostrarAdmin.do?div=premios">Premios</a></li>
+			<li><a href="MostrarAdmin.do?div=roles">Roles</a></li>
 			<li><a href="MostrarAdmin.do?div=votos">Votos</a></li>
 			<li><a href="MostrarAdmin.do?div=multimedias">Multimedia</a></li>
 			<li><a href="MostrarAdmin.do?div=pruebasculturales">PC</a></li>
@@ -32,9 +33,9 @@
 			<li><a href="MostrarAdmin.do?div=comentarios">Comentarios</a></li>
 		</ul>
 	</div>
-	<hr />
 
 	<div class="page">
+	
 		<div class="logo">
 			<h1>
 				<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
@@ -42,45 +43,32 @@
 		</div>
 		<div class="contenedor">
 
-			<h1>
-				Listado de Multimedias en ${nombrePruebaDeportiva} <a
-					class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp"><i
-					class="fas fa-plus"></i></a>
+			<h1>Listado de Votos en el multimedia
+			<a class="insertar"
+						href="Procesos/Insertar/InsertarVotos.jsp"><i
+						class="fas fa-plus"></i></a>
 			</h1>
 			<table>
-				<tr>
-					<th>Cliente</th>
-					<th>Fecha</th>
-					<th>Comentario</th>
-					<th>Imagen</th>
-					<th>Video</th>
-					<th>Puntos</th>
-					<th>ID Prueba Deportiva</th>
-				</tr>
-				<c:forEach items="${listaMultimedias}" var="m">
 					<tr>
-						<td>${m.cliente.getNombre()}</td>
-						<td>${m.fecha}</td>
-						<td>${m.comentario}</td>
-						<td>${m.imagen}</td>
-						<td>${m.video}</td>
-						<td>${m.puntosacumulados}</td>
-						<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
-
-						<td><a class="eliminar"
-							onclick="return confirm('¿Está seguro de que quiere continuar?')"
-							href="EliminarMultimedias.do?id=${m.idmultimedia}"><i
-								class="fas fa-trash-alt"></i></a></td>
-						<td><a class="actualizar"
-							href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}"><i
-								class="fas fa-edit"></i> </a></td>
-						<td><a class="mostrar"
-							href="MostrarComentarios.do?id=${m.idmultimedia}">Comentarios</a></td>
-						<td><a class="mostrar"
-							href="MostrarVotos.do?id=${m.idmultimedia}">Votos</a></td>
+						<th>Cliente</th>
+						<th>Multimedia</th>
+						<th>Puntos</th>
 					</tr>
-				</c:forEach>
-			</table>
+					<c:forEach items="${listaVotos}" var="v">
+						<tr>
+							<td>${v.cliente.getNombre()}</td>
+							<td>${v.multimedia.getIdmultimedia()}</td>
+							<td>${v.puntos}</td>
+							<td><a class="eliminar"
+								href="EliminarVotos.do?id=${v.idvoto}"
+								onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
+									class="fas fa-trash-alt"></i></a></td>
+							<td><a class="actualizar"
+								href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
+									class="fas fa-edit"></i> </a></td>
+						</tr>
+					</c:forEach>
+				</table>
 		</div>
 	</div>
 

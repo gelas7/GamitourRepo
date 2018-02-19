@@ -12,7 +12,6 @@ public class ServiceVotosImp implements ServiceVotos {
 	MySQLDAOFactory f;
 	
 	public ServiceVotosImp() {
-
 		f = new MySQLDAOFactory();
 		vd = f.getVotosDAO();
 	}
@@ -41,5 +40,11 @@ public class ServiceVotosImp implements ServiceVotos {
 	@Override
 	public List<Voto> buscarTodos() {
 		return vd.buscarTodos();
+	}
+
+
+	@Override
+	public List<Voto> buscarVotosPorMultimedia(String idmultimedia) {
+		return vd.buscarVotosPorMultimedia(idmultimedia);
 	}
 }

@@ -39,16 +39,16 @@
 			</h1>
 		</div>
 		<div class="contenedor">
-		
-						<!-- DIV BIENVENIDA -->
-						
+
+			<!-- DIV BIENVENIDA -->
+
 			<div class="tablas" id="divBienvenida">
 				<hr></hr>
 				<h2>Bienvenido. Seleccione una opción del menu lateral.</h2>
 			</div>
-						
-						<!-- DIV CLIENTES -->
-						
+
+			<!-- DIV CLIENTES -->
+
 			<div class="tablas" id="divclientes">
 				<h1>
 					Listado de Clientes <a class="insertar"
@@ -98,10 +98,8 @@
 						</tr>
 					</c:forEach>
 				</table>
-
-
 			</div>
-							<!-- DIV ACTIVIDADES -->
+			<!-- DIV ACTIVIDADES -->
 
 			<div class="tablas" id="divactividades">
 				<h1>
@@ -141,10 +139,9 @@
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
-								<!-- DIV ITINERARIOS -->
-								
+			<!-- DIV ITINERARIOS -->
+
 			<div class="tablas" id="divitinerarios">
 				<h1>
 					Listado de Itinerarios <a class="insertar"
@@ -172,16 +169,14 @@
 								href="Procesos/Modificar/ModificarItinerarios.jsp?id=${itinerario.iditinerario}"><i
 									class="fas fa-edit"></i> </a></td>
 							<td><a class="mostrar"
-								href="MostrarParadas.do?id=${itinerario.iditinerario}">Mostrar
-									paradas</a></td>
+								href="MostrarParadas.do?id=${itinerario.iditinerario}">Paradas</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
-								
-								<!-- DIV NOTICIAS -->
-								
+
+			<!-- DIV NOTICIAS -->
+
 			<div class="tablas" id="divnoticias">
 				<h1>
 					Listado de Noticias <a class="insertar"
@@ -213,9 +208,8 @@
 						</tr>
 					</c:forEach>
 				</table>
-				>
 			</div>
-									<!-- DIV PARADAS -->
+			<!-- DIV PARADAS -->
 			<div class="tablas" id="divparadas">
 				<h1>
 					Listado de Paradas <a class="insertar"
@@ -253,10 +247,9 @@
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
-									<!-- DIV PRUEBAS CULTURALES -->
-									
+			<!-- DIV PRUEBAS CULTURALES -->
+
 			<div class="tablas" id="divpruebasculturales">
 				<h1>
 					Listado de Pruebas Culturales <a class="insertar"
@@ -288,10 +281,9 @@
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
-									<!-- DIV PRUEBAS DEPORTIVAS -->
-									
+			<!-- DIV PRUEBAS DEPORTIVAS -->
+
 			<div class="tablas" id="divpruebasdeportivas">
 				<h1>
 					Listado de Pruebas Deportivas <a class="insertar"
@@ -323,15 +315,13 @@
 								href="Procesos/Modificar/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}"><i
 									class="fas fa-edit"></i> </a></td>
 							<td><a class="mostrar"
-								href="MostrarMultimedias.do?id=${pD.idpruebadeportiva}">
-									Mostrar multimedia</a></td>
+								href="MostrarMultimedias.do?id=${pD.idpruebadeportiva}">Multimedia</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
 
-									<!-- DIV PREMIOS -->
+			<!-- DIV PREMIOS -->
 
 			<div class="tablas" id="divpremios">
 				<h1>
@@ -368,10 +358,9 @@
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
 
-									<!-- DIV  MULTIMEDIAS -->
+			<!-- DIV  MULTIMEDIAS -->
 
 			<div class="tablas" id="divmultimedias">
 				<h1>
@@ -406,15 +395,15 @@
 								href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}"><i
 									class="fas fa-edit"></i> </a></td>
 							<td><a class="mostrar"
-								href="MostrarComentarios.do?id=${m.idmultimedia}"> Mostrar
-									comentarios</a></td>
+								href="MostrarComentarios.do?id=${m.idmultimedia}">Comentarios</a></td>
+							<td><a class="mostrar"
+								href="MostrarVotos.do?id=${m.idmultimedia}">Votos</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
 
-									<!-- DIV COMENTARIOS -->
+			<!-- DIV COMENTARIOS -->
 
 			<div class="tablas" id="divcomentarios">
 				<h1>
@@ -440,14 +429,12 @@
 							<td><a class="actualizar"
 								href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}"><i
 									class="fas fa-edit"></i> </a></td>
-
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
 
-									<!-- DIV VOTOS -->
+			<!-- DIV VOTOS -->
 
 			<div class="tablas" id="divvotos">
 				<h1>
@@ -460,7 +447,6 @@
 						<th>Cliente</th>
 						<th>Multimedia</th>
 						<th>Puntos</th>
-
 					</tr>
 					<c:forEach items="${listaVotos}" var="v">
 						<tr>
@@ -477,18 +463,11 @@
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
-
 		</div>
 	</div>
 
 	<div id="footer"></div>
+
 </body>
 </html>
-
-
-
-
-
-

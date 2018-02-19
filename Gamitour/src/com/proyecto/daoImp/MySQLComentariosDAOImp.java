@@ -29,8 +29,6 @@ public class MySQLComentariosDAOImp extends GenericDAOImp<Comentario, Integer> i
 			sf.getCurrentSession().getTransaction().rollback();
 		}
 		
-		System.out.println(lista.toString());
 		return lista;
-		
 	}
 }

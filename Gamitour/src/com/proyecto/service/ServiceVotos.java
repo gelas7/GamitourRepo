@@ -15,4 +15,7 @@ public interface ServiceVotos {
 	public Voto buscarPorClave(Integer id);
 	
 	public List<Voto> buscarTodos();
+	
+	public List<Voto> buscarVotosPorMultimedia(String idmultimedia);
+
 }

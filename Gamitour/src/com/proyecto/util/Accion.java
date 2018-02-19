@@ -32,6 +32,7 @@ import com.proyecto.admin.search.MostrarComentariosAccion;
 import com.proyecto.admin.search.MostrarMultimediasAccion;
 
 import com.proyecto.admin.search.MostrarParadasAccion;
+import com.proyecto.admin.search.MostrarVotosAccion;
 import com.proyecto.admin.update.ModificarActividadesAccion;
 import com.proyecto.admin.update.ModificarClientesAccion;
 import com.proyecto.admin.update.ModificarComentariosAccion;
@@ -62,6 +63,12 @@ public abstract class Accion {
 			break;
 		case "MostrarMultimedias":
 			accion = new MostrarMultimediasAccion();
+			break;
+		case "MostrarVotos":
+			accion = new MostrarVotosAccion();
+			break;
+		case "MostrarComentarios":
+			accion = new MostrarComentariosAccion();
 			break;
 		case "InsertarNoticias":
 			accion = new InsertarNoticiasAccion();
@@ -158,10 +165,6 @@ public abstract class Accion {
 			break;
 		case "ModificarComentarios":
 			accion = new ModificarComentariosAccion();
-			break;
-
-		case "MostrarComentarios":
-			accion = new MostrarComentariosAccion();
 			break;
 		case "EliminarComentarios":
 			accion = new EliminarComentariosAccion();
