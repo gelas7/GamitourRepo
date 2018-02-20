@@ -44,7 +44,7 @@
 
 			<h1>Listado de Multimedias en ${nombrePruebaDeportiva}</h1>
 			<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp"><i
-				class="fas fa-plus"></i></a>
+				class="fas fa-plus-circle"></i> Añadir nuevo</a>
 			<table>
 				<tr>
 					<th>Cliente</th>

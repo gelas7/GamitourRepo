@@ -97,7 +97,7 @@ tr:nth-child(even) {
 }
 
 table {
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 table a {
@@ -178,6 +178,7 @@ form {
 .insertar {
 	display: inline;
 	text-decoration: none;
+	margin-top:10px;
 }
 
 #divclientes, #divitinerarios, #divactividades, #divnoticias,
