@@ -61,24 +61,25 @@ hr {
 table {
 	color: #333;
 	border-collapse: collapse;
+	border-radius: 1em;
+	overflow: hidden;
 }
 
 td, th {
-	border: 1px solid black;
 	height: 30px;
-	padding-left: 3px;
-	padding-right: 3px;
+	padding: 0.5em;
+	border-bottom: 2px solid white;
 }
 
 th {
-	background: #D3D3D3;
+	background-color: #346086;
+	color: white;
 	font-weight: bold;
 	font-size: 17px;
 }
 
 td {
 	text-align: center;
-	min-width: 30px;
 	font-size: 14px;
 }
 
@@ -88,7 +89,7 @@ tr td:hover {
 }
 
 tr:nth-child(odd) {
-	background-color: #f2f2f2;
+	background-color: #d0d0d0;
 }
 
 tr:nth-child(even) {

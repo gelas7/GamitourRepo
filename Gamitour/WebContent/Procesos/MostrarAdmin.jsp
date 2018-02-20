@@ -52,7 +52,7 @@
 			<div class="tablas" id="divclientes">
 				<h1>Listado de Clientes</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarClientes.jsp"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i> Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -60,7 +60,7 @@
 						<th>Fecha de Nacimiento</th>
 						<th>Email</th>
 						<th>Password</th>
-						<th>Telefono</th>
+						<th>Teléfono</th>
 						<th>Direccion</th>
 						<th>Código Postal</th>
 						<th>Puntos</th>
