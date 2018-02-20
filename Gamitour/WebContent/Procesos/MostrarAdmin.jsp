@@ -94,6 +94,7 @@
 					</c:forEach>
 				</table>
 			</div>
+			
 			<!-- DIV ACTIVIDADES -->
 
 			<div class="tablas" id="divactividades">
@@ -134,6 +135,7 @@
 					</c:forEach>
 				</table>
 			</div>
+			
 			<!-- DIV ITINERARIOS -->
 
 			<div class="tablas" id="divitinerarios">
@@ -200,6 +202,7 @@
 					</c:forEach>
 				</table>
 			</div>
+			
 			<!-- DIV PARADAS -->
 			<div class="tablas" id="divparadas">
 				<h1>Listado de Paradas</h1>
@@ -237,6 +240,7 @@
 					</c:forEach>
 				</table>
 			</div>
+			
 			<!-- DIV PRUEBAS CULTURALES -->
 
 			<div class="tablas" id="divpruebasculturales">
@@ -270,6 +274,7 @@
 					</c:forEach>
 				</table>
 			</div>
+			
 			<!-- DIV PRUEBAS DEPORTIVAS -->
 
 			<div class="tablas" id="divpruebasdeportivas">
