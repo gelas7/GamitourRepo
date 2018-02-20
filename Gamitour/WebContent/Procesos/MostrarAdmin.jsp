@@ -107,7 +107,7 @@
 						<th>Fecha de Inicio</th>
 						<th>Fecha de Fin</th>
 						<th>Ubicación</th>
-						<th>Número de participantes</th>
+						<th>Nº de participantes</th>
 						<th>Precio</th>
 						<th>Imagen</th>
 						<th>Puntos</th>
