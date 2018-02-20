@@ -41,8 +41,8 @@ h1 {
 	margin-bottom: 1.2em;
 	font-family: Optima, sans-serif;
 	text-decoration: none;
-	text-align: right;
 	width: 100%;
+	display: inline;
 }
 
 h2 {
@@ -118,7 +118,16 @@ table a:hover {
 	color: white;
 }
 
+input[type=submit] {
+	font-size: 15px;
+	color: black;
+	border-radius: 15px;
+	padding: 5px;
+	border: 1px solid black;
+}
+
 p {
+	font-weight: bold;
 	margin-top: 15px;
 }
 
@@ -173,21 +182,13 @@ form {
 	text-align: left;
 }
 
-input[type=submit] {
-	font-size: 14px;
-	color: black;
-	border-radius: 15px;
-	padding: 5px;
-	border: 1px solid black;
-}
-
 .insertar {
 	display: block;
 	text-decoration: none;
 	color: #7fb3d5;
 	font-size: 37px;
-	text-align:center;
-	margin-left:350px;
+	text-align: center;
+	margin-left: 350px;
 }
 
 #divclientes, #divitinerarios, #divactividades, #divnoticias,
