@@ -14,47 +14,50 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
+	<div class="flex">
 
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
 
-		<form action="../../ModificarRoles.do" method="get">
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-			<h2 id="modificar">Modifique los campos que necesite</h2>
-			<h3>Los campos en blanco no sufrirán cambios</h3>
+			<form action="../../ModificarRoles.do" method="get">
 
-			<input type="hidden" value="<%=request.getParameter("id")%>"
-				name="id">
-			<p>
-				Nombre: <input type="text" name="nombreN"
-					placeholder="<%=sr.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-			</p>
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
+				<h2 id="modificar">Modifique los campos que necesite</h2>
+				<h3>Los campos en blanco no sufrirán cambios</h3>
 
-		</form>
+				<input type="hidden" value="<%=request.getParameter("id")%>"
+					name="id">
+				<p>
+					Nombre: <input type="text" name="nombreN"
+						placeholder="<%=sr.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+				</p>
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
 
+			</form>
+		</div>
 	</div>
-	
+
 </body>
 </html>

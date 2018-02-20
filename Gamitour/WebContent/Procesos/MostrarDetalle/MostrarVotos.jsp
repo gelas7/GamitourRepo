@@ -16,60 +16,61 @@
 </head>
 
 <body>
+	<div class="flex">
 
-	<div class="menu">
-		<ul>
-			<li><a href="MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="MostrarAdmin.do?div=roles">Roles</a></li>
-			<li><a href="MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
-
-	<div class="page">
-
-		<div class="logo">
-			<h1>
-				<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
-			</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="MostrarAdmin.do?div=roles">Roles</a></li>
+				<li><a href="MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
-		<div class="contenedor">
 
-			<h1>Listado de Votos en el multimedia</h1>
-			<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
-				class="fas fa-plus-circle"></i> Añadir nuevo</a>
-			<table>
-				<tr>
-					<th>Cliente</th>
-					<th>Multimedia</th>
-					<th>Puntos</th>
-				</tr>
-				<c:forEach items="${listaVotos}" var="v">
+		<div class="page">
+
+			<div class="logo">
+				<h1>
+					<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
+				</h1>
+			</div>
+			<div class="contenedor">
+
+				<h1>Listado de Votos en el multimedia</h1>
+				<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
+					class="fas fa-plus-circle"></i> Añadir nuevo</a>
+				<table>
 					<tr>
-						<td>${v.cliente.getNombre()}</td>
-						<td>${v.multimedia.getIdmultimedia()}</td>
-						<td>${v.puntos}</td>
-						<td><a class="eliminar"
-							href="EliminarVotos.do?id=${v.idvoto}"
-							onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
-								class="fas fa-trash-alt"></i></a></td>
-						<td><a class="actualizar"
-							href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
-								class="fas fa-edit"></i> </a></td>
+						<th>Cliente</th>
+						<th>Multimedia</th>
+						<th>Puntos</th>
 					</tr>
-				</c:forEach>
-			</table>
+					<c:forEach items="${listaVotos}" var="v">
+						<tr>
+							<td>${v.cliente.getNombre()}</td>
+							<td>${v.multimedia.getIdmultimedia()}</td>
+							<td>${v.puntos}</td>
+							<td><a class="eliminar"
+								href="EliminarVotos.do?id=${v.idvoto}"
+								onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
+									class="fas fa-trash-alt"></i></a></td>
+							<td><a class="actualizar"
+								href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
+									class="fas fa-edit"></i> </a></td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
 		</div>
 	</div>
-
 	<div id="footer"></div>
 </body>
 </html>

@@ -15,81 +15,83 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
+	<div class="flex">
 
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
 
-		<form action="../../ModificarParadas.do" method="get">
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-			<h2 id="modificar">Modifique los campos que necesite</h2>
-			<h3>Los campos en blanco no sufrirán cambios</h3>
+			<form action="../../ModificarParadas.do" method="get">
 
-			<input type="hidden" value="<%=request.getParameter("id")%>"
-				name="id">
+				<h2 id="modificar">Modifique los campos que necesite</h2>
+				<h3>Los campos en blanco no sufrirán cambios</h3>
 
-			<p>
-				Nombre: <input type="text" name="nombre"
-					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-			</p>
-			<p>
-				Numero de parada: <input type="number" name="numeroParada"
-					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
-			</p>
-			<p>
-				Ubicación: <input type="text" name="ubicacion"
-					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
-			</p>
-			<p>
-				Historia: <input type="text" name="historia"
-					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>">
-			</p>
-			<p>
-				Anecdotario: <input type="text" name="anecdotario"
-					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAnecdotario()%>">
-			</p>
-			<p>
-				Gastronomia: <input type="text" name="gastronomia"
-					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getGastronomia()%>">
-			</p>
-			<p>
-				Itinerario: <select name="itinerario">
-					<option value="">Seleccione un itinerario</option>
-					<c:forEach items="${listaItinerarios}" var="itinerario">
-						<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
-					</c:forEach>
-				</select>
-			</p>
-			<p>
-				Imagen: <input type="file" name="imagen"
-					onchange="handleFiles(this.files)">
-			</p>
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
+				<input type="hidden" value="<%=request.getParameter("id")%>"
+					name="id">
 
-		</form>
+				<p>
+					Nombre: <input type="text" name="nombre"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+				</p>
+				<p>
+					Numero de parada: <input type="number" name="numeroParada"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
+				</p>
+				<p>
+					Ubicación: <input type="text" name="ubicacion"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
+				</p>
+				<p>
+					Historia: <input type="text" name="historia"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>">
+				</p>
+				<p>
+					Anecdotario: <input type="text" name="anecdotario"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAnecdotario()%>">
+				</p>
+				<p>
+					Gastronomia: <input type="text" name="gastronomia"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getGastronomia()%>">
+				</p>
+				<p>
+					Itinerario: <select name="itinerario">
+						<option value="">Seleccione un itinerario</option>
+						<c:forEach items="${listaItinerarios}" var="itinerario">
+							<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
+						</c:forEach>
+					</select>
+				</p>
+				<p>
+					Imagen: <input type="file" name="imagen"
+						onchange="handleFiles(this.files)">
+				</p>
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
 
+			</form>
+		</div>
 	</div>
-
 	<div id="footer"></div>
 </body>
 </html>

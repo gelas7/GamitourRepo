@@ -14,73 +14,76 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
-
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+	<div class="flex">
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
-		
-		<form action="../../ModificarActividades.do" method="get">
 
-			<h2 id="modificar">Modifique los campos que necesite</h2>
-			<h3>Los campos en blanco no sufrirán cambios</h3>
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-			<input type="hidden" value="<%=request.getParameter("id")%>"
-				name="id">
-			<p>
-				Nombre: <input type="text" name="nombre"
-					placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-			</p>
-			<p>
-				Fecha de inicio: <input type="date" name="fechainicio"
-					placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechainicio()%>">
-			</p>
-			<p>
-				Fecha de fin: <input type="date" name="fechafin"
-					placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>">
-			</p>
-			<p>
-				Ubicacion: <input type="text" name="ubicacion"
-					placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
-			</p>
-			<p>
-				Número de participantes: <input type="text" name="participantes"
-					placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumparticipantes()%>">
-			</p>
-			<p>
-				Precio: <input type="text" name="precio"
-					placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPrecio()%>">
-			</p>
-			<p>
-				Imagen: <input type="file" name="imagen"
-					onchange="handleFiles(this.files)">
-			</p>
-			<p>
-				Puntos: <input type="text" name="puntos"
-					placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
-			</p>
+			<form action="../../ModificarActividades.do" method="get">
 
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
-		</form>
+				<h2 id="modificar">Modifique los campos que necesite</h2>
+				<h3>Los campos en blanco no sufrirán cambios</h3>
+
+				<input type="hidden" value="<%=request.getParameter("id")%>"
+					name="id">
+				<p>
+					Nombre: <input type="text" name="nombre"
+						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+				</p>
+				<p>
+					Fecha de inicio: <input type="date" name="fechainicio"
+						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechainicio()%>">
+				</p>
+				<p>
+					Fecha de fin: <input type="date" name="fechafin"
+						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>">
+				</p>
+				<p>
+					Ubicacion: <input type="text" name="ubicacion"
+						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
+				</p>
+				<p>
+					Número de participantes: <input type="text" name="participantes"
+						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumparticipantes()%>">
+				</p>
+				<p>
+					Precio: <input type="text" name="precio"
+						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPrecio()%>">
+				</p>
+				<p>
+					Imagen: <input type="file" name="imagen"
+						onchange="handleFiles(this.files)">
+				</p>
+				<p>
+					Puntos: <input type="text" name="puntos"
+						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
+				</p>
+
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
+			</form>
+		</div>
 	</div>
 	<div id="footer"></div>
 </body>

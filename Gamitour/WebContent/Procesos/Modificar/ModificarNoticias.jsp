@@ -14,60 +14,65 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
+	<div class="flex">
 
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
 
-		<form action="../../ModificarNoticias.do" method="get">
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-			<h2 id="modificar">Modifique los campos que considere oportunos</h2>
-			<h3>Los campos en blanco no sufriran cambios</h3>
+			<form action="../../ModificarNoticias.do" method="get">
 
-			<input type="hidden" value="<%=request.getParameter("id")%>"
-				name="id">
-			<p>
-				Nombre: <input type="text" name="nombreN"
-					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-			</p>
-			<p>
-				Texto: <input type="text" name="texto"
-					placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
-			</p>
-			<p>
-				Fecha de Alta: <input type="date" name="fechaalta"  placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechaalta()%>">
-			</p>
-			<p>
-				Fecha de Caducidad: <input type="date" name="fechacaducidad" placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechacaducidad()%>">
-			</p>
-			<p>
-				Imagen: <input type="file" name="imagen"
-					onchange="handleFiles(this.files)">
-			</p>
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
+				<h2 id="modificar">Modifique los campos que considere oportunos</h2>
+				<h3>Los campos en blanco no sufriran cambios</h3>
 
-		</form>
+				<input type="hidden" value="<%=request.getParameter("id")%>"
+					name="id">
+				<p>
+					Nombre: <input type="text" name="nombreN"
+						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+				</p>
+				<p>
+					Texto: <input type="text" name="texto"
+						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
+				</p>
+				<p>
+					Fecha de Alta: <input type="date" name="fechaalta"
+						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechaalta()%>">
+				</p>
+				<p>
+					Fecha de Caducidad: <input type="date" name="fechacaducidad"
+						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechacaducidad()%>">
+				</p>
+				<p>
+					Imagen: <input type="file" name="imagen"
+						onchange="handleFiles(this.files)">
+				</p>
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
 
+			</form>
+		</div>
 	</div>
 	<div id="footer"></div>
 </body>

@@ -15,74 +15,77 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
+	<div class="flex">
 
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
-		
-		<form action="../../ModificarPremios.do" method="get">
 
-			<h2 id="modificar">Modifique los campos que necesite</h2>
-			<h3>Los campos en blanco no sufrirán cambios</h3>
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-			<input type="hidden" value="<%=request.getParameter("id")%>"
-				name="id">
+			<form action="../../ModificarPremios.do" method="get">
 
-			<p>
-				Nombre: <input type="text" name="nombre"
-					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-			</p>
-			<p>
-				Descripcion: <input type="number" name="descripcion"
-					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>">
-			</p>
-			<p>
-				Imagen: <input type="file" name="imagen"
-					onchange="handleFiles(this.files)">
-			</p>
-			<p>
-				Puntos: <input type="number" name="puntos"
-					placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
-			</p>
-			<p>
-				Fecha de activacion: <input type="date" name="fechaactivacion">
-			</p>
+				<h2 id="modificar">Modifique los campos que necesite</h2>
+				<h3>Los campos en blanco no sufrirán cambios</h3>
 
-			<p>
-				Fecha de consumo: <input type="date" name="fechaconsumo">
-			</p>
-			<p>
-				Cliente: <select name="cliente">
-					<option value="">Seleccione un cliente</option>
-					<c:forEach items="${listaClientes}" var="cliente">
-						<option value="${cliente.idcliente}">${cliente.nombre}</option>
-					</c:forEach>
-				</select>
-			</p>
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
-		</form>
+				<input type="hidden" value="<%=request.getParameter("id")%>"
+					name="id">
+
+				<p>
+					Nombre: <input type="text" name="nombre"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+				</p>
+				<p>
+					Descripcion: <input type="number" name="descripcion"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>">
+				</p>
+				<p>
+					Imagen: <input type="file" name="imagen"
+						onchange="handleFiles(this.files)">
+				</p>
+				<p>
+					Puntos: <input type="number" name="puntos"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
+				</p>
+				<p>
+					Fecha de activacion: <input type="date" name="fechaactivacion">
+				</p>
+
+				<p>
+					Fecha de consumo: <input type="date" name="fechaconsumo">
+				</p>
+				<p>
+					Cliente: <select name="cliente">
+						<option value="">Seleccione un cliente</option>
+						<c:forEach items="${listaClientes}" var="cliente">
+							<option value="${cliente.idcliente}">${cliente.nombre}</option>
+						</c:forEach>
+					</select>
+				</p>
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
+			</form>
+		</div>
 	</div>
-
 	<div id="footer"></div>
 </body>
 </html>

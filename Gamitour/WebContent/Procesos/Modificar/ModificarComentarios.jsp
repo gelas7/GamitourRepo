@@ -15,62 +15,66 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
+	<div class="flex">
 
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
 
-		<form action="../../ModificarComentarios.do" method="get">
-		
-			<h2 id="modificar">Modifique los campos que necesite</h2>
-			<h3>Los campos en blanco no sufrirán cambios</h3>
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-			<input type="hidden" value="<%=request.getParameter("id")%>"
-				name="id">
+			<form action="../../ModificarComentarios.do" method="get">
 
-			<p>
-				Cliente: <select name="cliente">
-					<c:forEach items="${listaClientes}" var="cliente">
-						<option value="${cliente.idcliente}">${cliente.nombre}</option>
-					</c:forEach>
-				</select>
-			</p>
+				<h2 id="modificar">Modifique los campos que necesite</h2>
+				<h3>Los campos en blanco no sufrirán cambios</h3>
 
-			<p>
-				ID Multimedia: <select name="multimedia">
-					<c:forEach items="${listaMultimedias}" var="multimedia">
-						<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
-					</c:forEach>
-				</select>
-			</p>
+				<input type="hidden" value="<%=request.getParameter("id")%>"
+					name="id">
 
-			<p>
-				Texto: <input type="text" name="texto" placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
-			</p>
+				<p>
+					Cliente: <select name="cliente">
+						<c:forEach items="${listaClientes}" var="cliente">
+							<option value="${cliente.idcliente}">${cliente.nombre}</option>
+						</c:forEach>
+					</select>
+				</p>
 
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
-		</form>
+				<p>
+					ID Multimedia: <select name="multimedia">
+						<c:forEach items="${listaMultimedias}" var="multimedia">
+							<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
+						</c:forEach>
+					</select>
+				</p>
 
+				<p>
+					Texto: <input type="text" name="texto"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
+				</p>
+
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
+			</form>
+		</div>
 	</div>
 	<div id="footer"></div>
 </body>
