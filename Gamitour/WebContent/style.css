@@ -27,9 +27,17 @@ input, textarea {
 	font-size: 36px;
 }
 
+.flex{
+	display:flex;
+	flex-direction:row;
+}
+
+.menu{
+	margin:80px 20px 0 10px;
+	width: 200px;
+}
 .page {
 	width: 800px;
-	margin-left: 160px;
 }
 
 .mostrar{
@@ -142,7 +150,6 @@ ul {
 	list-style-type: none;
 	padding-top: 10px;
 	background-color: #666666;
-	position: fixed;
 	overflow: auto;
 	border-radius: 20px;
 }
