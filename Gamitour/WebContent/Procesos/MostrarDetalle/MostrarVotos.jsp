@@ -9,8 +9,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Panel de Administración</title>
+
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="script.js"></script>
+<script src="jquery-3.3.1.js" type="text/javascript"></script>
+<script src="jquery.tablesorter.min.js" type="text/javascript"></script>
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
@@ -47,26 +50,30 @@
 				<h1>Listado de Votos en el multimedia</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
-				<table>
-					<tr>
-						<th>Cliente</th>
-						<th>Multimedia</th>
-						<th>Puntos</th>
-					</tr>
-					<c:forEach items="${listaVotos}" var="v">
+				<table id="tvotos" class="tablesorter">
+					<thead>
 						<tr>
-							<td>${v.cliente.getNombre()}</td>
-							<td>${v.multimedia.getIdmultimedia()}</td>
-							<td>${v.puntos}</td>
-							<td><a class="eliminar"
-								href="EliminarVotos.do?id=${v.idvoto}"
-								onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
-									class="fas fa-trash-alt"></i></a></td>
-							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
-									class="fas fa-edit"></i> </a></td>
+							<th>Cliente</th>
+							<th>Multimedia</th>
+							<th>Puntos</th>
 						</tr>
-					</c:forEach>
+					</thead>
+					<tbody>
+						<c:forEach items="${listaVotos}" var="v">
+							<tr>
+								<td>${v.cliente.getNombre()}</td>
+								<td>${v.multimedia.getIdmultimedia()}</td>
+								<td>${v.puntos}</td>
+								<td><a class="eliminar"
+									href="EliminarVotos.do?id=${v.idvoto}"
+									onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
+										class="fas fa-trash-alt"></i></a></td>
+								<td><a class="actualizar"
+									href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
+										class="fas fa-edit"></i> </a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
 				</table>
 			</div>
 		</div>

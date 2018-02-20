@@ -9,8 +9,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Panel de Administración</title>
+
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="script.js"></script>
+<script src="jquery-3.3.1.js" type="text/javascript"></script>
+<script src="jquery.tablesorter.min.js" type="text/javascript"></script>
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
@@ -46,27 +49,31 @@
 				<h1>Listado de Comentarios en el multimedia</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
-				<table>
-					<tr>
-						<th>Cliente</th>
-						<th>Comentario</th>
-						<th>Multimedia</th>
-					</tr>
-					<c:forEach items="${listaComentarios}" var="com">
+				<table id="tcomentarios" class="tablesorter">
+					<thead>
 						<tr>
-							<td>${com.cliente.getNombre()}</td>
-							<td>${com.texto}</td>
-							<td>${com.multimedia.getIdmultimedia()}</td>
-							<td><a class="eliminar"
-								onclick="return confirm('¿Está seguro de que quiere continuar?')"
-								href="EliminarComentarios.do?id=${com.idcomentario}"><i
-									class="fas fa-trash-alt"></i></a></td>
-							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}"><i
-									class="fas fa-edit"></i> </a></td>
-
+							<th>Cliente</th>
+							<th>Comentario</th>
+							<th>Multimedia</th>
 						</tr>
-					</c:forEach>
+					</thead>
+					<tbody>
+						<c:forEach items="${listaComentarios}" var="com">
+							<tr>
+								<td>${com.cliente.getNombre()}</td>
+								<td>${com.texto}</td>
+								<td>${com.multimedia.getIdmultimedia()}</td>
+								<td><a class="eliminar"
+									onclick="return confirm('¿Está seguro de que quiere continuar?')"
+									href="EliminarComentarios.do?id=${com.idcomentario}"><i
+										class="fas fa-trash-alt"></i></a></td>
+								<td><a class="actualizar"
+									href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}"><i
+										class="fas fa-edit"></i> </a></td>
+
+							</tr>
+						</c:forEach>
+					</tbody>
 				</table>
 			</div>
 		</div>

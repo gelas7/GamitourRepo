@@ -1,6 +1,5 @@
 package com.proyecto.admin.search;
 
-import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -66,22 +65,8 @@ public class MostrarAdminAccion extends Accion {
 		List<PruebaDeportiva> listaPruebasDeportivas = spd.buscarTodos();
 		List<Voto> listaVotos = sv.buscarTodos();
 		List<Multimedia> listaMultimedias = sm.buscarTodos();
-
 		
-		// Ordeno las listas
-		Collections.sort(listaParadas); 
-		Collections.sort(listaClientes);
-		Collections.sort(listaItinerarios);
-		Collections.sort(listaNoticias);
-		Collections.sort(listaActividades);
-		Collections.sort(listaComentarios);
-		Collections.sort(listaPremios);
-		Collections.sort(listaPruebasCulturales);
-		Collections.sort(listaPruebasDeportivas);
-		Collections.sort(listaVotos);
-		Collections.sort(listaMultimedias);
-
-
+		
 		// Guardo estos como atributos puesto que solo los necesito 
 		// en Mostrar y no en otras paginas
 		request.setAttribute("listaPremios", listaPremios);

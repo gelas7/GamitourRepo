@@ -1,17 +1,28 @@
 window.onload = function() {
+	 
 
-	var tablas = document.getElementsByClassName("tablas");//Cargo divs de tablas
-	var divActual = document.getElementById("divActual");//Almaceno div que se está mostrando
-	var botonesMenu = document.getElementsByClassName("botonMenu"); //Todos los botones del menu
+	var tablas = document.getElementsByClassName("tablas");// Cargo divs de
+															// tablas
+	var divActual = document.getElementById("divActual");// Almaceno div que
+															// se está mostrando
+	var botonesMenu = document.getElementsByClassName("botonMenu");
 
-	for (var i = 0; i < botonesMenu.length; i++) {//Event listeners botones de menu
+	for (var i = 0; i < botonesMenu.length; i++) {// Event listeners botones
+													// de menu
 		botonesMenu[i].addEventListener("click", mostrar, false);
 	}
+	
+	ordenar();
 
-	if (divActual.value != "") { //Si hay divActual lo muestro al recargar
+	if (divActual.value != "") { // Si hay divActual lo muestro al recargar
 		mostrarDivActual(divActual.value);
-	} else { //Si no lo hay muestro la bienvenida
+	} else { // Si no lo hay muestro la bienvenida
 		divBienvenida.style.display = "block";
+	}
+	
+	function ordenar()
+	{
+		$('.tablesorter').tablesorter(); 
 	}
 
 	function mostrarDivActual(div) { // Funcion mostrar con 1 parametro
@@ -27,7 +38,7 @@ window.onload = function() {
 		document.getElementById(concateno).style.display = "block";
 	}
 
-	function ocultarTodos() { //Oculto todos los divs de tablas
+	function ocultarTodos() { // Oculto todos los divs de tablas
 		for (var i = 0; i < tablas.length; i++) {
 			tablas[i].style.display = "none";
 		}

@@ -8,8 +8,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Panel de Administración</title>
+
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="script.js"></script>
+<script src="jquery-3.3.1.js" type="text/javascript"></script>
+<script src="jquery.tablesorter.min.js" type="text/javascript"></script>
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
@@ -47,36 +50,40 @@
 				<h1>Listado de Paradas en ${nombreItinerario}</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
-				<table>
-					<tr>
-						<th>Nombre</th>
-						<th>Número</th>
-						<th>Ubicación</th>
-						<th>Historia</th>
-						<th>Anecdotario</th>
-						<th>Gastronomia</th>
-						<th>Imagen</th>
-						<th>Itinerario</th>
-					</tr>
-					<c:forEach items="${listaParadas}" var="parada">
+				<table id="tparadas" class="tablesorter">
+					<thead>
 						<tr>
-							<td>${parada.nombre}</td>
-							<td>${parada.numeroParada}</td>
-							<td>${parada.ubicacion}</td>
-							<td>${parada.historia}</td>
-							<td>${parada.anecdotario}</td>
-							<td>${parada.gastronomia}</td>
-							<td>${parada.imagen}</td>
-							<td>${parada.itinerario.getNombre()}</td>
-							<td><a class="eliminar"
-								onclick="return confirm('¿Está seguro de que quiere continuar?')"
-								href="EliminarParadas.do?id=${parada.idparada}"><i
-									class="fas fa-trash-alt"></i></a></td>
-							<td><a class="actualizar"
-								href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
-									class="fas fa-edit"></i> </a></td>
+							<th>Nombre</th>
+							<th>Número</th>
+							<th>Ubicación</th>
+							<th>Historia</th>
+							<th>Anecdotario</th>
+							<th>Gastronomia</th>
+							<th>Imagen</th>
+							<th>Itinerario</th>
 						</tr>
-					</c:forEach>
+					</thead>
+					<tbody>
+						<c:forEach items="${listaParadas}" var="parada">
+							<tr>
+								<td>${parada.nombre}</td>
+								<td>${parada.numeroParada}</td>
+								<td>${parada.ubicacion}</td>
+								<td>${parada.historia}</td>
+								<td>${parada.anecdotario}</td>
+								<td>${parada.gastronomia}</td>
+								<td>${parada.imagen}</td>
+								<td>${parada.itinerario.getNombre()}</td>
+								<td><a class="eliminar"
+									onclick="return confirm('¿Está seguro de que quiere continuar?')"
+									href="EliminarParadas.do?id=${parada.idparada}"><i
+										class="fas fa-trash-alt"></i></a></td>
+								<td><a class="actualizar"
+									href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
+										class="fas fa-edit"></i> </a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
 				</table>
 			</div>
 		</div>
