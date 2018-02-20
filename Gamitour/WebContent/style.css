@@ -19,16 +19,30 @@ input, textarea {
 }
 
 .logo {
-	margin: 50px 0 0 10px;
+	margin: 70px 0 30px 10px;
 }
 
 .logo a {
 	text-decoration: none;
+	font-size: 36px;
 }
 
 .page {
-	width: 700px;
+	width: 800px;
 	margin-left: 160px;
+}
+
+.tablas {
+	margin-left: 50px;
+}
+
+.tablas h1 {
+	margin-left: 60px;
+}
+
+#divBienvenida {
+	margin-left: 120px;
+	width: 100%;
 }
 
 .contenedor {
@@ -186,8 +200,8 @@ input[type=submit] {
 	text-decoration: none;
 	color: #7fb3d5;
 	font-size: 37px;
-	text-align:center;
-	margin-left:350px;
+	text-align: center;
+	margin-left: 350px;
 }
 
 #divclientes, #divitinerarios, #divactividades, #divnoticias,
