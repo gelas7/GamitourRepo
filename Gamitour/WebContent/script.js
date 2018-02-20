@@ -23,12 +23,16 @@ window.onload = function() {
 	function mostrar() {
 		ocultarTodos();
 		var concateno = "div" + this.id;
+		this.style.color = "#a1c3ff";
 		document.getElementById(concateno).style.display = "block";
 	}
 
 	function ocultarTodos() { //Oculto todos los divs de tablas
 		for (var i = 0; i < tablas.length; i++) {
 			tablas[i].style.display = "none";
+		}
+		for (var i = 0; i < botonesMenu.length; i++) {
+			botonesMenu[i].style.color = "white";
 		}
 	}
 }

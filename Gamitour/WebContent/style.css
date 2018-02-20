@@ -36,6 +36,10 @@ input, textarea {
 	width: 100%;
 }
 
+.mostrar{
+	text-decoration:none;
+}
+
 h1 {
 	font-size: 29px;
 	font-family: Optima, sans-serif;
@@ -56,13 +60,6 @@ a:hover {
 
 hr {
 	display: none;
-}
-
-table {
-	color: #333;
-	border-collapse: collapse;
-	border-radius: 1em;
-	overflow: hidden;
 }
 
 td, th {
@@ -96,10 +93,23 @@ tr:nth-child(even) {
 	background-color: #fbfbfb;
 }
 
-table {
-	margin-top: 30px;
+.insertar {
+	text-decoration: none;
 }
 
+.tablas h1{
+	padding-bottom:20px;
+}
+
+table {
+	margin-top: 10px;
+	color: #333;
+	border-collapse: collapse;
+	border-radius: 1em;
+	overflow: hidden;
+}
+
+}
 table a {
 	text-decoration: none;
 	color: black;
@@ -173,12 +183,6 @@ form {
 	width: 290px;
 	margin: 0 auto;
 	text-align: left;
-}
-
-.insertar {
-	display: inline;
-	text-decoration: none;
-	margin-top:10px;
 }
 
 #divclientes, #divitinerarios, #divactividades, #divnoticias,
