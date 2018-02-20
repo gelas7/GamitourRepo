@@ -57,14 +57,14 @@
 					<tr>
 						<th>Nombre</th>
 						<th>Apellidos</th>
-						<th>Fecha de Nacimiento</th>
-						<th>Email</th>
+						<th>Nacimiento</th>
+						<th>Mail</th>
 						<th>Password</th>
 						<th>Teléfono</th>
 						<th>Direccion</th>
-						<th>Código Postal</th>
+						<th>CP</th>
 						<th>Puntos</th>
-						<th>Fecha Registro</th>
+						<th>Registro</th>
 						<th>Rol</th>
 						<th>Avatar</th>
 					</tr>
@@ -104,10 +104,10 @@
 				<table>
 					<tr>
 						<th>Nombre</th>
-						<th>Fecha de Inicio</th>
-						<th>Fecha de Fin</th>
+						<th>Inicio</th>
+						<th>Fin</th>
 						<th>Ubicación</th>
-						<th>Nº de participantes</th>
+						<th>Participantes</th>
 						<th>Precio</th>
 						<th>Imagen</th>
 						<th>Puntos</th>
@@ -178,8 +178,8 @@
 					<tr>
 						<th>Nombre</th>
 						<th>Texto</th>
-						<th>Fecha de Alta</th>
-						<th>Fecha de Caducidad</th>
+						<th>Alta</th>
+						<th>Caducidad</th>
 						<th>Imagen</th>
 					</tr>
 					<c:forEach items="${listaNoticias}" var="noticia">
@@ -280,8 +280,8 @@
 				<table>
 					<tr>
 						<th>Nombre</th>
-						<th>Fecha de inicio</th>
-						<th>Fecha de fin</th>
+						<th>Inicio</th>
+						<th>Fin</th>
 						<th>Explicación</th>
 						<th>Puntos</th>
 						<th>Parada</th>
@@ -320,8 +320,8 @@
 						<th>Nombre</th>
 						<th>Descripcion</th>
 						<th>Imagen</th>
-						<th>Fecha Activacion</th>
-						<th>Fecha Consumo</th>
+						<th>Activacion</th>
+						<th>Consumo</th>
 						<th>Puntos</th>
 					</tr>
 					<c:forEach items="${listaPremios}" var="premio">
@@ -359,7 +359,7 @@
 						<th>Imagen</th>
 						<th>Video</th>
 						<th>Puntos</th>
-						<th>ID Prueba Deportiva</th>
+						<th>ID P.Deportiva</th>
 					</tr>
 					<c:forEach items="${listaMultimedias}" var="m">
 						<tr>
