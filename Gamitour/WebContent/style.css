@@ -110,6 +110,7 @@ th {
 }
 
 td {
+	background: #FAFAFA;
 	text-align: center;
 	min-width: 30px;
 	font-size: 14px;
@@ -118,14 +119,6 @@ td {
 tr td:hover {
 	background: #666;
 	color: #FFF;
-}
-
-tr:nth-child(odd) {
-	background-color: #f2f2f2;
-}
-
-tr:nth-child(even) {
-	background-color: #fbfbfb;
 }
 
 table a {
