@@ -8,52 +8,56 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
+	<div class="flex">
 
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
 
-		<form action="../../InsertarItinerarios.do" method="get">
-			<h2>Insertar Itinerario</h2>
-			<p>
-				<label>Nombre: <input type="text" name="nombre"
-					required="required"></label>
-			</p>
-			<p>
-				<label>Categoria: <input type="text" name="categoria"
-					required="required"></label>
-			</p>
-			<p>
-				<label>Duracion: <input type="text" name="duracion"
-					required="required"></label>
-			</p>
-			<p>
-				<label>Ubicacion: <input type="text" name="ubicacion"
-					required="required"></label>
-			</p>
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-		</form>
+			<form action="../../InsertarItinerarios.do" method="get">
+				<h2>Insertar Itinerario</h2>
+				<p>
+					<label>Nombre: <input type="text" name="nombre"
+						required="required"></label>
+				</p>
+				<p>
+					<label>Categoria: <input type="text" name="categoria"
+						required="required"></label>
+				</p>
+				<p>
+					<label>Duracion: <input type="text" name="duracion"
+						required="required"></label>
+				</p>
+				<p>
+					<label>Ubicacion: <input type="text" name="ubicacion"
+						required="required"></label>
+				</p>
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
+
+			</form>
+		</div>
 	</div>
 </body>
 </html>

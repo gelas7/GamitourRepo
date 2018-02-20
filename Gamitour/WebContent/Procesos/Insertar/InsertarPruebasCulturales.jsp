@@ -16,58 +16,59 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
-
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+	<div class="flex">
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
 
-		<form action="../../InsertarPruebasCulturales.do" method="get">
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-			<h2>Insertar Prueba Cultural</h2>
-			<p>
-				Nombre: <input type="text" name="nombre" required="required">
-			</p>
-			<p>
-				Pregunta: <input type="text" name="pregunta" required="required">
-			</p>
-			<p>
-				Respuesta: <input type="text" name="respuesta" required="required">
-			</p>
-			<p>
-				Puntos: <input type="number" name="puntos" required="required">
-			</p>
-			<p>
-				Parada: <select name="parada">
-					<c:forEach items="${listaParadas}" var="parada">
-						<option value="${parada.idparada}">${parada.nombre}</option>
-					</c:forEach>
-				</select>
-			</p>
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
+			<form action="../../InsertarPruebasCulturales.do" method="get">
 
-		</form>
+				<h2>Insertar Prueba Cultural</h2>
+				<p>
+					Nombre: <input type="text" name="nombre" required="required">
+				</p>
+				<p>
+					Pregunta: <input type="text" name="pregunta" required="required">
+				</p>
+				<p>
+					Respuesta: <input type="text" name="respuesta" required="required">
+				</p>
+				<p>
+					Puntos: <input type="number" name="puntos" required="required">
+				</p>
+				<p>
+					Parada: <select name="parada">
+						<c:forEach items="${listaParadas}" var="parada">
+							<option value="${parada.idparada}">${parada.nombre}</option>
+						</c:forEach>
+					</select>
+				</p>
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
+
+			</form>
+		</div>
 	</div>
-
-
 </body>
 </html>

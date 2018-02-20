@@ -16,69 +16,72 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
+	<div class="flex">
 
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
 
-		<form action="../../InsertarParadas.do" method="get">
-			<h2>Insertar Parada</h2>
-			<p>
-				Nombre: <input type="text" name="nombre" required="required">
-			</p>
-			<p>
-				Numero de parada: <input type="number" name="numeroParada"
-					required="required">
-			</p>
-			<p>
-				Ubicación: <input type="text" name="ubicacion" required="required">
-			</p>
-			<p>
-				Historia: <input type="text" name="historia" required="required">
-			</p>
-			<p>
-				Anecdotario: <input type="text" name="anecdotario"
-					required="required">
-			</p>
-			<p>
-				Gastronomia: <input type="text" name="gastronomia"
-					required="required">
-			</p>
-			<p>
-				Itinerario: <select name="itinerario">
-					<c:forEach items="${listaItinerarios}" var="itinerario">
-						<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
-					</c:forEach>
-				</select>
-			</p>
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-			<p>
-				Imagen: <input type="file" name="imagen"
-					onchange="handleFiles(this.files)" required="required">
-			</p>
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
-		</form>
+			<form action="../../InsertarParadas.do" method="get">
+				<h2>Insertar Parada</h2>
+				<p>
+					Nombre: <input type="text" name="nombre" required="required">
+				</p>
+				<p>
+					Numero de parada: <input type="number" name="numeroParada"
+						required="required">
+				</p>
+				<p>
+					Ubicación: <input type="text" name="ubicacion" required="required">
+				</p>
+				<p>
+					Historia: <input type="text" name="historia" required="required">
+				</p>
+				<p>
+					Anecdotario: <input type="text" name="anecdotario"
+						required="required">
+				</p>
+				<p>
+					Gastronomia: <input type="text" name="gastronomia"
+						required="required">
+				</p>
+				<p>
+					Itinerario: <select name="itinerario">
+						<c:forEach items="${listaItinerarios}" var="itinerario">
+							<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
+						</c:forEach>
+					</select>
+				</p>
+
+				<p>
+					Imagen: <input type="file" name="imagen"
+						onchange="handleFiles(this.files)" required="required">
+				</p>
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
+			</form>
+		</div>
 	</div>
-
 </body>
 </html>

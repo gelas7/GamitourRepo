@@ -16,69 +16,72 @@
 </head>
 
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
-			<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
-			<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
-			<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
-			<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
-			<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
-			<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
-			<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
-			<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
-		</ul>
-	</div>
+	<div class="flex">
 
-	<div class="page">
-		<div class="logo">
-			<h1>
-				<a href="../../MostrarAdmin.do">Panel de administración Gamitour</a>
-			</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="../../MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="../../MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
+				<li><a href="../../MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=votos">Votos</a></li>
+				<li><a href="../../MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
+				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+			</ul>
 		</div>
 
-		<form action="../../InsertarPremios.do" method="get">
-			<h2>Insertar Premio</h2>
-			<p>
-				Cliente: <select name="cliente">
-					<c:forEach items="${listaClientes}" var="cliente">
-						<option value="${cliente.idcliente}">${cliente.nombre}</option>
-					</c:forEach>
-				</select>
-			</p>
-			<p>
-				Nombre: <input type="text" name="nombre" required="required">
-			</p>
-			<p>
-				Descripcion: <input type="textarea" name="descripcion"
-					required="required">
-			</p>
-			<p>
-				Ubicación: <input type="text" name="ubicacion" required="required">
-			</p>
-			<p>
-				Puntos: <input type="number" name="puntos" required="required">
-			</p>
-			<p>
-				Imagen: <input type="file" name="imagen"
-					onchange="handleFiles(this.files)" required="required">
-			</p>
-			<p>
-				Fecha de activacion: <input type="date" name="fechaactivacion"
-					required="required">
-			</p>
+		<div class="page">
+			<div class="logo">
+				<h1>
+					<a href="../../MostrarAdmin.do">Panel de administración
+						Gamitour</a>
+				</h1>
+			</div>
 
-			<p>
-				Fecha de consumo: <input type="date" name="fechaconsumo"
-					required="required">
-			</p>
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
-		</form>
+			<form action="../../InsertarPremios.do" method="get">
+				<h2>Insertar Premio</h2>
+				<p>
+					Cliente: <select name="cliente">
+						<c:forEach items="${listaClientes}" var="cliente">
+							<option value="${cliente.idcliente}">${cliente.nombre}</option>
+						</c:forEach>
+					</select>
+				</p>
+				<p>
+					Nombre: <input type="text" name="nombre" required="required">
+				</p>
+				<p>
+					Descripcion: <input type="textarea" name="descripcion"
+						required="required">
+				</p>
+				<p>
+					Ubicación: <input type="text" name="ubicacion" required="required">
+				</p>
+				<p>
+					Puntos: <input type="number" name="puntos" required="required">
+				</p>
+				<p>
+					Imagen: <input type="file" name="imagen"
+						onchange="handleFiles(this.files)" required="required">
+				</p>
+				<p>
+					Fecha de activacion: <input type="date" name="fechaactivacion"
+						required="required">
+				</p>
+
+				<p>
+					Fecha de consumo: <input type="date" name="fechaconsumo"
+						required="required">
+				</p>
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
+			</form>
+		</div>
 	</div>
-
 </body>
 </html>
