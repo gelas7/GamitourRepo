@@ -144,8 +144,8 @@ ul {
 	margin-left: 10px;
 	list-style-type: none;
 	padding-top: 10px;
-	width: 130px;
-	height: 76%;
+	width: 10%;
+	height: 550px;
 	background-color: #666666;
 	position: fixed;
 	overflow: auto;
@@ -164,7 +164,7 @@ li a {
 	border: none;
 	background-color: transparent;
 	color: white;
-	font-size: 18px;
+	font-size: 140%;
 	outline: none;
 	text-decoration: none;
 	font-weight: 500;
