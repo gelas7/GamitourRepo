@@ -79,7 +79,7 @@
 				</select>
 			</p>
 			<p>
-				Imagen: <input type="text" name="imagen"
+				Imagen: <input type="file" name="imagen"
 					onchange="handleFiles(this.files)">
 			</p>
 			<p>
