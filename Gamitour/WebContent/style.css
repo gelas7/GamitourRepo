@@ -32,10 +32,6 @@ input, textarea {
 	margin-left: 160px;
 }
 
-.contenedor {
-	width: 100%;
-}
-
 .mostrar{
 	text-decoration:none;
 }
@@ -102,6 +98,7 @@ tr:nth-child(even) {
 }
 
 table {
+	width:800px;
 	margin-top: 10px;
 	color: #333;
 	border-collapse: collapse;
