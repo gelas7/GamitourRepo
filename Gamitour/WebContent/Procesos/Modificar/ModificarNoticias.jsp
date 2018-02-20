@@ -59,7 +59,7 @@
 				Fecha de Caducidad: <input type="date" name="fechacaducidad" placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechacaducidad()%>">
 			</p>
 			<p>
-				Imagen: <input type="text" name="imagen"
+				Imagen: <input type="file" name="imagen"
 					onchange="handleFiles(this.files)">
 			</p>
 			<p>
