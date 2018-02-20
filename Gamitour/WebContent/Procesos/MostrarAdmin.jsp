@@ -100,7 +100,7 @@
 				<h1>Listado de Actividades</h1>
 				<a class="insertar"
 					href="Procesos/Insertar/InsertarActividades.html"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -140,7 +140,7 @@
 				<h1>Listado de Itinerarios</h1>
 				<a class="insertar"
 					href="Procesos/Insertar/InsertarItinerarios.html"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -173,7 +173,7 @@
 			<div class="tablas" id="divnoticias">
 				<h1>Listado de Noticias</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarNoticias.html"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -204,7 +204,7 @@
 			<div class="tablas" id="divparadas">
 				<h1>Listado de Paradas</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -243,7 +243,7 @@
 				<h1>Listado de Pruebas Culturales</h1>
 				<a class="insertar"
 					href="Procesos/Insertar/InsertarPruebasCulturales.jsp"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -276,7 +276,7 @@
 				<h1>Listado de Pruebas Deportivas</h1>
 				<a class="insertar"
 					href="Procesos/Insertar/InsertarPruebasDeportivas.jsp"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Nombre</th>
@@ -313,7 +313,7 @@
 			<div class="tablas" id="divpremios">
 				<h1>Listado de Premios</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarPremios.jsp"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Cliente</th>
@@ -350,7 +350,7 @@
 			<div class="tablas" id="divmultimedias">
 				<h1>Listado de elementos Multimedia</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Cliente</th>
@@ -391,7 +391,7 @@
 			<div class="tablas" id="divcomentarios">
 				<h1>Listado de Comentarios</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Cliente</th>
@@ -420,7 +420,7 @@
 			<div class="tablas" id="divvotos">
 				<h1>Listado de votos</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
-					class="fas fa-plus"></i></a>
+					class="fas fa-plus-circle"></i>Añadir nuevo</a>
 				<table>
 					<tr>
 						<th>Cliente</th>
