@@ -53,14 +53,14 @@
 				<table id="tparadas" class="tablesorter">
 					<thead>
 						<tr>
-							<th>Nombre</th>
-							<th>Número</th>
-							<th>Ubicación</th>
-							<th>Historia</th>
-							<th>Anecdotario</th>
-							<th>Gastronomia</th>
-							<th>Imagen</th>
-							<th>Itinerario</th>
+							<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+							<th>Número <i id="icono" class="fas fa-sort"></i></th>
+							<th>Ubicación <i id="icono" class="fas fa-sort"></i></th>
+							<th>Historia <i id="icono" class="fas fa-sort"></i></th>
+							<th>Anecdotario <i id="icono" class="fas fa-sort"></i></th>
+							<th>Gastronomia <i id="icono" class="fas fa-sort"></i></th>
+							<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
+							<th>Itinerario <i id="icono" class="fas fa-sort"></i></th>
 						</tr>
 					</thead>
 					<tbody>
