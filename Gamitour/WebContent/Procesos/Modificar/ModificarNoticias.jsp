@@ -42,9 +42,9 @@
 
 			<form action="../../ModificarNoticias.do" method="get">
 
-				<h2 id="modificar">Modifique los campos que considere oportunos</h2>
-				<h3>Los campos en blanco no sufriran cambios</h3>
-
+				<h2 id="modificar">Modifique los campos necesarios.</h2>
+				<h3>Los campos en blanco no sufrirán cambios.</h3>
+				
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
