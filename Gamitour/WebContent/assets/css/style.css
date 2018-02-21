@@ -77,7 +77,7 @@ th {
 	background-color: #346086;
 	color: white;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 th:hover {
@@ -87,7 +87,7 @@ th:hover {
 
 td {
 	text-align: center;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 tr td:hover {
@@ -112,7 +112,7 @@ tr:nth-child(even) {
 }
 
 table {
-	width: 800px;
+	width: 1000px;
 	margin-top: 10px;
 	color: #333;
 	border-collapse: collapse;
