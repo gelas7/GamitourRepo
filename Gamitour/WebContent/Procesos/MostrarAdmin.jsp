@@ -13,6 +13,9 @@
 <script src="assets/js/script.js" type="text/javascript"></script>
 <script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.simplePagination.js" type="text/javascript"></script>
+
+
 
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
