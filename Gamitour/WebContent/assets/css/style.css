@@ -42,6 +42,7 @@ input, textarea {
 }
 
 .mostrar {
+	display: block;
 	text-decoration: none;
 }
 
@@ -107,8 +108,8 @@ tr:nth-child(even) {
 }
 
 table {
-	width: 800px;
-	margin-top: 10px;
+	width: 1200px;
+	margin: 10px 10px 0 0;
 	color: #333;
 	border-collapse: collapse;
 	border-radius: 1em;
