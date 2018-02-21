@@ -27,21 +27,22 @@ input, textarea {
 	font-size: 36px;
 }
 
-.flex{
-	display:flex;
-	flex-direction:row;
+.flex {
+	display: flex;
+	flex-direction: row;
 }
 
-.menu{
-	margin:80px 20px 0 10px;
+.menu {
+	margin: 80px 20px 0 10px;
 	width: 200px;
 }
+
 .page {
 	width: 800px;
 }
 
-.mostrar{
-	text-decoration:none;
+.mostrar {
+	text-decoration: none;
 }
 
 h1 {
@@ -76,7 +77,15 @@ th {
 	background-color: #346086;
 	color: white;
 	font-weight: bold;
-	font-size: 17px;
+	font-size: 15px;
+}
+
+th:hover {
+	cursor: pointer;
+}
+
+#icono {
+	display: inline-block;
 }
 
 td {
@@ -101,12 +110,12 @@ tr:nth-child(even) {
 	text-decoration: none;
 }
 
-.tablas h1{
-	padding-bottom:20px;
+.tablas h1 {
+	padding-bottom: 20px;
 }
 
 table {
-	width:800px;
+	width: 1100px;
 	margin-top: 10px;
 	color: #333;
 	border-collapse: collapse;

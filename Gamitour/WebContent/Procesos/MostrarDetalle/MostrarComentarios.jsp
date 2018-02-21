@@ -52,9 +52,9 @@
 				<table id="tcomentarios" class="tablesorter">
 					<thead>
 						<tr>
-							<th>Cliente</th>
-							<th>Comentario</th>
-							<th>Multimedia</th>
+							<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
+							<th>Comentario <i id="icono" class="fas fa-sort"></i></th>
+							<th>Multimedia <i id="icono" class="fas fa-sort"></i></th>
 						</tr>
 					</thead>
 					<tbody>

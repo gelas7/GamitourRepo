@@ -53,9 +53,9 @@
 				<table id="tvotos" class="tablesorter">
 					<thead>
 						<tr>
-							<th>Cliente</th>
-							<th>Multimedia</th>
-							<th>Puntos</th>
+							<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
+							<th>Multimedia <i id="icono" class="fas fa-sort"></i></th>
+							<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 						</tr>
 					</thead>
 					<tbody>

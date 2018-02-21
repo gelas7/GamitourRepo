@@ -61,17 +61,17 @@
 					<table id="tclientes" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Nombre</th>
-								<th>Apellidos</th>
-								<th>Nacimiento</th>
-								<th>Mail</th>
-								<th>Teléfono</th>
-								<th>Direccion</th>
-								<th>CP</th>
-								<th>Puntos</th>
-								<th>Registro</th>
-								<th>Rol</th>
-								<th>Avatar</th>
+								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+								<th>Apellidos <i id="icono" class="fas fa-sort"></i></th>
+								<th>Nacimiento <i id="icono" class="fas fa-sort"></i></th>
+								<th>Mail <i id="icono" class="fas fa-sort"></i></th>
+								<th>Teléfono <i id="icono" class="fas fa-sort"></i></th>
+								<th>Direccion <i id="icono" class="fas fa-sort"></i></th>
+								<th>CP <i id="icono" class="fas fa-sort"></i></th>
+								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
+								<th>Registro <i id="icono" class="fas fa-sort"></i></th>
+								<th>Rol <i id="icono" class="fas fa-sort"></i></th>
+								<th>Avatar <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -111,14 +111,14 @@
 					<table id="tactividades" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Nombre</th>
-								<th>Inicio</th>
-								<th>Fin</th>
-								<th>Ubicación</th>
-								<th>Participantes</th>
-								<th>Precio</th>
-								<th>Imagen</th>
-								<th>Puntos</th>
+								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+								<th>Inicio <i id="icono" class="fas fa-sort"></i></th>
+								<th>Fin <i id="icono" class="fas fa-sort"></i></th>
+								<th>Ubicación <i id="icono" class="fas fa-sort"></i></th>
+								<th>Participantes <i id="icono" class="fas fa-sort"></i></th>
+								<th>Precio <i id="icono" class="fas fa-sort"></i></th>
+								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
+								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -156,10 +156,10 @@
 					<table id="titinerarios" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Nombre</th>
-								<th>Categoria</th>
-								<th>Duración</th>
-								<th>Ubicación</th>
+								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+								<th>Categoria <i id="icono" class="fas fa-sort"></i></th>
+								<th>Duración <i id="icono" class="fas fa-sort"></i></th>
+								<th>Ubicación <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -193,11 +193,11 @@
 					<table id="tnoticias" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Nombre</th>
-								<th>Texto</th>
-								<th>Alta</th>
-								<th>Caducidad</th>
-								<th>Imagen</th>
+								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+								<th>Texto <i id="icono" class="fas fa-sort"></i></th>
+								<th>Alta <i id="icono" class="fas fa-sort"></i></th>
+								<th>Caducidad <i id="icono" class="fas fa-sort"></i></th>
+								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -229,14 +229,14 @@
 					<table id="tparadas" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Nombre</th>
-								<th>Número</th>
-								<th>Ubicación</th>
-								<th>Historia</th>
-								<th>Anecdotario</th>
-								<th>Gastronomia</th>
-								<th>Imagen</th>
-								<th>Itinerario</th>
+								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+								<th>Número <i id="icono" class="fas fa-sort"></i></th>
+								<th>Ubicación <i id="icono" class="fas fa-sort"></i></th>
+								<th>Historia <i id="icono" class="fas fa-sort"></i></th>
+								<th>Anecdotario <i id="icono" class="fas fa-sort"></i></th>
+								<th>Gastronomia <i id="icono" class="fas fa-sort"></i></th>
+								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
+								<th>Itinerario <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -273,11 +273,11 @@
 					<table id="tpruebasculturales" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Nombre</th>
-								<th>Pregunta</th>
-								<th>Respuesta</th>
-								<th>Puntos</th>
-								<th>Parada</th>
+								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+								<th>Pregunta <i id="icono" class="fas fa-sort"></i></th>
+								<th>Respuesta <i id="icono" class="fas fa-sort"></i></th>
+								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
+								<th>Parada <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -311,12 +311,12 @@
 					<table id="tpruebasdeportivas" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Nombre</th>
-								<th>Inicio</th>
-								<th>Fin</th>
-								<th>Explicación</th>
-								<th>Puntos</th>
-								<th>Parada</th>
+								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+								<th>Inicio <i id="icono" class="fas fa-sort"></i></th>
+								<th>Fin <i id="icono" class="fas fa-sort"></i></th>
+								<th>Explicación <i id="icono" class="fas fa-sort"></i></th>
+								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
+								<th>Parada <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -352,13 +352,13 @@
 					<table id="tpremios" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Cliente</th>
-								<th>Nombre</th>
-								<th>Descripcion</th>
-								<th>Imagen</th>
-								<th>Activacion</th>
-								<th>Consumo</th>
-								<th>Puntos</th>
+								<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
+								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+								<th>Descripcion <i id="icono" class="fas fa-sort"></i></th>
+								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
+								<th>Activacion <i id="icono" class="fas fa-sort"></i></th>
+								<th>Consumo <i id="icono" class="fas fa-sort"></i></th>
+								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -394,13 +394,13 @@
 					<table id="tmultimedias" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Cliente</th>
-								<th>Fecha</th>
-								<th>Comentario</th>
-								<th>Imagen</th>
-								<th>Video</th>
-								<th>Puntos</th>
-								<th>ID P.Deportiva</th>
+								<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
+								<th>Fecha <i id="icono" class="fas fa-sort"></i></th>
+								<th>Comentario <i id="icono" class="fas fa-sort"></i></th>
+								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
+								<th>Video <i id="icono" class="fas fa-sort"></i></th>
+								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
+								<th>ID P.Deportiva <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -440,9 +440,9 @@
 					<table id="tcomentarios" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Cliente</th>
-								<th>Comentario</th>
-								<th>Multimedia</th>
+								<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
+								<th>Comentario <i id="icono" class="fas fa-sort"></i></th>
+								<th>Multimedia <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -473,9 +473,9 @@
 					<table id="tvotos" class="tablesorter">
 						<thead>
 							<tr>
-								<th>Cliente</th>
-								<th>Multimedia</th>
-								<th>Puntos</th>
+								<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
+								<th>Multimedia <i id="icono" class="fas fa-sort"></i></th>
+								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
 						<tbody>

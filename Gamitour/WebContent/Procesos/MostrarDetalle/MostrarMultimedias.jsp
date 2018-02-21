@@ -51,13 +51,13 @@
 				<table id="tmultimedias" class="tablesorter">
 					<thead>
 						<tr>
-							<th>Cliente</th>
-							<th>Fecha</th>
-							<th>Comentario</th>
-							<th>Imagen</th>
-							<th>Video</th>
-							<th>Puntos</th>
-							<th>ID Prueba Deportiva</th>
+							<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
+							<th>Fecha <i id="icono" class="fas fa-sort"></i></th>
+							<th>Comentario <i id="icono" class="fas fa-sort"></i></th>
+							<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
+							<th>Video <i id="icono" class="fas fa-sort"></i></th>
+							<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
+							<th>ID Prueba Deportiva <i id="icono" class="fas fa-sort"></i></th>
 						</tr>
 					</thead>
 					<tbody>
