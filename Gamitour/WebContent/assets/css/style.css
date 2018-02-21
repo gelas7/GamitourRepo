@@ -19,7 +19,7 @@ input, textarea {
 }
 
 .logo {
-	margin: 80px 0 30px 0;
+	margin: 40px 0 30px 0;
 }
 
 .logo a {
@@ -27,21 +27,22 @@ input, textarea {
 	font-size: 36px;
 }
 
-.flex{
-	display:flex;
-	flex-direction:row;
+.flex {
+	display: flex;
+	flex-direction: row;
 }
 
-.menu{
-	margin:80px 20px 0 10px;
+.menu {
+	margin: 40px 20px 0 10px;
 	width: 200px;
 }
+
 .page {
 	width: 800px;
 }
 
-.mostrar{
-	text-decoration:none;
+.mostrar {
+	text-decoration: none;
 }
 
 h1 {
@@ -101,12 +102,12 @@ tr:nth-child(even) {
 	text-decoration: none;
 }
 
-.tablas h1{
-	padding-bottom:20px;
+.tablas h1 {
+	padding-bottom: 20px;
 }
 
 table {
-	width:800px;
+	width: 800px;
 	margin-top: 10px;
 	color: #333;
 	border-collapse: collapse;
@@ -132,11 +133,17 @@ input[type=submit] {
 	border-radius: 15px;
 	padding: 5px;
 	border: 1px solid black;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	color: white;
+	background-color: black;
 }
 
 p {
 	font-weight: bold;
-	margin-top: 15px;
+	margin-top: 12px;
 }
 
 p, ul {
@@ -187,6 +194,10 @@ form {
 	width: 390px;
 	margin: 0 auto;
 	text-align: left;
+}
+
+#imagenInicio {
+	margin-top: 80px;
 }
 
 #divclientes, #divitinerarios, #divactividades, #divnoticias,
