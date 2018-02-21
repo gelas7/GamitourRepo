@@ -77,8 +77,13 @@ th {
 	background-color: #346086;
 	color: white;
 	font-weight: bold;
-	font-size: 17px;
+	font-size: 15px;
 }
+
+th:hover {
+	cursor:pointer;
+}
+
 
 td {
 	text-align: center;
