@@ -8,11 +8,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Panel de Administración</title>
-<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 
-<script src="script.js" type="text/javascript"></script>
-<script src="jquery-3.3.1.js" type="text/javascript"></script>
-<script src="jquery.tablesorter.min.js" type="text/javascript"></script>
+<script src="assets/js/script.js" type="text/javascript"></script>
+<script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
 
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -110,7 +110,6 @@
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
 					<table id="tactividades" class="tablesorter">
 						<thead>
-
 							<tr>
 								<th>Nombre</th>
 								<th>Inicio</th>
