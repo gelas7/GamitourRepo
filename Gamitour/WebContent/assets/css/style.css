@@ -38,7 +38,7 @@ input, textarea {
 }
 
 .page {
-	width: 800px;
+	width: 100%;
 }
 
 .mostrar {
@@ -112,7 +112,7 @@ tr:nth-child(even) {
 }
 
 table {
-	width: 1000px;
+	
 	margin-top: 10px;
 	color: #333;
 	border-collapse: collapse;
