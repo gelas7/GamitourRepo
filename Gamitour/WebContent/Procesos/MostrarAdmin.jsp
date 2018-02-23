@@ -9,11 +9,13 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Panel de Administración</title>
 
-<link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="assets/css/style.css" rel="stylesheet" type="text/css"
+	media="screen" />
 <script src="assets/js/script.js" type="text/javascript"></script>
 <script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery.simplePagination.js" type="text/javascript"></script>
+<script src="assets/js/jquery.simplePagination.js"
+	type="text/javascript"></script>
 
 
 
@@ -41,10 +43,19 @@
 		</div>
 
 		<div class="page">
+			<header>
+			<ul>
+				<li><a href="">Nombre de usuario</a></li>
+				<li><a href="">Cerrar serion</a></li>
+			</ul>
+			</header>
+
 			<div class="logo">
 				<h1>
 					<a href="MostrarAdmin.do">Panel de administración Gamitour</a>
 				</h1>
+
+
 			</div>
 			<div class="contenedor">
 
@@ -53,7 +64,8 @@
 				<div class="tablas" id="divBienvenida">
 					<hr></hr>
 					<h2>Bienvenido. Seleccione una opción del menu lateral.</h2>
-					<img id="imagenInicio" src="images/asturias.png" alt="Asturias, Paraiso Natural"/>
+					<img id="imagenInicio" src="images/asturias.png"
+						alt="Asturias, Paraiso Natural" />
 				</div>
 
 				<!-- DIV CLIENTES -->
