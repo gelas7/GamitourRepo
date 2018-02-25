@@ -12,8 +12,9 @@ window.onload = function() {
 	}
 
 	ordenar();
-
 	//paginar();
+
+	
 
 	if (divActual.value != "") { // Si hay divActual lo muestro al recargar
 		mostrarDivActual(divActual.value);
@@ -27,7 +28,7 @@ window.onload = function() {
 
 	function paginar() {
 		$('.tablesorter').pagination({
-			items : 50,
+			items : 10,
 			itemsOnPage : 5,
 		});
 	}

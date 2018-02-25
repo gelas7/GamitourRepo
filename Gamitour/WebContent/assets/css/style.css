@@ -15,7 +15,6 @@ header {
 	color: black;
 	margin-right: 70px;
 	margin-top: 20px;
-	
 }
 
 header a {
@@ -233,3 +232,4 @@ form {
 	#divpruebasculturales, #divpruebasdeportivas, #divpremios {
 	display: none;
 }
+
