@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>Usuario no autorizado</h1>
-<a href="/EntregableSeguridad/index.jsp">Volver al índice</a>
+<a href="/Gamitour/login.jsp">Volver al índice</a>
 </body>
 </html>

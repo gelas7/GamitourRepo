@@ -40,4 +40,9 @@ public class UsuarioController extends HttpServlet {
 		// Transferimos el control a la url que decide el metodo ejecutar
 		despachador.forward(request, response);
 	}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
 }
