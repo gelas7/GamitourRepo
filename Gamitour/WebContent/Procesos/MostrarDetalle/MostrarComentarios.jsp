@@ -10,12 +10,20 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Panel de Administración</title>
 
-<link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="assets/css/style.css" rel="stylesheet" type="text/css"
+	media="screen" />
 <script src="assets/css/script.js"></script>
 <script src="assets/css/jquery-3.3.1.js" type="text/javascript"></script>
+<<<<<<< HEAD
 <script src="assets/css/jquery.tablesorter.min.js" type="text/javascript"></script>
 <script src="assets/js/pagination-tda-plugin.js" type="text/javascript"></script>
 
+=======
+<script src="assets/css/jquery.tablesorter.min.js"
+	type="text/javascript"></script>
+<script src="assets/css/jquery.simplePagination.js"
+	type="text/javascript"></script>
+>>>>>>> ea2b0fbffb32c4c891615762429a5a78e2765762
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>

@@ -12,7 +12,13 @@ window.onload = function() {
 	}
 	
 	ordenar();
+<<<<<<< HEAD
 	paginar();
+=======
+	//paginar();
+>>>>>>> ea2b0fbffb32c4c891615762429a5a78e2765762
+
+	
 
 	if (divActual.value != "") { // Si hay divActual lo muestro al recargar
 		mostrarDivActual(divActual.value);
@@ -25,8 +31,14 @@ window.onload = function() {
 	}
 
 	function paginar() {
+<<<<<<< HEAD
 		$(".tablesorter").paginationTdA({
 			elemPerPage : 2
+=======
+		$('.tablesorter').pagination({
+			items : 10,
+			itemsOnPage : 5,
+>>>>>>> ea2b0fbffb32c4c891615762429a5a78e2765762
 		});
 	}
 

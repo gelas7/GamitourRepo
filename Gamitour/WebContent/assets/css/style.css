@@ -10,6 +10,30 @@ body {
 	font-family: Optima, sans-serif;
 }
 
+header {
+	float: right;
+	color: black;
+	margin-right: 70px;
+	margin-top: 20px;
+}
+
+header a {
+	font-family: Optima, sans-serif;
+	border: none;
+	color: #346086;
+	font-size: 20px;
+	outline: none;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+header li {
+	margin-top: 20px;
+	display: block;
+	padding: 0 5px 0 5px;
+	text-align: center;
+}
+
 input, textarea {
 	background: #FFFFFF url(images/img09.gif) repeat-x;
 	border: 1px solid #FFFFFF;
@@ -38,7 +62,7 @@ input, textarea {
 }
 
 .page {
-	width: 800px;
+	width: 100%;
 }
 
 .mostrar {
@@ -81,9 +105,8 @@ th {
 }
 
 th:hover {
-	cursor:pointer;
+	cursor: pointer;
 }
-
 
 td {
 	text-align: center;
@@ -112,7 +135,6 @@ tr:nth-child(even) {
 }
 
 table {
-	width: 1000px;
 	margin-top: 10px;
 	color: #333;
 	border-collapse: collapse;
@@ -155,7 +177,7 @@ p, ul {
 	line-height: 190%;
 }
 
-ul {
+.menu ul {
 	width: 120px;
 	height: 550px;
 	margin-left: 10px;
@@ -166,14 +188,14 @@ ul {
 	border-radius: 20px;
 }
 
-li {
+.menu li {
 	margin-top: 20px;
 	display: block;
 	padding: 0 5px 0 5px;
 	text-align: center;
 }
 
-li a {
+.menu li a {
 	font-family: Optima, sans-serif;
 	border: none;
 	background-color: transparent;
