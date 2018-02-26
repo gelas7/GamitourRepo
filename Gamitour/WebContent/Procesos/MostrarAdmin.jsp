@@ -14,14 +14,9 @@
 <script src="assets/js/script.js" type="text/javascript"></script>
 <script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
-<<<<<<< HEAD
 <script src="assets/js/pagination-tda-plugin.js" type="text/javascript"></script>
-=======
 <script src="assets/js/jquery.simplePagination.js"
 	type="text/javascript"></script>
-
-
->>>>>>> ea2b0fbffb32c4c891615762429a5a78e2765762
 
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -50,7 +45,7 @@
 			<header>
 			<ul>
 				<li><a href="">Nombre de usuario</a></li>
-				<li><a href="">Cerrar serion</a></li>
+				<li><a href="">Cerrar sesión</a></li>
 			</ul>
 			</header>
 

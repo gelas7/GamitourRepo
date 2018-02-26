@@ -1,24 +1,18 @@
 window.onload = function() {
 
 	var tablas = document.getElementsByClassName("tablas");// Cargo divs de
-	// tablas
+														// tablas
 	var divActual = document.getElementById("divActual");// Almaceno div que
-	// se está mostrando
+														// se está mostrando
 	var botonesMenu = document.getElementsByClassName("botonMenu");
 
 	for (var i = 0; i < botonesMenu.length; i++) {// Event listeners botones
-		// de menu
+												// de menu
 		botonesMenu[i].addEventListener("click", mostrar, false);
 	}
-	
-	ordenar();
-<<<<<<< HEAD
-	paginar();
-=======
-	//paginar();
->>>>>>> ea2b0fbffb32c4c891615762429a5a78e2765762
 
-	
+	ordenar();
+	paginar();
 
 	if (divActual.value != "") { // Si hay divActual lo muestro al recargar
 		mostrarDivActual(divActual.value);
@@ -31,14 +25,8 @@ window.onload = function() {
 	}
 
 	function paginar() {
-<<<<<<< HEAD
 		$(".tablesorter").paginationTdA({
-			elemPerPage : 2
-=======
-		$('.tablesorter').pagination({
-			items : 10,
-			itemsOnPage : 5,
->>>>>>> ea2b0fbffb32c4c891615762429a5a78e2765762
+			elemPerPage : 4
 		});
 	}
 
