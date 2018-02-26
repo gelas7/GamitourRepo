@@ -12,6 +12,9 @@
 
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
+<link
+	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
+	rel="stylesheet">
 <script src="assets/js/script.js"></script>
 <script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
@@ -45,8 +48,9 @@
 
 			<header>
 			<ul>
-				<li><a href="">Nombre de usuario</a></li>
-				<li><a href="Logout">Cerrar sesión</a></li>
+				<li><a href=""><i class="far fa-user"></i> ${email}</a></li>
+				<li><a href="Logout"><i class="fas fa-sign-out-alt"></i>
+						Cerrar sesión</a></li>
 			</ul>
 			</header>
 
