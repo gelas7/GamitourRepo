@@ -26,7 +26,7 @@ window.onload = function() {
 		$('.tablesorter').tablesorter();
 	}
 
-	function paginar() { // # + el id de la tabla a ordenar
+	function paginar() { // # + el id de la tabla a ordenar (Así funciona el plugin)
 		for (var i = 0; i < tablesorter.length; i++) {
 			$("#"+tablesorter[i].id).paginationTdA({
 				elemPerPage : 2
