@@ -22,10 +22,16 @@
     <filter-name>FiltroAdmin</filter-name>
     <filter-class>com.proyecto.util.FiltroAdmin</filter-class>
   </filter>
-  
   <filter-mapping>
     <filter-name>FiltroAdmin</filter-name>
     <url-pattern>*.do</url-pattern>
   </filter-mapping>
-
+   <filter-mapping>
+    <filter-name>FiltroAdmin</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>FiltroAdmin</filter-name>
+    <url-pattern>*.html</url-pattern>
+  </filter-mapping>
 </web-app>

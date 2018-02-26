@@ -19,7 +19,7 @@ public class BuscarAdminAccion extends Accion {
 		String pass = (String) request.getParameter("password");
 		Cliente c = sc.buscarClientePorEmail(email);
 
-		String rutaSalida = ""; // Por aqui seguira el programa al final
+		String rutaSalida = "errores/incorrect.jsp"; // Por aqui seguira el programa al final
 
 		if (c != null) { // Si usuario existe
 			if (c.getPassword().equals(pass)) // Compruebo pass
@@ -29,18 +29,13 @@ public class BuscarAdminAccion extends Accion {
 				if (rol.equals("administrador")) {
 					System.out.println("Bienvenido admin");
 					request.getSession().setAttribute("email", c.getEmail());
-					rutaSalida = url;
+					rutaSalida = url; // MODIFICO SALIDA
 				} else {
-					rutaSalida = "errores/error.jsp";
+					rutaSalida = "errores/error.jsp"; // MODIFICO SALIDA
 				}
-
-			} else {// Contraseña mal
-				rutaSalida = "errores/incorrect.jsp";
 			}
-		} else {
-			rutaSalida = "errores/incorrect.jsp";
 		}
-		
+
 		return rutaSalida;
 	}
 }
