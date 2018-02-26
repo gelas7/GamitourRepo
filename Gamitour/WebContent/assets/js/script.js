@@ -26,9 +26,10 @@ window.onload = function() {
 		$('.tablesorter').tablesorter();
 	}
 
-	function paginar() { // # + el id de la tabla a ordenar (Así funciona el plugin)
+	function paginar() { // # + el id de la tabla a ordenar (Así funciona el
+		// plugin)
 		for (var i = 0; i < tablesorter.length; i++) {
-			$("#"+tablesorter[i].id).paginationTdA({
+			$("#" + tablesorter[i].id).paginationTdA({
 				elemPerPage : 5
 			});
 		}
@@ -55,4 +56,5 @@ window.onload = function() {
 			botonesMenu[i].style.color = "white";
 		}
 	}
+
 }

@@ -1,11 +1,11 @@
 (function($) {
 	function createTableFooterPagination(idTable, nTdsColspan, last) {
-		var pagination = "<span><button class='btn btn-info paginationInit'><i class='fas fa-backward'></i></button></span> ";
+		var pagination = "<span><button class='btn btn-info paginationInit'><i class='fas fa-arrow-left'></i></button></span> ";
 		for (var i = 1; i <= last; i++) {
 			pagination += "<span><button class='btn btn-info paginationClick'>"
 					+ i + "</button></span> ";
 		}
-		pagination += "<span><button class='btn btn-info paginationEnd'><i class='fas fa-forward'></i></button></span>"
+		pagination += "<span><button class='btn btn-info paginationEnd'><i class='fas fa-arrow-right'></i></button></span>"
 		tfoot = "<tfoot><tr><td colspan='" + nTdsColspan + "'>" + pagination
 				+ "</td></tr></tfoot>";
 

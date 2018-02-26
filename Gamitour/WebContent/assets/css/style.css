@@ -71,12 +71,13 @@ input, textarea {
 
 h1 {
 	font-size: 29px;
-	font-family: Optima, sans-serif;
+	font-family: 'Oswald', sans-serif;
 	text-decoration: none;
 }
 
 h2 {
 	font-size: 23px;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 a {
@@ -132,6 +133,7 @@ tr:nth-child(even) {
 
 .tablas h1 {
 	padding-bottom: 20px;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 table {
