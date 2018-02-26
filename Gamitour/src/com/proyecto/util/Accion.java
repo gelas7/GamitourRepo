@@ -27,6 +27,7 @@ import com.proyecto.admin.insert.InsertarPruebasCulturalesAccion;
 import com.proyecto.admin.insert.InsertarPruebasDeportivasAccion;
 import com.proyecto.admin.insert.InsertarRolesAccion;
 import com.proyecto.admin.insert.InsertarVotosAccion;
+import com.proyecto.admin.search.BuscarAdminAccion;
 import com.proyecto.admin.search.MostrarAdminAccion;
 import com.proyecto.admin.search.MostrarComentariosAccion;
 import com.proyecto.admin.search.MostrarMultimediasAccion;
@@ -55,6 +56,9 @@ public abstract class Accion {
 
 		switch (tipo) {
 
+		case "BuscarAdmin":
+			accion = new BuscarAdminAccion();
+			break;
 		case "MostrarAdmin":
 			accion = new MostrarAdminAccion();
 			break;
