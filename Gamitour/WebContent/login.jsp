@@ -4,19 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="assets/css/style.css" rel="stylesheet" type="text/css"
+	media="screen" />
 <title>Página de login</title>
 </head>
 <body>
-	<h1>Login</h1>
 
-	<form action="BuscarAdmin.do" method="post">
 
-		E-mail: <input type="text" name="email" /> <br>
-		<br> Password: <input type="password" name="password" /> <br>
-		<br> <input type="submit" value="Enviar" />
+	<form id="loginform" method="" action="">
+		<h1>Login</h1>
+		<input name="email" type="text" class="input" placeholder="email" />
+		<input name="password" type="password" class="input"
+			placeholder="Password" /> <input type="submit" class="loginbutton"
+			value="ENTRAR" />
+	</form>
 
-	</form><br><br>
 
-	<a href="Logout">Logout</a>
 </body>
 </html>
