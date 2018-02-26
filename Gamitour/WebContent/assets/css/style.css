@@ -233,7 +233,32 @@ form {
 	display: none;
 }
 
+<<<<<<< HEAD
 .elementToPaginate{
 	blackground-color: blue;
 }
 
+=======
+table button {
+	text-decoration: none;
+	padding: 5px;
+	font-size: 14px;
+	color: #346086;
+	border-radius: 15px;
+	background-color: white;
+	
+	
+}
+
+table button:hover {
+	font-size: 12px;
+}
+
+tfoot td {
+	background-color: white;
+}
+
+tfoot td:hover {
+	background-color: white;
+}
+>>>>>>> 1ea10cc2a6a6c6cc62f5ba37e34498963048f423
