@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "parada", catalog = "gamitour")
-public class Parada implements java.io.Serializable, Comparable<Parada> {
+public class Parada implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private int idparada;
@@ -28,28 +28,13 @@ public class Parada implements java.io.Serializable, Comparable<Parada> {
 	private Set<PruebaCultural> pruebaculturales = new HashSet<PruebaCultural>(0);
 	private Set<PruebaDeportiva> pruebadeportivas = new HashSet<PruebaDeportiva>(0);
 
+
 	public Parada() {
 	}
 
 	public Parada(int idparada, Itinerario itinerario) {
 		this.idparada = idparada;
 		this.itinerario = itinerario;
-	}
-
-	public Parada(int idparada, Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion,
-			String historia, String anecdotario, String gastronomia, String imagen,
-			Set<PruebaCultural> pruebaculturales, Set<PruebaDeportiva> pruebadeportivas) {
-		this.idparada = idparada;
-		this.itinerario = itinerario;
-		this.nombre = nombre;
-		this.numeroParada = numeroParada;
-		this.ubicacion = ubicacion;
-		this.historia = historia;
-		this.anecdotario = anecdotario;
-		this.gastronomia = gastronomia;
-		this.imagen = imagen;
-		this.pruebaculturales = pruebaculturales;
-		this.pruebadeportivas = pruebadeportivas;
 	}
 
 	public Parada(Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion, String historia,
@@ -62,6 +47,8 @@ public class Parada implements java.io.Serializable, Comparable<Parada> {
 		this.anecdotario = anecdotario;
 		this.gastronomia = gastronomia;
 		this.imagen = imagen;
+		// this.latitud = latitud;
+		// this.longitud = longitud;
 	}
 
 	@Override
@@ -239,10 +226,4 @@ public class Parada implements java.io.Serializable, Comparable<Parada> {
 			return false;
 		return true;
 	}
-
-	@Override
-	public int compareTo(Parada p) {// Comparo por ids de itinerario
-		return this.itinerario.getIditinerario().compareTo(p.itinerario.getIditinerario());
-	}
-
 }

@@ -28,6 +28,7 @@ public class InsertarParadasAccion extends Accion {
 		String imagen = request.getParameter("imagen");
 		String itinerario = request.getParameter("itinerario");
 
+
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));
 		System.out.println(itinerario);
 		System.out.println(i.toString());
