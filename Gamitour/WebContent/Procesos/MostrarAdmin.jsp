@@ -44,7 +44,7 @@
 		<div class="page">
 			<header>
 			<ul>
-				<li><a href="">Nombre de usuario</a></li>
+				<li><a href="">${email}</a></li>
 				<li><a href="Logout">Cerrar sesión</a></li>
 			</ul>
 			</header>

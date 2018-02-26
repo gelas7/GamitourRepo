@@ -11,7 +11,7 @@
 <body>
 
 
-	<form id="loginform" method="" action="">
+	<form id="loginform" method="post" action="BuscarAdmin.do">
 		<h1>Login</h1>
 		<input name="email" type="text" class="input" placeholder="email" />
 		<input name="password" type="password" class="input"
