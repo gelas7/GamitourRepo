@@ -12,7 +12,7 @@
 
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-<script src="assets/css/script.js"></script>
+<script src="assets/js/script.js"></script>
 <script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
 <script src="assets/js/pagination-tda-plugin.js" type="text/javascript"></script>
@@ -53,6 +53,7 @@
 					<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
 				</h1>
 			</div>
+			
 			<div class="contenedor">
 
 				<h1>Listado de Comentarios en el multimedia</h1>
@@ -90,9 +91,3 @@
 	<div id="footer"></div>
 </body>
 </html>
-
-
-
-
-
-

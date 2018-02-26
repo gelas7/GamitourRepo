@@ -54,7 +54,6 @@
 					<a href="MostrarAdmin.do">Panel de administración Gamitour</a>
 				</h1>
 
-
 			</div>
 			<div class="contenedor">
 
