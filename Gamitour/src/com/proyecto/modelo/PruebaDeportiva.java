@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "pruebaDeportiva", catalog = "gamitour")
-public class PruebaDeportiva implements java.io.Serializable,Comparable<PruebaDeportiva> {
+public class PruebaDeportiva implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer idpruebadeportiva;
@@ -153,10 +153,5 @@ public class PruebaDeportiva implements java.io.Serializable,Comparable<PruebaDe
 		this.puntos = puntos;
 	}
 
-
-	@Override
-	public int compareTo(PruebaDeportiva o) {
-		return this.parada.getNumeroParada().compareTo(o.parada.getNumeroParada());
-	}
 
 }

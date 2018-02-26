@@ -20,7 +20,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "cliente", catalog = "gamitour")
-public class Cliente implements java.io.Serializable, Comparable<Cliente> {
+public class Cliente implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer idcliente;
@@ -333,11 +333,6 @@ public class Cliente implements java.io.Serializable, Comparable<Cliente> {
 		} else if (!telefono.equals(other.telefono))
 			return false;
 		return true;
-	}
-
-	@Override
-	public int compareTo(Cliente o) {
-		return this.nombre.compareTo(o.nombre);
 	}
 
 }

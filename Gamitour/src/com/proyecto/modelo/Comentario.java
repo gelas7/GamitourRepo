@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "comentario", catalog = "gamitour")
-public class Comentario implements java.io.Serializable,Comparable<Comentario> {
+public class Comentario implements java.io.Serializable{
 
 	
 	private static final long serialVersionUID = 1L;
@@ -120,10 +120,4 @@ public class Comentario implements java.io.Serializable,Comparable<Comentario> {
 	public String toString() {
 		return "Comentario [cliente=" + cliente + ", multimedia=" + multimedia + ", texto=" + texto + "]";
 	}
-
-	@Override
-	public int compareTo(Comentario o) {
-		return this.cliente.getIdcliente().compareTo(o.cliente.getIdcliente());
-	}
-
 }

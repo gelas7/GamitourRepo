@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "itinerario", catalog = "gamitour")
-public class Itinerario implements java.io.Serializable, Comparable<Itinerario> {
+public class Itinerario implements java.io.Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private Integer iditinerario;
@@ -145,11 +145,6 @@ public class Itinerario implements java.io.Serializable, Comparable<Itinerario> 
 		} else if (!ubicacion.equals(other.ubicacion))
 			return false;
 		return true;
-	}
-
-	@Override
-	public int compareTo(Itinerario o) {
-		return this.nombre.compareTo(o.nombre);
 	}
 
 }
