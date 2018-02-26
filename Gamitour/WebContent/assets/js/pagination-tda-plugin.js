@@ -1,26 +1,11 @@
-/*
-	Plugin pagination TdA 1.0
-	Author: Xavier Carabantes
-				
-   Uso: El table tiene que tener un ID
- * Por ese motivo no funcionara con class solo con IDs
- * 
- * 	$("#tableRoomList").paginationTdA({
-						elemPerPage: 10
-					});
- * Solo recibe un parametro elemPerPage que define cuantos rows mostrara por pagina
- * si no se indica el parametro por defecto son 2
- */
-
 (function($) {
-	/* función privada */
 	function createTableFooterPagination(idTable, nTdsColspan, last) {
-		var pagination = "<span><button class='btn btn-info paginationInit'><<</button></span> ";
+		var pagination = "<span><button class='btn btn-info paginationInit'><i class='fas fa-backward'></i></button></span> ";
 		for (var i = 1; i <= last; i++) {
 			pagination += "<span><button class='btn btn-info paginationClick'>"
 					+ i + "</button></span> ";
 		}
-		pagination += "<span><button class='btn btn-info paginationEnd'>>></button></span>"
+		pagination += "<span><button class='btn btn-info paginationEnd'><i class='fas fa-forward'></i></button></span>"
 		tfoot = "<tfoot><tr><td colspan='" + nTdsColspan + "'>" + pagination
 				+ "</td></tr></tfoot>";
 
@@ -35,10 +20,6 @@
 		}, options);
 
 		var idTable = $(this);
-
-		// Configuramos los TRs para comenzar con el plugin
-		// de cada TR del table tbody agregamos la clase con la que haremos los
-		// calculos
 		idTable.find("tbody").eq(0).find("tr").each(function() {
 			$(this).addClass("elementToPaginate");
 		});
