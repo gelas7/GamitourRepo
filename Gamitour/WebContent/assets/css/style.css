@@ -18,10 +18,10 @@ header {
 }
 
 header a {
-	font-family: Optima, sans-serif;
+	font-family: 'Neucha', cursive;
 	border: none;
 	color: #346086;
-	font-size: 20px;
+	font-size: 15px;
 	outline: none;
 	text-decoration: none;
 	font-weight: bold;
@@ -208,7 +208,7 @@ p, ul {
 	font-weight: 500;
 }
 
-li a:hover {
+.menu li a:hover {
 	transition: 0.5s;
 	color: #a1c3ff;
 	font-size: 19px;
@@ -293,4 +293,12 @@ tfoot td:hover {
 	border: none;
 	outline: 0;
 	cursor: pointer;
+}
+
+#logout:hover {
+	transition: 0.5s;
+	color: #a1c3ff;
+	font-size: 19px;
+	cursor: pointer;
+	outline: none;
 }
