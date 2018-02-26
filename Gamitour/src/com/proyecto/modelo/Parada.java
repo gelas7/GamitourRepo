@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "parada", catalog = "gamitour")
-public class Parada implements java.io.Serializable{
+public class Parada implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private int idparada;
@@ -27,8 +27,7 @@ public class Parada implements java.io.Serializable{
 	private String imagen;
 	private Set<PruebaCultural> pruebaculturales = new HashSet<PruebaCultural>(0);
 	private Set<PruebaDeportiva> pruebadeportivas = new HashSet<PruebaDeportiva>(0);
-	private double latitud;
-	private double longitud;
+
 
 	public Parada() {
 	}
@@ -39,7 +38,7 @@ public class Parada implements java.io.Serializable{
 	}
 
 	public Parada(Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion, String historia,
-			String anecdotario, String gastronomia, String imagen, double latitud, double longitud) {
+			String anecdotario, String gastronomia, String imagen) {
 		this.itinerario = itinerario;
 		this.nombre = nombre;
 		this.numeroParada = numeroParada;
@@ -48,8 +47,8 @@ public class Parada implements java.io.Serializable{
 		this.anecdotario = anecdotario;
 		this.gastronomia = gastronomia;
 		this.imagen = imagen;
-		this.latitud = latitud;
-		this.longitud = longitud;
+		// this.latitud = latitud;
+		// this.longitud = longitud;
 	}
 
 	@Override
@@ -105,24 +104,6 @@ public class Parada implements java.io.Serializable{
 
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
-	}
-
-	@Column(name = "latitud")
-	public double getLatitud() {
-		return latitud;
-	}
-
-	public void setLatitud(double latitud) {
-		this.latitud = latitud;
-	}
-
-	@Column(name = "longitud")
-	public double getLongitud() {
-		return longitud;
-	}
-
-	public void setLongitud(double longitud) {
-		this.longitud = longitud;
 	}
 
 	@Column(name = "historia", length = 200)
@@ -188,11 +169,6 @@ public class Parada implements java.io.Serializable{
 		result = prime * result + ((historia == null) ? 0 : historia.hashCode());
 		result = prime * result + ((imagen == null) ? 0 : imagen.hashCode());
 		result = prime * result + ((itinerario == null) ? 0 : itinerario.hashCode());
-		long temp;
-		temp = Double.doubleToLongBits(latitud);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		temp = Double.doubleToLongBits(longitud);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		result = prime * result + ((numeroParada == null) ? 0 : numeroParada.hashCode());
 		result = prime * result + ((ubicacion == null) ? 0 : ubicacion.hashCode());
@@ -232,10 +208,6 @@ public class Parada implements java.io.Serializable{
 			if (other.itinerario != null)
 				return false;
 		} else if (!itinerario.equals(other.itinerario))
-			return false;
-		if (Double.doubleToLongBits(latitud) != Double.doubleToLongBits(other.latitud))
-			return false;
-		if (Double.doubleToLongBits(longitud) != Double.doubleToLongBits(other.longitud))
 			return false;
 		if (nombre == null) {
 			if (other.nombre != null)
