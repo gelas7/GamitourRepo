@@ -24,7 +24,7 @@ public class Logout extends HttpServlet {
 		response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
 		response.setHeader("Expires", "0"); // Proxies.
 		
-		response.sendRedirect("/Gamitour/login.jsp");
+		response.sendRedirect("/Gamitour/index.html");
 		
 		session.invalidate();
 
