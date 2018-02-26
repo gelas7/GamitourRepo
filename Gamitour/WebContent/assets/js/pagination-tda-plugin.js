@@ -1,8 +1,8 @@
 /*
-				Plugin pagination TdA 1.0
-				Author: Xavier Carabantes
+	Plugin pagination TdA 1.0
+	Author: Xavier Carabantes
 				
-				Uso: El table tiene que tener un ID
+   Uso: El table tiene que tener un ID
  * Por ese motivo no funcionara con class solo con IDs
  * 
  * 	$("#tableRoomList").paginationTdA({

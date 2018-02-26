@@ -1,15 +1,17 @@
 window.onload = function() {
 
 	var tablas = document.getElementsByClassName("tablas");// Cargo divs de
-														// tablas
+	// tablas
 	var divActual = document.getElementById("divActual");// Almaceno div que
-														// se está mostrando
+	// se está mostrando
 	var botonesMenu = document.getElementsByClassName("botonMenu");
 
 	for (var i = 0; i < botonesMenu.length; i++) {// Event listeners botones
-												// de menu
+		// de menu
 		botonesMenu[i].addEventListener("click", mostrar, false);
 	}
+
+	var tablesorter = document.getElementsByClassName("tablesorter");
 
 	ordenar();
 	paginar();
@@ -24,10 +26,12 @@ window.onload = function() {
 		$('.tablesorter').tablesorter();
 	}
 
-	function paginar() {
-		$(".tablesorter").paginationTdA({
-			elemPerPage : 4
-		});
+	function paginar() { // # + el id de la tabla a ordenar
+		for (var i = 0; i < tablesorter.length; i++) {
+			$("#"+tablesorter[i].id).paginationTdA({
+				elemPerPage : 2
+			});
+		}
 	}
 
 	function mostrarDivActual(div) { // Funcion mostrar con 1 parametro
