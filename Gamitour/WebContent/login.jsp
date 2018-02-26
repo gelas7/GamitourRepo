@@ -6,18 +6,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
+<link
+	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
+	rel="stylesheet">
 <title>Página de login</title>
 </head>
-<body>
+<body id="todoLogin">
 
 	<form id="loginform" method="post" action="BuscarAdmin.do">
-		<h1>Login</h1>
+		<IMG SRC="immagine.gif" ALT="Obra de K. Haring">
+		<h1 id="lgntitle">Login</h1>
 		<input name="email" type="text" class="input" placeholder="E-mail" />
 		<input name="password" type="password" class="input"
 			placeholder="Password" /> <input type="submit" class="loginbutton"
 			value="ENTRAR" />
 	</form>
-
 
 </body>
 </html>

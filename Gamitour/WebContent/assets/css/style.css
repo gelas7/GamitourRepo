@@ -267,7 +267,7 @@ tfoot td:hover {
 }
 
 .input {
-	width: 270px;
+	width: 235px;
 	padding: 15px 25px;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
 		"DejaVu Sans", Verdana, sans-serif;
@@ -290,6 +290,7 @@ tfoot td:hover {
 	height: 50px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	margin-left: 17px;
 	border: none;
 	outline: 0;
 	cursor: pointer;
@@ -301,4 +302,15 @@ tfoot td:hover {
 	font-size: 19px;
 	cursor: pointer;
 	outline: none;
+}
+
+#todoLogin {
+	background-color: black;
+}
+
+#lgntitle { 
+	font-size:40px;
+	text-align:center;
+	font-family: 'Oswald', sans-serif;
+	color: white;
 }
