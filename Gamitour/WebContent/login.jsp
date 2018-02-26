@@ -10,10 +10,9 @@
 </head>
 <body>
 
-
 	<form id="loginform" method="post" action="BuscarAdmin.do">
 		<h1>Login</h1>
-		<input name="email" type="text" class="input" placeholder="email" />
+		<input name="email" type="text" class="input" placeholder="E-mail" />
 		<input name="password" type="password" class="input"
 			placeholder="Password" /> <input type="submit" class="loginbutton"
 			value="ENTRAR" />
