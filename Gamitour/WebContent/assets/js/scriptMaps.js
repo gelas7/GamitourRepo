@@ -20,4 +20,33 @@ window.onload = function() {
 		});
 
 	}
+
+	var map;
+
+	function initMap() {
+
+		// Defino los mapas
+
+		map = new google.maps.Map(document.getElementById('map'), {
+			center : {
+				lat : results[0].geometry.location.lat().toFixed(4),
+				lng : results[0].geometry.location.lng().toFixed(4)
+			},
+			zoom : 12
+		});
+
+		// Defino las paradas marcadas en cada mapa
+		marker = new google.maps.Marker({
+			map : map,
+			draggable : true,
+			animation : google.maps.Animation.DROP,
+			position : {
+				lat : results[0].geometry.location.lat().toFixed(4),
+				lng : results[0].geometry.location.lng().toFixed(4)
+			}
+		});
+
+		marker.addListener('click', toggleBounce);
+
+	}
 }
