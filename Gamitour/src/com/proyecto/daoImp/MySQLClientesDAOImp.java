@@ -13,18 +13,19 @@ public class MySQLClientesDAOImp extends GenericDAOImp<Cliente, Integer> impleme
 
 	public Cliente buscarClientePorEmail(String email) {
 		Cliente c = null;
-		sf.getCurrentSession().beginTransaction();
-		Query q = sf.getCurrentSession().createQuery("select c from Cliente c where email=:email");
-		q.setParameter("email", email);
 
 		try {
+			sf.getCurrentSession().beginTransaction();
+			Query q = sf.getCurrentSession().createQuery("select c from Cliente c where email=:email");
+			q.setParameter("email", email);
 			c = (Cliente) q.getSingleResult();
-		} catch (javax.persistence.NoResultException ex) {
-			System.out.println("No hubo resultados en la busqueda de clientes por Email");
+			sf.getCurrentSession().getTransaction().commit();
+
+		} catch (Exception e) {
+			System.out.println("Error:" + e.getMessage());
+			sf.getCurrentSession().getTransaction().rollback();
 		}
 
-		sf.getCurrentSession().getTransaction().commit();
-		
 		return c;
 	}
 }
