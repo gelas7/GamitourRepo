@@ -46,59 +46,61 @@
 						Gamitour</a>
 				</h1>
 			</div>
+			<div id="formMapa">
+				<form action="../../InsertarParadas.do" method="get">
+					<h2>Insertar Parada</h2>
+					<p>
+						Nombre: <input type="text" name="nombre" required="required">
+					</p>
+					<p>
+						Numero de parada: <input type="number" name="numeroParada"
+							required="required">
+					</p>
 
-			<form action="../../InsertarParadas.do" method="get">
-				<h2>Insertar Parada</h2>
-				<p>
-					Nombre: <input type="text" name="nombre" required="required">
-				</p>
-				<p>
-					Numero de parada: <input type="number" name="numeroParada"
-						required="required">
-				</p>
+					<p>
+						Historia: <input type="text" name="historia" required="required">
+					</p>
+					<p>
+						Anecdotario: <input type="text" name="anecdotario"
+							required="required">
+					</p>
+					<p>
+						Gastronomia: <input type="text" name="gastronomia"
+							required="required">
+					</p>
+					<p>
+						Itinerario: <select name="itinerario">
+							<c:forEach items="${listaItinerarios}" var="itinerario">
+								<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
+							</c:forEach>
+						</select>
+					</p>
 
-				<p>
-					Historia: <input type="text" name="historia" required="required">
-				</p>
-				<p>
-					Anecdotario: <input type="text" name="anecdotario"
-						required="required">
-				</p>
-				<p>
-					Gastronomia: <input type="text" name="gastronomia"
-						required="required">
-				</p>
-				<p>
-					Itinerario: <select name="itinerario">
-						<c:forEach items="${listaItinerarios}" var="itinerario">
-							<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
-						</c:forEach>
-					</select>
-				</p>
+					<p>
+						Imagen: <input type="file" name="imagen"
+							onchange="handleFiles(this.files)" required="required">
+					</p>
+					<p>
+						Ubicación: <input type="text" id="search" name="ubicacion"
+							required="required">
 
-				<p>
-					Imagen: <input type="file" name="imagen"
-						onchange="handleFiles(this.files)" required="required">
-				</p>
-				<p>
-					Ubicación: <input type="text" id="search" name="ubicacion"
-						required="required">
+						<button type="button" id="btnOK">Obtener coordenadas</button>
+					</p>
+					<p>
+						Latitud: <input type="text" id="lat" name="latitud" readonly>
+					</p>
+					<p>
+						Longitud: <input type="text" id="lng" name="longitud" readonly>
+					</p>
+					<p>
+						<input type="submit" value="Enviar" id="enviar">
+					</p>
 
-					<button type="button" id="btnOK">Obtener coordenadas</button>
-				</p>
-				<p>
-					Latitud: <input type="text" id="lat" name="latitud" readonly>
-				</p>
-				<p>
-					Longitud: <input type="text" id="lng" name="longitud" readonly>
-				</p>
-				<p>
-					<input type="submit" value="Enviar" id="enviar">
-				</p>
-
-			</form>
+				</form>
+				<div id="map" class="map" style="width: 400px; height: 400px;"></div>
+			</div>
 		</div>
-		<div id="map" class="map" style="width:400px;height:400px;"></div>
+
 	</div>
 </body>
 </html>

@@ -231,8 +231,7 @@ p, ul {
 form {
 	padding: 2px;
 	cursor: pointer;
-	display: block;
-	width: 390px;
+	width: 400px;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -325,4 +324,10 @@ tfoot td:hover {
 	font-size: 30px;
 	text-align: center;
 	font-family: 'Oswald', sans-serif;
+}
+
+#formMapa
+{
+	display:flex;
+	flex-direction:row;
 }
