@@ -55,6 +55,5 @@ window.onload = function() {
 		for (var i = 0; i < botonesMenu.length; i++) {
 			botonesMenu[i].style.color = "white";
 		}
-	}
-
+	}	
 }
