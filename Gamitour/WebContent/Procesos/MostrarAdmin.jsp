@@ -31,7 +31,7 @@
 				<li><a class="botonMenu" id="paradas">Paradas</a></li>
 				<li><a class="botonMenu" id="premios">Premios</a></li>
 				<li><a class="botonMenu" id="votos">Votos</a></li>
-				<li><a class="botonMenu" id="multimedias">Multimedias</a></li>
+				<li><a class="botonMenu" id="multimedias">Multimedia</a></li>
 				<li><a class="botonMenu" id="pruebasculturales">PC</a></li>
 				<li><a class="botonMenu" id="pruebasdeportivas">PD</a></li>
 				<li><a class="botonMenu" id="comentarios">Comentarios</a></li>
