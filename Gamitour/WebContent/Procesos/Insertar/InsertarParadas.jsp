@@ -94,7 +94,9 @@
 				<p>
 					<input type="submit" value="Enviar" id="enviar">
 				</p>
+				 
 			</form>
+			 <div id="map" class="map"></div>
 		</div>
 	</div>
 </body>
