@@ -47,7 +47,7 @@
 
 			<header>
 				<ul>
-					<li><a href=""><i class="far fa-user"></i> ${email}</a></li>
+					<li><a><i class="far fa-user"></i> ${email}</a></li>
 					<li><a href="Logout"><i class="fas fa-sign-out-alt"></i>
 							Cerrar sesión</a></li>
 				</ul>

@@ -46,19 +46,16 @@
 		<div class="page">
 
 			<header>
-<<<<<<< HEAD
 			<ul>
 				<li><a><i class="far fa-user"></i> ${email}</a></li>
 				<li><a href="Logout"><i class="fas fa-sign-out-alt"></i>
 						Cerrar sesión</a></li>
 			</ul>
-=======
 				<ul>
 					<li><a href=""><i class="far fa-user"></i> ${email}</a></li>
 					<li><a href="Logout"><i class="fas fa-sign-out-alt"></i>
 							Cerrar sesión</a></li>
 				</ul>
->>>>>>> f1772aa00b0e1eeb597e63b8fa92d2a9418c48bc
 			</header>
 
 			<div class="logo">
