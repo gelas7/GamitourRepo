@@ -14,9 +14,6 @@
 <title>Panel Admin</title>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-	<link
-	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
-	rel="stylesheet">
 </head>
 
 <body>
