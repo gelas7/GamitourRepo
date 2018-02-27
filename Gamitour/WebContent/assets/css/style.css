@@ -325,7 +325,9 @@ tfoot td:hover {
 	text-align: center;
 	font-family: 'Oswald', sans-serif;
 }
-
+#map{
+	margin-right:60px;
+}
 #formMapa
 {
 	display:flex;

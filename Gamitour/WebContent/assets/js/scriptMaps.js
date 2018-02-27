@@ -27,7 +27,7 @@ window.onload = function() {
 				lat : results[0].geometry.location.lat(),
 				lng : results[0].geometry.location.lng()
 			},
-			zoom : 12
+			zoom : 15
 		});
 
 		marker = new google.maps.Marker({
