@@ -1,8 +1,5 @@
 package com.proyecto.admin.insert;
 
-import java.text.NumberFormat;
-import java.text.ParseException;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -32,18 +29,13 @@ public class InsertarParadasAccion extends Accion {
 		String itinerario = request.getParameter("itinerario");
 		String latitud = request.getParameter("latitud");
 		String longitud = request.getParameter("longitud");
-		
-		System.out.println(latitud +"-"+ longitud);
-		NumberFormat nf = NumberFormat.getInstance();
-		float lat = 0;
-		float lng = 0;
-		
-		try {
-			lat = nf.parse(latitud).floatValue();
-			lng = nf.parse(longitud).floatValue();
 
-		} catch (ParseException e) {
-			e.printStackTrace();
+		float lat=0,lng=0;
+		try {
+			lat = Float.parseFloat(latitud);
+			lng = Float.parseFloat(longitud);
+		} catch (Exception e) {
+			System.out.println("Excepcion controlada al procesar coordenadas.");
 		}
 
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));

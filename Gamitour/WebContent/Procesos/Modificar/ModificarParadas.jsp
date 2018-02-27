@@ -12,6 +12,10 @@
 <title>Panel Admin</title>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
+<script type="text/javascript" src="../../assets/js/scriptMaps.js"></script>
+<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U&callback=initMap"></script>
+
 </head>
 
 <body>
@@ -58,8 +62,17 @@
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
 				</p>
 				<p>
-					Ubicación: <input type="text" name="ubicacion"
+					Ubicación: <input type="text" name="ubicacion" id="search"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
+					<button type="button" id="btnOK">Obtener coordenadas</button>
+				</p>
+				<p>
+					Latitud: <input type="text" id="lat" name="latitud" readonly
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLatitud()%>">
+				</p>
+				<p>
+					Longitud: <input type="text" id="lng" name="longitud" readonly
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLongitud()%>">
 				</p>
 				<p>
 					Historia: <input type="text" name="historia"
