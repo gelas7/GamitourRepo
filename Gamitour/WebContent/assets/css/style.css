@@ -65,6 +65,20 @@ input, textarea {
 	width: 100%;
 }
 
+#btnOK {
+	font-size: 12px;
+	color: black;
+	border-radius: 15px;
+	padding: 5px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+#btnOK:hover {
+	color: white;
+	background-color: black;
+}
+
 .mostrar {
 	text-decoration: none;
 }
