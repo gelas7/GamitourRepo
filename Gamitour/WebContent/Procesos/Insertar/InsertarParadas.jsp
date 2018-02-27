@@ -13,6 +13,8 @@
 <title>Panel Admin</title>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
+<script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+<script type="text/javascript" src="assets/js/scriptMaps.js"></script>
 
 </head>
 
@@ -80,9 +82,7 @@
 					Ubicación: <input type="text" name="ubicacion" required="required"
 						id="search">
 
-
-					<button type="button" onClick="mapa.getCoords()">Obtener
-						coordenadas</button>
+					<button type="button" id="btnOK">Obtener coordenadas</button>
 				</p>
 				<p>
 					Latutid: <input type="text" id="lat" name="latitud" readonly>
@@ -97,44 +97,5 @@
 			</form>
 		</div>
 	</div>
-	<script type="text/javascript"
-		src="https://maps.google.com/maps/api/js"></script>
-	<script>
-		mapa = {
-			map : false,
-			marker : false,
-
-			// función que se ejecuta al pulsar el botón buscar dirección
-			getCoords : function() {
-
-			
-				// Creamos el objeto geodecoder
-				var geocoder = new google.maps.Geocoder();
-
-				address = document.getElementById('search').value;
-				if (address != '') {
-					// Llamamos a la función geodecode pasandole la dirección que hemos introducido en la caja de texto.
-					geocode.geocode(
-									{
-										'address' : address
-									},
-									function(results, status) {
-										if (status == 'OK') {
-
-											// Mostramos las coordenadas obtenidas 
-											document.getElementById("lat").value = results[0].geometry.location
-													.lat().toFixed(4);
-											
-
-											document.getElementById("lng").value = results[0].geometry.location
-													.lng().toFixed(4);
-											;
-											agendaForm.showMapaEventForm();
-										}
-									});
-				}
-			}
-		}
-	</script>
 </body>
 </html>
