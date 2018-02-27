@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -41,16 +41,16 @@
 				<li><a class="botonMenu" id="pruebasdeportivas">PD</a></li>
 				<li><a class="botonMenu" id="comentarios">Comentarios</a></li>
 			</ul>
-			<button id="divActual" value="${divActual}" hidden></button>
+			<button id="divActual" value="${divActual}" hidden="hidden"></button>
 		</div>
 
 		<div class="page">
 			<header>
-			<ul>
-				<li><a href=""><i class="far fa-user"></i> ${email}</a></li>
-				<li><a id="logout" href="Logout"><i
-						class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
-			</ul>
+				<ul>
+					<li><a><i class="far fa-user"></i> ${email}</a></li>
+					<li><a id="logout" href="Logout"><i
+							class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+				</ul>
 			</header>
 
 			<div class="logo">
