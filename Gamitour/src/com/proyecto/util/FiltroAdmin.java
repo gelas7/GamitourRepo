@@ -26,13 +26,15 @@ public class FiltroAdmin implements Filter {
 		HttpSession sesion = req.getSession();
 		String url = req.getServletPath();
 
-		if (url.contains("BuscarAdmin.do") || url.contains("login.jsp") || url.contains("index.html")  ) {
-			chain.doFilter(req, res); 
+		if (url.contains("BuscarAdmin.do") || url.contains("login.jsp") || url.contains("index.html")) {
+			chain.doFilter(req, res);
 		} else {
 
 			sesion.setAttribute("url", url); // Guardo ruta
 
 			String email = (String) req.getSession().getAttribute("email");
+
+			email = email.toLowerCase();
 
 			boolean logueado = sesion != null && email != null;
 
@@ -42,7 +44,7 @@ public class FiltroAdmin implements Filter {
 				res.sendRedirect("/Gamitour/login.jsp");
 		}
 	}
-	
+
 	public void destroy() {
 	}
 
