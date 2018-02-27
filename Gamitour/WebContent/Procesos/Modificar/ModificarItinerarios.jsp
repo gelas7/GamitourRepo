@@ -11,9 +11,6 @@
 <title>Panel Admin</title>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-<link
-	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
-	rel="stylesheet">
 </head>
 
 <body>
@@ -45,7 +42,7 @@
 
 			<form action="../../ModificarItinerarios.do" method="get">
 
-				<h2 id="modificar">Modifique los campos necesarios.</h2>
+			<h2 id="modificar">Modifique los campos necesarios.</h2>
 				<h3>Los campos en blanco no sufrirán cambios.</h3>
 
 				<input type="hidden" value="<%=request.getParameter("id")%>"
