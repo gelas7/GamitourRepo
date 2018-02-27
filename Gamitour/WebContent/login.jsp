@@ -14,7 +14,7 @@
 <body id="todoLogin">
 
 	<form id="loginform" method="post" action="BuscarAdmin.do">
-		<IMG SRC="immagine.gif" ALT="Obra de K. Haring">
+
 		<h1 id="lgntitle">Login</h1>
 		<input name="email" type="text" class="input" placeholder="E-mail" />
 		<input name="password" type="password" class="input"
