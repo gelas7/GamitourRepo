@@ -27,16 +27,18 @@ public class InsertarParadasAccion extends Accion {
 		String gastronomia = request.getParameter("gastronomia");
 		String imagen = request.getParameter("imagen");
 		String itinerario = request.getParameter("itinerario");
+		String latitud = request.getParameter("lat");
+		String longitud = request.getParameter("lng");
+
+		double lat = Double.valueOf(latitud).doubleValue();
+		double lng = Double.valueOf(longitud).doubleValue();
 
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));
-
-		Double latitud = 1.1;
-		Double longitud = 1.1;
 
 		// AQUI PROCESAMOS LATITUD Y LONGITUD EN FUNCIÓN DE LA UBICACION
 
 		Parada p = new Parada(i, nombre, Integer.parseInt(numeroParada), ubicacion, historia, anecdotario, gastronomia,
-				imagen, latitud, longitud);
+				imagen, lat, lng);
 
 		sp.insertar(p);
 

@@ -13,6 +13,7 @@
 <title>Panel Admin</title>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
+
 </head>
 
 <body>
@@ -51,9 +52,7 @@
 					Numero de parada: <input type="number" name="numeroParada"
 						required="required">
 				</p>
-				<p>
-					Ubicación: <input type="text" name="ubicacion" required="required">
-				</p>
+
 				<p>
 					Historia: <input type="text" name="historia" required="required">
 				</p>
@@ -78,10 +77,64 @@
 						onchange="handleFiles(this.files)" required="required">
 				</p>
 				<p>
+					Ubicación: <input type="text" name="ubicacion" required="required"
+						id="search">
+
+
+					<button type="button" onClick="mapa.getCoords()">Obtener
+						coordenadas</button>
+				</p>
+				<p>
+					Latutid: <input type="text" id="lat" name="latitud" readonly>
+				</p>
+
+				<p>
+					Longitud: <input type="text" id="lng" name="longitud" readonly>
+				</p>
+				<p>
 					<input type="submit" value="Enviar" id="enviar">
 				</p>
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript"
+		src="https://maps.google.com/maps/api/js"></script>
+	<script>
+		mapa = {
+			map : false,
+			marker : false,
+
+			// función que se ejecuta al pulsar el botón buscar dirección
+			getCoords : function() {
+
+			
+				// Creamos el objeto geodecoder
+				var geocoder = new google.maps.Geocoder();
+
+				address = document.getElementById('search').value;
+				if (address != '') {
+					// Llamamos a la función geodecode pasandole la dirección que hemos introducido en la caja de texto.
+					geocode.geocode(
+									{
+										'address' : address
+									},
+									function(results, status) {
+										if (status == 'OK') {
+
+											// Mostramos las coordenadas obtenidas 
+											document.getElementById("lat").value = results[0].geometry.location
+													.lat().toFixed(4);
+											
+
+											document.getElementById("lng").value = results[0].geometry.location
+													.lng().toFixed(4);
+											;
+											agendaForm.showMapaEventForm();
+										}
+									});
+				}
+			}
+		}
+	</script>
 </body>
 </html>
