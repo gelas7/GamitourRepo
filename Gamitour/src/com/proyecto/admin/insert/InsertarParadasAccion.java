@@ -30,8 +30,8 @@ public class InsertarParadasAccion extends Accion {
 
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));
 
-		double latitud = 1.1;
-		double longitud = 1.1;
+		Double latitud = 1.1;
+		Double longitud = 1.1;
 
 		// AQUI PROCESAMOS LATITUD Y LONGITUD EN FUNCIÓN DE LA UBICACION
 
