@@ -1,5 +1,8 @@
 package com.proyecto.admin.insert;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -27,15 +30,23 @@ public class InsertarParadasAccion extends Accion {
 		String gastronomia = request.getParameter("gastronomia");
 		String imagen = request.getParameter("imagen");
 		String itinerario = request.getParameter("itinerario");
-		String latitud = request.getParameter("lat");
-		String longitud = request.getParameter("lng");
+		String latitud = request.getParameter("latitud");
+		String longitud = request.getParameter("longitud");
 		
-		Double lat = Double.valueOf(latitud);
-		Double lng = Double.valueOf(longitud);
+		System.out.println(latitud +"-"+ longitud);
+		NumberFormat nf = NumberFormat.getInstance();
+		float lat = 0;
+		float lng = 0;
+		
+		try {
+			lat = nf.parse(latitud).floatValue();
+			lng = nf.parse(longitud).floatValue();
+
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));
-
-		// AQUI PROCESAMOS LATITUD Y LONGITUD EN FUNCIÓN DE LA UBICACION
 
 		Parada p = new Parada(i, nombre, Integer.parseInt(numeroParada), ubicacion, historia, anecdotario, gastronomia,
 				imagen, lat, lng);

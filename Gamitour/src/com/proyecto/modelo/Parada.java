@@ -27,8 +27,8 @@ public class Parada implements java.io.Serializable {
 	private String imagen;
 	private Set<PruebaCultural> pruebaculturales = new HashSet<PruebaCultural>(0);
 	private Set<PruebaDeportiva> pruebadeportivas = new HashSet<PruebaDeportiva>(0);
-	private Double latitud;
-	private Double longitud;
+	private Float latitud;
+	private Float longitud;
 
 	public Parada() {
 	}
@@ -39,7 +39,7 @@ public class Parada implements java.io.Serializable {
 	}
 
 	public Parada(Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion, String historia,
-			String anecdotario, String gastronomia, String imagen, Double latitud, Double longitud) {
+			String anecdotario, String gastronomia, String imagen, Float latitud, Float longitud) {
 		this.itinerario = itinerario;
 		this.nombre = nombre;
 		this.numeroParada = numeroParada;
@@ -161,21 +161,21 @@ public class Parada implements java.io.Serializable {
 		this.pruebadeportivas = pruebadeportivas;
 	}
 	
-	@Column(name = "latitud", precision = 22, scale = 0)
-	public Double getLatitud() {
+	@Column(name = "latitud")
+	public Float getLatitud() {
 		return latitud;
 	}
 
-	public void setLatitud(Double latitud) {
+	public void setLatitud(Float latitud) {
 		this.latitud = latitud;
 	}
 	
-	@Column(name = "longitud", precision = 22, scale = 0)
-	public Double getLongitud() {
+	@Column(name = "longitud")
+	public Float getLongitud() {
 		return longitud;
 	}
 
-	public void setLongitud(Double longitud) {
+	public void setLongitud(Float longitud) {
 		this.longitud = longitud;
 	}
 
