@@ -5,7 +5,7 @@
 <%@ page import="com.proyecto.modelo.*"%>
 <%@ page import="java.util.*"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -55,7 +55,7 @@
 					Nombre: <input type="text" name="nombre" required="required">
 				</p>
 				<p>
-					Descripcion: <input type="textarea" name="descripcion"
+					Descripcion: <input type="text" name="descripcion"
 						required="required">
 				</p>
 				<p>

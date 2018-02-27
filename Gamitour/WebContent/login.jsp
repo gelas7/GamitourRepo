@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -11,15 +11,15 @@
 	rel="stylesheet">
 <title>Página de login</title>
 </head>
-<body id="todoLogin">
+<body id="loginBody">
 
 	<form id="loginForm" method="post" action="BuscarAdmin.do">
 
 		<p id="loginTitle">Login</p>
 
-		<input name="email" type="text" class="input" placeholder="E-mail" />
+		<input name="email" type="text" required="required" class="input-login" placeholder="E-mail" />
 
-		<input name="password" type="password" class="input"
+		<input name="password" type="password" required="required" class="input-login"
 			placeholder="Password" /> 
 			
 		<input type="submit" class="loginbutton"
