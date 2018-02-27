@@ -170,6 +170,7 @@ table a:hover {
 
 input[type=submit] {
 	font-size: 15px;
+	font-weight:bold;
 	color: black;
 	border-radius: 15px;
 	padding: 5px;
@@ -236,16 +237,6 @@ form {
 	text-align: left;
 }
 
-#imagenInicio {
-	margin-top: 80px;
-}
-
-#divclientes, #divitinerarios, #divactividades, #divnoticias,
-	#divparadas, #divroles, #divcomentarios, #divvotos, #divmultimedias,
-	#divpruebasculturales, #divpruebasdeportivas, #divpremios {
-	display: none;
-}
-
 table button {
 	text-decoration: none;
 	padding: 5px;
@@ -269,7 +260,6 @@ tfoot td {
 tfoot td:hover {
 	background-color: white;
 }
-
 
 #logout:hover {
 	transition: 0.5s;
@@ -296,7 +286,6 @@ tfoot td:hover {
 	height: 50px;
 	margin: 20px 0 20px 17px;
 	font-size: 24px;
-	font-weigth:bold;
 	border: none;
 	cursor: pointer;
 }
@@ -327,11 +316,22 @@ tfoot td:hover {
 	font-size: 14px;
 	margin-top: 15px;
 }
-#map{
-	margin-right:60px;
+
+#map {
+	margin-right: 60px;
 }
-#formMapa
-{
-	display:flex;
-	flex-direction:row;
+
+#formMapa {
+	display: flex;
+	flex-direction: row;
+}
+
+#imagenInicio {
+	margin-top: 80px;
+}
+
+#divclientes, #divitinerarios, #divactividades, #divnoticias,
+	#divparadas, #divroles, #divcomentarios, #divvotos, #divmultimedias,
+	#divpruebasculturales, #divpruebasdeportivas, #divpremios {
+	display: none;
 }

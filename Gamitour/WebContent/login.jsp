@@ -23,7 +23,7 @@
 			placeholder="Password" /> 
 			
 		<input type="submit" class="loginbutton"
-			value="ENTRAR" />
+			value="ENTRAR"/>
 	</form>
 
 </body>
