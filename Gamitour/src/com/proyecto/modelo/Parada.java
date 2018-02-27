@@ -27,7 +27,8 @@ public class Parada implements java.io.Serializable {
 	private String imagen;
 	private Set<PruebaCultural> pruebaculturales = new HashSet<PruebaCultural>(0);
 	private Set<PruebaDeportiva> pruebadeportivas = new HashSet<PruebaDeportiva>(0);
-
+	private double latitud;
+	private double longitud;
 
 	public Parada() {
 	}
@@ -38,7 +39,7 @@ public class Parada implements java.io.Serializable {
 	}
 
 	public Parada(Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion, String historia,
-			String anecdotario, String gastronomia, String imagen) {
+			String anecdotario, String gastronomia, String imagen, double latitud, double longitud) {
 		this.itinerario = itinerario;
 		this.nombre = nombre;
 		this.numeroParada = numeroParada;
@@ -47,8 +48,8 @@ public class Parada implements java.io.Serializable {
 		this.anecdotario = anecdotario;
 		this.gastronomia = gastronomia;
 		this.imagen = imagen;
-		// this.latitud = latitud;
-		// this.longitud = longitud;
+		this.latitud = latitud;
+		this.longitud = longitud;
 	}
 
 	@Override
@@ -158,6 +159,24 @@ public class Parada implements java.io.Serializable {
 
 	public void setPruebadeportivas(Set<PruebaDeportiva> pruebadeportivas) {
 		this.pruebadeportivas = pruebadeportivas;
+	}
+	
+	@Column(name = "latitud", precision = 22, scale = 0)
+	public double getLatitud() {
+		return latitud;
+	}
+
+	public void setLatitud(double latitud) {
+		this.latitud = latitud;
+	}
+	
+	@Column(name = "longitud", precision = 22, scale = 0)
+	public double getLongitud() {
+		return longitud;
+	}
+
+	public void setLongitud(double longitud) {
+		this.longitud = longitud;
 	}
 
 	@Override

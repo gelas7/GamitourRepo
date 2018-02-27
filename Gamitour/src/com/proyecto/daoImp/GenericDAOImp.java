@@ -27,9 +27,8 @@ public abstract class GenericDAOImp<T, Id extends Serializable> implements Gener
 			sf.getCurrentSession().beginTransaction();
 			sf.getCurrentSession().save(t);
 			sf.getCurrentSession().getTransaction().commit();
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
+			System.out.println("Error" + e.getMessage());
 			sf.getCurrentSession().getTransaction().rollback();
 		}
 	}
@@ -39,9 +38,8 @@ public abstract class GenericDAOImp<T, Id extends Serializable> implements Gener
 			sf.getCurrentSession().beginTransaction();
 			sf.getCurrentSession().delete(t);
 			sf.getCurrentSession().getTransaction().commit();
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
+			System.out.println("Error" + e.getMessage());
 			sf.getCurrentSession().getTransaction().rollback();
 		}
 	}
@@ -51,9 +49,8 @@ public abstract class GenericDAOImp<T, Id extends Serializable> implements Gener
 			sf.getCurrentSession().beginTransaction();
 			sf.getCurrentSession().update(t);
 			sf.getCurrentSession().getTransaction().commit();
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
+			System.out.println("Error" + e.getMessage());
 			sf.getCurrentSession().getTransaction().rollback();
 		}
 	}
@@ -63,47 +60,51 @@ public abstract class GenericDAOImp<T, Id extends Serializable> implements Gener
 		List<T> lista = null;
 		try {
 			sf.getCurrentSession().beginTransaction();
-			Query q = sf.getCurrentSession().createQuery("select o from " +clase.getSimpleName()+" o");
+			Query q = sf.getCurrentSession().createQuery("select o from " + clase.getSimpleName() + " o");
 			lista = q.getResultList();
 			sf.getCurrentSession().getTransaction().commit();
-			
-		} catch (RuntimeException e) {
+		} catch (Exception e) {
+			System.out.println("Error" + e.getMessage());
 			sf.getCurrentSession().getTransaction().rollback();
 		}
 		return lista;
-		
+
 	}
 
 	public T buscarPorClave(Id id) {
 		T objeto = null;
 		sf.getCurrentSession().beginTransaction();
-		Query q = sf.getCurrentSession().createQuery("select c from "+clase.getSimpleName()+" c where id=:id");
+		Query q = sf.getCurrentSession().createQuery("select c from " + clase.getSimpleName() + " c where id=:id");
 		q.setParameter("id", id);
 
 		try {
 			objeto = (T) q.getSingleResult();
-		} catch (javax.persistence.NoResultException ex) {
-			System.out.println("No hubo resultados en la busqueda por id. ");
+			sf.getCurrentSession().getTransaction().commit();
+
+		} catch (Exception e) {
+			System.out.println("Error" + e.getMessage());
+			sf.getCurrentSession().getTransaction().rollback();
 		}
 
-		sf.getCurrentSession().getTransaction().commit();
 		return objeto;
 
 	}
-	
+
 	public T buscarPorNombre(String nombre) {
 		T objeto = null;
 		sf.getCurrentSession().beginTransaction();
-		Query q = sf.getCurrentSession().createQuery("select c from "+ clase.getSimpleName() +" c where nombre=:nombre");
+		Query q = sf.getCurrentSession()
+				.createQuery("select c from " + clase.getSimpleName() + " c where nombre=:nombre");
 		q.setParameter("nombre", nombre);
 
 		try {
 			objeto = (T) q.getSingleResult();
-		} catch (javax.persistence.NoResultException ex) {
-			System.out.println("No hubo resultados en la busqueda por nombre. ");
+			sf.getCurrentSession().getTransaction().commit();
+		} catch (Exception e) {
+			System.out.println("Error" + e.getMessage());
+			sf.getCurrentSession().getTransaction().rollback();
 		}
 
-		sf.getCurrentSession().getTransaction().commit();
 		return objeto;
 
 	}
