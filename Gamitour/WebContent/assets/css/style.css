@@ -232,10 +232,9 @@ p, ul {
 }
 
 form {
-	padding: 2px;
+	padding-left: 30px;
 	cursor: pointer;
 	width: 400px;
-	margin: 0 auto;
 	text-align: left;
 }
 
