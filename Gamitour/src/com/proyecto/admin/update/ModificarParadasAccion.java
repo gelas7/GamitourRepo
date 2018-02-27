@@ -25,19 +25,25 @@ public class ModificarParadasAccion extends Accion {
 		String gastronomia = request.getParameter("gastronomia");
 		String itinerario = request.getParameter("itinerario");
 		String imagen = request.getParameter("imagen");
-
+		String latitud = request.getParameter("latitud");
+		String longitud = request.getParameter("longitud");
 
 		ServiceParadasImp sp = new ServiceParadasImp();
 		ServiceItinerariosImp si = new ServiceItinerariosImp();
-		
+
 		Parada parada = sp.buscarPorClave(Integer.parseInt(id));
 
 		if (nombre != "") // Compruebo si se han hecho cambios
 			parada.setNombre(nombre);
-		if (numeroParada != "") 
+		if (numeroParada != "")
 			parada.setNumeroParada(Integer.parseInt(numeroParada));
-		if (ubicacion != "") 
+		if (ubicacion != "" && latitud != "" && longitud != "") {
+			float lat = Float.parseFloat(latitud);
+			float lng = Float.parseFloat(longitud);
 			parada.setUbicacion(ubicacion);
+			parada.setLatitud(lat);
+			parada.setLongitud(lng);
+		}
 		if (historia != "")
 			parada.setHistoria(historia);
 		if (anecdotario != "")
@@ -50,9 +56,9 @@ public class ModificarParadasAccion extends Accion {
 		}
 		if (imagen != "")
 			parada.setImagen(imagen);
-		
+
 		sp.actualizar(parada);
-		
+
 		return "MostrarAdmin.do?div=paradas";
 	}
 
