@@ -17,9 +17,6 @@
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-<link
-	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
-	rel="stylesheet">
 
 </head>
 
