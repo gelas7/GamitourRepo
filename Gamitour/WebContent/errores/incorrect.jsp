@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h1>Usuario o contraseña incorrectos</h1>
-	<a href="/Gamitour/login.jsp">Volver al índice</a>
+	<a href="/Gamitour/index.html">Volver al inicio</a>
 </body>
 </html>

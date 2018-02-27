@@ -18,6 +18,11 @@ public class BuscarAdminAccion extends Accion {
 		String email = (String) request.getParameter("email"); // Recojo los parametros del login
 		String pass = (String) request.getParameter("password");
 		Cliente c = sc.buscarClientePorEmail(email);
+		
+		System.out.println("URL: "+url);
+		System.out.println(email);
+		System.out.println(pass);
+		System.out.println(c);
 
 		String rutaSalida = "errores/incorrect.jsp"; // Por aqui seguira el programa al final
 
