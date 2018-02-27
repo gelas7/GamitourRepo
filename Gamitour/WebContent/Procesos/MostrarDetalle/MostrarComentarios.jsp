@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -52,7 +51,7 @@
 						Cerrar sesión</a></li>
 			</ul>
 				<ul>
-					<li><a href=""><i class="far fa-user"></i> ${email}</a></li>
+					<li><a><i class="far fa-user"></i> ${email}</a></li>
 					<li><a href="Logout"><i class="fas fa-sign-out-alt"></i>
 							Cerrar sesión</a></li>
 				</ul>
