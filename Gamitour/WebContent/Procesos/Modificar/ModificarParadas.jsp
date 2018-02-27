@@ -12,6 +12,9 @@
 <title>Panel Admin</title>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
+	<link
+	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
+	rel="stylesheet">
 <script type="text/javascript" src="../../assets/js/scriptMaps.js"></script>
 <script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U&callback=initMap"></script>
