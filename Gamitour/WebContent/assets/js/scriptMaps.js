@@ -16,37 +16,29 @@ window.onload = function() {
 
 			document.getElementById("lng").value = results[0].geometry.location
 					.lng().toFixed(4);
-
+			initMap(results);
 		});
 
 	}
 
-	var map;
-
-	function initMap() {
-
-		// Defino los mapas
-
-		map = new google.maps.Map(document.getElementById('map'), {
+	function initMap(results) {
+		map = new google.maps.Map(document.getElementById("map"), {
 			center : {
-				lat : results[0].geometry.location.lat().toFixed(4),
-				lng : results[0].geometry.location.lng().toFixed(4)
+				lat : results[0].geometry.location.lat(),
+				lng : results[0].geometry.location.lng()
 			},
 			zoom : 12
 		});
 
-		// Defino las paradas marcadas en cada mapa
 		marker = new google.maps.Marker({
 			map : map,
 			draggable : true,
 			animation : google.maps.Animation.DROP,
 			position : {
-				lat : results[0].geometry.location.lat().toFixed(4),
-				lng : results[0].geometry.location.lng().toFixed(4)
+				lat : results[0].geometry.location.lat(),
+				lng : results[0].geometry.location.lng()
 			}
 		});
-
 		marker.addListener('click', toggleBounce);
-
 	}
 }

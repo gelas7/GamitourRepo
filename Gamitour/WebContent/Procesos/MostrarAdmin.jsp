@@ -9,20 +9,18 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Panel de Administración</title>
 
+<script src="assets/js/script.js" type="text/javascript"></script>
+<script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script src="assets/js/pagination-tda-plugin.js" type="text/javascript"></script>
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
 <link
 	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
 	rel="stylesheet">
-	<script src="assets/js/script.js" type="text/javascript"></script>
-	<script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
-	<script src="assets/js/jquery.tablesorter.min.js"
-		type="text/javascript"></script>
-	<script src="assets/js/pagination-tda-plugin.js" type="text/javascript"></script>
 
-
-	<script defer
-		src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>

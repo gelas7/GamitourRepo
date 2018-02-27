@@ -14,7 +14,8 @@
 
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U&callback=initMap"></script>
+<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U&callback=initMap"></script>
 <script type="text/javascript" src="../../assets/js/scriptMaps.js"></script>
 
 </head>
@@ -94,10 +95,10 @@
 				<p>
 					<input type="submit" value="Enviar" id="enviar">
 				</p>
-				 
+
 			</form>
-			 <div id="map" class="map"></div>
 		</div>
+		<div id="map" class="map" style="width:400px;height:400px;"></div>
 	</div>
 </body>
 </html>
