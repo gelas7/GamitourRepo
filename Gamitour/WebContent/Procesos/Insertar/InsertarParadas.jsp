@@ -11,10 +11,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Panel Admin</title>
+
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-<script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
-<script type="text/javascript" src="assets/js/scriptMaps.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U&callback=initMap"></script>
+<script type="text/javascript" src="../../assets/js/scriptMaps.js"></script>
 
 </head>
 
@@ -79,15 +80,14 @@
 						onchange="handleFiles(this.files)" required="required">
 				</p>
 				<p>
-					Ubicación: <input type="text" name="ubicacion" required="required"
-						id="search">
+					Ubicación: <input type="text" id="search" name="ubicacion"
+						required="required">
 
 					<button type="button" id="btnOK">Obtener coordenadas</button>
 				</p>
 				<p>
-					Latutid: <input type="text" id="lat" name="latitud" readonly>
+					Latitud: <input type="text" id="lat" name="latitud" readonly>
 				</p>
-
 				<p>
 					Longitud: <input type="text" id="lng" name="longitud" readonly>
 				</p>

@@ -29,9 +29,9 @@ public class InsertarParadasAccion extends Accion {
 		String itinerario = request.getParameter("itinerario");
 		String latitud = request.getParameter("lat");
 		String longitud = request.getParameter("lng");
-
-		double lat = Double.valueOf(latitud).doubleValue();
-		double lng = Double.valueOf(longitud).doubleValue();
+		
+		Double lat = Double.valueOf(latitud);
+		Double lng = Double.valueOf(longitud);
 
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));
 

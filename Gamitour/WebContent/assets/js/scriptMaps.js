@@ -1,24 +1,23 @@
 window.onload = function() {
 
-    var botonOK = document.getElementById("btnOK");
-    botonOK.addEventListener("click", getCoords, false);
-    var geocoder = new google.maps.Geocoder();
-    alert("INICIO");
+	var botonOK = document.getElementById("btnOK");
+	botonOK.addEventListener("click", getCoords, false);
+	var geocoder = new google.maps.Geocoder();
 
-    function getCoords() {
-        alert("ENTRO");
-        address = document.getElementById('search').value;
-        if (address != '') {
-            geocoder.geocode({
-                'address': address
-            }, function(results, status) {
+	function getCoords() {
 
-                document.getElementById("lat").value = results[0].geometry.location.lat().toFixed(4);
+		address = document.getElementById("search").value;
 
-                document.getElementById("lng").value = results[0].geometry.location.lng().toFixed(4);
+		geocoder.geocode({
+			'address' : address
+		}, function(results, status) {
+			document.getElementById("lat").value = results[0].geometry.location
+					.lat().toFixed(4);
 
-            });
-        }
+			document.getElementById("lng").value = results[0].geometry.location
+					.lng().toFixed(4);
 
-    }
+		});
+
+	}
 }
