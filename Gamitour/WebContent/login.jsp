@@ -6,9 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-<link
-	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
-	rel="stylesheet">
+
 <title>Página de login</title>
 </head>
 <body id="loginBody">

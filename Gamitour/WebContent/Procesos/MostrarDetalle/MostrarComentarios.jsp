@@ -11,16 +11,12 @@
 
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-<link
-	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
-	rel="stylesheet">
-	<script src="assets/js/script.js"></script>
-	<script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
-	<script src="assets/js/jquery.tablesorter.min.js"
-		type="text/javascript"></script>
-	<script src="assets/js/pagination-tda-plugin.js" type="text/javascript"></script>
-	<script defer
-		src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script src="assets/js/pagination-tda-plugin.js" type="text/javascript"></script>
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>
@@ -45,11 +41,11 @@
 		<div class="page">
 
 			<header>
-			<ul>
-				<li><a><i class="far fa-user"></i> ${email}</a></li>
-				<li><a href="Logout"><i class="fas fa-sign-out-alt"></i>
-						Cerrar sesión</a></li>
-			</ul>
+				<ul>
+					<li><a><i class="far fa-user"></i> ${email}</a></li>
+					<li><a href="Logout"><i class="fas fa-sign-out-alt"></i>
+							Cerrar sesión</a></li>
+				</ul>
 				<ul>
 					<li><a><i class="far fa-user"></i> ${email}</a></li>
 					<li><a href="Logout"><i class="fas fa-sign-out-alt"></i>

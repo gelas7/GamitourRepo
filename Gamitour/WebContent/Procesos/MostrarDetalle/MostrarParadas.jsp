@@ -11,9 +11,6 @@
 
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-<link
-	href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha"
-	rel="stylesheet">
 <script src="assets/js/script.js"></script>
 <script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
