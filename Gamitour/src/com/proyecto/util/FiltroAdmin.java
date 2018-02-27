@@ -34,8 +34,6 @@ public class FiltroAdmin implements Filter {
 
 			String email = (String) req.getSession().getAttribute("email");
 
-			email = email.toLowerCase();
-
 			boolean logueado = sesion != null && email != null;
 
 			if (logueado)
