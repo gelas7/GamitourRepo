@@ -13,12 +13,16 @@
 </head>
 <body id="todoLogin">
 
-	<form id="loginform" method="post" action="BuscarAdmin.do">
+	<form id="loginForm" method="post" action="BuscarAdmin.do">
 
-		<h1 id="lgntitle">Login</h1>
+		<p id="loginTitle">Login</p>
+
 		<input name="email" type="text" class="input" placeholder="E-mail" />
+
 		<input name="password" type="password" class="input"
-			placeholder="Password" /> <input type="submit" class="loginbutton"
+			placeholder="Password" /> 
+			
+		<input type="submit" class="loginbutton"
 			value="ENTRAR" />
 	</form>
 
