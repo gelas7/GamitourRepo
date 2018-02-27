@@ -24,6 +24,7 @@ public class MySQLClientesDAOImp extends GenericDAOImp<Cliente, Integer> impleme
 		}
 
 		sf.getCurrentSession().getTransaction().commit();
+		
 		return c;
 	}
 }
