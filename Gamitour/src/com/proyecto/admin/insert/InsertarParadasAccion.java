@@ -33,19 +33,9 @@ public class InsertarParadasAccion extends Accion {
 		String latitud = request.getParameter("latitud");
 		String longitud = request.getParameter("longitud");
 		
-		System.out.println(latitud +"-"+ longitud);
-		NumberFormat nf = NumberFormat.getInstance();
-		float lat = 0;
-		float lng = 0;
+		float lat = Float.parseFloat(latitud);
+		float lng = Float.parseFloat(longitud);
 		
-		try {
-			lat = nf.parse(latitud).floatValue();
-			lng = nf.parse(longitud).floatValue();
-
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));
 
 		Parada p = new Parada(i, nombre, Integer.parseInt(numeroParada), ubicacion, historia, anecdotario, gastronomia,
