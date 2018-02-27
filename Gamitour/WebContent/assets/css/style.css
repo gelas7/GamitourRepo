@@ -231,8 +231,7 @@ p, ul {
 form {
 	padding: 2px;
 	cursor: pointer;
-	display: block;
-	width: 390px;
+	width: 1000px;
 	margin: 0 auto;
 	text-align: left;
 }
