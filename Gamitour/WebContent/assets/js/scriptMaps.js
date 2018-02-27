@@ -40,5 +40,11 @@ window.onload = function() {
 			}
 		});
 		marker.addListener('click', toggleBounce);
+		
+		//var lat = marker.getPosition().lat();
+		//var lng = marker.getPosition().lng();
+		
+		
+		
 	}
 }
