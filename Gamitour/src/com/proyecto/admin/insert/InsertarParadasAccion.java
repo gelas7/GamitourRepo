@@ -29,10 +29,15 @@ public class InsertarParadasAccion extends Accion {
 		String itinerario = request.getParameter("itinerario");
 		String latitud = request.getParameter("latitud");
 		String longitud = request.getParameter("longitud");
-		
-		float lat = Float.parseFloat(latitud);
-		float lng = Float.parseFloat(longitud);
-		
+
+		float lat=0,lng=0;
+		try {
+			lat = Float.parseFloat(latitud);
+			lng = Float.parseFloat(longitud);
+		} catch (Exception e) {
+			System.out.println("Excepcion controlada al procesar coordenadas.");
+		}
+
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));
 
 		Parada p = new Parada(i, nombre, Integer.parseInt(numeroParada), ubicacion, historia, anecdotario, gastronomia,
