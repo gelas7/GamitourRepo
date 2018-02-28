@@ -15,16 +15,15 @@ public class BuscarAdminAccion extends Accion {
 		ServiceClientesImp sc = new ServiceClientesImp();
 
 		String url = (String) request.getSession().getAttribute("url");
-		String email = (String) request.getParameter("email"); // Recojo los parametros del login
+		String email = (String) request.getParameter("email"); 
 		String pass = (String) request.getParameter("password");
 		Cliente c = sc.buscarClientePorEmail(email);
 
-		System.out.println("URL: " + url);
-		System.out.println(email);
-		System.out.println(pass);
-		System.out.println(c);
+		System.out.println("Entro en buscaradmin con url destino: " + url);
+		System.out.println("Email: "+email);
+		System.out.println("Pass: "+pass);
 
-		String rutaSalida = "errores/incorrect.jsp"; // Por aqui seguira el programa al final
+		String rutaSalida = "errores/incorrect.jsp";
 
 		if (c != null) { // Si usuario existe
 			if (c.getPassword().equals(pass)) // Compruebo pass
@@ -32,16 +31,14 @@ public class BuscarAdminAccion extends Accion {
 				String rol = c.getRol().getNombre().toLowerCase(); // Extraigo rol
 
 				if (rol.equals("administrador")) {
-					System.out.println("Bienvenido admin");
 					request.getSession().setAttribute("email", c.getEmail());
-					if (url != null)
-						rutaSalida = url; // MODIFICO SALIDA
+					rutaSalida = url; // MODIFICO SALIDA
 				} else {
 					rutaSalida = "errores/error.jsp"; // MODIFICO SALIDA
 				}
 			}
 		}
-
+		System.out.println("Salgo con email: "+email+" y rutasalida: "+rutaSalida);
 		return rutaSalida;
 	}
 }
