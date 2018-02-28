@@ -21,6 +21,10 @@
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 
+	<session-config>
+		<session-timeout>1</session-timeout>
+	</session-config>
+
 	<filter>
 		<filter-name>FiltroAdmin</filter-name>
 		<filter-class>com.proyecto.util.FiltroAdmin</filter-class>
