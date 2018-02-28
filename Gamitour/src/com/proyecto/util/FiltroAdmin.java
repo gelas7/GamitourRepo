@@ -35,7 +35,7 @@ public class FiltroAdmin implements Filter {
 			System.out.println("No deberias estar aqui sin url jovencito");
 			res.sendRedirect("/Gamitour/index.html");
 		} else {
-			sesion.setAttribute("url", url);
+			req.getSession().setAttribute("url", url);
 			String email = (String) req.getSession().getAttribute("email");
 			System.out.println("Compruebo si hay email en sesion: " + email);
 			boolean logueado = sesion != null && email != null;
