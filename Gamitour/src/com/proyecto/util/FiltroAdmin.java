@@ -25,25 +25,22 @@ public class FiltroAdmin implements Filter {
 
 		HttpSession sesion = req.getSession();
 		String url = req.getServletPath();
-		System.out.println("ENTRO AL FILTRO");
+		System.out.println("URL"+url);
 
-		if (url.contains("BuscarAdmin.do") || url.contains("login.jsp") || url.contains("index.html")) {
+		if (url.contains("BuscarAdmin.do")) {
 			chain.doFilter(req, res);
 		} else {
-
-			System.out.println("Guardo la ruta: "+ url);
+			
+			System.out.println("Guardo la ruta: " + url);
 			sesion.setAttribute("url", url); // Guardo ruta desde index.html
 
 			String email = (String) req.getSession().getAttribute("email");
-			System.out.println("Email: "+email);
+			System.out.println("Email: " + email);
 			boolean logueado = sesion != null && email != null;
 
 			if (logueado) {
-				System.out.println("Logueado");
 				chain.doFilter(req, res);
-			}
-			else {
-				System.out.println("A login ");
+			} else {
 				res.sendRedirect("/Gamitour/login.jsp");
 			}
 		}

@@ -31,10 +31,6 @@
 	</filter-mapping>
 	<filter-mapping>
 		<filter-name>FiltroAdmin</filter-name>
-		<url-pattern>*.jsp</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-		<filter-name>FiltroAdmin</filter-name>
-		<url-pattern>*.html</url-pattern>
+		<url-pattern>/Procesos/*</url-pattern>
 	</filter-mapping>
 </web-app>
