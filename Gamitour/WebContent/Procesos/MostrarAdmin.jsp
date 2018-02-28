@@ -61,7 +61,7 @@
 				<div class="tablas" id="divBienvenida">
 					<hr></hr>
 					<h2>Bienvenido. Seleccione una opción del menu lateral.</h2>
-					<img id="imagenInicio" src="images/asturias.png"
+					<img id="imagenInicio" src="assets/css/images/asturias.png"
 						alt="Asturias, Paraiso Natural" />
 				</div>
 
