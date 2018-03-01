@@ -16,4 +16,6 @@ public interface ServicePruebasDeportivas {
 	public PruebaDeportiva buscarPorNombre(String nombre);
 
 	public List<PruebaDeportiva> buscarTodos();
+
+	public List<PruebaDeportiva> buscarPruebasDepPorParada(String id);
 }

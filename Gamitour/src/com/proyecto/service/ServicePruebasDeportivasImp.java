@@ -46,5 +46,10 @@ public class ServicePruebasDeportivasImp implements ServicePruebasDeportivas {
 	public PruebaDeportiva buscarPorNombre(String nombre) {
 		return pdd.buscarPorNombre(nombre);
 	}
+	
+	@Override
+	public List<PruebaDeportiva> buscarPruebasDepPorParada(String id) {
+		return pdd.buscarPruebasDepPorParada(id);
+	}
 
 }

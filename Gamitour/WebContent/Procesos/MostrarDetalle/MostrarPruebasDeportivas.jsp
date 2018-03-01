@@ -4,25 +4,23 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Panel de Administración</title>
 
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
-
 <script src="assets/js/script.js"></script>
 <script src="assets/js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
 <script src="assets/js/pagination-tda-plugin.js" type="text/javascript"></script>
-
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>
 	<div class="flex">
-
 		<div class="menu">
 			<ul>
 				<li><a href="MostrarAdmin.do?div=actividades">Actividades</a></li>
@@ -54,36 +52,46 @@
 					<a href="MostrarAdmin.do">Panel de Administracion Gamitour</a>
 				</h1>
 			</div>
+
 			<div class="contenedor">
 
-				<h1>Listado de Votos en el multimedia</h1>
-				<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
+				<h1>Listado de Pruebas Deportivas ${nombreParada}</h1>
+				<a class="insertar"
+					href="Procesos/Insertar/InsertarPruebasDeportivas.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
 				<p>
-					<label for="searchtvotos"><i class="fas fa-search"></i></label> <input
-						type="text" id="searchtvotos" value="" />
+					<label for="searchtcomentarios"><i class="fas fa-search"></i></label>
+					<input type="text" id="searchtcomentarios" value="" />
 				</p>
-				<table id="tvotos" class="tablesorter">
+				<table id="tpruebasdeportivas" class="tablesorter">
 					<thead>
 						<tr>
-							<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
-							<th>Multimedia <i id="icono" class="fas fa-sort"></i></th>
+							<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
+							<th>Inicio <i id="icono" class="fas fa-sort"></i></th>
+							<th>Fin <i id="icono" class="fas fa-sort"></i></th>
+							<th>Explicación <i id="icono" class="fas fa-sort"></i></th>
 							<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
+							<th>Parada <i id="icono" class="fas fa-sort"></i></th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${listaVotos}" var="v">
+						<c:forEach items="${listaPruebasDeportivas}" var="pD">
 							<tr>
-								<td>${v.cliente.getNombre()}</td>
-								<td>${v.multimedia.getIdmultimedia()}</td>
-								<td>${v.puntos}</td>
+								<td>${pD.nombre}</td>
+								<td>${pD.fechainicio}</td>
+								<td>${pD.fechafin}</td>
+								<td>${pD.explicacion}</td>
+								<td>${pD.puntos}</td>
+								<td>${pD.parada.getNombre()}</td>
 								<td><a class="eliminar"
-									href="EliminarVotos.do?id=${v.idvoto}"
-									onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
+									onclick="return confirm('¿Está seguro de que quiere continuar?')"
+									href="EliminarPruebasDeportivas.do?id=${pD.idpruebadeportiva}"><i
 										class="fas fa-trash-alt"></i></a></td>
 								<td><a class="actualizar"
-									href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
+									href="Procesos/Modificar/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}"><i
 										class="fas fa-edit"></i> </a></td>
+								<td><a class="mostrar"
+									href="MostrarMultimedias.do?id=${pD.idpruebadeportiva}">Multimedia</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -94,9 +102,3 @@
 	<div id="footer"></div>
 </body>
 </html>
-
-
-
-
-
-

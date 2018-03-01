@@ -11,13 +11,13 @@ body {
 	font-size: 13px;
 	font-family: Optima, sans-serif;
 	width:95%;
+	min-width:750px;
 }
 
 header {
 	float: right;
 	color: black;
-	margin-right: 70px;
-	margin-top: 20px;
+	margin: 20px 70px 0 20px;
 }
 
 header a {
@@ -269,8 +269,8 @@ tfoot td:hover {
 
 #logout:hover {
 	transition: 0.5s;
-	color: #a1c3ff;
-	font-size: 19px;
+	color: #265ed7;
+	font-size: 16px;
 	cursor: pointer;
 	outline: none;
 }
@@ -336,9 +336,7 @@ tfoot td:hover {
 	margin-top: 80px;
 }
 
-#divclientes, #divitinerarios, #divactividades, #divnoticias,
-	#divparadas, #divroles, #divcomentarios, #divvotos, #divmultimedias,
-	#divpruebasculturales, #divpruebasdeportivas, #divpremios {
+.tablas {
 	display: none;
 }
 
@@ -347,13 +345,12 @@ label {
 	color: #346086;
 }
 
-p input[type=text] {
-	width: 20px;
+.tablas input,.contenedor input {
+	width: 80px;
 	box-sizing: border-box;
 	border: 2px solid #ccc;
 	border-radius: 4px;
 	font-size: 14px;
-	background-color: white;
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
 	padding: 5px 5px 5px 5px;
@@ -361,6 +358,6 @@ p input[type=text] {
 	transition: width 0.4s ease-in-out;
 }
 
-p input[type=text]:focus {
-	width: 13%;
+.tablas input:focus {
+	width: 18%;
 }

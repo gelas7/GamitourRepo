@@ -291,6 +291,8 @@
 									<td><a class="actualizar"
 										href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
 											class="fas fa-edit"></i> </a></td>
+									<td><a class="mostrar"
+										href="MostrarPruebasDeportivas.do?id=${parada.idparada}">Pruebas Deportivas</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>

@@ -59,11 +59,12 @@
 			<div class="contenedor">
 
 				<h1>Listado de Paradas en ${nombreItinerario}</h1>
-				<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp"><i
+				<br> <a class="insertar"
+					href="Procesos/Insertar/InsertarParadasDetalle.jsp?idItinerario=${idItinerario}"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
 				<p>
-					<label for="searchtparadas"><i class="fas fa-search"></i></label>
-					<input type="text" id="searchtparadas" value="" />
+					<label for="searchtparadas"><i class="fas fa-search"></i></label> <input
+						type="text" id="searchtparadas" value="" />
 				</p>
 				<table id="tparadas" class="tablesorter">
 					<thead>
@@ -96,6 +97,9 @@
 								<td><a class="actualizar"
 									href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
 										class="fas fa-edit"></i> </a></td>
+								<td><a class="mostrar"
+									href="MostrarPruebasDeportivas.do?id=${parada.idparada}">Pruebas
+										Deportivas</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
