@@ -55,7 +55,7 @@
 
 			<div class="contenedor">
 
-				<h1>Listado de Pruebas Deportivas ${nombreParada}</h1>
+				<h1>Listado de Pruebas Deportivas en ${nombreParada}</h1>
 				<a class="insertar"
 					href="Procesos/Insertar/InsertarPruebasDeportivas.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>

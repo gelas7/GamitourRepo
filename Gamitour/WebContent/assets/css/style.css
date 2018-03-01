@@ -151,11 +151,6 @@ tr:nth-child(even) {
 	text-decoration: none;
 }
 
-.tablas h1 {
-	padding-bottom: 20px;
-	font-family: 'Ubuntu', sans-serif;
-}
-
 table {
 	margin-top: 10px;
 	color: #333;
@@ -356,6 +351,11 @@ label {
 	padding: 5px 5px 5px 5px;
 	-webkit-transition: width 0.4s ease-in-out;
 	transition: width 0.4s ease-in-out;
+}
+
+.contenedor h1
+{
+	margin-bottom:15px;
 }
 
 .tablas input:focus {

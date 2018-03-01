@@ -59,7 +59,7 @@
 			<div class="contenedor">
 
 				<h1>Listado de Paradas en ${nombreItinerario}</h1>
-				<br> <a class="insertar"
+				<a class="insertar"
 					href="Procesos/Insertar/InsertarParadasDetalle.jsp?idItinerario=${idItinerario}"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
 				<p>
