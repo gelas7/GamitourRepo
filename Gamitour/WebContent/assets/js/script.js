@@ -1,27 +1,24 @@
 window.onload = function() {
 
-	var tablas = document.getElementsByClassName("tablas");// Cargo divs de
-	// tablas
-	var divActual = document.getElementById("divActual");// Almaceno div que
-	// se está mostrando
+	var tablas = document.getElementsByClassName("tablas");
+	var divActual = document.getElementById("divActual");
 	var botonesMenu = document.getElementsByClassName("botonMenu");
-
-	for (var i = 0; i < botonesMenu.length; i++) {// Event listeners botones
-		// de menu
+	
+	for (var i = 0; i < botonesMenu.length; i++) {// Event listeners menu
 		botonesMenu[i].addEventListener("click", mostrar, false);
 	}
 
 	var tablesorter = document.getElementsByClassName("tablesorter");
-
-	ordenar();
-	paginar();
-	buscar();
 
 	if (divActual.value != "") { // Si hay divActual lo muestro al recargar
 		mostrarDivActual(divActual.value);
 	} else { // Si no lo hay muestro la bienvenida
 		divBienvenida.style.display = "block";
 	}
+
+	ordenar();
+	paginar();
+	buscar();
 
 	function ordenar() {
 		$('.tablesorter').tablesorter();
@@ -50,18 +47,9 @@ window.onload = function() {
 		document.getElementById(concateno).style.display = "block";
 	}
 
-	function ocultarTodos() { // Oculto todos los divs de tablas
-		for (var i = 0; i < tablas.length; i++) {
-			tablas[i].style.display = "none";
-		}
-		for (var i = 0; i < botonesMenu.length; i++) {
-			botonesMenu[i].style.color = "white";
-		}
-	}
-
 	function buscar(table) {
 		$("#search" + table).keyup(
-				// Botones #searchtclientes
+				// Botones #searchtclientes (por ejemplo)
 				function() {
 					if ($(this).val() != "") {
 						$("#" + table + " tbody>tr").hide();
@@ -71,7 +59,6 @@ window.onload = function() {
 								.show();
 					} else
 						$("#" + table + " tbody>tr").show();
-
 				});
 
 		$.extend($.expr[":"],
@@ -82,5 +69,14 @@ window.onload = function() {
 								(match[3] || "").toLowerCase()) >= 0;
 					}
 				});
+	}
+
+	function ocultarTodos() { // Oculto todos los divs de tablas
+		for (var i = 0; i < tablas.length; i++) {
+			tablas[i].style.display = "none";
+		}
+		for (var i = 0; i < botonesMenu.length; i++) {
+			botonesMenu[i].style.color = "white";
+		}
 	}
 }

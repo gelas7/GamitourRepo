@@ -24,13 +24,13 @@ public class FiltroAdmin implements Filter {
 		HttpSession session = req.getSession();
 
 		String url = req.getServletPath();
-
 		String urlsesion = (String) session.getAttribute("url");
 
 		if (url.contains("BuscarAdmin.do") && urlsesion != null) {
 			chain.doFilter(req, res);
-		} else if (url.contains("BuscarAdmin.do") && urlsesion == null) { // ESTE ES EL FALLO
-			res.sendRedirect(res.encodeRedirectURL("/Gamitour/index.html"));
+		} else if (url.contains("BuscarAdmin.do") && urlsesion == null) { 
+			session.setAttribute(url, "MostrarAdmin.do");
+			chain.doFilter(req, res);
 		} else {
 			session.setAttribute("url", url);
 			String email = (String) session.getAttribute("email");
