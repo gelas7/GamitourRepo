@@ -15,6 +15,7 @@ window.onload = function() {
 
 	ordenar();
 	paginar();
+	buscar();
 
 	if (divActual.value != "") { // Si hay divActual lo muestro al recargar
 		mostrarDivActual(divActual.value);
@@ -32,6 +33,7 @@ window.onload = function() {
 			$("#" + tablesorter[i].id).paginationTdA({
 				elemPerPage : 5
 			});
+			buscar(tablesorter[i].id);
 		}
 	}
 
@@ -55,5 +57,30 @@ window.onload = function() {
 		for (var i = 0; i < botonesMenu.length; i++) {
 			botonesMenu[i].style.color = "white";
 		}
-	}	
+	}
+
+	function buscar(table) {
+		$("#search" + table).keyup(
+				// Botones #searchtclientes
+				function() {
+					if ($(this).val() != "") {
+						$("#" + table + " tbody>tr").hide();
+						$(
+								"#" + table + " td:contains-ci('"
+										+ $(this).val() + "')").parent("tr")
+								.show();
+					} else
+						$("#" + table + " tbody>tr").show();
+
+				});
+
+		$.extend($.expr[":"],
+				{
+					"contains-ci" : function(elem, i, match, array) {
+						return (elem.textContent || elem.innerText
+								|| $(elem).text() || "").toLowerCase().indexOf(
+								(match[3] || "").toLowerCase()) >= 0;
+					}
+				});
+	}
 }

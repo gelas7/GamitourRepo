@@ -67,10 +67,15 @@
 
 				<!-- DIV CLIENTES -->
 
+
 				<div class="tablas" id="divclientes">
 					<h1>Listado de Clientes</h1>
 					<a class="insertar" href="Procesos/Insertar/InsertarClientes.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
+					<p>
+						<label for="searchtclientes">Buscar:</label> <input type="text"
+							id="searchtclientes" value="" />
+					</p>
 					<table id="tclientes" class="tablesorter">
 						<thead>
 							<tr>
@@ -121,6 +126,10 @@
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarActividades.html"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtactividades">Buscar:</label> <input type="text"
+							id="searchtactividades" value="" />
+					</p>
 					<table id="tactividades" class="tablesorter">
 						<thead>
 							<tr>
