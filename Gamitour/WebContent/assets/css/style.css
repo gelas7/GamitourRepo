@@ -96,7 +96,7 @@ h2 {
 	font-size: 23px;
 	font-family: 'Ubuntu', sans-serif;
 	color: #346086;
-	margin-bottom:30px;
+	margin-bottom: 30px;
 }
 
 a {
@@ -339,4 +339,27 @@ tfoot td:hover {
 	#divparadas, #divroles, #divcomentarios, #divvotos, #divmultimedias,
 	#divpruebasculturales, #divpruebasdeportivas, #divpremios {
 	display: none;
+}
+
+label {
+	font-size: 16px;
+	color: #346086;
+}
+
+p input[type=text] {
+	width: 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
+	background-color: white;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 5px 5px 5px 5px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+p input[type=text]:focus {
+	width: 13%;
 }
