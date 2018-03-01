@@ -73,8 +73,8 @@
 					<a class="insertar" href="Procesos/Insertar/InsertarClientes.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
-						<label for="searchtclientes">Buscar:</label> <input type="text"
-							id="searchtclientes" value="" />
+						<label for="searchtclientes"><i class="fas fa-search"></i></label>
+						<input type="text" id="searchtclientes" value="" />
 					</p>
 					<table id="tclientes" class="tablesorter">
 						<thead>
@@ -127,8 +127,8 @@
 						href="Procesos/Insertar/InsertarActividades.html"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
 					<p>
-						<label for="searchtactividades">Buscar:</label> <input type="text"
-							id="searchtactividades" value="" />
+						<label for="searchtactividades"><i class="fas fa-search"></i></label>
+						<input type="text" id="searchtactividades" value="" />
 					</p>
 					<table id="tactividades" class="tablesorter">
 						<thead>
@@ -175,6 +175,10 @@
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarItinerarios.html"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtitinerarios"><i class="fas fa-search"></i></label>
+						<input type="text" id="searchtitinerarios" value="" />
+					</p>
 					<table id="titinerarios" class="tablesorter">
 						<thead>
 							<tr>
@@ -212,6 +216,10 @@
 					<h1>Listado de Noticias</h1>
 					<a class="insertar" href="Procesos/Insertar/InsertarNoticias.html"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtnoticias"><i class="fas fa-search"></i></label>
+						<input type="text" id="searchtnoticias" value="" />
+					</p>
 					<table id="tnoticias" class="tablesorter">
 						<thead>
 							<tr>
@@ -248,6 +256,10 @@
 					<h1>Listado de Paradas</h1>
 					<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtparadas"><i class="fas fa-search"></i></label>
+						<input type="text" id="searchtparadas" value="" />
+					</p>
 					<table id="tparadas" class="tablesorter">
 						<thead>
 							<tr>
@@ -292,6 +304,11 @@
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarPruebasCulturales.jsp"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtpruebasculturales"><i
+							class="fas fa-search"></i></label> <input type="text"
+							id="searchtpruebasculturales" value="" />
+					</p>
 					<table id="tpruebasculturales" class="tablesorter">
 						<thead>
 							<tr>
@@ -330,6 +347,11 @@
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarPruebasDeportivas.jsp"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtpruebasdeportivas"><i
+							class="fas fa-search"></i></label> <input type="text"
+							id="searchtpruebasdeportivas" value="" />
+					</p>
 					<table id="tpruebasdeportivas" class="tablesorter">
 						<thead>
 							<tr>
@@ -371,6 +393,10 @@
 					<h1>Listado de Premios</h1>
 					<a class="insertar" href="Procesos/Insertar/InsertarPremios.jsp"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtpremios"><i class="fas fa-search"></i></label>
+						<input type="text" id="searchtpremios" value="" />
+					</p>
 					<table id="tpremios" class="tablesorter">
 						<thead>
 							<tr>
@@ -413,6 +439,10 @@
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarMultimedias.jsp"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtmultimedias"><i class="fas fa-search"></i></label>
+						<input type="text" id="searchtmultimedias" value="" />
+					</p>
 					<table id="tmultimedias" class="tablesorter">
 						<thead>
 							<tr>
@@ -459,6 +489,10 @@
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarComentarios.jsp"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtcomentarios"><i class="fas fa-search"></i></label>
+						<input type="text" id="searchtcomentarios" value="" />
+					</p>
 					<table id="tcomentarios" class="tablesorter">
 						<thead>
 							<tr>
@@ -492,6 +526,10 @@
 					<h1>Listado de votos</h1>
 					<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
 						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+					<p>
+						<label for="searchtvotos"><i class="fas fa-search"></i></label> <input
+							type="text" id="searchtvotos" value="" />
+					</p>
 					<table id="tvotos" class="tablesorter">
 						<thead>
 							<tr>
