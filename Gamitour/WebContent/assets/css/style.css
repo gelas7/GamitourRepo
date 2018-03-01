@@ -10,6 +10,7 @@ body {
 	background: #FFFFFF url(images/img01.gif) repeat-x;
 	font-size: 13px;
 	font-family: Optima, sans-serif;
+	width:95%;
 }
 
 header {
@@ -64,7 +65,7 @@ input, textarea {
 }
 
 .page {
-	width: 100%;
+	width: 90%;
 }
 
 #btnOK {

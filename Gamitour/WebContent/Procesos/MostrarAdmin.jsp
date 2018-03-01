@@ -125,7 +125,7 @@
 					<h1>Listado de Actividades</h1>
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarActividades.html"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtactividades"><i class="fas fa-search"></i></label>
 						<input type="text" id="searchtactividades" value="" />
@@ -174,7 +174,7 @@
 					<h1>Listado de Itinerarios</h1>
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarItinerarios.html"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtitinerarios"><i class="fas fa-search"></i></label>
 						<input type="text" id="searchtitinerarios" value="" />
@@ -215,7 +215,7 @@
 				<div class="tablas" id="divnoticias">
 					<h1>Listado de Noticias</h1>
 					<a class="insertar" href="Procesos/Insertar/InsertarNoticias.html"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtnoticias"><i class="fas fa-search"></i></label>
 						<input type="text" id="searchtnoticias" value="" />
@@ -255,7 +255,7 @@
 				<div class="tablas" id="divparadas">
 					<h1>Listado de Paradas</h1>
 					<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtparadas"><i class="fas fa-search"></i></label>
 						<input type="text" id="searchtparadas" value="" />
@@ -303,7 +303,7 @@
 					<h1>Listado de Pruebas Culturales</h1>
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarPruebasCulturales.jsp"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtpruebasculturales"><i
 							class="fas fa-search"></i></label> <input type="text"
@@ -346,7 +346,7 @@
 					<h1>Listado de Pruebas Deportivas</h1>
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarPruebasDeportivas.jsp"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtpruebasdeportivas"><i
 							class="fas fa-search"></i></label> <input type="text"
@@ -392,7 +392,7 @@
 				<div class="tablas" id="divpremios">
 					<h1>Listado de Premios</h1>
 					<a class="insertar" href="Procesos/Insertar/InsertarPremios.jsp"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtpremios"><i class="fas fa-search"></i></label>
 						<input type="text" id="searchtpremios" value="" />
@@ -438,7 +438,7 @@
 					<h1>Listado de elementos Multimedia</h1>
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarMultimedias.jsp"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtmultimedias"><i class="fas fa-search"></i></label>
 						<input type="text" id="searchtmultimedias" value="" />
@@ -488,7 +488,7 @@
 					<h1>Listado de Comentarios</h1>
 					<a class="insertar"
 						href="Procesos/Insertar/InsertarComentarios.jsp"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtcomentarios"><i class="fas fa-search"></i></label>
 						<input type="text" id="searchtcomentarios" value="" />
@@ -525,7 +525,7 @@
 				<div class="tablas" id="divvotos">
 					<h1>Listado de votos</h1>
 					<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
-						class="fas fa-plus-circle"></i>Añadir nuevo</a>
+						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtvotos"><i class="fas fa-search"></i></label> <input
 							type="text" id="searchtvotos" value="" />
