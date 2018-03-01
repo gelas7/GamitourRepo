@@ -25,11 +25,11 @@ public class FiltroAdmin implements Filter {
 
 		String url = req.getServletPath();
 		String urlsesion = (String) session.getAttribute("url");
-
+		
 		if (url.contains("BuscarAdmin.do") && urlsesion != null) {
 			chain.doFilter(req, res);
-		} else if (url.contains("BuscarAdmin.do") && urlsesion == null) { 
-			session.setAttribute(url, "MostrarAdmin.do");
+		} else if (url.contains("BuscarAdmin.do") && urlsesion == null) { //Si no pasa por login
+			session.setAttribute("url", "/MostrarAdmin.do");
 			chain.doFilter(req, res);
 		} else {
 			session.setAttribute("url", url);
