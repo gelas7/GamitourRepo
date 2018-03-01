@@ -60,6 +60,10 @@
 				<h1>Listado de Multimedias en ${nombrePruebaDeportiva}</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
+				<p>
+					<label for="searchtmultimedias"><i class="fas fa-search"></i></label>
+					<input type="text" id="searchtmultimedias" value="" />
+				</p>
 				<table id="tmultimedias" class="tablesorter">
 					<thead>
 						<tr>

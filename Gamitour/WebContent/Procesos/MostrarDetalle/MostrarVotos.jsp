@@ -60,6 +60,10 @@
 				<h1>Listado de Votos en el multimedia</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
+				<p>
+					<label for="searchtvotos"><i class="fas fa-search"></i></label> <input
+						type="text" id="searchtvotos" value="" />
+				</p>
 				<table id="tvotos" class="tablesorter">
 					<thead>
 						<tr>

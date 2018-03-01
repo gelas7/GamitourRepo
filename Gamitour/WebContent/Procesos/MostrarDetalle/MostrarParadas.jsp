@@ -61,6 +61,10 @@
 				<h1>Listado de Paradas en ${nombreItinerario}</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
+				<p>
+					<label for="searchtparadas"><i class="fas fa-search"></i></label>
+					<input type="text" id="searchtparadas" value="" />
+				</p>
 				<table id="tparadas" class="tablesorter">
 					<thead>
 						<tr>
