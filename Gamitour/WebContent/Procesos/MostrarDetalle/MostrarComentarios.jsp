@@ -64,6 +64,10 @@
 				<h1>Listado de Comentarios en el multimedia</h1>
 				<a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
+				<p>
+					<label for="searchtcomentarios"><i class="fas fa-search"></i></label> <input
+						type="text" id="searchtcomentarios" value="" />
+				</p>
 				<table id="tcomentarios" class="tablesorter">
 					<thead>
 						<tr>
