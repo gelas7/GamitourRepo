@@ -19,7 +19,7 @@ public class MySQLParadasDAOImp extends GenericDAOImp<Parada, Integer> implement
 		List<Parada> lista = null;
 		try {
 			sf.getCurrentSession().beginTransaction();
-			Query q = sf.getCurrentSession().createQuery("select p from Parada p where itinerario_iditinerario=:id order by nombre");
+			Query q = sf.getCurrentSession().createQuery("select p from Parada p where itinerario_iditinerario=:id order by numeroParada");
 			q.setParameter("id", idItinerario);
 			lista = q.getResultList();
 			sf.getCurrentSession().getTransaction().commit();
