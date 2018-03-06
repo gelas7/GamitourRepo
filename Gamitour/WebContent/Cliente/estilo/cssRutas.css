@@ -94,6 +94,13 @@ li a:hover {
     border: 1px solid black;
 }
 
+.directions:hover,
+.datosParadas:hover {
+    font-size: 22px;
+    height: 240px;
+    cursor: url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/map-marker-icon.png'), auto;
+}
+
 #contenedorItinerarios,
 #contenedorParadas {
     display: grid;
