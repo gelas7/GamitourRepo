@@ -1,0 +1,142 @@
+[{
+        "iditinerario": 2,
+        "nombre": "Gijon-Oviedo-Avilés",
+        "categoria": "Deportes",
+        "duracion": "1 semana",
+        "ubicacion": "Varias Zonas",
+        "paradas": [{
+                "idparada": 9,
+                "nombre": "Gijon",
+                "numeroParada": 2,
+                "ubicacion": "Gijon, Asturias",
+                "latitud": 43.5395,
+                "longitud": -5.6494,
+                "historia": "Practicaremos varios deportes",
+                "anecdotario": "muy saludable",
+                "gastronomia": "aperitivo",
+                "imagen": "14580-2.jpg",
+                "itinerario_iditinerario": 2
+            },
+            {
+                "idparada": 11,
+                "nombre": "Oviedo",
+                "numeroParada": 5,
+                "ubicacion": "Oviedo, Asturias",
+                "latitud": 43.5352,
+                "longitud": 0.6274,
+                "historia": "Deporte tradicional",
+                "anecdotario": "Puede ser divertido",
+                "gastronomia": "Bollo preñao a los ganadores",
+                "imagen": "14580-2.jpg",
+                "itinerario_iditinerario": 2
+            },
+            {
+                "idparada": 10,
+                "nombre": "Avilés",
+                "numeroParada": 3,
+                "ubicacion": "Aviles, Asturias",
+                "latitud": 43.5352,
+                "longitud": -5.6274,
+                "historia": "Aprenderemos tenis",
+                "anecdotario": "Nos visitará Pablo Carreño",
+                "gastronomia": "Fruta al terminar",
+                "imagen": "14590-1.jpg",
+                "itinerario_iditinerario": 2
+            }
+        ]
+    },
+    {
+        "iditinerario": 3,
+        "nombre": "Oviedo-Avilés-Madrid",
+        "categoria": "Deportes",
+        "duracion": "2",
+        "ubicacion": "Gijon",
+        "paradas": [{
+                "idparada": 11,
+                "nombre": "Oviedo",
+                "numeroParada": 5,
+                "ubicacion": "Oviedo, Asturias",
+                "latitud": 43.5352,
+                "longitud": 0.6274,
+                "historia": "Deporte tradicional",
+                "anecdotario": "Puede ser divertido",
+                "gastronomia": "Bollo preñao a los ganadores",
+                "imagen": "14580-2.jpg",
+                "itinerario_iditinerario": 2
+            },
+            {
+                "idparada": 10,
+                "nombre": "Avilés",
+                "numeroParada": 3,
+                "ubicacion": "Aviles, Asturias",
+                "latitud": 43.5352,
+                "longitud": -5.6274,
+                "historia": "Aprenderemos tenis",
+                "anecdotario": "Nos visitará Pablo Carreño",
+                "gastronomia": "Fruta al terminar",
+                "imagen": "14590-1.jpg",
+                "itinerario_iditinerario": 2
+            },
+            {
+                "idparada": 11,
+                "nombre": "Madrid",
+                "numeroParada": 5,
+                "ubicacion": "Madrid , España",
+                "latitud": 43.5352,
+                "longitud": 0.6274,
+                "historia": "Deporte tradicional",
+                "anecdotario": "Puede ser divertido",
+                "gastronomia": "Bollo preñao a los ganadores",
+                "imagen": "14580-2.jpg",
+                "itinerario_iditinerario": 2
+            }
+        ]
+    },
+    {
+        "iditinerario": 3,
+        "nombre": "Murcia-Santander-Bilbao",
+        "categoria": "Deportes",
+        "duracion": "2",
+        "ubicacion": "Gijon",
+        "paradas": [{
+                "idparada": 11,
+                "nombre": "Murcia",
+                "numeroParada": 5,
+                "ubicacion": "Murcia, España",
+                "latitud": 43.5352,
+                "longitud": 0.6274,
+                "historia": "Deporte tradicional",
+                "anecdotario": "Puede ser divertido",
+                "gastronomia": "Bollo preñao a los ganadores",
+                "imagen": "14580-2.jpg",
+                "itinerario_iditinerario": 2
+            },
+            {
+                "idparada": 10,
+                "nombre": "Santander",
+                "numeroParada": 3,
+                "ubicacion": "Santander, Cantabria",
+                "latitud": 43.5352,
+                "longitud": -5.6274,
+                "historia": "Aprenderemos tenis",
+                "anecdotario": "Nos visitará Pablo Carreño",
+                "gastronomia": "Fruta al terminar",
+                "imagen": "14590-1.jpg",
+                "itinerario_iditinerario": 2
+            },
+            {
+                "idparada": 11,
+                "nombre": "Bilbao",
+                "numeroParada": 5,
+                "ubicacion": "Bilbao, España",
+                "latitud": 43.5352,
+                "longitud": 0.6274,
+                "historia": "Deporte tradicional",
+                "anecdotario": "Puede ser divertido",
+                "gastronomia": "Bollo preñao a los ganadores",
+                "imagen": "14580-2.jpg",
+                "itinerario_iditinerario": 2
+            }
+        ]
+    }
+]

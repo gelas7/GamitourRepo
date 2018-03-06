@@ -1,0 +1,87 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin-left: 0;
+    min-width: 1130px;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+li {
+    width: 100%;
+}
+
+li a {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(32, 30, 30);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-family: 'Francois One', sans-serif;
+}
+
+li a:hover {
+    background-color: rgb(23, 24, 23);
+    color: #f4d03f;
+}
+
+.cabecera {
+    color: rgb(23, 24, 23);
+    background-color: #f4d03f;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 1s opacity;
+}
+
+#gamitour {
+    margin-top: 40px;
+    font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+    font-weight: 100;
+    background: rgba(243, 227, 6, 0.322);
+    color: white;
+    padding: 2rem;
+    width: 33%;
+    margin: 2rem;
+    float: right;
+    font-size: 30px;
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    letter-spacing: .3rem;
+}
