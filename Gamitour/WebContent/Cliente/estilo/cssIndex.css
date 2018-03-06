@@ -66,14 +66,14 @@ video {
 }
 
 #gamitour {
-    margin-top: 40px;
+    margin-top: 100px;
     font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
     font-weight: 100;
     background: rgba(243, 227, 6, 0.322);
-    color: black;
+    color: rgb(7, 7, 7);
     padding: 2rem;
     width: 33%;
-    margin: 2rem;
+    margin: 3rem;
     float: right;
     font-size: 30px;
     font-family: 'Amatic SC', cursive;
@@ -84,4 +84,23 @@ h1 {
     text-transform: uppercase;
     margin-top: 0;
     letter-spacing: .3rem;
+}
+
+#gamitour button {
+    display: block;
+    width: 80%;
+    padding: .4rem;
+    border: none;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    background: rgba(252, 227, 7, 0.788);
+    color: rgb(59, 56, 56);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s background;
+}
+
+#gamitour button:hover {
+    background: black;
+    color: rgba(252, 227, 7, 0.788);
 }
