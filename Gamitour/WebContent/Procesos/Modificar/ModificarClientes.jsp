@@ -66,7 +66,7 @@
 				</p>
 				<p>
 					Password: <input type="password" name="password"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPassword()%>">
+						placeholder="********">
 				</p>
 				<p>
 					Telefono: <input type="text" name="telefono"
