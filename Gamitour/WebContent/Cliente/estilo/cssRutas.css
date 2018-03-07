@@ -217,9 +217,9 @@ li a:hover {
 @media (max-width: 600px) {
     html,
     body {
-        background-image: url("../img/p1.jpg");
+        background-color: #1d1c1c;
         background-size: 100%;
-        width: 100%;
+        width: 50%;
         height: 100%;
         padding: 0;
         margin-left: 0;
@@ -230,7 +230,8 @@ li a:hover {
         font-size: 12px;
         font-family: 'Cuprum', sans-serif;
         margin-top: 95px;
-        margin-left: 40px;
+        margin-bottom: 95px;
+        margin-left: 60px;
     }
     #contenedorParadas {
         display: flex;
@@ -256,7 +257,7 @@ li a:hover {
     }
     .botonesItinerario {
         margin-top: 30px;
-        margin-left: 25px;
+        margin-left: 10px;
         display: inline-flex;
     }
     .directions:hover,
