@@ -12,31 +12,22 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-
+	
 	<servlet>
 		<servlet-name>com.proyecto.controlador.UsuarioController</servlet-name>
 		<servlet-class>com.proyecto.controlador.UsuarioController</servlet-class>
 	</servlet>
-
+	
 	<servlet-mapping>
 		<servlet-name>com.proyecto.controlador.UsuarioController</servlet-name>
 		<url-pattern>*.do</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Uploadservlet</servlet-name>
-		<servlet-class>com.candidjava.servlet.upload.UploadServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Uploadservlet</servlet-name>
-		<url-pattern>/upload</url-pattern>
 	</servlet-mapping>
 
 	<filter>
 		<filter-name>FiltroAdmin</filter-name>
 		<filter-class>com.proyecto.util.FiltroAdmin</filter-class>
 	</filter>
-
+	
 	<filter-mapping>
 		<filter-name>FiltroAdmin</filter-name>
 		<url-pattern>*.do</url-pattern>
