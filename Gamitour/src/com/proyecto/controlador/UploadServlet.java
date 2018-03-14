@@ -14,28 +14,27 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private final String UPLOAD_DIRECTORY = "/Users/Gelas/Desktop/subidas/";
+
+	@SuppressWarnings("unused")
+	private final String UPLOAD_DIRECTORY1 = "/opt/subidas/";
+	@SuppressWarnings("unused")
+	private final String UPLOAD_DIRECTORY2 = "/User/Gelas/Desktop/";
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		if (ServletFileUpload.isMultipartContent(request)) {
-			try {
+		try {
 
-				List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
-				for (FileItem item : multiparts) {
-					if (!item.isFormField()) {
-						item.write(new File(UPLOAD_DIRECTORY + File.separator + item.getName()));
-					}
+			List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
+			for (FileItem item : multiparts) {
+				if (!item.isFormField()) {
+					item.write(new File(UPLOAD_DIRECTORY1 + File.separator + item.getName()));
 				}
-
-			} catch (Exception ex) {
-				request.setAttribute("message", "Fallo al subir el archivo " + ex);
 			}
 
-		} else {
-			request.setAttribute("message", "Sorry this Servlet only handles file upload request");
+		} catch (Exception ex) {
+			System.out.println("Error al manejar los ficheros.");
 		}
 
-		request.getRequestDispatcher("result.jsp").forward(request, response);
+		request.getRequestDispatcher("errores/end.jsp").forward(request, response);
 	}
 }

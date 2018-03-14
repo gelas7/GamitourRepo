@@ -9,13 +9,5 @@
 </script>
 </head>
 <body>
-	<div id="result">
-		<h3>${requestScope["message"]}</h3>
-		<br>
-	</div>
-	Nombre del fichero : ${requestScope["name"]}
-	<br> Tamaño del fichero : ${requestScope["size"]} kb
-	<br> Tipo de archivo : ${requestScope["type"]}
-
 </body>
 </html>

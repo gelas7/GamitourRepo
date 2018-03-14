@@ -42,10 +42,9 @@
 			</div>
 			<h2>Insertar Multimedia</h2>
 
-			<form action="../../upload" method="post"
-				enctype="multipart/form-data" target="_blank" name="subir">
-				<input type="file" name="file" multiple /> <input type="submit"
-					value="Subir archivo/s" class="uploadSubmit">
+			<form action="../../upload" method="post" enctype="multipart/form-data" target="_blank">
+				<input type="file" name="file" multiple /> 
+				<input type="submit" value="Subir archivo/s" class="uploadSubmit">
 			</form>
 
 			<form action="../../InsertarMultimedias.do" method="get"
