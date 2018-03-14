@@ -1,11 +1,17 @@
 package com.proyecto.admin.insert;
 
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import com.proyecto.modelo.Cliente;
 
@@ -49,7 +55,8 @@ public class InsertarMultimediasAccion extends Accion {
 
 		Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
 
-		sm.insertar(new Multimedia(c, date1, comentario, imagen, video, Integer.parseInt(idPd), Integer.parseInt(puntos)));
+		sm.insertar(
+				new Multimedia(c, date1, comentario, imagen, video, Integer.parseInt(idPd), Integer.parseInt(puntos)));
 
 		request.setAttribute("listaMultimedias", sm.buscarTodos());
 

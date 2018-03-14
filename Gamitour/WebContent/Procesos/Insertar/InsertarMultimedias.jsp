@@ -5,7 +5,6 @@
 <%@ page import="com.proyecto.modelo.*"%>
 <%@ page import="java.util.*"%>
 
-<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -41,9 +40,16 @@
 						Gamitour</a>
 				</h1>
 			</div>
+			<h2>Insertar Multimedia</h2>
 
-			<form action="../../InsertarMultimedias.do" method="get">
-				<h2>Insertar Multimedia</h2>
+			<form action="../../upload" method="post"
+				enctype="multipart/form-data" target="_blank" name="subir">
+				<input type="file" name="file" multiple /> <input type="submit"
+					value="Subir archivo/s" class="uploadSubmit">
+			</form>
+
+			<form action="../../InsertarMultimedias.do" method="get"
+				enctype="multipart/form-data">
 
 				<p>
 					Cliente: <select name="cliente">
@@ -74,18 +80,10 @@
 					</select>
 				</p>
 				<p>
-					Imagen: <input type="file" name="imagen"
-						onchange="handleFiles(this.files)" required="required">
-				</p>
-				<p>
-					Video: <input type="file" name="video"
-						onchange="handleFiles(this.files)" required="required">
-				</p>
-				<p>
 					<input type="submit" value="Enviar" id="enviar">
 				</p>
-
 			</form>
+
 		</div>
 	</div>
 </body>

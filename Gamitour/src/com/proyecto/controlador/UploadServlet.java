@@ -14,38 +14,28 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private final String UPLOAD_DIRECTORY = "/Users/Gelas/Desktop";
+	private final String UPLOAD_DIRECTORY = "/Users/Gelas/Desktop/subidas/";
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		if (ServletFileUpload.isMultipartContent(request)) {
 			try {
-				String fname = null;
-				String fsize = null;
-				String ftype = null;
+
 				List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
 				for (FileItem item : multiparts) {
 					if (!item.isFormField()) {
-						fname = new File(item.getName()).getName();
-						fsize = new Long(item.getSize()).toString();
-						ftype = item.getContentType();
-						item.write(new File(UPLOAD_DIRECTORY + File.separator + fname));
+						item.write(new File(UPLOAD_DIRECTORY + File.separator + item.getName()));
 					}
 				}
-				// File uploaded successfully
-				request.setAttribute("message", "File Uploaded Successfully");
-				request.setAttribute("name", fname);
-				request.setAttribute("size", fsize);
-				request.setAttribute("type", ftype);
+
 			} catch (Exception ex) {
-				request.setAttribute("message", "File Upload Failed due to " + ex);
+				request.setAttribute("message", "Fallo al subir el archivo " + ex);
 			}
 
 		} else {
 			request.setAttribute("message", "Sorry this Servlet only handles file upload request");
 		}
 
-		request.getRequestDispatcher("/result.jsp").forward(request, response);
-
+		request.getRequestDispatcher("result.jsp").forward(request, response);
 	}
 }

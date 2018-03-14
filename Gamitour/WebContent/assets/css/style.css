@@ -10,8 +10,8 @@ body {
 	background: #FFFFFF url(images/img01.gif) repeat-x;
 	font-size: 13px;
 	font-family: Optima, sans-serif;
-	width:95%;
-	min-width:750px;
+	width: 95%;
+	min-width: 750px;
 }
 
 header {
@@ -170,7 +170,7 @@ table a:hover {
 	color: white;
 }
 
-input[type=submit] {
+input[type=submit]:not (.uploadSubmit ) {
 	font-size: 15px;
 	font-weight: bold;
 	color: black;
@@ -183,6 +183,14 @@ input[type=submit] {
 input[type=submit]:hover {
 	color: white;
 	background-color: black;
+}
+
+input[class=uploadSubmit] {
+	font-size: 12px;
+	border: none;
+	border-radius: 15px;
+	color: black;
+	padding:2px 4px 2px 4px;
 }
 
 p {
@@ -340,7 +348,7 @@ label {
 	color: #346086;
 }
 
-.tablas input,.contenedor input {
+.tablas input, .contenedor input {
 	width: 80px;
 	box-sizing: border-box;
 	border: 2px solid #ccc;
@@ -353,9 +361,8 @@ label {
 	transition: width 0.4s ease-in-out;
 }
 
-.contenedor h1
-{
-	margin-bottom:15px;
+.contenedor h1 {
+	margin-bottom: 15px;
 }
 
 .tablas input:focus {
