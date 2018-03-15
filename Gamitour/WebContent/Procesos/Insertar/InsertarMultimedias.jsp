@@ -42,7 +42,7 @@
 			</div>
 			<h2>Insertar Multimedia</h2>
 
-			<form action="../../InsertarMultimediasAccion" method="post"
+			<form action="../../InsertarMultimedias" method="post"
 				enctype="multipart/form-data">
 
 				<p>

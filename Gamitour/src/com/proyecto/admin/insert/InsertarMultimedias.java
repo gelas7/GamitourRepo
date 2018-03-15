@@ -24,8 +24,8 @@ import com.proyecto.service.ServiceMultimedias;
 import com.proyecto.service.ServiceMultimediasImp;
 
 @javax.servlet.annotation.MultipartConfig
-@WebServlet("/InsertarMultimediasAccion")
-public class InsertarMultimediasAccion extends HttpServlet {
+@WebServlet("/InsertarMultimedias")
+public class InsertarMultimedias extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
