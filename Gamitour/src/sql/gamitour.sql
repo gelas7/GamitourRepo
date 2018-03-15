@@ -36,6 +36,8 @@ CREATE TABLE IF NOT EXISTS `gamitour`.`parada` (
   `numeroParada` INT NULL,
   `ubicacion` VARCHAR(45) NULL,
   `historia` VARCHAR(200) NULL,
+   `ubicacion` VARCHAR(45) NULL,
+  `ubicacion` VARCHAR(45) NULL,
   `anecdotario` VARCHAR(200) NULL,
   `gastronomia` VARCHAR(200) NULL,
   `imagen` VARCHAR(45) NULL,

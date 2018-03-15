@@ -1,5 +1,6 @@
 package com.proyecto.util;
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -19,7 +20,6 @@ import com.proyecto.admin.insert.InsertarActividadesAccion;
 import com.proyecto.admin.insert.InsertarClientesAccion;
 import com.proyecto.admin.insert.InsertarComentariosAccion;
 import com.proyecto.admin.insert.InsertarItinerariosAccion;
-import com.proyecto.admin.insert.InsertarMultimediasAccion;
 import com.proyecto.admin.insert.InsertarNoticiasAccion;
 import com.proyecto.admin.insert.InsertarParadasAccion;
 import com.proyecto.admin.insert.InsertarPremiosAccion;
@@ -50,8 +50,10 @@ import com.proyecto.admin.update.ModificarVotosAccion;
 
 public abstract class Accion {
 
-	public abstract String ejecutar(HttpServletRequest request, HttpServletResponse response);
+	
 
+	public abstract String ejecutar(HttpServletRequest request, HttpServletResponse response);
+	
 	public static Accion getAccion(String tipo) {
 		Accion accion = null;
 
@@ -159,9 +161,9 @@ public abstract class Accion {
 		case "EliminarPremios":
 			accion = new EliminarPremiosAccion();
 			break;
-		case "InsertarMultimedias":
+		/*case "InsertarMultimedias":
 			accion = new InsertarMultimediasAccion();
-			break;
+			break;*/
 		case "ModificarMultimedias":
 			accion = new ModificarMultimediasAccion();
 			break;
@@ -193,4 +195,5 @@ public abstract class Accion {
 		}
 		return accion;
 	}
+
 }

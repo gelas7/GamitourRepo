@@ -12,7 +12,7 @@ import com.proyecto.service.ServiceActividadesImp;
 import com.proyecto.util.Accion;
 
 public class InsertarActividadesAccion extends Accion {
-
+	
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
 
 	@Override

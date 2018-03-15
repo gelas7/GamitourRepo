@@ -42,16 +42,11 @@
 			</div>
 			<h2>Insertar Multimedia</h2>
 
-			<form action="../../upload" method="post" enctype="multipart/form-data" target="_blank">
-				<input type="file" name="file" multiple /> 
-				<input type="submit" value="Subir archivo/s" class="uploadSubmit">
-			</form>
-
-			<form action="../../InsertarMultimedias.do" method="get"
+			<form action="../../InsertarMultimediasAccion" method="post"
 				enctype="multipart/form-data">
 
 				<p>
-					Cliente: <select name="cliente">
+					<label for="cliente">Cliente:</label> <select name="cliente">
 						<option value="">Seleccione un cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
@@ -59,24 +54,34 @@
 					</select>
 				</p>
 				<p>
-					Fecha: <input type="date" name="fecha" required="required">
+					<label for="fecha">Fecha:</label> <input type="date" name="fecha"
+						required="required">
 				</p>
 
 				<p>
-					Comentario: <input type="text" name="comentario"
-						required="required">
+					<label for="comentario">Comentario:</label> <input type="text"
+						name="comentario" required="required">
 				</p>
 				<p>
-					Puntos Acumulados: <input type="number" name="puntos"
-						required="required">
+					<label for="puntos">Puntos Acumulados:</label> <input type="number"
+						name="puntos" required="required">
 				</p>
 				<p>
-					Prueba Deportiva: <select name="pruebaD">
+					<label for="pruebaD">Prueba Deportiva: </label> <select
+						name="pruebaD">
 						<option value="">Seleccione una Prueba Deportiva</option>
 						<c:forEach items="${listaPruebasDeportivas}" var="pruebaD">
 							<option value="${pruebaD.idpruebadeportiva}">${pruebaD.nombre}</option>
 						</c:forEach>
 					</select>
+				</p>
+				<p>
+					<label for="imagen">Imagen: </label> <input id="imagen" type="file"
+						name="imagen" size="50" /><br>
+				</p>
+				<p>
+					<label for="video">Video: </label> <input id="video" type="file"
+						name="video" size="50" /><br /> <br />
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">
