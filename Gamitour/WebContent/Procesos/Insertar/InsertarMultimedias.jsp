@@ -53,11 +53,7 @@
 						</c:forEach>
 					</select>
 				</p>
-				<p>
-					<label for="fecha">Fecha:</label> <input type="date" name="fecha"
-						required="required">
-				</p>
-
+		
 				<p>
 					<label for="comentario">Comentario:</label> <input type="text"
 						name="comentario" required="required">

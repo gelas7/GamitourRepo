@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Paths;
-import java.text.ParseException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.servlet.ServletException;
@@ -28,7 +28,7 @@ import com.proyecto.service.ServiceMultimediasImp;
 public class InsertarMultimedias extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 	private final String directorio = "/Users/Gelas/Desktop/subidas/";
 	ServiceMultimedias sm = new ServiceMultimediasImp();
 	ServiceClientes sc = new ServiceClientesImp();
@@ -37,17 +37,21 @@ public class InsertarMultimedias extends HttpServlet {
 			throws ServletException, IOException {
 
 		String cliente = request.getParameter("cliente");
-		String fecha = request.getParameter("fecha");
 		String comentario = request.getParameter("comentario");
 		String idPd = request.getParameter("pruebaD");
 		String puntos = request.getParameter("puntos");
 		Part imagen = request.getPart("imagen");
 		Part video = request.getPart("video");
-		Date date = null;
+
+		DateFormat dateFormat = new SimpleDateFormat("yyyy:MM:dd-HH.mm.ss");
+		Date date = new Date();
+		String fecha = dateFormat.format(date); // 2016/11/16 12:08:43
 
 		/* Proceso ficheros */
-		String imagenName = Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
-		String videoName = Paths.get(video.getSubmittedFileName()).getFileName().toString();
+		String imagenName = fecha + "-" + cliente + "-"
+				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+		String videoName = fecha + "-" + cliente + "-"
+				+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
 
 		InputStream imagenStream = imagen.getInputStream();
 		InputStream videoStream = video.getInputStream();
@@ -60,14 +64,6 @@ public class InsertarMultimedias extends HttpServlet {
 
 		imagenStream.close();
 		videoStream.close();
-
-		/* Parseo fecha */
-		try {
-			if (fecha != "")
-				date = formatter.parse(fecha);
-		} catch (ParseException e) {
-			System.out.println("Fallo al convertir fechas. " + e.getMessage());
-		}
 
 		Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
 
