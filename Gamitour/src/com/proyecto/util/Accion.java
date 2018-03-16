@@ -16,7 +16,6 @@ import com.proyecto.admin.delete.EliminarPruebasCulturalesAccion;
 import com.proyecto.admin.delete.EliminarPruebasDeportivasAccion;
 import com.proyecto.admin.delete.EliminarRolesAccion;
 import com.proyecto.admin.delete.EliminarVotosAccion;
-import com.proyecto.admin.insert.InsertarActividadesAccion;
 import com.proyecto.admin.insert.InsertarClientesAccion;
 import com.proyecto.admin.insert.InsertarComentariosAccion;
 import com.proyecto.admin.insert.InsertarItinerariosAccion;
@@ -107,17 +106,11 @@ public abstract class Accion {
 		case "ModificarRoles":
 			accion = new ModificarRolesAccion();
 			break;
-		case "InsertarClientes":
-			accion = new InsertarClientesAccion();
-			break;
 		case "EliminarClientes":
 			accion = new EliminarClientesAccion();
 			break;
 		case "ModificarClientes":
 			accion = new ModificarClientesAccion();
-			break;
-		case "InsertarActividades":
-			accion = new InsertarActividadesAccion();
 			break;
 		case "EliminarActividades":
 			accion = new EliminarActividadesAccion();

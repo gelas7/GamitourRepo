@@ -40,7 +40,9 @@
 						Gamitour</a>
 				</h1>
 			</div>
-			<form action="../../InsertarClientes.do" method="get">
+			<form action="../../InsertarClientesAccion" method="post"
+				enctype="multipart/form-data">
+				
 				<h2>Insertar Cliente</h2>
 				<p>
 					Nombre: <input type="text" name="nombre" required="required">
@@ -82,8 +84,7 @@
 					</select>
 				</p>
 				<p>
-					Avatar: <input type="file" name="avatar"
-						onchange="handleFiles(this.files)" required="required">
+					Avatar: <input type="file" name="avatar" required="required">
 				</p>
 
 				<p>

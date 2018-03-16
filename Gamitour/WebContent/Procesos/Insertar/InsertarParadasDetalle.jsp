@@ -49,8 +49,11 @@
 				</h1>
 			</div>
 			<div id="formMapa">
-				<form action="../../InsertarParadas.do" method="get">
-					<h2>Insertar Parada en <%=si.buscarPorClave(Integer.parseInt(request.getParameter("idItinerario"))).getNombre()%></h2>
+				<form action="../../InsertarParadasAccion" method="post"
+					enctype="multipart/form-data">
+					<h2>
+						Insertar Parada en
+						<%=si.buscarPorClave(Integer.parseInt(request.getParameter("idItinerario"))).getNombre()%></h2>
 					<p>
 						Nombre: <input type="text" name="nombre" required="required">
 					</p>
@@ -70,12 +73,12 @@
 							required="required">
 					</p>
 
-					<input type="text" name="itinerario" value="<%=request.getParameter("idItinerario")%>"
-						hidden="hidden">
+					<input type="text" name="itinerario"
+						value="<%=request.getParameter("idItinerario")%>" hidden="hidden">
 
 					<p>
 						Imagen: <input type="file" name="imagen"
-							onchange="handleFiles(this.files)" required="required">
+							required="required">
 					</p>
 					<p>
 						Ubicación: <input type="text" id="search" name="ubicacion"

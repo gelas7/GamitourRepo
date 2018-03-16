@@ -1,30 +1,42 @@
 package com.proyecto.admin.insert;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+import org.apache.commons.io.FileUtils;
 
 import com.proyecto.modelo.Actividad;
 import com.proyecto.service.ServiceActividadesImp;
-import com.proyecto.util.Accion;
 
-public class InsertarActividadesAccion extends Accion {
-	
-	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+@javax.servlet.annotation.MultipartConfig
+@WebServlet("/InsertarActividadesAccion")
+public class InsertarActividadesAccion extends HttpServlet {
 
-	@Override
-	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
+	private static final long serialVersionUID = 1L;
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+	private final String directorio = "/opt/subidas/actividades";
 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String nombre = request.getParameter("nombre");
 		String fechainicio = request.getParameter("fechainicio");
 		String fechafin = request.getParameter("fechafin");
 		String ubicacion = request.getParameter("ubicacion");
 		String numparticipantes = request.getParameter("participantes");
 		String precio = request.getParameter("precio");
-		String imagen = request.getParameter("imagen");
+		Part imagen = request.getPart("imagen");
 		String puntos = request.getParameter("puntos");
 		Date date1 = null;
 		Date date2 = null;
@@ -37,14 +49,25 @@ public class InsertarActividadesAccion extends Accion {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
 
+		/* Proceso ficheros *///fechainicio-fechafin-file.jpg
+		String imagenName = fechainicio + "-" + fechafin + "_"
+				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+
+		InputStream imagenStream = imagen.getInputStream();
+
+		File imagenSalida = new File(directorio + imagenName);
+
+		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+
+		imagenStream.close();
+
 		ServiceActividadesImp sa = new ServiceActividadesImp();
 
 		Actividad a = new Actividad(nombre, date1, date2, ubicacion, Integer.parseInt(numparticipantes),
-				Float.parseFloat(precio), imagen, Integer.parseInt(puntos));
+				Float.parseFloat(precio), imagenName, Integer.parseInt(puntos));
 
-		sa.insertar(a); 
+		sa.insertar(a);
 
-		return "MostrarAdmin.do?div=actividades";
+		response.sendRedirect("MostrarAdmin.do?div=actividades");
 	}
-
 }

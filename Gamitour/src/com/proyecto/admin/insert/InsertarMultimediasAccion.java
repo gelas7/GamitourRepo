@@ -47,7 +47,7 @@ public class InsertarMultimediasAccion extends HttpServlet {
 		Date date = new Date();
 		String fecha = dateFormat.format(date); // 2016/11/16 12:08:43
 
-		/* Proceso ficheros */// 2016/11/16-12.08.43-idUsuario-archivo.jpg
+		/* Proceso ficheros */// 
 		String imagenName = fecha + "-" + cliente + "-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 		String videoName = fecha + "-" + cliente + "-"

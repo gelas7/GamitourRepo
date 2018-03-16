@@ -14,7 +14,7 @@ import com.proyecto.util.Accion;
 
 public class InsertarItinerariosAccion extends Accion {
 
-	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {

@@ -33,7 +33,8 @@
 						Gamitour</a>
 				</h1>
 			</div>
-			<form action="../../InsertarActividades.do" method="get">
+			<form action="../../InsertarActividadesAccion" method="post"
+				enctype="multipart/form-data">
 
 				<h2>Insertar Actividad</h2>
 				<p>
@@ -61,8 +62,7 @@
 					Puntos: <input type="number" name="puntos" required="required">
 				</p>
 				<p>
-					Imagen: <input type="file" name="imagen"
-						onchange="handleFiles(this.files)" required="required">
+					Imagen: <input type="file" name="imagen" required="required">
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar" >

@@ -42,7 +42,7 @@
 			</div>
 			<h2>Insertar Multimedia</h2>
 
-			<form action="../../InsertarMultimedias" method="post"
+			<form action="../../InsertarMultimediasAccion" method="post"
 				enctype="multipart/form-data">
 
 				<p>
@@ -53,7 +53,7 @@
 						</c:forEach>
 					</select>
 				</p>
-		
+
 				<p>
 					<label for="comentario">Comentario:</label> <input type="text"
 						name="comentario" required="required">
@@ -73,11 +73,11 @@
 				</p>
 				<p>
 					<label for="imagen">Imagen: </label> <input id="imagen" type="file"
-						name="imagen" size="50" /><br>
+						name="imagen"/><br>
 				</p>
 				<p>
 					<label for="video">Video: </label> <input id="video" type="file"
-						name="video" size="50" /><br /> <br />
+						name="video"/><br /> <br />
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">

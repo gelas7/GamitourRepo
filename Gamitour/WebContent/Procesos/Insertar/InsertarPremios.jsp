@@ -42,7 +42,8 @@
 				</h1>
 			</div>
 
-			<form action="../../InsertarPremios.do" method="get">
+			<form action="../../InsertarPremiosAccion" method="post"
+				enctype="multipart/form-data">
 				<h2>Insertar Premio</h2>
 				<p>
 					Cliente: <select name="cliente">
@@ -65,14 +66,12 @@
 					Puntos: <input type="number" name="puntos" required="required">
 				</p>
 				<p>
-					Imagen: <input type="file" name="imagen"
-						onchange="handleFiles(this.files)" required="required">
+					Imagen: <input type="file" name="imagen" required="required">
 				</p>
 				<p>
 					Fecha de activacion: <input type="date" name="fechaactivacion"
 						required="required">
 				</p>
-
 				<p>
 					Fecha de consumo: <input type="date" name="fechaconsumo"
 						required="required">

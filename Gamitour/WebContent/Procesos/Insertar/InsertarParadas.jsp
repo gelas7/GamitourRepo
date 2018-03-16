@@ -47,7 +47,8 @@
 				</h1>
 			</div>
 			<div id="formMapa">
-				<form action="../../InsertarParadas.do" method="get">
+				<form action="../../InsertarParadasAccion" method="post"
+				enctype="multipart/form-data">
 					<h2>Insertar Parada</h2>
 					<p>
 						Nombre: <input type="text" name="nombre" required="required">
@@ -77,8 +78,7 @@
 					</p>
 
 					<p>
-						Imagen: <input type="file" name="imagen"
-							onchange="handleFiles(this.files)" required="required">
+						Imagen: <input type="file" name="imagen" required="required">
 					</p>
 					<p>
 						Ubicación: <input type="text" id="search" name="ubicacion"
