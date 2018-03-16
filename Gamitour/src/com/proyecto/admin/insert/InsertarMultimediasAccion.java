@@ -8,6 +8,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,13 +24,13 @@ import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceMultimedias;
 import com.proyecto.service.ServiceMultimediasImp;
 
-@javax.servlet.annotation.MultipartConfig
+@MultipartConfig
 @WebServlet("/InsertarMultimediasAccion")
 public class InsertarMultimediasAccion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/opt/subidas/multimedias";
+	private final String directorio = "/opt/subidas/multimedias/";
 	ServiceMultimedias sm = new ServiceMultimediasImp();
 	ServiceClientes sc = new ServiceClientesImp();
 

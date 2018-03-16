@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,13 +23,13 @@ import com.proyecto.modelo.Noticia;
 import com.proyecto.service.ServiceNoticias;
 import com.proyecto.service.ServiceNoticiasImp;
 
-@javax.servlet.annotation.MultipartConfig
+@MultipartConfig
 @WebServlet("/InsertarNoticiasAccion")
 public class InsertarNoticiasAccion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/opt/subidas/noticias";
+	private final String directorio = "/opt/subidas/noticias/";
 	ServiceNoticias sn = new ServiceNoticiasImp();
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

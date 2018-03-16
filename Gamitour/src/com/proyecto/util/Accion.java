@@ -17,8 +17,6 @@ import com.proyecto.admin.delete.EliminarRolesAccion;
 import com.proyecto.admin.delete.EliminarVotosAccion;
 import com.proyecto.admin.insert.InsertarComentariosAccion;
 import com.proyecto.admin.insert.InsertarItinerariosAccion;
-import com.proyecto.admin.insert.InsertarParadasAccion;
-import com.proyecto.admin.insert.InsertarPremiosAccion;
 import com.proyecto.admin.insert.InsertarPruebasCulturalesAccion;
 import com.proyecto.admin.insert.InsertarPruebasDeportivasAccion;
 import com.proyecto.admin.insert.InsertarRolesAccion;
@@ -110,9 +108,6 @@ public abstract class Accion {
 		case "ModificarActividades":
 			accion = new ModificarActividadesAccion();
 			break;
-		case "InsertarParadas":
-			accion = new InsertarParadasAccion();
-			break;
 		case "EliminarParadas":
 			accion = new EliminarParadasAccion();
 			break;
@@ -136,9 +131,6 @@ public abstract class Accion {
 			break;
 		case "ModificarPruebasCulturales":
 			accion = new ModificarPruebasCulturalesAccion();
-			break;
-		case "InsertarPremios":
-			accion = new InsertarPremiosAccion();
 			break;
 		case "ModificarPremios":
 			accion = new ModificarPremiosAccion();
