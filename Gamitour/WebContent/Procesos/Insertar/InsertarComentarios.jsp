@@ -46,21 +46,26 @@
 
 				<h2>Insertar Comentario</h2>
 				<p>
-					Cliente: <select name="cliente">
+					<label for="cliente">Cliente:</label>
+					<select name="cliente">
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					ID Multimedia: <select name="multimedia">
+					<label for="multimedia">ID Multimedia:</label>
+					<select
+						name="multimedia">
 						<c:forEach items="${listaMultimedias}" var="multimedia">
 							<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					Texto: <input type="text" name="texto" required="required">
+					<label for="texto">Texto: </label> 
+					<input type="text"
+						name="texto" required="required">
 				</p>
 
 				<p>

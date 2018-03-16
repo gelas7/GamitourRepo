@@ -45,46 +45,46 @@
 				
 				<h2>Insertar Cliente</h2>
 				<p>
-					Nombre: <input type="text" name="nombre" required="required">
+					<label for="nombre">Nombre:</label> <input type="text" name="nombre" required="required">
 				</p>
 				<p>
-					Apellidos: <input type="text" name="apellidos" required="required">
+					<label for="apellidos">Apellidos:</label> <input type="text" name="apellidos" required="required">
 				</p>
 				<p>
-					Fecha de nacimiento: <input type="date" name="fechanacimiento"
+					<label for="fechanacimiento">Fecha de nacimiento:</label> <input type="date" name="fechanacimiento"
 						required="required">
 				</p>
 				<p>
-					Email: <input type="email" name="email" required="required">
+					<label for="email">Email:</label> <input type="email" name="email" required="required">
 				</p>
 				<p>
-					Password: <input type="password" name="password"
+					<label for="password">Password:</label> <input type="password" name="password"
 						required="required">
 				</p>
 				<p>
-					Telefono: <input type="tel" name="telefono" required="required">
+					<label for="telefono">Telefono:</label> <input type="tel" name="telefono" required="required">
 				</p>
 				<p>
-					Direccion: <input type="text" name="direccion" required="required">
+					<label for="direccion">Direccion:</label> <input type="text" name="direccion" required="required">
 				</p>
 				<p>
-					Codigo Postal: <input type="text" name="codigopostal"
+					<label for="codigopostal">Codigo Postal:</label> <input type="text" name="codigopostal"
 						required="required">
 				</p>
 				<p>
-					Puntos Acumulados: <input type="text" name="puntosacumulados"
+					<label for="puntosacumulados">Puntos Acumulados:</label> <input type="text" name="puntosacumulados"
 						required="required">
 				</p>
 				<p>
 
-					Rol: <select name="rol">
+					<label for="rol">Rol:</label> <select name="rol">
 						<c:forEach items="${listaRoles}" var="rol">
 							<option value="${rol.idrol}">${rol.nombre}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					Avatar: <input type="file" name="avatar" required="required">
+					<label for="avatar">Avatar:</label> <input type="file" name="avatar" required="required">
 				</p>
 
 				<p>

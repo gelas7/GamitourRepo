@@ -31,6 +31,7 @@ public class InsertarParadasAccion extends Accion {
 		String longitud = request.getParameter("longitud");
 
 		float lat=0,lng=0;
+		
 		try {
 			lat = Float.parseFloat(latitud);
 			lng = Float.parseFloat(longitud);

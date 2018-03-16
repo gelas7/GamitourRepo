@@ -72,11 +72,11 @@
 					</select>
 				</p>
 				<p>
-					<label for="imagen">Imagen: </label> <input id="imagen" type="file"
+					<label for="imagen">Imagen: </label> <input type="file"
 						name="imagen"/><br>
 				</p>
 				<p>
-					<label for="video">Video: </label> <input id="video" type="file"
+					<label for="video">Video: </label> <input type="file"
 						name="video"/><br /> <br />
 				</p>
 				<p>

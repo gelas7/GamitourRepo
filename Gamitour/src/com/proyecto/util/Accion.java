@@ -15,10 +15,8 @@ import com.proyecto.admin.delete.EliminarPruebasCulturalesAccion;
 import com.proyecto.admin.delete.EliminarPruebasDeportivasAccion;
 import com.proyecto.admin.delete.EliminarRolesAccion;
 import com.proyecto.admin.delete.EliminarVotosAccion;
-import com.proyecto.admin.insert.InsertarClientesAccion;
 import com.proyecto.admin.insert.InsertarComentariosAccion;
 import com.proyecto.admin.insert.InsertarItinerariosAccion;
-import com.proyecto.admin.insert.InsertarNoticiasAccion;
 import com.proyecto.admin.insert.InsertarParadasAccion;
 import com.proyecto.admin.insert.InsertarPremiosAccion;
 import com.proyecto.admin.insert.InsertarPruebasCulturalesAccion;
@@ -29,7 +27,6 @@ import com.proyecto.admin.search.BuscarAdminAccion;
 import com.proyecto.admin.search.MostrarAdminAccion;
 import com.proyecto.admin.search.MostrarComentariosAccion;
 import com.proyecto.admin.search.MostrarMultimediasAccion;
-
 import com.proyecto.admin.search.MostrarParadasAccion;
 import com.proyecto.admin.search.MostrarPruebasDeportivasAccion;
 import com.proyecto.admin.search.MostrarVotosAccion;
