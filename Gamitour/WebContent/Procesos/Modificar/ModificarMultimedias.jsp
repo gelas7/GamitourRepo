@@ -41,7 +41,8 @@
 				</h1>
 			</div>
 
-			<form action="../../ModificarMultimedias.do" method="get">
+			<form action="../../ModificarMultimediasAccion" method="post"
+				enctype="multipart/form-data">
 
 				<h2 id="modificar">Modifique los campos necesarios.</h2>
 				<h3>Los campos en blanco no sufrirán cambios.</h3>
@@ -75,12 +76,10 @@
 					</select>
 				</p>
 				<p>
-					Imagen: <input type="text" name="imagen"
-						onchange="handleFiles(this.files)">
+					Imagen: <input type="text" name="imagen">
 				</p>
 				<p>
-					Video: <input type="text" name="video"
-						onchange="handleFiles(this.files)">
+					Video: <input type="text" name="video">
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">

@@ -17,8 +17,6 @@ import com.proyecto.admin.delete.EliminarRolesAccion;
 import com.proyecto.admin.delete.EliminarVotosAccion;
 import com.proyecto.admin.insert.InsertarComentariosAccion;
 import com.proyecto.admin.insert.InsertarItinerariosAccion;
-import com.proyecto.admin.insert.InsertarParadasAccion;
-import com.proyecto.admin.insert.InsertarPremiosAccion;
 import com.proyecto.admin.insert.InsertarPruebasCulturalesAccion;
 import com.proyecto.admin.insert.InsertarPruebasDeportivasAccion;
 import com.proyecto.admin.insert.InsertarRolesAccion;
@@ -34,7 +32,6 @@ import com.proyecto.admin.update.ModificarActividadesAccion;
 import com.proyecto.admin.update.ModificarClientesAccion;
 import com.proyecto.admin.update.ModificarComentariosAccion;
 import com.proyecto.admin.update.ModificarItinerariosAccion;
-import com.proyecto.admin.update.ModificarMultimediasAccion;
 import com.proyecto.admin.update.ModificarNoticiasAccion;
 import com.proyecto.admin.update.ModificarParadasAccion;
 import com.proyecto.admin.update.ModificarPremiosAccion;
@@ -73,7 +70,6 @@ public abstract class Accion {
 		case "MostrarPruebasDeportivas":
 			accion = new MostrarPruebasDeportivasAccion();
 			break;
-
 		case "EliminarNoticias":
 			accion = new EliminarNoticiasAccion();
 			break;
@@ -110,9 +106,6 @@ public abstract class Accion {
 		case "ModificarActividades":
 			accion = new ModificarActividadesAccion();
 			break;
-		case "InsertarParadas":
-			accion = new InsertarParadasAccion();
-			break;
 		case "EliminarParadas":
 			accion = new EliminarParadasAccion();
 			break;
@@ -137,17 +130,11 @@ public abstract class Accion {
 		case "ModificarPruebasCulturales":
 			accion = new ModificarPruebasCulturalesAccion();
 			break;
-		case "InsertarPremios":
-			accion = new InsertarPremiosAccion();
-			break;
 		case "ModificarPremios":
 			accion = new ModificarPremiosAccion();
 			break;
 		case "EliminarPremios":
 			accion = new EliminarPremiosAccion();
-			break;
-		case "ModificarMultimedias":
-			accion = new ModificarMultimediasAccion();
 			break;
 		case "EliminarMultimedias":
 			accion = new EliminarMultimediasAccion();

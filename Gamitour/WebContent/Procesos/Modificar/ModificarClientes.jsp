@@ -41,7 +41,8 @@
 				</h1>
 			</div>
 
-			<form action="../../ModificarClientes.do" method="get">
+			<form action="../../ModificarClientesAccion" method="post"
+				enctype="multipart/form-data">
 
 				<h2 id="modificar">Modifique los campos necesarios.</h2>
 				<h3>Los campos en blanco no sufrirán cambios.</h3>
@@ -93,8 +94,7 @@
 					</select>
 				</p>
 				<p>
-					Avatar: <input type="file" name="avatar"
-						onchange="handleFiles(this.files)">
+					Avatar: <input type="file" name="avatar">
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">

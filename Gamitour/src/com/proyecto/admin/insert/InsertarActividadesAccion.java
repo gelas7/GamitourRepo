@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,13 +21,14 @@ import org.apache.commons.io.FileUtils;
 import com.proyecto.modelo.Actividad;
 import com.proyecto.service.ServiceActividadesImp;
 
-@javax.servlet.annotation.MultipartConfig
+@MultipartConfig
 @WebServlet("/InsertarActividadesAccion")
 public class InsertarActividadesAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/opt/subidas/actividades";
+	private final String directorio = "/opt/subidas/actividades/";
+	ServiceActividadesImp sa = new ServiceActividadesImp();
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -49,8 +51,8 @@ public class InsertarActividadesAccion extends HttpServlet {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
 
-		/* Proceso ficheros *///fechainicio-fechafin-file.jpg
-		String imagenName = fechainicio + "-" + fechafin + "_"
+		/* Proceso ficheros (fechainicio-fechafin-file.jpg) */
+		String imagenName = fechainicio + "-" + fechafin + "-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
 		InputStream imagenStream = imagen.getInputStream();
@@ -60,8 +62,6 @@ public class InsertarActividadesAccion extends HttpServlet {
 		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
 
 		imagenStream.close();
-
-		ServiceActividadesImp sa = new ServiceActividadesImp();
 
 		Actividad a = new Actividad(nombre, date1, date2, ubicacion, Integer.parseInt(numparticipantes),
 				Float.parseFloat(precio), imagenName, Integer.parseInt(puntos));
