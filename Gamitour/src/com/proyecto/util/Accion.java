@@ -149,9 +149,6 @@ public abstract class Accion {
 		case "EliminarPremios":
 			accion = new EliminarPremiosAccion();
 			break;
-		/*
-		 * case "InsertarMultimedias": accion = new InsertarMultimediasAccion(); break;
-		 */
 		case "ModificarMultimedias":
 			accion = new ModificarMultimediasAccion();
 			break;
