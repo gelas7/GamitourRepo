@@ -32,7 +32,6 @@ import com.proyecto.admin.update.ModificarActividadesAccion;
 import com.proyecto.admin.update.ModificarClientesAccion;
 import com.proyecto.admin.update.ModificarComentariosAccion;
 import com.proyecto.admin.update.ModificarItinerariosAccion;
-import com.proyecto.admin.update.ModificarMultimediasAccion;
 import com.proyecto.admin.update.ModificarNoticiasAccion;
 import com.proyecto.admin.update.ModificarParadasAccion;
 import com.proyecto.admin.update.ModificarPremiosAccion;
@@ -71,7 +70,6 @@ public abstract class Accion {
 		case "MostrarPruebasDeportivas":
 			accion = new MostrarPruebasDeportivasAccion();
 			break;
-
 		case "EliminarNoticias":
 			accion = new EliminarNoticiasAccion();
 			break;
@@ -137,9 +135,6 @@ public abstract class Accion {
 			break;
 		case "EliminarPremios":
 			accion = new EliminarPremiosAccion();
-			break;
-		case "ModificarMultimedias":
-			accion = new ModificarMultimediasAccion();
 			break;
 		case "EliminarMultimedias":
 			accion = new EliminarMultimediasAccion();

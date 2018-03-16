@@ -1,40 +1,53 @@
 package com.proyecto.admin.update;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Paths;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.Part;
+import org.apache.commons.io.FileUtils;
 import com.proyecto.modelo.Cliente;
-
 import com.proyecto.modelo.Multimedia;
-
 import com.proyecto.service.ServiceClientes;
 import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceMultimedias;
 import com.proyecto.service.ServiceMultimediasImp;
 
-import com.proyecto.util.Accion;
+@MultipartConfig
+@WebServlet("/ModificarMultimediasAccion")
+public class ModificarMultimediasAccion extends HttpServlet {
 
-public class ModificarMultimediasAccion extends Accion {
+	private static final long serialVersionUID = 1L;
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+	private final String directorio = "/opt/subidas/multimedias/";
+	ServiceMultimedias sm = new ServiceMultimediasImp();
+	ServiceClientes sc = new ServiceClientesImp();
 
-	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
-
-	@Override
-	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		String id = request.getParameter("id");
 		String cliente = request.getParameter("cliente");
 		String comentario = request.getParameter("comentario");
-		String imagen = request.getParameter("imagen");
-		String video = request.getParameter("video");
+		Part imagen = request.getPart("imagen");
+		Part video = request.getPart("video");
 		String idPd = request.getParameter("pruebaD");
 		String puntos = request.getParameter("puntos");
 
-
-		ServiceMultimedias sm = new ServiceMultimediasImp();
-		ServiceClientes sc = new ServiceClientesImp();
-
 		Multimedia m = sm.buscarPorClave(Integer.parseInt(id));
+
+		DateFormat dateFormat = new SimpleDateFormat("yyyy:MM:dd-HH.mm.ss");
+		Date date = new Date();
+		String fecha = dateFormat.format(date); // 2016/11/16 12:08:43
 
 		if (cliente != "") {
 			Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
@@ -42,15 +55,28 @@ public class ModificarMultimediasAccion extends Accion {
 		}
 
 		if (idPd != "") {
-
 			m.setPruebaDeportivaIdpruebadeportiva(Integer.parseInt(idPd));
 		}
 
-		if (imagen != "")
-			m.setImagen(imagen);
+		if (imagen != null) {
+			String imagenName = fecha + "-" + cliente + "-"
+					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+			InputStream imagenStream = imagen.getInputStream();
+			File imagenSalida = new File(directorio + imagenName);
+			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+			imagenStream.close();
+			m.setImagen(imagenName);
+		}
 
-		if (video != "")
-			m.setVideo(video);
+		if (video != null) {
+			String videoName = fecha + "-" + cliente + "-"
+					+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
+			InputStream videoStream = video.getInputStream();
+			File videoSalida = new File(directorio + videoName);
+			FileUtils.copyInputStreamToFile(videoStream, videoSalida);
+			videoStream.close();
+			m.setVideo(videoName);
+		}
 
 		if (comentario != "")
 			m.setComentario(comentario);
@@ -60,7 +86,7 @@ public class ModificarMultimediasAccion extends Accion {
 
 		sm.actualizar(m);
 
-		return "MostrarAdmin.do?div=multimedias";
+		response.sendRedirect("MostrarAdmin.do?div=multimedias");
 	}
 
 }
