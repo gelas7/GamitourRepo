@@ -57,10 +57,6 @@
 						</c:forEach>
 					</select>
 				</p>
-				<p>
-					Fecha: <input type="date" name="fecha"
-						placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFecha()%>">
-				</p>
 
 				<p>
 					Comentario: <input type="text" name="comentario"
