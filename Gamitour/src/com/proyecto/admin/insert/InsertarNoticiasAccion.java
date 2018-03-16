@@ -28,7 +28,7 @@ public class InsertarNoticiasAccion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/Users/Gelas/Desktop/subidas/noticias";
+	private final String directorio = "/opt/subidas/noticias";
 	ServiceNoticias sn = new ServiceNoticiasImp();
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
