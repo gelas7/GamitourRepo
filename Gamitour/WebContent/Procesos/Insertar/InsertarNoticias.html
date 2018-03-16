@@ -35,7 +35,8 @@
 				</h1>
 			</div>
 
-			<form action="../../InsertarNoticias.do" method="get">
+			<form action="../../InsertarNoticias" method="post"
+				enctype="multipart/form-data">
 
 				<h2>Insertar Noticia</h2>
 				<p>
@@ -53,8 +54,8 @@
 						required="required">
 				</p>
 				<p>
-					Imagen: <input type="file" name="imagen" required="required"
-						onchange="handleFiles(this.files)">
+					<label for="imagen">Imagen: </label> <input id="imagen" type="file"
+						name="imagen" size="50" /><br>
 				</p>
 
 				<p>

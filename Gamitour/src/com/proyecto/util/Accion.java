@@ -1,6 +1,5 @@
 package com.proyecto.util;
 
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -49,10 +48,8 @@ import com.proyecto.admin.update.ModificarVotosAccion;
 
 public abstract class Accion {
 
-	
-
 	public abstract String ejecutar(HttpServletRequest request, HttpServletResponse response);
-	
+
 	public static Accion getAccion(String tipo) {
 		Accion accion = null;
 
@@ -79,9 +76,7 @@ public abstract class Accion {
 		case "MostrarPruebasDeportivas":
 			accion = new MostrarPruebasDeportivasAccion();
 			break;
-		case "InsertarNoticias":
-			accion = new InsertarNoticiasAccion();
-			break;
+
 		case "EliminarNoticias":
 			accion = new EliminarNoticiasAccion();
 			break;
@@ -154,9 +149,9 @@ public abstract class Accion {
 		case "EliminarPremios":
 			accion = new EliminarPremiosAccion();
 			break;
-		/*case "InsertarMultimedias":
-			accion = new InsertarMultimediasAccion();
-			break;*/
+		/*
+		 * case "InsertarMultimedias": accion = new InsertarMultimediasAccion(); break;
+		 */
 		case "ModificarMultimedias":
 			accion = new ModificarMultimediasAccion();
 			break;
