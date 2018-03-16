@@ -1,9 +1,6 @@
 package com.proyecto.admin.update;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -27,23 +24,12 @@ public class ModificarMultimediasAccion extends Accion {
 
 		String id = request.getParameter("id");
 		String cliente = request.getParameter("cliente");
-		String fecha = request.getParameter("fecha");
 		String comentario = request.getParameter("comentario");
 		String imagen = request.getParameter("imagen");
 		String video = request.getParameter("video");
 		String idPd = request.getParameter("pruebaD");
 		String puntos = request.getParameter("puntos");
 
-		Date date1 = null;
-
-		try {
-
-			if (fecha != "")
-				date1 = formatter.parse(fecha);
-
-		} catch (ParseException e) {
-			System.out.println("Fallo al convertir fechas. " + e.getMessage());
-		}
 
 		ServiceMultimedias sm = new ServiceMultimediasImp();
 		ServiceClientes sc = new ServiceClientesImp();
@@ -59,8 +45,6 @@ public class ModificarMultimediasAccion extends Accion {
 
 			m.setPruebaDeportivaIdpruebadeportiva(Integer.parseInt(idPd));
 		}
-		if (fecha != "")
-			m.setFecha(date1);
 
 		if (imagen != "")
 			m.setImagen(imagen);

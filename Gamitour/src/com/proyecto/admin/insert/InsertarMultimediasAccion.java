@@ -24,12 +24,12 @@ import com.proyecto.service.ServiceMultimedias;
 import com.proyecto.service.ServiceMultimediasImp;
 
 @javax.servlet.annotation.MultipartConfig
-@WebServlet("/InsertarMultimedias")
-public class InsertarMultimedias extends HttpServlet {
+@WebServlet("/InsertarMultimediasAccion")
+public class InsertarMultimediasAccion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/Users/Gelas/Desktop/subidas/";
+	private final String directorio = "/opt/subidas/multimedias";
 	ServiceMultimedias sm = new ServiceMultimediasImp();
 	ServiceClientes sc = new ServiceClientesImp();
 
@@ -47,7 +47,7 @@ public class InsertarMultimedias extends HttpServlet {
 		Date date = new Date();
 		String fecha = dateFormat.format(date); // 2016/11/16 12:08:43
 
-		/* Proceso ficheros */
+		/* Proceso ficheros */// 2016/11/16-12.08.43-idUsuario-archivo.jpg
 		String imagenName = fecha + "-" + cliente + "-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 		String videoName = fecha + "-" + cliente + "-"
