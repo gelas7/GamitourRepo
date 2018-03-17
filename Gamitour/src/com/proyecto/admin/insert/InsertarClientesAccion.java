@@ -26,6 +26,7 @@ import com.proyecto.service.ServiceRolesImp;
 @javax.servlet.annotation.MultipartConfig
 @WebServlet("/InsertarClientesAccion")
 public class InsertarClientesAccion extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 	private final String directorio = "/opt/subidas/clientes/";
@@ -43,17 +44,20 @@ public class InsertarClientesAccion extends HttpServlet {
 		String puntosacumulados = request.getParameter("puntosacumulados");
 		String rol = request.getParameter("rol");
 		Part avatar = request.getPart("avatar");
-		Date date = null;
+		Date dateNacimiento = null;
+		Date dateSubida = new Date();
 
 		try {
 			if (fechanacimiento != "")
-				date = formatter.parse(fechanacimiento);
+				dateNacimiento = formatter.parse(fechanacimiento);
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
-
-		/* Proceso ficheros *///email-fechaNacimiento+archivo.jpg
-		String avatarName = email+"-"+date+"-"+Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
+		
+		String fechaSubida = formatter.format(dateSubida); // 2016-11-16
+		
+		/* Proceso ficheros(email-fechaSubida-file.jpg) */
+		String avatarName = email+"-"+fechaSubida+"-"+Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
 		
 		InputStream imagenStream = avatar.getInputStream();
 
@@ -68,7 +72,7 @@ public class InsertarClientesAccion extends HttpServlet {
 
 		Rol r = sr.buscarPorClave(Integer.parseInt(rol));// Creo rol a partir del id
 
-		Cliente c = new Cliente(r, nombre, apellidos, date, email, password, telefono, direccion, codigopostal, avatarName,
+		Cliente c = new Cliente(r, nombre, apellidos, dateNacimiento, email, password, telefono, direccion, codigopostal, avatarName,
 				Integer.parseInt(puntosacumulados), new Date());
 
 		sc.insertar(c); // Inserto cliente

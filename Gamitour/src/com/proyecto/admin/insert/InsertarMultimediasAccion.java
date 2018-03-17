@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Paths;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.servlet.ServletException;
@@ -44,14 +43,13 @@ public class InsertarMultimediasAccion extends HttpServlet {
 		Part imagen = request.getPart("imagen");
 		Part video = request.getPart("video");
 
-		DateFormat dateFormat = new SimpleDateFormat("yyyy:MM:dd-HH.mm.ss");
 		Date date = new Date();
-		String fecha = dateFormat.format(date); // 2016/11/16 12:08:43
+		String fecha = formatter.format(date); // 2016-11-16
 
-		/* Proceso ficheros */// 
-		String imagenName = fecha + "-" + cliente + "-"
+		/* Proceso ficheros(cliente-fecha-file.jpg) */
+		String imagenName = cliente + "-"+fecha + "-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
-		String videoName = fecha + "-" + cliente + "-"
+		String videoName = cliente + "-" +fecha + "-"
 				+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
 
 		InputStream imagenStream = imagen.getInputStream();

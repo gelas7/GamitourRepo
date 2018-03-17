@@ -25,8 +25,8 @@ import com.proyecto.service.ServicePremiosImp;
 public class InsertarPremiosAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
-	private final String directorio = "/opt/subidas/premios";
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+	private final String directorio = "/opt/subidas/premios/";
 	ServicePremiosImp sp = new ServicePremiosImp();
 	ServiceClientesImp sc = new ServiceClientesImp();
 	
@@ -54,9 +54,9 @@ public class InsertarPremiosAccion extends HttpServlet {
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
-
-		/* Proceso ficheros (date1+date2+file.jpg) */
-		String imagenName = date1 + "-" + date2 + "-"
+		
+		/* Proceso ficheros (fechaConsumo-fechaActivacion-file.jpg) */
+		String imagenName = fechaconsumo+"-"+fechaactivacion+"-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
 		InputStream imagenStream = imagen.getInputStream();
