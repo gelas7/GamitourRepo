@@ -1,9 +1,12 @@
 package com.proyecto.admin.update;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -13,11 +16,14 @@ import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceRolesImp;
 import com.proyecto.util.Accion;
 
-public class ModificarClientesAccion extends Accion {
+public class ModificarClientesAccion extends HttpServlet {
 
-	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+	private static final long serialVersionUID = 1L;
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+	private final String directorio = "/opt/subidas/clientes/";
 
-	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		String id = request.getParameter("id");
 		String nombre = request.getParameter("nombre");
@@ -72,7 +78,7 @@ public class ModificarClientesAccion extends Accion {
 
 		sc.actualizar(c);
 
-		return "MostrarAdmin.do?div=clientes";
+		response.sendRedirect("MostrarAdmin.do?div=clientes");
 	}
 
 }

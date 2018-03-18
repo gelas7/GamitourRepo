@@ -50,43 +50,43 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					Nombre: <input type="text" name="nombre"
+					<label for="nombre">Nombre: </label> <input type="text" name="nombre"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					Apellidos: <input type="text" name="apellidos"
+				<label for="apellido">Apellido: </label> <input type="text" name="apellidos"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getApellidos()%>">
 				</p>
 				<p>
-					Fecha de nacimiento: <input type="date" name="fechanacimiento"
+					<label for="fechanacimiento">Fecha de nacimiento:</label> <input type="date" name="fechanacimiento"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechanacimiento()%>">
 				</p>
 				<p>
-					Email: <input type="text" name="email"
+				<label for="email">Email: </label> <input type="text" name="email"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getEmail()%>">
 				</p>
 				<p>
-					Password: <input type="password" name="password"
+					<label for="password">Contraseña: </label> <input type="password" name="password"
 						placeholder="********">
 				</p>
 				<p>
-					Telefono: <input type="text" name="telefono"
+					<label for="telefono">Telefono: </label><input type="text" name="telefono"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTelefono()%>">
 				</p>
 				<p>
-					Direccion: <input type="text" name="direccion"
+					<label for="direccion">Direccion: </label> <input type="text" name="direccion"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDireccion()%>">
 				</p>
 				<p>
-					Codigo Postal: <input type="text" name="codigopostal"
+				<label for="codigopostal">CP: </label> <input type="text" name="codigopostal"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCodigopostal()%>">
 				</p>
 				<p>
-					Puntos Acumulados: <input type="text" name="puntosacumulados"
+				<label for="puntosacumulados">Putos acumulados: </label> <input type="text" name="puntosacumulados"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
 				</p>
 				<p>
-					Rol: <select name="rol">
+				<label for="rol">Rol: </label> <select name="rol">
 						<option value="">Seleccione un rol</option>
 						<c:forEach items="${listaRoles}" var="rol">
 							<option value="${rol.idrol}">${rol.nombre}</option>
@@ -94,7 +94,8 @@
 					</select>
 				</p>
 				<p>
-					Avatar: <input type="file" name="avatar">
+					<label for="avatar">Avatar:</label> <input type="file"
+						name="avatar">
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">
