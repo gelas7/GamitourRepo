@@ -1,21 +1,29 @@
 package com.proyecto.admin.update;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+import org.apache.commons.io.FileUtils;
 
 import com.proyecto.modelo.Cliente;
 import com.proyecto.modelo.Rol;
 import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceRolesImp;
-import com.proyecto.util.Accion;
 
+@javax.servlet.annotation.MultipartConfig
+@WebServlet("/ModificarClientesAccion")
 public class ModificarClientesAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -36,8 +44,9 @@ public class ModificarClientesAccion extends HttpServlet {
 		String codigopostal = request.getParameter("codigopostal");
 		String puntosacumulados = request.getParameter("puntosacumulados");
 		String rol = request.getParameter("rol");
-		String avatar = request.getParameter("avatar");
+		Part avatar = request.getPart("avatar");
 		Date date1 = null;
+		Date dateSubida = new Date();
 
 		try {
 			if (fechanacimiento != "")
@@ -45,6 +54,20 @@ public class ModificarClientesAccion extends HttpServlet {
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
+
+		String fechaSubida = formatter.format(dateSubida); // 2016-11-16
+
+		/* Proceso ficheros(email-fechaSubida-file.jpg) */
+		String avatarName = email + "-" + fechaSubida + "-"
+				+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
+
+		InputStream imagenStream = avatar.getInputStream();
+
+		File imagenSalida = new File(directorio + avatarName);
+
+		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+
+		imagenStream.close();
 
 		ServiceClientesImp sc = new ServiceClientesImp();
 		ServiceRolesImp sr = new ServiceRolesImp();
@@ -73,8 +96,8 @@ public class ModificarClientesAccion extends HttpServlet {
 			Rol r = sr.buscarPorClave(Integer.parseInt(rol));
 			c.setRol(r);
 		}
-		if (avatar != "")
-			c.setAvatar(avatar);
+		if (avatarName != "")
+			c.setAvatar(avatarName);
 
 		sc.actualizar(c);
 
