@@ -70,13 +70,11 @@
 				</p>
 				<p>
 					<label>Latitud: </label><input type="text" id="lat" name="latitud"
-						readonly
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLatitud()%>">
+						readonly>
 				</p>
 				<p>
 					<label>Longitud: </label><input type="text" id="lng"
-						name="longitud" readonly
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLongitud()%>">
+						name="longitud" readonly>
 				</p>
 				<p>
 					<label>Historia: </label><input type="text" name="historia"
@@ -103,6 +101,7 @@
 				</p>
 
 			</form>
+			<div id="map" class="map" style="width: 400px; height: 400px;"></div>
 		</div>
 	</div>
 	<div id="footer"></div>
