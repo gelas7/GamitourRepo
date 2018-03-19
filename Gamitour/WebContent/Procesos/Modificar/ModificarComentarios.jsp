@@ -50,7 +50,7 @@
 					name="id">
 
 				<p>
-					Cliente: <select name="cliente">
+					<label>Cliente: </label> <select name="cliente">
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
@@ -58,7 +58,7 @@
 				</p>
 
 				<p>
-					ID Multimedia: <select name="multimedia">
+					<label>ID Multimedia: </label> <select name="multimedia">
 						<c:forEach items="${listaMultimedias}" var="multimedia">
 							<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
 						</c:forEach>
@@ -66,7 +66,7 @@
 				</p>
 
 				<p>
-					Texto: <input type="text" name="texto"
+					<label> Texto: </label> <input type="text" name="texto"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
 				</p>
 

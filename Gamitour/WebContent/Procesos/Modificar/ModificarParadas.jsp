@@ -54,40 +54,44 @@
 					name="id">
 
 				<p>
-					Nombre: <input type="text" name="nombre"
+					<label>Nombre: </label><input type="text" name="nombre"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					Numero de parada: <input type="number" name="numeroParada"
+					<label>Numero de parada: </label><input type="number"
+						name="numeroParada"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
 				</p>
 				<p>
-					Ubicación: <input type="text" name="ubicacion" id="search"
+					<label>Ubicación: </label><input type="text" name="ubicacion"
+						id="search"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
 					<button type="button" id="btnOK">Obtener coordenadas</button>
 				</p>
 				<p>
-					Latitud: <input type="text" id="lat" name="latitud" readonly
+					<label>Latitud: </label><input type="text" id="lat" name="latitud"
+						readonly
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLatitud()%>">
 				</p>
 				<p>
-					Longitud: <input type="text" id="lng" name="longitud" readonly
+					<label>Longitud: </label><input type="text" id="lng"
+						name="longitud" readonly
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLongitud()%>">
 				</p>
 				<p>
-					Historia: <input type="text" name="historia"
+					<label>Historia: </label><input type="text" name="historia"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>">
 				</p>
 				<p>
-					Anecdotario: <input type="text" name="anecdotario"
+					<label>Anecdotario: </label><input type="text" name="anecdotario"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAnecdotario()%>">
 				</p>
 				<p>
-					Gastronomia: <input type="text" name="gastronomia"
+					<label>Gastronomia: </label><input type="text" name="gastronomia"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getGastronomia()%>">
 				</p>
 				<p>
-					Itinerario: <select name="itinerario">
+					<label>Itinerario: </label><select name="itinerario">
 						<option value="">Seleccione un itinerario</option>
 						<c:forEach items="${listaItinerarios}" var="itinerario">
 							<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
@@ -95,7 +99,7 @@
 					</select>
 				</p>
 				<p>
-					Imagen: <input type="file" name="imagen"
+					<label>Imagen: </label><input type="file" name="imagen"
 						onchange="handleFiles(this.files)">
 				</p>
 				<p>

@@ -47,35 +47,35 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					Nombre: <input type="text" name="nombre"
+					<label>Nombre: </label> <input type="text" name="nombre"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					Fecha de inicio: <input type="date" name="fechainicio"
+					<label>Fecha de inicio: </label> <input type="date" name="fechainicio"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechainicio()%>">
 				</p>
 				<p>
-					Fecha de fin: <input type="date" name="fechafin"
+					<label>Fecha de fin: </label>  <input type="date" name="fechafin"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>">
 				</p>
 				<p>
-					Ubicacion: <input type="text" name="ubicacion"
+					<label>Ubicacion: </label>  <input type="text" name="ubicacion"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
 				</p>
 				<p>
-					Número de participantes: <input type="text" name="participantes"
+					<label>Número de participantes: </label>  <input type="text" name="participantes"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumparticipantes()%>">
 				</p>
 				<p>
-					Precio: <input type="text" name="precio"
+					<label>Precio: </label>  <input type="text" name="precio"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPrecio()%>">
 				</p>
 				<p>
-					Imagen: <input type="file" name="imagen"
+					<label>Imagen: </label>  <input type="file" name="imagen"
 						onchange="handleFiles(this.files)">
 				</p>
 				<p>
-					Puntos: <input type="text" name="puntos"
+					<label>Puntos: </label>  <input type="text" name="puntos"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 				</p>
 

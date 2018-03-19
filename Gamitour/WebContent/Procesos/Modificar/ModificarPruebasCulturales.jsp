@@ -48,23 +48,23 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					Nombre: <input type="text" name="nombre"
+					<label>Nombre: </label><input type="text" name="nombre"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					Pregunta: <input type="text" name="pregunta"
+					<label>Pregunta: </label><input type="text" name="pregunta"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPregunta()%>">
 				</p>
 				<p>
-					Respuesta: <input type="text" name="respuesta"
+					<label>Respuesta: </label><input type="text" name="respuesta"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getRespuesta()%>">
 				</p>
 				<p>
-					Puntos: <input type="text" name="puntos"
+					<label>Puntos: </label><input type="text" name="puntos"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 				</p>
 				<p>
-					Parada: <select name="parada">
+					<label>Parada: </label><select name="parada">
 						<c:forEach items="${listaParadas}" var="parada">
 							<option value="${parada.idparada}">${parada.nombre}</option>
 						</c:forEach>

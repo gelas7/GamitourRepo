@@ -51,7 +51,7 @@
 					name="id">
 
 				<p>
-					Cliente: <select name="cliente">
+					<label> Cliente: </label> <select name="cliente">
 						<option value="">Seleccione un cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
@@ -60,15 +60,16 @@
 				</p>
 
 				<p>
-					Comentario: <input type="text" name="comentario"
+					<label>Comentario: </label><input type="text" name="comentario"
 						placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getComentario()%>">
 				</p>
 				<p>
-					Puntos Acumulados: <input type="number" name="puntos"
+					<label> Puntos Acumulados: </label><input type="number"
+						name="puntos"
 						placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
 				</p>
 				<p>
-					Prueba Deportiva: <select name="pruebaD">
+					<label> Prueba Deportiva: </label><select name="pruebaD">
 						<option value="">Seleccione una Prueba Deportiva</option>
 						<c:forEach items="${listaPruebasDeportivas}" var="pruebaD">
 							<option value="${pruebaD.idpruebadeportiva}">${pruebaD.nombre}</option>
@@ -76,7 +77,7 @@
 					</select>
 				</p>
 				<p>
-					Imagen: <input type="text" name="imagen">
+					<label> Imagen: </label><input type="text" name="imagen">
 				</p>
 				<p>
 					Video: <input type="text" name="video">

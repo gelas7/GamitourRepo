@@ -44,27 +44,28 @@
 
 				<h2 id="modificar">Modifique los campos necesarios.</h2>
 				<h3>Los campos en blanco no sufrirán cambios.</h3>
-				
+
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					Nombre: <input type="text" name="nombreN"
+					<label>Nombre: </label><input type="text" name="nombreN"
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					Texto: <input type="text" name="texto"
+					<label>Texto: </label><input type="text" name="texto"
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
 				</p>
 				<p>
-					Fecha de Alta: <input type="date" name="fechaalta"
+					<label>Fecha de Alta: </label><input type="date" name="fechaalta"
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechaalta()%>">
 				</p>
 				<p>
-					Fecha de Caducidad: <input type="date" name="fechacaducidad"
+					<label>Fecha de Caducidad: </label><input type="date"
+						name="fechacaducidad"
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechacaducidad()%>">
 				</p>
 				<p>
-					Imagen: <input type="file" name="imagen"
+					<label>Imagen: </label><input type="file" name="imagen"
 						onchange="handleFiles(this.files)">
 				</p>
 				<p>

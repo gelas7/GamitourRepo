@@ -50,30 +50,30 @@
 					name="id">
 
 				<p>
-					Nombre: <input type="text" name="nombre"
+					<label>Nombre: </label><input type="text" name="nombre"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					Descripcion: <input type="number" name="descripcion"
+					<label>Descripcion: /<input type="number" name="descripcion"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>">
 				</p>
 				<p>
-					Imagen: <input type="file" name="imagen"
+					<label>Imagen: </label><input type="file" name="imagen"
 						onchange="handleFiles(this.files)">
 				</p>
 				<p>
-					Puntos: <input type="number" name="puntos"
+					<label>Puntos: </label><input type="number" name="puntos"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 				</p>
 				<p>
-					Fecha de activacion: <input type="date" name="fechaactivacion">
+					<label>Fecha de activacion: </label><input type="date" name="fechaactivacion">
 				</p>
 
 				<p>
-					Fecha de consumo: <input type="date" name="fechaconsumo">
+					<label>Fecha de consumo: </label><input type="date" name="fechaconsumo">
 				</p>
 				<p>
-					Cliente: <select name="cliente">
+					<label>Cliente: </label><select name="cliente">
 						<option value="">Seleccione un cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
