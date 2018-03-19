@@ -51,26 +51,26 @@
 				enctype="multipart/form-data">
 					<h2>Insertar Parada</h2>
 					<p>
-						Nombre: <input type="text" name="nombre" required="required">
+						<label>Nombre: </label><input type="text" name="nombre" required="required">
 					</p>
 					<p>
-						Numero de parada: <input type="number" name="numeroParada"
+						<label>Numero de parada: </label><input type="number" name="numeroParada"
 							required="required">
 					</p>
 
 					<p>
-						Historia: <input type="text" name="historia" required="required">
+						<label>Historia: </label><input type="text" name="historia" required="required">
 					</p>
 					<p>
-						Anecdotario: <input type="text" name="anecdotario"
+						<label>Anecdotario: </label><input type="text" name="anecdotario"
 							required="required">
 					</p>
 					<p>
-						Gastronomia: <input type="text" name="gastronomia"
+						<label>Gastronomia: </label><input type="text" name="gastronomia"
 							required="required">
 					</p>
 					<p>
-						Itinerario: <select name="itinerario">
+						<label>Itinerario: </label><select name="itinerario">
 							<c:forEach items="${listaItinerarios}" var="itinerario">
 								<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
 							</c:forEach>
@@ -78,19 +78,19 @@
 					</p>
 
 					<p>
-						Imagen: <input type="file" name="imagen" required="required">
+						<label>Imagen: </label><input type="file" name="imagen" required="required">
 					</p>
 					<p>
-						Ubicación: <input type="text" id="search" name="ubicacion"
+						<label>Ubicación: </label><input type="text" id="search" name="ubicacion"
 							required="required">
 
 						<button type="button" id="btnOK">Obtener coordenadas</button>
 					</p>
 					<p>
-						Latitud: <input type="text" id="lat" name="latitud" readonly>
+						<label>Latitud: </label><input type="text" id="lat" name="latitud" readonly>
 					</p>
 					<p>
-						Longitud: <input type="text" id="lng" name="longitud" readonly>
+						<label>Longitud: </label><input type="text" id="lng" name="longitud" readonly>
 					</p>
 					<p>
 						<input type="submit" value="Enviar" id="enviar">

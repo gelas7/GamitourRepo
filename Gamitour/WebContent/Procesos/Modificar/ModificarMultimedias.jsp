@@ -80,7 +80,7 @@
 					<label> Imagen: </label><input type="text" name="imagen">
 				</p>
 				<p>
-					Video: <input type="text" name="video">
+					<label>Video: </label><input type="text" name="video">
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">

@@ -45,19 +45,19 @@
 
 				<h2>Insertar Prueba Cultural</h2>
 				<p>
-					Nombre: <input type="text" name="nombre" required="required">
+					<label>Nombre: </label><input type="text" name="nombre" required="required">
 				</p>
 				<p>
-					Pregunta: <input type="text" name="pregunta" required="required">
+					<label>Pregunta: </label><input type="text" name="pregunta" required="required">
 				</p>
 				<p>
-					Respuesta: <input type="text" name="respuesta" required="required">
+					<label>Respuesta: </label><input type="text" name="respuesta" required="required">
 				</p>
 				<p>
-					Puntos: <input type="number" name="puntos" required="required">
+					<label>Puntos: </label><input type="number" name="puntos" required="required">
 				</p>
 				<p>
-					Parada: <select name="parada">
+					<label>Parada: </label><select name="parada">
 						<c:forEach items="${listaParadas}" var="parada">
 							<option value="${parada.idparada}">${parada.nombre}</option>
 						</c:forEach>

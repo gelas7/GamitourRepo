@@ -45,14 +45,14 @@
 			<form action="../../InsertarVotos.do" method="get">
 				<h2>Insertar Voto</h2>
 				<p>
-					Cliente: <select name="cliente">
+					<label>Cliente: </label><select name="cliente">
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					Multimedia: <select name="multimedia">
+					<label>Multimedia: </label><select name="multimedia">
 						<c:forEach items="${listaMultimedias}" var="multimedia">
 							<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
 						</c:forEach>
@@ -60,7 +60,7 @@
 				</p>
 
 				<p>
-					Puntos: <input type="number" name="puntos" required="required">
+					<label>Puntos: </label><input type="number" name="puntos" required="required">
 				</p>
 
 				<p>

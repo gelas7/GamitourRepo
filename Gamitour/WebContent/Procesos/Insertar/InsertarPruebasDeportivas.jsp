@@ -47,25 +47,25 @@
 
 				<h2>Insertar Prueba Deportiva</h2>
 				<p>
-					Nombre: <input type="text" name="nombre" required="required">
+					<label>Nombre: </label><input type="text" name="nombre" required="required">
 				</p>
 				<p>
-					Fecha de Inicio: <input type="date" name="fechaInicio"
+					<label>Fecha de Inicio: </label><input type="date" name="fechaInicio"
 						required="required">
 				</p>
 				<p>
-					Fecha de Fin: <input type="date" name="fechaFin"
+					<label>Fecha de Fin: </label><input type="date" name="fechaFin"
 						required="required">
 				</p>
 				<p>
-					Explicación: <input type="text" name="explicacion"
+					<label>Explicación: </label><input type="text" name="explicacion"
 						required="required">
 				</p>
 				<p>
-					Puntos: <input type="number" name="puntos" required="required">
+					<label>Puntos: </label><input type="number" name="puntos" required="required">
 				</p>
 				<p>
-					Parada: <select name="parada">
+					<label>Parada: </label><select name="parada">
 						<c:forEach items="${listaParadas}" var="parada">
 							<option value="${parada.idparada}">${parada.nombre}</option>
 						</c:forEach>

@@ -46,34 +46,34 @@
 				enctype="multipart/form-data">
 				<h2>Insertar Premio</h2>
 				<p>
-					Cliente: <select name="cliente">
+					<label>Cliente: </label><select name="cliente">
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					Nombre: <input type="text" name="nombre" required="required">
+					<label>Nombre: </label><input type="text" name="nombre" required="required">
 				</p>
 				<p>
-					Descripcion: <input type="text" name="descripcion"
+					<label>Descripcion: </label><input type="text" name="descripcion"
 						required="required">
 				</p>
 				<p>
-					Ubicación: <input type="text" name="ubicacion" required="required">
+					<label>Ubicación: </label><input type="text" name="ubicacion" required="required">
 				</p>
 				<p>
-					Puntos: <input type="number" name="puntos" required="required">
+					<label>Puntos: </label><input type="number" name="puntos" required="required">
 				</p>
 				<p>
-					Imagen: <input type="file" name="imagen" required="required">
+					<label>Imagen: </label><input type="file" name="imagen" required="required">
 				</p>
 				<p>
-					Fecha de activacion: <input type="date" name="fechaactivacion"
+					<label>Fecha de activacion: </label><input type="date" name="fechaactivacion"
 						required="required">
 				</p>
 				<p>
-					Fecha de consumo: <input type="date" name="fechaconsumo"
+					<label>Fecha de consumo: </label><input type="date" name="fechaconsumo"
 						required="required">
 				</p>
 				<p>
