@@ -26,7 +26,6 @@ public class ModificarPremiosAccion extends Accion {
 
 		String nombre = request.getParameter("nombre");
 		String descripcion = request.getParameter("descripcion");
-		String imagen = request.getParameter("imagen");
 		String fechaactivacion = request.getParameter("fechaactivacion");
 		String fechaconsumo = request.getParameter("fechaconsumo");
 		String cliente = request.getParameter("cliente");
@@ -53,8 +52,6 @@ public class ModificarPremiosAccion extends Accion {
 			premio.setNombre(nombre);
 		if (descripcion != "")
 			premio.setDescripcion(descripcion);
-		if (imagen != "")
-			premio.setImagen(imagen);
 		if (cliente != "") {
 			Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
 			premio.setCliente(c);

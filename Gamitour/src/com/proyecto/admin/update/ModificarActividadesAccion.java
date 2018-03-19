@@ -24,7 +24,6 @@ public class ModificarActividadesAccion extends Accion {
 		String ubicacion = request.getParameter("ubicacion");
 		String numparticipantes = request.getParameter("participantes");
 		String precio = request.getParameter("precio");
-		String imagen = request.getParameter("imagen");
 		String puntos = request.getParameter("puntos");
 		Date date1 = null;
 		Date date2 = null;
@@ -52,8 +51,6 @@ public class ModificarActividadesAccion extends Accion {
 			a.setNumparticipantes(Integer.parseInt(numparticipantes));
 		if (precio != "")
 			a.setPrecio(Float.parseFloat(precio));
-		if (imagen != "")
-			a.setImagen(imagen);
 		if (puntos != "")
 			a.setPuntos(Integer.parseInt(puntos));
 

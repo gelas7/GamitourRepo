@@ -23,7 +23,6 @@ public class ModificarNoticiasAccion extends Accion {
 		String texto = request.getParameter("texto");
 		String fecha = request.getParameter("fechaalta");
 		String fechac = request.getParameter("fechacaducidad");
-		String imagen = request.getParameter("imagen");
 		Date date = null;
 		Date date2 = null;
 
@@ -50,9 +49,6 @@ public class ModificarNoticiasAccion extends Accion {
 
 		if (date2 != null) // Compruebo si se han hecho cambios
 			noticia.setFechacaducidad(date2);
-
-		if (imagen != "") // Compruebo si se han hecho cambios
-			noticia.setImagen(imagen);
 
 		sn.actualizar(noticia);
 

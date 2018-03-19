@@ -24,7 +24,6 @@ public class ModificarParadasAccion extends Accion {
 		String anecdotario = request.getParameter("anecdotario");
 		String gastronomia = request.getParameter("gastronomia");
 		String itinerario = request.getParameter("itinerario");
-		String imagen = request.getParameter("imagen");
 		String latitud = request.getParameter("latitud");
 		String longitud = request.getParameter("longitud");
 
@@ -54,8 +53,6 @@ public class ModificarParadasAccion extends Accion {
 			Itinerario it = si.buscarPorClave(Integer.parseInt(itinerario));
 			parada.setItinerario(it);
 		}
-		if (imagen != "")
-			parada.setImagen(imagen);
 
 		sp.actualizar(parada);
 

@@ -99,10 +99,6 @@
 					</select>
 				</p>
 				<p>
-					<label>Imagen: </label><input type="file" name="imagen"
-						onchange="handleFiles(this.files)">
-				</p>
-				<p>
 					<input type="submit" value="Enviar" id="enviar">
 				</p>
 
