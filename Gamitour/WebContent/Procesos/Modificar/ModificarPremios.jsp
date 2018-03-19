@@ -54,7 +54,7 @@
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Descripcion: /<input type="number" name="descripcion"
+					<label>Descripcion: </label><input type="number" name="descripcion"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>">
 				</p>
 				<p>
