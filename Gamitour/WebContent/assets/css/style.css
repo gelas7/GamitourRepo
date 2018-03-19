@@ -1,370 +1,376 @@
-@import
-	url("https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha");
-
+@import url("https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Neucha");
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	background: #FFFFFF url(images/img01.gif) repeat-x;
-	font-size: 13px;
-	font-family: Optima, sans-serif;
-	width: 95%;
-	min-width: 750px;
+    background: #FFFFFF url(images/img01.gif) repeat-x;
+    font-size: 13px;
+    font-family: Optima, sans-serif;
+    width: 95%;
+    min-width: 750px;
 }
 
 header {
-	float: right;
-	color: black;
-	margin: 20px 70px 0 20px;
+    float: right;
+    color: black;
+    margin: 20px 70px 0 20px;
 }
 
 header a {
-	font-family: 'Neucha', cursive;
-	border: none;
-	color: #346086;
-	font-size: 15px;
-	outline: none;
-	text-decoration: none;
-	font-weight: bold;
+    font-family: 'Neucha', cursive;
+    border: none;
+    color: #346086;
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 header li {
-	margin-top: 20px;
-	display: block;
-	padding: 0 5px 0 5px;
-	text-align: center;
+    margin-top: 20px;
+    display: block;
+    padding: 0 5px 0 5px;
+    text-align: center;
 }
 
-input, textarea {
-	background: #FFFFFF url(images/img09.gif) repeat-x;
-	border: 1px solid #FFFFFF;
-	border-top-color: #A3A3A3;
-	border-left-color: #D6D6D6;
-	color: #6E6E6E;
+input,
+textarea {
+    background: #FFFFFF url(images/img09.gif) repeat-x;
+    border: 1px solid #FFFFFF;
+    border-top-color: #A3A3A3;
+    border-left-color: #D6D6D6;
+    color: #6E6E6E;
 }
 
 .logo {
-	margin: 40px 0 30px 0;
+    margin: 40px 0 30px 0;
 }
 
 .logo a {
-	text-decoration: none;
-	font-size: 36px;
+    text-decoration: none;
+    font-size: 36px;
 }
 
 .flex {
-	display: flex;
-	flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .menu {
-	margin: 40px 20px 0 10px;
-	width: 200px;
+    margin: 40px 20px 0 10px;
+    width: 200px;
 }
 
 .page {
-	width: 90%;
+    width: 90%;
 }
 
 #btnOK {
-	font-size: 12px;
-	color: black;
-	border-radius: 15px;
-	padding: 5px;
-	border: 1px solid black;
-	cursor: pointer;
+    font-size: 12px;
+    color: black;
+    border-radius: 15px;
+    padding: 5px;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 #btnOK:hover {
-	color: white;
-	background-color: black;
+    color: white;
+    background-color: black;
 }
 
 .mostrar {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 h1 {
-	font-size: 29px;
-	font-family: 'Oswald', sans-serif;
-	text-decoration: none;
-	color: #346086;
+    font-size: 29px;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    color: #346086;
 }
 
 h2 {
-	font-size: 23px;
-	font-family: 'Ubuntu', sans-serif;
-	color: #346086;
-	margin-bottom: 30px;
+    font-size: 23px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #346086;
+    margin-bottom: 30px;
 }
 
 a {
-	color: #346086;
+    color: #346086;
 }
 
 a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 hr {
-	display: none;
+    display: none;
 }
 
-td, th {
-	height: 30px;
-	padding: 0.5em;
-	border-bottom: 2px solid white;
+td,
+th {
+    height: 30px;
+    padding: 0.5em;
+    border-bottom: 2px solid white;
+}
+
+td svg{
+    display: inline-block;
+    cursor: pointer;
 }
 
 th {
-	background-color: #346086;
-	color: white;
-	font-weight: bold;
-	font-size: 14px;
+    background-color: #346086;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 th:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 td {
-	text-align: center;
-	font-size: 13px;
+    text-align: center;
+    font-size: 13px;
 }
 
 tr td:hover {
-	background: #666;
-	color: #FFF;
+    background: #666;
+    color: #FFF;
 }
 
 tr:nth-child(odd) {
-	background-color: #d0d0d0;
+    background-color: #d0d0d0;
 }
 
 tr:nth-child(even) {
-	background-color: #fbfbfb;
+    background-color: #fbfbfb;
 }
 
 .insertar {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 table {
-	margin-top: 10px;
-	color: #333;
-	border-collapse: collapse;
-	border-radius: 1em;
-	overflow: hidden;
+    margin-top: 10px;
+    color: #333;
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
 }
 
 table a {
-	text-decoration: none;
-	color: black;
-	font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 table a:hover {
-	text-decoration: none;
-	color: white;
+    text-decoration: none;
+    color: white;
 }
 
-input[type=submit]:not(.uploadSubmit ) {
-	font-size: 15px;
-	font-weight: bold;
-	color: black;
-	border-radius: 15px;
-	padding: 5px;
-	border: 1px solid black;
-	cursor: pointer;
+input[type=submit]:not(.uploadSubmit) {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border-radius: 15px;
+    padding: 5px;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 input[type=submit]:hover {
-	color: white;
-	background-color: black;
+    color: white;
+    background-color: black;
 }
 
 input[class=uploadSubmit] {
-	font-size: 12px;
-	border: none;
-	border-radius: 15px;
-	color: black;
-	padding:2px
+    font-size: 12px;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    padding: 2px
 }
 
 p {
-	font-weight: bold;
-	margin-top: 12px;
+    font-weight: bold;
+    margin-top: 12px;
 }
 
-p, ul {
-	line-height: 190%;
+p,
+ul {
+    line-height: 190%;
 }
 
 .menu ul {
-	width: 120px;
-	height: 550px;
-	margin-left: 10px;
-	list-style-type: none;
-	padding-top: 10px;
-	background-color: #666666;
-	overflow: auto;
-	border-radius: 20px;
+    width: 120px;
+    height: 550px;
+    margin-left: 10px;
+    list-style-type: none;
+    padding-top: 10px;
+    background-color: #666666;
+    overflow: auto;
+    border-radius: 20px;
 }
 
 .menu li {
-	margin-top: 20px;
-	display: block;
-	padding: 0 5px 0 5px;
-	text-align: center;
+    margin-top: 20px;
+    display: block;
+    padding: 0 5px 0 5px;
+    text-align: center;
 }
 
 .menu li a {
-	font-family: Optima, sans-serif;
-	border: none;
-	background-color: transparent;
-	color: white;
-	font-size: 140%;
-	outline: none;
-	text-decoration: none;
-	font-weight: 500;
+    font-family: Optima, sans-serif;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 140%;
+    outline: none;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .menu li a:hover {
-	transition: 0.5s;
-	color: #a1c3ff;
-	font-size: 19px;
-	cursor: pointer;
-	outline: none;
+    transition: 0.5s;
+    color: #a1c3ff;
+    font-size: 19px;
+    cursor: pointer;
+    outline: none;
 }
 
 form {
-	padding-left: 30px;
-	cursor: pointer;
-	width: 400px;
-	text-align: left;
+    padding-left: 30px;
+    cursor: pointer;
+    width: 400px;
+    text-align: left;
 }
 
 table button {
-	text-decoration: none;
-	padding: 5px;
-	font-weight: bold;
-	font-size: 14px;
-	color: #346086;
-	border-radius: 15px;
-	background-color: white;
-	border: 0;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #346086;
+    border-radius: 15px;
+    background-color: white;
+    border: 0;
 }
 
 table button:hover {
-	color: black;
-	cursor: pointer;
+    color: black;
+    cursor: pointer;
 }
 
 tfoot td {
-	background-color: white;
+    background-color: white;
 }
 
 tfoot td:hover {
-	background-color: white;
+    background-color: white;
 }
 
 #logout:hover {
-	transition: 0.5s;
-	color: #265ed7;
-	font-size: 16px;
-	cursor: pointer;
-	outline: none;
+    transition: 0.5s;
+    color: #265ed7;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
 }
 
 #loginBody {
-	background: url("images/playa.jpg") no-repeat center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background: url("images/playa.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .loginbutton {
-	background-color: transparent;
-	border-radius: 5px/5px;
-	width: 250px;
-	text-align: center;
-	text-decoration: none;
-	height: 50px;
-	margin: 20px 0 20px 17px;
-	font-size: 24px;
-	border: none;
-	cursor: pointer;
+    background-color: transparent;
+    border-radius: 5px/5px;
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    height: 50px;
+    margin: 20px 0 20px 17px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
 }
 
 #loginForm {
-	margin-top: 45px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 270px;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 270px;
 }
 
 #loginTitle {
-	color: white;
-	font-size: 30px;
-	text-align: center;
-	font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 
 .input-login {
-	width: 235px;
-	padding: 15px 25px;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
-		"DejaVu Sans", Verdana, sans-serif;
-	background: #f5f5f5;
-	border: none;
-	border-radius: 5px;
-	color: #333;
-	font-size: 14px;
-	margin-top: 15px;
+    width: 235px;
+    padding: 15px 25px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    margin-top: 15px;
 }
 
 #map {
-	margin-right: 60px;
+    margin-right: 60px;
 }
 
 #formMapa {
-	display: flex;
-	flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 #imagenInicio {
-	margin-top: 80px;
+    margin-top: 80px;
 }
 
 .tablas {
-	display: none;
+    display: none;
 }
 
 label {
-	font-size: 16px;
-	color: #346086;
+    font-size: 16px;
+    color: #346086;
 }
 
-.tablas input, .contenedor input {
-	width: 80px;
-	box-sizing: border-box;
-	border: 2px solid #ccc;
-	border-radius: 4px;
-	font-size: 14px;
-	background-position: 10px 10px;
-	background-repeat: no-repeat;
-	padding: 5px 5px 5px 5px;
-	-webkit-transition: width 0.4s ease-in-out;
-	transition: width 0.4s ease-in-out;
+.tablas input,
+.contenedor input {
+    width: 80px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 5px 5px 5px 5px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
 
 .contenedor h1 {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .tablas input:focus {
-	width: 18%;
+    width: 18%;
 }

@@ -82,8 +82,8 @@
 								<td>${m.cliente.getNombre()}</td>
 								<td>${m.fecha}</td>
 								<td>${m.comentario}</td>
-								<td>${m.imagen}</td>
-								<td>${m.video}</td>
+								<td><i class="far fa-file-image" title="${m.imagen}"></i></td>
+								<td><i class="fas fa-file-video" title="${m.video}"></i></td>
 								<td>${m.puntosacumulados}</td>
 								<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 
