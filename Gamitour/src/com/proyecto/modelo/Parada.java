@@ -25,6 +25,7 @@ public class Parada implements java.io.Serializable {
 	private String anecdotario;
 	private String gastronomia;
 	private String imagen;
+	private String video;
 	private Set<PruebaCultural> pruebaculturales = new HashSet<PruebaCultural>(0);
 	private Set<PruebaDeportiva> pruebadeportivas = new HashSet<PruebaDeportiva>(0);
 	private Float latitud;
@@ -39,7 +40,7 @@ public class Parada implements java.io.Serializable {
 	}
 
 	public Parada(Itinerario itinerario, String nombre, Integer numeroParada, String ubicacion, String historia,
-			String anecdotario, String gastronomia, String imagen, Float latitud, Float longitud) {
+			String anecdotario, String gastronomia, String imagen,String video, Float latitud, Float longitud) {
 		this.itinerario = itinerario;
 		this.nombre = nombre;
 		this.numeroParada = numeroParada;
@@ -48,6 +49,7 @@ public class Parada implements java.io.Serializable {
 		this.anecdotario = anecdotario;
 		this.gastronomia = gastronomia;
 		this.imagen = imagen;
+		this.video = video;
 		this.latitud = latitud;
 		this.longitud = longitud;
 	}
@@ -56,7 +58,7 @@ public class Parada implements java.io.Serializable {
 	public String toString() {
 		return "Parada [idparada=" + idparada + ", itinerario=" + itinerario + ", nombre=" + nombre + ", numeroParada="
 				+ numeroParada + ", ubicacion=" + ubicacion + ", historia=" + historia + ", anecdotario=" + anecdotario
-				+ ", gastronomia=" + gastronomia + ", imagen=" + imagen + "]";
+				+ ", gastronomia=" + gastronomia + ", imagen=" + imagen +", video=" + video + "]";
 	}
 
 	@Id
@@ -134,7 +136,7 @@ public class Parada implements java.io.Serializable {
 		this.gastronomia = gastronomia;
 	}
 
-	@Column(name = "imagen", length = 45)
+	@Column(name = "imagen", length = 200)
 	public String getImagen() {
 		return this.imagen;
 	}
@@ -143,6 +145,15 @@ public class Parada implements java.io.Serializable {
 		this.imagen = imagen;
 	}
 
+	@Column(name = "video", length = 200)
+	public String getVideo() {
+		return this.video;
+	}
+
+	public void setVideo(String video) {
+		this.video = video;
+	}
+	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "parada")
 	public Set<PruebaCultural> getPruebaculturals() {
 		return this.pruebaculturales;
@@ -187,6 +198,7 @@ public class Parada implements java.io.Serializable {
 		result = prime * result + ((gastronomia == null) ? 0 : gastronomia.hashCode());
 		result = prime * result + ((historia == null) ? 0 : historia.hashCode());
 		result = prime * result + ((imagen == null) ? 0 : imagen.hashCode());
+		result = prime * result + ((video == null) ? 0 : video.hashCode());
 		result = prime * result + ((itinerario == null) ? 0 : itinerario.hashCode());
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		result = prime * result + ((numeroParada == null) ? 0 : numeroParada.hashCode());
@@ -242,6 +254,11 @@ public class Parada implements java.io.Serializable {
 			if (other.ubicacion != null)
 				return false;
 		} else if (!ubicacion.equals(other.ubicacion))
+			return false;
+		if (video == null) {
+			if (other.video != null)
+				return false;
+		} else if (!video.equals(other.video))
 			return false;
 		return true;
 	}

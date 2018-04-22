@@ -80,6 +80,12 @@
 						<label>Imagen: </label><input type="file" name="imagen"
 							required="required">
 					</p>
+					
+					<p>
+						<label>Video: </label><input type="file" name="video"
+							required="required">
+					</p>
+					
 					<p>
 						<label>Ubicación: </label><input type="text" id="search" name="ubicacion"
 							required="required">

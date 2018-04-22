@@ -76,6 +76,7 @@
 							<th>Anecdotario <i id="icono" class="fas fa-sort"></i></th>
 							<th>Gastronomia <i id="icono" class="fas fa-sort"></i></th>
 							<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
+							<th>Video <i id="icono" class="fas fa-sort"></i></th>
 							<th>Itinerario <i id="icono" class="fas fa-sort"></i></th>
 						</tr>
 					</thead>
@@ -89,6 +90,7 @@
 								<td>${parada.anecdotario}</td>
 								<td>${parada.gastronomia}</td>
 								<td>${parada.imagen}</td>
+								<td><i class="far fa-file-video" title="${parada.video}"></i></td>
 								<td>${parada.itinerario.getNombre()}</td>
 								<td><a class="eliminar"
 									onclick="return confirm('¿Está seguro de que quiere continuar?')"

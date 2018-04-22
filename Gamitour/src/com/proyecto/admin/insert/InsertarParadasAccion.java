@@ -40,40 +40,52 @@ public class InsertarParadasAccion extends HttpServlet {
 		String anecdotario = request.getParameter("anecdotario");
 		String gastronomia = request.getParameter("gastronomia");
 		Part imagen = request.getPart("imagen");
+		Part video = request.getPart("video");
 		String itinerario = request.getParameter("itinerario");
 		String latitud = request.getParameter("latitud");
 		String longitud = request.getParameter("longitud");
 
-		float lat=0,lng=0;
-		
+		float lat = 0, lng = 0;
+
 		try {
 			lat = Float.parseFloat(latitud);
 			lng = Float.parseFloat(longitud);
 		} catch (Exception e) {
 			System.out.println("Excepcion controlada al procesar coordenadas.");
 		}
-		
-		/* Proceso ficheros (nombre-numeroParada-file.jpg)*/
+
+		/* Proceso ficheros (nombre-numeroParada-file.jpg) */
 		String imagenName = nombre + "-" + numeroParada + "-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
+		String videoName = nombre + "-" + numeroParada + "-"
+				+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
+
 		InputStream imagenStream = imagen.getInputStream();
+
+		InputStream videoStream = video.getInputStream();
 
 		File imagenSalida = new File(directorio + imagenName);
 
+		File videoSalida = new File(directorio + videoName);
+
 		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+
+		FileUtils.copyInputStreamToFile(videoStream, videoSalida);
 
 		imagenStream.close();
 
+		videoStream.close();
 
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));
 
 		Parada p = new Parada(i, nombre, Integer.parseInt(numeroParada), ubicacion, historia, anecdotario, gastronomia,
-				imagenName, lat, lng);
+				imagenName, videoName, lat, lng);
 
 		sp.insertar(p);
 
-		response.sendRedirect("MostrarAdmin.do?div=paradas"); ;
+		response.sendRedirect("MostrarAdmin.do?div=paradas");
+		;
 	}
 
 }

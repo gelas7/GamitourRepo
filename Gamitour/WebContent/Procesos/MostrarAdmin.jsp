@@ -270,6 +270,7 @@
 								<th>Anecdotario <i id="icono" class="fas fa-sort"></i></th>
 								<th>Gastronomia <i id="icono" class="fas fa-sort"></i></th>
 								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
+								<th>Video <i id="icono" class="fas fa-sort"></i></th>
 								<th>Itinerario <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
@@ -283,6 +284,7 @@
 									<td>${parada.anecdotario}</td>
 									<td>${parada.gastronomia}</td>
 									<td><i class="far fa-file-image" title="${parada.imagen}"></i></td>
+									<td><i class="far fa-file-video" title="${parada.video}"></i></td>
 									<td>${parada.itinerario.getNombre()}</td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar? Las pruebas culturales asociadas a esta parada también se eliminarán.')"
@@ -292,7 +294,8 @@
 										href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
 											class="fas fa-edit"></i> </a></td>
 									<td><a class="mostrar"
-										href="MostrarPruebasDeportivas.do?id=${parada.idparada}">Pruebas Deportivas</a></td>
+										href="MostrarPruebasDeportivas.do?id=${parada.idparada}">Pruebas
+											Deportivas</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>
