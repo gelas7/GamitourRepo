@@ -47,7 +47,6 @@ public class InsertarPremiosAccion extends HttpServlet {
 		try {
 			if (fechaactivacion != "")
 				date1 = formatter.parse(fechaactivacion);
-
 			if (fechaconsumo != "")
 				date2 = formatter.parse(fechaconsumo);
 
@@ -58,7 +57,7 @@ public class InsertarPremiosAccion extends HttpServlet {
 		/* Proceso ficheros (fechaConsumo-fechaActivacion-file.jpg) */
 		String imagenName = fechaconsumo+"-"+fechaactivacion+"-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
-
+		
 		InputStream imagenStream = imagen.getInputStream();
 
 		File imagenSalida = new File(directorio + imagenName);

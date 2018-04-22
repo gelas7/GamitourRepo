@@ -89,7 +89,7 @@
 								<td>${parada.historia}</td>
 								<td>${parada.anecdotario}</td>
 								<td>${parada.gastronomia}</td>
-								<td>${parada.imagen}</td>
+								<td><i class="far fa-file-image" title="${parada.imagen}"></i></td>
 								<td><i class="far fa-file-video" title="${parada.video}"></i></td>
 								<td>${parada.itinerario.getNombre()}</td>
 								<td><a class="eliminar"

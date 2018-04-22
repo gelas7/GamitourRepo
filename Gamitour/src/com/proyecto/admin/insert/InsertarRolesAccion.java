@@ -11,12 +11,12 @@ import com.proyecto.util.Accion;
 public class InsertarRolesAccion extends Accion {
 
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+	ServiceRolesImp sr= new ServiceRolesImp();
 
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		String nombre = request.getParameter("nombre");
 
-		ServiceRolesImp sr= new ServiceRolesImp();
 		sr.insertar(new Rol(nombre,null));
 
 		return "MostrarAdmin.do?div=roles";

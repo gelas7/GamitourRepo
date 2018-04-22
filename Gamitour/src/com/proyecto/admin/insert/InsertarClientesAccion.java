@@ -26,10 +26,12 @@ import com.proyecto.service.ServiceRolesImp;
 @javax.servlet.annotation.MultipartConfig
 @WebServlet("/InsertarClientesAccion")
 public class InsertarClientesAccion extends HttpServlet {
-	
+
 	private static final long serialVersionUID = 1L;
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 	private final String directorio = "/opt/subidas/clientes/";
+	ServiceClientesImp sc = new ServiceClientesImp();
+	ServiceRolesImp sr = new ServiceRolesImp();
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -46,6 +48,8 @@ public class InsertarClientesAccion extends HttpServlet {
 		Part avatar = request.getPart("avatar");
 		Date dateNacimiento = null;
 		Date dateSubida = new Date();
+		InputStream imagenStream = null;
+		String avatarName = "";
 
 		try {
 			if (fechanacimiento != "")
@@ -53,27 +57,30 @@ public class InsertarClientesAccion extends HttpServlet {
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
-		
+
 		String fechaSubida = formatter.format(dateSubida); // 2016-11-16
-		
-		/* Proceso ficheros(email-fechaSubida-file.jpg) */
-		String avatarName = email+"-"+fechaSubida+"-"+Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
-		
-		InputStream imagenStream = avatar.getInputStream();
 
-		File imagenSalida = new File(directorio + avatarName);
+		try {
+			/* Proceso ficheros(email-fechaSubida-file.jpg) */
+			avatarName = email + "-" + fechaSubida + "-"
+					+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
 
-		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+			imagenStream = avatar.getInputStream();
 
-		imagenStream.close();
-		
-		ServiceClientesImp sc = new ServiceClientesImp();
-		ServiceRolesImp sr = new ServiceRolesImp();
+			File imagenSalida = new File(directorio + avatarName);
 
-		Rol r = sr.buscarPorClave(Integer.parseInt(rol));// Creo rol a partir del id
+			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+			
+		} catch (Exception e) {
+			System.out.println("Fallo al gestionar ficheros. " + e.getMessage());
+		} finally {
+			imagenStream.close();
+		}
 
-		Cliente c = new Cliente(r, nombre, apellidos, dateNacimiento, email, password, telefono, direccion, codigopostal, avatarName,
-				Integer.parseInt(puntosacumulados), new Date());
+		Rol r = sr.buscarPorClave(Integer.parseInt(rol)); // Recupero el rol
+
+		Cliente c = new Cliente(r, nombre, apellidos, dateNacimiento, email, password, telefono, direccion,
+				codigopostal, avatarName, Integer.parseInt(puntosacumulados), new Date());
 
 		sc.insertar(c); // Inserto cliente
 

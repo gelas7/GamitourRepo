@@ -43,26 +43,32 @@ public class InsertarMultimediasAccion extends HttpServlet {
 		Part imagen = request.getPart("imagen");
 		Part video = request.getPart("video");
 
+		String imagenName = "", videoName = "";
+		InputStream imagenStream = null, videoStream = null;
+
 		Date date = new Date();
 		String fecha = formatter.format(date); // 2016-11-16
 
 		/* Proceso ficheros(cliente-fecha-file.jpg) */
-		String imagenName = cliente + "-"+fecha + "-"
-				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
-		String videoName = cliente + "-" +fecha + "-"
-				+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
+		try {
+			imagenName = cliente + "-" + fecha + "-"
+					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+			videoName = cliente + "-" + fecha + "-" + Paths.get(video.getSubmittedFileName()).getFileName().toString();
 
-		InputStream imagenStream = imagen.getInputStream();
-		InputStream videoStream = video.getInputStream();
+			imagenStream = imagen.getInputStream();
+			videoStream = video.getInputStream();
 
-		File imagenSalida = new File(directorio + imagenName);
-		File videoSalida = new File(directorio + videoName);
+			File imagenSalida = new File(directorio + imagenName);
+			File videoSalida = new File(directorio + videoName);
 
-		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
-		FileUtils.copyInputStreamToFile(videoStream, videoSalida);
-
-		imagenStream.close();
-		videoStream.close();
+			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+			FileUtils.copyInputStreamToFile(videoStream, videoSalida);
+		} catch (Exception e) {
+			System.out.println("Fallo al gestionar ficheros. " + e.getMessage());
+		} finally {
+			imagenStream.close();
+			videoStream.close();
+		}
 
 		Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
 

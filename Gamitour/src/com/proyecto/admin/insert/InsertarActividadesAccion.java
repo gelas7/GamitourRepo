@@ -42,7 +42,8 @@ public class InsertarActividadesAccion extends HttpServlet {
 		String puntos = request.getParameter("puntos");
 		Date date1 = null;
 		Date date2 = null;
-
+		InputStream imagenStream = null;
+		String imagenName = "";
 		try {
 			date1 = formatter.parse(fechainicio);
 			date2 = formatter.parse(fechafin);
@@ -50,19 +51,23 @@ public class InsertarActividadesAccion extends HttpServlet {
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
+		try {
+			/* Proceso ficheros (fechainicio-fechafin-file.jpg) */
+			imagenName = fechainicio + "-" + fechafin + "-"
+					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
-		/* Proceso ficheros (fechainicio-fechafin-file.jpg) */
-		String imagenName = fechainicio + "-" + fechafin + "-"
-				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+			imagenStream = imagen.getInputStream();
 
-		InputStream imagenStream = imagen.getInputStream();
+			File imagenSalida = new File(directorio + imagenName);
 
-		File imagenSalida = new File(directorio + imagenName);
-
-		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
-
-		imagenStream.close();
-
+			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+			
+		} catch (Exception e) {
+			System.out.println("Fallo al gestionar ficheros. " + e.getMessage());
+		} finally {
+			imagenStream.close();
+		}
+		
 		Actividad a = new Actividad(nombre, date1, date2, ubicacion, Integer.parseInt(numparticipantes),
 				Float.parseFloat(precio), imagenName, Integer.parseInt(puntos));
 

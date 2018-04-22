@@ -15,6 +15,7 @@ import com.proyecto.util.Accion;
 public class InsertarItinerariosAccion extends Accion {
 
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+	ServiceItinerarios si = new ServiceItinerariosImp();
 
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
@@ -23,7 +24,6 @@ public class InsertarItinerariosAccion extends Accion {
 		String duracion = request.getParameter("duracion");
 		String ubicacion = request.getParameter("ubicacion");
 
-		ServiceItinerarios si = new ServiceItinerariosImp();
 		si.insertar(new Itinerario(nombre, categoria, duracion, ubicacion));
 
 		return "MostrarAdmin.do?div=itinerarios";

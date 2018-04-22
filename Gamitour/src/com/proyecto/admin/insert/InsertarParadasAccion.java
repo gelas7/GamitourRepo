@@ -44,7 +44,11 @@ public class InsertarParadasAccion extends HttpServlet {
 		String itinerario = request.getParameter("itinerario");
 		String latitud = request.getParameter("latitud");
 		String longitud = request.getParameter("longitud");
-
+		String imagenName = "";
+		String videoName = "";
+		InputStream imagenStream = null;
+		InputStream videoStream = null;
+		
 		float lat = 0, lng = 0;
 
 		try {
@@ -55,15 +59,16 @@ public class InsertarParadasAccion extends HttpServlet {
 		}
 
 		/* Proceso ficheros (nombre-numeroParada-file.jpg) */
-		String imagenName = nombre + "-" + numeroParada + "-"
+		try {
+		imagenName = nombre + "-" + numeroParada + "-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
-		String videoName = nombre + "-" + numeroParada + "-"
+		videoName = nombre + "-" + numeroParada + "-"
 				+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
 
-		InputStream imagenStream = imagen.getInputStream();
+		imagenStream = imagen.getInputStream();
 
-		InputStream videoStream = video.getInputStream();
+		videoStream = video.getInputStream();
 
 		File imagenSalida = new File(directorio + imagenName);
 
@@ -72,10 +77,15 @@ public class InsertarParadasAccion extends HttpServlet {
 		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
 
 		FileUtils.copyInputStreamToFile(videoStream, videoSalida);
-
-		imagenStream.close();
-
-		videoStream.close();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Fallo al gestionar ficheros. " + e.getMessage());
+		}
+		finally {
+			imagenStream.close();
+			videoStream.close();
+		}
 
 		Itinerario i = si.buscarPorClave(Integer.parseInt(itinerario));
 
@@ -85,7 +95,7 @@ public class InsertarParadasAccion extends HttpServlet {
 		sp.insertar(p);
 
 		response.sendRedirect("MostrarAdmin.do?div=paradas");
-		;
+		
 	}
 
 }
