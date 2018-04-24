@@ -57,7 +57,7 @@
 
 				<h1>Listado de Pruebas Deportivas en ${nombreParada}</h1>
 				<a class="insertar"
-					href="Procesos/Insertar/InsertarPruebasDeportivas.jsp"><i
+				href="Procesos/Insertar/InsertarPruebasDeportivasDetalle.jsp?idParada=${idParada}"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
 				<p>
 					<label for="searchtcomentarios"><i class="fas fa-search"></i></label>

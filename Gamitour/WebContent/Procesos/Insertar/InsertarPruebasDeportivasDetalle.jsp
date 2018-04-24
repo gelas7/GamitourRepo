@@ -46,14 +46,17 @@
 
 			<form action="../../InsertarPruebasDeportivas.do" method="get">
 
-				<h2>Insertar Prueba Deportiva en
-						<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("idParada"))).getNombre()%></h2></h2>
+				<h2>
+					Insertar Prueba Deportiva en
+					<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("idParada"))).getNombre()%></h2>
+
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre" required="required">
+					<label>Nombre: </label><input type="text" name="nombre"
+						required="required">
 				</p>
 				<p>
-					<label>Fecha de Inicio: </label><input type="date" name="fechaInicio"
-						required="required">
+					<label>Fecha de Inicio: </label><input type="date"
+						name="fechaInicio" required="required">
 				</p>
 				<p>
 					<label>Fecha de Fin: </label><input type="date" name="fechaFin"
@@ -64,14 +67,12 @@
 						required="required">
 				</p>
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos" required="required">
+					<label>Puntos: </label><input type="number" name="puntos"
+						required="required">
 				</p>
 				<p>
-					<label>Parada: </label><select name="parada">
-						<c:forEach items="${listaParadas}" var="parada">
-							<option value="${parada.idparada}">${parada.nombre}</option>
-						</c:forEach>
-					</select>
+					<input type="text" name="parada"
+						value="<%=request.getParameter("idParada")%>" hidden="hidden">
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">
