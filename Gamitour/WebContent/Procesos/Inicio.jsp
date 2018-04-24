@@ -36,12 +36,12 @@
 <body>
 	<div class="flex">
 		<div class="menu">
-		
+
 			<button id="divActual" value="${divActual}" hidden="hidden"></button>
 		</div>
 
 		<div class="page">
-		
+
 
 			<div class="logo">
 				<h1>
@@ -61,55 +61,63 @@
 					<div class="row">
 
 						<div class="col-md-3" style="width: 200px;">
-							<a href="MostrarAdmin.do?div=actividades" class="btn btn-block btn-lg btn-primary"> <i
-								class="fa fa-gamepad" id="icone_grande"></i> <br> <br> <span
-								class="texto_pequeño"> Actividades</span>
+							<a href="MostrarAdmin.do?div=actividades"
+								class="btn btn-block btn-lg btn-primary"> <i
+								class="fa fa-gamepad" id="icone_grande"></i> <br> <br>
+								<span class="texto_pequeño"> Actividades</span>
 							</a>
 						</div>
-						<div  href="MostrarAdmin.do?div=clientes" class="col-md-3" style="width: 200px;">
-							<a class="btn btn-block btn-lg btn-primary"> <i
+						<div class="col-md-3" style="width: 200px;">
+							<a href="MostrarAdmin.do?div=clientes"
+								class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-user" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Clientes</span>
 							</a>
 						</div>
-						<div  href="MostrarAdmin.do?div=itinerarios" class="col-md-3" style="width: 200px;">
-							<a class="btn btn-block btn-lg btn-primary"> <i
+						<div class="col-md-3" style="width: 200px;">
+							<a href="MostrarAdmin.do?div=itinerarios"
+								class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-map" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Itinerarios</span>
 							</a>
 						</div>
-						<div  href="MostrarAdmin.do?div=noticias" class="col-md-3" style="width: 200px;">
-							<a class="btn btn-block btn-lg btn-primary"> <i
-								class="fa fa-newspaper" id="icone_grande"></i> <br> <br> <span
-								class="texto_pequeño"> Noticias</span>
+						<div class="col-md-3" style="width: 200px;">
+							<a href="MostrarAdmin.do?div=noticias"
+								class="btn btn-block btn-lg btn-primary"> <i
+								class="fa fa-newspaper" id="icone_grande"></i> <br> <br>
+								<span class="texto_pequeño"> Noticias</span>
 							</a>
 						</div>
 					</div>
 
 					<div class="row" style="margin-top: 20px;">
 
-						<div  href="MostrarAdmin.do?div=premios" class="col-md-3" style="width: 200px;">
-							<a class="btn btn-block btn-lg btn-primary"> <i
-								class="fa fa-trophy" id="icone_grande"></i> <br> <br> <span
-								class="texto_pequeño"> Premios</span>
+						<div class="col-md-3" style="width: 200px;">
+							<a href="MostrarAdmin.do?div=premios"
+								class="btn btn-block btn-lg btn-primary"> <i
+								class="fa fa-trophy" id="icone_grande"></i> <br> <br>
+								<span class="texto_pequeño"> Premios</span>
 							</a>
 						</div>
-						<div  href="MostrarAdmin.do?div=votos" class="col-md-3" style="width: 200px;">
-							<a class="btn btn-block btn-lg btn-primary"> <i
+						<div class="col-md-3" style="width: 200px;">
+							<a href="MostrarAdmin.do?div=votos"
+								class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-paste" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Votos</span>
 							</a>
 						</div>
-						<div  href="MostrarAdmin.do?div=multimedia" class="col-md-3" style="width: 200px;">
-							<a class="btn btn-block btn-lg btn-primary"> <i
+						<div class="col-md-3" style="width: 200px;">
+							<a href="MostrarAdmin.do?div=multimedia"
+								class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-video" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Multimedia</span>
 							</a>
 						</div>
-						<div  href="MostrarAdmin.do?div=comentarios" class="col-md-3" style="width: 200px;">
-							<a class="btn btn-block btn-lg btn-primary"> <i
-								class="fa fa-pencil-alt" id="icone_grande"></i> <br> <br> <span
-								class="texto_pequeño"> Comentarios</span>
+						<div class="col-md-3" style="width: 200px;">
+							<a href="MostrarAdmin.do?div=comentarios"
+								class="btn btn-block btn-lg btn-primary"> <i
+								class="fa fa-pencil-alt" id="icone_grande"></i> <br> <br>
+								<span class="texto_pequeño"> Comentarios</span>
 							</a>
 						</div>
 					</div>

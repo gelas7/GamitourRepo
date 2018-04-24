@@ -61,8 +61,12 @@
 				<div class="tablas" id="divBienvenida">
 					<hr></hr>
 					<h2>Bienvenido. Seleccione una opción del menu lateral.</h2>
-					<img id="imagenInicio" src="assets/css/images/asturias.png"
-						alt="Asturias, Paraiso Natural" />
+
+					<a
+						href="http://ambgubuntu.westeurope.cloudapp.azure.com:8080/EmailSendingWebApp"><h3>
+							Pulsa para obtener ayuda <i>class="fas fa-info"></i>
+						</h3> </a>
+
 				</div>
 
 				<!-- DIV CLIENTES -->
