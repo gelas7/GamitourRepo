@@ -377,3 +377,12 @@ label {
 .tablas input:focus {
     width: 18%;
 }
+
+.texto_grande {
+    font-size: 2.5rem;
+    color: white;
+} 
+#icone_grande {
+    font-size: 8rem;
+    color:#fff;
+} 
