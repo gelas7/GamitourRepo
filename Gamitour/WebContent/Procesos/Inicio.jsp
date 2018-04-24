@@ -41,13 +41,7 @@
 		</div>
 
 		<div class="page">
-			<header>
-				<ul>
-					<li><a><i class="far fa-user"></i> ${email}</a></li>
-					<li><a id="logout" href="Logout"><i
-							class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
-				</ul>
-			</header>
+		
 
 			<div class="logo">
 				<h1>
