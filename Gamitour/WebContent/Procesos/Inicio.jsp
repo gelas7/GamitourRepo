@@ -61,24 +61,24 @@
 					<div class="row">
 
 						<div class="col-md-3" style="width: 200px;">
-							<a class="btn btn-block btn-lg btn-primary"> <i
+							<a href="MostrarAdmin.do?div=actividades" class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-gamepad" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Actividades</span>
 							</a>
 						</div>
-						<div class="col-md-3" style="width: 200px;">
+						<div  href="MostrarAdmin.do?div=clientes" class="col-md-3" style="width: 200px;">
 							<a class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-user" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Clientes</span>
 							</a>
 						</div>
-						<div class="col-md-3" style="width: 200px;">
+						<div  href="MostrarAdmin.do?div=itinerarios" class="col-md-3" style="width: 200px;">
 							<a class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-map" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Itinerarios</span>
 							</a>
 						</div>
-						<div class="col-md-3" style="width: 200px;">
+						<div  href="MostrarAdmin.do?div=noticias" class="col-md-3" style="width: 200px;">
 							<a class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-newspaper" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Noticias</span>
@@ -88,25 +88,25 @@
 
 					<div class="row" style="margin-top: 20px;">
 
-						<div class="col-md-3" style="width: 200px;">
+						<div  href="MostrarAdmin.do?div=premios" class="col-md-3" style="width: 200px;">
 							<a class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-trophy" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Premios</span>
 							</a>
 						</div>
-						<div class="col-md-3" style="width: 200px;">
+						<div  href="MostrarAdmin.do?div=votos" class="col-md-3" style="width: 200px;">
 							<a class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-paste" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Votos</span>
 							</a>
 						</div>
-						<div class="col-md-3" style="width: 200px;">
+						<div  href="MostrarAdmin.do?div=multimedia" class="col-md-3" style="width: 200px;">
 							<a class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-video" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Multimedia</span>
 							</a>
 						</div>
-						<div class="col-md-3" style="width: 200px;">
+						<div  href="MostrarAdmin.do?div=comentarios" class="col-md-3" style="width: 200px;">
 							<a class="btn btn-block btn-lg btn-primary"> <i
 								class="fa fa-pencil-alt" id="icone_grande"></i> <br> <br> <span
 								class="texto_pequeño"> Comentarios</span>
