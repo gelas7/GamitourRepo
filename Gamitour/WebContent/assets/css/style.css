@@ -251,6 +251,9 @@ form {
     width: 400px;
     text-align: left;
 }
+input[type=number]{
+  width:50px;
+}
 
 table button {
     text-decoration: none;
