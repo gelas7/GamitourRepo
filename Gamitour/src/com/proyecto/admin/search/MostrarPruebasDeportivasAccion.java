@@ -16,6 +16,7 @@ public class MostrarPruebasDeportivasAccion extends Accion {
 
 		String id = request.getParameter("id");
 		request.setAttribute("nombreParada", sp.buscarPorClave(Integer.parseInt(id)).getNombre());
+		request.setAttribute("idParada", id);
 		request.getSession().setAttribute("listaPruebasDeportivas", spd.buscarPruebasDepPorParada(id));
 
 		return "Procesos/MostrarDetalle/MostrarPruebasDeportivas.jsp";

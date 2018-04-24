@@ -45,6 +45,12 @@
 					<li><a><i class="far fa-user"></i> ${email}</a></li>
 					<li><a id="logout" href="Logout"><i
 							class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+					<li>
+						<a
+							href="http://ambgubuntu.westeurope.cloudapp.azure.com:8080/EmailSendingWebApp">
+							<i class="fas fa-info-circle"></i> Ayuda
+						</a>
+					</li>
 				</ul>
 			</header>
 
@@ -61,12 +67,6 @@
 				<div class="tablas" id="divBienvenida">
 					<hr></hr>
 					<h2>Bienvenido. Seleccione una opción del menu lateral.</h2>
-
-					<a
-						href="http://ambgubuntu.westeurope.cloudapp.azure.com:8080/EmailSendingWebApp"><h3>
-							Pulsa para obtener ayuda <i>class="fas fa-info"></i>
-						</h3> </a>
-
 				</div>
 
 				<!-- DIV CLIENTES -->
