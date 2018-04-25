@@ -30,7 +30,7 @@ body {
 }
 
 #contact {
-	width: 430px;
+	width: 600px;
 	margin: 60px auto;
 	padding: 60px 30px;
 	background: #c9d0de;
@@ -152,27 +152,26 @@ input[type=submit] {
 <body>
 
 
-
 	<form action="EmailSendingServlet" method="post">
-		<table border="0" width="35%" align="center">
+		<table border="0" width="33%" align="center">
 			<caption>
 				<h2 style="color: white;">Tu opinion nos importa</h2>
-				<h3 style="color: white;">Haznos saber cualquier fallo o
-					dificultad en el programa</h3>
+				<p style="color: white;">Haznos saber cualquier fallo o
+					dificultad en el programa</p>
 			</caption>
 
 			<input type="text" name="recipient" size="50"
 				value="adelbustom@yahoo.com" hidden />
 			<tr>
-				<td>Tu nombre</td>
+				<td style="color: white;">Tu nombre</td>
 				<td><input type="text" name="subject" size="50" /></td>
 			</tr>
 			<tr>
-				<td>Tu Comentario</td>
+				<td style="color: white;">Tu Comentario</td>
 				<td><textarea rows="10" cols="39" name="content"></textarea></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center"><input type="submit"
+				<td colspan="3" ><input type="submit"
 					value="Enviar" /></td>
 			</tr>
 		</table>

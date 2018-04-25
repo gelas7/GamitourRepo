@@ -139,7 +139,7 @@ input[type=submit] {
 </head>
 <body>
 	<center>
-		<h3>Email enviado correctamente</h3>
+		<h3 style="color: white;">Email enviado correctamente</h3>
 		<h2>
 			<a style="color: white;"
 				href="http://ambgubuntu.westeurope.cloudapp.azure.com:8080/Gamitour/MostrarAdmin.do">Volver
