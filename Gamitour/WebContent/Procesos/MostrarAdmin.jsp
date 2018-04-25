@@ -15,8 +15,7 @@
 <script src="assets/js/pagination-tda-plugin.js" type="text/javascript"></script>
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-<link href="assets/css/style.css" rel="stylesheet" type="text/css"
-	media="screen" />
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -45,12 +44,10 @@
 					<li><a><i class="far fa-user"></i> ${email}</a></li>
 					<li><a id="logout" href="Logout"><i
 							class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
-					<li>
-						<a
-							href="http://ambgubuntu.westeurope.cloudapp.azure.com:8080/EmailSendingWebApp">
+					<li><a
+						href="http://ambgubuntu.westeurope.cloudapp.azure.com:8080/EmailSendingWebApp">
 							<i class="fas fa-info-circle"></i> Ayuda
-						</a>
-					</li>
+					</a></li>
 				</ul>
 			</header>
 
@@ -66,8 +63,21 @@
 
 				<div class="tablas" id="divBienvenida">
 					<hr></hr>
-					<h2>Bienvenido. Seleccione una opción del menu lateral.</h2>
-				<a style="ftext-decoration:none" href="assets/pdf/guia.pdf">	<h3 style="font-size:22px;color:black;">Para una mejor experiencia, descarga el manual del usuario  <i class="fas fa-file-pdf" style="font-size:42px;"></i></h3> </a>
+					<h2>Bienvenido. Seleccione una opción del menu lateral para
+						comenzar.</h2>
+
+					<img style="width:50%;" src="assets/css/images/asturias.png"></img>
+					<br> <br>
+					<h2 style="font-size: 21px; color: black;">Para ayudarle
+						descargue nuestra guia</h2>
+					<a id="guia" style="text-decoration: none"
+						href="assets/pdf/guia.pdf">
+						<h3 style="font-size: 22px; color: #666666;">
+							Manual del usuario <i class="fas fa-file-pdf"
+								style="font-size: 42px;"> </i>
+						</h3>
+					</a>
+
 				</div>
 
 				<!-- DIV CLIENTES -->
