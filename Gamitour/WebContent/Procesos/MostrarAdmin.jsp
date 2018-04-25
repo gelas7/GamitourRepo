@@ -67,6 +67,7 @@
 				<div class="tablas" id="divBienvenida">
 					<hr></hr>
 					<h2>Bienvenido. Seleccione una opción del menu lateral.</h2>
+				<a style="ftext-decoration:none" href="assets/pdf/guia.pdf">	<h3 style="font-size:22px;color:black;">Para una mejor experiencia, descarga el manual del usuario  <i class="fas fa-file-pdf" style="font-size:42px;"></i></h3> </a>
 				</div>
 
 				<!-- DIV CLIENTES -->
