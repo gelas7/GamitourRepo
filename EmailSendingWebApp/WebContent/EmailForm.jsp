@@ -21,11 +21,7 @@ html {
 }
 
 body {
-	background: #728eaa;
-	background: -moz-linear-gradient(top, #25303C 0%, #728EAA 100%);
-	/* firefox */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #25303C),
-		color-stop(100%, #728EAA)); /* webkit */
+	background: #7b9cd1;
 	font-family: sans-serif;
 }
 
@@ -65,11 +61,7 @@ input {
 	height: 35px;
 	padding: 5px 20px 0px 20px;
 	margin: 0 0 20px 0;
-	background: #5E768D;
-	background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%);
-	/* firefox */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #546A7F),
-		color-stop(20%, #5E768D)); /* webkit */
+	background: #d7e0ed;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -77,19 +69,6 @@ input {
 	-webkit-box-shadow: 0px 1px 0px #f2f2f2;
 	font-family: sans-serif;
 	font-size: 16px;
-	color: #f2f2f2;
-	text-transform: uppercase;
-	text-shadow: 0px -1px 0px #334f71;
-}
-
-input::-webkit-input-placeholder {
-	color: #a1b2c3;
-	text-shadow: 0px -1px 0px #38506b;
-}
-
-input:-moz-placeholder {
-	color: #a1b2c3;
-	text-shadow: 0px -1px 0px #38506b;
 }
 
 textarea {
@@ -97,11 +76,7 @@ textarea {
 	height: 170px;
 	padding: 12px 20px 0px 20px;
 	margin: 0 0 20px 0;
-	background: #5E768D;
-	background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%);
-	/* firefox */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #546A7F),
-		color-stop(20%, #5E768D)); /* webkit */
+	background: #d7e0ed;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -109,27 +84,7 @@ textarea {
 	-webkit-box-shadow: 0px 1px 0px #f2f2f2;
 	font-family: sans-serif;
 	font-size: 16px;
-	color: #f2f2f2;
-	text-transform: uppercase;
-	text-shadow: 0px -1px 0px #334f71;
-}
-
-textarea::-webkit-input-placeholder {
-	color: #a1b2c3;
-	text-shadow: 0px -1px 0px #38506b;
-}
-
-textarea:-moz-placeholder {
-	color: #a1b2c3;
-	text-shadow: 0px -1px 0px #38506b;
-}
-
-input:focus, textarea:focus {
-	background: #728eaa;
-	background: -moz-linear-gradient(top, #668099 0%, #728eaa 20%);
-	/* firefox */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #668099),
-		color-stop(20%, #728eaa)); /* webkit */
+	color: black;
 }
 
 input[type=submit] {
@@ -141,10 +96,8 @@ input[type=submit] {
 	-moz-box-shadow: 0px 0px 5px #999;
 	-webkit-box-shadow: 0px 0px 5px #999;
 	border: 1px solid #556f8c;
-	background: -moz-linear-gradient(top, #718DA9 0%, #415D79 100%);
-	/* firefox */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #718DA9),
-		color-stop(100%, #415D79)); /* webkit */
+	background: -moz-linear-gradient(top, #718DA9 0%,  #c9d0de 100%);
+
 	cursor: pointer;
 }
 </style>
@@ -171,8 +124,7 @@ input[type=submit] {
 				<td><textarea rows="10" cols="39" name="content"></textarea></td>
 			</tr>
 			<tr>
-				<td colspan="3" ><input type="submit"
-					value="Enviar" /></td>
+				<td colspan="3"><input type="submit" value="Enviar" /></td>
 			</tr>
 		</table>
 
