@@ -64,8 +64,7 @@
 				</p>
 				<p>
 					<label for="texto">Texto: </label> 
-					<input type="text"
-						name="texto" required="required">
+					<textarea name="texto" required="required" rows="4" cols="50"></textarea>
 				</p>
 
 				<p>

@@ -62,15 +62,13 @@
 							required="required">
 					</p>
 					<p>
-						<label>Historia: </label><input type="text" name="historia" required="required">
+						<label>Historia: </label><textarea name="historia" required="required" rows="4" cols="50"></textarea>
 					</p>
 					<p>
-						<label>Anecdotario: </label><input type="text" name="anecdotario"
-							required="required">
+						<label>Anecdotario: </label><textarea name="anecdotario" required="required" rows="4" cols="50"></textarea>
 					</p>
 					<p>
-						<label>Gastronomia: </label><input type="text" name="gastronomia"
-							required="required">
+						<label>Gastronomia: </label><textarea name="gastronomia" required="required" rows="4" cols="50"></textarea>
 					</p>
 
 					<input type="text" name="itinerario"

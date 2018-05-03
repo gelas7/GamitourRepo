@@ -55,8 +55,7 @@
 				</p>
 
 				<p>
-					<label for="comentario">Comentario:</label> <input type="text"
-						name="comentario" required="required">
+					<label for="comentario">Comentario:</label> <textarea name="comentario" required="required" rows="4" cols="50"></textarea>
 				</p>
 				<p>
 					<label for="puntos">Puntos Acumulados:</label> <input type="number"

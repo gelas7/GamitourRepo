@@ -56,8 +56,7 @@
 					<label>Nombre: </label><input type="text" name="nombre" required="required">
 				</p>
 				<p>
-					<label>Descripcion: </label><input type="text" name="descripcion"
-						required="required">
+					<label>Descripcion: </label><textarea name="descripcion" required="required" rows="4" cols="50"></textarea>
 				</p>
 				<p>
 					<label>Ubicación: </label><input type="text" name="ubicacion" required="required">

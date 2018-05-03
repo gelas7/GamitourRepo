@@ -48,10 +48,10 @@
 					<label>Nombre: </label><input type="text" name="nombre" required="required">
 				</p>
 				<p>
-					<label>Pregunta: </label><input type="text" name="pregunta" required="required">
+					<label>Pregunta: </label><textarea name="pregunta" required="required" rows="4" cols="50"></textarea>
 				</p>
 				<p>
-					<label>Respuesta: </label><input type="text" name="respuesta" required="required">
+					<label>Respuesta: </label><textarea name="respuesta" required="required" rows="4" cols="50"></textarea>
 				</p>
 				<p>
 					<label>Puntos: </label><input type="number" name="puntos" required="required">

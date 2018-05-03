@@ -58,8 +58,7 @@
 						required="required">
 				</p>
 				<p>
-					<label>Explicación: </label><input type="text" name="explicacion"
-						required="required">
+					<label>Explicación: </label> <textarea name="explicacion" required="required" rows="4" cols="50"></textarea>
 				</p>
 				<p>
 					<label>Puntos: </label><input type="number" name="puntos" required="required">
