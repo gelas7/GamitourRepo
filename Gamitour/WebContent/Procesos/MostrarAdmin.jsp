@@ -53,7 +53,7 @@
 
 			<div class="logo">
 				<h1>
-					<a href="MostrarAdmin.do">Panel de administración Gamitour</a>
+					<a href="MostrarAdmin.do">Panel de administración Gamiastur</a>
 				</h1>
 
 			</div>
