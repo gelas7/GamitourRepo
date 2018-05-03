@@ -52,8 +52,8 @@
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Texto: </label><input type="text" name="texto"
-						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
+					<label>Texto: </label><textarea name="texto" required="required" rows="4" cols="50"
+						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>"></textarea>
 				</p>
 				<p>
 					<label>Fecha de Alta: </label><input type="date" name="fechaalta"

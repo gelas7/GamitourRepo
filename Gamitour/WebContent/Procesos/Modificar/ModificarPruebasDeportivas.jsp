@@ -48,28 +48,28 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					<label>Nombre: <input type="text" name="nombre"
-						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>"></label>
+					<label>Nombre:</label> <input type="text" name="nombre"
+						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Fecha de Inicio: <input type="date"
+					<label>Fecha de Inicio:</label> <input type="date"
 						name="fechaInicio"
-						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechainicio()%>"></label>
+						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechainicio()%>">
 				</p>
 				<p>
-					<label>Fecha de Fin: <input type="date" name="fechaFin"
-						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>"></label>
+					<label>Fecha de Fin:</label> <input type="date" name="fechaFin"
+						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>">
 				</p>
 				<p>
-					<label>Explicación: <input type="text" name="explicacion"
-						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getExplicacion()%>"></label>
+					<label>Explicación:</label> <textarea name="explicacion" required="required" rows="4" cols="50"
+						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getExplicacion()%>"></textarea>
 				</p>
 				<p>
-					<label>Puntos: <input type="text" name="puntos"
-						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>"></label>
+					<label>Puntos:</label> <input type="text" name="puntos"
+						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 				</p>
 				<p>
-					Parada: <select name="parada">
+					<label>Parada:</label> <select name="parada">
 						<c:forEach items="${listaParadas}" var="parada">
 							<option value="${parada.idparada}">${parada.nombre}</option>
 						</c:forEach>

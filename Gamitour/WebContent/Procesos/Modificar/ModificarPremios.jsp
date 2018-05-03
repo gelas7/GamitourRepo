@@ -54,8 +54,8 @@
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Descripcion: </label><input type="number" name="descripcion"
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>">
+					<label>Descripcion: </label> <textarea name="descripcion" required="required" rows="4" cols="50"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>"></textarea>
 				</p>
 				<p>
 					<label>Puntos: </label><input type="number" name="puntos"

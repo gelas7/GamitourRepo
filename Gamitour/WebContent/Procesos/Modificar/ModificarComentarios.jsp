@@ -66,8 +66,8 @@
 				</p>
 
 				<p>
-					<label> Texto: </label> <input type="text" name="texto"
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>">
+					<label> Texto: </label> <textarea name="texto" required="required" rows="4" cols="50"
+						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>"></textarea>
 				</p>
 
 				<p>
