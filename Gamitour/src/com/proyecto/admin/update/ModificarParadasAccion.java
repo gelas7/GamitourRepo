@@ -13,7 +13,9 @@ import com.proyecto.util.Accion;
 public class ModificarParadasAccion extends Accion {
 
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
-
+	ServiceParadasImp sp = new ServiceParadasImp();
+	ServiceItinerariosImp si = new ServiceItinerariosImp();
+	
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 
 		String id = request.getParameter("id");
@@ -27,9 +29,7 @@ public class ModificarParadasAccion extends Accion {
 		String latitud = request.getParameter("latitud");
 		String longitud = request.getParameter("longitud");
 
-		ServiceParadasImp sp = new ServiceParadasImp();
-		ServiceItinerariosImp si = new ServiceItinerariosImp();
-
+	
 		Parada parada = sp.buscarPorClave(Integer.parseInt(id));
 
 		if (nombre != "") // Compruebo si se han hecho cambios

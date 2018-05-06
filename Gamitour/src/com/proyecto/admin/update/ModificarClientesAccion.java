@@ -47,8 +47,8 @@ public class ModificarClientesAccion extends HttpServlet {
 		Part avatar = request.getPart("avatar");
 		Date date1 = null;
 		InputStream imagenStream = null;
-		Date hoy = new Date();
-
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
+        String hoy = dt.format(new Date());
 
 		try {
 			if (fechanacimiento != "")

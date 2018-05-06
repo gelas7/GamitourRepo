@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -49,7 +50,8 @@ public class InsertarParadasAccion extends HttpServlet {
 		String videoName = "";
 		InputStream imagenStream = null;
 		InputStream videoStream = null;
-		Date hoy = new Date();
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
+        String hoy = dt.format(new Date());
 
 		float lat = 0, lng = 0;
 

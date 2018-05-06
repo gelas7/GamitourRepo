@@ -49,7 +49,10 @@ public class InsertarClientesAccion extends HttpServlet {
 		Date dateNacimiento = null;
 		InputStream imagenStream = null;
 		String avatarName = "";
-		Date hoy = new Date();
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
+		Date fechaHoy = new Date();
+        String hoy = dt.format(fechaHoy);
+
 
 		try {
 			if (fechanacimiento != "")
@@ -76,7 +79,7 @@ public class InsertarClientesAccion extends HttpServlet {
 		Rol r = sr.buscarPorClave(Integer.parseInt(rol)); // Recupero el rol
 
 		Cliente c = new Cliente(r, nombre, apellidos, dateNacimiento, email, password, telefono, direccion,
-				codigopostal, avatarName, Integer.parseInt(puntosacumulados), hoy);
+				codigopostal, avatarName, Integer.parseInt(puntosacumulados), fechaHoy);
 
 		sc.insertar(c); // Inserto cliente
 

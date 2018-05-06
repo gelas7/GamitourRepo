@@ -68,13 +68,10 @@
 
 					<img style="width:50%;" src="assets/css/images/asturias.png"></img>
 					<br> <br>
-					<h2 style="font-size: 21px; color: black;">Para ayudarle
-						descargue nuestra guia</h2>
 					<a id="guia" style="text-decoration: none"
 						href="assets/pdf/guia.pdf">
 						<h3 style="font-size: 22px; color: #666666;">
-							Manual del usuario <i class="fas fa-file-pdf"
-								style="font-size: 42px;"> </i>
+							Manual del usuario <i class="fas fa-file-pdf"> </i>
 						</h3>
 					</a>
 

@@ -48,7 +48,9 @@ public class InsertarMultimediasAccion extends HttpServlet {
 		
 		Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
 
-		Date hoy = new Date();
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
+		Date fechaHoy = new Date();
+        String hoy = dt.format(fechaHoy);
 		
 		try {
 			imagenName = hoy + "-"
@@ -70,7 +72,7 @@ public class InsertarMultimediasAccion extends HttpServlet {
 			videoStream.close();
 		}
 
-		sm.insertar(new Multimedia(c, hoy, comentario, imagenName, videoName, Integer.parseInt(idPd),
+		sm.insertar(new Multimedia(c, fechaHoy, comentario, imagenName, videoName, Integer.parseInt(idPd),
 				Integer.parseInt(puntos))); // Inserto
 
 		request.setAttribute("listaMultimedias", sm.buscarTodos()); // Actualizo lista

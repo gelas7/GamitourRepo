@@ -44,7 +44,8 @@ public class InsertarNoticiasAccion extends HttpServlet {
 		String imagenName = "";
 		Date date1 = null;
 		Date date2 = null;
-		Date hoy = new Date();
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
+        String hoy = dt.format(new Date());
 		
 		try {
 			if (fecha != "")

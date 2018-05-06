@@ -44,7 +44,8 @@ public class InsertarActividadesAccion extends HttpServlet {
 		Date date2 = null;
 		InputStream imagenStream = null;
 		String imagenName = "";
-		Date hoy = new Date();
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
+        String hoy = dt.format(new Date());
 
 		try {
 			date1 = formatter.parse(fechainicio);

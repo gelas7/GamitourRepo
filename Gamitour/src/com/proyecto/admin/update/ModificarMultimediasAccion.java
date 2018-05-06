@@ -41,9 +41,9 @@ public class ModificarMultimediasAccion extends HttpServlet {
 		Part video = request.getPart("video");
 		String idPd = request.getParameter("pruebaD");
 		String puntos = request.getParameter("puntos");
-		Date hoy = new Date();
-
 		Multimedia m = sm.buscarPorClave(Integer.parseInt(id));
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
+        String hoy = dt.format(new Date());
 
 		if (idCliente != "") {
 			Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
