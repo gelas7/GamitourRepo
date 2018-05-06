@@ -41,6 +41,7 @@ public class ModificarMultimediasAccion extends HttpServlet {
 		Part video = request.getPart("video");
 		String idPd = request.getParameter("pruebaD");
 		String puntos = request.getParameter("puntos");
+		Date hoy = new Date();
 
 		Multimedia m = sm.buscarPorClave(Integer.parseInt(id));
 
@@ -54,7 +55,7 @@ public class ModificarMultimediasAccion extends HttpServlet {
 		}
 
 		if (imagen != null) {
-			String imagenName = idCliente + "-" + new Date() + "-"
+			String imagenName = hoy + "-"
 					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 			InputStream imagenStream = imagen.getInputStream();
 			File imagenSalida = new File(directorio + imagenName);
@@ -64,7 +65,7 @@ public class ModificarMultimediasAccion extends HttpServlet {
 		}
 
 		if (video != null) {
-			String videoName = idCliente + "-" + new Date() + "-"
+			String videoName = hoy + "-"
 					+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
 			InputStream videoStream = video.getInputStream();
 			File videoSalida = new File(directorio + videoName);

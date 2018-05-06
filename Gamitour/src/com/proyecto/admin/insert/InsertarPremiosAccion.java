@@ -43,19 +43,19 @@ public class InsertarPremiosAccion extends HttpServlet {
 		String puntos = request.getParameter("puntos");
 		Date date1 = null;
 		Date date2 = null;
+		Date hoy = new Date();
+
 
 		try {
 			if (fechaactivacion != "")
 				date1 = formatter.parse(fechaactivacion);
 			if (fechaconsumo != "")
 				date2 = formatter.parse(fechaconsumo);
-
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
 		
-		/* Proceso ficheros (fechaConsumo-fechaActivacion-file.jpg) */
-		String imagenName = fechaconsumo+"-"+fechaactivacion+"-"
+		String imagenName = hoy + "-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 		
 		InputStream imagenStream = imagen.getInputStream();

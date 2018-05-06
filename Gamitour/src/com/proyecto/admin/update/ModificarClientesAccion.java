@@ -46,6 +46,9 @@ public class ModificarClientesAccion extends HttpServlet {
 		String rol = request.getParameter("rol");
 		Part avatar = request.getPart("avatar");
 		Date date1 = null;
+		InputStream imagenStream = null;
+		Date hoy = new Date();
+
 
 		try {
 			if (fechanacimiento != "")
@@ -81,17 +84,22 @@ public class ModificarClientesAccion extends HttpServlet {
 			Rol r = sr.buscarPorClave(Integer.parseInt(rol));
 			c.setRol(r);
 		}
-		if (avatar != null){
-			/* (idCliente-fecha-nombreFichero.jpg) */
-			String avatarName = c.getIdcliente() + "-" + new Date() + "-" 
-			+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
+		if (avatar != null) {
+			try {
+				/* (email-fecha-fichero.jpg) */
+				String avatarName = hoy + "-"
+						+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
 
-			InputStream imagenStream = avatar.getInputStream();
-			File imagenSalida = new File(directorio + avatarName);
-			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+				imagenStream = avatar.getInputStream();
+				File imagenSalida = new File(directorio + avatarName);
+				FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+				c.setAvatar(avatarName);
 
-			imagenStream.close();
-			c.setAvatar(avatarName);
+			} catch (Exception e) {
+				System.out.println("Fallo al gestionar ficheros. " + e.getMessage());
+			} finally {
+				imagenStream.close();
+			}
 		}
 
 		sc.actualizar(c);

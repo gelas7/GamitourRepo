@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Paths;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -48,39 +49,39 @@ public class InsertarParadasAccion extends HttpServlet {
 		String videoName = "";
 		InputStream imagenStream = null;
 		InputStream videoStream = null;
-		
+		Date hoy = new Date();
+
 		float lat = 0, lng = 0;
 
 		try {
 			lat = Float.parseFloat(latitud);
 			lng = Float.parseFloat(longitud);
 		} catch (Exception e) {
-			System.out.println("Excepcion controlada al procesar coordenadas.");
+			System.out.println("Error al procesar coordenadas."+ e.getMessage());
 		}
 
-		/* Proceso ficheros (nombre-numeroParada-file.jpg) */
 		try {
-		imagenName = nombre + "-" + numeroParada + "-"
+			
+		imagenName = hoy + "-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
-		videoName = nombre + "-" + numeroParada + "-"
+		videoName = hoy + "-"
 				+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
 
 		imagenStream = imagen.getInputStream();
-
 		videoStream = video.getInputStream();
 
 		File imagenSalida = new File(directorio + imagenName);
-
 		File videoSalida = new File(directorio + videoName);
 
 		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
-
 		FileUtils.copyInputStreamToFile(videoStream, videoSalida);
+		
 		}
+		
 		catch(Exception e)
 		{
-			System.out.println("Fallo al gestionar ficheros. " + e.getMessage());
+			System.out.println("Error al gestionar ficheros. " + e.getMessage());
 		}
 		finally {
 			imagenStream.close();

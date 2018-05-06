@@ -40,35 +40,40 @@ public class InsertarNoticiasAccion extends HttpServlet {
 		String fecha = request.getParameter("fechaalta");
 		String fechac = request.getParameter("fechacaducidad");
 		Part imagen = request.getPart("imagen");
-
+		InputStream imagenStream = null;
+		String imagenName = "";
 		Date date1 = null;
 		Date date2 = null;
-
+		Date hoy = new Date();
+		
 		try {
-
 			if (fecha != "")
 				date1 = formatter.parse(fecha);
-			date2 = formatter.parse(fechac);
+			if(fechac!="")
+				date2 = formatter.parse(fechac);
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
 
-		/* Proceso ficheros */
-		String imagenName = fecha + "-" + nombre + "-"
+		try {
+		imagenName = hoy + "-"
 				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
-		InputStream imagenStream = imagen.getInputStream();
-
+		imagenStream = imagen.getInputStream();
 		File imagenSalida = new File(directorio + imagenName);
-
 		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Fallo al procesar ficheros. "+e.getMessage());
+		}
+		finally {
+			imagenStream.close();
+		}
 
-		imagenStream.close();
-
-		sn.insertar(new Noticia(nombre, texto, date1, date2, imagenName)); // Inserto
+		sn.insertar(new Noticia(nombre, texto, date1, date2, imagenName));
 
 		request.setAttribute("listaNoticias", sn.buscarTodos()); // Actualizo lista
-
 		response.sendRedirect("MostrarAdmin.do?div=noticias");
 	}
 

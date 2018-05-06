@@ -35,10 +35,8 @@ public class ModificarPremiosAccion extends Accion {
 		Date date2 = null;
 
 		try {
-
 			if (fechaactivacion != "")
 				date1 = formatter.parse(fechaactivacion);
-
 			if (fechaconsumo != "")
 				date2 = formatter.parse(fechaconsumo);
 

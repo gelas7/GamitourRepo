@@ -36,7 +36,7 @@ public class InsertarMultimediasAccion extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String cliente = request.getParameter("cliente");
+		String idCliente = request.getParameter("cliente");
 		String comentario = request.getParameter("comentario");
 		String idPd = request.getParameter("pruebaD");
 		String puntos = request.getParameter("puntos");
@@ -45,15 +45,15 @@ public class InsertarMultimediasAccion extends HttpServlet {
 
 		String imagenName = "", videoName = "";
 		InputStream imagenStream = null, videoStream = null;
+		
+		Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
 
-		Date date = new Date();
-		String fecha = formatter.format(date); // 2016-11-16
-
-		/* Proceso ficheros(cliente-fecha-file.jpg) */
+		Date hoy = new Date();
+		
 		try {
-			imagenName = cliente + "-" + fecha + "-"
+			imagenName = hoy + "-"
 					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
-			videoName = cliente + "-" + fecha + "-" + Paths.get(video.getSubmittedFileName()).getFileName().toString();
+			videoName = hoy + "-" + Paths.get(video.getSubmittedFileName()).getFileName().toString();
 
 			imagenStream = imagen.getInputStream();
 			videoStream = video.getInputStream();
@@ -70,9 +70,7 @@ public class InsertarMultimediasAccion extends HttpServlet {
 			videoStream.close();
 		}
 
-		Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
-
-		sm.insertar(new Multimedia(c, date, comentario, imagenName, videoName, Integer.parseInt(idPd),
+		sm.insertar(new Multimedia(c, hoy, comentario, imagenName, videoName, Integer.parseInt(idPd),
 				Integer.parseInt(puntos))); // Inserto
 
 		request.setAttribute("listaMultimedias", sm.buscarTodos()); // Actualizo lista

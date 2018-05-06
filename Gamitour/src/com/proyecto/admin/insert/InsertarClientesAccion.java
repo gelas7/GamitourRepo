@@ -47,9 +47,9 @@ public class InsertarClientesAccion extends HttpServlet {
 		String rol = request.getParameter("rol");
 		Part avatar = request.getPart("avatar");
 		Date dateNacimiento = null;
-		Date dateSubida = new Date();
 		InputStream imagenStream = null;
 		String avatarName = "";
+		Date hoy = new Date();
 
 		try {
 			if (fechanacimiento != "")
@@ -58,17 +58,13 @@ public class InsertarClientesAccion extends HttpServlet {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
 
-		String fechaSubida = formatter.format(dateSubida); // 2016-11-16
 
 		try {
-			/* Proceso ficheros(email-fechaSubida-file.jpg) */
-			avatarName = email + "-" + fechaSubida + "-"
+			/* Proceso ficheros(email-fecha-fichero.jpg) */
+			avatarName = hoy + "-"
 					+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
-
 			imagenStream = avatar.getInputStream();
-
 			File imagenSalida = new File(directorio + avatarName);
-
 			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
 			
 		} catch (Exception e) {
@@ -80,7 +76,7 @@ public class InsertarClientesAccion extends HttpServlet {
 		Rol r = sr.buscarPorClave(Integer.parseInt(rol)); // Recupero el rol
 
 		Cliente c = new Cliente(r, nombre, apellidos, dateNacimiento, email, password, telefono, direccion,
-				codigopostal, avatarName, Integer.parseInt(puntosacumulados), new Date());
+				codigopostal, avatarName, Integer.parseInt(puntosacumulados), hoy);
 
 		sc.insertar(c); // Inserto cliente
 

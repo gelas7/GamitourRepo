@@ -44,6 +44,8 @@ public class InsertarActividadesAccion extends HttpServlet {
 		Date date2 = null;
 		InputStream imagenStream = null;
 		String imagenName = "";
+		Date hoy = new Date();
+
 		try {
 			date1 = formatter.parse(fechainicio);
 			date2 = formatter.parse(fechafin);
@@ -52,8 +54,8 @@ public class InsertarActividadesAccion extends HttpServlet {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
 		try {
-			/* Proceso ficheros (fechainicio-fechafin-file.jpg) */
-			imagenName = fechainicio + "-" + fechafin + "-"
+
+			imagenName = hoy + "-"
 					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
 			imagenStream = imagen.getInputStream();
