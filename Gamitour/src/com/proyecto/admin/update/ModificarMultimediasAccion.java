@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Paths;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.servlet.ServletException;
@@ -36,7 +35,7 @@ public class ModificarMultimediasAccion extends HttpServlet {
 			throws ServletException, IOException {
 
 		String id = request.getParameter("id");
-		String cliente = request.getParameter("cliente");
+		String idCliente = request.getParameter("cliente");
 		String comentario = request.getParameter("comentario");
 		Part imagen = request.getPart("imagen");
 		Part video = request.getPart("video");
@@ -45,12 +44,8 @@ public class ModificarMultimediasAccion extends HttpServlet {
 
 		Multimedia m = sm.buscarPorClave(Integer.parseInt(id));
 
-		DateFormat dateFormat = new SimpleDateFormat("yyyy:MM:dd-HH.mm.ss");
-		Date date = new Date();
-		String fecha = dateFormat.format(date); // 2016/11/16 12:08:43
-
-		if (cliente != "") {
-			Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
+		if (idCliente != "") {
+			Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
 			m.setCliente(c);
 		}
 
@@ -59,7 +54,7 @@ public class ModificarMultimediasAccion extends HttpServlet {
 		}
 
 		if (imagen != null) {
-			String imagenName = fecha + "-" + cliente + "-"
+			String imagenName = idCliente + "-" + new Date() + "-"
 					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 			InputStream imagenStream = imagen.getInputStream();
 			File imagenSalida = new File(directorio + imagenName);
@@ -69,7 +64,7 @@ public class ModificarMultimediasAccion extends HttpServlet {
 		}
 
 		if (video != null) {
-			String videoName = fecha + "-" + cliente + "-"
+			String videoName = idCliente + "-" + new Date() + "-"
 					+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
 			InputStream videoStream = video.getInputStream();
 			File videoSalida = new File(directorio + videoName);

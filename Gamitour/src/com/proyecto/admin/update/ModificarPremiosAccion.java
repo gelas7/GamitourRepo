@@ -23,14 +23,14 @@ public class ModificarPremiosAccion extends Accion {
 
 		ServicePremiosImp sp = new ServicePremiosImp();
 		ServiceClientesImp sc = new ServiceClientesImp();
-
+		
+		String id = request.getParameter("id");
 		String nombre = request.getParameter("nombre");
 		String descripcion = request.getParameter("descripcion");
 		String fechaactivacion = request.getParameter("fechaactivacion");
 		String fechaconsumo = request.getParameter("fechaconsumo");
-		String cliente = request.getParameter("cliente");
+		String idCliente = request.getParameter("cliente");
 		String puntos = request.getParameter("puntos");
-		String id = request.getParameter("id");
 		Date date1 = null;
 		Date date2 = null;
 
@@ -52,8 +52,8 @@ public class ModificarPremiosAccion extends Accion {
 			premio.setNombre(nombre);
 		if (descripcion != "")
 			premio.setDescripcion(descripcion);
-		if (cliente != "") {
-			Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
+		if (idCliente != "") {
+			Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
 			premio.setCliente(c);
 		}
 		if (fechaactivacion != "")

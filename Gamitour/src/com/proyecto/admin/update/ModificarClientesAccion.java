@@ -46,7 +46,6 @@ public class ModificarClientesAccion extends HttpServlet {
 		String rol = request.getParameter("rol");
 		Part avatar = request.getPart("avatar");
 		Date date1 = null;
-		Date dateSubida = new Date();
 
 		try {
 			if (fechanacimiento != "")
@@ -54,20 +53,6 @@ public class ModificarClientesAccion extends HttpServlet {
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
-
-		String fechaSubida = formatter.format(dateSubida); // 2016-11-16
-
-		/* Proceso ficheros(email-fechaSubida-file.jpg) */
-		String avatarName = email + "-" + fechaSubida + "-"
-				+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
-
-		InputStream imagenStream = avatar.getInputStream();
-
-		File imagenSalida = new File(directorio + avatarName);
-
-		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
-
-		imagenStream.close();
 
 		ServiceClientesImp sc = new ServiceClientesImp();
 		ServiceRolesImp sr = new ServiceRolesImp();
@@ -96,8 +81,18 @@ public class ModificarClientesAccion extends HttpServlet {
 			Rol r = sr.buscarPorClave(Integer.parseInt(rol));
 			c.setRol(r);
 		}
-		if (avatarName != "")
+		if (avatar != null){
+			/* (idCliente-fecha-nombreFichero.jpg) */
+			String avatarName = c.getIdcliente() + "-" + new Date() + "-" 
+			+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
+
+			InputStream imagenStream = avatar.getInputStream();
+			File imagenSalida = new File(directorio + avatarName);
+			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+
+			imagenStream.close();
 			c.setAvatar(avatarName);
+		}
 
 		sc.actualizar(c);
 
