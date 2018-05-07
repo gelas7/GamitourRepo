@@ -45,16 +45,14 @@ public class InsertarMultimediasAccion extends HttpServlet {
 
 		String imagenName = "", videoName = "";
 		InputStream imagenStream = null, videoStream = null;
-		
-		Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
 
-		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
+		Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
 		Date fechaHoy = new Date();
-        String hoy = dt.format(fechaHoy);
-		
+		String hoy = dt.format(fechaHoy);
+
 		try {
-			imagenName = hoy + "-"
-					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+			imagenName = hoy + "-" + Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 			videoName = hoy + "-" + Paths.get(video.getSubmittedFileName()).getFileName().toString();
 
 			imagenStream = imagen.getInputStream();

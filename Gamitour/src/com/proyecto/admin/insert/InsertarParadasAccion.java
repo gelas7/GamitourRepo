@@ -50,8 +50,8 @@ public class InsertarParadasAccion extends HttpServlet {
 		String videoName = "";
 		InputStream imagenStream = null;
 		InputStream videoStream = null;
-		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
-        String hoy = dt.format(new Date());
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
+		String hoy = dt.format(new Date());
 
 		float lat = 0, lng = 0;
 
@@ -59,33 +59,29 @@ public class InsertarParadasAccion extends HttpServlet {
 			lat = Float.parseFloat(latitud);
 			lng = Float.parseFloat(longitud);
 		} catch (Exception e) {
-			System.out.println("Error al procesar coordenadas."+ e.getMessage());
+			System.out.println("Error al procesar coordenadas." + e.getMessage());
 		}
 
 		try {
-			
-		imagenName = hoy + "-"
-				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
-		videoName = hoy + "-"
-				+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
+			imagenName = hoy + "-" + Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
-		imagenStream = imagen.getInputStream();
-		videoStream = video.getInputStream();
+			videoName = hoy + "-" + Paths.get(video.getSubmittedFileName()).getFileName().toString();
 
-		File imagenSalida = new File(directorio + imagenName);
-		File videoSalida = new File(directorio + videoName);
+			imagenStream = imagen.getInputStream();
+			videoStream = video.getInputStream();
 
-		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
-		FileUtils.copyInputStreamToFile(videoStream, videoSalida);
-		
+			File imagenSalida = new File(directorio + imagenName);
+			File videoSalida = new File(directorio + videoName);
+
+			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+			FileUtils.copyInputStreamToFile(videoStream, videoSalida);
+
 		}
-		
-		catch(Exception e)
-		{
+
+		catch (Exception e) {
 			System.out.println("Error al gestionar ficheros. " + e.getMessage());
-		}
-		finally {
+		} finally {
 			imagenStream.close();
 			videoStream.close();
 		}
@@ -98,7 +94,7 @@ public class InsertarParadasAccion extends HttpServlet {
 		sp.insertar(p);
 
 		response.sendRedirect("MostrarAdmin.do?div=paradas");
-		
+
 	}
 
 }

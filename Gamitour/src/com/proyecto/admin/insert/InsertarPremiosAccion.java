@@ -29,11 +29,10 @@ public class InsertarPremiosAccion extends HttpServlet {
 	private final String directorio = "/opt/subidas/premios/";
 	ServicePremiosImp sp = new ServicePremiosImp();
 	ServiceClientesImp sc = new ServiceClientesImp();
-	
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		String nombre = request.getParameter("nombre");
 		String descripcion = request.getParameter("descripcion");
 		Part imagen = request.getPart("imagen");
@@ -43,9 +42,8 @@ public class InsertarPremiosAccion extends HttpServlet {
 		String puntos = request.getParameter("puntos");
 		Date date1 = null;
 		Date date2 = null;
-		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
-        String hoy = dt.format(new Date());
-
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
+		String hoy = dt.format(new Date());
 
 		try {
 			if (fechaactivacion != "")
@@ -55,10 +53,9 @@ public class InsertarPremiosAccion extends HttpServlet {
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
-		
-		String imagenName = hoy + "-"
-				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
-		
+
+		String imagenName = hoy + "-" + Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+
 		InputStream imagenStream = imagen.getInputStream();
 
 		File imagenSalida = new File(directorio + imagenName);
@@ -66,7 +63,7 @@ public class InsertarPremiosAccion extends HttpServlet {
 		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
 
 		imagenStream.close();
-		
+
 		Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
 
 		Premio p = new Premio(c, nombre, descripcion, imagenName, date1, date2, Integer.parseInt(puntos));

@@ -44,31 +44,27 @@ public class InsertarNoticiasAccion extends HttpServlet {
 		String imagenName = "";
 		Date date1 = null;
 		Date date2 = null;
-		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
-        String hoy = dt.format(new Date());
-		
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
+		String hoy = dt.format(new Date());
+
 		try {
 			if (fecha != "")
 				date1 = formatter.parse(fecha);
-			if(fechac!="")
+			if (fechac != "")
 				date2 = formatter.parse(fechac);
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
 
 		try {
-		imagenName = hoy + "-"
-				+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+			imagenName = hoy + "-" + Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
-		imagenStream = imagen.getInputStream();
-		File imagenSalida = new File(directorio + imagenName);
-		FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
-		}
-		catch(Exception e)
-		{
-			System.out.println("Fallo al procesar ficheros. "+e.getMessage());
-		}
-		finally {
+			imagenStream = imagen.getInputStream();
+			File imagenSalida = new File(directorio + imagenName);
+			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
+		} catch (Exception e) {
+			System.out.println("Fallo al procesar ficheros. " + e.getMessage());
+		} finally {
 			imagenStream.close();
 		}
 

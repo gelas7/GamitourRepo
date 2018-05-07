@@ -44,8 +44,8 @@ public class InsertarActividadesAccion extends HttpServlet {
 		Date date2 = null;
 		InputStream imagenStream = null;
 		String imagenName = "";
-		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
-        String hoy = dt.format(new Date());
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
+		String hoy = dt.format(new Date());
 
 		try {
 			date1 = formatter.parse(fechainicio);
@@ -56,21 +56,20 @@ public class InsertarActividadesAccion extends HttpServlet {
 		}
 		try {
 
-			imagenName = hoy + "-"
-					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+			imagenName = hoy + "-" + Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 
 			imagenStream = imagen.getInputStream();
 
 			File imagenSalida = new File(directorio + imagenName);
 
 			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
-			
+
 		} catch (Exception e) {
 			System.out.println("Fallo al gestionar ficheros. " + e.getMessage());
 		} finally {
 			imagenStream.close();
 		}
-		
+
 		Actividad a = new Actividad(nombre, date1, date2, ubicacion, Integer.parseInt(numparticipantes),
 				Float.parseFloat(precio), imagenName, Integer.parseInt(puntos));
 

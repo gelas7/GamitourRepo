@@ -49,7 +49,7 @@ public class InsertarClientesAccion extends HttpServlet {
 		Date dateNacimiento = null;
 		InputStream imagenStream = null;
 		String avatarName = "";
-		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
 		Date fechaHoy = new Date();
         String hoy = dt.format(fechaHoy);
 
@@ -63,7 +63,6 @@ public class InsertarClientesAccion extends HttpServlet {
 
 
 		try {
-			/* Proceso ficheros(email-fecha-fichero.jpg) */
 			avatarName = hoy + "-"
 					+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
 			imagenStream = avatar.getInputStream();
