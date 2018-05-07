@@ -35,9 +35,9 @@ public class ModificarPremiosAccion extends Accion {
 		Date date2 = null;
 
 		try {
-			if (fechaactivacion != "")
+			if (fechaactivacion .length()>0)
 				date1 = formatter.parse(fechaactivacion);
-			if (fechaconsumo != "")
+			if (fechaconsumo .length()>0)
 				date2 = formatter.parse(fechaconsumo);
 
 		} catch (ParseException e) {
@@ -46,19 +46,19 @@ public class ModificarPremiosAccion extends Accion {
 
 		Premio premio = sp.buscarPorClave(Integer.parseInt(id));
 
-		if (nombre != "") // Compruebo si se han hecho cambios
+		if (nombre .length()>0) // Compruebo si se han hecho cambios
 			premio.setNombre(nombre);
-		if (descripcion != "")
+		if (descripcion .length()>0)
 			premio.setDescripcion(descripcion);
-		if (idCliente != "") {
+		if (idCliente .length()>0) {
 			Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
 			premio.setCliente(c);
 		}
-		if (fechaactivacion != "")
+		if (fechaactivacion .length()>0)
 			premio.setFechaactivacion(date1);
-		if (fechaconsumo != "")
+		if (fechaconsumo .length()>0)
 			premio.setFechaconsumo(date2);
-		if (puntos != "")
+		if (puntos.length() > 0)
 			premio.setPuntos(Integer.parseInt(puntos));
 
 		sp.actualizar(premio);

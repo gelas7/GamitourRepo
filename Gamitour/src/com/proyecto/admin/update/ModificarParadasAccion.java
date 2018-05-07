@@ -15,7 +15,7 @@ public class ModificarParadasAccion extends Accion {
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
 	ServiceParadasImp sp = new ServiceParadasImp();
 	ServiceItinerariosImp si = new ServiceItinerariosImp();
-	
+
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 
 		String id = request.getParameter("id");
@@ -29,27 +29,26 @@ public class ModificarParadasAccion extends Accion {
 		String latitud = request.getParameter("latitud");
 		String longitud = request.getParameter("longitud");
 
-	
 		Parada parada = sp.buscarPorClave(Integer.parseInt(id));
 
-		if (nombre != "") // Compruebo si se han hecho cambios
+		if (nombre.length() > 0) // Compruebo si se han hecho cambios
 			parada.setNombre(nombre);
-		if (numeroParada != "")
+		if (numeroParada.length() > 0)
 			parada.setNumeroParada(Integer.parseInt(numeroParada));
-		if (ubicacion != "" && latitud != "" && longitud != "") {
+		if (ubicacion.length() > 0 && latitud.length() > 0 && longitud.length() > 0) {
 			float lat = Float.parseFloat(latitud);
 			float lng = Float.parseFloat(longitud);
 			parada.setUbicacion(ubicacion);
 			parada.setLatitud(lat);
 			parada.setLongitud(lng);
 		}
-		if (historia != "")
+		if (historia.length() > 0)
 			parada.setHistoria(historia);
-		if (anecdotario != "")
+		if (anecdotario.length() > 0)
 			parada.setAnecdotario(anecdotario);
-		if (gastronomia != "")
+		if (gastronomia.length() > 0)
 			parada.setGastronomia(gastronomia);
-		if (itinerario != "") {
+		if (itinerario.length() > 0) {
 			Itinerario it = si.buscarPorClave(Integer.parseInt(itinerario));
 			parada.setItinerario(it);
 		}

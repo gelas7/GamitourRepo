@@ -27,9 +27,9 @@ public class ModificarNoticiasAccion extends Accion {
 		Date date2 = null;
 
 		try {
-			if (fecha != "")
+			if (fecha.length() > 0)
 				date = formatter.parse(fecha);
-			if (fechac != "")
+			if (fechac.length() > 0)
 				date2 = formatter.parse(fechac);
 		} catch (ParseException e) {
 			e.printStackTrace();
@@ -38,10 +38,10 @@ public class ModificarNoticiasAccion extends Accion {
 		ServiceNoticias sn = new ServiceNoticiasImp();
 		Noticia noticia = sn.buscarPorClave(Integer.parseInt(id));
 
-		if (nombreN != "") // Compruebo si se han hecho cambios
+		if (nombreN.length() > 0) // Compruebo si se han hecho cambios
 			noticia.setNombre(nombreN);
 
-		if (texto != "") // Compruebo si se han hecho cambios
+		if (texto.length() > 0) // Compruebo si se han hecho cambios
 			noticia.setTexto(texto);
 
 		if (date != null) // Compruebo si se han hecho cambios

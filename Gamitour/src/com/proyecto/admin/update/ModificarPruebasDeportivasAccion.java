@@ -29,10 +29,10 @@ public class ModificarPruebasDeportivasAccion extends Accion {
 		Date date2 = null;
 
 		try {
-			if (fechaInicio != "")
-			date1 = formatter.parse(fechaInicio);
-			if (fechaFin != "")
-			date2 = formatter.parse(fechaFin);
+			if (fechaInicio.length() > 0)
+				date1 = formatter.parse(fechaInicio);
+			if (fechaFin.length() > 0)
+				date2 = formatter.parse(fechaFin);
 
 		} catch (ParseException e) {
 
@@ -43,17 +43,17 @@ public class ModificarPruebasDeportivasAccion extends Accion {
 		ServiceParadasImp sp = new ServiceParadasImp();
 		PruebaDeportiva prueba = spd.buscarPorClave(Integer.parseInt(id));
 
-		if (nombre != "") 
+		if (nombre.length() > 0)
 			prueba.setNombre(nombre);
 		if (date1 != null)
 			prueba.setFechainicio(date1);
-		if (date2 != null) 
+		if (date2 != null)
 			prueba.setFechainicio(date2);
-		if (explicacion != "") 
+		if (explicacion.length() > 0)
 			prueba.setExplicacion(explicacion);
-		if (puntos != "") 
+		if (puntos.length() > 0)
 			prueba.setPuntos(Integer.parseInt(puntos));
-		if (parada != "") 
+		if (parada.length() > 0)
 			prueba.setParada(sp.buscarPorClave(Integer.parseInt(parada)));
 
 		spd.actualizar(prueba);

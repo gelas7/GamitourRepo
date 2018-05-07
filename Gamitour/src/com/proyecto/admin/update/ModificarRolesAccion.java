@@ -21,7 +21,7 @@ public class ModificarRolesAccion extends Accion {
 
 		Rol r = sr.buscarPorClave(Integer.parseInt(id));
 
-		if (nombreN != "") //Compruebo si se han hecho cambios
+		if (nombreN.length() > 0) //Compruebo si se han hecho cambios
 			r.setNombre(nombreN);
 
 		sr.actualizar(r);// Actualizo BBDD

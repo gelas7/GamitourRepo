@@ -42,21 +42,20 @@ public class ModificarMultimediasAccion extends HttpServlet {
 		String idPd = request.getParameter("pruebaD");
 		String puntos = request.getParameter("puntos");
 		Multimedia m = sm.buscarPorClave(Integer.parseInt(id));
-		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
-        String hoy = dt.format(new Date());
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
+		String hoy = dt.format(new Date());
 
-		if (idCliente != "") {
+		if (idCliente.length() > 0) {
 			Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
 			m.setCliente(c);
 		}
 
-		if (idPd != "") {
+		if (idPd.length() > 0) {
 			m.setPruebaDeportivaIdpruebadeportiva(Integer.parseInt(idPd));
 		}
 
 		if (imagen != null) {
-			String imagenName = hoy + "-"
-					+ Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
+			String imagenName = hoy + "-" + Paths.get(imagen.getSubmittedFileName()).getFileName().toString();
 			InputStream imagenStream = imagen.getInputStream();
 			File imagenSalida = new File(directorio + imagenName);
 			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
@@ -65,8 +64,7 @@ public class ModificarMultimediasAccion extends HttpServlet {
 		}
 
 		if (video != null) {
-			String videoName = hoy + "-"
-					+ Paths.get(video.getSubmittedFileName()).getFileName().toString();
+			String videoName = hoy + "-" + Paths.get(video.getSubmittedFileName()).getFileName().toString();
 			InputStream videoStream = video.getInputStream();
 			File videoSalida = new File(directorio + videoName);
 			FileUtils.copyInputStreamToFile(videoStream, videoSalida);
@@ -74,10 +72,10 @@ public class ModificarMultimediasAccion extends HttpServlet {
 			m.setVideo(videoName);
 		}
 
-		if (comentario != "")
+		if (comentario.length() > 0)
 			m.setComentario(comentario);
 
-		if (puntos != "")
+		if (puntos.length() > 0)
 			m.setPuntosacumulados(Integer.parseInt(puntos));
 
 		sm.actualizar(m);

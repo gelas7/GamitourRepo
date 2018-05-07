@@ -28,13 +28,13 @@ public class ModificarItinerariosAccion extends Accion {
 
 		Itinerario i = si.buscarPorClave(Integer.parseInt(id));
 
-		if (nombreN != "")
+		if (nombreN.length()>0)
 			i.setNombre(nombreN);
-		if (categoria != "")
+		if (categoria.length()>0)
 			i.setCategoria(categoria);
-		if (duracion != "")
+		if (duracion.length()>0)
 			i.setDuracion(duracion);
-		if (ubicacion != "")
+		if (ubicacion.length()>0)
 			i.setUbicacion(ubicacion);
 
 		si.actualizar(i);

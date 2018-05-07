@@ -47,11 +47,11 @@ public class ModificarClientesAccion extends HttpServlet {
 		Part avatar = request.getPart("avatar");
 		Date date1 = null;
 		InputStream imagenStream = null;
-		SimpleDateFormat dt = new SimpleDateFormat("yyyy/MM/dd-hh:mm:ss");
-        String hoy = dt.format(new Date());
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
+		String hoy = dt.format(new Date());
 
 		try {
-			if (fechanacimiento != "")
+			if (fechanacimiento.length()>0)
 				date1 = formatter.parse(fechanacimiento);
 		} catch (ParseException e) {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
@@ -61,32 +61,32 @@ public class ModificarClientesAccion extends HttpServlet {
 		ServiceRolesImp sr = new ServiceRolesImp();
 
 		Cliente c = sc.buscarPorClave(Integer.parseInt(id));
-
-		if (nombre != "")
+		
+		if (nombre.length()>0)
 			c.setNombre(nombre);
-		if (apellidos != "")
+		if (apellidos.length()>0)
 			c.setApellidos(apellidos);
 		if (date1 != null)
 			c.setFechanacimiento(date1);
-		if (email != "")
+		if (email.length()>0)
 			c.setEmail(email);
-		if (password != "")
+		if (password.length()>0)
 			c.setPassword(password);
-		if (telefono != "")
+		if (telefono.length()>0)
 			c.setTelefono(telefono);
-		if (direccion != "")
+		if (direccion.length()>0)
 			c.setDireccion(direccion);
-		if (codigopostal != "")
+		if (codigopostal.length()>0)
 			c.setCodigopostal(codigopostal);
-		if (puntosacumulados != "")
+		if (puntosacumulados.length()>0)
 			c.setPuntosacumulados(Integer.parseInt(puntosacumulados));
-		if (rol != "") {
+		if (rol.length()>0) {
 			Rol r = sr.buscarPorClave(Integer.parseInt(rol));
 			c.setRol(r);
 		}
-		if (avatar != null) {
+		if (avatar.getSubmittedFileName().length()>0) {
 			try {
-				/* (email-fecha-fichero.jpg) */
+
 				String avatarName = hoy + "-"
 						+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
 

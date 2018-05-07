@@ -39,19 +39,19 @@ public class ModificarActividadesAccion extends Accion {
 		ServiceActividadesImp sa = new ServiceActividadesImp();
 		Actividad a = sa.buscarPorClave(Integer.parseInt(id));
 		
-		if (nombre != "")
+		if (nombre.length()>0)
 			a.setNombre(nombre);
 		if (date1 != null)
 			a.setFechainicio(date1);
 		if (date2 != null)
 			a.setFechafin(date2);
-		if (ubicacion != "")
+		if (ubicacion.length()>0)
 			a.setUbicacion(ubicacion);
-		if (numparticipantes != "")
+		if (numparticipantes.length()>0)
 			a.setNumparticipantes(Integer.parseInt(numparticipantes));
-		if (precio != "")
+		if (precio.length()>0)
 			a.setPrecio(Float.parseFloat(precio));
-		if (puntos != "")
+		if (puntos.length()>0)
 			a.setPuntos(Integer.parseInt(puntos));
 
 		sa.actualizar(a);

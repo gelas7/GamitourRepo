@@ -25,22 +25,22 @@ public class ModificarVotosAccion extends Accion {
 
 		Voto v = sv.buscarPorClave(Integer.parseInt(id));
 
-		if (cliente != "") {
+		if (cliente.length() > 0) {
 			ServiceClientesImp scli = new ServiceClientesImp();
 			Cliente cli = scli.buscarPorClave(Integer.parseInt(cliente));
 			v.setCliente(cli);
 		}
-		if (multimedia != "") {
+		if (multimedia.length() > 0) {
 			ServiceMultimediasImp sm = new ServiceMultimediasImp();
 			Multimedia m = sm.buscarPorClave(Integer.parseInt(multimedia));
 			v.setMultimedia(m);
 		}
-		
-		if(puntos!="")
+
+		if (puntos.length() > 0)
 			v.setPuntos(Integer.parseInt(puntos));
-		
+
 		sv.actualizar(v);
-		
+
 		return "MostrarAdmin.do?div=votos";
 	}
 

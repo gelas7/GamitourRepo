@@ -24,18 +24,18 @@ public class ModificarPruebasCulturalesAccion extends Accion {
 
 		ServicePruebasCulturalesImp spc = new ServicePruebasCulturalesImp();
 		ServiceParadasImp sp = new ServiceParadasImp();
-		
+
 		PruebaCultural prueba = spc.buscarPorClave(Integer.parseInt(id));
 
-		if (nombre != "") 
+		if (nombre.length() > 0)
 			prueba.setNombre(nombre);
-		if (pregunta != "") 
+		if (pregunta.length() > 0)
 			prueba.setPregunta(pregunta);
-		if (respuesta != "") 
+		if (respuesta.length() > 0)
 			prueba.setRespuesta(respuesta);
-		if (puntos != "") 
+		if (puntos.length() > 0)
 			prueba.setPuntos(Integer.parseInt(puntos));
-		if (parada != "") 
+		if (parada.length() > 0)
 			prueba.setParada(sp.buscarPorClave(Integer.parseInt(parada)));
 
 		spc.actualizar(prueba);
