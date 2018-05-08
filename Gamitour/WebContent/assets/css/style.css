@@ -35,6 +35,11 @@ header li {
     text-align: center;
 }
 
+img:hover{
+	width:80px;
+	height:80px;
+}
+
 input,
 textarea {
     background: #FFFFFF url(images/img09.gif) repeat-x;

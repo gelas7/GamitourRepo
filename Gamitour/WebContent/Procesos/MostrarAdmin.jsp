@@ -64,16 +64,18 @@
 
 				<div class="tablas" id="divBienvenida">
 					<hr></hr>
-					<h2>Bienvenido. Seleccione una opción del menu lateral para
-						comenzar.</h2>
 
-					<img style="width: 50%;" src="assets/css/images/asturias.png"></img>
-					<br> <br> <a id="guia" style="text-decoration: none"
+					<h2>Seleccione una opción del menu lateral para comenzar.</h2>
+
+					<br> <a id="guia" style="text-decoration: none"
 						href="assets/pdf/guia.pdf">
 						<h3 style="font-size: 22px; color: #666666;">
 							Manual del usuario <i class="fas fa-file-pdf"> </i>
 						</h3>
-					</a>
+					</a> <br>
+					<br> <img style="width: 30%;"
+						src="assets/css/images/asturias.png"></img>
+
 				</div>
 
 				<!-- DIV CLIENTES -->
@@ -436,7 +438,8 @@
 									<td>${premio.cliente.getNombre()}</td>
 									<td>${premio.nombre}</td>
 									<td>${premio.descripcion}</td>
-									<td><img style="width: 40px;height:40px;" src=" <%=url%>/premios/${premio.imagen}"></img></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/premios/${premio.imagen}"></img></td>
 									<td>${premio.fechaactivacion}</td>
 									<td>${premio.fechaconsumo}</td>
 									<td>${premio.puntos}</td>
@@ -482,8 +485,10 @@
 									<td>${m.cliente.getNombre()}</td>
 									<td>${m.fecha}</td>
 									<td>${m.comentario}</td>
-									<td><img style="width: 40px;height:40px;" src=" <%=url%>/multimedias/${m.imagen}"></img></td>
-									<td><img style="width: 40px;height:40px;" src=" <%=url%>/multimedias/${m.video}"></img></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/multimedias/${m.imagen}"></img></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/multimedias/${m.video}"></img></td>
 									<td>${m.puntosacumulados}</td>
 									<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 									<td><a class="eliminar"
