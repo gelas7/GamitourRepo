@@ -66,15 +66,14 @@
 					<h2>Bienvenido. Seleccione una opción del menu lateral para
 						comenzar.</h2>
 
-					<img style="width:50%;" src="assets/css/images/asturias.png"></img>
-					<br> <br>
+					<img style="width: 50%;"
+						src="../../subidas/2018-05-08(08:11:14)-w1.png"></img> <br> <br>
 					<a id="guia" style="text-decoration: none"
 						href="assets/pdf/guia.pdf">
 						<h3 style="font-size: 22px; color: #666666;">
 							Manual del usuario <i class="fas fa-file-pdf"> </i>
 						</h3>
 					</a>
-
 				</div>
 
 				<!-- DIV CLIENTES -->
@@ -117,7 +116,9 @@
 									<td>${cliente.puntosacumulados}</td>
 									<td>${cliente.fecharegistro}</td>
 									<td>${cliente.rol.getNombre()}</td>
-									<td><i class="far fa-file-image" title="${cliente.avatar}"></i></td>
+									<td><img style="width: 40px;height:40px;"
+										src="../../subidas/${cliente.avatar}"></img></td>
+
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar? Los comentarios, votos y premios asociados al cliente también se eliminarán.')"
 										href="EliminarClientes.do?id=${cliente.idcliente}"><i
