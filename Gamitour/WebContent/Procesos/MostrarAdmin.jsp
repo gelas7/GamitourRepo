@@ -20,6 +20,7 @@
 </head>
 
 <body>
+	<%!String url = "http://ambgubuntu.westeurope.cloudapp.azure.com:8080/subidas";%>
 	<div class="flex">
 		<div class="menu">
 			<ul>
@@ -66,9 +67,8 @@
 					<h2>Bienvenido. Seleccione una opción del menu lateral para
 						comenzar.</h2>
 
-					<img style="width: 50%;"
-						src="../../subidas/2018-05-08(08:11:14)-w1.png"></img> <br> <br>
-					<a id="guia" style="text-decoration: none"
+					<img style="width: 50%;" src="assets/css/images/asturias.png"></img>
+					<br> <br> <a id="guia" style="text-decoration: none"
 						href="assets/pdf/guia.pdf">
 						<h3 style="font-size: 22px; color: #666666;">
 							Manual del usuario <i class="fas fa-file-pdf"> </i>
@@ -116,8 +116,8 @@
 									<td>${cliente.puntosacumulados}</td>
 									<td>${cliente.fecharegistro}</td>
 									<td>${cliente.rol.getNombre()}</td>
-									<td><img style="width: 40px;height:40px;"
-										src="../../subidas/${cliente.avatar}"></img></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/clientes/${cliente.avatar}"></img></td>
 
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar? Los comentarios, votos y premios asociados al cliente también se eliminarán.')"
@@ -165,8 +165,8 @@
 									<td>${actividad.ubicacion}</td>
 									<td>${actividad.numparticipantes}</td>
 									<td>${actividad.precio}</td>
-									<td><i class="far fa-file-image"
-										title="${actividad.imagen}"></i></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/actividades/${actividad.imagen}"></img></td>
 									<td>${actividad.puntos}</td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar?')"
@@ -250,7 +250,8 @@
 									<td>${noticia.texto}</td>
 									<td>${noticia.fechaalta}</td>
 									<td>${noticia.fechacaducidad}</td>
-									<td><i class="far fa-file-image" title="${noticia.imagen}"></i></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/noticias/${noticia.imagen}"></img></td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar?')"
 										href="EliminarNoticias.do?id=${noticia.idnoticia}"><i
@@ -296,8 +297,10 @@
 									<td>${parada.historia}</td>
 									<td>${parada.anecdotario}</td>
 									<td>${parada.gastronomia}</td>
-									<td><i class="far fa-file-image" title="${parada.imagen}"></i></td>
-									<td><i class="far fa-file-video" title="${parada.video}"></i></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/paradas/${parada.imagen}"></img></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/paradas/${parada.video}"></img></td>
 									<td>${parada.itinerario.getNombre()}</td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar? Las pruebas culturales asociadas a esta parada también se eliminarán.')"
@@ -433,7 +436,7 @@
 									<td>${premio.cliente.getNombre()}</td>
 									<td>${premio.nombre}</td>
 									<td>${premio.descripcion}</td>
-									<td><i class="far fa-file-image" title="${premio.imagen}"></i></td>
+									<td><img style="width: 40px;height:40px;" src=" <%=url%>/premios/${premio.imagen}"></img></td>
 									<td>${premio.fechaactivacion}</td>
 									<td>${premio.fechaconsumo}</td>
 									<td>${premio.puntos}</td>
@@ -479,8 +482,8 @@
 									<td>${m.cliente.getNombre()}</td>
 									<td>${m.fecha}</td>
 									<td>${m.comentario}</td>
-									<td><i class="far fa-file-image" title="${m.imagen}"></i></td>
-									<td><i class="fas fa-file-video" title="${m.video}"></i></td>
+									<td><img style="width: 40px;height:40px;" src=" <%=url%>/multimedias/${m.imagen}"></img></td>
+									<td><img style="width: 40px;height:40px;" src=" <%=url%>/multimedias/${m.video}"></img></td>
 									<td>${m.puntosacumulados}</td>
 									<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 									<td><a class="eliminar"

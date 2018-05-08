@@ -28,7 +28,7 @@ public class ModificarClientesAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/opt/subidas/clientes/";
+	private final String directorio = "/opt/tomcat/webapps/subidas/clientes/";
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

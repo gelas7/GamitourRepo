@@ -26,7 +26,7 @@ public class InsertarPremiosAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/opt/subidas/premios/";
+	private final String directorio = "/opt/tomcat/webapps/subidas/premios/";
 	ServicePremiosImp sp = new ServicePremiosImp();
 	ServiceClientesImp sc = new ServiceClientesImp();
 

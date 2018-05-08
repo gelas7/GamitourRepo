@@ -27,7 +27,7 @@ public class ModificarMultimediasAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/opt/subidas/multimedias/";
+	private final String directorio = "/opt/tomcat/webapps/subidas/multimedias/";
 	ServiceMultimedias sm = new ServiceMultimediasImp();
 	ServiceClientes sc = new ServiceClientesImp();
 

@@ -29,7 +29,7 @@ public class InsertarClientesAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/opt/apache-tomcat-9.0.2/webapps/subidas/";
+	private final String directorio = "/opt/tomcat/webapps/subidas/clientes/";
 	ServiceClientesImp sc = new ServiceClientesImp();
 	ServiceRolesImp sr = new ServiceRolesImp();
 

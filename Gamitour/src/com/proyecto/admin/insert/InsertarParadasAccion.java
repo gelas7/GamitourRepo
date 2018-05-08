@@ -28,7 +28,7 @@ import com.proyecto.service.ServiceParadasImp;
 public class InsertarParadasAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	private final String directorio = "/opt/subidas/paradas/";
+	private final String directorio = "/opt/tomcat/webapps/subidas/paradas/";
 	ServiceParadasImp sp = new ServiceParadasImp();
 	ServiceItinerariosImp si = new ServiceItinerariosImp();
 

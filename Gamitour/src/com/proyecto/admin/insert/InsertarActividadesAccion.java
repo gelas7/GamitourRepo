@@ -27,7 +27,7 @@ public class InsertarActividadesAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private final String directorio = "/opt/subidas/actividades/";
+	private final String directorio = "/opt/tomcat/webapps/subidas/actividades/";
 	ServiceActividadesImp sa = new ServiceActividadesImp();
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
