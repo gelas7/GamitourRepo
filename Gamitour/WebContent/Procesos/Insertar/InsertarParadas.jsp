@@ -76,11 +76,11 @@
 					</p>
 
 					<p>
-						<label>Imagen: </label><input type="file" name="imagen" required="required">
+						<label>Imagen: </label><input type="file" name="imagen" >
 					</p>
 					
 					<p>
-						<label>Video: </label><input type="file" name="video" required="required">
+						<label>Video: </label><input type="file" name="video" >
 					</p>
 					
 					<p>

@@ -72,8 +72,7 @@
 						<h3 style="font-size: 22px; color: #666666;">
 							Manual del usuario <i class="fas fa-file-pdf"> </i>
 						</h3>
-					</a> <br>
-					<br> <img style="width: 30%;"
+					</a> <br> <br> <img style="width: 30%;"
 						src="assets/css/images/asturias.png"></img>
 
 				</div>
@@ -282,8 +281,7 @@
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
 								<th>Número <i id="icono" class="fas fa-sort"></i></th>
 								<th>Ubicación <i id="icono" class="fas fa-sort"></i></th>
-								<th>Historia <i id="icono" class="fas fa-sort"></i></th>
-								<th>Anecdotario <i id="icono" class="fas fa-sort"></i></th>
+
 								<th>Gastronomia <i id="icono" class="fas fa-sort"></i></th>
 								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
 								<th>Video <i id="icono" class="fas fa-sort"></i></th>
@@ -296,8 +294,7 @@
 									<td>${parada.nombre}</td>
 									<td>${parada.numeroParada}</td>
 									<td>${parada.ubicacion}</td>
-									<td>${parada.historia}</td>
-									<td>${parada.anecdotario}</td>
+
 									<td>${parada.gastronomia}</td>
 									<td><img style="width: 40px; height: 40px;"
 										src=" <%=url%>/paradas/${parada.imagen}"></img></td>
