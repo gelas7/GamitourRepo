@@ -24,16 +24,18 @@
 	<div class="flex">
 		<div class="menu">
 			<ul>
-				<li><a class="botonMenu" id="actividades">Actividades</a></li>
-				<li><a class="botonMenu" id="clientes">Clientes</a></li>
 				<li><a class="botonMenu" id="itinerarios">Itinerarios</a></li>
-				<li><a class="botonMenu" id="noticias">Noticias</a></li>
 				<li><a class="botonMenu" id="paradas">Paradas</a></li>
-				<li><a class="botonMenu" id="premios">Premios</a></li>
-				<li><a class="botonMenu" id="votos">Votos</a></li>
-				<li><a class="botonMenu" id="multimedias">Multimedia</a></li>
 				<li><a class="botonMenu" id="pruebasculturales">PC</a></li>
 				<li><a class="botonMenu" id="pruebasdeportivas">PD</a></li>
+				<li><a class="botonMenu" id="multimedias">Multimedia</a></li>
+				<li><a class="botonMenu" id="actividades">Actividades</a></li>
+				<li><a class="botonMenu" id="clientes">Clientes</a></li>
+				<li><a class="botonMenu" id="noticias">Noticias</a></li>
+				<li><a class="botonMenu" id="premios">Premios</a></li>
+				<li><a class="botonMenu" id="votos">Votos</a></li>
+
+
 				<li><a class="botonMenu" id="comentarios">Comentarios</a></li>
 			</ul>
 			<button id="divActual" value="${divActual}" hidden="hidden"></button>
