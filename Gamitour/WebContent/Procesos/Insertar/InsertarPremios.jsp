@@ -53,16 +53,16 @@
 					</select>
 				</p>
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre" required="required">
+					<label>Nombre: </label><input type="text" name="nombre" required="required" maxlength="50">
 				</p>
 				<p>
-					<label>Descripcion: </label><textarea name="descripcion" required="required" rows="4" cols="50"></textarea>
+					<label>Descripcion: </label><textarea name="descripcion" required="required" rows="4" cols="50" maxlength="500"></textarea>
 				</p>
 				<p>
-					<label>Ubicación: </label><input type="text" name="ubicacion" required="required">
+					<label>Ubicación: </label><input type="text" name="ubicacion" required="required" maxlength="50">
 				</p>
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos" required="required">
+					<label>Puntos: </label><input type="number" name="puntos" required="required" max="10000">
 				</p>
 				<p>
 					<label>Imagen: </label><input type="file" name="imagen" required="required">

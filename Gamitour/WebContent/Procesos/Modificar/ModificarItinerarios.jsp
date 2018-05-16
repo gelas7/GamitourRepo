@@ -49,19 +49,19 @@
 					name="id">
 
 				<p>
-					<label>Nuevo nombre: </label> <input type="text" name="nombreN"
+					<label>Nombre: </label> <input type="text" name="nombreN" maxlength="50"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Categoria: </label> <input type="text" name="categoria"
+					<label>Categoria: </label> <input type="text" name="categoria" maxlength="50"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCategoria()%>">
 				</p>
 				<p>
-					<label>Duracion: </label><input type="text" name="duracion"
+					<label>Duracion: </label><input type="text" name="duracion" maxlength="20"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDuracion()%>">
 				</p>
 				<p>
-					<label>Ubicacion: </label><input type="text" name="ubicacion"
+					<label>Ubicacion: </label><input type="text" name="ubicacion" maxlength="50"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
 				</p>
 				<p>

@@ -66,7 +66,7 @@
 				</p>
 
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos"
+					<label>Puntos: </label><input type="number" name="puntos" max="10"
 						placeholder="<%=sv.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 				</p>
 

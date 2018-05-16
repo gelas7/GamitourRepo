@@ -55,11 +55,11 @@
 				</p>
 
 				<p>
-					<label for="comentario">Comentario:</label> <textarea name="comentario" required="required" rows="4" cols="50"></textarea>
+					<label for="comentario">Comentario:</label> <textarea name="comentario" required="required" rows="4" cols="50" maxlength="500"></textarea>
 				</p>
 				<p>
 					<label for="puntos">Puntos Acumulados:</label> <input type="number"
-						name="puntos" required="required">
+						name="puntos" required="required" max="10000">
 				</p>
 				<p>
 					<label for="pruebaD">Prueba Deportiva: </label> <select

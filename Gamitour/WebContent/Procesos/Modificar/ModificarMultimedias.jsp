@@ -60,11 +60,11 @@
 				</p>
 
 				<p>
-					<label>Comentario: </label> <textarea name="comentario" required="required" rows="4" cols="50"
+					<label>Comentario: </label> <textarea name="comentario" required="required" rows="4" cols="50" maxlength="500"
 						placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getComentario()%>"></textarea>
 				</p>
 				<p>
-					<label> Puntos Acumulados: </label><input type="number"
+					<label> Puntos Acumulados: </label><input type="number" max="100000"
 						name="puntos"
 						placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
 				</p>

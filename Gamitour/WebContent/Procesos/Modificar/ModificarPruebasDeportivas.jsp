@@ -48,7 +48,7 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					<label>Nombre:</label> <input type="text" name="nombre"
+					<label>Nombre:</label> <input type="text" name="nombre" maxlength="50"
 						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
@@ -61,11 +61,11 @@
 						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>">
 				</p>
 				<p>
-					<label>Explicación:</label> <textarea name="explicacion" required="required" rows="4" cols="50"
+					<label>Explicación:</label> <textarea name="explicacion" required="required" rows="4" cols="50" maxlength="500"
 						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getExplicacion()%>"></textarea>
 				</p>
 				<p>
-					<label>Puntos:</label> <input type="text" name="puntos"
+					<label>Puntos:</label> <input type="number" name="puntos" max="10000"
 						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 				</p>
 				<p>

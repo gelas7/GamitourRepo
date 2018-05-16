@@ -6,6 +6,20 @@
 <title>Panel Admin</title>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
+<script src="../../assets/js/scriptComprobacionCampos.js"
+	type="text/javascript"></script>
+<script>
+	function comprobarCampo() {
+		var maxLength = 5;
+// 		debugger;
+	    var campo = document.getElementById("nombre");
+		var length = campo.value.length;
+		if (length > maxLength) {
+			campo.innerHTML="<p style='color:red'>El tamaño máximo permitido para este campo es "
+					+ maxLength + ".</p>";
+		}
+	}
+</script>
 </head>
 
 <body>
@@ -38,34 +52,39 @@
 
 				<h2>Insertar Actividad</h2>
 				<p>
-					<label for="nombre">Nombre:</label> <input type="text" name="nombre" required="required">
+					<label for="nombre">Nombre:</label> <input type="text"
+						name="nombre" id="nombre" required="required" maxlength="50">
 				</p>
 				<p>
-					<label for="fechainicio">Fecha de inicio:</label> <input type="date" name="fechainicio"
-						required="required">
+					<label for="fechainicio">Fecha de inicio:</label> <input
+						type="date" name="fechainicio" required="required">
 				</p>
 				<p>
-					<label for="fechafin">Fecha de fin:</label> <input type="date" name="fechafin"
-						required="required">
+					<label for="fechafin">Fecha de fin:</label> <input type="date"
+						name="fechafin" required="required">
 				</p>
 				<p>
-					<label for="ubicacion">Ubicacion:</label> <input type="text" name="ubicacion" required="required">
+					<label for="ubicacion">Ubicacion:</label> <input type="text"
+						name="ubicacion" required="required" maxlength="50">
 				</p>
 				<p>
-					<label for="participantes">Número de participantes:</label> <input type="number" name="participantes"
-						required="required">
+					<label for="participantes">Número de participantes:</label> <input
+						type="number" name="participantes" required="required" max="1000">
 				</p>
 				<p>
-					<label for="precio">Precio:</label> <input type="number" name="precio" required="required">
+					<label for="precio">Precio:</label> <input type="number"
+						name="precio" required="required" max="1000">
 				</p>
 				<p>
-					<label for="puntos">Puntos:</label> <input type="number" name="puntos" required="required">
+					<label for="puntos">Puntos:</label> <input type="number"
+						name="puntos" required="required" max="10000">
 				</p>
 				<p>
-					<label for="imagen">Imagen:</label> <input type="file" name="imagen" required="required">
+					<label for="imagen">Imagen:</label> <input type="file"
+						name="imagen" required="required">
 				</p>
 				<p>
-					<input type="submit" value="Enviar" id="enviar" >
+					<input type="submit" value="Enviar" id="enviar">
 				</p>
 			</form>
 		</div>

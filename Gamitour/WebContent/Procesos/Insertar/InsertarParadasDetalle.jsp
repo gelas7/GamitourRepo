@@ -55,20 +55,21 @@
 						Insertar Parada en
 						<%=si.buscarPorClave(Integer.parseInt(request.getParameter("idItinerario"))).getNombre()%></h2>
 					<p>
-						<label>Nombre: </label><input type="text" name="nombre" required="required">
+						<label>Nombre: </label><input type="text" name="nombre" required="required" maxlength="50">
 					</p>
 					<p>
 						<label>Numero de parada: </label><input type="number" name="numeroParada"
-							required="required">
+							required="required" max="5">
+					</p>
+
+					<p>
+						<label>Historia: </label><textarea name="historia" required="required" rows="4" cols="50"  maxlength="500"></textarea>
 					</p>
 					<p>
-						<label>Historia: </label><textarea name="historia" required="required" rows="4" cols="50"></textarea>
+						<label>Anecdotario: </label><textarea name="anecdotario" required="required" rows="4" cols="50" maxlength="500"></textarea>
 					</p>
 					<p>
-						<label>Anecdotario: </label><textarea name="anecdotario" required="required" rows="4" cols="50"></textarea>
-					</p>
-					<p>
-						<label>Gastronomia: </label><textarea name="gastronomia" required="required" rows="4" cols="50"></textarea>
+						<label>Gastronomia: </label><textarea name="gastronomia" required="required" rows="4" cols="50" maxlength="500"></textarea>
 					</p>
 
 					<input type="text" name="itinerario"
@@ -86,7 +87,7 @@
 					
 					<p>
 						<label>Ubicación: </label><input type="text" id="search" name="ubicacion"
-							required="required">
+							required="required" maxlength="50">
 
 						<button type="button" id="btnOK">Obtener coordenadas</button>
 					</p>

@@ -50,15 +50,15 @@
 					name="id">
 
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre"
+					<label>Nombre: </label><input type="text" name="nombre" maxlength="50"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Descripcion: </label> <textarea name="descripcion" required="required" rows="4" cols="50"
+					<label>Descripcion: </label> <textarea name="descripcion" required="required" rows="4" cols="50" maxlength="500"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDescripcion()%>"></textarea>
 				</p>
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos"
+					<label>Puntos: </label><input type="number" name="puntos" max="10000"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 				</p>
 				<p>

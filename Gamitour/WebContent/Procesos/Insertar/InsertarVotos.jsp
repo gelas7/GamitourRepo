@@ -60,7 +60,7 @@
 				</p>
 
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos" required="required">
+					<label>Puntos: </label><input type="number" name="puntos" required="required" max="10">
 				</p>
 
 				<p>

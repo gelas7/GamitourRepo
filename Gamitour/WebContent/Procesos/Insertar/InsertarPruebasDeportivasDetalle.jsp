@@ -52,7 +52,7 @@
 
 				<p>
 					<label>Nombre: </label><input type="text" name="nombre"
-						required="required">
+						required="required" maxlength="50">
 				</p>
 				<p>
 					<label>Fecha de Inicio: </label><input type="date"
@@ -63,11 +63,11 @@
 						required="required">
 				</p>
 				<p>
-					<label>Explicación: </label> <textarea name="explicacion" required="required" rows="4" cols="50"></textarea>
+					<label>Explicación: </label> <textarea name="explicacion" required="required" rows="4" cols="50" maxlength="500"></textarea>
 				</p>
 				<p>
 					<label>Puntos: </label><input type="number" name="puntos"
-						required="required">
+						required="required" max="10000">
 				</p>
 				<p>
 					<input type="text" name="parada"

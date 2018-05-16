@@ -54,17 +54,17 @@
 					name="id">
 
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre"
+					<label>Nombre: </label><input type="text" name="nombre" maxlength="50"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
 					<label>Numero de parada: </label><input type="number"
-						name="numeroParada"
+						name="numeroParada" max="1000"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
 				</p>
 				<p>
 					<label>Ubicación: </label><input type="text" name="ubicacion"
-						id="search"
+						id="search" maxlength="50"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
 					<button type="button" id="btnOK">Obtener coordenadas</button>
 				</p>
@@ -77,15 +77,15 @@
 						name="longitud" readonly>
 				</p>
 				<p>
-					<label>Historia: </label> <textarea name="historia" required="required" rows="4" cols="50"
+					<label>Historia: </label> <textarea name="historia" required="required" rows="4" cols="50" maxlength="500"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>"></textarea>
 				</p>
 				<p>
-					<label>Anecdotario: </label><textarea name="anecdotario" required="required" rows="4" cols="50"
+					<label>Anecdotario: </label><textarea name="anecdotario" required="required" rows="4" cols="50" maxlength="500"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAnecdotario()%>"></textarea>
 				</p>
 				<p>
-					<label>Gastronomia: </label><textarea name="gastronomia" required="required" rows="4" cols="50"
+					<label>Gastronomia: </label><textarea name="gastronomia" required="required" rows="4" cols="50" maxlength="500"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getGastronomia()%>"></textarea>
 				</p>
 				<p>

@@ -45,16 +45,16 @@
 
 				<h2>Insertar Prueba Cultural</h2>
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre" required="required">
+					<label>Nombre: </label><input type="text" name="nombre" required="required" maxlength="50">
 				</p>
 				<p>
-					<label>Pregunta: </label><textarea name="pregunta" required="required" rows="4" cols="50"></textarea>
+					<label>Pregunta: </label><textarea name="pregunta" required="required" rows="4" cols="50" maxlength="500"></textarea>
 				</p>
 				<p>
-					<label>Respuesta: </label><textarea name="respuesta" required="required" rows="4" cols="50"></textarea>
+					<label>Respuesta: </label><textarea name="respuesta" required="required" rows="4" cols="50" maxlength="500"></textarea>
 				</p>
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos" required="required">
+					<label>Puntos: </label><input type="number" name="puntos" required="required" max="10000">
 				</p>
 				<p>
 					<label>Parada: </label><select name="parada">

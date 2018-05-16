@@ -47,7 +47,7 @@
 
 				<h2>Insertar Prueba Deportiva</h2>
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre" required="required">
+					<label>Nombre: </label><input type="text" name="nombre" required="required" maxlength="50">
 				</p>
 				<p>
 					<label>Fecha de Inicio: </label><input type="date" name="fechaInicio"
@@ -58,10 +58,10 @@
 						required="required">
 				</p>
 				<p>
-					<label>Explicación: </label> <textarea name="explicacion" required="required" rows="4" cols="50"></textarea>
+					<label>Explicación: </label> <textarea name="explicacion" required="required" rows="4" cols="50" maxlength="500"></textarea>
 				</p>
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos" required="required">
+					<label>Puntos: </label><input type="number" name="puntos" required="required" max="10000">
 				</p>
 				<p>
 					<label>Parada: </label><select name="parada">

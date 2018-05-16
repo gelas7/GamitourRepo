@@ -48,19 +48,19 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre"
+					<label>Nombre: </label><input type="text" name="nombre" maxlength="50"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Pregunta: </label> <textarea name="pregunta" required="required" rows="4" cols="50"
+					<label>Pregunta: </label> <textarea name="pregunta" required="required" rows="4" cols="50" maxlength="500"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPregunta()%>"></textarea>
 				</p>
 				<p>
-					<label>Respuesta: </label> <textarea name="respuesta" required="required" rows="4" cols="50"
+					<label>Respuesta: </label> <textarea name="respuesta" required="required" rows="4" cols="50" maxlength="500"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getRespuesta()%>"></textarea>
 				</p>
 				<p>
-					<label>Puntos: </label><input type="text" name="puntos"
+					<label>Puntos: </label><input type="number" name="puntos" max="10000"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 				</p>
 				<p>

@@ -48,11 +48,11 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					<label>Nombre: </label><input type="text" name="nombreN"
+					<label>Nombre: </label><input type="text" name="nombreN" maxlength="50"
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Texto: </label><textarea name="texto" required="required" rows="4" cols="50"
+					<label>Texto: </label><textarea name="texto" required="required" rows="4" cols="50" maxlength="500"
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>"></textarea>
 				</p>
 				<p>

@@ -45,35 +45,35 @@
 				
 				<h2>Insertar Cliente</h2>
 				<p>
-					<label for="nombre">Nombre:</label> <input type="text" name="nombre" required="required">
+					<label for="nombre">Nombre:</label> <input type="text" name="nombre" required="required" maxlength="50">
 				</p>
 				<p>
-					<label for="apellidos">Apellidos:</label> <input type="text" name="apellidos" required="required">
+					<label for="apellidos">Apellidos:</label> <input type="text" name="apellidos" required="required" maxlength="50">
 				</p>
 				<p>
 					<label for="fechanacimiento">Fecha de nacimiento:</label> <input type="date" name="fechanacimiento"
 						required="required">
 				</p>
 				<p>
-					<label for="email">Email:</label> <input type="email" name="email" required="required">
+					<label for="email">Email:</label> <input type="email" name="email" required="required" maxlength="50">
 				</p>
 				<p>
 					<label for="password">Password:</label> <input type="password" name="password"
-						required="required">
+						required="required" maxlength="20">
 				</p>
 				<p>
-					<label for="telefono">Telefono:</label> <input type="tel" name="telefono" required="required">
+					<label for="telefono">Telefono:</label> <input type="tel" name="telefono" required="required" maxlength="10">
 				</p>
 				<p>
-					<label for="direccion">Direccion:</label> <input type="text" name="direccion" required="required">
+					<label for="direccion">Direccion:</label> <input type="text" name="direccion" required="required" maxlength="50">
 				</p>
 				<p>
 					<label for="codigopostal">Codigo Postal:</label> <input type="text" name="codigopostal"
-						required="required">
+						required="required" maxlength="5">
 				</p>
 				<p>
-					<label for="puntosacumulados">Puntos Acumulados:</label> <input type="text" name="puntosacumulados"
-						required="required">
+					<label for="puntosacumulados">Puntos Acumulados:</label> <input type="number" name="puntosacumulados"
+						required="required" max="100000">
 				</p>
 				<p>
 

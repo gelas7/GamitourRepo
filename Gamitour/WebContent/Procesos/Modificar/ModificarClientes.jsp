@@ -50,11 +50,11 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					<label for="nombre">Nombre: </label> <input type="text" name="nombre"
+					<label for="nombre">Nombre: </label> <input type="text" name="nombre" maxlength="50"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-				<label for="apellido">Apellido: </label> <input type="text" name="apellidos"
+				<label for="apellido">Apellido: </label> <input type="text" name="apellidos" maxlength="50"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getApellidos()%>">
 				</p>
 				<p>
@@ -62,27 +62,27 @@
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechanacimiento()%>">
 				</p>
 				<p>
-				<label for="email">Email: </label> <input type="text" name="email"
+				<label for="email">Email: </label> <input type="text" name="email" maxlength="50"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getEmail()%>">
 				</p>
 				<p>
-					<label for="password">Contraseña: </label> <input type="password" name="password"
+					<label for="password">Contraseña: </label> <input type="password" name="password" maxlength="20"
 						placeholder="********">
 				</p>
 				<p>
-					<label for="telefono">Telefono: </label><input type="text" name="telefono"
+					<label for="telefono">Telefono: </label><input type="tel" name="telefono" maxlength="10"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTelefono()%>">
 				</p>
 				<p>
-					<label for="direccion">Direccion: </label> <input type="text" name="direccion"
+					<label for="direccion">Direccion: </label> <input type="text" name="direccion" maxlength="50"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDireccion()%>">
 				</p>
 				<p>
-				<label for="codigopostal">CP: </label> <input type="text" name="codigopostal"
+				<label for="codigopostal">CP: </label> <input type="text" name="codigopostal" maxlength="5"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCodigopostal()%>">
 				</p>
 				<p>
-				<label for="puntosacumulados">Putos acumulados: </label> <input type="text" name="puntosacumulados"
+				<label for="puntosacumulados">Putos acumulados: </label> <input type="number" name="puntosacumulados" max="100000"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
 				</p>
 				<p>
