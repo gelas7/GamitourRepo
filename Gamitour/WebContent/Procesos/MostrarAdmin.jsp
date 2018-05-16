@@ -240,7 +240,6 @@
 						<thead>
 							<tr>
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
-								<th>Texto <i id="icono" class="fas fa-sort"></i></th>
 								<th>Alta <i id="icono" class="fas fa-sort"></i></th>
 								<th>Caducidad <i id="icono" class="fas fa-sort"></i></th>
 								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
@@ -250,7 +249,6 @@
 							<c:forEach items="${listaNoticias}" var="noticia">
 								<tr>
 									<td>${noticia.nombre}</td>
-									<td>${noticia.texto}</td>
 									<td>${noticia.fechaalta}</td>
 									<td>${noticia.fechacaducidad}</td>
 									<td><img style="width: 40px; height: 40px;"
@@ -283,8 +281,6 @@
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
 								<th>Número <i id="icono" class="fas fa-sort"></i></th>
 								<th>Ubicación <i id="icono" class="fas fa-sort"></i></th>
-
-								<th>Gastronomia <i id="icono" class="fas fa-sort"></i></th>
 								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
 								<th>Video <i id="icono" class="fas fa-sort"></i></th>
 								<th>Itinerario <i id="icono" class="fas fa-sort"></i></th>
@@ -296,8 +292,6 @@
 									<td>${parada.nombre}</td>
 									<td>${parada.numeroParada}</td>
 									<td>${parada.ubicacion}</td>
-
-									<td>${parada.gastronomia}</td>
 									<td><img style="width: 40px; height: 40px;"
 										src=" <%=url%>/paradas/${parada.imagen}"></img></td>
 									<td><img style="width: 40px; height: 40px;"
@@ -335,8 +329,8 @@
 						<thead>
 							<tr>
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
-								<th>Pregunta <i id="icono" class="fas fa-sort"></i></th>
-								<th>Respuesta <i id="icono" class="fas fa-sort"></i></th>
+<!-- 								<th>Pregunta <i id="icono" class="fas fa-sort"></i></th> -->
+<!-- 								<th>Respuesta <i id="icono" class="fas fa-sort"></i></th> -->
 								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 								<th>Parada <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
@@ -345,8 +339,8 @@
 							<c:forEach items="${listaPruebasCulturales}" var="pC">
 								<tr>
 									<td>${pC.nombre}</td>
-									<td>${pC.pregunta}</td>
-									<td>${pC.respuesta}</td>
+<%-- 									<td>${pC.pregunta}</td> --%>
+<%-- 									<td>${pC.respuesta}</td> --%>
 									<td>${pC.puntos}</td>
 									<td>${pC.parada.getNombre()}</td>
 									<td><a class="eliminar"
@@ -380,7 +374,7 @@
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
 								<th>Inicio <i id="icono" class="fas fa-sort"></i></th>
 								<th>Fin <i id="icono" class="fas fa-sort"></i></th>
-								<th>Explicación <i id="icono" class="fas fa-sort"></i></th>
+<!-- 								<th>Explicación <i id="icono" class="fas fa-sort"></i></th> -->
 								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 								<th>Parada <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
@@ -391,7 +385,7 @@
 									<td>${pD.nombre}</td>
 									<td>${pD.fechainicio}</td>
 									<td>${pD.fechafin}</td>
-									<td>${pD.explicacion}</td>
+<%-- 									<td>${pD.explicacion}</td> --%>
 									<td>${pD.puntos}</td>
 									<td>${pD.parada.getNombre()}</td>
 									<td><a class="eliminar"
@@ -424,7 +418,6 @@
 							<tr>
 								<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
-								<th>Descripcion <i id="icono" class="fas fa-sort"></i></th>
 								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
 								<th>Activacion <i id="icono" class="fas fa-sort"></i></th>
 								<th>Consumo <i id="icono" class="fas fa-sort"></i></th>
@@ -436,7 +429,6 @@
 								<tr>
 									<td>${premio.cliente.getNombre()}</td>
 									<td>${premio.nombre}</td>
-									<td>${premio.descripcion}</td>
 									<td><img style="width: 40px; height: 40px;"
 										src=" <%=url%>/premios/${premio.imagen}"></img></td>
 									<td>${premio.fechaactivacion}</td>
@@ -471,7 +463,6 @@
 							<tr>
 								<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
 								<th>Fecha <i id="icono" class="fas fa-sort"></i></th>
-								<th>Comentario <i id="icono" class="fas fa-sort"></i></th>
 								<th>Imagen <i id="icono" class="fas fa-sort"></i></th>
 								<th>Video <i id="icono" class="fas fa-sort"></i></th>
 								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
@@ -483,7 +474,6 @@
 								<tr>
 									<td>${m.cliente.getNombre()}</td>
 									<td>${m.fecha}</td>
-									<td>${m.comentario}</td>
 									<td><img style="width: 40px; height: 40px;"
 										src=" <%=url%>/multimedias/${m.imagen}"></img></td>
 									<td><img style="width: 40px; height: 40px;"
@@ -522,7 +512,6 @@
 						<thead>
 							<tr>
 								<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
-								<th>Comentario <i id="icono" class="fas fa-sort"></i></th>
 								<th>Multimedia <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
 						</thead>
@@ -530,7 +519,6 @@
 							<c:forEach items="${listaComentarios}" var="com">
 								<tr>
 									<td>${com.cliente.getNombre()}</td>
-									<td>${com.texto}</td>
 									<td>${com.multimedia.getIdmultimedia()}</td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar?')"
