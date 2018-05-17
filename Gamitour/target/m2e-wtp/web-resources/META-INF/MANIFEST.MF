@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
+Built-By: migualva
+Build-Jdk: 1.8.0_60
+=======
 Built-By: ADELBUST
 Build-Jdk: 1.8.0_131
+>>>>>>> f2ed2551de03c76e0bee89f56283383faec08a6c
 Created-By: Maven Integration for Eclipse
 

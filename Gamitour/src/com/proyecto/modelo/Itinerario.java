@@ -19,14 +19,14 @@ public class Itinerario implements java.io.Serializable{
 	private Integer iditinerario;
 	private String nombre;
 	private String categoria;
-	private String duracion;
+	private Integer duracion;
 	private String ubicacion;
 	private Set<Parada> paradas = new HashSet<Parada>(0);
 
 	public Itinerario() {
 	}
 
-	public Itinerario(String nombre, String categoria, String duracion, String ubicacion, Set<Parada> paradas) {
+	public Itinerario(String nombre, String categoria, Integer duracion, String ubicacion, Set<Parada> paradas) {
 		this.nombre = nombre;
 		this.categoria = categoria;
 		this.duracion = duracion;
@@ -34,7 +34,7 @@ public class Itinerario implements java.io.Serializable{
 		this.paradas = paradas;
 	}
 
-	public Itinerario(String nombre, String categoria, String duracion, String ubicacion) {
+	public Itinerario(String nombre, String categoria, Integer duracion, String ubicacion) {
 		this.nombre = nombre;
 		this.categoria = categoria;
 		this.duracion = duracion;
@@ -77,12 +77,12 @@ public class Itinerario implements java.io.Serializable{
 		this.categoria = categoria;
 	}
 
-	@Column(name = "duracion", length = 15)
-	public String getDuracion() {
+	@Column(name = "duracion", length = 4)
+	public Integer getDuracion() {
 		return this.duracion;
 	}
 
-	public void setDuracion(String duracion) {
+	public void setDuracion(Integer duracion) {
 		this.duracion = duracion;
 	}
 

@@ -59,8 +59,8 @@
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCategoria()%>">
 				</p>
 				<p>
-					<label>Duracion: </label><input type="text" name="duracion"
-						maxlength="20"
+					<label>Nº de horas: </label><input type="number" name="duracion"
+						max="250"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDuracion()%>">
 				</p>
 				<p>
