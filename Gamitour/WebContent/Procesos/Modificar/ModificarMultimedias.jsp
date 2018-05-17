@@ -60,7 +60,7 @@
 				</p>
 
 				<p>
-					<label>Comentario: </label> <textarea name="comentario" required="required" rows="4" cols="50" maxlength="500"
+					<label>Comentario: </label> <textarea name="comentario" rows="4" cols="50" maxlength="500"
 						placeholder="<%=sm.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getComentario()%>"></textarea>
 				</p>
 				<p>

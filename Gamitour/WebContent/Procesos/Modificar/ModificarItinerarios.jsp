@@ -64,8 +64,7 @@
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDuracion()%>">
 				</p>
 				<p>
-					<label for="ubicacion">Ubicacion:</label> <select name="ubicacion"
-						required="required">
+					<label for="ubicacion">Ubicacion:</label> <select name="ubicacion">
 						<option value="" selected disabled>Seleccione una población</option>
 						<option value="Gijón">Gijón</option>
 						<option value="Oviedo">Oviedo</option>
