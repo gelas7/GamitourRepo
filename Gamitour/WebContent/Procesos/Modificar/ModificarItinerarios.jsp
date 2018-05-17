@@ -49,20 +49,34 @@
 					name="id">
 
 				<p>
-					<label>Nombre: </label> <input type="text" name="nombreN" maxlength="50"
+					<label>Nombre: </label> <input type="text" name="nombreN"
+						maxlength="50"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Categoria: </label> <input type="text" name="categoria" maxlength="50"
+					<label>Categoria: </label> <input type="text" name="categoria"
+						maxlength="50"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCategoria()%>">
 				</p>
 				<p>
-					<label>Duracion: </label><input type="text" name="duracion" maxlength="20"
+					<label>Duracion: </label><input type="text" name="duracion"
+						maxlength="20"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDuracion()%>">
 				</p>
 				<p>
-					<label>Ubicacion: </label><input type="text" name="ubicacion" maxlength="50"
-						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
+					<label for="ubicacion">Ubicacion:</label> <select name="ubicacion"
+						required="required">
+						<option value="" selected disabled>Seleccione una población</option>
+						<option value="Gijón">Gijón</option>
+						<option value="Oviedo">Oviedo</option>
+						<option value="Avilés">Avilés</option>
+						<option value="Siero">Siero</option>
+						<option value="Langreo">Langreo</option>
+						<option value="Mieres">Mieres</option>
+						<option value="Castrillón">Castrillón</option>
+						<option value="Villaviciosa">Villaviciosa</option>
+						<option value="Llanes">Llanes</option>
+					</select>
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">

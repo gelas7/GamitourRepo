@@ -37,20 +37,32 @@
 			<form action="../../InsertarItinerarios.do" method="get">
 				<h2>Insertar Itinerario</h2>
 				<p>
-					<label for="nombre">Nombre: <input type="text" name="nombre"
-						required="required" maxlength="50"></label>
+					<label for="nombre">Nombre: <input type="text"
+						name="nombre" required="required" maxlength="50"></label>
 				</p>
 				<p>
-					<label for="categoria">Categoria: <input type="text" name="categoria"
-						required="required" maxlength="50"></label>
+					<label for="categoria">Categoria: <input type="text"
+						name="categoria" required="required" maxlength="50"></label>
 				</p>
 				<p>
-					<label for="duracion">Duracion: <input type="text" name="duracion"
-						required="required" maxlength="20"></label>
+					<label for="duracion">Duracion: <input type="text"
+						name="duracion" required="required" maxlength="20"></label>
 				</p>
 				<p>
-					<label for="ubicacion">Ubicacion: <input type="text" name="ubicacion"
-						required="required" maxlength="50"></label>
+					<label for="ubicacion">Ubicacion:</label> <select name="ubicacion"
+						required="required">
+						<option value="" selected disabled>Seleccione una
+							población</option>
+						<option value="Gijón">Gijón</option>
+						<option value="Oviedo">Oviedo</option>
+						<option value="Avilés">Avilés</option>
+						<option value="Siero">Siero</option>
+						<option value="Langreo">Langreo</option>
+						<option value="Mieres">Mieres</option>
+						<option value="Castrillón">Castrillón</option>
+						<option value="Villaviciosa">Villaviciosa</option>
+						<option value="Llanes">Llanes</option>
+					</select>
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">
