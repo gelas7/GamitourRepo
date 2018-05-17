@@ -23,7 +23,8 @@ public class ModificarPremiosAccion extends Accion {
 
 		ServicePremiosImp sp = new ServicePremiosImp();
 		ServiceClientesImp sc = new ServiceClientesImp();
-		
+		response.setContentType("text/html;charset=UTF-8");
+	
 		String id = request.getParameter("id");
 		String nombre = request.getParameter("nombre");
 		String descripcion = request.getParameter("descripcion");

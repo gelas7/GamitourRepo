@@ -35,6 +35,9 @@ public class InsertarClientesAccion extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		String nombre = request.getParameter("nombre");
 		String apellidos = request.getParameter("apellidos");
 		String fechanacimiento = request.getParameter("fechanacimiento");
@@ -51,8 +54,7 @@ public class InsertarClientesAccion extends HttpServlet {
 		String avatarName = "";
 		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
 		Date fechaHoy = new Date();
-        String hoy = dt.format(fechaHoy);
-
+		String hoy = dt.format(fechaHoy);
 
 		try {
 			if (fechanacimiento != "")
@@ -61,14 +63,12 @@ public class InsertarClientesAccion extends HttpServlet {
 			System.out.println("Fallo al convertir fechas. " + e.getMessage());
 		}
 
-
 		try {
-			avatarName = hoy + "-"
-					+ Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
+			avatarName = hoy + "-" + Paths.get(avatar.getSubmittedFileName()).getFileName().toString();
 			imagenStream = avatar.getInputStream();
 			File imagenSalida = new File(directorio + avatarName);
 			FileUtils.copyInputStreamToFile(imagenStream, imagenSalida);
-			
+
 		} catch (Exception e) {
 			System.out.println("Fallo al gestionar ficheros. " + e.getMessage());
 		} finally {

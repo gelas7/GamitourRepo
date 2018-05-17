@@ -15,20 +15,21 @@ public class InsertarComentariosAccion extends Accion {
 
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
+		response.setContentType("text/html;charset=UTF-8");
 
 		String cliente = request.getParameter("cliente");
 		String multimedia = request.getParameter("multimedia");
 		String texto = request.getParameter("texto");
-	
+
 		ServiceComentariosImp scom = new ServiceComentariosImp();
 		ServiceClientesImp scli = new ServiceClientesImp();
 		ServiceMultimediasImp sm = new ServiceMultimediasImp();
-		
+
 		Cliente cli = scli.buscarPorClave(Integer.parseInt(cliente));
 		Multimedia multi = sm.buscarPorClave(Integer.parseInt(multimedia));
 
-		Comentario c = new Comentario(cli, multi,texto);
-		scom.insertar(c); 
+		Comentario c = new Comentario(cli, multi, texto);
+		scom.insertar(c);
 
 		return "MostrarAdmin.do?div=comentarios";
 	}

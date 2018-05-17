@@ -14,7 +14,8 @@ public class ModificarRolesAccion extends Accion {
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
-
+		response.setContentType("text/html;charset=UTF-8");
+		
 		ServiceRolesImp sr = new ServiceRolesImp();
 		String id = request.getParameter("id"); // Recupero el id original
 		String nombreN = request.getParameter("nombreN");

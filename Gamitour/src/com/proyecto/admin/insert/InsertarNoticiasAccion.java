@@ -34,7 +34,8 @@ public class InsertarNoticiasAccion extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		String nombre = request.getParameter("nombre");
 		String texto = request.getParameter("texto");
 		String fecha = request.getParameter("fechaalta");

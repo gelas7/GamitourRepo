@@ -61,7 +61,7 @@
 						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>">
 				</p>
 				<p>
-					<label>Explicación:</label> <textarea name="explicacion" required="required" rows="4" cols="50" maxlength="500"
+					<label>Explicación:</label> <textarea name="explicacion" rows="4" cols="50" maxlength="500"
 						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getExplicacion()%>"></textarea>
 				</p>
 				<p>

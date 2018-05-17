@@ -23,7 +23,8 @@ public class InsertarPruebasDeportivasAccion extends Accion {
 		ServicePruebasDeportivasImp spd = new ServicePruebasDeportivasImp();
 		
 		ServiceParadasImp sp = new ServiceParadasImp();
-
+		response.setContentType("text/html;charset=UTF-8");
+	
 		String nombre = request.getParameter("nombre");
 		String fechaInicio = request.getParameter("fechaInicio");
 		String fechaFin = request.getParameter("fechaFin");

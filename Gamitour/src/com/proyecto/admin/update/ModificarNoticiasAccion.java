@@ -17,7 +17,8 @@ public class ModificarNoticiasAccion extends Accion {
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
-
+		response.setContentType("text/html;charset=UTF-8");
+	
 		String id = request.getParameter("id");
 		String nombreN = request.getParameter("nombreN");
 		String texto = request.getParameter("texto");

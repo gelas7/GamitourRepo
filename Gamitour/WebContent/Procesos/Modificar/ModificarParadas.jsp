@@ -77,15 +77,15 @@
 						name="longitud" readonly>
 				</p>
 				<p>
-					<label>Historia: </label> <textarea name="historia" required="required" rows="4" cols="50" maxlength="500"
+					<label>Historia: </label> <textarea name="historia"  rows="4" cols="50" maxlength="500"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>"></textarea>
 				</p>
 				<p>
-					<label>Anecdotario: </label><textarea name="anecdotario" required="required" rows="4" cols="50" maxlength="500"
+					<label>Anecdotario: </label><textarea name="anecdotario" rows="4" cols="50" maxlength="500"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAnecdotario()%>"></textarea>
 				</p>
 				<p>
-					<label>Gastronomia: </label><textarea name="gastronomia" required="required" rows="4" cols="50" maxlength="500"
+					<label>Gastronomia: </label><textarea name="gastronomia" rows="4" cols="50" maxlength="500"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getGastronomia()%>"></textarea>
 				</p>
 				<p>

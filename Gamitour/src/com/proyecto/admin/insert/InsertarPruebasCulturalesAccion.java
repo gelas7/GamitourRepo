@@ -20,7 +20,8 @@ public class InsertarPruebasCulturalesAccion extends Accion {
 		ServicePruebasCulturalesImp spc = new ServicePruebasCulturalesImp();
 		
 		ServiceParadasImp sp = new ServiceParadasImp();
-
+		response.setContentType("text/html;charset=UTF-8");
+		
 		String nombre = request.getParameter("nombre");
 		String pregunta = request.getParameter("pregunta");
 		String respuesta = request.getParameter("respuesta");

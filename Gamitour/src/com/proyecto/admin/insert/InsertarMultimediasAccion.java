@@ -35,7 +35,8 @@ public class InsertarMultimediasAccion extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		String idCliente = request.getParameter("cliente");
 		String comentario = request.getParameter("comentario");
 		String idPd = request.getParameter("pruebaD");

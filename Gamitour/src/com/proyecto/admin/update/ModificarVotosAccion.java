@@ -15,6 +15,7 @@ public class ModificarVotosAccion extends Accion {
 
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
+		response.setContentType("text/html;charset=UTF-8");
 
 		String id = request.getParameter("id");
 		String cliente = request.getParameter("cliente");

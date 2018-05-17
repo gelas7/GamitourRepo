@@ -17,7 +17,8 @@ public class ModificarParadasAccion extends Accion {
 	ServiceItinerariosImp si = new ServiceItinerariosImp();
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
-
+		response.setContentType("text/html;charset=UTF-8");
+		
 		String id = request.getParameter("id");
 		String nombre = request.getParameter("nombre");
 		String numeroParada = request.getParameter("numeroParada");

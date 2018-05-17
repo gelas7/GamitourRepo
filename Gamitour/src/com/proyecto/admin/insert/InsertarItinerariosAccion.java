@@ -19,6 +19,9 @@ public class InsertarItinerariosAccion extends Accion {
 
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
+
+		response.setContentType("text/html;charset=UTF-8");
+
 		String nombre = request.getParameter("nombre");
 		String categoria = request.getParameter("categoria");
 		String duracion = request.getParameter("duracion");

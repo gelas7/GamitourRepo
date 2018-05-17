@@ -52,11 +52,11 @@
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Pregunta: </label> <textarea name="pregunta" required="required" rows="4" cols="50" maxlength="500"
+					<label>Pregunta: </label> <textarea name="pregunta"  rows="4" cols="50" maxlength="500"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPregunta()%>"></textarea>
 				</p>
 				<p>
-					<label>Respuesta: </label> <textarea name="respuesta" required="required" rows="4" cols="50" maxlength="500"
+					<label>Respuesta: </label> <textarea name="respuesta"  rows="4" cols="50" maxlength="500"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getRespuesta()%>"></textarea>
 				</p>
 				<p>

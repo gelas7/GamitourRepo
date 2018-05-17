@@ -52,7 +52,7 @@
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Texto: </label><textarea name="texto" required="required" rows="4" cols="50" maxlength="500"
+					<label>Texto: </label><textarea name="texto"  rows="4" cols="50" maxlength="500"
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>"></textarea>
 				</p>
 				<p>
