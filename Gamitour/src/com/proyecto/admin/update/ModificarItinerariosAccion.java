@@ -34,7 +34,7 @@ public class ModificarItinerariosAccion extends Accion {
 		if (categoria.length()>0)
 			i.setCategoria(categoria);
 		if (duracion.length()>0)
-			i.setDuracion(duracion);
+			i.setDuracion(Integer.parseInt(duracion));
 		if (ubicacion.length()>0)
 			i.setUbicacion(ubicacion);
 

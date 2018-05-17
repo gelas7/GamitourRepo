@@ -27,7 +27,7 @@ public class InsertarItinerariosAccion extends Accion {
 		String duracion = request.getParameter("duracion");
 		String ubicacion = request.getParameter("ubicacion");
 
-		si.insertar(new Itinerario(nombre, categoria, duracion, ubicacion));
+		si.insertar(new Itinerario(nombre, categoria, Integer.parseInt(duracion), ubicacion));
 
 		return "MostrarAdmin.do?div=itinerarios";
 	}
