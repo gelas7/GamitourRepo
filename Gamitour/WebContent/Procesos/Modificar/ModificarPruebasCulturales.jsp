@@ -15,7 +15,7 @@
 
 <body>
 	<div class="flex">
-	<div class="menu">
+		<div class="menu">
 			<ul>
 				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
@@ -47,23 +47,28 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre" maxlength="50"
+					<label>Nombre: </label><input type="text" name="nombre"
+						maxlength="50"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Pregunta: </label> <textarea name="pregunta"  rows="4" cols="50" maxlength="500"
+					<label>Pregunta: </label>
+					<textarea name="pregunta" rows="4" cols="50" maxlength="500"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPregunta()%>"></textarea>
 				</p>
 				<p>
-					<label>Respuesta: </label> <textarea name="respuesta"  rows="4" cols="50" maxlength="500"
+					<label>Respuesta: </label>
+					<textarea name="respuesta" rows="4" cols="50" maxlength="500"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getRespuesta()%>"></textarea>
 				</p>
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos" max="10000"
+					<label>Puntos: </label><input type="number" name="puntos"
+						max="10000"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntos()%>">
 				</p>
 				<p>
 					<label>Parada: </label><select name="parada">
+						<option value="">Seleccione una parada</option>
 						<c:forEach items="${listaParadas}" var="parada">
 							<option value="${parada.idparada}">${parada.nombre}</option>
 						</c:forEach>

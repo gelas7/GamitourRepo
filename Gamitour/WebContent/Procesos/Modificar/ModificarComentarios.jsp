@@ -17,7 +17,7 @@
 <body>
 	<div class="flex">
 
-	<div class="menu">
+		<div class="menu">
 			<ul>
 				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
@@ -50,6 +50,7 @@
 
 				<p>
 					<label>Cliente: </label> <select name="cliente">
+						<option value="">Seleccione un cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
@@ -58,6 +59,7 @@
 
 				<p>
 					<label>ID Multimedia: </label> <select name="multimedia">
+						<option value="">Seleccione un multimedia</option>
 						<c:forEach items="${listaMultimedias}" var="multimedia">
 							<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
 						</c:forEach>
@@ -65,7 +67,9 @@
 				</p>
 
 				<p>
-					<label> Texto: </label> <textarea name="texto" required="required" rows="4" cols="50" maxlength="500"
+					<label> Texto: </label>
+					<textarea name="texto" required="required" rows="4" cols="50"
+						maxlength="500"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTexto()%>"></textarea>
 				</p>
 

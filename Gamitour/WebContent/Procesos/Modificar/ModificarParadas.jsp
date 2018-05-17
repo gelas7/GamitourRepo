@@ -69,11 +69,11 @@
 				</p>
 				<p>
 					<label>Latitud: </label><input type="text" id="lat" name="latitud"
-						readonly>
+						readonly placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLatitud()%>">
 				</p>
 				<p>
 					<label>Longitud: </label><input type="text" id="lng"
-						name="longitud" readonly>
+						name="longitud" readonly placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLongitud()%>">
 				</p>
 				<p>
 					<label>Historia: </label> <textarea name="historia"  rows="4" cols="50" maxlength="500"
