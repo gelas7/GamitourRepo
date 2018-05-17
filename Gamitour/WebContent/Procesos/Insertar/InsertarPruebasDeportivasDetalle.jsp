@@ -63,7 +63,7 @@
 						required="required">
 				</p>
 				<p>
-					<label>Explicación: </label> <textarea name="explicacion" required="required" rows="4" cols="50" maxlength="500"></textarea>
+					<label>Explicación: </label> <textarea name="explicacion" required="required" rows="4" cols="50" ></textarea>
 				</p>
 				<p>
 					<label>Puntos: </label><input type="number" name="puntos"
