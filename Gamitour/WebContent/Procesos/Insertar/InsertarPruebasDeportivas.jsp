@@ -18,7 +18,7 @@
 <body>
 	<div class="flex">
 
-	<div class="menu">
+		<div class="menu">
 			<ul>
 				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
@@ -68,6 +68,8 @@
 				</p>
 				<p>
 					<label>Parada: </label><select name="parada">
+						<option value="" selected disabled>Seleccione una
+							parada</option>
 						<c:forEach items="${listaParadas}" var="parada">
 							<option value="${parada.idparada}">${parada.nombre}</option>
 						</c:forEach>

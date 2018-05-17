@@ -73,7 +73,7 @@
 				</p>
 				<p>
 					<label>Parada:</label> <select name="parada">
-						<option value="">Seleccione una parada</option>
+						<option value=""  selected disabled>Seleccione una parada</option>
 						<c:forEach items="${listaParadas}" var="parada">
 							<option value="${parada.idparada}">${parada.nombre}</option>
 						</c:forEach>

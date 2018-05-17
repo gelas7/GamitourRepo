@@ -86,7 +86,7 @@
 				</p>
 				<p>
 				<label for="rol">Rol: </label> <select name="rol">
-						<option value="">Seleccione un rol</option>
+						<option value="" selected disabled>Seleccione un rol</option>
 						<c:forEach items="${listaRoles}" var="rol">
 							<option value="${rol.idrol}">${rol.nombre}</option>
 						</c:forEach>

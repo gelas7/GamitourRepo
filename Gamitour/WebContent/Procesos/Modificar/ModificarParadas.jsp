@@ -89,7 +89,7 @@
 				</p>
 				<p>
 					<label>Itinerario: </label><select name="itinerario">
-						<option value="">Seleccione un itinerario</option>
+						<option value=""  selected disabled>Seleccione un itinerario</option>
 						<c:forEach items="${listaItinerarios}" var="itinerario">
 							<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
 						</c:forEach>

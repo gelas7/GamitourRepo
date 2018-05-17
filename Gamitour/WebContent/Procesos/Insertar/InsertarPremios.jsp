@@ -47,33 +47,41 @@
 				<h2>Insertar Premio</h2>
 				<p>
 					<label>Cliente: </label><select name="cliente">
+						<option value="" selected disabled>Seleccione un
+							cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre" required="required" maxlength="50">
+					<label>Nombre: </label><input type="text" name="nombre"
+						required="required" maxlength="50">
 				</p>
 				<p>
-					<label>Descripcion: </label><textarea name="descripcion" required="required" rows="4" cols="50" maxlength="500"></textarea>
+					<label>Descripcion: </label>
+					<textarea name="descripcion" required="required" rows="4" cols="50"
+						maxlength="500"></textarea>
 				</p>
 				<p>
-					<label>Ubicación: </label><input type="text" name="ubicacion" required="required" maxlength="50">
+					<label>Ubicación: </label><input type="text" name="ubicacion"
+						required="required" maxlength="50">
 				</p>
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos" required="required" max="10000">
+					<label>Puntos: </label><input type="number" name="puntos"
+						required="required" max="10000">
 				</p>
 				<p>
-					<label>Imagen: </label><input type="file" name="imagen" required="required">
-				</p>
-				<p>
-					<label>Fecha de activacion: </label><input type="date" name="fechaactivacion"
+					<label>Imagen: </label><input type="file" name="imagen"
 						required="required">
 				</p>
 				<p>
-					<label>Fecha de consumo: </label><input type="date" name="fechaconsumo"
-						required="required">
+					<label>Fecha de activacion: </label><input type="date"
+						name="fechaactivacion" required="required">
+				</p>
+				<p>
+					<label>Fecha de consumo: </label><input type="date"
+						name="fechaconsumo" required="required">
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">

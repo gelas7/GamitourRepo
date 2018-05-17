@@ -70,7 +70,7 @@
 				</p>
 				<p>
 					<label>Cliente: </label><select name="cliente">
-						<option value="">Seleccione un cliente</option>
+						<option value=""  selected disabled>Seleccione un cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>

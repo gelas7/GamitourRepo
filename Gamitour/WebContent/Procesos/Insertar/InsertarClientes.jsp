@@ -17,7 +17,7 @@
 <body>
 	<div class="flex">
 
-	<div class="menu">
+		<div class="menu">
 			<ul>
 				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
@@ -42,49 +42,57 @@
 			</div>
 			<form action="../../InsertarClientesAccion" method="post"
 				enctype="multipart/form-data">
-				
+
 				<h2>Insertar Cliente</h2>
 				<p>
-					<label for="nombre">Nombre:</label> <input type="text" name="nombre" required="required" maxlength="50">
+					<label for="nombre">Nombre:</label> <input type="text"
+						name="nombre" required="required" maxlength="50">
 				</p>
 				<p>
-					<label for="apellidos">Apellidos:</label> <input type="text" name="apellidos" required="required" maxlength="50">
+					<label for="apellidos">Apellidos:</label> <input type="text"
+						name="apellidos" required="required" maxlength="50">
 				</p>
 				<p>
-					<label for="fechanacimiento">Fecha de nacimiento:</label> <input type="date" name="fechanacimiento"
-						required="required">
+					<label for="fechanacimiento">Fecha de nacimiento:</label> <input
+						type="date" name="fechanacimiento" required="required">
 				</p>
 				<p>
-					<label for="email">Email:</label> <input type="email" name="email" required="required" maxlength="50">
+					<label for="email">Email:</label> <input type="email" name="email"
+						required="required" maxlength="50">
 				</p>
 				<p>
-					<label for="password">Password:</label> <input type="password" name="password"
-						required="required" maxlength="20">
+					<label for="password">Password:</label> <input type="password"
+						name="password" required="required" maxlength="20">
 				</p>
 				<p>
-					<label for="telefono">Telefono:</label> <input type="tel" name="telefono" required="required" maxlength="10">
+					<label for="telefono">Telefono:</label> <input type="tel"
+						name="telefono" required="required" maxlength="10">
 				</p>
 				<p>
-					<label for="direccion">Direccion:</label> <input type="text" name="direccion" required="required" maxlength="50">
+					<label for="direccion">Direccion:</label> <input type="text"
+						name="direccion" required="required" maxlength="50">
 				</p>
 				<p>
-					<label for="codigopostal">Codigo Postal:</label> <input type="text" name="codigopostal"
-						required="required" maxlength="5">
+					<label for="codigopostal">Codigo Postal:</label> <input type="text"
+						name="codigopostal" required="required" maxlength="5">
 				</p>
 				<p>
-					<label for="puntosacumulados">Puntos Acumulados:</label> <input type="number" name="puntosacumulados"
-						required="required" max="100000">
+					<label for="puntosacumulados">Puntos Acumulados:</label> <input
+						type="number" name="puntosacumulados" required="required"
+						max="100000">
 				</p>
 				<p>
 
 					<label for="rol">Rol:</label> <select name="rol">
+						<option value="" selected disabled>Seleccione un rol</option>
 						<c:forEach items="${listaRoles}" var="rol">
 							<option value="${rol.idrol}">${rol.nombre}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					<label for="avatar">Avatar:</label> <input type="file" name="avatar" required="required">
+					<label for="avatar">Avatar:</label> <input type="file"
+						name="avatar" required="required">
 				</p>
 
 				<p>

@@ -18,7 +18,7 @@
 <body>
 	<div class="flex">
 
-	<div class="menu">
+		<div class="menu">
 			<ul>
 				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
@@ -46,6 +46,8 @@
 				<h2>Insertar Voto</h2>
 				<p>
 					<label>Cliente: </label><select name="cliente">
+						<option value="" selected disabled>Seleccione un
+							cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
@@ -53,6 +55,8 @@
 				</p>
 				<p>
 					<label>Multimedia: </label><select name="multimedia">
+						<option value="" selected disabled>Seleccione un
+							multimedia</option>
 						<c:forEach items="${listaMultimedias}" var="multimedia">
 							<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
 						</c:forEach>
@@ -60,7 +64,8 @@
 				</p>
 
 				<p>
-					<label>Puntos: </label><input type="number" name="puntos" required="required" max="10">
+					<label>Puntos: </label><input type="number" name="puntos"
+						required="required" max="10">
 				</p>
 
 				<p>

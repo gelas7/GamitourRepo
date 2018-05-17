@@ -22,7 +22,7 @@
 
 <body>
 	<div class="flex">
-	<div class="menu">
+		<div class="menu">
 			<ul>
 				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
@@ -47,27 +47,35 @@
 			</div>
 			<div id="formMapa">
 				<form action="../../InsertarParadasAccion" method="post"
-				enctype="multipart/form-data">
+					enctype="multipart/form-data">
 					<h2>Insertar Parada</h2>
 					<p>
-						<label>Nombre: </label><input type="text" name="nombre" required="required" maxlength="50">
+						<label>Nombre: </label><input type="text" name="nombre"
+							required="required" maxlength="50">
 					</p>
 					<p>
-						<label>Numero de parada: </label><input type="number" name="numeroParada"
-							required="required" max="1000">
+						<label>Numero de parada: </label><input type="number"
+							name="numeroParada" required="required" max="1000">
 					</p>
 
 					<p>
-						<label>Historia: </label><textarea name="historia" required="required" rows="4" cols="50"  maxlength="500"></textarea>
+						<label>Historia: </label>
+						<textarea name="historia" required="required" rows="4" cols="50"
+							maxlength="500"></textarea>
 					</p>
 					<p>
-						<label>Anecdotario: </label><textarea name="anecdotario" required="required" rows="4" cols="50" maxlength="500"></textarea>
+						<label>Anecdotario: </label>
+						<textarea name="anecdotario" required="required" rows="4"
+							cols="50" maxlength="500"></textarea>
 					</p>
 					<p>
-						<label>Gastronomia: </label><textarea name="gastronomia" required="required" rows="4" cols="50" maxlength="500"></textarea>
+						<label>Gastronomia: </label>
+						<textarea name="gastronomia" required="required" rows="4"
+							cols="50" maxlength="500"></textarea>
 					</p>
 					<p>
 						<label>Itinerario: </label><select name="itinerario">
+							<option value="" selected disabled>Seleccione un itinerario</option>
 							<c:forEach items="${listaItinerarios}" var="itinerario">
 								<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
 							</c:forEach>
@@ -75,24 +83,26 @@
 					</p>
 
 					<p>
-						<label>Imagen: </label><input type="file" name="imagen" >
+						<label>Imagen: </label><input type="file" name="imagen">
 					</p>
-					
+
 					<p>
-						<label>Video: </label><input type="file" name="video" >
+						<label>Video: </label><input type="file" name="video">
 					</p>
-					
+
 					<p>
-						<label>Ubicación: </label><input type="text" id="search" name="ubicacion"
-							required="required" maxlength="50">
+						<label>Ubicación: </label><input type="text" id="search"
+							name="ubicacion" required="required" maxlength="50">
 
 						<button type="button" id="btnOK">Obtener coordenadas</button>
 					</p>
 					<p>
-						<label>Latitud: </label><input type="text" id="lat" name="latitud" readonly>
+						<label>Latitud: </label><input type="text" id="lat" name="latitud"
+							readonly>
 					</p>
 					<p>
-						<label>Longitud: </label><input type="text" id="lng" name="longitud" readonly>
+						<label>Longitud: </label><input type="text" id="lng"
+							name="longitud" readonly>
 					</p>
 					<p>
 						<input type="submit" value="Enviar" id="enviar">

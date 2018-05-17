@@ -52,7 +52,7 @@
 
 				<p>
 					<label> Cliente: </label> <select name="cliente">
-						<option value="">Seleccione un cliente</option>
+						<option value=""  selected disabled>Seleccione un cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
@@ -70,7 +70,7 @@
 				</p>
 				<p>
 					<label> Prueba Deportiva: </label><select name="pruebaD">
-						<option value="">Seleccione una Prueba Deportiva</option>
+						<option value=""  selected disabled>Seleccione una Prueba Deportiva</option>
 						<c:forEach items="${listaPruebasDeportivas}" var="pruebaD">
 							<option value="${pruebaD.idpruebadeportiva}">${pruebaD.nombre}</option>
 						</c:forEach>

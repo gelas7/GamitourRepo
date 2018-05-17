@@ -46,25 +46,26 @@
 
 				<h2>Insertar Comentario</h2>
 				<p>
-					<label for="cliente">Cliente:</label>
-					<select name="cliente">
+					<label for="cliente">Cliente:</label> <select name="cliente">
+						<option value="" selected disabled>Seleccione un cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					<label for="multimedia">ID Multimedia:</label>
-					<select
+					<label for="multimedia">ID Multimedia:</label> <select
 						name="multimedia">
+						<option value="" selected disabled>Seleccione un multimedia</option>
 						<c:forEach items="${listaMultimedias}" var="multimedia">
 							<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					<label for="texto">Texto: </label> 
-					<textarea name="texto" required="required" rows="4" cols="50" maxlength="500"></textarea>
+					<label for="texto">Texto: </label>
+					<textarea name="texto" required="required" rows="4" cols="50"
+						maxlength="500"></textarea>
 				</p>
 
 				<p>
