@@ -23,16 +23,16 @@
 	<div class="flex">
 		<div class="menu">
 			<ul>
-				<li><a href="MostrarAdmin.do?div=actividades">Actividades</a></li>
-				<li><a href="MostrarAdmin.do?div=clientes">Clientes</a></li>
 				<li><a href="MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
-				<li><a href="MostrarAdmin.do?div=noticias">Noticias</a></li>
 				<li><a href="MostrarAdmin.do?div=paradas">Paradas</a></li>
-				<li><a href="MostrarAdmin.do?div=premios">Premios</a></li>
-				<li><a href="MostrarAdmin.do?div=votos">Votos</a></li>
-				<li><a href="MostrarAdmin.do?div=multimedias">Multimedia</a></li>
 				<li><a href="MostrarAdmin.do?div=pruebasculturales">PC</a></li>
 				<li><a href="MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
+				<li><a href="MostrarAdmin.do?div=multimedias">Multimedia</a></li>
+				<li><a href="MostrarAdmin.do?div=actividades">Actividades</a></li>
+				<li><a href="MostrarAdmin.do?div=clientes">Clientes</a></li>
+				<li><a href="MostrarAdmin.do?div=noticias">Noticias</a></li>
+				<li><a href="MostrarAdmin.do?div=premios">Premios</a></li>
+				<li><a href="MostrarAdmin.do?div=votos">Votos</a></li>
 				<li><a href="MostrarAdmin.do?div=comentarios">Comentarios</a></li>
 			</ul>
 		</div>
@@ -59,8 +59,8 @@
 				<a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
 				<p>
-					<label for="searchtcomentarios"><i class="fas fa-search"></i></label> <input
-						type="text" id="searchtcomentarios" value="" />
+					<label for="searchtcomentarios"><i class="fas fa-search"></i></label>
+					<input type="text" id="searchtcomentarios" value="" />
 				</p>
 				<table id="tcomentarios" class="tablesorter">
 					<thead>
