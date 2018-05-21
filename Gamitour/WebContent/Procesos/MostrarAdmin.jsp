@@ -34,9 +34,8 @@
 				<li><a class="botonMenu" id="noticias">Noticias</a></li>
 				<li><a class="botonMenu" id="premios">Premios</a></li>
 				<li><a class="botonMenu" id="votos">Votos</a></li>
-
-
 				<li><a class="botonMenu" id="comentarios">Comentarios</a></li>
+				<li><a class="botonMenu" id="reservas">Reservas</a></li>
 			</ul>
 			<button id="divActual" value="${divActual}" hidden="hidden"></button>
 		</div>
