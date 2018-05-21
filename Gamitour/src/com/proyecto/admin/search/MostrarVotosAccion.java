@@ -16,7 +16,7 @@ public class MostrarVotosAccion extends Accion {
 
 		request.getSession().setAttribute("listaVotos", sv.buscarVotosPorMultimedia(id));
 
-		return "Procesos/MostrarDetalle/MostrarVotos.jsp";
+		return "Admin/MostrarDetalle/MostrarVotos.jsp";
 	}
 
 }

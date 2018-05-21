@@ -18,7 +18,7 @@ public class MostrarComentariosAccion extends Accion {
 
 		request.getSession().setAttribute("listaComentarios", sc.buscarComentPorMultimedia(id));
 
-		return "Procesos/MostrarDetalle/MostrarComentarios.jsp";
+		return "Admin/MostrarDetalle/MostrarComentarios.jsp";
 	}
 
 }

@@ -20,7 +20,7 @@ public class MostrarParadasAccion extends Accion {
 		request.setAttribute("idItinerario", id);
 
 		
-		return "Procesos/MostrarDetalle/MostrarParadas.jsp";
+		return "Admin/MostrarDetalle/MostrarParadas.jsp";
 	}
 
 }

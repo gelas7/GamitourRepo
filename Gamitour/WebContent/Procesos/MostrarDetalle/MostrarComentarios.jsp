@@ -57,7 +57,7 @@
 			<div class="contenedor">
 
 				<h1>Listado de Comentarios en el multimedia</h1>
-				<a class="insertar" href="Procesos/Insertar/InsertarComentarios.jsp"><i
+				<a class="insertar" href="Admin/Insertar/InsertarComentarios.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
 				<p>
 					<label for="searchtcomentarios"><i class="fas fa-search"></i></label>
@@ -82,7 +82,7 @@
 									href="EliminarComentarios.do?id=${com.idcomentario}"><i
 										class="fas fa-trash-alt"></i></a></td>
 								<td><a class="actualizar"
-									href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}"><i
+									href="Admin/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}"><i
 										class="fas fa-edit"></i> </a></td>
 
 							</tr>

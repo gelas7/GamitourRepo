@@ -49,7 +49,7 @@
   </filter-mapping>
   <filter-mapping>
     <filter-name>FiltroAdmin</filter-name>
-    <url-pattern>/Procesos/*</url-pattern>
+    <url-pattern>/Admin/*</url-pattern>
   </filter-mapping>
   
   

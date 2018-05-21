@@ -61,7 +61,7 @@
 
 				<h1>Listado de Paradas en ${nombreItinerario}</h1>
 				<a class="insertar"
-					href="Procesos/Insertar/InsertarParadasDetalle.jsp?idItinerario=${idItinerario}"><i
+					href="Admin/Insertar/InsertarParadasDetalle.jsp?idItinerario=${idItinerario}"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
 				<p>
 					<label for="searchtparadas"><i class="fas fa-search"></i></label> <input
@@ -98,7 +98,7 @@
 									href="EliminarParadas.do?id=${parada.idparada}"><i
 										class="fas fa-trash-alt"></i></a></td>
 								<td><a class="actualizar"
-									href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
+									href="Admin/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
 										class="fas fa-edit"></i> </a></td>
 								<td><a class="mostrar"
 									href="MostrarPruebasDeportivas.do?id=${parada.idparada}">Pruebas

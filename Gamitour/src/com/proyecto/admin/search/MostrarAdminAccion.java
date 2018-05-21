@@ -15,6 +15,7 @@ import com.proyecto.modelo.Parada;
 import com.proyecto.modelo.Premio;
 import com.proyecto.modelo.PruebaCultural;
 import com.proyecto.modelo.PruebaDeportiva;
+import com.proyecto.modelo.Reserva;
 import com.proyecto.modelo.Voto;
 import com.proyecto.service.ServiceActividadesImp;
 import com.proyecto.service.ServiceClientesImp;
@@ -32,6 +33,7 @@ import com.proyecto.service.ServicePruebasCulturales;
 import com.proyecto.service.ServicePruebasCulturalesImp;
 import com.proyecto.service.ServicePruebasDeportivas;
 import com.proyecto.service.ServicePruebasDeportivasImp;
+import com.proyecto.service.ServiceReservasImp;
 import com.proyecto.service.ServiceRolesImp;
 import com.proyecto.service.ServiceVotos;
 import com.proyecto.service.ServiceVotosImp;
@@ -54,6 +56,7 @@ public class MostrarAdminAccion extends Accion {
 		ServicePremiosImp spr = new ServicePremiosImp();
 		ServiceMultimedias sm = new ServiceMultimediasImp();
 		ServiceComentariosImp scom = new ServiceComentariosImp();
+		ServiceReservasImp srv = new ServiceReservasImp();
 
 		List<Noticia> listaNoticias = sn.buscarTodos();
 		List<Cliente> listaClientes = sc.buscarTodos();
@@ -66,14 +69,13 @@ public class MostrarAdminAccion extends Accion {
 		List<PruebaDeportiva> listaPruebasDeportivas = spd.buscarTodos();
 		List<Voto> listaVotos = sv.buscarTodos();
 		List<Multimedia> listaMultimedias = sm.buscarTodos();
-
+		List<Reserva> listaReservas = srv.buscarTodos();
 
 		// Guardo estos como atributos puesto que solo los necesito
 		// en Mostrar y no en otras paginas
 		request.setAttribute("listaPremios", listaPremios);
 		request.setAttribute("listaVotos", listaVotos);
 		request.setAttribute("listaPruebasCulturales", listaPruebasCulturales);
-		request.setAttribute("listaActividades", listaActividades);
 		request.setAttribute("listaNoticias", listaNoticias);
 		request.setAttribute("listaComentarios", listaComentarios);
 
@@ -84,11 +86,15 @@ public class MostrarAdminAccion extends Accion {
 		request.getSession().setAttribute("listaRoles", sr.buscarTodos());
 		request.getSession().setAttribute("listaPruebasDeportivas", listaPruebasDeportivas);
 		request.getSession().setAttribute("listaMultimedias", listaMultimedias);
+		request.getSession().setAttribute("listaReservas", listaReservas);
+		request.getSession().setAttribute("listaActividades", listaActividades);
+
+
 
 		// Aqui guardo el nombre de la tabla que se esta manejando actualmente
 		request.setAttribute("divActual", request.getParameter("div"));
 
-		return "Procesos/MostrarAdmin.jsp";
+		return "Admin/MostrarAdmin.jsp";
 	}
 
 }

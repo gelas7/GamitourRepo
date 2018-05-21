@@ -59,7 +59,7 @@
 			<div class="contenedor">
 
 				<h1>Listado de Multimedias en ${nombrePruebaDeportiva}</h1>
-				<a class="insertar" href="Procesos/Insertar/InsertarMultimedias.jsp"><i
+				<a class="insertar" href="Admin/Insertar/InsertarMultimedias.jsp"><i
 					class="fas fa-plus-circle"></i> Añadir nuevo</a>
 				<p>
 					<label for="searchtmultimedias"><i class="fas fa-search"></i></label>
@@ -93,7 +93,7 @@
 									href="EliminarMultimedias.do?id=${m.idmultimedia}"><i
 										class="fas fa-trash-alt"></i></a></td>
 								<td><a class="actualizar"
-									href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}"><i
+									href="Admin/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}"><i
 										class="fas fa-edit"></i> </a></td>
 								<td><a class="mostrar"
 									href="MostrarComentarios.do?id=${m.idmultimedia}">Comentarios</a></td>

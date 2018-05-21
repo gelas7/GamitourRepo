@@ -83,7 +83,7 @@
 
 				<div class="tablas" id="divclientes">
 					<h1>Listado de Clientes</h1>
-					<a class="insertar" href="Procesos/Insertar/InsertarClientes.jsp"><i
+					<a class="insertar" href="Admin/Insertar/InsertarClientes.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtclientes"><i class="fas fa-search"></i></label>
@@ -126,7 +126,7 @@
 										href="EliminarClientes.do?id=${cliente.idcliente}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarClientes.jsp?id=${cliente.idcliente}"><i
+										href="Admin/Modificar/ModificarClientes.jsp?id=${cliente.idcliente}"><i
 											class="fas fa-edit"></i> </a></td>
 								</tr>
 							</c:forEach>
@@ -139,7 +139,7 @@
 				<div class="tablas" id="divactividades">
 					<h1>Listado de Actividades</h1>
 					<a class="insertar"
-						href="Procesos/Insertar/InsertarActividades.html"><i
+						href="Admin/Insertar/InsertarActividades.html"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtactividades"><i class="fas fa-search"></i></label>
@@ -175,7 +175,7 @@
 										href="EliminarActividades.do?id=${actividad.idactividad}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarActividades.jsp?id=${actividad.idactividad}"><i
+										href="Admin/Modificar/ModificarActividades.jsp?id=${actividad.idactividad}"><i
 											class="fas fa-edit"></i> </a></td>
 								</tr>
 							</c:forEach>
@@ -188,7 +188,7 @@
 				<div class="tablas" id="divitinerarios">
 					<h1>Listado de Itinerarios</h1>
 					<a class="insertar"
-						href="Procesos/Insertar/InsertarItinerarios.html"><i
+						href="Admin/Insertar/InsertarItinerarios.html"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtitinerarios"><i class="fas fa-search"></i></label>
@@ -215,7 +215,7 @@
 										href="EliminarItinerarios.do?id=${itinerario.iditinerario}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarItinerarios.jsp?id=${itinerario.iditinerario}"><i
+										href="Admin/Modificar/ModificarItinerarios.jsp?id=${itinerario.iditinerario}"><i
 											class="fas fa-edit"></i> </a></td>
 									<td><a class="mostrar"
 										href="MostrarParadas.do?id=${itinerario.iditinerario}">Paradas</a></td>
@@ -229,7 +229,7 @@
 
 				<div class="tablas" id="divnoticias">
 					<h1>Listado de Noticias</h1>
-					<a class="insertar" href="Procesos/Insertar/InsertarNoticias.html"><i
+					<a class="insertar" href="Admin/Insertar/InsertarNoticias.html"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtnoticias"><i class="fas fa-search"></i></label>
@@ -257,7 +257,7 @@
 										href="EliminarNoticias.do?id=${noticia.idnoticia}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarNoticias.jsp?id=${noticia.idnoticia}"><i
+										href="Admin/Modificar/ModificarNoticias.jsp?id=${noticia.idnoticia}"><i
 											class="fas fa-edit"></i> </a></td>
 								</tr>
 							</c:forEach>
@@ -268,7 +268,7 @@
 				<!-- DIV PARADAS -->
 				<div class="tablas" id="divparadas">
 					<h1>Listado de Paradas</h1>
-					<a class="insertar" href="Procesos/Insertar/InsertarParadas.jsp"><i
+					<a class="insertar" href="Admin/Insertar/InsertarParadas.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtparadas"><i class="fas fa-search"></i></label>
@@ -301,7 +301,7 @@
 										href="EliminarParadas.do?id=${parada.idparada}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
+										href="Admin/Modificar/ModificarParadas.jsp?id=${parada.idparada}"><i
 											class="fas fa-edit"></i> </a></td>
 									<td><a class="mostrar"
 										href="MostrarPruebasDeportivas.do?id=${parada.idparada}">Pruebas
@@ -317,7 +317,7 @@
 				<div class="tablas" id="divpruebasculturales">
 					<h1>Listado de Pruebas Culturales</h1>
 					<a class="insertar"
-						href="Procesos/Insertar/InsertarPruebasCulturales.jsp"><i
+						href="Admin/Insertar/InsertarPruebasCulturales.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtpruebasculturales"><i
@@ -347,7 +347,7 @@
 										href="EliminarPruebasCulturales.do?id=${pC.idpruebacultural}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarPruebasCulturales.jsp?id=${pC.idpruebacultural}"><i
+										href="Admin/Modificar/ModificarPruebasCulturales.jsp?id=${pC.idpruebacultural}"><i
 											class="fas fa-edit"></i> </a></td>
 								</tr>
 							</c:forEach>
@@ -360,7 +360,7 @@
 				<div class="tablas" id="divpruebasdeportivas">
 					<h1>Listado de Pruebas Deportivas</h1>
 					<a class="insertar"
-						href="Procesos/Insertar/InsertarPruebasDeportivas.jsp"><i
+						href="Admin/Insertar/InsertarPruebasDeportivas.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtpruebasdeportivas"><i
@@ -392,7 +392,7 @@
 										href="EliminarPruebasDeportivas.do?id=${pD.idpruebadeportiva}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}"><i
+										href="Admin/Modificar/ModificarPruebasDeportivas.jsp?id=${pD.idpruebadeportiva}"><i
 											class="fas fa-edit"></i> </a></td>
 									<td><a class="mostrar"
 										href="MostrarMultimedias.do?id=${pD.idpruebadeportiva}">Multimedia</a></td>
@@ -406,7 +406,7 @@
 
 				<div class="tablas" id="divpremios">
 					<h1>Listado de Premios</h1>
-					<a class="insertar" href="Procesos/Insertar/InsertarPremios.jsp"><i
+					<a class="insertar" href="Admin/Insertar/InsertarPremios.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtpremios"><i class="fas fa-search"></i></label>
@@ -438,7 +438,7 @@
 										href="EliminarPremios.do?id=${premio.idpremio}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarPremios.jsp?id=${premio.idpremio}"><i
+										href="Admin/Modificar/ModificarPremios.jsp?id=${premio.idpremio}"><i
 											class="fas fa-edit"></i> </a></td>
 								</tr>
 							</c:forEach>
@@ -451,7 +451,7 @@
 				<div class="tablas" id="divmultimedias">
 					<h1>Listado de elementos Multimedia</h1>
 					<a class="insertar"
-						href="Procesos/Insertar/InsertarMultimedias.jsp"><i
+						href="Admin/Insertar/InsertarMultimedias.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtmultimedias"><i class="fas fa-search"></i></label>
@@ -484,7 +484,7 @@
 										href="EliminarMultimedias.do?id=${m.idmultimedia}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}"><i
+										href="Admin/Modificar/ModificarMultimedias.jsp?id=${m.idmultimedia}"><i
 											class="fas fa-edit"></i> </a></td>
 									<td><a class="mostrar"
 										href="MostrarComentarios.do?id=${m.idmultimedia}">Comentarios</a></td>
@@ -501,7 +501,7 @@
 				<div class="tablas" id="divcomentarios">
 					<h1>Listado de Comentarios</h1>
 					<a class="insertar"
-						href="Procesos/Insertar/InsertarComentarios.jsp"><i
+						href="Admin/Insertar/InsertarComentarios.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtcomentarios"><i class="fas fa-search"></i></label>
@@ -524,7 +524,7 @@
 										href="EliminarComentarios.do?id=${com.idcomentario}"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}"><i
+										href="Admin/Modificar/ModificarComentarios.jsp?id=${com.idcomentario}"><i
 											class="fas fa-edit"></i> </a></td>
 								</tr>
 							</c:forEach>
@@ -536,7 +536,7 @@
 
 				<div class="tablas" id="divvotos">
 					<h1>Listado de votos</h1>
-					<a class="insertar" href="Procesos/Insertar/InsertarVotos.jsp"><i
+					<a class="insertar" href="Admin/Insertar/InsertarVotos.jsp"><i
 						class="fas fa-plus-circle"></i> Añadir nuevo</a>
 					<p>
 						<label for="searchtvotos"><i class="fas fa-search"></i></label> <input
@@ -561,7 +561,7 @@
 										onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
+										href="Admin/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
 											class="fas fa-edit"></i> </a></td>
 								</tr>
 							</c:forEach>
@@ -573,7 +573,7 @@
 
 				<div class="tablas" id="divreservas">
 					<h1>Listado de reservas</h1>
-					<a class="insertar" href="Procesos/Insertar/InsertarReservas.jsp">
+					<a class="insertar" href="Admin/Insertar/InsertarReservas.jsp">
 						<i class="fas fa-plus-circle"></i> Añadir nuevo
 					</a>
 					<p>
@@ -601,7 +601,7 @@
 										onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
-										href="Procesos/Modificar/ModificarReservas.jsp?id=${r.idreserva}"><i
+										href="Admin/Modificar/ModificarReservas.jsp?id=${r.idreserva}"><i
 											class="fas fa-edit"></i> </a></td>
 								</tr>
 							</c:forEach>

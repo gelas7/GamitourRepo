@@ -19,7 +19,7 @@ public class MostrarPruebasDeportivasAccion extends Accion {
 		request.setAttribute("idParada", id);
 		request.getSession().setAttribute("listaPruebasDeportivas", spd.buscarPruebasDepPorParada(id));
 
-		return "Procesos/MostrarDetalle/MostrarPruebasDeportivas.jsp";
+		return "Admin/MostrarDetalle/MostrarPruebasDeportivas.jsp";
 	}
 
 }
