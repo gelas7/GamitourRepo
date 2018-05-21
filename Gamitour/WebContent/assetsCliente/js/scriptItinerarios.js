@@ -11,7 +11,6 @@ window.onload = function() {
         document.getElementById('paradas').style.display = 'none';
         document.getElementById('itinerarios').style.display = 'block';
 
-        var waypts = [];
         var origen, destino = "";
 
         document.getElementById('contenedorItinerarios').innerHTML = "";
@@ -20,7 +19,7 @@ window.onload = function() {
 
             waypts = [];
             if (jsonItinerarios[j].paradas[0] != null)
-                origen = jsonItinerarios[j].paradas[0].ubicacion; // 1ª
+                origen = jsonItinerarios[j].paradas[0].ubicacion; // Primera
             
             if (jsonItinerarios[j].paradas[jsonItinerarios[j].paradas.length - 1] != null)
                 destino = jsonItinerarios[j].paradas[jsonItinerarios[j].paradas.length - 1].ubicacion; // Ultima
@@ -34,8 +33,7 @@ window.onload = function() {
                 `;
             document.getElementById("contenedorItinerarios").innerHTML += divMapa;
 
-            if (jsonItinerarios[j].paradas.length > 2) { // Resto de
-                // paradas
+            if (jsonItinerarios[j].paradas.length > 2) { // Resto de paradas
                 for (var i = 1; i < jsonItinerarios[j].paradas.length - 1; i++) {
                     if (jsonItinerarios[j].paradas[i].ubicacion != null) {
                         waypts.push({
@@ -60,6 +58,7 @@ window.onload = function() {
                 optimizeWaypoints: true,
                 travelMode: 'WALKING' // Modo de viaje
             }, function(response, status) {
+            	debugger;
 
                 if (status === 'OK') {
                     var mapaActual = "mapaItinerario" + numMapa;
@@ -70,7 +69,7 @@ window.onload = function() {
                     directionsDisplay.setDirections(response);
                     var route = response.routes[0];
                     var summaryPanel = document.getElementById(panelDireccionesActual);
-
+                	debugger;
                     for (var i = 0; i < route.legs.length; i++) {
                         var routeSegment = i + 1;
                         summaryPanel.innerHTML += '<b>Parte ' + routeSegment +

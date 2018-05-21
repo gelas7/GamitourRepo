@@ -22,18 +22,14 @@
 
 	<div class="cabecera">
 		<ul>
-			<li><a href="Cliente/inicio.html"><i class="material-icons"
-					style="font-size: 35px;">home</i>
-					<p>INICIO</p></a></li>
+			<li><a href="Cliente/index.html"><i class="material-icons"
+					style="font-size: 35px;">home</i>INICIO</a></li>
+			<li><a href="MostrarPublico.cl"><i class="material-icons"
+					style="font-size: 35px;">map</i>RUTAS</a></li>
 			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">map</i>
-					<p>RUTAS</p></a></li>
+					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
 			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">speaker_notes</i>
-					<p>COMENTARIOS</p></a></li>
-			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">movie</i>
-					<p>MULTIMEDIA</p></a></li>
+					style="font-size: 35px;">movie</i>MULTIMEDIA</a></li>
 		</ul>
 	</div>
 

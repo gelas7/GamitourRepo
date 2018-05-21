@@ -56,11 +56,11 @@
 						Insertar Parada en
 						<%=si.buscarPorClave(Integer.parseInt(request.getParameter("idItinerario"))).getNombre()%></h2>
 					<p>
-						<label>Nombre: </label><input type="text" name="nombre" required="required" maxlength="50">
+						<label>Nombre: </label><input type="text" name="nombre" required="required" maxlength="500">
 					</p>
 					<p>
 						<label>Numero de parada: </label><input type="number" name="numeroParada"
-							required="required" max="5">
+							required="required" max="1000">
 					</p>
 
 					<p>
