@@ -29,6 +29,7 @@
 				<li><a href="../../MostrarAdmin.do?div=pruebasculturales">PC</a></li>
 				<li><a href="../../MostrarAdmin.do?div=pruebasdeportivas">PD</a></li>
 				<li><a href="../../MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=reservas">Reservas</a></li>
 			</ul>
 		</div>
 

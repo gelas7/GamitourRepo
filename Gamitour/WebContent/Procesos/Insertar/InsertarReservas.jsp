@@ -9,14 +9,15 @@
 <html>
 
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Inserción Prueba Cultural</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Panel Admin</title>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"
 	media="screen" />
 </head>
 
 <body>
 	<div class="flex">
+
 		<div class="menu">
 			<ul>
 				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
@@ -42,40 +43,35 @@
 				</h1>
 			</div>
 
-			<form action="../../InsertarPruebasCulturales.do" method="get">
-
-				<h2>Insertar Prueba Cultural</h2>
+			<form action="../../InsertarReservas.do" method="get">
+				<h2>Insertar Reserva</h2>
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre"
-						required="required" maxlength="50">
-				</p>
-				<p>
-					<label>Pregunta: </label>
-					<textarea name="pregunta" required="required" rows="4" cols="50"
-						maxlength="500"></textarea>
-				</p>
-				<p>
-					<label>Respuesta: </label>
-					<textarea name="respuesta" required="required" rows="4" cols="50"
-						maxlength="500"></textarea>
-				</p>
-				<p>
-					<label>Puntos: </label><input type="number" name="puntos"
-						required="required" max="10000">
-				</p>
-				<p>
-					<label>Parada: </label><select name="parada">
-						<option value="" selected disabled>Seleccione una
-							parada</option>
-						<c:forEach items="${listaParadas}" var="parada">
-							<option value="${parada.idparada}">${parada.nombre}</option>
+					<label>Cliente: </label><select name="cliente">
+						<option value="" selected disabled>Seleccione un cliente</option>
+						<c:forEach items="${listaClientes}" var="cliente">
+							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
 					</select>
 				</p>
 				<p>
-					<input type="submit" value="Enviar" id="enviar">
+					<label>Actividad: </label><select name="actividad">
+						<option value="" selected disabled>Seleccione una
+							actividad</option>
+						<c:forEach items="${listaActividades}" var="actividad">
+							<option value="${actividad.idactividad}">${actividad.nombre}</option>
+						</c:forEach>
+					</select>
 				</p>
 
+				<p>
+					<label>Comentarios adicionales: </label>
+					<textarea name="comentarios" required="required" rows="4" cols="50"
+						maxlength="500"></textarea>
+				</p>
+
+				<p>
+					<input type="submit" value="Enviar" id="enviar">
+				</p>
 			</form>
 		</div>
 	</div>

@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<%!String url = "http://ambgubuntu.westeurope.cloudapp.azure.com:8080/subidas";%>
+	<%-- 	<%!String url = "http://ambgubuntu.westeurope.cloudapp.azure.com:8080/subidas";%> --%>
 	<div class="flex">
 		<div class="menu">
 			<ul>
@@ -34,9 +34,9 @@
 				<li><a class="botonMenu" id="noticias">Noticias</a></li>
 				<li><a class="botonMenu" id="premios">Premios</a></li>
 				<li><a class="botonMenu" id="votos">Votos</a></li>
-
-
 				<li><a class="botonMenu" id="comentarios">Comentarios</a></li>
+				<li><a class="botonMenu" id="reservas">Reservas</a></li>
+
 			</ul>
 			<button id="divActual" value="${divActual}" hidden="hidden"></button>
 		</div>
@@ -119,8 +119,8 @@
 									<td>${cliente.puntosacumulados}</td>
 									<td>${cliente.fecharegistro}</td>
 									<td>${cliente.rol.getNombre()}</td>
-									<td><img style="width: 40px; height: 40px;"
-										src=" <%=url%>/clientes/${cliente.avatar}"></img></td>
+									<!-- 									<td><img style="width: 40px; height: 40px;" -->
+									<%-- 										src=" <%=url%>/clientes/${cliente.avatar}"></img></td> --%>
 
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar? Los comentarios, votos y premios asociados al cliente también se eliminarán.')"
@@ -168,8 +168,8 @@
 									<td>${actividad.ubicacion}</td>
 									<td>${actividad.numparticipantes}</td>
 									<td>${actividad.precio}</td>
-									<td><img style="width: 40px; height: 40px;"
-										src=" <%=url%>/actividades/${actividad.imagen}"></img></td>
+									<!-- 									<td><img style="width: 40px; height: 40px;" -->
+									<%-- 										src=" <%=url%>/actividades/${actividad.imagen}"></img></td> --%>
 									<td>${actividad.puntos}</td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar?')"
@@ -251,8 +251,8 @@
 									<td>${noticia.nombre}</td>
 									<td>${noticia.fechaalta}</td>
 									<td>${noticia.fechacaducidad}</td>
-									<td><img style="width: 40px; height: 40px;"
-										src=" <%=url%>/noticias/${noticia.imagen}"></img></td>
+									<!-- 									<td><img style="width: 40px; height: 40px;" -->
+									<%-- 										src=" <%=url%>/noticias/${noticia.imagen}"></img></td> --%>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar?')"
 										href="EliminarNoticias.do?id=${noticia.idnoticia}"><i
@@ -292,10 +292,10 @@
 									<td>${parada.nombre}</td>
 									<td>${parada.numeroParada}</td>
 									<td>${parada.ubicacion}</td>
-									<td><img style="width: 40px; height: 40px;"
-										src=" <%=url%>/paradas/${parada.imagen}"></img></td>
-									<td><img style="width: 40px; height: 40px;"
-										src=" <%=url%>/paradas/${parada.video}"></img></td>
+									<!-- 									<td><img style="width: 40px; height: 40px;" -->
+									<%-- 										src=" <%=url%>/paradas/${parada.imagen}"></img></td> --%>
+									<!-- 									<td><img style="width: 40px; height: 40px;" -->
+									<%-- 										src=" <%=url%>/paradas/${parada.video}"></img></td> --%>
 									<td>${parada.itinerario.getNombre()}</td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar? Las pruebas culturales asociadas a esta parada también se eliminarán.')"
@@ -329,8 +329,8 @@
 						<thead>
 							<tr>
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
-<!-- 								<th>Pregunta <i id="icono" class="fas fa-sort"></i></th> -->
-<!-- 								<th>Respuesta <i id="icono" class="fas fa-sort"></i></th> -->
+								<!-- 								<th>Pregunta <i id="icono" class="fas fa-sort"></i></th> -->
+								<!-- 								<th>Respuesta <i id="icono" class="fas fa-sort"></i></th> -->
 								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 								<th>Parada <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
@@ -339,8 +339,8 @@
 							<c:forEach items="${listaPruebasCulturales}" var="pC">
 								<tr>
 									<td>${pC.nombre}</td>
-<%-- 									<td>${pC.pregunta}</td> --%>
-<%-- 									<td>${pC.respuesta}</td> --%>
+									<%-- 									<td>${pC.pregunta}</td> --%>
+									<%-- 									<td>${pC.respuesta}</td> --%>
 									<td>${pC.puntos}</td>
 									<td>${pC.parada.getNombre()}</td>
 									<td><a class="eliminar"
@@ -374,7 +374,7 @@
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
 								<th>Inicio <i id="icono" class="fas fa-sort"></i></th>
 								<th>Fin <i id="icono" class="fas fa-sort"></i></th>
-<!-- 								<th>Explicación <i id="icono" class="fas fa-sort"></i></th> -->
+								<!-- 								<th>Explicación <i id="icono" class="fas fa-sort"></i></th> -->
 								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 								<th>Parada <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
@@ -385,7 +385,7 @@
 									<td>${pD.nombre}</td>
 									<td>${pD.fechainicio}</td>
 									<td>${pD.fechafin}</td>
-<%-- 									<td>${pD.explicacion}</td> --%>
+									<%-- 									<td>${pD.explicacion}</td> --%>
 									<td>${pD.puntos}</td>
 									<td>${pD.parada.getNombre()}</td>
 									<td><a class="eliminar"
@@ -429,8 +429,8 @@
 								<tr>
 									<td>${premio.cliente.getNombre()}</td>
 									<td>${premio.nombre}</td>
-									<td><img style="width: 40px; height: 40px;"
-										src=" <%=url%>/premios/${premio.imagen}"></img></td>
+									<!-- 									<td><img style="width: 40px; height: 40px;" -->
+									<%-- 										src=" <%=url%>/premios/${premio.imagen}"></img></td> --%>
 									<td>${premio.fechaactivacion}</td>
 									<td>${premio.fechaconsumo}</td>
 									<td>${premio.puntos}</td>
@@ -474,10 +474,10 @@
 								<tr>
 									<td>${m.cliente.getNombre()}</td>
 									<td>${m.fecha}</td>
-									<td><img style="width: 40px; height: 40px;"
-										src=" <%=url%>/multimedias/${m.imagen}"></img></td>
-									<td><img style="width: 40px; height: 40px;"
-										src=" <%=url%>/multimedias/${m.video}"></img></td>
+									<!-- 									<td><img style="width: 40px; height: 40px;" -->
+									<%-- 										src=" <%=url%>/multimedias/${m.imagen}"></img></td> --%>
+									<!-- 									<td><img style="width: 40px; height: 40px;" -->
+									<%-- 										src=" <%=url%>/multimedias/${m.video}"></img></td> --%>
 									<td>${m.puntosacumulados}</td>
 									<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 									<td><a class="eliminar"
@@ -563,6 +563,46 @@
 											class="fas fa-trash-alt"></i></a></td>
 									<td><a class="actualizar"
 										href="Procesos/Modificar/ModificarVotos.jsp?id=${v.idvoto}"><i
+											class="fas fa-edit"></i> </a></td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</div>
+
+				<!-- DIV RESERVAS -->
+
+				<div class="tablas" id="divreservas">
+					<h1>Listado de reservas</h1>
+					<a class="insertar" href="Procesos/Insertar/InsertarReservas.jsp">
+						<i class="fas fa-plus-circle"></i> Añadir nuevo
+					</a>
+					<p>
+						<label for="searchtreservas"><i class="fas fa-search"></i></label>
+						<input type="text" id="searchtreservas" value="" />
+					</p>
+					<table id="treservas" class="tablesorter">
+						<thead>
+							<tr>
+								<th>Cliente <i id="icono" class="fas fa-sort"></i></th>
+								<th>Actividad <i id="icono" class="fas fa-sort"></i></th>
+								<th>Comentarios <i id="icono" class="fas fa-sort"></i></th>
+								<th>Fecha <i id="icono" class="fas fa-sort"></i></th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach items="${listaReservas}" var="r">
+								<tr>
+									<td>${r.cliente.getNombre()}</td>
+									<td>${r.actividad.getNombre()}</td>
+									<td>${r.comentarios}</td>
+									<td>${r.fecha}</td>
+									<td><a class="eliminar"
+										href="EliminarReservas.do?id=${r.idreserva}"
+										onclick="return confirm('¿Está seguro de que quiere continuar?')"><i
+											class="fas fa-trash-alt"></i></a></td>
+									<td><a class="actualizar"
+										href="Procesos/Modificar/ModificarReservas.jsp?id=${r.idreserva}"><i
 											class="fas fa-edit"></i> </a></td>
 								</tr>
 							</c:forEach>

@@ -12,6 +12,7 @@ import com.proyecto.dao.ParadasDAO;
 import com.proyecto.dao.PremiosDAO;
 import com.proyecto.dao.PruebasCulturalesDAO;
 import com.proyecto.dao.PruebasDeportivasDAO;
+import com.proyecto.dao.ReservasDAO;
 import com.proyecto.dao.RolesDAO;
 import com.proyecto.dao.VotosDAO;
 import com.proyecto.daoImp.MySQLActividadesDAOImp;
@@ -24,6 +25,7 @@ import com.proyecto.daoImp.MySQLParadasDAOImp;
 import com.proyecto.daoImp.MySQLPremiosDAOImp;
 import com.proyecto.daoImp.MySQLPruebasCulturalesDAOImp;
 import com.proyecto.daoImp.MySQLPruebasDeportivasDAOImp;
+import com.proyecto.daoImp.MySQLReservasDAOImp;
 import com.proyecto.daoImp.MySQLRolesDAOImp;
 import com.proyecto.daoImp.MySQLVotosDAOImp;
 
@@ -95,6 +97,10 @@ public class MySQLDAOFactory {
 
 	public VotosDAO getVotosDAO() {
 		return new MySQLVotosDAOImp(sf);
+	}
+	
+	public ReservasDAO getReservasDAO() {
+		return new MySQLReservasDAOImp(sf);
 	}
 
 }

@@ -35,6 +35,7 @@
 				<li><a href="MostrarAdmin.do?div=premios">Premios</a></li>
 				<li><a href="MostrarAdmin.do?div=votos">Votos</a></li>
 				<li><a href="MostrarAdmin.do?div=comentarios">Comentarios</a></li>
+				<li><a href="../../MostrarAdmin.do?div=reservas">Reservas</a></li>
 			</ul>
 		</div>>
 		<hr />

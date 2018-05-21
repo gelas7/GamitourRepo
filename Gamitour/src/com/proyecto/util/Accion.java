@@ -13,12 +13,14 @@ import com.proyecto.admin.delete.EliminarParadasAccion;
 import com.proyecto.admin.delete.EliminarPremiosAccion;
 import com.proyecto.admin.delete.EliminarPruebasCulturalesAccion;
 import com.proyecto.admin.delete.EliminarPruebasDeportivasAccion;
+import com.proyecto.admin.delete.EliminarReservasAccion;
 import com.proyecto.admin.delete.EliminarRolesAccion;
 import com.proyecto.admin.delete.EliminarVotosAccion;
 import com.proyecto.admin.insert.InsertarComentariosAccion;
 import com.proyecto.admin.insert.InsertarItinerariosAccion;
 import com.proyecto.admin.insert.InsertarPruebasCulturalesAccion;
 import com.proyecto.admin.insert.InsertarPruebasDeportivasAccion;
+import com.proyecto.admin.insert.InsertarReservasAccion;
 import com.proyecto.admin.insert.InsertarRolesAccion;
 import com.proyecto.admin.insert.InsertarVotosAccion;
 import com.proyecto.admin.search.BuscarAdminAccion;
@@ -37,6 +39,7 @@ import com.proyecto.admin.update.ModificarParadasAccion;
 import com.proyecto.admin.update.ModificarPremiosAccion;
 import com.proyecto.admin.update.ModificarPruebasCulturalesAccion;
 import com.proyecto.admin.update.ModificarPruebasDeportivasAccion;
+import com.proyecto.admin.update.ModificarReservasAccion;
 import com.proyecto.admin.update.ModificarRolesAccion;
 import com.proyecto.admin.update.ModificarVotosAccion;
 import com.proyecto.publico.search.MostrarPublicoAccion;
@@ -157,6 +160,15 @@ public abstract class Accion {
 			break;
 		case "EliminarVotos":
 			accion = new EliminarVotosAccion();
+			break;
+		case "InsertarReservas":
+			accion = new InsertarReservasAccion();
+			break;
+		case "ModificarReservas":
+			accion = new ModificarReservasAccion();
+			break;
+		case "EliminarReservas":
+			accion = new EliminarReservasAccion();
 			break;
 
 		default:
