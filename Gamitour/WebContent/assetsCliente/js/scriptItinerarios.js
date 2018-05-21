@@ -81,81 +81,81 @@ window.onload = function() {
                     }
 
                 } else {
-                    window.alert('Error en las direcciones ' + status);
+                    window.alert('Error en las direcciones');
                 }
             });
         }
     }
 
-
-function cargarBotones() {
-    var botones = document.getElementsByClassName("botonesItinerario");
-
-    for (var index = 0; index < botones.length; index++) {
-        let actual = botones[index];
-        actual.addEventListener("click", cargarParadas, false);
-    }
-}
-
-
-function cargarParadas() {
-    document.getElementById('itinerarios').style.display = 'none';
-    document.getElementById('paradas').style.display = 'block';
-    var numItinerario = this.value;
-    var divMapa, divDatos = "";
-    contador = 0; // El contador para numeras los mapas empieza en 1
-
-    debugger;
-
-    var paradas = jsonItinerarios[numItinerario].paradas;
-    document.getElementById('contenedorParadas').innerHTML = "";
-
-    for (let parada in paradas) { // Recorro las paradas para pintar
-        // sus
-        // divs con titulo
-        divMapa = `
-	                <div id="mapaParada${contador}" class="mapParada"></div>
-	                <div id="indicacionesParada${contador}" class="datosParadas">
-	                <a class="tituloIndicaciones">Datos de ${paradas[parada].nombre}:</a> <br><br>
-	                <a><b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>
-	                <a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>
-	                <a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br><br><br>
-	                </div>
-	                 `;
-        document.getElementById("contenedorParadas").innerHTML += divMapa;
-
-        contador++;
-    }
-    pintarParadas(paradas); // Llamo a pintar mapas pasando las paradas
-
-}
-
-
-function pintarParadas(paradas) { // Le paso el array de paradas
-    contador = 0;
-    for (let parada in paradas) { // Recorro las paradas
-        var mapaActual = "mapaParada" + contador; // Construyo el id del
-        // mapa actual
-        window[mapaActual] = new google.maps.Map(document.getElementById(mapaActual), {
-            center: {
-                lat: paradas[parada].latitud,
-                lng: paradas[parada].longitud
-            },
-            zoom: 12
-        });
-
-        marker = new google.maps.Marker({ // Situo marcadores
-            map: window[mapaActual], // Apunto al objeto mapa recien
-            // creado
-            draggable: true,
-            animation: google.maps.Animation.DROP,
-            position: {
-                lat: paradas[parada].latitud,
-                lng: paradas[parada].longitud
-            }
-        });
-        contador++;
-    }
-
-}
+	
+	function cargarBotones() {
+	    var botones = document.getElementsByClassName("botonesItinerario");
+	
+	    for (var index = 0; index < botones.length; index++) {
+	        let actual = botones[index];
+	        actual.addEventListener("click", cargarParadas, false);
+	    }
+	}
+	
+	
+	function cargarParadas() {
+	    document.getElementById('itinerarios').style.display = 'none';
+	    document.getElementById('paradas').style.display = 'block';
+	    var numItinerario = this.value;
+	    var divMapa, divDatos = "";
+	    contador = 0; // El contador para numeras los mapas empieza en 1
+	
+	    debugger;
+	
+	    var paradas = jsonItinerarios[numItinerario].paradas;
+	    document.getElementById('contenedorParadas').innerHTML = "";
+	
+	    for (let parada in paradas) { // Recorro las paradas para pintar
+	        // sus
+	        // divs con titulo
+	        divMapa = `
+		                <div id="mapaParada${contador}" class="mapParada"></div>
+		                <div id="indicacionesParada${contador}" class="datosParadas">
+		                <a class="tituloIndicaciones">Datos de ${paradas[parada].nombre}:</a> <br><br>
+		                <a><b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>
+		                <a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>
+		                <a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br><br><br>
+		                </div>
+		                 `;
+	        document.getElementById("contenedorParadas").innerHTML += divMapa;
+	
+	        contador++;
+	    }
+	    pintarParadas(paradas); // Llamo a pintar mapas pasando las paradas
+	
+	}
+	
+	
+	function pintarParadas(paradas) { // Le paso el array de paradas
+	    contador = 0;
+	    for (let parada in paradas) { // Recorro las paradas
+	        var mapaActual = "mapaParada" + contador; // Construyo el id del
+	        // mapa actual
+	        window[mapaActual] = new google.maps.Map(document.getElementById(mapaActual), {
+	            center: {
+	                lat: paradas[parada].latitud,
+	                lng: paradas[parada].longitud
+	            },
+	            zoom: 12
+	        });
+	
+	        marker = new google.maps.Marker({ // Situo marcadores
+	            map: window[mapaActual], // Apunto al objeto mapa recien
+	            // creado
+	            draggable: true,
+	            animation: google.maps.Animation.DROP,
+	            position: {
+	                lat: paradas[parada].latitud,
+	                lng: paradas[parada].longitud
+	            }
+	        });
+	        contador++;
+	    }
+	
+	}
 }
