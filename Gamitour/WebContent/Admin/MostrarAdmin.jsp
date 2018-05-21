@@ -65,7 +65,7 @@
 
 				<div class="tablas" id="divBienvenida">
 					<hr></hr>
-
+					<h2>Última revisión:  22/05/2018 </h2><br>
 					<h2>Seleccione una opción del menu lateral para comenzar.</h2>
 
 					<br> <a id="guia" style="text-decoration: none"
@@ -75,7 +75,7 @@
 						</h3>
 					</a> <br> <br> <img style="width: 30%;"
 						src="assets/css/images/asturias.png"></img>
-
+				
 				</div>
 
 				<!-- DIV CLIENTES -->
