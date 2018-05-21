@@ -36,7 +36,7 @@ public class ModificarPruebasCulturalesAccion extends Accion {
 			prueba.setRespuesta(respuesta);
 		if (puntos.length() > 0)
 			prueba.setPuntos(Integer.parseInt(puntos));
-		if (parada.length() > 0)
+		if (parada!=null)
 			prueba.setParada(sp.buscarPorClave(Integer.parseInt(parada)));
 
 		spc.actualizar(prueba);

@@ -51,7 +51,7 @@
 
 				<p>
 					<label>Cliente: </label> <select name="cliente">
-						<option value="" selected disabled>Seleccione un cliente</option>
+						<option selected disabled>Seleccione un cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
@@ -60,7 +60,7 @@
 
 				<p>
 					<label>ID Multimedia: </label> <select name="multimedia">
-						<option value="" selected disabled>Seleccione un multimedia</option>
+						<option selected disabled>Seleccione un multimedia</option>
 						<c:forEach items="${listaMultimedias}" var="multimedia">
 							<option value="${multimedia.idmultimedia}">${multimedia.idmultimedia}</option>
 						</c:forEach>

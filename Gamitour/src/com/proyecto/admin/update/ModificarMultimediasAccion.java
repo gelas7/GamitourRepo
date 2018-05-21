@@ -46,12 +46,12 @@ public class ModificarMultimediasAccion extends HttpServlet {
 		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd(hh:mm:ss)");
 		String hoy = dt.format(new Date());
 
-		if (idCliente.length() > 0) {
+		if (idCliente!=null) {
 			Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
 			m.setCliente(c);
 		}
 
-		if (idPd.length() > 0) {
+		if (idPd!=null) {
 			m.setPruebaDeportivaIdpruebadeportiva(Integer.parseInt(idPd));
 		}
 

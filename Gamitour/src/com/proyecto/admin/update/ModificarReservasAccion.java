@@ -26,12 +26,12 @@ public class ModificarReservasAccion extends Accion {
 		
 		Reserva r = sr.buscarPorClave(Integer.parseInt(id));
 
-		if (cliente.length() > 0) {
+		if (cliente!=null) {
 			ServiceClientesImp scli = new ServiceClientesImp();
 			Cliente cli = scli.buscarPorClave(Integer.parseInt(cliente));
 			r.setCliente(cli);
 		}
-		if (actividad.length() > 0) {
+		if (actividad!=null) {
 			ServiceActividadesImp sa = new ServiceActividadesImp();
 			Actividad a = sa.buscarPorClave(Integer.parseInt(actividad));
 			r.setActividad(a);

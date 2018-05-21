@@ -81,7 +81,7 @@ public class ModificarClientesAccion extends HttpServlet {
 			c.setCodigopostal(codigopostal);
 		if (puntosacumulados.length()>0)
 			c.setPuntosacumulados(Integer.parseInt(puntosacumulados));
-		if (rol.length()>0) {
+		if (rol!=null) {
 			Rol r = sr.buscarPorClave(Integer.parseInt(rol));
 			c.setRol(r);
 		}

@@ -53,7 +53,7 @@
 
 				<p>
 					<label>Cliente: </label><select name="cliente">
-						<option value="" selected disabled>Seleccione un cliente</option>
+						<option selected disabled>Seleccione un cliente</option>
 						<c:forEach items="${listaClientes}" var="cliente">
 							<option value="${cliente.idcliente}">${cliente.nombre}</option>
 						</c:forEach>
@@ -61,8 +61,7 @@
 				</p>
 				<p>
 					<label>Actividad: </label><select name="actividad">
-						<option value="" selected disabled>Seleccione una
-							actividad</option>
+						<option selected disabled>Seleccione una actividad</option>
 						<c:forEach items="${listaActividades}" var="actividad">
 							<option value="${actividad.idactividad}">${actividad.nombre}</option>
 						</c:forEach>
@@ -71,7 +70,7 @@
 
 				<p>
 					<label>Comentarios adicionales: </label>
-					<textarea name="comentarios" required="required" rows="4" cols="50"
+					<textarea name="comentarios" rows="4" cols="50"
 						maxlength="500" placeholder="<%=srv.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getComentarios()%>"></textarea>
 				</p>
 

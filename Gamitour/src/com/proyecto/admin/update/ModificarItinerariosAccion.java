@@ -24,7 +24,7 @@ public class ModificarItinerariosAccion extends Accion {
 		String categoria = request.getParameter("categoria");
 		String duracion = request.getParameter("duracion");
 		String ubicacion = request.getParameter("ubicacion");
-
+		
 		ServiceItinerarios si = new ServiceItinerariosImp();
 
 		Itinerario i = si.buscarPorClave(Integer.parseInt(id));
@@ -35,7 +35,7 @@ public class ModificarItinerariosAccion extends Accion {
 			i.setCategoria(categoria);
 		if (duracion.length()>0)
 			i.setDuracion(Integer.parseInt(duracion));
-		if (ubicacion.length()>0)
+		if (ubicacion!=null)
 			i.setUbicacion(ubicacion);
 
 		si.actualizar(i);

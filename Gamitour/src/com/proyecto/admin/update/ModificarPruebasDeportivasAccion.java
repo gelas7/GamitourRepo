@@ -54,7 +54,7 @@ public class ModificarPruebasDeportivasAccion extends Accion {
 			prueba.setExplicacion(explicacion);
 		if (puntos.length() > 0)
 			prueba.setPuntos(Integer.parseInt(puntos));
-		if (parada.length() > 0)
+		if (parada!=null)
 			prueba.setParada(sp.buscarPorClave(Integer.parseInt(parada)));
 
 		spd.actualizar(prueba);

@@ -66,7 +66,7 @@
 				</p>
 				<p>
 					<label for="ubicacion">Ubicacion:</label> <select name="ubicacion">
-						<option value="" selected disabled>Seleccione una población</option>
+						<option selected disabled>Seleccione una población</option>
 						<option value="Gijón">Gijón</option>
 						<option value="Oviedo">Oviedo</option>
 						<option value="Avilés">Avilés</option>

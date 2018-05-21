@@ -51,7 +51,7 @@ public class ModificarPremiosAccion extends Accion {
 			premio.setNombre(nombre);
 		if (descripcion .length()>0)
 			premio.setDescripcion(descripcion);
-		if (idCliente .length()>0) {
+		if (idCliente!=null) {
 			Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
 			premio.setCliente(c);
 		}

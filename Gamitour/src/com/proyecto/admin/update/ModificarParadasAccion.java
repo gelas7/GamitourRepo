@@ -32,24 +32,24 @@ public class ModificarParadasAccion extends Accion {
 
 		Parada parada = sp.buscarPorClave(Integer.parseInt(id));
 
-		if (nombre.length() > 0) // Compruebo si se han hecho cambios
+		if (nombre.length()>0) // Compruebo si se han hecho cambios
 			parada.setNombre(nombre);
-		if (numeroParada.length() > 0)
+		if (numeroParada.length()>0)
 			parada.setNumeroParada(Integer.parseInt(numeroParada));
-		if (ubicacion.length() > 0 && latitud.length() > 0 && longitud.length() > 0) {
+		if (ubicacion.length()>0 && latitud.length()>0 && longitud.length()>0) {
 			float lat = Float.parseFloat(latitud);
 			float lng = Float.parseFloat(longitud);
 			parada.setUbicacion(ubicacion);
 			parada.setLatitud(lat);
 			parada.setLongitud(lng);
 		}
-		if (historia.length() > 0)
+		if (historia.length()>0)
 			parada.setHistoria(historia);
-		if (anecdotario.length() > 0)
+		if (anecdotario.length()>0)
 			parada.setAnecdotario(anecdotario);
-		if (gastronomia.length() > 0)
+		if (gastronomia.length()>0)
 			parada.setGastronomia(gastronomia);
-		if (itinerario.length() > 0) {
+		if (itinerario!=null) {
 			Itinerario it = si.buscarPorClave(Integer.parseInt(itinerario));
 			parada.setItinerario(it);
 		}

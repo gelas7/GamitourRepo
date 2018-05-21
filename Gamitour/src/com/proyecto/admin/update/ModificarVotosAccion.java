@@ -26,12 +26,12 @@ public class ModificarVotosAccion extends Accion {
 
 		Voto v = sv.buscarPorClave(Integer.parseInt(id));
 
-		if (cliente.length() > 0) {
+		if (cliente!=null) {
 			ServiceClientesImp scli = new ServiceClientesImp();
 			Cliente cli = scli.buscarPorClave(Integer.parseInt(cliente));
 			v.setCliente(cli);
 		}
-		if (multimedia.length() > 0) {
+		if (multimedia!=null) {
 			ServiceMultimediasImp sm = new ServiceMultimediasImp();
 			Multimedia m = sm.buscarPorClave(Integer.parseInt(multimedia));
 			v.setMultimedia(m);
