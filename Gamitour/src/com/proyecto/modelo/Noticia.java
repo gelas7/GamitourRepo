@@ -10,16 +10,23 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "noticia", catalog = "gamitour")
 public class Noticia implements java.io.Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private Integer idnoticia;
+	@Expose
 	private String nombre;
+	@Expose
 	private String texto;
+	@Expose
 	private Date fechaalta;
+	@Expose
 	private Date fechacaducidad;
+	@Expose
 	private String imagen;
 
 	public Noticia() {

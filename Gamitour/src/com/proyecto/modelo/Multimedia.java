@@ -14,6 +14,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.google.gson.annotations.Expose;
+
 
 @Entity
 @Table(name = "multimedia", catalog = "gamitour")
@@ -23,13 +25,21 @@ public class Multimedia implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	private int idmultimedia;
 	private Cliente cliente;
+	@Expose
 	private Date fecha;
+	@Expose
 	private String comentario;
+	@Expose
 	private String imagen;
+	@Expose
 	private String video;
+	@Expose
 	private int pruebaDeportivaIdpruebadeportiva;
+	@Expose
 	private Integer puntosacumulados;
+	@Expose
 	private Set<Comentario> comentarios = new HashSet<Comentario>(0);
+	@Expose
 	private Set<Voto> votos = new HashSet<Voto>(0);
 
 	public Multimedia() {

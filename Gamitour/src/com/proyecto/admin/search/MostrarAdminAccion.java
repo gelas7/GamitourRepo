@@ -40,6 +40,7 @@ import com.proyecto.util.Accion;
 public class MostrarAdminAccion extends Accion {
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
+		response.setCharacterEncoding("UTF8");
 
 		ServiceNoticias sn = new ServiceNoticiasImp();
 		ServiceClientesImp sc = new ServiceClientesImp();
@@ -65,16 +66,16 @@ public class MostrarAdminAccion extends Accion {
 		List<PruebaDeportiva> listaPruebasDeportivas = spd.buscarTodos();
 		List<Voto> listaVotos = sv.buscarTodos();
 		List<Multimedia> listaMultimedias = sm.buscarTodos();
-		
-		
-		// Guardo estos como atributos puesto que solo los necesito 
+
+
+		// Guardo estos como atributos puesto que solo los necesito
 		// en Mostrar y no en otras paginas
 		request.setAttribute("listaPremios", listaPremios);
 		request.setAttribute("listaVotos", listaVotos);
 		request.setAttribute("listaPruebasCulturales", listaPruebasCulturales);
 		request.setAttribute("listaActividades", listaActividades);
 		request.setAttribute("listaNoticias", listaNoticias);
-		request.setAttribute("listaComentarios",listaComentarios);
+		request.setAttribute("listaComentarios", listaComentarios);
 
 		// Guardo estos en sesion puesto que los necesito además en otros formularios
 		request.getSession().setAttribute("listaClientes", listaClientes);

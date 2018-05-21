@@ -13,6 +13,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.google.gson.annotations.Expose;
+
 
 @Entity
 @Table(name = "premio", catalog = "gamitour")
@@ -22,11 +24,17 @@ public class Premio implements java.io.Serializable{
 	private static final long serialVersionUID = 1L;
 	private Integer idpremio;
 	private Cliente cliente;
+	@Expose
 	private String nombre;
+	@Expose
 	private String descripcion;
+	@Expose
 	private String imagen;
+	@Expose
 	private Date fechaactivacion;
+	@Expose
 	private Date fechaconsumo;
+	@Expose
 	private Integer puntos;
 
 	public Premio() {

@@ -18,6 +18,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "cliente", catalog = "gamitour")
 public class Cliente implements java.io.Serializable {
@@ -25,21 +27,36 @@ public class Cliente implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	private Integer idcliente;
 	private Rol rol;
+	@Expose
 	private String nombre;
+	@Expose
 	private String apellidos;
+	@Expose
 	private Date fechanacimiento;
+	@Expose
 	private String email;
 	private String password;
+	@Expose
 	private String telefono;
+	@Expose
 	private String direccion;
+	@Expose
 	private String codigopostal;
+	@Expose
 	private String avatar;
+	@Expose
 	private Integer puntosacumulados;
+	@Expose
 	private Date fecharegistro;
+	@Expose
 	private Set<Premio> premios = new HashSet<Premio>(0);
+	@Expose
 	private Set<Voto> votos = new HashSet<Voto>(0);
+	@Expose
 	private Set<Comentario> comentarios = new HashSet<Comentario>(0);
+	@Expose
 	private Set<Actividad> actividades = new HashSet<Actividad>(0);
+	@Expose
 	private Set<Multimedia> multimedias = new HashSet<Multimedia>(0);
 
 	public Cliente() {

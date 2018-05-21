@@ -39,6 +39,7 @@ import com.proyecto.admin.update.ModificarPruebasCulturalesAccion;
 import com.proyecto.admin.update.ModificarPruebasDeportivasAccion;
 import com.proyecto.admin.update.ModificarRolesAccion;
 import com.proyecto.admin.update.ModificarVotosAccion;
+import com.proyecto.publico.search.MostrarPublicoAccion;
 
 public abstract class Accion {
 
@@ -48,7 +49,10 @@ public abstract class Accion {
 		Accion accion = null;
 
 		switch (tipo) {
-
+		
+		case "MostrarPublico":
+			accion = new MostrarPublicoAccion();
+			break;
 		case "BuscarAdmin":
 			accion = new BuscarAdminAccion();
 			break;

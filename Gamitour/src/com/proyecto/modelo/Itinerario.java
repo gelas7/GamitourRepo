@@ -11,16 +11,24 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "itinerario", catalog = "gamitour")
 public class Itinerario implements java.io.Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
 	private Integer iditinerario;
+	@Expose
 	private String nombre;
+	@Expose
 	private String categoria;
+	@Expose
 	private Integer duracion;
+	@Expose
 	private String ubicacion;
+	@Expose
 	private Set<Parada> paradas = new HashSet<Parada>(0);
 
 	public Itinerario() {

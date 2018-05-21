@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 
 @Entity
 @Table(name = "voto", catalog = "gamitour")
@@ -19,6 +21,7 @@ public class Voto implements java.io.Serializable{
 	private Integer idvoto;
 	private Cliente cliente;
 	private Multimedia multimedia;
+	@Expose
 	private Integer puntos;
 
 	public Voto() {

@@ -13,6 +13,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.google.gson.annotations.Expose;
+
 
 @Entity
 @Table(name = "pruebaDeportiva", catalog = "gamitour")
@@ -21,10 +23,15 @@ public class PruebaDeportiva implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	private Integer idpruebadeportiva;
 	private Parada parada;
+	@Expose
 	private String nombre;
+	@Expose
 	private Date fechainicio;
+	@Expose
 	private Date fechafin;
+	@Expose
 	private String explicacion;
+	@Expose
 	private Integer puntos;
 
 	public PruebaDeportiva() {

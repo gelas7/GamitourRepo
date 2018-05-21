@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 
 @Entity
 @Table(name = "pruebaCultural", catalog = "gamitour")
@@ -18,9 +20,13 @@ public class PruebaCultural implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	private Integer idpruebacultural;
 	private Parada parada;
+	@Expose
 	private String nombre;
+	@Expose
 	private String pregunta;
+	@Expose
 	private String respuesta;
+	@Expose
 	private Integer puntos;
 
 	public PruebaCultural() {

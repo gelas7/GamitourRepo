@@ -11,24 +11,39 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "parada", catalog = "gamitour")
 public class Parada implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private int idparada;
+	
 	private Itinerario itinerario;
+	@Expose
 	private String nombre;
+	@Expose
 	private Integer numeroParada;
+	@Expose
 	private String ubicacion;
+	@Expose
 	private String historia;
+	@Expose
 	private String anecdotario;
+	@Expose
 	private String gastronomia;
+	@Expose
 	private String imagen;
+	@Expose
 	private String video;
+	@Expose
 	private Set<PruebaCultural> pruebaculturales = new HashSet<PruebaCultural>(0);
+	@Expose
 	private Set<PruebaDeportiva> pruebadeportivas = new HashSet<PruebaDeportiva>(0);
+	@Expose
 	private Float latitud;
+	@Expose
 	private Float longitud;
 
 	public Parada() {
