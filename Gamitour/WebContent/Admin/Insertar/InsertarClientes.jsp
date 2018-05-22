@@ -58,7 +58,7 @@
 						type="date" name="fechanacimiento" required="required">
 				</p>
 				<p>
-					<label for="email">Email:</label> <input type="email" name="email"
+					<label for="email">E-mail:</label> <input type="email" name="email"
 						required="required" maxlength="50">
 				</p>
 				<p>
@@ -66,15 +66,15 @@
 						name="password" required="required" maxlength="20">
 				</p>
 				<p>
-					<label for="telefono">Telefono:</label> <input type="tel"
+					<label for="telefono">Teléfono:</label> <input type="tel"
 						name="telefono" required="required" maxlength="10">
 				</p>
 				<p>
-					<label for="direccion">Direccion:</label> <input type="text"
+					<label for="direccion">Dirección:</label> <input type="text"
 						name="direccion" required="required" maxlength="500">
 				</p>
 				<p>
-					<label for="codigopostal">Codigo Postal:</label> <input type="text"
+					<label for="codigopostal">Código Postal:</label> <input type="text"
 						name="codigopostal" required="required" maxlength="5">
 				</p>
 				<p>

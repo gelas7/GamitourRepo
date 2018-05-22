@@ -87,9 +87,7 @@ window.onload = function() {
 	    document.getElementById('paradas').style.display = 'block';
 	    var numItinerario = this.value;
 	    var divMapa, divDatos = "";
-	    contador = 0; // El contador para numeras los mapas empieza en 1
-	
-	    debugger;
+	    contador = 0;
 	
 	    var paradas = jsonItinerarios[numItinerario].paradas;
 	    document.getElementById('contenedorParadas').innerHTML = "";
@@ -115,9 +113,9 @@ window.onload = function() {
 	
 	function pintarParadas(paradas) { // Le paso el array de paradas
 	    contador = 0;
-	    for (let parada in paradas) { // Recorro las paradas
-	        var mapaActual = "mapaParada" + contador; // Construyo el id del
-	        // mapa actual
+	    for (let parada in paradas) {
+	        var mapaActual = "mapaParada" + contador; //mapaParadaX
+	        
 	        window[mapaActual] = new google.maps.Map(document.getElementById(mapaActual), {
 	            center: {
 	                lat: paradas[parada].latitud,
@@ -127,8 +125,7 @@ window.onload = function() {
 	        });
 	
 	        marker = new google.maps.Marker({ // Situo marcadores
-	            map: window[mapaActual], // Apunto al objeto mapa recien
-	            // creado
+	            map: window[mapaActual], 	  // Apunto al objeto mapa recien creado
 	            draggable: true,
 	            animation: google.maps.Animation.DROP,
 	            position: {

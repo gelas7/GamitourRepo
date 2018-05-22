@@ -54,7 +54,7 @@
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-				<label for="apellido">Apellido: </label> <input type="text" name="apellidos" maxlength="500"
+				<label for="apellido">Apellidos: </label> <input type="text" name="apellidos" maxlength="500"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getApellidos()%>">
 				</p>
 				<p>
@@ -62,7 +62,7 @@
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechanacimiento()%>">
 				</p>
 				<p>
-				<label for="email">Email: </label> <input type="text" name="email" maxlength="50"
+				<label for="email">E-mail: </label> <input type="text" name="email" maxlength="50"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getEmail()%>">
 				</p>
 				<p>
@@ -70,11 +70,11 @@
 						placeholder="********">
 				</p>
 				<p>
-					<label for="telefono">Telefono: </label><input type="tel" name="telefono" maxlength="10"
+					<label for="telefono">Teléfono: </label><input type="tel" name="telefono" maxlength="10"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTelefono()%>">
 				</p>
 				<p>
-					<label for="direccion">Direccion: </label> <input type="text" name="direccion" maxlength="500"
+					<label for="direccion">Dirección: </label> <input type="text" name="direccion" maxlength="500"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDireccion()%>">
 				</p>
 				<p>
@@ -82,7 +82,7 @@
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCodigopostal()%>">
 				</p>
 				<p>
-				<label for="puntosacumulados">Putos acumulados: </label> <input type="number" name="puntosacumulados" max="100000"
+				<label for="puntosacumulados">Puntos acumulados: </label> <input type="number" name="puntosacumulados" max="100000"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
 				</p>
 				<p>
