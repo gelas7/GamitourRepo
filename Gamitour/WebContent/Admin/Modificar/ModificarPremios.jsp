@@ -51,7 +51,7 @@
 					name="id">
 
 				<p>
-					<label>Nombre: </label><input type="text" name="nombre" maxlength="50"
+					<label>Nombre: </label><input type="text" name="nombre" maxlength="500"
 						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>

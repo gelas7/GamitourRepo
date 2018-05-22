@@ -66,7 +66,7 @@
 				</p>
 				<p>
 					<label>Ubicación: </label><input type="text" name="ubicacion"
-						required="required" maxlength="50">
+						required="required" maxlength="500">
 				</p>
 				<p>
 					<label>Puntos: </label><input type="number" name="puntos"

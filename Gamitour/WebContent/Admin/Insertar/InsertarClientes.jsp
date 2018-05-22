@@ -47,11 +47,11 @@
 				<h2>Insertar Cliente</h2>
 				<p>
 					<label for="nombre">Nombre:</label> <input type="text"
-						name="nombre" required="required" maxlength="50">
+						name="nombre" required="required" maxlength="500">
 				</p>
 				<p>
 					<label for="apellidos">Apellidos:</label> <input type="text"
-						name="apellidos" required="required" maxlength="50">
+						name="apellidos" required="required" maxlength="500">
 				</p>
 				<p>
 					<label for="fechanacimiento">Fecha de nacimiento:</label> <input
@@ -71,7 +71,7 @@
 				</p>
 				<p>
 					<label for="direccion">Direccion:</label> <input type="text"
-						name="direccion" required="required" maxlength="50">
+						name="direccion" required="required" maxlength="500">
 				</p>
 				<p>
 					<label for="codigopostal">Codigo Postal:</label> <input type="text"

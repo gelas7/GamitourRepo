@@ -81,7 +81,7 @@
 					<label> Imagen: </label><input type="file" name="imagen">
 				</p>
 				<p>
-					<label>Video: </label><input type="file" name="video">
+					<label> Video: </label><input type="file" name="video">
 				</p>
 				<p>
 					<input type="submit" value="Enviar" id="enviar">

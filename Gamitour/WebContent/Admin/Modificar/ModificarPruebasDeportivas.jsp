@@ -50,7 +50,7 @@
 					name="id">
 				<p>
 					<label>Nombre:</label> <input type="text" name="nombre"
-						maxlength="50"
+						maxlength="500"
 						placeholder="<%=spd.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>

@@ -51,12 +51,12 @@
 
 				<p>
 					<label>Nombre: </label> <input type="text" name="nombreN"
-						maxlength="50"
+						maxlength="500"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
 					<label>Categoria: </label> <input type="text" name="categoria"
-						maxlength="50"
+						maxlength="500"
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCategoria()%>">
 				</p>
 				<p>

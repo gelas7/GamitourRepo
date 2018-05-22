@@ -48,7 +48,7 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					<label>Nombre: </label> <input type="text" name="nombre" maxlength="50"
+					<label>Nombre: </label> <input type="text" name="nombre" maxlength="500"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
@@ -61,7 +61,7 @@
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>">
 				</p>
 				<p>
-					<label>Ubicacion: </label> <input type="text" name="ubicacion" maxlength="50"
+					<label>Ubicacion: </label> <input type="text" name="ubicacion" maxlength="500"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
 				</p>
 				<p>

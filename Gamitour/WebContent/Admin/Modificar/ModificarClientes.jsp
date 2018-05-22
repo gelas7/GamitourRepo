@@ -50,11 +50,11 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					<label for="nombre">Nombre: </label> <input type="text" name="nombre" maxlength="50"
+					<label for="nombre">Nombre: </label> <input type="text" name="nombre" maxlength="500"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-				<label for="apellido">Apellido: </label> <input type="text" name="apellidos" maxlength="50"
+				<label for="apellido">Apellido: </label> <input type="text" name="apellidos" maxlength="500"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getApellidos()%>">
 				</p>
 				<p>
@@ -74,7 +74,7 @@
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTelefono()%>">
 				</p>
 				<p>
-					<label for="direccion">Direccion: </label> <input type="text" name="direccion" maxlength="50"
+					<label for="direccion">Direccion: </label> <input type="text" name="direccion" maxlength="500"
 						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDireccion()%>">
 				</p>
 				<p>

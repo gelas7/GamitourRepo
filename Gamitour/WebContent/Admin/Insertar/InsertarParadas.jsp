@@ -52,7 +52,7 @@
 					<h2>Insertar Parada</h2>
 					<p>
 						<label>Nombre: </label><input type="text" name="nombre"
-							required="required" maxlength="50">
+							required="required" maxlength="500">
 					</p>
 					<p>
 						<label>Numero de parada: </label><input type="number"

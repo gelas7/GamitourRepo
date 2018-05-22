@@ -88,7 +88,7 @@
 					
 					<p>
 						<label>Ubicación: </label><input type="text" id="search" name="ubicacion"
-							required="required" maxlength="50">
+							required="required" maxlength="500">
 
 						<button type="button" id="btnOK">Obtener coordenadas</button>
 					</p>

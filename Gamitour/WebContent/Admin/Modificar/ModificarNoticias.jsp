@@ -48,7 +48,7 @@
 				<input type="hidden" value="<%=request.getParameter("id")%>"
 					name="id">
 				<p>
-					<label>Nombre: </label><input type="text" name="nombreN" maxlength="50"
+					<label>Nombre: </label><input type="text" name="nombreN" maxlength="500"
 						placeholder="<%=sn.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
