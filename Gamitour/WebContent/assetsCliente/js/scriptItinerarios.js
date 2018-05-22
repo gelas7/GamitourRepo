@@ -25,11 +25,8 @@ window.onload = function() {
                 destino = jsonItinerarios[j].paradas[jsonItinerarios[j].paradas.length - 1].ubicacion; // Ultima
 
             var divMapa = `
-                <div id="mapaItinerario${j}" class="mapItinerario">
-                </div>
+                <div id="mapaItinerario${j}" class="mapItinerario"></div>
                 <button id="tituloItinerario${j}" class="botonesItinerario" value=${j}>${jsonItinerarios[j].nombre}</button> 
-                <div id="direccionesItinerario${j}" class="directions">
-                </div>
                 `;
             document.getElementById("contenedorItinerarios").innerHTML += divMapa;
 
@@ -46,44 +43,32 @@ window.onload = function() {
             pintarItinerario(origen, destino, waypts, j);
             cargarBotones();
         }
+    }
+    
+    function pintarItinerario(start, end, puntosIntermedios, numMapa) {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
 
-        function pintarItinerario(start, end, puntosIntermedios, numMapa) {
-            var directionsService = new google.maps.DirectionsService;
-            var directionsDisplay = new google.maps.DirectionsRenderer;
+        directionsService.route({
+            origin: start, // Aqui origen y destino
+            destination: end,
+            waypoints: puntosIntermedios,
+            optimizeWaypoints: true,
+            travelMode: 'WALKING' // Modo de viaje
+        }, function(response, status) {
 
-            directionsService.route({
-                origin: start, // Aqui origen y destino
-                destination: end,
-                waypoints: puntosIntermedios,
-                optimizeWaypoints: true,
-                travelMode: 'WALKING' // Modo de viaje
-            }, function(response, status) {
-            	debugger;
+            if (status === 'OK') {
+                var mapaActual = "mapaItinerario" + numMapa;
+                var panelDireccionesActual = 'direccionesItinerario' + numMapa;
+                window[mapaActual] = new google.maps.Map(document.getElementById(mapaActual));
 
-                if (status === 'OK') {
-                    var mapaActual = "mapaItinerario" + numMapa;
-                    var panelDireccionesActual = 'direccionesItinerario' + numMapa;
-                    window[mapaActual] = new google.maps.Map(document.getElementById(mapaActual));
+                directionsDisplay.setMap(window[mapaActual]);
+                directionsDisplay.setDirections(response);
 
-                    directionsDisplay.setMap(window[mapaActual]);
-                    directionsDisplay.setDirections(response);
-                    var route = response.routes[0];
-                    var summaryPanel = document.getElementById(panelDireccionesActual);
-                	debugger;
-                    for (var i = 0; i < route.legs.length; i++) {
-                        var routeSegment = i + 1;
-                        summaryPanel.innerHTML += '<b>Parte ' + routeSegment +
-                            ' del Itinerario</b><br>';
-                        summaryPanel.innerHTML += route.legs[i].start_address + ' hacia ';
-                        summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-                        summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
-                    }
-
-                } else {
-                    window.alert('Error en las direcciones');
-                }
-            });
-        }
+            } else {
+                window.alert('Error en las direcciones: '+status);
+            }
+        });
     }
 
 	
@@ -109,9 +94,7 @@ window.onload = function() {
 	    var paradas = jsonItinerarios[numItinerario].paradas;
 	    document.getElementById('contenedorParadas').innerHTML = "";
 	
-	    for (let parada in paradas) { // Recorro las paradas para pintar
-	        // sus
-	        // divs con titulo
+	    for (let parada in paradas) {
 	        divMapa = `
 		                <div id="mapaParada${contador}" class="mapParada"></div>
 		                <div id="indicacionesParada${contador}" class="datosParadas">

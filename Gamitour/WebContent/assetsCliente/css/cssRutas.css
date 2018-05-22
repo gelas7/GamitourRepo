@@ -92,7 +92,6 @@ li a:hover {
     height: 220px;
 }
 
-.directions,
 .datosParadas {
     padding: 10px;
     width: 250px;
@@ -101,7 +100,6 @@ li a:hover {
     border: 1px solid black;
 }
 
-.directions:hover,
 .datosParadas:hover {
     font-size: 22px;
     height: 240px;
@@ -110,9 +108,7 @@ li a:hover {
 
 #contenedorItinerarios,
 #contenedorParadas {
-    display: grid;
-    grid-template-columns: repeat(12, [ col-start] 1fr);
-    grid-gap: 20px;
+    display: flex;
     color: oldlace;
 }
 
@@ -120,20 +116,14 @@ li a:hover {
 /*ITINERARIOS*/
 
 #mapaItinerario0 {
-    grid-column: col-start 2/span 5;
-    grid-row: 1;
     border: 3px solid #82e0aa;
 }
 
 #mapaItinerario1 {
-    grid-column: col-start 5/span 5;
-    grid-row: 3;
     border: 3px solid #f9e79f;
 }
 
 #mapaItinerario2 {
-    grid-column: col-start 8/span 5;
-    grid-row: 1;
     border: 3px solid #f5b7b1;
 }
 
@@ -141,24 +131,18 @@ li a:hover {
     color: #82e0aa;
     font-family: 'Amatic SC', cursive;
     font-size: 28px;
-    grid-column: col-start 2/span 3;
-    grid-row: 2;
 }
 
 #tituloItinerario1 {
     color: #f9e79f;
     font-size: 28px;
     font-family: 'Amatic SC', cursive;
-    grid-column: col-start 5/span 3;
-    grid-row: 2;
 }
 
 #tituloItinerario2 {
     color: #f5b7b1;
     font-size: 28px;
     font-family: 'Amatic SC', cursive;
-    grid-column: col-start 8/span 3;
-    grid-row: 2;
 }
 
 #tituloItinerario0:hover,
@@ -168,58 +152,29 @@ li a:hover {
     transition: 0.8s;
 }
 
-#direccionesItinerario0 {
-    border-color: #82e0aa;
-    grid-column: col-start 2/span 5;
-    grid-row: 3;
-}
-
-#direccionesItinerario1 {
-    border-color: #f9e79f;
-    grid-column: col-start 5/span 5;
-    grid-row: 1;
-}
-
-#direccionesItinerario2 {
-    border-color: #f5b7b1;
-    grid-column: col-start 8/span 5;
-    grid-row: 3;
-}
-
 
 /*PARADAS*/
 
 #mapaParada0 {
-    grid-column: col-start 2/span 5;
-    grid-row: 1;
 }
 
 #mapaParada1 {
-    grid-column: col-start 5/span 5;
-    grid-row: 3;
+
 }
 
 #mapaParada2 {
-    grid-column: col-start 8/span 5;
-    grid-row: 1;
 }
 
 #indicacionesParada0 {
     border: 3px solid #f4d03f;
-    grid-column: col-start 2/span 5;
-    grid-row: 3;
 }
 
 #indicacionesParada1 {
     border: 3px solid #f4d03f;
-    grid-column: col-start 5/span 5;
-    grid-row: 1;
 }
 
 #indicacionesParada2 {
     border: 3px solid #f4d03f;
-    grid-column: col-start 8/span 5;
-    grid-row: 3;
 }
 
 @media ( max-width: 600px) {
@@ -244,7 +199,7 @@ li a:hover {
     .mapParada {
         margin-top: 40px;
     }
-    .directions,
+    
     .datosParadas {
         width: 225px;
         height: 200px;
@@ -256,7 +211,7 @@ li a:hover {
     .botonesItinerario {
         margin-top: 30px;
     }
-    .directions:hover,
+    
     .datosParadas:hover {
         font-size: 16px;
         height: 200px;
