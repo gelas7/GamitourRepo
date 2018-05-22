@@ -9,7 +9,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Gamiastur</title>
 
-<link rel='stylesheet' href='assetsCliente/css/cssRutas.css' />
+<link rel='stylesheet' href='assetsCliente/css/style.css' />
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cuprum|Francois+One|Shadows+Into+Light" rel="stylesheet">
 <script src="assetsCliente/js/scriptItinerarios.js" type="text/javascript"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
@@ -21,19 +21,20 @@
 <body>
 
 	<div class="cabecera">
-		<ul>
-			<li><a href="Cliente/index.html"><i class="material-icons"
+		 <ul>
+            <li><a href="index.html"><i class="material-icons"
 					style="font-size: 35px;">home</i>INICIO</a></li>
-			<li><a href="MostrarPublico.cl"><i class="material-icons"
+            <li><a href="../MostrarPublico.cl"><i class="material-icons"
 					style="font-size: 35px;">map</i>RUTAS</a></li>
-			<li><a href="#"><i class="material-icons"
+            <li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
-			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">movie</i>MULTIMEDIA</a></li>
-		</ul>
+            <li><a href="Cliente/Login/Register.jsp"><i class="material-icons"
+					style="font-size: 35px;">perm_identity</i>REGISTRO</a>
+            </li>
+        </ul>
 	</div>
 
-	<div id="contenido">
+	<div class="contenido">
 
 		<input type="hidden" id="listaItinerarios" value='${listaItinerarios}' />
 

@@ -52,10 +52,13 @@ public abstract class Accion {
 		Accion accion = null;
 
 		switch (tipo) {
-		
+		//CLIENTES
 		case "MostrarPublico":
 			accion = new MostrarPublicoAccion();
 			break;
+			
+			
+		//ADMIN
 		case "BuscarAdmin":
 			accion = new BuscarAdminAccion();
 			break;

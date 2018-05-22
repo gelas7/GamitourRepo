@@ -12,7 +12,7 @@
 <title>Gamiastur</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
-<link href="../../assetsCliente/css/cssIndex.css" rel="stylesheet"
+<link href="../../assetsCliente/css/style.css" rel="stylesheet"
 	type="text/css" media="screen" />
 </head>
 
@@ -26,17 +26,15 @@
 					class="material-icons" style="font-size: 35px;">map</i>RUTAS</a></li>
 			<li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
-			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">movie</i>CLIENTES</a></li>
+			<li><a href="../Login/Register.jsp"><i class="material-icons"
+					style="font-size: 35px;">perm_identity</i>REGISTRO</a></li>
 		</ul>
 	</div>
 
-	<div class="contenido">
-		<form action="../../InsertarClientesAccion" method="post"
+	<div class="main">
+		<h2>Datos personales: </h2>
+		<form action="/Gamitour/RegistrarClientesAccion" method="post"
 			enctype="multipart/form-data">
-
-			<input type="hidden" name="rol" value="registrado">
-			<!-- Rol registrado fijado -->
 
 			<p>
 				<label for="nombre">Nombre:</label> <input type="text" name="nombre"
@@ -89,7 +87,7 @@
 			</p>
 
 			<p>
-				<input type="submit" value="Enviar" id="enviar" disabled="disabled">
+				<input type="submit" value="Enviar" id="enviar" >
 			</p>
 
 		</form>
