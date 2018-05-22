@@ -92,15 +92,20 @@ window.onload = function() {
 	    document.getElementById('contenedorParadas').innerHTML = "";
 	
 	    for (let parada in paradas) {
-	        divMapa = `
-		                <div id="mapaParada${contador}" class="mapParada"></div>
+	        divMapa = `	<p class="tituloParada"><a>${paradas[parada].nombre}</a></p>
+	        			<div id="mapaParada${contador}" class="mapParada"></div>
 		                <div id="indicacionesParada${contador}" class="datosParadas">
-		                <a class="tituloIndicaciones">Datos de ${paradas[parada].nombre}:</a> <br><br>
-		                <a><b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>
-		                <a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>
-		                <a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br><br><br>
-		                </div>
-		                 `;
+		                <br><br>`;
+
+	        if(paradas[parada].gastronomia.length>2)
+	        	divMapa+=`<a><b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>`;
+	        if(paradas[parada].historia.length>2)
+	        	divMapa+=`<a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>`;
+	        if(paradas[parada].anecdotario.length>2)
+	        	divMapa+=`<a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br>`;
+	        
+	        divMapa+=`<br><br></div>`;
+	        	
 	        document.getElementById("contenedorParadas").innerHTML += divMapa;
 	
 	        contador++;
@@ -113,7 +118,7 @@ window.onload = function() {
 	function pintarParadas(paradas) { // Le paso el array de paradas
 	    contador = 0;
 	    for (let parada in paradas) {
-	        var mapaActual = "mapaParada" + contador; //mapaParadaX
+	        var mapaActual = "mapaParada" + contador; // mapaParadaX
 	        
 	        window[mapaActual] = new google.maps.Map(document.getElementById(mapaActual), {
 	            center: {
@@ -124,7 +129,8 @@ window.onload = function() {
 	        });
 	
 	        marker = new google.maps.Marker({ // Situo marcadores
-	            map: window[mapaActual], 	  // Apunto al objeto mapa recien creado
+	            map: window[mapaActual], 	  // Apunto al objeto mapa recien
+												// creado
 	            draggable: true,
 	            animation: google.maps.Animation.DROP,
 	            position: {

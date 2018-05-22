@@ -1,157 +1,153 @@
-html,
-body {
-    height: 100%;
-    padding: 0;
-    margin-left: 0;
-    margin-bottom: 40px;
+html, body {
+	height: 100%;
+	padding: 0;
+	margin-left: 0;
+	margin-bottom: 40px;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
-ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
-}
-
-li {
-    width: 100%;
-}
-
-li a {
-    display: block;
-    font-size: 20px;
-    font-weight: 600;
-    color: rgb(32, 30, 30);
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-    font-family: 'Francois One', sans-serif;
-}
-
-li a:hover {
-    background-color: rgb(23, 24, 23);
-    color: #f4d03f;
+video {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	transition: 1s opacity;
 }
 
 .cabecera {
-    color: rgb(23, 24, 23);
-    background-color: #f4d03f;
-    justify-content: center;
-    margin-bottom: 25px;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
+	color: rgb(23, 24, 23);
+	background-color: #f4d03f;
+	justify-content: center;
+	margin-bottom: 25px;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	width: 100%;
+	box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
+}
+
+.cabecera ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.cabecera li {
+	width: 100%;
+}
+
+.cabecera li a {
+	display: block;
+	font-size: 20px;
+	font-weight: 600;
+	color: rgb(32, 30, 30);
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+	font-family: 'Francois One', sans-serif;
+}
+
+.cabecera li a:hover {
+	background-color: rgb(23, 24, 23);
+	color: #f4d03f;
 }
 
 .cabecera i {
-    display: none;
+	display: none;
 }
 
 .cabecera p {
-    display: inline;
+	display: inline;
 }
 
-.main{
+.main {
 	margin: 30 0 10 30;
 }
-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-    transition: 1s opacity;
+
+.pestanaInicio {
+	margin-top: 100px;
+	font-family: 'Amatic SC', cursive;
+	font-weight: 100;
+	font-size: 30px;
+	background: RGB(246, 220, 79);
+	color: rgb(7, 7, 7);
+	padding: 2rem;
+	width: 33%;
+	margin: 3rem;
+	float: right;
 }
 
-#gamitour {
-    margin-top: 100px;
-    font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-    font-weight: 100;
-    background: rgba(243, 227, 6, 0.322);
-    color: rgb(7, 7, 7);
-    padding: 2rem;
-    width: 33%;
-    margin: 3rem;
-    float: right;
-    font-size: 30px;
-    font-family: 'Amatic SC', cursive;
+.pestanaInicio h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	margin-top: 0;
+	letter-spacing: .3rem;
 }
 
-h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin-top: 0;
-    letter-spacing: .3rem;
+.pestanaInicio button {
+	display: block;
+	width: 80%;
+	padding: .4rem;
+	border: none;
+	margin: 1rem auto;
+	font-size: 1.3rem;
+	background: RGB(216, 192, 49);
+	color: rgb(59, 56, 56);
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .3s background;
 }
 
-#gamitour button {
-    display: block;
-    width: 80%;
-    padding: .4rem;
-    border: none;
-    margin: 1rem auto;
-    font-size: 1.3rem;
-    background: rgba(252, 227, 7, 0.788);
-    color: rgb(59, 56, 56);
-    border-radius: 3px;
-    cursor: pointer;
-    transition: .3s background;
+.pestanaInicio button:hover {
+	background: black;
+	color: rgba(252, 227, 7, 0.788);
 }
 
-#gamitour button:hover {
-    background: black;
-    color: rgba(252, 227, 7, 0.788);
-}
-
-@media (max-width: 600px) {
-    html,
-    body {
-        background-image: url("../img/p1.jpg");
-        background-size: 100%;
-        width: 100%;
-        height: 600px;
-        padding: 0;
-        margin-left: 0;
-        margin-bottom: 10px;
-        background-color: rgb(90, 88, 88);
-    }
-    #gamitour {
-        float: left;
-        margin-top: 60px;
-        font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-        font-weight: 100;
-        background: rgba(243, 227, 6, 0.322);
-        color: rgb(7, 7, 7);
-        width: 33%;
-        font-size: 17px;
-        font-family: 'Amatic SC', cursive;
-    }
-    h1 {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        margin-top: 0;
-        letter-spacing: .3rem;
-    }
-    video {
-        display: none;
-        width: 0px;
-    }
-    .cabecera i {
-        display: block;
-    }
-    .cabecera p {
-        display: none;
-    }
+@media ( max-width : 600px) {
+	html, body {
+		background-image: url("../img/p1.jpg");
+		background-size: 100%;
+		width: 100%;
+		height: 600px;
+		padding: 0;
+		margin-left: 0;
+		margin-bottom: 10px;
+		background-color: rgb(90, 88, 88);
+	}
+	.pestanaInicio {
+		float: left;
+		margin-top: 60px;
+		font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow,
+			sans-serif;
+		font-weight: 500;
+		font-size: 17px;
+		background: rgba(243, 227, 6, 0.322);
+		color: rgb(7, 7, 7);
+		width: 33%;
+		font-family: 'Amatic SC', cursive;
+	}
+	.pestanaInicio h1 {
+		font-size: 1.8em;
+		font-weight: 500;
+	}
+	video {
+		display: none;
+	}
+	.cabecera i {
+		display: block;
+	}
+	.cabecera p {
+		display: none;
+	}
 }
