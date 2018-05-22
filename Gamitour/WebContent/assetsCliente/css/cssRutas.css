@@ -87,7 +87,7 @@ li a:hover {
 	color: orange;
 }
 
-.mapItinerario {
+.mapItinerario{
 	border: 1px solid #f4d03f;
 	margin: 0 auto 20px auto;
 	width: 500px;
@@ -132,27 +132,35 @@ li a:hover {
 @media ( max-width : 600px) {
 	html, body {
 		background-color: #1d1c1c;
-		/*background-size: 100%;*/
 		background-color: rgb(90, 88, 88);
 		min-width: 400px;
 	}
+	
 	#contenido {
 		margin: 80px auto 40px auto;
 		align-items: center;
 	}
+	
 	#contenedorParadas, #contenedorItinerarios {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
+	
 	.mapItinerario, .mapParada {
-		margin-top: 40px;
+		margin-top: 20px;
+		width:300px;
+		height:200px;
+	}
+	
+	.tituloParada{
+		margin-top: 70px;
 	}
 	.datosParadas {
 		display: none;
 	}
 	.botonesItinerario {
-		margin-top: 30px;
+		margin-top: 40px;
 	}
 	.datosParadas:hover {
 		font-size: 16px;
