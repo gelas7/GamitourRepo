@@ -1,226 +1,210 @@
-html,
-body {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    min-width: 1050px;
-    margin-bottom: 40px;
-    margin-left: 0;
-    background-color: #3f3d3d;
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	min-width: 1050px;
+	margin-bottom: 40px;
+	margin-left: 0;
+	background-color: #3f3d3d;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
 }
 
 li {
-    width: 100%;
+	width: 100%;
 }
 
 li a {
-    display: block;
-    font-size: 20px;
-    font-weight: 600;
-    color: rgb(32, 30, 30);
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-    font-family: 'Francois One', sans-serif;
+	display: block;
+	font-size: 20px;
+	font-weight: 600;
+	color: rgb(32, 30, 30);
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+	font-family: 'Francois One', sans-serif;
 }
 
 li a:hover {
-    background-color: rgb(23, 24, 23);
-    color: #f4d03f;
+	background-color: rgb(23, 24, 23);
+	color: #f4d03f;
 }
 
 .cabecera {
-    color: rgb(23, 24, 23);
-    background-color: #f4d03f;
-    justify-content: center;
-    margin-bottom: 25px;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
+	color: rgb(23, 24, 23);
+	background-color: #f4d03f;
+	justify-content: center;
+	margin-bottom: 25px;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	width: 100%;
+	box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
 }
 
 .cabecera i {
-    display: none;
+	display: none;
 }
 
 .cabecera p {
-    display: inline;
+	display: inline;
 }
 
 #contenido {
-    font-size: 18px;
-    font-family: 'Cuprum', sans-serif;
-    margin-top: 95px;
-    margin-left: 80px;
+	font-size: 18px;
+	font-family: 'Cuprum', sans-serif;
+	margin-top: 95px;
+	margin-left: 80px;
 }
 
 .tituloIndicaciones {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 .botonesItinerario {
-    width: 100%;
-    border: none;
-    background-color: transparent;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
 }
 
 .botonesItinerario:hover {
-    color: rgb(77, 77, 143);
+	color: rgb(77, 77, 143);
 }
 
-.mapItinerario,
+.mapItinerario {
+	display: flex;
+	width: 250px;
+	height: 220px;
+	width: 250px;
+	margin-right: 20px;
+}
+
 .mapParada {
-    width: 250px;
-    height: 220px;
+	display: flex;
+	width: 90%;
+	height: 320px;
+	margin-top: 20px;
+	height: 320px;
+}
+
+#contenedorItinerarios {
+	display: flex;
+	color: oldlace;
+}
+
+#contenedorParadas {
+	display: flex-row;
 }
 
 .datosParadas {
-    padding: 10px;
-    width: 250px;
-    height: 200px;
-    text-align: center;
-    border: 1px solid black;
+	margin-top: 20px;
+	color: white;
+	width: 90%;
+	border: 3px solid #f4d03f;
 }
-
-.datosParadas:hover {
-    font-size: 22px;
-    height: 240px;
-    cursor: url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/map-marker-icon.png'), auto;
-}
-
-#contenedorItinerarios,
-#contenedorParadas {
-    display: flex;
-    color: oldlace;
-}
-
-
 /*ITINERARIOS*/
-
 #mapaItinerario0 {
-    border: 3px solid #82e0aa;
+	border: 3px solid #82e0aa;
 }
 
 #mapaItinerario1 {
-    border: 3px solid #f9e79f;
+	border: 3px solid #f9e79f;
 }
 
 #mapaItinerario2 {
-    border: 3px solid #f5b7b1;
+	border: 3px solid #f5b7b1;
 }
 
 #tituloItinerario0 {
-    color: #82e0aa;
-    font-family: 'Amatic SC', cursive;
-    font-size: 28px;
+	color: #82e0aa;
+	font-family: 'Amatic SC', cursive;
+	font-size: 28px;
 }
 
 #tituloItinerario1 {
-    color: #f9e79f;
-    font-size: 28px;
-    font-family: 'Amatic SC', cursive;
+	color: #f9e79f;
+	font-size: 28px;
+	font-family: 'Amatic SC', cursive;
 }
 
 #tituloItinerario2 {
-    color: #f5b7b1;
-    font-size: 28px;
-    font-family: 'Amatic SC', cursive;
+	color: #f5b7b1;
+	font-size: 28px;
+	font-family: 'Amatic SC', cursive;
 }
 
-#tituloItinerario0:hover,
-#tituloItinerario1:hover,
-#tituloItinerario2:hover {
-    font-size: 30px;
-    transition: 0.8s;
+#tituloItinerario0:hover, #tituloItinerario1:hover, #tituloItinerario2:hover
+	{
+	font-size: 30px;
+	transition: 0.8s;
 }
-
 
 /*PARADAS*/
-
 #mapaParada0 {
+	
 }
 
 #mapaParada1 {
-
+	
 }
 
 #mapaParada2 {
+	
 }
 
-#indicacionesParada0 {
-    border: 3px solid #f4d03f;
-}
-
-#indicacionesParada1 {
-    border: 3px solid #f4d03f;
-}
-
-#indicacionesParada2 {
-    border: 3px solid #f4d03f;
-}
-
-@media ( max-width: 600px) {
-    html,
-    body {
-        background-color: #1d1c1c;
-        /*background-size: 100%;*/
-        background-color: rgb(90, 88, 88);
-        min-width: 400px;
-    }
-    #contenido {
-        margin: 80px auto 40px auto;
-        align-items: center;
-    }
-    #contenedorParadas,
-    #contenedorItinerarios {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .mapItinerario,
-    .mapParada {
-        margin-top: 40px;
-    }
-    
-    .datosParadas {
-        width: 225px;
-        height: 200px;
-        margin-top: 40px;
-        font-size: 16px;
-        text-align: center;
-        border: 1px solid black;
-    }
-    .botonesItinerario {
-        margin-top: 30px;
-    }
-    
-    .datosParadas:hover {
-        font-size: 16px;
-        height: 200px;
-        cursor: none;
-    }
-    .cabecera i {
-        display: block;
-    }
-    .cabecera p {
-        display: none;
-    }
+@media ( max-width : 600px) {
+	html, body {
+		background-color: #1d1c1c;
+		/*background-size: 100%;*/
+		background-color: rgb(90, 88, 88);
+		min-width: 400px;
+	}
+	#contenido {
+		margin: 80px auto 40px auto;
+		align-items: center;
+	}
+	#contenedorParadas, #contenedorItinerarios {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.mapItinerario, .mapParada {
+		margin-top: 40px;
+	}
+	.datosParadas {
+		width: 225px;
+		height: 200px;
+		margin-top: 40px;
+		font-size: 16px;
+		text-align: center;
+		border: 1px solid black;
+	}
+	.botonesItinerario {
+		margin-top: 30px;
+	}
+	.datosParadas:hover {
+		font-size: 16px;
+		height: 200px;
+		cursor: none;
+	}
+	.cabecera i {
+		display: block;
+	}
+	.cabecera p {
+		display: none;
+	}
 }
