@@ -25,9 +25,8 @@ window.onload = function() {
                 destino = jsonItinerarios[j].paradas[jsonItinerarios[j].paradas.length - 1].ubicacion; // Ultima
 
             var divMapa = `
-                <div id="mapaItinerario${j}" class="mapItinerario"></div>
-                <button id="tituloItinerario${j}" class="botonesItinerario" value=${j}>${jsonItinerarios[j].nombre}</button> 
-                `;
+            	<button id="tituloItinerario${j}" class="botonesItinerario" value=${j}>${jsonItinerarios[j].nombre}</button>
+                <div id="mapaItinerario${j}" class="mapItinerario"></div>`;
             document.getElementById("contenedorItinerarios").innerHTML += divMapa;
 
             if (jsonItinerarios[j].paradas.length > 2) { // Resto de paradas

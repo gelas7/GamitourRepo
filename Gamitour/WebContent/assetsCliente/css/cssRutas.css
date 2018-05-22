@@ -68,103 +68,54 @@ li a:hover {
 	margin-left: 80px;
 }
 
-.tituloIndicaciones {
-	font-weight: 600;
-}
-
 .botonesItinerario {
 	width: 100%;
 	border: none;
+	color: #f4d03f;
 	background-color: transparent;
 	font-size: 18px;
 	font-weight: 600;
 	cursor: pointer;
+	margin: 20px 0 20px 0;
 }
 
 .botonesItinerario:hover {
-	color: rgb(77, 77, 143);
+	color: orange;
 }
 
 .mapItinerario {
-	display: flex;
+	border: 1px solid #f4d03f;
+	margin: 0 auto;
 	width: 250px;
-	height: 220px;
-	width: 250px;
-	margin-right: 20px;
+	height: 250px;
 }
 
 .mapParada {
-	display: flex;
-	width: 90%;
-	height: 320px;
-	margin-top: 20px;
-	height: 320px;
+	border: 1px solid #f4d03f;
+	margin: 0 auto;
+	width: 250px;
+	height: 250px;
 }
 
 #contenedorItinerarios {
 	display: flex;
-	color: oldlace;
+	flex-direction: column;
 }
 
 #contenedorParadas {
-	display: flex-row;
+	display: flex;
+	flex-direction: column;
 }
 
 .datosParadas {
-	margin-top: 20px;
+	margin: 20px;
+	padding:10px;
+	text-align: justified;
 	color: white;
-	width: 90%;
-	border: 3px solid #f4d03f;
-}
-/*ITINERARIOS*/
-#mapaItinerario0 {
-	border: 3px solid #82e0aa;
+	border: 2px solid #f4d03f;
 }
 
-#mapaItinerario1 {
-	border: 3px solid #f9e79f;
-}
-
-#mapaItinerario2 {
-	border: 3px solid #f5b7b1;
-}
-
-#tituloItinerario0 {
-	color: #82e0aa;
-	font-family: 'Amatic SC', cursive;
-	font-size: 28px;
-}
-
-#tituloItinerario1 {
-	color: #f9e79f;
-	font-size: 28px;
-	font-family: 'Amatic SC', cursive;
-}
-
-#tituloItinerario2 {
-	color: #f5b7b1;
-	font-size: 28px;
-	font-family: 'Amatic SC', cursive;
-}
-
-#tituloItinerario0:hover, #tituloItinerario1:hover, #tituloItinerario2:hover
-	{
-	font-size: 30px;
-	transition: 0.8s;
-}
-
-/*PARADAS*/
-#mapaParada0 {
-	
-}
-
-#mapaParada1 {
-	
-}
-
-#mapaParada2 {
-	
-}
+/**MEDIA QUERIES**/
 
 @media ( max-width : 600px) {
 	html, body {
