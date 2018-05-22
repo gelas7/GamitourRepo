@@ -34,7 +34,7 @@
         </ul>
 	</div>
 
-	<div class="contenido">
+	<div id="contenido">
 
 		<input type="hidden" id="listaItinerarios" value='${listaItinerarios}' />
 
