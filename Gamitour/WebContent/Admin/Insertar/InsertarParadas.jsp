@@ -99,11 +99,11 @@
 					</p>
 					<p>
 						<label>Latitud: </label><input type="text" id="lat" name="latitud"
-							readonly>
+							required onkeypress="return false;">
 					</p>
 					<p>
 						<label>Longitud: </label><input type="text" id="lng"
-							name="longitud" readonly>
+							name="longitud" required onkeypress="return false;">
 					</p>
 					<p>
 						<input type="submit" value="Enviar" id="enviar">

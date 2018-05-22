@@ -55,9 +55,16 @@
 						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
 				</p>
 				<p>
-					<label>Categoria: </label> <input type="text" name="categoria"
-						maxlength="500"
-						placeholder="<%=si.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCategoria()%>">
+					<label for="categoria">Categoria:</label> <select name="categoria"
+						required="required">
+						<option selected disabled>Seleccione una categoría</option>
+						<option value="Deporte">Deporte</option>
+						<option value="Cultura">Cultura</option>
+						<option value="Ocio">Ocio</option>
+						<option value="Viajes">Viajes</option>
+						<option value="Naturaleza">Naturaleza</option>
+						<option value="Accesibilidad">Accesibilidad</option>
+					</select>
 				</p>
 				<p>
 					<label>Nº de horas: </label><input type="number" name="duracion"

@@ -93,10 +93,10 @@
 						<button type="button" id="btnOK">Obtener coordenadas</button>
 					</p>
 					<p>
-						<label>Latitud: </label><input type="text" id="lat" name="latitud" readonly>
+						<label>Latitud: </label><input type="text" id="lat" name="latitud" required onkeypress="return false;">
 					</p>
 					<p>
-						<label>Longitud: </label><input type="text" id="lng" name="longitud" readonly>
+						<label>Longitud: </label><input type="text" id="lng" name="longitud" required onkeypress="return false;">
 					</p>
 					<p>
 						<input type="submit" value="Enviar" id="enviar">

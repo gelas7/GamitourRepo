@@ -41,8 +41,16 @@
 						name="nombre" required="required" maxlength="500"></label>
 				</p>
 				<p>
-					<label for="categoria">Categoria: <input type="text"
-						name="categoria" required="required" maxlength="500"></label>
+					<label for="categoria">Categoria:</label> <select name="categoria"
+						required="required">
+						<option selected disabled>Seleccione una categoría</option>
+						<option value="Deporte">Deporte</option>
+						<option value="Cultura">Cultura</option>
+						<option value="Ocio">Ocio</option>
+						<option value="Viajes">Viajes</option>
+						<option value="Naturaleza">Naturaleza</option>
+						<option value="Accesibilidad">Accesibilidad</option>
+					</select>
 				</p>
 				<p>
 					<label for="duracion">Nº de horas: <input type="number"
@@ -51,7 +59,7 @@
 				<p>
 					<label for="ubicacion">Ubicacion:</label> <select name="ubicacion"
 						required="required">
-						<option value="" selected disabled>Seleccione una población</option>
+						<option selected disabled>Seleccione una población</option>
 						<option value="Gijón">Gijón</option>
 						<option value="Oviedo">Oviedo</option>
 						<option value="Avilés">Avilés</option>

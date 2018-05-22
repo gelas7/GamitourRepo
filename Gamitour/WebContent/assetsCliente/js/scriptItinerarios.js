@@ -17,30 +17,36 @@ window.onload = function() {
 
         for (var j = 0; j < jsonItinerarios.length; j++) {
 
-            waypts = [];
-            if (jsonItinerarios[j].paradas[0] != null)
-                origen = jsonItinerarios[j].paradas[0].ubicacion; // Primera
-            
-            if (jsonItinerarios[j].paradas[jsonItinerarios[j].paradas.length - 1] != null)
-                destino = jsonItinerarios[j].paradas[jsonItinerarios[j].paradas.length - 1].ubicacion; // Ultima
-
-            var divMapa = `
-            	<button id="tituloItinerario${j}" class="botonesItinerario" value=${j}>${jsonItinerarios[j].nombre}</button>
-                <div id="mapaItinerario${j}" class="mapItinerario"></div>`;
-            document.getElementById("contenedorItinerarios").innerHTML += divMapa;
-
-            if (jsonItinerarios[j].paradas.length > 2) { // Resto de paradas
-                for (var i = 1; i < jsonItinerarios[j].paradas.length - 1; i++) {
-                    if (jsonItinerarios[j].paradas[i].ubicacion != null) {
-                        waypts.push({
-                            location: jsonItinerarios[j].paradas[i].ubicacion,
-                            stopover: true
-                        });
-                    }
-                }
-            }
-            pintarItinerario(origen, destino, waypts, j);
-            cargarBotones();
+        	if(jsonItinerarios[j].paradas.length>0){
+        		
+	            var waypts = [];
+	            
+	            var paradaOrigen = jsonItinerarios[j].paradas[0];//
+	            var origen = new google.maps.LatLng(paradaOrigen.latitud, paradaOrigen.longitud);
+	           
+	            var paradaDestino = jsonItinerarios[j].paradas[jsonItinerarios[j].paradas.length - 1];//
+	            var destino = new google.maps.LatLng(paradaDestino.latitud, paradaDestino.longitud);
+	
+	            var divMapa = `
+	            	<button id="tituloItinerario${j}" class="botonesItinerario" value=${j}>${jsonItinerarios[j].nombre}</button>
+	                <div id="mapaItinerario${j}" class="mapItinerario"></div>`;
+	            
+	            document.getElementById("contenedorItinerarios").innerHTML += divMapa;
+	
+	            if (jsonItinerarios[j].paradas.length > 2) { // Waypoints
+	                for (var i = 1; i < jsonItinerarios[j].paradas.length - 1; i++) {
+	                	 var loc = new google.maps.LatLng(jsonItinerarios[j].paradas[i].latitud, jsonItinerarios[j].paradas[i].longitud);
+	                    
+	                        waypts.push({
+	                            location: loc,
+	                            stopover: true
+	                        });
+	                    
+	                }
+	            }
+	            pintarItinerario(origen, destino, waypts, j);
+	            cargarBotones();
+        	}
         }
     }
     
@@ -55,7 +61,7 @@ window.onload = function() {
             optimizeWaypoints: true,
             travelMode: 'WALKING' // Modo de viaje
         }, function(response, status) {
-
+        	debugger;
             if (status === 'OK') {
                 var mapaActual = "mapaItinerario" + numMapa;
                 var panelDireccionesActual = 'direccionesItinerario' + numMapa;

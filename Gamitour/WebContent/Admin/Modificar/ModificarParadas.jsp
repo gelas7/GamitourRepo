@@ -21,7 +21,7 @@
 <body>
 	<div class="flex">
 
-	<div class="menu">
+		<div class="menu">
 			<ul>
 				<li><a href="../../MostrarAdmin.do?div=itinerarios">Itinerarios</a></li>
 				<li><a href="../../MostrarAdmin.do?div=paradas">Paradas</a></li>
@@ -44,64 +44,72 @@
 						Gamitour</a>
 				</h1>
 			</div>
+			<div id="formMapa">
+				<form action="../../ModificarParadas.do" method="get">
 
-			<form action="../../ModificarParadas.do" method="get">
+					<h2 id="modificar">Modifique los campos necesarios.</h2>
+					<h3>Los campos en blanco no sufrirán cambios.</h3>
 
-				<h2 id="modificar">Modifique los campos necesarios.</h2>
-				<h3>Los campos en blanco no sufrirán cambios.</h3>
+					<input type="hidden" value="<%=request.getParameter("id")%>"
+						name="id">
 
-				<input type="hidden" value="<%=request.getParameter("id")%>"
-					name="id">
+					<p>
+						<label>Nombre: </label><input type="text" name="nombre"
+							maxlength="500"
+							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+					</p>
+					<p>
+						<label>Numero de parada: </label><input type="number"
+							name="numeroParada" max="1000"
+							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
+					</p>
+					<p>
+						<label>Ubicación: </label><input type="text" name="ubicacion"
+							id="search" maxlength="500"
+							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
+						<button type="button" id="btnOK">Obtener coordenadas</button>
+					</p>
+					<p>
+						<label>Latitud: </label><input type="text" id="lat" name="latitud"
+							onkeypress="return false;"
+							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLatitud()%>">
+					</p>
+					<p>
+						<label>Longitud: </label><input type="text" id="lng"
+							name="longitud" onkeypress="return false;"
+							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLongitud()%>">
+					</p>
+					<p>
+						<label>Historia: </label>
+						<textarea name="historia" rows="4" cols="50" maxlength="500"
+							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>"></textarea>
+					</p>
+					<p>
+						<label>Anecdotario: </label>
+						<textarea name="anecdotario" rows="4" cols="50" maxlength="500"
+							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAnecdotario()%>"></textarea>
+					</p>
+					<p>
+						<label>Gastronomia: </label>
+						<textarea name="gastronomia" rows="4" cols="50" maxlength="500"
+							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getGastronomia()%>"></textarea>
+					</p>
+					<p>
+						<label>Itinerario: </label><select name="itinerario">
+							<option selected disabled>Seleccione un itinerario</option>
+							<c:forEach items="${listaItinerarios}" var="itinerario">
+								<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
+							</c:forEach>
+						</select>
+					</p>
+					<p>
+						<input type="submit" value="Enviar" id="enviar">
+					</p>
 
-				<p>
-					<label>Nombre: </label><input type="text" name="nombre" maxlength="500"
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
-				</p>
-				<p>
-					<label>Numero de parada: </label><input type="number"
-						name="numeroParada" max="1000"
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
-				</p>
-				<p>
-					<label>Ubicación: </label><input type="text" name="ubicacion"
-						id="search" maxlength="500"
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
-					<button type="button" id="btnOK">Obtener coordenadas</button>
-				</p>
-				<p>
-					<label>Latitud: </label><input type="text" id="lat" name="latitud"
-						readonly placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLatitud()%>">
-				</p>
-				<p>
-					<label>Longitud: </label><input type="text" id="lng"
-						name="longitud" readonly placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLongitud()%>">
-				</p>
-				<p>
-					<label>Historia: </label> <textarea name="historia"  rows="4" cols="50" maxlength="500"
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>"></textarea>
-				</p>
-				<p>
-					<label>Anecdotario: </label><textarea name="anecdotario" rows="4" cols="50" maxlength="500"
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getAnecdotario()%>"></textarea>
-				</p>
-				<p>
-					<label>Gastronomia: </label><textarea name="gastronomia" rows="4" cols="50" maxlength="500"
-						placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getGastronomia()%>"></textarea>
-				</p>
-				<p>
-					<label>Itinerario: </label><select name="itinerario">
-						<option selected disabled>Seleccione un itinerario</option>
-						<c:forEach items="${listaItinerarios}" var="itinerario">
-							<option value="${itinerario.iditinerario}">${itinerario.nombre}</option>
-						</c:forEach>
-					</select>
-				</p>
-				<p>
-					<input type="submit" value="Enviar" id="enviar">
-				</p>
-
-			</form>
-			<div id="map" class="map" style="width: 400px; height: 400px;"></div>
+				</form>
+				
+				<div id="map" class="map" style="width: 400px; height: 400px;"></div>
+			</div>
 		</div>
 	</div>
 	<div id="footer"></div>
