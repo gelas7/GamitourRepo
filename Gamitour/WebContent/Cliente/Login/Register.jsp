@@ -12,8 +12,15 @@
 <title>Gamiastur</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
-<link href="../../assetsCliente/css/style.css" rel="stylesheet"
+<link href="../../assetsCliente/css/cssRegister.css" rel="stylesheet"
 	type="text/css" media="screen" />
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 </head>
 
 <body>
@@ -26,13 +33,13 @@
 					class="material-icons" style="font-size: 35px;">map</i>RUTAS</a></li>
 			<li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
-			<li><a href="../Login/Register.jsp"><i class="material-icons"
-					style="font-size: 35px;">perm_identity</i>REGISTRO</a></li>
+			<li><a href="../Login/Register.jsp"><i
+					class="material-icons" style="font-size: 35px;">perm_identity</i>REGISTRO</a></li>
 		</ul>
 	</div>
 
 	<div class="main">
-		<h2>Datos personales: </h2>
+		<h2>Datos personales:</h2>
 		<form action="/Gamitour/RegistrarClientesAccion" method="post"
 			enctype="multipart/form-data">
 
@@ -87,7 +94,7 @@
 			</p>
 
 			<p>
-				<input type="submit" value="Enviar" id="enviar" >
+				<input type="submit" value="Enviar" id="enviar">
 			</p>
 
 		</form>
