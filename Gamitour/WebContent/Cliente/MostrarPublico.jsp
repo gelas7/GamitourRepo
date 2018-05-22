@@ -9,7 +9,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Gamiastur</title>
 
-<link rel='stylesheet' href='assetsCliente/css/style.css' />
+<link rel='stylesheet' href='assetsCliente/css/cssRutas.css' />
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cuprum|Francois+One|Shadows+Into+Light" rel="stylesheet">
 <script src="assetsCliente/js/scriptItinerarios.js" type="text/javascript"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
