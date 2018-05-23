@@ -29,12 +29,18 @@
 					style="font-size: 35px;">map</i>RUTAS</a></li>
             <li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
-            <li><a href="Cliente/Login/Register.jsp"><i class="material-icons"
-					style="font-size: 35px;">perm_identity</i>REGISTRO / LOG-IN</a>
+            <li>
+            <ul>
+            	<li><a>${email}</a></li>
+            	<li><a id="logout" href="Logout"> Logout</a></li>
+            </ul>
             </li>
         </ul>
 	</div>
 
+				
+					
+							
 	<div id="contenido">
 
 		<input type="hidden" id="listaItinerarios" value='${listaItinerarios}' />

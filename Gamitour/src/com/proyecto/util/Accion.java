@@ -42,6 +42,7 @@ import com.proyecto.admin.update.ModificarPruebasDeportivasAccion;
 import com.proyecto.admin.update.ModificarReservasAccion;
 import com.proyecto.admin.update.ModificarRolesAccion;
 import com.proyecto.admin.update.ModificarVotosAccion;
+import com.proyecto.publico.search.BuscarClienteAccion;
 import com.proyecto.publico.search.MostrarPublicoAccion;
 
 public abstract class Accion {
@@ -56,7 +57,9 @@ public abstract class Accion {
 		case "MostrarPublico":
 			accion = new MostrarPublicoAccion();
 			break;
-			
+		case "BuscarCliente":
+			accion = new BuscarClienteAccion();
+			break;	
 			
 		//ADMIN
 		case "BuscarAdmin":

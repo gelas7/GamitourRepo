@@ -62,8 +62,14 @@ public class MostrarPublicoAccion extends Accion {
 		request.getSession().setAttribute("listaNoticias", ns);
 		request.getSession().setAttribute("listaActividades", as);
 		request.getSession().setAttribute("listaMultimedias", ms);
-
-		return "Cliente/MostrarPublico.jsp";
+		
+		String email = (String) request.getSession().getAttribute("email");
+		String rol = (String) request.getSession().getAttribute("rol");
+		String salida = "Cliente/MostrarPublico.jsp";
+		if(email!=null && rol!=null)
+			salida= "Cliente/Registrados/MostrarRegistrado.jsp";
+		
+		return salida;
 	}
 
 }

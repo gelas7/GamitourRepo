@@ -1,4 +1,4 @@
-package com.proyecto.admin.search;
+package com.proyecto.publico.search;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,7 +8,7 @@ import com.proyecto.modelo.Cliente;
 import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.util.Accion;
 
-public class BuscarAdminAccion extends Accion {
+public class BuscarClienteAccion extends Accion {
 
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
@@ -21,17 +21,17 @@ public class BuscarAdminAccion extends Accion {
 		String pass = (String) request.getParameter("password");
 		Cliente c = sc.buscarClientePorEmail(email);
 
-		String rutaSalida = "errores/incorrect.jsp";
+		String rutaSalida = "errores/clienteIncorrecto.jsp";
 
 		if (c != null) { // Si usuario existe
 			if (c.getPassword().equals(pass)) // Compruebo pass
 			{
 				String rol = c.getRol().getNombre().toLowerCase(); // Extraigo rol
 
-				if (rol.equals("administrador")) {
+				if (rol.equals("administrador") || rol.equals("registrado")) {
 					session.setAttribute("email", c.getEmail());
 					session.setAttribute("rol", rol);
-					rutaSalida = url;
+					rutaSalida = "MostrarPublico.cl";
 				} else {
 					rutaSalida = "errores/error.jsp";
 				}

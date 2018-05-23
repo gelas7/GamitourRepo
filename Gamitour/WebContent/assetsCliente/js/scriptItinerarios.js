@@ -66,7 +66,6 @@ window.onload = function() {
                 var mapaActual = "mapaItinerario" + numMapa;
                 var panelDireccionesActual = 'direccionesItinerario' + numMapa;
                 window[mapaActual] = new google.maps.Map(document.getElementById(mapaActual));
-
                 directionsDisplay.setMap(window[mapaActual]);
                 directionsDisplay.setDirections(response);
 
@@ -122,6 +121,7 @@ window.onload = function() {
 	
 	function pintarParadas(paradas) { // Le paso el array de paradas
 	    contador = 0;
+	    
 	    for (let parada in paradas) {
 	        var mapaActual = "mapaParada" + contador; // mapaParadaX
 	        
@@ -130,7 +130,7 @@ window.onload = function() {
 	                lat: paradas[parada].latitud,
 	                lng: paradas[parada].longitud
 	            },
-	            zoom: 12
+	            zoom: 13
 	        });
 	
 	        marker = new google.maps.Marker({ // Situo marcadores

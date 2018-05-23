@@ -18,12 +18,16 @@
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script src="../../assetsCliente/js/scriptRegister.js"></script>
 <script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 <link
 	href="https://fonts.googleapis.com/css?family=Amatic+SC|Cuprum|Francois+One|Shadows+Into+Light"
+	rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Dosis"
 	rel="stylesheet">
 
 </head>
@@ -39,13 +43,14 @@
 			<li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
 			<li><a href="../Login/Register.jsp"><i
-					class="material-icons" style="font-size: 35px;">perm_identity</i>REGISTRO</a></li>
+					class="material-icons" style="font-size: 35px;">perm_identity</i>REGISTRO
+					/ LOG-IN</a></li>
 		</ul>
 	</div>
 
 	<div class="main">
-		<div class="form">
-			<h2>Datos personales:</h2>
+		<div id="registro" class="registro">
+			<h2>Regístrate</h2>
 			<form action="/Gamitour/RegistrarClientesAccion" method="post"
 				enctype="multipart/form-data">
 
@@ -70,14 +75,15 @@
 				</p>
 
 				<p>
-					<label for="password">Contraseña:</label> <input type="password"
-						name="password" required="required" maxlength="30">
+					<label for="password1">Contraseña:</label> <input type="password"
+						name="password1" id="password1" required="required" maxlength="30">
+					<a id="errorPass">Las contraseñas no son iguales</a>
 				</p>
-
+		
 				<p>
 					<label for="password2">Repita su contraseña:</label> <input
-						type="password" name="password2" required="required"
-						maxlength="30">
+						type="password" name="password2" id="password2"
+						required="required" maxlength="30">
 				</p>
 
 				<p>
@@ -96,13 +102,43 @@
 				</p>
 
 				<p>
-					<input type="file" name="avatar" id="avatar" class="inputFile" required="required">
-					<label for="avatar">Escoge tu foto de perfil</label> 
+					<input type="file" name="avatar" id="avatar" class="inputFile"
+						required="required"> <label for="avatar">Escoge tu
+						foto de perfil <i class="fas fa-file-image"></i>
+					</label>
+				</p>
+
+				<p class="submit">
+					<input type="submit" id="submitReg" value="¡Adelante!"
+						class="inputSubmit">
+				</p>
+
+				<h3>
+					Si ya tienes una cuenta, incia sesión <a id="regToLog">aquí</a>
+				</h3>
+
+			</form>
+		</div>
+		<div id="login" class="login">
+			<h2>Inicia sesión</h2>
+			<form action="../../BuscarCliente.cl" method="post">
+				<p>
+					<label for="email">E-mail:</label> <input type="email" name="email"
+						required="required" maxlength="100">
 				</p>
 
 				<p>
-					<input type="submit" value="¡Adelante!" id="enviar" class="inputSubmit">
+					<label for="password">Contraseña:</label> <input type="password"
+						name="password" required="required" maxlength="30">
 				</p>
+
+				<p class="submit">
+					<input type="submit" value="¡Adelante!" class="inputSubmit">
+				</p>
+
+				<h3>
+					Si no estás registrado hazlo <a id="logToReg">aquí</a>
+				</h3>
 
 			</form>
 		</div>

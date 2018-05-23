@@ -70,22 +70,63 @@ a {
 	background-color:;
 }
 
-.form {
-	width: 300px;
+.registro, .login {
 	margin-left: auto;
 	margin-right: auto;
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Dosis', sans-serif;
 }
 
-.form h2 {
+.registro{
+	width: 500px;
+}
+
+.login {
+	width: 400px;
+}
+
+.registro h2, .login h2 {
+	display: block;
+	text-align: center;
 	font-size: 40px;
 	color: white;
+}
+
+.registro h3, .login h3 {
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+}
+
+h3 a:hover {
+	color: #f4d03f;
+	cursor: pointer;
 }
 
 form label {
 	color: white;
 	font-size: 20px;
-	font-weight: 600px;
+	font-weight: 600;
+}
+
+input {
+	margin-left: 10px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #f4d03f;
+	outline: none;
+	color: white;
+	font-family: 'Dosis', sans-serif;
+	font-size: 16px;
+}
+
+input[name="nombre"], input[name="apellidos"], input[name="email"],
+	input[name="direccion"] {
+	width: 300px;
+}
+
+input[name="codigopostal"], input[name="telefono"] {
+	width: 150px;
 }
 
 .inputFile {
@@ -110,8 +151,12 @@ form label {
 	font-size: 20.1px;
 }
 
+.submit {
+	text-align: center;
+}
+
 .inputSubmit {
-	font-size: 30px;
+	font-size: 45px;
 	font-weight: 700;
 	background-color: transparent;
 	color: #f4d03f;
@@ -123,6 +168,16 @@ form label {
 .inputSubmit:hover {
 	color: orange;
 	cursor: pointer;
+}
+
+#registro, #errorPass{
+	display: none;
+}
+
+#errorPass {
+	color: red;
+	font-size: 15px;
+	font-weight: 600;
 }
 
 @media ( max-width : 600px) {

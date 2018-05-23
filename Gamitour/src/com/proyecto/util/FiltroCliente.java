@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter("/FiltroAdmin")
-public class FiltroAdmin implements Filter {
+@WebFilter("/FiltroCliente")
+public class FiltroCliente implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
@@ -24,19 +24,17 @@ public class FiltroAdmin implements Filter {
 		HttpSession session = req.getSession();
 
 		String url = req.getServletPath();
-		String urlsesion = (String) session.getAttribute("url");
-		
-		if (url.contains("BuscarAdmin.do") && urlsesion != null) {
-			chain.doFilter(req, res);
-		} else if (url.contains("BuscarAdmin.do") && urlsesion == null) { //Si no pasa por index
-			session.setAttribute("url", "/MostrarAdmin.do");
+		//String urlsesion = (String) session.getAttribute("url");
+
+		if (url.contains("BuscaCliente.cl")) {
+			session.setAttribute("url", "/MostrarPublico.cl");
 			chain.doFilter(req, res);
 		} else {
-			session.setAttribute("url", url); //Guardo la ruta a la que iba
-			String email = (String) session.getAttribute("email");//Saco email y rol de sesion
+			session.setAttribute("url", url);
+			String email = (String) session.getAttribute("email");
 			String rol = (String) session.getAttribute("rol");
 
-			boolean logueado = email != null && rol.equals("administrador");
+			boolean logueado = email != null && rol != null;
 
 			if (logueado)
 				chain.doFilter(req, res);
