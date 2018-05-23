@@ -5,7 +5,11 @@ html, body {
 	min-width: 1050px;
 	margin-bottom: 40px;
 	margin-left: 0;
-	background-color: #5B5555;
+	background: url("../img/fondo3.jpeg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 a {
@@ -87,7 +91,7 @@ li a:hover {
 	color: orange;
 }
 
-.mapItinerario{
+.mapItinerario {
 	border: 1px solid #f4d03f;
 	margin: 0 auto 20px auto;
 	width: 500px;
@@ -135,25 +139,21 @@ li a:hover {
 		background-color: rgb(90, 88, 88);
 		min-width: 400px;
 	}
-	
 	#contenido {
 		margin: 80px auto 40px auto;
 		align-items: center;
 	}
-	
 	#contenedorParadas, #contenedorItinerarios {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
-	
 	.mapItinerario, .mapParada {
 		margin-top: 20px;
-		width:300px;
-		height:200px;
+		width: 300px;
+		height: 200px;
 	}
-	
-	.tituloParada{
+	.tituloParada {
 		margin-top: 70px;
 	}
 	.datosParadas {

@@ -10,12 +10,13 @@
 <title>Gamiastur</title>
 
 <link rel='stylesheet' href='assetsCliente/css/cssRutas.css' />
-<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cuprum|Francois+One|Shadows+Into+Light" rel="stylesheet">
+
 <script src="assetsCliente/js/scriptItinerarios.js" type="text/javascript"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cuprum|Francois+One|Shadows+Into+Light" rel="stylesheet">
 </head>
 
 <body>

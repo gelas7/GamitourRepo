@@ -10,10 +10,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Gamiastur</title>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
+
 <link href="../../assetsCliente/css/cssRegister.css" rel="stylesheet"
 	type="text/css" media="screen" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
@@ -21,6 +22,10 @@
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Amatic+SC|Cuprum|Francois+One|Shadows+Into+Light"
+	rel="stylesheet">
+
 </head>
 
 <body>
@@ -39,65 +44,68 @@
 	</div>
 
 	<div class="main">
-		<h2>Datos personales:</h2>
-		<form action="/Gamitour/RegistrarClientesAccion" method="post"
-			enctype="multipart/form-data">
+		<div class="form">
+			<h2>Datos personales:</h2>
+			<form action="/Gamitour/RegistrarClientesAccion" method="post"
+				enctype="multipart/form-data">
 
-			<p>
-				<label for="nombre">Nombre:</label> <input type="text" name="nombre"
-					required="required" maxlength="100">
-			</p>
+				<p>
+					<label for="nombre">Nombre:</label> <input type="text"
+						name="nombre" required="required" maxlength="100">
+				</p>
 
-			<p>
-				<label for="apellidos">Apellidos:</label> <input type="text"
-					name="apellidos" required="required" maxlength="200">
-			</p>
+				<p>
+					<label for="apellidos">Apellidos:</label> <input type="text"
+						name="apellidos" required="required" maxlength="200">
+				</p>
 
-			<p>
-				<label for="fechanacimiento">Fecha de nacimiento:</label> <input
-					type="date" name="fechanacimiento" required="required">
-			</p>
+				<p>
+					<label for="fechanacimiento">Fecha de nacimiento:</label> <input
+						type="date" name="fechanacimiento" required="required">
+				</p>
 
-			<p>
-				<label for="email">E-mail:</label> <input type="email" name="email"
-					required="required" maxlength="100">
-			</p>
+				<p>
+					<label for="email">E-mail:</label> <input type="email" name="email"
+						required="required" maxlength="100">
+				</p>
 
-			<p>
-				<label for="password">Contraseña:</label> <input type="password"
-					name="password" required="required" maxlength="30">
-			</p>
+				<p>
+					<label for="password">Contraseña:</label> <input type="password"
+						name="password" required="required" maxlength="30">
+				</p>
 
-			<p>
-				<label for="password2">Repita su contraseña:</label> <input
-					type="password" name="password2" required="required" maxlength="30">
-			</p>
+				<p>
+					<label for="password2">Repita su contraseña:</label> <input
+						type="password" name="password2" required="required"
+						maxlength="30">
+				</p>
 
-			<p>
-				<label for="telefono">Teléfono:</label> <input type="tel"
-					name="telefono" required="required" maxlength="10">
-			</p>
+				<p>
+					<label for="telefono">Teléfono:</label> <input type="tel"
+						name="telefono" required="required" maxlength="10">
+				</p>
 
-			<p>
-				<label for="direccion">Dirección:</label> <input type="text"
-					name="direccion" required="required" maxlength="500">
-			</p>
+				<p>
+					<label for="direccion">Dirección:</label> <input type="text"
+						name="direccion" required="required" maxlength="500">
+				</p>
 
-			<p>
-				<label for="codigopostal">Código Postal:</label> <input type="text"
-					name="codigopostal" required="required" maxlength="5">
-			</p>
+				<p>
+					<label for="codigopostal">Código Postal:</label> <input type="text"
+						name="codigopostal" required="required" maxlength="5">
+				</p>
 
-			<p>
-				<label for="avatar">Foto de perfil:</label> <input type="file"
-					name="avatar" required="required">
-			</p>
+				<p>
+					<input type="file" name="avatar" id="avatar" class="inputFile" required="required">
+					<label for="avatar">Escoge tu foto de perfil</label> 
+				</p>
 
-			<p>
-				<input type="submit" value="Enviar" id="enviar">
-			</p>
+				<p>
+					<input type="submit" value="¡Adelante!" id="enviar" class="inputSubmit">
+				</p>
 
-		</form>
+			</form>
+		</div>
 	</div>
 </body>
 </html>
