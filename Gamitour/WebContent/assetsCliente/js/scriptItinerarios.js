@@ -61,7 +61,6 @@ window.onload = function() {
             optimizeWaypoints: true,
             travelMode: 'WALKING' // Modo de viaje
         }, function(response, status) {
-        	debugger;
             if (status === 'OK') {
                 var mapaActual = "mapaItinerario" + numMapa;
                 var panelDireccionesActual = 'direccionesItinerario' + numMapa;

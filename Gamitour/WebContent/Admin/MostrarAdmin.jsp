@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<%-- 	<%!String url = "http://ambgubuntu.westeurope.cloudapp.azure.com:8080/subidas";%> --%>
+	<%!String url = "http://ambgubuntu.westeurope.cloudapp.azure.com:8080/subidas";%>
 	<div class="flex">
 		<div class="menu">
 			<ul>
@@ -118,8 +118,8 @@
 									<td>${cliente.puntosacumulados}</td>
 									<td>${cliente.fecharegistro}</td>
 									<td>${cliente.rol.getNombre()}</td>
-<!-- 									<td><img style="width: 40px; height: 40px;" -->
-<%-- 										src=" <%=url%>/clientes/${cliente.avatar}"></img></td> --%>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/clientes/${cliente.avatar}"></img></td>
 
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar? Los comentarios, votos y premios asociados al cliente también se eliminarán.')"
@@ -167,8 +167,8 @@
 									<td>${actividad.ubicacion}</td>
 									<td>${actividad.numparticipantes}</td>
 									<td>${actividad.precio}</td>
-<!-- 									<td><img style="width: 40px; height: 40px;" -->
-<%-- 										src=" <%=url%>/actividades/${actividad.imagen}"></img></td> --%>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/actividades/${actividad.imagen}"></img></td>
 									<td>${actividad.puntos}</td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar?')"
@@ -250,8 +250,8 @@
 									<td>${noticia.nombre}</td>
 									<td>${noticia.fechaalta}</td>
 									<td>${noticia.fechacaducidad}</td>
-<!-- 									<td><img style="width: 40px; height: 40px;" -->
-<%-- 										src=" <%=url%>/noticias/${noticia.imagen}"></img></td> --%>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/noticias/${noticia.imagen}"></img></td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar?')"
 										href="EliminarNoticias.do?id=${noticia.idnoticia}"><i
@@ -291,10 +291,10 @@
 									<td>${parada.nombre}</td>
 									<td>${parada.numeroParada}</td>
 									<td>${parada.ubicacion}</td>
-<!-- 									<td><img style="width: 40px; height: 40px;" -->
-<%-- 										src=" <%=url%>/paradas/${parada.imagen}"></img></td> --%>
-<!-- 									<td><img style="width: 40px; height: 40px;" -->
-<%-- 										src=" <%=url%>/paradas/${parada.video}"></img></td> --%>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/paradas/${parada.imagen}"></img></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/paradas/${parada.video}"></img></td>
 									<td>${parada.itinerario.getNombre()}</td>
 									<td><a class="eliminar"
 										onclick="return confirm('¿Está seguro de que quiere continuar? Las pruebas culturales asociadas a esta parada también se eliminarán.')"
@@ -328,8 +328,6 @@
 						<thead>
 							<tr>
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
-								<!-- 								<th>Pregunta <i id="icono" class="fas fa-sort"></i></th> -->
-								<!-- 								<th>Respuesta <i id="icono" class="fas fa-sort"></i></th> -->
 								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 								<th>Parada <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
@@ -338,8 +336,6 @@
 							<c:forEach items="${listaPruebasCulturales}" var="pC">
 								<tr>
 									<td>${pC.nombre}</td>
-									<%-- 									<td>${pC.pregunta}</td> --%>
-									<%-- 									<td>${pC.respuesta}</td> --%>
 									<td>${pC.puntos}</td>
 									<td>${pC.parada.getNombre()}</td>
 									<td><a class="eliminar"
@@ -373,7 +369,6 @@
 								<th>Nombre <i id="icono" class="fas fa-sort"></i></th>
 								<th>Inicio <i id="icono" class="fas fa-sort"></i></th>
 								<th>Fin <i id="icono" class="fas fa-sort"></i></th>
-								<!-- 								<th>Explicación <i id="icono" class="fas fa-sort"></i></th> -->
 								<th>Puntos <i id="icono" class="fas fa-sort"></i></th>
 								<th>Parada <i id="icono" class="fas fa-sort"></i></th>
 							</tr>
@@ -384,7 +379,6 @@
 									<td>${pD.nombre}</td>
 									<td>${pD.fechainicio}</td>
 									<td>${pD.fechafin}</td>
-									<%-- 									<td>${pD.explicacion}</td> --%>
 									<td>${pD.puntos}</td>
 									<td>${pD.parada.getNombre()}</td>
 									<td><a class="eliminar"
@@ -428,8 +422,8 @@
 								<tr>
 									<td>${premio.cliente.getNombre()}</td>
 									<td>${premio.nombre}</td>
-<!-- 									<td><img style="width: 40px; height: 40px;" -->
-<%-- 										src=" <%=url%>/premios/${premio.imagen}"></img></td> --%>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/premios/${premio.imagen}"></img></td>
 									<td>${premio.fechaactivacion}</td>
 									<td>${premio.fechaconsumo}</td>
 									<td>${premio.puntos}</td>
@@ -473,10 +467,10 @@
 								<tr>
 									<td>${m.cliente.getNombre()}</td>
 									<td>${m.fecha}</td>
-<!-- 									<td><img style="width: 40px; height: 40px;" -->
-<%-- 										src=" <%=url%>/multimedias/${m.imagen}"></img></td> --%>
-<!-- 									<td><img style="width: 40px; height: 40px;" -->
-<%-- 										src=" <%=url%>/multimedias/${m.video}"></img></td> --%>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/multimedias/${m.imagen}"></img></td>
+									<td><img style="width: 40px; height: 40px;"
+										src=" <%=url%>/multimedias/${m.video}"></img></td>
 									<td>${m.puntosacumulados}</td>
 									<td>${m.pruebaDeportivaIdpruebadeportiva}</td>
 									<td><a class="eliminar"
