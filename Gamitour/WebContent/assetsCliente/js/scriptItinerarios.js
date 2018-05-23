@@ -61,6 +61,7 @@ window.onload = function() {
             optimizeWaypoints: true,
             travelMode: 'WALKING' // Modo de viaje
         }, function(response, status) {
+        	
             if (status === 'OK') {
                 var mapaActual = "mapaItinerario" + numMapa;
                 var panelDireccionesActual = 'direccionesItinerario' + numMapa;
@@ -91,26 +92,25 @@ window.onload = function() {
 	    document.getElementById('paradas').style.display = 'block';
 	    var numItinerario = this.value;
 	    var divMapa, divDatos = "";
+	    contador = 0;
 	
 	    var paradas = jsonItinerarios[numItinerario].paradas;
 	    document.getElementById('contenedorParadas').innerHTML = "";
 	
 	    for (let parada in paradas) {
-	        divMapa = `	<p class="tituloParada"><a>${paradas[parada].nombre}</a></p> <div class="mapParada"></div>`;
-	        if(paradas[parada].gastronomia.length>2 || paradas[parada].historia.length>2 || paradas[parada].anecdotario.length>2)
-	        {
-	        	divMapa+=  `<div class="datosParadas">
-		                <br><br>`;
-
-		        if(paradas[parada].gastronomia.length>2)
+	        divMapa = `	<p class="tituloParada"><a>${paradas[parada].nombre}</a></p>
+	        			<div id="mapaParada${contador}" class="mapParada"></div>`;
+	        if(paradas[parada].gastronomia.length>2 || paradas[parada].historia.length>2 || paradas[parada].anecdotario.length>2){
+		        divMapa += `<div id="indicacionesParada${contador}" class="datosParadas">`;
+	        	if(paradas[parada].gastronomia.length>2)
 		        	divMapa+=`<a><b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>`;
 		        if(paradas[parada].historia.length>2)
 		        	divMapa+=`<a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>`;
 		        if(paradas[parada].anecdotario.length>2)
 		        	divMapa+=`<a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br>`;
-		        
-		        divMapa+=`</div><br><br>`;
 	        }
+	        divMapa+=`</div>`;
+	        	
 	        document.getElementById("contenedorParadas").innerHTML += divMapa;
 	
 	        contador++;
