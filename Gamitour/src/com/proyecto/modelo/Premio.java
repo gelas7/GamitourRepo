@@ -77,7 +77,7 @@ public class Premio implements java.io.Serializable{
 		this.cliente = cliente;
 	}
 
-	@Column(name = "nombre", length = 60)
+	@Column(name = "nombre", length = 500)
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -86,7 +86,7 @@ public class Premio implements java.io.Serializable{
 		this.nombre = nombre;
 	}
 
-	@Column(name = "descripcion", length = 200)
+	@Column(name = "descripcion", length = 500)
 	public String getDescripcion() {
 		return this.descripcion;
 	}
@@ -95,7 +95,7 @@ public class Premio implements java.io.Serializable{
 		this.descripcion = descripcion;
 	}
 
-	@Column(name = "imagen", length = 45)
+	@Column(name = "imagen", length = 500)
 	public String getImagen() {
 		return this.imagen;
 	}

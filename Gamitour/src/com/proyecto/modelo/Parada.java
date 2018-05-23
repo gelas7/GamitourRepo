@@ -97,7 +97,7 @@ public class Parada implements java.io.Serializable {
 		this.itinerario = itinerario;
 	}
 
-	@Column(name = "nombre", length = 60)
+	@Column(name = "nombre", length = 500)
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -115,7 +115,7 @@ public class Parada implements java.io.Serializable {
 		this.numeroParada = numeroParada;
 	}
 
-	@Column(name = "ubicacion", length = 45)
+	@Column(name = "ubicacion", length = 500)
 	public String getUbicacion() {
 		return this.ubicacion;
 	}
@@ -124,7 +124,7 @@ public class Parada implements java.io.Serializable {
 		this.ubicacion = ubicacion;
 	}
 
-	@Column(name = "historia", length = 200)
+	@Column(name = "historia", length = 500)
 	public String getHistoria() {
 		return this.historia;
 	}
@@ -133,7 +133,7 @@ public class Parada implements java.io.Serializable {
 		this.historia = historia;
 	}
 
-	@Column(name = "anecdotario", length = 200)
+	@Column(name = "anecdotario", length = 500)
 	public String getAnecdotario() {
 		return this.anecdotario;
 	}
@@ -142,7 +142,7 @@ public class Parada implements java.io.Serializable {
 		this.anecdotario = anecdotario;
 	}
 
-	@Column(name = "gastronomia", length = 200)
+	@Column(name = "gastronomia", length = 500)
 	public String getGastronomia() {
 		return this.gastronomia;
 	}
@@ -151,7 +151,7 @@ public class Parada implements java.io.Serializable {
 		this.gastronomia = gastronomia;
 	}
 
-	@Column(name = "imagen", length = 200)
+	@Column(name = "imagen", length = 500)
 	public String getImagen() {
 		return this.imagen;
 	}
@@ -160,7 +160,7 @@ public class Parada implements java.io.Serializable {
 		this.imagen = imagen;
 	}
 
-	@Column(name = "video", length = 200)
+	@Column(name = "video", length = 500)
 	public String getVideo() {
 		return this.video;
 	}

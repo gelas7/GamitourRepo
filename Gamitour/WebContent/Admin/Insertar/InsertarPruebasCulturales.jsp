@@ -55,8 +55,18 @@
 						maxlength="500"></textarea>
 				</p>
 				<p>
-					<label>Respuesta: </label>
+					<label>Respuesta correcta: </label>
 					<textarea name="respuesta" required="required" rows="4" cols="50"
+						maxlength="500"></textarea>
+				</p>
+				<p>
+					<label>Respuesta incorrecta 1: </label>
+					<textarea name="respuesta2" required="required" rows="4" cols="50"
+						maxlength="500"></textarea>
+				</p>
+				<p>
+					<label>Respuesta incorrecta 2: </label>
+					<textarea name="respuesta3" required="required" rows="4" cols="50"
 						maxlength="500"></textarea>
 				</p>
 				<p>

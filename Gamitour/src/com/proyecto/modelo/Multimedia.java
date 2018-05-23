@@ -142,7 +142,7 @@ public class Multimedia implements java.io.Serializable {
 		this.fecha = fecha;
 	}
 
-	@Column(name = "comentario", length = 60)
+	@Column(name = "comentario", length = 500)
 	public String getComentario() {
 		return this.comentario;
 	}
@@ -151,7 +151,7 @@ public class Multimedia implements java.io.Serializable {
 		this.comentario = comentario;
 	}
 
-	@Column(name = "imagen", length = 60)
+	@Column(name = "imagen", length = 500)
 	public String getImagen() {
 		return this.imagen;
 	}
@@ -160,7 +160,7 @@ public class Multimedia implements java.io.Serializable {
 		this.imagen = imagen;
 	}
 
-	@Column(name = "video", length = 60)
+	@Column(name = "video", length = 500)
 	public String getVideo() {
 		return this.video;
 	}

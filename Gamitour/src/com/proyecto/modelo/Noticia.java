@@ -52,7 +52,7 @@ public class Noticia implements java.io.Serializable{
 		this.idnoticia = idnoticia;
 	}
 
-	@Column(name = "nombre", length = 60)
+	@Column(name = "nombre", length = 500)
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -61,7 +61,7 @@ public class Noticia implements java.io.Serializable{
 		this.nombre = nombre;
 	}
 
-	@Column(name = "texto", length = 200)
+	@Column(name = "texto", length = 500)
 	public String getTexto() {
 		return this.texto;
 	}
@@ -90,7 +90,7 @@ public class Noticia implements java.io.Serializable{
 		this.fechacaducidad = fechacaducidad;
 	}
 
-	@Column(name = "imagen", length = 45)
+	@Column(name = "imagen", length = 500)
 	public String getImagen() {
 		return this.imagen;
 	}

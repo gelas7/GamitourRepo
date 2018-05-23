@@ -72,7 +72,7 @@ public class Comentario implements java.io.Serializable{
 		this.multimedia = multimedia;
 	}
 
-	@Column(name = "texto", length = 200)
+	@Column(name = "texto", length = 500)
 	public String getTexto() {
 		return this.texto;
 	}

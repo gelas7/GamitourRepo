@@ -12,7 +12,6 @@ import javax.persistence.Table;
 
 import com.google.gson.annotations.Expose;
 
-
 @Entity
 @Table(name = "pruebaCultural", catalog = "gamitour")
 public class PruebaCultural implements java.io.Serializable {
@@ -24,8 +23,13 @@ public class PruebaCultural implements java.io.Serializable {
 	private String nombre;
 	@Expose
 	private String pregunta;
-	@Expose
+
 	private String respuesta;
+
+	private String respuesta2;
+
+	private String respuesta3;
+
 	@Expose
 	private Integer puntos;
 
@@ -36,11 +40,14 @@ public class PruebaCultural implements java.io.Serializable {
 		this.parada = parada;
 	}
 
-	public PruebaCultural(Parada parada, String nombre, String pregunta, String respuesta, Integer puntos) {
+	public PruebaCultural(Parada parada, String nombre, String pregunta, String respuesta, String respuesta2,
+			String respuesta3, Integer puntos) {
 		this.parada = parada;
 		this.nombre = nombre;
 		this.pregunta = pregunta;
 		this.respuesta = respuesta;
+		this.respuesta2 = respuesta2;
+		this.respuesta3 = respuesta3;
 		this.puntos = puntos;
 	}
 
@@ -66,7 +73,7 @@ public class PruebaCultural implements java.io.Serializable {
 		this.parada = parada;
 	}
 
-	@Column(name = "nombre", length = 60)
+	@Column(name = "nombre", length = 500)
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -75,7 +82,7 @@ public class PruebaCultural implements java.io.Serializable {
 		this.nombre = nombre;
 	}
 
-	@Column(name = "pregunta", length = 200)
+	@Column(name = "pregunta", length = 500)
 	public String getPregunta() {
 		return this.pregunta;
 	}
@@ -84,13 +91,31 @@ public class PruebaCultural implements java.io.Serializable {
 		this.pregunta = pregunta;
 	}
 
-	@Column(name = "respuesta", length = 45)
+	@Column(name = "respuesta", length = 500)
 	public String getRespuesta() {
 		return this.respuesta;
 	}
 
 	public void setRespuesta(String respuesta) {
 		this.respuesta = respuesta;
+	}
+
+	@Column(name = "respuesta2", length = 500)
+	public String getRespuesta2() {
+		return this.respuesta2;
+	}
+
+	public void setRespuesta2(String respuesta2) {
+		this.respuesta2 = respuesta2;
+	}
+
+	@Column(name = "respuesta3", length = 500)
+	public String getRespuesta3() {
+		return this.respuesta3;
+	}
+
+	public void setRespuesta3(String respuesta3) {
+		this.respuesta3 = respuesta3;
 	}
 
 	@Column(name = "puntos")

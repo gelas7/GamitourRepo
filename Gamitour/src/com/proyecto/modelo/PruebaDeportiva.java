@@ -113,7 +113,7 @@ public class PruebaDeportiva implements java.io.Serializable {
 		this.parada = parada;
 	}
 
-	@Column(name = "nombre", length = 60)
+	@Column(name = "nombre", length = 500)
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -142,7 +142,7 @@ public class PruebaDeportiva implements java.io.Serializable {
 		this.fechafin = fechafin;
 	}
 
-	@Column(name = "explicacion", length = 200)
+	@Column(name = "explicacion", length = 500)
 	public String getExplicacion() {
 		return this.explicacion;
 	}

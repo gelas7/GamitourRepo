@@ -129,7 +129,7 @@ public class Cliente implements java.io.Serializable {
 		this.rol = rol;
 	}
 
-	@Column(name = "nombre", length = 60)
+	@Column(name = "nombre", length = 500)
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -138,7 +138,7 @@ public class Cliente implements java.io.Serializable {
 		this.nombre = nombre;
 	}
 
-	@Column(name = "apellidos", length = 60)
+	@Column(name = "apellidos", length = 500)
 	public String getApellidos() {
 		return this.apellidos;
 	}
@@ -157,7 +157,7 @@ public class Cliente implements java.io.Serializable {
 		this.fechanacimiento = fechanacimiento;
 	}
 
-	@Column(name = "email", length = 45)
+	@Column(name = "email", length = 50)
 	public String getEmail() {
 		return this.email;
 	}
@@ -166,7 +166,7 @@ public class Cliente implements java.io.Serializable {
 		this.email = email;
 	}
 
-	@Column(name = "password", length = 45)
+	@Column(name = "password", length = 30)
 	public String getPassword() {
 		return this.password;
 	}
@@ -175,7 +175,7 @@ public class Cliente implements java.io.Serializable {
 		this.password = password;
 	}
 
-	@Column(name = "telefono", length = 45)
+	@Column(name = "telefono", length = 10)
 	public String getTelefono() {
 		return this.telefono;
 	}
@@ -184,7 +184,7 @@ public class Cliente implements java.io.Serializable {
 		this.telefono = telefono;
 	}
 
-	@Column(name = "direccion", length = 60)
+	@Column(name = "direccion", length = 500)
 	public String getDireccion() {
 		return this.direccion;
 	}
@@ -193,7 +193,7 @@ public class Cliente implements java.io.Serializable {
 		this.direccion = direccion;
 	}
 
-	@Column(name = "codigopostal", length = 10)
+	@Column(name = "codigopostal", length = 6)
 	public String getCodigopostal() {
 		return this.codigopostal;
 	}
@@ -202,7 +202,7 @@ public class Cliente implements java.io.Serializable {
 		this.codigopostal = codigopostal;
 	}
 
-	@Column(name = "avatar", length = 45)
+	@Column(name = "avatar", length = 500)
 	public String getAvatar() {
 		return this.avatar;
 	}

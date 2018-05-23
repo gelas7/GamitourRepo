@@ -58,9 +58,19 @@
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPregunta()%>"></textarea>
 				</p>
 				<p>
-					<label>Respuesta: </label>
+					<label>Respuesta Correcta: </label>
 					<textarea name="respuesta" rows="4" cols="50" maxlength="500"
 						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getRespuesta()%>"></textarea>
+				</p>
+				<p>
+					<label>Respuesta incorrecta 1: </label>
+					<textarea name="respuesta2" rows="4" cols="50" maxlength="500"
+						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getRespuesta2()%>"></textarea>
+				</p>
+				<p>
+					<label>Respuesta incorrecta 2: </label>
+					<textarea name="respuesta3" rows="4" cols="50" maxlength="500"
+						placeholder="<%=spc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getRespuesta3()%>"></textarea>
 				</p>
 				<p>
 					<label>Puntos: </label><input type="number" name="puntos"

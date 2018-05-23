@@ -67,7 +67,7 @@ public class Itinerario implements java.io.Serializable{
 		this.iditinerario = iditinerario;
 	}
 
-	@Column(name = "nombre", length = 60)
+	@Column(name = "nombre", length = 500)
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -76,7 +76,7 @@ public class Itinerario implements java.io.Serializable{
 		this.nombre = nombre;
 	}
 
-	@Column(name = "categoria", length = 45)
+	@Column(name = "categoria", length = 500)
 	public String getCategoria() {
 		return this.categoria;
 	}
@@ -85,7 +85,7 @@ public class Itinerario implements java.io.Serializable{
 		this.categoria = categoria;
 	}
 
-	@Column(name = "duracion", length = 4)
+	@Column(name = "duracion")
 	public Integer getDuracion() {
 		return this.duracion;
 	}
@@ -94,7 +94,7 @@ public class Itinerario implements java.io.Serializable{
 		this.duracion = duracion;
 	}
 
-	@Column(name = "ubicacion", length = 45)
+	@Column(name = "ubicacion", length = 500)
 	public String getUbicacion() {
 		return this.ubicacion;
 	}

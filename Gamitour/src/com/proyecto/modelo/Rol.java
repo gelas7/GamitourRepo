@@ -42,7 +42,7 @@ public class Rol implements java.io.Serializable {
 		this.idrol = idrol;
 	}
 
-	@Column(name = "nombre", length = 60)
+	@Column(name = "nombre", length = 500)
 	public String getNombre() {
 		return this.nombre;
 	}

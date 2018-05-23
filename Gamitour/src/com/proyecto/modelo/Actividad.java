@@ -134,7 +134,7 @@ public class Actividad implements java.io.Serializable{
 		this.idactividad = idactividad;
 	}
 
-	@Column(name = "nombre", length = 60)
+	@Column(name = "nombre", length = 500)
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -163,7 +163,7 @@ public class Actividad implements java.io.Serializable{
 		this.fechafin = fechafin;
 	}
 
-	@Column(name = "ubicacion", length = 60)
+	@Column(name = "ubicacion", length = 500)
 	public String getUbicacion() {
 		return this.ubicacion;
 	}
@@ -190,7 +190,7 @@ public class Actividad implements java.io.Serializable{
 		this.precio = precio;
 	}
 
-	@Column(name = "imagen", length = 60)
+	@Column(name = "imagen", length = 500)
 	public String getImagen() {
 		return this.imagen;
 	}

@@ -25,11 +25,13 @@ public class InsertarPruebasCulturalesAccion extends Accion {
 		String nombre = request.getParameter("nombre");
 		String pregunta = request.getParameter("pregunta");
 		String respuesta = request.getParameter("respuesta");
+		String respuesta2 = request.getParameter("respuesta2");
+		String respuesta3 = request.getParameter("respuesta3");
 		String puntos = request.getParameter("puntos");
 		String parada = request.getParameter("parada");
 		
 		Parada p = sp.buscarPorClave(Integer.parseInt(parada));
-		PruebaCultural pc = new PruebaCultural(p,nombre,pregunta,respuesta,Integer.parseInt(puntos));
+		PruebaCultural pc = new PruebaCultural(p,nombre,pregunta,respuesta,respuesta2,respuesta3,Integer.parseInt(puntos));
 		spc.insertar(pc);
 
 		return "MostrarAdmin.do?div=pruebasculturales";

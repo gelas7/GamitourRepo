@@ -20,6 +20,8 @@ public class ModificarPruebasCulturalesAccion extends Accion {
 		String nombre = request.getParameter("nombre");
 		String pregunta = request.getParameter("pregunta");
 		String respuesta = request.getParameter("respuesta");
+		String respuesta2 = request.getParameter("respuesta2");
+		String respuesta3 = request.getParameter("respuesta3");
 		String puntos = request.getParameter("puntos");
 		String parada = request.getParameter("parada");
 
@@ -34,6 +36,10 @@ public class ModificarPruebasCulturalesAccion extends Accion {
 			prueba.setPregunta(pregunta);
 		if (respuesta.length() > 0)
 			prueba.setRespuesta(respuesta);
+		if (respuesta2.length() > 0)
+			prueba.setRespuesta2(respuesta2);
+		if (respuesta3.length() > 0)
+			prueba.setRespuesta3(respuesta3);
 		if (puntos.length() > 0)
 			prueba.setPuntos(Integer.parseInt(puntos));
 		if (parada!=null)

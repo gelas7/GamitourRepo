@@ -85,7 +85,7 @@ public class Reserva implements java.io.Serializable{
 		this.fecha = fecha;
 	}
 	
-	@Column(name = "comentarios")
+	@Column(name = "comentarios", length = 500)
 	public String getComentarios() {
 		return comentarios;
 	}
