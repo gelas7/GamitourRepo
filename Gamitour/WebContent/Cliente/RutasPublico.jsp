@@ -30,14 +30,11 @@
 	<div class="cabecera">
 		<ul>
 			<li><a href="/Gamitour/Cliente/index.html"><i
-					class="material-icons" style="font-size: 35px;">home</i>INICIO</a></li>
-			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">map</i>RUTAS</a></li>
-			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">speaker_notes</i>ACTIVIDADES</a></li>
+					class="material-icons">home</i><span>INICIO</span></a></li>
+			<li><a href="#"><i class="material-icons">map</i><span>RUTAS</a></li>
+			<li><a href="#"><i class="material-icons">speaker_notes</i><span>ACTIVIDADES</span></a></li>
 			<li><a href="/Gamitour/Cliente/Login/Register.jsp"><i
-					class="material-icons" style="font-size: 35px;">perm_identity</i>REGISTRO
-					/ LOG-IN</a></li>
+					class="material-icons">person</i><span>INICIAR SESIÓN</span></a></li>
 		</ul>
 	</div>
 
@@ -51,7 +48,9 @@
 
 		<div id="paradas">
 			<div class="volver">
-				<button id="volver"><i class="material-icons">map</i><a>Volver a las rutas</a></button>
+				<button id="volver">
+					<i class="material-icons">map</i><a>Volver a las rutas</a>
+				</button>
 			</div>
 			<div id="contenedorParadas"></div>
 		</div>

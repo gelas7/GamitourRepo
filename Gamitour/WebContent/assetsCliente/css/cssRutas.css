@@ -18,7 +18,7 @@ a {
 
 ul {
 	display: flex;
-	list-style-type : none;
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -85,13 +85,8 @@ li a:hover {
 	box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
 }
 
-
 .cabecera i {
 	display: none;
-}
-
-.cabecera p {
-	display: inline;
 }
 
 #contenido {
@@ -144,7 +139,7 @@ li a:hover {
 	flex-direction: column;
 }
 
-#volver{
+#volver {
 	border: none;
 	font-family: 'Cuprum', sans-serif;
 	color: #f4d03f;
@@ -157,8 +152,8 @@ li a:hover {
 	outline: none;
 }
 
-#volver a{
-	margin-left:10px;
+#volver a {
+	margin-left: 10px;
 }
 
 .datosParadas {
@@ -181,12 +176,10 @@ li a:hover {
 /**MEDIA QUERIES**/
 @media ( max-width : 600px) {
 	html, body {
-		background-color: #1d1c1c;
-		background-color: rgb(90, 88, 88);
 		min-width: 400px;
 	}
 	#contenido {
-		margin: 80px auto 40px auto;
+		margin: 50px auto 40px auto;
 		align-items: center;
 	}
 	#contenedorParadas, #contenedorItinerarios {
@@ -194,13 +187,17 @@ li a:hover {
 		flex-direction: column;
 		align-items: center;
 	}
+	#volver {
+		display: block;
+		margin: 80px auto 20px auto;
+	}
 	.mapItinerario, .mapParada {
 		margin-top: 20px;
 		width: 300px;
 		height: 200px;
 	}
-	.tituloParada {
-		margin-top: 70px;
+	.tituloParada, .botonesItinerario {
+		font-size: 30px;
 	}
 	.datosParadas {
 		display: none;
@@ -208,15 +205,11 @@ li a:hover {
 	.botonesItinerario {
 		margin-top: 40px;
 	}
-	.datosParadas:hover {
-		font-size: 16px;
-		height: 200px;
-		cursor: none;
-	}
 	.cabecera i {
+		font-size: 25px;
 		display: block;
 	}
-	.cabecera p {
+	.cabecera span {
 		display: none;
 	}
 }

@@ -33,21 +33,17 @@
 
 	<div class="cabecera">
 		<ul class="menu">
-			<li><a href="/Gamitour/Cliente/Registrados/indexRegistrado.jsp"><i class="material-icons"
-					style="font-size: 35px;">home</i>INICIO</a></li>
-			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">map</i>RUTAS</a></li>
-			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">speaker_notes</i>ACTIVIDADES</a></li>
+			<li><a href="/Gamitour/Cliente/Registrados/indexRegistrado.jsp"><i
+					class="material-icons">home</i><span>INICIO</span></a></li>
+			<li><a href="#"><i class="material-icons">map</i><span>RUTAS</span></a></li>
+			<li><a href="#"><i class="material-icons">speaker_notes</i><span>ACTIVIDADES</span></a></li>
 
-			<li class="dropdown">
-				<a href="#" class="dropbtn"><i class="material-icons"
-					style="font-size: 35px;">person</i>MI CUENTA</a>
+			<li class="dropdown"><a href="#" class="dropbtn"><i
+					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
-					<a href="#">${email}</a>
-					<a href="/Gamitour/Logout">Cerrar Sesión</a>
-				</div>
-			</li>
+					<a href="#">${email}</a> <a href="/Gamitour/Logout"><span>Cerrar
+							Sesión</span></a>
+				</div></li>
 
 		</ul>
 	</div>
@@ -63,7 +59,9 @@
 
 		<div id="paradas">
 			<div class="volver">
-				<button id="volver"><i class="material-icons">map</i><a>Volver a las rutas</a></button>
+				<button id="volver">
+					<i class="material-icons">map</i><a>Volver a las rutas</a>
+				</button>
 			</div>
 			<div id="contenedorParadas"></div>
 		</div>

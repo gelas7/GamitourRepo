@@ -36,15 +36,13 @@
 
 	<div class="cabecera">
 		<ul>
-			<li><a href="/Gamitour/Cliente/index.html"><i class="material-icons"
-					style="font-size: 35px;">home</i>INICIO</a></li>
+			<li><a href="/Gamitour/Cliente/index.html"><i
+					class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
-					class="material-icons" style="font-size: 35px;">map</i>RUTAS</a></li>
-			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
-			<li><a href="#"><i
-					class="material-icons" style="font-size: 35px;">perm_identity</i>REGISTRO
-					/ LOG-IN</a></li>
+					class="material-icons">map</i><span>RUTAS</span></a></li>
+			<li><a href="#"><i class="material-icons">speaker_notes</i><span>COMENTARIOS</span></a></li>
+			<li><a href="#"><i class="material-icons">person</i><span>INICIAR
+						SESIÓN</span></a></li>
 		</ul>
 	</div>
 
@@ -79,7 +77,7 @@
 						name="password1" id="password1" required="required" maxlength="30">
 					<a id="errorPass">Las contraseñas no son iguales</a>
 				</p>
-		
+
 				<p>
 					<label for="password2">Repita su contraseña:</label> <input
 						type="password" name="password2" id="password2"
