@@ -3,9 +3,11 @@ window.onload = function() {
 
     var listaItinerarios = document.getElementById("listaItinerarios");
     var jsonItinerarios = JSON.parse(listaItinerarios.value);
+    var botonVolver = document.getElementById("volver");
+    botonVolver.addEventListener("click", cargarItinerarios, false);
 
     cargarItinerarios();
-
+    
 
     function cargarItinerarios(directionsService, directionsDisplay) {
         document.getElementById('paradas').style.display = 'none';

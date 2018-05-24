@@ -36,13 +36,13 @@
 
 	<div class="cabecera">
 		<ul>
-			<li><a href="../index.html"><i class="material-icons"
+			<li><a href="/Gamitour/Cliente/index.html"><i class="material-icons"
 					style="font-size: 35px;">home</i>INICIO</a></li>
-			<li><a href="../../MostrarPublico.cl"><i
+			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
 					class="material-icons" style="font-size: 35px;">map</i>RUTAS</a></li>
 			<li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
-			<li><a href="../Login/Register.jsp"><i
+			<li><a href="#"><i
 					class="material-icons" style="font-size: 35px;">perm_identity</i>REGISTRO
 					/ LOG-IN</a></li>
 		</ul>

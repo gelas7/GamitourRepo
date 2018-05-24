@@ -33,20 +33,19 @@
 
 	<div class="cabecera">
 		<ul class="menu">
-			<li><a href="Cliente/Registrados/indexRegistrado.jsp"><i class="material-icons"
+			<li><a href="/Gamitour/Cliente/Registrados/indexRegistrado.jsp"><i class="material-icons"
 					style="font-size: 35px;">home</i>INICIO</a></li>
 			<li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">map</i>RUTAS</a></li>
 			<li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">speaker_notes</i>ACTIVIDADES</a></li>
 
-
 			<li class="dropdown">
 				<a href="#" class="dropbtn"><i class="material-icons"
 					style="font-size: 35px;">person</i>MI CUENTA</a>
 				<div class="dropdown-content">
 					<a href="#">${email}</a>
-					<a href="Logout">Cerrar Sesión</a>
+					<a href="/Gamitour/Logout">Cerrar Sesión</a>
 				</div>
 			</li>
 
@@ -63,6 +62,9 @@
 		</div>
 
 		<div id="paradas">
+			<div class="volver">
+				<button id="volver"><i class="material-icons">map</i><a>Volver a las rutas</a></button>
+			</div>
 			<div id="contenedorParadas"></div>
 		</div>
 	</div>
