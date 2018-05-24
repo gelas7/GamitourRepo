@@ -18,6 +18,7 @@ a {
 .cabecera {
 	color: rgb(23, 24, 23);
 	background-color: #f4d03f;
+	opacity: 0.9;
 	justify-content: center;
 	margin-bottom: 25px;
 	position: fixed;
@@ -168,9 +169,9 @@ input[name="codigopostal"], input[name="telefono"] {
 	font-weight: 700;
 	background-color: transparent;
 	color: #f4d03f;
-	font-family: 'Francois One', sans-serif;
-	border: none;
+	font-family: 'Francois One', sans-serif; border : none;
 	outline: none;
+	border: none;
 }
 
 .inputSubmit:hover {
@@ -193,7 +194,7 @@ input[name="codigopostal"], input[name="telefono"] {
 		background-image: url("../img/p1.jpg");
 		background-size: 100%;
 		background-color: rgb(90, 88, 88);
-		min-width:380px;
+		min-width: 380px;
 	}
 	.cabecera i {
 		font-size: 25px;
@@ -212,8 +213,9 @@ input[name="codigopostal"], input[name="telefono"] {
 		input[name="direccion"] {
 		width: 180px;
 	}
-	input[name="codigopostal"], input[name="telefono"], input["fechanacimiento"], input[name="password"], input[name="password1"],
-		input[name="password2"] {
+	input[name="codigopostal"], input[name="telefono"], input[ "fechanacimiento
+		"], input[name="password"], input[name="password1"], input[name="password2"]
+		{
 		width: 75px;
 	}
 	form label {
@@ -226,8 +228,7 @@ input[name="codigopostal"], input[name="telefono"] {
 	.inputFile+label:hover {
 		font-size: 15.05px;
 	}
-	
-	h3{
-		font-size:18px;
+	h3 {
+		font-size: 18px;
 	}
 }

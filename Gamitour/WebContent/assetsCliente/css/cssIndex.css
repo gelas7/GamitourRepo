@@ -85,6 +85,7 @@ li a:hover {
 .cabecera {
 	color: rgb(23, 24, 23);
 	background-color: #f4d03f;
+	opacity: 0.9;
 	justify-content: center;
 	position: fixed;
 	z-index: 1000;
@@ -101,7 +102,9 @@ li a:hover {
 	font-family: 'Francois One', sans-serif;
 	font-weight: 200;
 	font-size: 25px;
-	margin-top: 55px; background : RGB( 246, 220, 79);
+	margin-top: 60px;
+	background: RGB(246, 220, 79);
+	opacity: 0.9;
 	color: rgb(7, 7, 7);
 	padding: 1em;
 	width: 350px;
@@ -138,13 +141,15 @@ li a:hover {
 
 @media ( max-width : 600px) {
 	html, body {
-		background-image: url("../img/p1.jpg");
-		background-size: 100%;
-		background-color: rgb(90, 88, 88);
+		background: url("../img/p1.jpg");
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 	.pestanaInicio {
 		float: left;
-		margin-top: 55px;
+		margin-top: 57px;
 		font-weight: 500;
 		font-size: 17px;
 		color: rgb(7, 7, 7);
