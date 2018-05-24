@@ -117,11 +117,20 @@ input {
 	outline: none;
 	color: white;
 	font-family: 'Dosis', sans-serif;
-	font-size: 16px;
+	font-size: 20px;
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: white;
+        background: transparent;
+        font-size:20px;
+    }
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px white inset;
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
 }
 
 input[name="nombre"], input[name="apellidos"], input[name="email"],

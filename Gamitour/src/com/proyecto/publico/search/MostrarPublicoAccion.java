@@ -26,7 +26,7 @@ public class MostrarPublicoAccion extends Accion {
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		response.setCharacterEncoding("UTF8");
-		
+
 		ServiceNoticias sn = new ServiceNoticiasImp();
 		ServiceClientesImp sc = new ServiceClientesImp();
 		ServiceItinerarios si = new ServiceItinerariosImp();
@@ -62,13 +62,50 @@ public class MostrarPublicoAccion extends Accion {
 		request.getSession().setAttribute("listaNoticias", ns);
 		request.getSession().setAttribute("listaActividades", as);
 		request.getSession().setAttribute("listaMultimedias", ms);
-		
+
+		String solicitud = request.getParameter("id");// Que info debemos mostrar(rutas,infoCliente,actividades...)
+
 		String email = (String) request.getSession().getAttribute("email");
 		String rol = (String) request.getSession().getAttribute("rol");
-		String salida = "Cliente/MostrarPublico.jsp";
-		if(email!=null && rol!=null)
-			salida= "Cliente/Registrados/MostrarRegistrado.jsp";
+
+		String salida = "Cliente/";
+
+		if (email != null && rol != null) {
+			salida += "Registrados/";
+
+			switch (solicitud) {
+			// CLIENTES
+
+//			case "index":
+//				salida += "indexRegistrado.jsp";
+//				break;
+			case "rutas":
+				salida += "RutasRegistrado.jsp";
+				break;
+			case "cliente":
+				salida += "infoCliente.jsp";
+				break;
+			default:
+				System.out.println("Error en eleccion de salida Clientes - MostrarPublicoAccion");
+				break;
+			}
+		}
 		
+		else {
+			switch (solicitud) {
+			// CLIENTES
+//			case "index":
+//				salida += "index.html";
+//				break;
+			case "rutas":
+				salida += "RutasPublico.jsp";
+				break;
+			default:
+				System.out.println("Error en eleccion de salida Clientes - MostrarPublicoAccion");
+				break;
+			}
+		}
+
 		return salida;
 	}
 

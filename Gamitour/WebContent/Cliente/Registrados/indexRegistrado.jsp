@@ -22,17 +22,17 @@
 		<ul class="menu">
 			<li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">home</i>INICIO</a></li>
-			<li><a href="../../MostrarPublico.cl"><i class="material-icons"
+			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i class="material-icons"
 					style="font-size: 35px;">map</i>RUTAS</a></li>
 			<li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
+					style="font-size: 35px;">speaker_notes</i>ACTIVIDADES</a></li>
 
 			<li class="dropdown">
 				<a href="#" class="dropbtn"><i class="material-icons"
 					style="font-size: 35px;">person</i>MI CUENTA</a>
 				<div class="dropdown-content">
 					<a href="#">${email}</a>
-					<a href="../../Logout">Cerrar Sesión</a>
+					<a href="/Gamitour/Logout">Cerrar Sesión</a>
 				</div>
 			</li>
 

@@ -31,7 +31,7 @@ public class BuscarClienteAccion extends Accion {
 				if (rol.equals("administrador") || rol.equals("registrado")) {
 					session.setAttribute("email", c.getEmail());
 					session.setAttribute("rol", rol);
-					rutaSalida = "MostrarPublico.cl";
+					rutaSalida = "/Cliente/Registrados/indexRegistrado.jsp";
 				} else {
 					rutaSalida = "errores/error.jsp";
 				}

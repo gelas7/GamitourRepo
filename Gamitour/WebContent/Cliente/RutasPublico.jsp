@@ -25,10 +25,10 @@
 		 <ul>
             <li><a href="Cliente/index.html"><i class="material-icons"
 					style="font-size: 35px;">home</i>INICIO</a></li>
-            <li><a href="MostrarPublico.cl"><i class="material-icons"
+            <li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">map</i>RUTAS</a></li>
             <li><a href="#"><i class="material-icons"
-					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
+					style="font-size: 35px;">speaker_notes</i>ACTIVIDADES</a></li>
             <li><a href="Cliente/Login/Register.jsp"><i class="material-icons"
 					style="font-size: 35px;">perm_identity</i>REGISTRO / LOG-IN</a>
             </li>

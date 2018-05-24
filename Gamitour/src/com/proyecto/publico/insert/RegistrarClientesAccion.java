@@ -43,7 +43,7 @@ public class RegistrarClientesAccion extends HttpServlet {
 		String apellidos = request.getParameter("apellidos");
 		String fechanacimiento = request.getParameter("fechanacimiento");
 		String email = request.getParameter("email");
-		String password = request.getParameter("password");
+		String password = request.getParameter("password1");
 		String telefono = request.getParameter("telefono");
 		String direccion = request.getParameter("direccion");
 		String codigopostal = request.getParameter("codigopostal");
@@ -82,7 +82,7 @@ public class RegistrarClientesAccion extends HttpServlet {
 
 		sc.insertar(c); // Inserto cliente
 
-		response.sendRedirect("MostrarPublico.cl");
+		response.sendRedirect("/Gamitour/Cliente/Login/Register.jsp");
 	}
 
 }
