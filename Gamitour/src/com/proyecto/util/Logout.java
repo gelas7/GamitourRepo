@@ -25,6 +25,9 @@ public class Logout extends HttpServlet {
 		response.setHeader("Expires", "0"); // Proxies.
 		
 		session.invalidate();
-		response.sendRedirect("/Gamitour/index.html");
+		
+		String salida = "/Gamitour/Cliente/index.html";
+
+		response.sendRedirect(salida);
 	}
 }

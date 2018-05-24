@@ -9,9 +9,9 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Gamiastur</title>
 
-<link rel='stylesheet' href='assetsCliente/css/cssRutas.css' />
+<link rel='stylesheet' href='/Gamitour/assetsCliente/css/cssRutas.css' />
 
-<script src="assetsCliente/js/scriptItinerarios.js" type="text/javascript"></script>
+<script src="/Gamitour/assetsCliente/js/scriptItinerarios.js" type="text/javascript"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U"></script>

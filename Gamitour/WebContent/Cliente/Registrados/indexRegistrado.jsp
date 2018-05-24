@@ -1,5 +1,9 @@
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <title>Gamiastur</title>
     
@@ -13,20 +17,28 @@
 </head>
 
 <body>
-
+    
     <div class="cabecera">
-        <ul>
-            <li><a href="index.html"><i class="material-icons"
+		<ul class="menu">
+			<li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">home</i>INICIO</a></li>
-            <li><a href="../MostrarPublico.cl"><i class="material-icons"
+			<li><a href="../../MostrarPublico.cl"><i class="material-icons"
 					style="font-size: 35px;">map</i>RUTAS</a></li>
-            <li><a href="#"><i class="material-icons"
+			<li><a href="#"><i class="material-icons"
 					style="font-size: 35px;">speaker_notes</i>COMENTARIOS</a></li>
-            <li><a href="Login/Register.jsp"><i class="material-icons"
-					style="font-size: 35px;">perm_identity</i>REGISTRO / LOG-IN</a>
-            </li>
-        </ul>
-    </div>
+
+			<li class="dropdown">
+				<a href="#" class="dropbtn"><i class="material-icons"
+					style="font-size: 35px;">person</i>MI CUENTA</a>
+				<div class="dropdown-content">
+					<a href="#">${email}</a>
+					<a href="../../Logout">Cerrar Sesión</a>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+    
 
     <video id="bgvid" playsinline autoplay muted loop>
 		<source poster="poster="

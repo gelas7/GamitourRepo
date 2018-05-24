@@ -16,7 +16,7 @@ public class BuscarClienteAccion extends Accion {
 		HttpSession session = request.getSession();
 		ServiceClientesImp sc = new ServiceClientesImp();
 
-		String url = (String) session.getAttribute("url");
+		//String url = (String) session.getAttribute("url");
 		String email = (String) request.getParameter("email"); 
 		String pass = (String) request.getParameter("password");
 		Cliente c = sc.buscarClientePorEmail(email);

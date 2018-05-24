@@ -120,6 +120,10 @@ input {
 	font-size: 16px;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
 input[name="nombre"], input[name="apellidos"], input[name="email"],
 	input[name="direccion"] {
 	width: 300px;

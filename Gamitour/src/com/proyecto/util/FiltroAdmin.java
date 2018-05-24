@@ -24,11 +24,8 @@ public class FiltroAdmin implements Filter {
 		HttpSession session = req.getSession();
 
 		String url = req.getServletPath();
-		String urlsesion = (String) session.getAttribute("url");
 		
-		if (url.contains("BuscarAdmin.do") && urlsesion != null) {
-			chain.doFilter(req, res);
-		} else if (url.contains("BuscarAdmin.do") && urlsesion == null) { //Si no pasa por index
+		if (url.contains("BuscarAdmin.do")) { //Si no pasa por index
 			session.setAttribute("url", "/MostrarAdmin.do");
 			chain.doFilter(req, res);
 		} else {
