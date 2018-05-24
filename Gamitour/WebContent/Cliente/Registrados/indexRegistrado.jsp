@@ -27,14 +27,14 @@
 		<ul class="menu">
 			<li><a href="#"><i class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
-					class="material-icons">map</i>RUTAS</a></li>
+					class="material-icons">map</i><span>RUTAS</span></a></li>
 			<li><a href="#"><i class="material-icons">speaker_notes</i><span>ACTIVIDADES</span></a></li>
 
 			<li class="dropdown"><a href="#" class="dropbtn"><i
 					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
-					<a href="#">${email}</a> <a href="/Gamitour/Logout"><span>Cerrar
-							Sesión</span></a>
+					<a href="#">Ajustes</a>
+					 <a href="/Gamitour/Logout"><span>Logout</span></a>
 				</div></li>
 
 		</ul>

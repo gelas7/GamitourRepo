@@ -73,7 +73,7 @@ li a:hover {
 	color: rgb(23, 24, 23);
 	background-color: #f4d03f;
 	opacity: 0.9;
-	justify-content : center;
+	justify-content: center;
 	margin-bottom: 25px;
 	position: fixed;
 	z-index: 1000;
@@ -175,15 +175,10 @@ li a:hover {
 /**MEDIA QUERIES**/
 @media ( max-width : 600px) {
 	html, body {
-		min-width: 400px;
+		
 	}
 	#contenido {
 		margin: 50px auto 40px auto;
-		align-items: center;
-	}
-	#contenedorParadas, #contenedorItinerarios {
-		display: flex;
-		flex-direction: column;
 		align-items: center;
 	}
 	#volver {
@@ -211,4 +206,12 @@ li a:hover {
 	.cabecera span {
 		display: none;
 	}
+	/*
+	.dropdown-content a {
+		padding: 12px 16px;
+	}
+	.dropdown:hover .dropdown-content {
+		width: 100%;
+	}
+	*/
 }

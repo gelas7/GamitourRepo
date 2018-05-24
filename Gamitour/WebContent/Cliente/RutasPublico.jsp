@@ -7,6 +7,7 @@
 
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Gamiastur</title>
 
 <link rel='stylesheet' href='/Gamitour/assetsCliente/css/cssRutas.css' />
@@ -31,7 +32,7 @@
 		<ul>
 			<li><a href="/Gamitour/Cliente/index.html"><i
 					class="material-icons">home</i><span>INICIO</span></a></li>
-			<li><a href="#"><i class="material-icons">map</i><span>RUTAS</a></li>
+			<li><a href="#"><i class="material-icons">map</i><span>RUTAS</span></a></li>
 			<li><a href="#"><i class="material-icons">speaker_notes</i><span>ACTIVIDADES</span></a></li>
 			<li><a href="/Gamitour/Cliente/Login/Register.jsp"><i
 					class="material-icons">person</i><span>INICIAR SESIÓN</span></a></li>
@@ -41,7 +42,7 @@
 	<div id="contenido">
 
 		<input type="hidden" id="listaItinerarios" value='${listaItinerarios}' />
-
+	
 		<div id="itinerarios">
 			<div id="contenedorItinerarios"></div>
 		</div>
