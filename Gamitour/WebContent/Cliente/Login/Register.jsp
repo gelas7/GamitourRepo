@@ -112,7 +112,7 @@
 				</p>
 
 				<h3>
-					Si ya tienes una cuenta, incia sesión <a id="regToLog">aquí</a>
+					<a id="regToLog">Si ya tienes una cuenta, incia sesión aquí</a>
 				</h3>
 
 			</form>
@@ -135,7 +135,7 @@
 				</p>
 
 				<h3>
-					Si no estás registrado hazlo <a id="logToReg">aquí</a>
+					<a id="logToReg">Si no estás registrado hazlo aquí</a>
 				</h3>
 
 			</form>
