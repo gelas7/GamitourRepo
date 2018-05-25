@@ -82,8 +82,8 @@ public class MostrarPublicoAccion extends Accion {
 			case "rutas":
 				salida += "RutasRegistrado.jsp";
 				break;
-			case "cliente":
-				salida += "infoCliente.jsp";
+			case "actividades":
+				salida += "ActividadesCliente.jsp";
 				break;
 			default:
 				System.out.println("Error en eleccion de salida Clientes - MostrarPublicoAccion");
@@ -99,6 +99,9 @@ public class MostrarPublicoAccion extends Accion {
 //				break;
 			case "rutas":
 				salida += "RutasPublico.jsp";
+				break;
+			case "actividades":
+				salida += "ActividadesPublico.jsp";
 				break;
 			default:
 				System.out.println("Error en eleccion de salida Clientes - MostrarPublicoAccion");

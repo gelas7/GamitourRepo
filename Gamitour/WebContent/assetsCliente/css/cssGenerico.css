@@ -92,7 +92,7 @@ li a:hover {
 	margin: 95px auto 0 auto;
 }
 
-.botonesItinerario {
+.botonesItinerario, .nombreActividad {
 	width: 100%;
 	padding: 0;
 	border: none;
@@ -107,8 +107,17 @@ li a:hover {
 	outline: none;
 }
 
-.botonesItinerario:hover {
+.botonesItinerario:hover, .nombreActividad:hover {
 	color: orange;
+}
+
+.tituloParada {
+	width: 100%;
+	margin: 10px auto 10px auto;
+	color: orange;
+	font-weight: 600;
+	font-size: 40px;
+	text-align: center;
 }
 
 .mapItinerario {
@@ -125,12 +134,7 @@ li a:hover {
 	height: 250px;
 }
 
-#contenedorItinerarios {
-	display: flex;
-	flex-direction: column;
-}
-
-#contenedorParadas {
+#contenedorItinerarios, #contenedorParadas, #contenedorActividades {
 	display: flex;
 	flex-direction: column;
 }
@@ -153,22 +157,13 @@ li a:hover {
 	margin-left: 10px;
 }
 
-.datosParadas {
+.datosParadas, .datosActividad {
 	width: 480px;
 	margin: 20px auto 35px auto;
 	padding: 10px;
 	text-align: justified;
 	color: white;
 	border: 2px solid #f4d03f;
-}
-
-.tituloParada {
-	width: 100%;
-	margin: 10px auto 10px auto;
-	color: orange;
-	font-weight: 600;
-	font-size: 40px;
-	text-align: center;
 }
 
 /**MEDIA QUERIES**/
@@ -189,14 +184,15 @@ li a:hover {
 		width: 300px;
 		height: 200px;
 	}
-	.tituloParada, .botonesItinerario {
+	.tituloParada, .botonesItinerario, .nombreActividad {
 		font-size: 30px;
+		margin-top: 40px;
 	}
-	.datosParadas {
+	.datosParadas, .datosActividad {
 		display: none;
 	}
 	.botonesItinerario {
-		margin-top: 40px;
+		
 	}
 	.cabecera i {
 		font-size: 25px;

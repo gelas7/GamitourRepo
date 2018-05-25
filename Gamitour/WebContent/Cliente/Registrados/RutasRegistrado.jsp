@@ -14,7 +14,7 @@
 <script src="/Gamitour/assetsCliente/js/scriptItinerarios.js"
 	type="text/javascript"></script>
 
-<link rel='stylesheet' href='/Gamitour/assetsCliente/css/cssRutas.css' />
+<link rel='stylesheet' href='/Gamitour/assetsCliente/css/cssGenerico.css' />
 
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
@@ -36,8 +36,7 @@
 			<li><a href="/Gamitour/Cliente/Registrados/indexRegistrado.jsp"><i
 					class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="#"><i class="material-icons">map</i><span>RUTAS</span></a></li>
-			<li><a href="#"><i class="material-icons">speaker_notes</i><span>ACTIVIDADES</span></a></li>
-
+            <li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i class="material-icons"">speaker_notes</i><span>ACTIVIDADES</span></a></li>
 			<li class="dropdown"><a href="#" class="dropbtn"><i
 					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
