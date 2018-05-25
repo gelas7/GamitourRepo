@@ -31,6 +31,8 @@ window.onload = function() {
 			        if(jsonActividades[j].precio!=null)
 			        	divActividad+=`<a><b>Precio:</b> ${jsonActividades[j].precio}</a><br>`;
 		        divActividad+=`</div>`;
+		        
+		        divActividad+=`<button class="botonReserva" value=${jsonActividades[j].id}> Reservar la actividad </button>`
 		        		        
 		        
 	            document.getElementById("contenedorActividades").innerHTML += divActividad;
