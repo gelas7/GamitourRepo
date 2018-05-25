@@ -120,16 +120,9 @@ li a:hover {
 	text-align: center;
 }
 
-.mapItinerario {
+.mapItinerario,.mapParada,.imagenActividad {
 	border: 1px solid #f4d03f;
 	margin: 0 auto 20px auto;
-	width: 500px;
-	height: 250px;
-}
-
-.mapParada {
-	border: 1px solid #f4d03f;
-	margin: 0 auto 0 auto;
 	width: 500px;
 	height: 250px;
 }
@@ -137,6 +130,10 @@ li a:hover {
 #contenedorItinerarios, #contenedorParadas, #contenedorActividades {
 	display: flex;
 	flex-direction: column;
+}
+
+#infoActividad{
+	display:none;
 }
 
 #volver {

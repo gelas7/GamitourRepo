@@ -46,7 +46,15 @@
 		<div id="actividades">
 			<div id="contenedorActividades"></div>
 		</div>
-
+		<div>
+			<div class="volver">
+				<button id="volver">
+					<i class="material-icons">map</i><a>Volver a las actividades</a>
+				</button>
+			</div>
+			<div id="infoActividad">
+			</div>
+		</div>
 	</div>
 
 </body>
