@@ -52,16 +52,15 @@ li .dropdown {
 
 .dropdown-content a {
 	color: black;
-	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
-	text-align: left;
+	text-align: center;
 }
 
 .dropdown:hover .dropdown-content {
 	display: block;
 	background-color: #f9e79f;
-	width: 100%;
+	width: 25%;
 }
 
 li a:hover {
@@ -206,12 +205,4 @@ li a:hover {
 	.cabecera span {
 		display: none;
 	}
-	/*
-	.dropdown-content a {
-		padding: 12px 16px;
-	}
-	.dropdown:hover .dropdown-content {
-		width: 100%;
-	}
-	*/
 }

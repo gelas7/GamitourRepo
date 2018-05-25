@@ -30,12 +30,12 @@
 					class="material-icons">map</i><span>RUTAS</span></a></li>
 			<li><a href="#"><i class="material-icons">speaker_notes</i><span>ACTIVIDADES</span></a></li>
 
-			<li class="dropdown"><a href="#" class="dropbtn"><i
-					class="material-icons">person</i><span>MI CUENTA</span></a>
+			<li class="dropdown"><a href="#" class="dropbtn"><i class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
-					<a href="#">Ajustes</a>
-					 <a href="/Gamitour/Logout"><span>Logout</span></a>
-				</div></li>
+					<a href="#"><i class="material-icons">build</i><span>Ajustes</span></a>
+					<a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
+				</div>	
+			</li>
 
 		</ul>
 	</div>
