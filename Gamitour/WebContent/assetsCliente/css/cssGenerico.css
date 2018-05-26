@@ -101,10 +101,11 @@ li a:hover {
 	font-size: 40px;
 	font-weight: 600;
 	cursor: pointer;
-	margin: 20px 0 20px 0;
+	margin: 20px auto 20px auto;
 	border: none;
 	background: none;
 	outline: none;
+	text-align: center;
 }
 
 .botonesItinerario:hover, .nombreActividad:hover {
@@ -120,20 +121,42 @@ li a:hover {
 	text-align: center;
 }
 
-.mapItinerario,.mapParada,.imagenActividad {
+.mapItinerario, .mapParada {
 	border: 1px solid #f4d03f;
 	margin: 0 auto 20px auto;
 	width: 500px;
 	height: 250px;
 }
 
-#contenedorItinerarios, #contenedorParadas, #contenedorActividades {
-	display: flex;
-	flex-direction: column;
+.imagenActividad {
+	border: 1px solid #f4d03f;
+	margin: 0 auto 20px auto;
+	width: 290px;
+	height: 250px;
 }
 
-#infoActividad{
-	display:none;
+.reservar {
+	width: 100%;
+	text-align: center;
+	margin: 20px auto 80px auto;
+}
+
+.botonReserva {
+	padding: 0;
+	font-family: 'Cuprum', sans-serif;
+	color: white;
+	font-size: 30px;
+	font-weight: 600;
+	cursor: pointer;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+#contenedorItinerarios, #contenedorParadas, #contenedorActividades,
+	#infoActividad {
+	display: flex;
+	flex-direction: column;
 }
 
 #volver {

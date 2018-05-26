@@ -24,6 +24,8 @@ import com.google.gson.annotations.Expose;
 public class Actividad implements java.io.Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
+	@Expose
 	private Integer idactividad;
 	@Expose
 	private String nombre;

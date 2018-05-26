@@ -31,6 +31,7 @@ public class ClienteController extends HttpServlet {
 		// la
 		// accion que ha elegido el usuario.
 		// Le quitamos el .cl
+		
 		accion = Accion.getAccion(url.substring(1, url.length() - 3));
 		// Realizamos el metodo ejecutar de la accion escogida por el usuario
 		despachador = request.getRequestDispatcher(accion.ejecutar(request, response));

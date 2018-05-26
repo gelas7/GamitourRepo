@@ -59,10 +59,21 @@
 				<p>
 					<label>Fecha de fin: </label> <input type="date" name="fechafin"
 						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechafin()%>">
+				
 				</p>
 				<p>
-					<label>Ubicacion: </label> <input type="text" name="ubicacion" maxlength="500"
-						placeholder="<%=sa.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
+					<label for="ubicacion">Ubicacion:</label> <select name="ubicacion">
+						<option selected disabled>Seleccione una población</option>
+						<option value="Gijón">Gijón</option>
+						<option value="Oviedo">Oviedo</option>
+						<option value="Avilés">Avilés</option>
+						<option value="Siero">Siero</option>
+						<option value="Langreo">Langreo</option>
+						<option value="Mieres">Mieres</option>
+						<option value="Castrillón">Castrillón</option>
+						<option value="Villaviciosa">Villaviciosa</option>
+						<option value="Llanes">Llanes</option>
+					</select>
 				</p>
 				<p>
 					<label>Número de participantes: </label> <input type="number"
