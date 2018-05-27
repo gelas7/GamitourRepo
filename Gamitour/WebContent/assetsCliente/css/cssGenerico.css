@@ -95,21 +95,19 @@ li a:hover {
 }
 
 #contenedorItinerarios, #contenedorParadas, #contenedorActividades,
-	#infoActividad, #contenedorReservas {
+	#infoActividad, #contenedorReservas, #contenedorAjustes {
 	display: flex;
 	flex-flow: row wrap;
 	margin: 0 30px 0 30px;
 }
 
-#reservas {
+#reservas, #ajustes {
 	width: 600px;
 	margin: 0 auto 0 auto;
 }
 
 #ajustes {
 	display: none;
-	width: 600px;
-	margin: 0 auto 0 auto;
 }
 
 .flexItem { /*CAJA QUE CONTIENE UNA PARADA*/
@@ -276,10 +274,6 @@ table a:hover {
 }
 
 /**FORMULARIOS**/
-.contenedorAjustes {
-	margin: 0 auto 0 auto;
-}
-
 h2 {
 	display: block;
 	text-align: center;
@@ -291,11 +285,12 @@ form label {
 	color: white;
 	font-size: 20px;
 	font-weight: 600;
+	margin: 0 auto 0 20px;
 }
 
 input {
 	margin-left: 10px;
-	background-color : transparent;
+	background-color: transparent;
 	border: none;
 	border-bottom: 1px solid #f4d03f;
 	outline: none;
@@ -336,62 +331,68 @@ input[name="password1"], input[name="password2"] {
 #errorPass {
 	display: none;
 	color: red;
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: 600;
 }
 
 /**Navegadores**/
-@
+
 -webkit-keyframes autofill {to { color:white;
 	background: transparent;
 }
 
 }
-input:-webkit-autofill { 
+input:-webkit-autofill {
 	-webkit-animation-name: autofill;
 	-webkit-animation-fill-mode: both;
 }
 
 ::placeholder {
-    color: #c9c9c9;
-    opacity: 1; /* Firefox */
+	color: #c9c9c9;
+	opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #c9c9c9;
+	color: #c9c9c9;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: #c9c9c9;
+	color: #c9c9c9;
 }
-
 
 /**MEDIA QUERIES**/
 @media ( max-width : 600px) {
 	html, body {
 		
 	}
+	h2 {
+		font-size: 20px;
+	}
+	form label {
+		font-size: 18px;
+	}
+	input {
+		margin-left: 5px;
+		font-size: 15px;
+	}
+	input[name="email"] {
+		width: 200px;
+	}
+	input[name="password1"], input[name="password2"] {
+		width: 120px;
+	}
+	.submit {
+		text-align: center;
+	}
+	.inputSubmit {
+		font-size: 34px;
+	}
+	#errorPass {
+		font-size: 15px;
+	}
 	#contenido {
-		margin: 70px auto 40px auto;
+		margin: 80px auto 40px auto;
 		align-items: center;
-	}
-	#volver {
-		display: block;
-		margin: 80px auto 20px auto;
-	}
-	.mapItinerario, .mapParada {
-		margin-top: 20px;
-		width: 300px;
-		height: 200px;
-	}
-	.tituloParada, .botonesItinerario, .nombreActividad {
-		font-size: 30px;
-	}
-	.datosParadas, .datosActividad {
-		display: none;
-	}
-	.botonesItinerario {
-		
 	}
 	.cabecera i {
 		font-size: 25px;
@@ -400,7 +401,22 @@ input:-webkit-autofill {
 	.cabecera span {
 		display: none;
 	}
-	#volver {
+	#volver, #btnReservas {
+		display: block;
 		font-size: 20px;
+		margin: 0 auto 20px auto;
+	}
+	.mapItinerario, .mapParada {
+		width: 300px;
+		height: 200px;
+	}
+	#reservas, #ajustes {
+		width: 380px;
+	}
+	.tituloParada, .botonesItinerario, .nombreActividad {
+		font-size: 30px;
+	}
+	.datosParadas, .datosActividad {
+		display: none;
 	}
 }

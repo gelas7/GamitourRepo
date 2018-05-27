@@ -91,6 +91,7 @@ window.onload = function() {
 	function cargarParadas() {
 	    document.getElementById('itinerarios').style.display = 'none';
 	    document.getElementById('paradas').style.display = 'block';
+	    $(window).scrollTop(0);
 	    var numItinerario = this.value;
 	    var divMapa, divDatos = "";
 	    contador = 0;

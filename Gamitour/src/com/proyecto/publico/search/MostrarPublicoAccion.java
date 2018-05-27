@@ -103,7 +103,7 @@ public class MostrarPublicoAccion extends Accion {
 		else {
 			switch (solicitud) {
 			case "index":
-				salida += "index.jsp";
+				salida += "index.html";
 				break;
 			case "rutas":
 				salida += "RutasPublico.jsp";

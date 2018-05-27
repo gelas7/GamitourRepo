@@ -65,7 +65,7 @@
 
 				<div class="tablas" id="divBienvenida">
 					<hr></hr>
-					<h2>Última revisión:  22/05/2018 </h2><br>
+					<h2>Última revisión:  27/05/2018 </h2><br>
 					<h2>Seleccione una opción del menu lateral para comenzar.</h2>
 
 					<br> <a id="guia" style="text-decoration: none"

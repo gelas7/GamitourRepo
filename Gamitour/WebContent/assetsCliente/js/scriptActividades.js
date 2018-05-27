@@ -24,19 +24,9 @@ window.onload = function() {
 		            divActividad+= `<img class="imagenActividad" 
 		            src="http://ambgubuntu.westeurope.cloudapp.azure.com:8080/subidas/actividades/${jsonActividades[j].imagen}"></img>`
 	            }
-// divActividad += `<div class="datosActividad">`;
-// if(jsonActividades[j].fechainicio.length>2)
-// divActividad+=`<a><b>Fecha:</b>
-// ${jsonActividades[j].fechainicio}</a><br><br>`;
-// if(jsonActividades[j].ubicacion.length>2)
-// divActividad+=`<a><b>Ubicación:</b>
-// ${jsonActividades[j].ubicacion}</a><br><br>`;
-// if(jsonActividades[j].precio!=null)
-// divActividad+=`<a><b>Precio:</b> ${jsonActividades[j].precio}</a><br>`;
-// divActividad+=`</div>`;
-		        divActividad+=`</div>`;
-	            document.getElementById("contenedorActividades").innerHTML += divActividad;
 	            
+		        divActividad+=`</div>`;
+	            document.getElementById("contenedorActividades").innerHTML += divActividad;        
 	      
         }
         
@@ -63,6 +53,7 @@ window.onload = function() {
 
 	    document.getElementById('actividades').style.display = 'none';
 	    divActividad.style.display = 'block';
+	    $(window).scrollTop(0);
 	    
 	    divInfoActividad.innerHTML = "";
 	    
