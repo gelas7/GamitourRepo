@@ -10,7 +10,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Gamiastur</title>
 
-<link rel='stylesheet' href='/Gamitour/assetsCliente/css/cssGenerico.css' />
+<link rel='stylesheet'
+	href='/Gamitour/assetsCliente/css/cssGenerico.css' />
 
 <script src="/Gamitour/assetsCliente/js/scriptItinerarios.js"
 	type="text/javascript"></script>
@@ -33,7 +34,8 @@
 			<li><a href="/Gamitour/Cliente/index.html"><i
 					class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="#"><i class="material-icons">map</i><span>RUTAS</span></a></li>
-            <li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
+			<li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i
+					class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
 			<li><a href="/Gamitour/Cliente/Login/Register.jsp"><i
 					class="material-icons">person</i><span>INICIAR SESIÓN</span></a></li>
 		</ul>
@@ -42,14 +44,14 @@
 	<div id="contenido">
 
 		<input type="hidden" id="listaItinerarios" value='${listaItinerarios}' />
-	
+
 		<div id="itinerarios">
 			<div id="contenedorItinerarios"></div>
 		</div>
 
 		<div id="paradas">
-			<div class="volver">
-				<button id="volver">
+			<div>
+				<button class="volver" id="volver">
 					<i class="material-icons">map</i><a>Volver a las rutas</a>
 				</button>
 			</div>

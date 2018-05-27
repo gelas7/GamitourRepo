@@ -16,4 +16,6 @@ public interface ServiceReservas {
 	
 	public List<Reserva> buscarTodos();
 	
+	public List<Reserva> buscarReservasPorIdCliente(Integer idCliente);
+	
 }

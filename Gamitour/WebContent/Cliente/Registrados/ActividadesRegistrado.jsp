@@ -38,7 +38,7 @@
 			<li class="dropdown"><a href="#" class="dropbtn"><i
 					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
-					<a href="#"><i class="material-icons">build</i><span>Ajustes</span></a>
+					<a href="/Gamitour/MostrarPublico.cl?id=usuario"><i class="material-icons">build</i><span>Mis reservas</span></a>
 					<a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
 				</div></li>
 		</ul>
@@ -53,8 +53,8 @@
 		</div>
 
 		<div id="actividad">
-			<div class="volver">
-				<button id="volver">
+			<div>
+				<button class="volver" id="volver">
 					<i class="material-icons">map</i>
 					<a>Volver a las actividades</a>
 				</button>

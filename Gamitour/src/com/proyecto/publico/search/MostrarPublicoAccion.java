@@ -20,6 +20,7 @@ import com.proyecto.service.ServiceMultimedias;
 import com.proyecto.service.ServiceMultimediasImp;
 import com.proyecto.service.ServiceNoticias;
 import com.proyecto.service.ServiceNoticiasImp;
+import com.proyecto.service.ServiceReservasImp;
 import com.proyecto.util.Accion;
 
 public class MostrarPublicoAccion extends Accion {
@@ -32,6 +33,8 @@ public class MostrarPublicoAccion extends Accion {
 		ServiceItinerarios si = new ServiceItinerariosImp();
 		ServiceActividadesImp sa = new ServiceActividadesImp();
 		ServiceMultimedias sm = new ServiceMultimediasImp();
+		ServiceReservasImp sr = new ServiceReservasImp();
+
 
 		List<Noticia> listaNoticias = sn.buscarTodos();
 		List<Cliente> listaClientes = sc.buscarTodos();
@@ -70,20 +73,21 @@ public class MostrarPublicoAccion extends Accion {
 
 		String salida = "Cliente/";
 
-		if (email != null && rol != null) {
+		if (email != null && rol != null) { //REGISTRADOS
 			salida += "Registrados/";
 
 			switch (solicitud) {
-			// CLIENTES
-
-//			case "index":
-//				salida += "indexRegistrado.jsp";
-//				break;
+			
 			case "rutas":
 				salida += "RutasRegistrado.jsp";
 				break;
 			case "actividades":
 				salida += "ActividadesRegistrado.jsp";
+				break;
+			case "usuario":
+				Integer idCliente = sc.buscarClientePorEmail(email).getIdcliente();
+				request.getSession().setAttribute("reservasClienteActual", sr.buscarReservasPorIdCliente(idCliente));
+				salida += "UsuarioRegistrado.jsp";
 				break;
 			default:
 				System.out.println("Error en eleccion de salida Clientes - MostrarPublicoAccion");
@@ -93,10 +97,7 @@ public class MostrarPublicoAccion extends Accion {
 		
 		else {
 			switch (solicitud) {
-			// CLIENTES
-//			case "index":
-//				salida += "index.html";
-//				break;
+			
 			case "rutas":
 				salida += "RutasPublico.jsp";
 				break;

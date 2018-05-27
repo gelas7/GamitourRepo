@@ -41,4 +41,10 @@ public class ServiceReservasImp implements ServiceReservas {
 	public List<Reserva> buscarTodos() {
 		return rd.buscarTodos();
 	}
+
+
+	@Override
+	public List<Reserva> buscarReservasPorIdCliente(Integer idCliente) {
+		return rd.buscarReservasPorIdCliente(idCliente);
+	}
 }

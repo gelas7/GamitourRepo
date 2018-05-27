@@ -16,5 +16,7 @@ public interface ReservasDAO extends GenericDAO<Reserva, Integer> {
 	public Reserva buscarPorClave(Integer id);
 
 	public List<Reserva> buscarTodos();
+	
+	public List<Reserva> buscarReservasPorIdCliente(Integer idCliente);
 
 }

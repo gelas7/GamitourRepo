@@ -17,7 +17,8 @@ window.onload = function() {
 	    
         for (var j = 0; j < jsonActividades.length; j++) {
         	
-	            var divActividad = `<button class="nombreActividad" value=${j}> ${jsonActividades[j].nombre} </button>
+	            var divActividad = `<div class="flexItem">
+	            <button class="nombreActividad" value=${j}> ${jsonActividades[j].nombre} </button>
 	            	`;
 	            if(jsonActividades[j].imagen.length>4){
 		            divActividad+= `<img class="imagenActividad" 
@@ -33,7 +34,7 @@ window.onload = function() {
 // if(jsonActividades[j].precio!=null)
 // divActividad+=`<a><b>Precio:</b> ${jsonActividades[j].precio}</a><br>`;
 // divActividad+=`</div>`;
-		        
+		        divActividad+=`</div>`;
 	            document.getElementById("contenedorActividades").innerHTML += divActividad;
 	            
 	      

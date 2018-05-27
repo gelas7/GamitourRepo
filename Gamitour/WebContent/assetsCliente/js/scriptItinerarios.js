@@ -97,9 +97,7 @@ window.onload = function() {
 	
 	    var paradas = jsonItinerarios[numItinerario].paradas;
 	    document.getElementById('contenedorParadas').innerHTML = "";
-	
-	    debugger;
-	    
+		    
 	    for (let parada in paradas) {
 	        divMapa = `	<p class="tituloParada"><a>${paradas[parada].nombre}</a></p>
 	        			<div id="mapaParada${contador}" class="mapParada"></div>`;

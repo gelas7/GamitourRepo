@@ -48,8 +48,8 @@
 		</div>
 
 		<div id="actividad">
-			<div class="volver">
-				<button id="volver">
+			<div>
+				<button class="volver"  id="volver">
 					<i class="material-icons">map</i><a>Volver a las actividades</a>
 				</button>
 			</div>

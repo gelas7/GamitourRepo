@@ -29,7 +29,7 @@ public class ReservarActividadAccion extends Accion {
 		Cliente c = sc.buscarClientePorEmail((String) session.getAttribute("email"));
 		Actividad a = sa.buscarPorClave(Integer.parseInt(idActividad));
 
-		String rutaSalida = "/MostrarPublico.cl?id=actividades";
+		String rutaSalida = "/MostrarPublico.cl?id=usuario";
 
 		if (c != null && a != null) {
 			Reserva r = new Reserva(c,a,"probando",new Date());

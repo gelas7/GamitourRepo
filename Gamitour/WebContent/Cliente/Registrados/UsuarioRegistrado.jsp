@@ -11,9 +11,6 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Gamiastur</title>
 
-<script src="/Gamitour/assetsCliente/js/scriptItinerarios.js"
-	type="text/javascript"></script>
-
 <link rel='stylesheet' href='/Gamitour/assetsCliente/css/cssGenerico.css' />
 
 <script defer
@@ -35,12 +32,12 @@
 		<ul class="menu">
 			<li><a href="/Gamitour/Cliente/Registrados/indexRegistrado.jsp"><i
 					class="material-icons">home</i><span>INICIO</span></a></li>
-			<li><a href="#"><i class="material-icons">map</i><span>RUTAS</span></a></li>
+			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i class="material-icons">map</i><span>RUTAS</span></a></li>
             <li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
 			<li class="dropdown"><a href="#" class="dropbtn"><i
 					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
-					<a href="/Gamitour/MostrarPublico.cl?id=usuario"><i class="material-icons">build</i><span>Mis reservas</span></a>
+					<a href="#"><i class="material-icons">build</i><span>Mis reservas</span></a>
 					<a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
 				</div>
 			</li>
@@ -50,19 +47,46 @@
 
 	<div id="contenido">
 
-		<input type="hidden" id="listaItinerarios" value='${listaItinerarios}' />
-
-		<div id="itinerarios">
-			<div id="contenedorItinerarios"></div>
+		<div id="reservas">
+			<button class="volver" id="botonAjustes">
+					<i class="material-icons">build</i><a>Ir a mis ajustes</a>
+				</button>
+			<div id="contenedorReservas">
+				<table id="tclientes" class="tablesorter">
+						<thead>
+							<tr>
+								<th>ACTIVIDAD</th>
+								<th>FECHA DE COMPRA</th>
+								<th>FECHA DE ACTIVIDAD</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach items="${reservasClienteActual}" var="reserva">
+								<tr>
+									<td>${reserva.actividad.nombre}</td>
+									<td>${reserva.fecha}</td>
+									<td>${reserva.actividad.fechainicio}</td>
+									<td><a class="eliminar"
+										onclick="return confirm('¿Está seguro de que desea cancelar su reserva?')"
+										href="EliminarReservasCliente.cl?id=${reserva.idreserva}"><i
+											class="fas fa-trash-alt"></i>
+										</a>
+									</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+			</div>
 		</div>
+		
 
-		<div id="paradas">
+		<div id="ajustes">
 			<div>
 				<button class="volver"  id="volver">
-					<i class="material-icons">map</i><a>Volver a las rutas</a>
+					<i class="material-icons">map</i><a>Volver a mis reservas</a>
 				</button>
 			</div>
-			<div id="contenedorParadas"></div>
+			<div id="contenedorAjustes"></div>
 		</div>
 	</div>
 

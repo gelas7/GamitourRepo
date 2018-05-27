@@ -12,6 +12,7 @@ a {
 	text-decoration: none;
 }
 
+/* -----------CABECERA MENÚ------------ */
 ul {
 	display: flex;
 	list-style-type: none;
@@ -86,12 +87,58 @@ li a:hover {
 	display: none;
 }
 
+/* -----------CONTENEDORES PRINCIPALES------------ */
 #contenido {
 	font-size: 18px;
 	font-family: 'Cuprum', sans-serif;
 	margin: 95px auto 0 auto;
 }
 
+#contenedorItinerarios, #contenedorParadas, #contenedorActividades,
+	#infoActividad, #contenedorReservas {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0 30px 0 30px;
+}
+
+#reservas {
+	width: 600px;
+	margin: 0 auto 0 auto;
+}
+
+#ajustes {
+	display: none;
+}
+
+.flexItem { /*CAJA QUE CONTIENE UNA PARADA*/
+	width: 300px;
+	margin: 0 auto 0 auto;
+}
+
+.mapItinerario, .mapParada {
+	border: 1px solid #f4d03f;
+	margin: 0 auto 20px auto;
+	width: 500px;
+	height: 250px;
+}
+
+.imagenActividad {
+	border: 1px solid #f4d03f;
+	margin: 0 auto 0 auto;
+	width: 290px;
+	height: 250px;
+}
+
+.datosParadas, .datosActividad {
+	width: 480px;
+	margin: 20px auto 35px auto;
+	padding: 10px;
+	text-align: justified;
+	color: white;
+	border: 2px solid #f4d03f;
+}
+
+/* -----------TITULOS Y NOMBRES------------ */
 .botonesItinerario, .nombreActividad {
 	width: 100%;
 	padding: 0;
@@ -114,25 +161,38 @@ li a:hover {
 
 .tituloParada {
 	width: 100%;
-	margin: 10px auto 10px auto;
+	margin: 20px auto 40px auto;
 	color: orange;
 	font-weight: 600;
 	font-size: 40px;
 	text-align: center;
 }
 
-.mapItinerario, .mapParada {
-	border: 1px solid #f4d03f;
-	margin: 0 auto 20px auto;
-	width: 500px;
-	height: 250px;
+/* -----------BOTONES------------ */
+.volver {
+	display: block;
+	border: none;
+	font-family: 'Cuprum', sans-serif;
+	color: #f4d03f;
+	font-size: 30px;
+	font-weight: 600;
+	cursor: pointer;
+	margin: 20px auto 20px auto;
+	border: none;
+	background: none;
+	outline: none;
 }
 
-.imagenActividad {
-	border: 1px solid #f4d03f;
-	margin: 0 auto 20px auto;
-	width: 290px;
-	height: 250px;
+.volver a {
+	margin-left: 10px;
+}
+
+.volver:hover {
+	color: orange;
+}
+
+#volverReservas {
+	display: none;
 }
 
 .reservar {
@@ -153,37 +213,63 @@ li a:hover {
 	outline: none;
 }
 
-#contenedorItinerarios, #contenedorParadas, #contenedorActividades,
-	#infoActividad {
-	display: flex;
-	flex-direction: column;
+/**TABLAS FILAS Y COLUMNAS**/
+hr {
+	display: none;
 }
 
-#volver {
-	display: block;
-	border: none;
-	font-family: 'Cuprum', sans-serif;
-	color: #f4d03f;
-	font-size: 25px;
-	font-weight: 600;
+td, th {
+	height: 30px;
+	padding: 0.5em;
+	border: 2px solid white;
+}
+th {
+	background-color: #f4d03f;
+	font-weight:900;
+}
+
+th:hover {
 	cursor: pointer;
-	margin: 20px auto 20px auto;
-	border: none;
-	background: none;
-	outline: none;
 }
 
-#volver a {
-	margin-left: 10px;
+td svg {
+	display: inline-block;
+	cursor: pointer;
 }
 
-.datosParadas, .datosActividad {
-	width: 480px;
-	margin: 20px auto 35px auto;
-	padding: 10px;
-	text-align: justified;
+td {
+	text-align: center;
+	font-size: 17px;
+}
+
+tr td:hover {
+	background-color: #666;
 	color: white;
-	border: 2px solid #f4d03f;
+}
+
+tr:nth-child(odd) {
+	background-color: transparent;
+}
+
+tr:nth-child(even) {
+	background-color: transparent;
+}
+
+table {
+	margin:10px auto 0 auto;
+	border-collapse: collapse;
+/* 	overflow: hidden; */
+}
+
+table a {
+	text-decoration: none;
+	color: black;
+	font-weight: 500;
+}
+
+table a:hover {
+	text-decoration: none;
+	color: white;
 }
 
 /**MEDIA QUERIES**/
@@ -206,7 +292,6 @@ li a:hover {
 	}
 	.tituloParada, .botonesItinerario, .nombreActividad {
 		font-size: 30px;
-		margin-top: 40px;
 	}
 	.datosParadas, .datosActividad {
 		display: none;
@@ -220,5 +305,8 @@ li a:hover {
 	}
 	.cabecera span {
 		display: none;
+	}
+	#volver {
+		font-size: 20px;
 	}
 }

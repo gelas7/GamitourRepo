@@ -42,6 +42,7 @@ import com.proyecto.admin.update.ModificarPruebasDeportivasAccion;
 import com.proyecto.admin.update.ModificarReservasAccion;
 import com.proyecto.admin.update.ModificarRolesAccion;
 import com.proyecto.admin.update.ModificarVotosAccion;
+import com.proyecto.publico.delete.EliminarReservasClienteAccion;
 import com.proyecto.publico.insert.ReservarActividadAccion;
 import com.proyecto.publico.search.BuscarClienteAccion;
 import com.proyecto.publico.search.MostrarPublicoAccion;
@@ -64,6 +65,9 @@ public abstract class Accion {
 		case "ReservarActividad":
 			accion = new ReservarActividadAccion();
 			break;	
+		case "EliminarReservasCliente":
+			accion = new EliminarReservasClienteAccion();
+			break;
 			
 		//ADMIN
 		case "BuscarAdmin":
