@@ -15,7 +15,6 @@
 
 <script src="/Gamitour/assetsCliente/js/scriptActividades.js"
 	type="text/javascript"></script>
-
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
@@ -54,9 +53,8 @@
 
 		<div id="actividad">
 			<div>
-				<button class="volver" id="volver">
-					<i class="material-icons">map</i>
-					<a>Volver a las actividades</a>
+				<button class="boton" id="volver">
+					<i class="material-icons">arrow_back_ios</i><a>Volver a las actividades</a>
 				</button>
 			</div>
 			<div id="infoActividad"></div>

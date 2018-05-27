@@ -49,8 +49,8 @@
 
 		<div id="actividad">
 			<div>
-				<button class="volver"  id="volver">
-					<i class="material-icons">map</i><a>Volver a las actividades</a>
+				<button class="boton"  id="volver">
+					<i class="material-icons">arrow_back_ios</i><a>Volver a las actividades</a>
 				</button>
 			</div>
 			<div id="infoActividad">

@@ -78,6 +78,9 @@ public class MostrarPublicoAccion extends Accion {
 
 			switch (solicitud) {
 			
+			case "index":
+				salida += "indexRegistrado.jsp";
+				break;
 			case "rutas":
 				salida += "RutasRegistrado.jsp";
 				break;
@@ -85,7 +88,9 @@ public class MostrarPublicoAccion extends Accion {
 				salida += "ActividadesRegistrado.jsp";
 				break;
 			case "usuario":
-				Integer idCliente = sc.buscarClientePorEmail(email).getIdcliente();
+				Cliente cliente = sc.buscarClientePorEmail(email);
+				Integer idCliente = cliente.getIdcliente();
+				request.getSession().setAttribute("cliente", cliente);
 				request.getSession().setAttribute("reservasClienteActual", sr.buscarReservasPorIdCliente(idCliente));
 				salida += "UsuarioRegistrado.jsp";
 				break;
@@ -97,7 +102,9 @@ public class MostrarPublicoAccion extends Accion {
 		
 		else {
 			switch (solicitud) {
-			
+			case "index":
+				salida += "index.jsp";
+				break;
 			case "rutas":
 				salida += "RutasPublico.jsp";
 				break;

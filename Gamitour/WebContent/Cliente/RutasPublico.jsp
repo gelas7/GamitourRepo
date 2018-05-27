@@ -51,8 +51,8 @@
 
 		<div id="paradas">
 			<div>
-				<button class="volver" id="volver">
-					<i class="material-icons">map</i><a>Volver a las rutas</a>
+				<button class="boton" id="volver">
+					<i class="material-icons">arrow_back_ios</i><a>Volver a las rutas</a>
 				</button>
 			</div>
 			<div id="contenedorParadas"></div>

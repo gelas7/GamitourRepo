@@ -108,6 +108,8 @@ li a:hover {
 
 #ajustes {
 	display: none;
+	width: 600px;
+	margin: 0 auto 0 auto;
 }
 
 .flexItem { /*CAJA QUE CONTIENE UNA PARADA*/
@@ -169,7 +171,7 @@ li a:hover {
 }
 
 /* -----------BOTONES------------ */
-.volver {
+.boton {
 	display: block;
 	border: none;
 	font-family: 'Cuprum', sans-serif;
@@ -183,11 +185,11 @@ li a:hover {
 	outline: none;
 }
 
-.volver a {
+.boton a {
 	margin-left: 10px;
 }
 
-.volver:hover {
+.boton:hover {
 	color: orange;
 }
 
@@ -221,11 +223,12 @@ hr {
 td, th {
 	height: 30px;
 	padding: 0.5em;
-	border: 2px solid white;
+	border: 2px solid #dadada;
 }
+
 th {
 	background-color: #f4d03f;
-	font-weight:900;
+	font-weight: 900;
 }
 
 th:hover {
@@ -256,9 +259,9 @@ tr:nth-child(even) {
 }
 
 table {
-	margin:10px auto 0 auto;
+	margin: 10px auto 0 auto;
 	border-collapse: collapse;
-/* 	overflow: hidden; */
+	/* 	overflow: hidden; */
 }
 
 table a {
@@ -272,13 +275,104 @@ table a:hover {
 	color: white;
 }
 
+/**FORMULARIOS**/
+.contenedorAjustes {
+	margin: 0 auto 0 auto;
+}
+
+h2 {
+	display: block;
+	text-align: center;
+	font-size: 40px;
+	color: white;
+}
+
+form label {
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+input {
+	margin-left: 10px;
+	background-color : transparent;
+	border: none;
+	border-bottom: 1px solid #f4d03f;
+	outline: none;
+	color: white;
+	font-family: 'Dosis', sans-serif;
+	font-size: 20px;
+	background-color: transparent;
+}
+
+input[name="email"] {
+	width: 300px;
+}
+
+input[name="password1"], input[name="password2"] {
+	width: 150px;
+}
+
+.submit {
+	text-align: center;
+}
+
+.inputSubmit {
+	font-size: 38px;
+	font-weight: 700;
+	background-color: transparent;
+	color: #f4d03f;
+	font-family: 'Francois One', sans-serif;
+	border: none;
+	outline: none;
+	border: none;
+}
+
+.inputSubmit:hover {
+	color: orange;
+	cursor: pointer;
+}
+
+#errorPass {
+	display: none;
+	color: red;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+/**Navegadores**/
+@
+-webkit-keyframes autofill {to { color:white;
+	background: transparent;
+}
+
+}
+input:-webkit-autofill { 
+	-webkit-animation-name: autofill;
+	-webkit-animation-fill-mode: both;
+}
+
+::placeholder {
+    color: #c9c9c9;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #c9c9c9;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #c9c9c9;
+}
+
+
 /**MEDIA QUERIES**/
 @media ( max-width : 600px) {
 	html, body {
 		
 	}
 	#contenido {
-		margin: 50px auto 40px auto;
+		margin: 70px auto 40px auto;
 		align-items: center;
 	}
 	#volver {

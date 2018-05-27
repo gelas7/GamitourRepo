@@ -47,23 +47,23 @@
 				<h2 id="modificar">Modifique los campos necesarios.</h2>
 				<h3>Los campos en blanco no sufrirán cambios.</h3>
 
-				<input type="hidden" value="<%=request.getParameter("id")%>"
+				<input type="hidden" value="${idCliente}">
 					name="id">
 				<p>
 					<label for="nombre">Nombre: </label> <input type="text" name="nombre" maxlength="500"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNombre()%>">
+						placeholder="<%=sc.buscarPorClave(Integer.parseInt(${idCliente})).getNombre()%>">
 				</p>
 				<p>
 				<label for="apellido">Apellidos: </label> <input type="text" name="apellidos" maxlength="500"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getApellidos()%>">
+						placeholder="<%=sc.buscarPorClave(Integer.parseInt(${idCliente})).getApellidos()%>">
 				</p>
 				<p>
 					<label for="fechanacimiento">Fecha de nacimiento:</label> <input type="date" name="fechanacimiento"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getFechanacimiento()%>">
+						placeholder="<%=sc.buscarPorClave(Integer.parseInt(${idCliente})).getFechanacimiento()%>">
 				</p>
 				<p>
 				<label for="email">E-mail: </label> <input type="text" name="email" maxlength="50"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getEmail()%>">
+						placeholder="<%=sc.buscarPorClave(Integer.parseInt(${idCliente})).getEmail()%>">
 				</p>
 				<p>
 					<label for="password">Contraseña: </label> <input type="password" name="password" maxlength="20"
@@ -71,19 +71,19 @@
 				</p>
 				<p>
 					<label for="telefono">Teléfono: </label><input type="tel" name="telefono" maxlength="10"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getTelefono()%>">
+						placeholder="<%=sc.buscarPorClave(Integer.parseInt(${idCliente})).getTelefono()%>">
 				</p>
 				<p>
 					<label for="direccion">Dirección: </label> <input type="text" name="direccion" maxlength="500"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getDireccion()%>">
+						placeholder="<%=sc.buscarPorClave(Integer.parseInt(${idCliente})).getDireccion()%>">
 				</p>
 				<p>
 				<label for="codigopostal">CP: </label> <input type="text" name="codigopostal" maxlength="5"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getCodigopostal()%>">
+						placeholder="<%=sc.buscarPorClave(Integer.parseInt(${idCliente})).getCodigopostal()%>">
 				</p>
 				<p>
 				<label for="puntosacumulados">Puntos acumulados: </label> <input type="number" name="puntosacumulados" max="100000"
-						placeholder="<%=sc.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getPuntosacumulados()%>">
+						placeholder="<%=sc.buscarPorClave(Integer.parseInt(${idCliente})).getPuntosacumulados()%>">
 				</p>
 				<p>
 				<label for="rol">Rol: </label> <select name="rol">
