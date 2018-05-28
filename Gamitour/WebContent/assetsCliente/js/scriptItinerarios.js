@@ -12,7 +12,9 @@ window.onload = function() {
     function cargarItinerarios(directionsService, directionsDisplay) {
         document.getElementById('paradas').style.display = 'none';
         document.getElementById('itinerarios').style.display = 'block';
-
+	    document.getElementById('pruebas').style.display = 'none';
+	    
+	    $(window).scrollTop(0);
         var origen, destino = "";
 
         document.getElementById('contenedorItinerarios').innerHTML = "";
@@ -30,7 +32,7 @@ window.onload = function() {
 	            var destino = new google.maps.LatLng(paradaDestino.latitud, paradaDestino.longitud);
 	
 	            var divMapa = `
-	            	<button id="tituloItinerario${j}" class="nombreItinerario" value=${j}>${jsonItinerarios[j].nombre}</button>
+	            	<button class="nombreItinerario" value=${j}>${jsonItinerarios[j].nombre}</button>
 	                <div id="mapaItinerario${j}" class="mapItinerario"></div>`;
 	            
 	            document.getElementById("contenedorItinerarios").innerHTML += divMapa;
@@ -47,7 +49,7 @@ window.onload = function() {
 	                }
 	            }
 	            pintarItinerario(origen, destino, waypts, j);
-	            cargarBotones();
+	            cargarListenersItinerarios();
         	}
         }
     }
@@ -76,21 +78,13 @@ window.onload = function() {
             }
         });
     }
-
-	
-	function cargarBotones() {
-	    var botones = document.getElementsByClassName("nombreItinerario");
-	
-	    for (var index = 0; index < botones.length; index++) {
-	        let actual = botones[index];
-	        actual.addEventListener("click", cargarParadas, false);
-	    }
-	}
 	
 	
 	function cargarParadas() {
 	    document.getElementById('itinerarios').style.display = 'none';
 	    document.getElementById('paradas').style.display = 'block';
+	    document.getElementById('pruebas').style.display = 'none';
+
 	    $(window).scrollTop(0);
 	    var numItinerario = this.value;
 	    var divMapa, divDatos = "";
@@ -100,7 +94,7 @@ window.onload = function() {
 	    document.getElementById('contenedorParadas').innerHTML = "";
 		    
 	    for (let parada in paradas) {
-	        divMapa = `	<p class="tituloParada"><a>${paradas[parada].nombre}</a></p>
+	        divMapa = `	<button class="nombreParada" value="${paradas[parada]}">${paradas[parada].nombre}</button>
 	        			<div id="mapaParada${contador}" class="mapParada"></div>`;
 	        if(paradas[parada].gastronomia.length>2 || paradas[parada].historia.length>2 || paradas[parada].anecdotario.length>2){
 		        divMapa += `<div id="indicacionesParada${contador}" class="datosParadas">`;
@@ -118,7 +112,7 @@ window.onload = function() {
 	        contador++;
 	    }
 	    pintarParadas(paradas); // Llamo a pintar mapas pasando las paradas
-	
+	    cargarListenersParadas();
 	}
 	
 	
@@ -150,4 +144,36 @@ window.onload = function() {
 	    }
 	
 	}
+	
+	function cargarPruebas() {
+	    document.getElementById('itinerarios').style.display = 'none';
+	    document.getElementById('paradas').style.display = 'none';
+	    document.getElementById('pruebas').style.display = 'block';
+	    $(window).scrollTop(0);
+	    var parada = this.value.value;
+	    
+	    var pruebasC=parada.pruebasculturales;
+	    var pruebasD=parada.pruebasculturales;
+
+	    debugger;
+	}
+
+	function cargarListenersItinerarios() {
+	    var botones = document.getElementsByClassName("nombreItinerario");
+	
+	    for (var index = 0; index < botones.length; index++) {
+	        let actual = botones[index];
+	        actual.addEventListener("click", cargarParadas, false);
+	    }
+	}
+	
+	function cargarListenersParadas() {
+	    var botones = document.getElementsByClassName("nombreParada");
+	
+	    for (var index = 0; index < botones.length; index++) {
+	        let actual = botones[index];
+	        actual.addEventListener("click", cargarPruebas, false);
+	    }
+	}
+
 }

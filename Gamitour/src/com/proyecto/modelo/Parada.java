@@ -18,6 +18,8 @@ import com.google.gson.annotations.Expose;
 public class Parada implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
+	@Expose
 	private int idparada;
 	
 	private Itinerario itinerario;

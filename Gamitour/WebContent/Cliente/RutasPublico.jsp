@@ -52,10 +52,21 @@
 		<div id="paradas">
 			<div>
 				<button class="boton" id="btnItinerarios">
-					<i class="material-icons">arrow_back_ios</i><a>Volver a las rutas</a>
+					<i class="material-icons">arrow_back_ios</i><a>Volver a las
+						rutas</a>
 				</button>
 			</div>
 			<div id="contenedorParadas"></div>
+		</div>
+
+		<div id="pruebas">
+			<div>
+				<button class="boton" id="btnParadas">
+					<i class="material-icons">arrow_back_ios</i><a>Volver a las
+						paradas</a>
+				</button>
+			</div>
+			<div id="contenedorPruebas"></div>
 		</div>
 	</div>
 

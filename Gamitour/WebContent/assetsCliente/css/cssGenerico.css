@@ -119,7 +119,7 @@ li .dropdown {
 	margin: 0 auto 0 auto;
 }
 
-#ajustes {
+#ajustes, #paradas, #pruebas {
 	display: none;
 }
 
@@ -147,7 +147,7 @@ li .dropdown {
 }
 
 /* -----------TITULOS Y NOMBRES------------ */
-.nombreItinerario, .nombreActividad {
+.nombreItinerario, .nombreActividad, .nombreParada {
 	width: 100%;
 	padding: 0;
 	border: none;
@@ -162,17 +162,8 @@ li .dropdown {
 	text-align: center;
 }
 
-.nombreItinerario:hover, .nombreActividad:hover {
+.nombreItinerario:hover, .nombreActividad:hover, .nombreParada {
 	color: orange;
-}
-
-.tituloParada {
-	width: 100%;
-	margin: 20px auto 40px auto;
-	color: orange;
-	font-weight: 600;
-	font-size: 40px;
-	text-align: center;
 }
 
 /* -----------BOTONES------------ */
@@ -198,7 +189,7 @@ li .dropdown {
 	color: orange;
 }
 
-.cabecera i, #btnItinerarios, #btnActividades, #btnReservas {
+.cabecera i {
 	display: none;
 }
 
