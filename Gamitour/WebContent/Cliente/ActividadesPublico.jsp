@@ -34,7 +34,7 @@
 			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
 					class="material-icons">map</i><span>RUTAS</span></a></li>
 			<li><a href="#"><i class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
-			<li><a href="/Gamitour/Cliente/Login/Register.jsp"><i
+			<li><a href="/Gamitour/MostrarPublico.cl?id=usuario"><i
 					class="material-icons">person</i><span>INICIAR SESIÓN</span></a></li>
 		</ul>
 	</div>
@@ -49,7 +49,7 @@
 
 		<div id="actividad">
 			<div>
-				<button class="boton"  id="volver">
+				<button class="boton"  id="btnActividades">
 					<i class="material-icons">arrow_back_ios</i><a>Volver a las actividades</a>
 				</button>
 			</div>

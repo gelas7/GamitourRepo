@@ -58,7 +58,7 @@
 
 		<div id="paradas">
 			<div>
-				<button class="boton"  id="volver">
+				<button class="boton"  id="btnItinerarios">
 					<i class="material-icons">arrow_back_ios</i><a>Volver a las rutas</a>
 				</button>
 			</div>

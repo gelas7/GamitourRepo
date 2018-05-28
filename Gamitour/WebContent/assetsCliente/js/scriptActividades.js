@@ -3,7 +3,7 @@ window.onload = function() {
 
     var listaActividades = document.getElementById("listaActividades");
     var jsonActividades = JSON.parse(listaActividades.value);
-    var botonVolver = document.getElementById("volver");
+    var botonVolver = document.getElementById("btnActividades");
     botonVolver.addEventListener("click", cargarActividades, false);
 
     cargarActividades();
@@ -17,7 +17,7 @@ window.onload = function() {
 	    
         for (var j = 0; j < jsonActividades.length; j++) {
         	
-	            var divActividad = `<div class="flexItem">
+	            var divActividad = `<div id="contenedorActividad">
 	            <button class="nombreActividad" value=${j}> ${jsonActividades[j].nombre} </button>
 	            	`;
 	            if(jsonActividades[j].imagen.length>4){
@@ -74,7 +74,7 @@ window.onload = function() {
         	infoActividad+=`<a><b>Precio:</b> ${actividad.precio}€</a><br>`;
         infoActividad+=`</div>`;
         
-	    var botonReserva = document.getElementById('botonReserva');
+	    var botonReserva = document.getElementById('btnReserva');
 	    
 	    if(botonReserva!=null)
 	    {

@@ -13,14 +13,14 @@
 
 <title>Gamiastur</title>
 
-<link href="../../assetsCliente/css/cssRegister.css" rel="stylesheet"
-	type="text/css" media="screen" />
+<link href="/Gamitour/assetsCliente/css/cssRegister.css"
+	rel="stylesheet" type="text/css" media="screen" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-<script src="../../assetsCliente/js/scriptRegister.js"></script>
+<script src="/Gamitour/assetsCliente/js/scriptRegister.js"></script>
 <script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxkNckJSuxei2lvWHtvjcT2iCaFaLFv7U"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -42,8 +42,10 @@
 					class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
 					class="material-icons">map</i><span>RUTAS</span></a></li>
-            <li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
-			<li><a href="#"><i class="material-icons">person</i><span>INICIAR SESIÓN</span></a></li>
+			<li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i
+					class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
+			<li><a href="#"><i class="material-icons">person</i><span>INICIAR
+						SESIÓN</span></a></li>
 		</ul>
 	</div>
 
@@ -120,7 +122,7 @@
 		</div>
 		<div id="login" class="login">
 			<h2>Inicia sesión</h2>
-			<form action="../../BuscarCliente.cl" method="post">
+			<form action="/Gamitour/BuscarCliente.cl" method="post">
 				<p>
 					<label for="email">E-mail:</label> <input type="email" name="email"
 						required="required" maxlength="100">

@@ -37,8 +37,9 @@
 			<li class="dropdown"><a href="#" class="dropbtn"><i
 					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
-					<a href="/Gamitour/MostrarPublico.cl?id=usuario"><i class="material-icons">build</i><span>Mis reservas</span></a>
-					<a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
+					<a href="/Gamitour/MostrarPublico.cl?id=usuario"><i
+						class="material-icons">build</i><span>Mis reservas</span></a> <a
+						href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
 				</div></li>
 		</ul>
 	</div>
@@ -53,14 +54,15 @@
 
 		<div id="actividad">
 			<div>
-				<button class="boton" id="volver">
-					<i class="material-icons">arrow_back_ios</i><a>Volver a las actividades</a>
+				<button class="boton" id="btnActividades">
+					<i class="material-icons">arrow_back_ios</i><a>Volver a las
+						actividades</a>
 				</button>
 			</div>
 			<div id="infoActividad"></div>
-			<div class="reservar">
-				<a class="botonReserva" onclick="return confirm('¿Desea confirmar su reserva?')" id="botonReserva">Reservar la actividad</a>
-			</div>
+			<button class="boton"
+				onclick="return confirm('¿Desea confirmar su reserva?')"
+				id="btnReserva">Reservar la actividad</button>
 		</div>
 
 	</div>

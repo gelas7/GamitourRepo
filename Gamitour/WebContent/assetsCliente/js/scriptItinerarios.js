@@ -3,7 +3,7 @@ window.onload = function() {
 
     var listaItinerarios = document.getElementById("listaItinerarios");
     var jsonItinerarios = JSON.parse(listaItinerarios.value);
-    var botonVolver = document.getElementById("volver");
+    var botonVolver = document.getElementById("btnItinerarios");
     botonVolver.addEventListener("click", cargarItinerarios, false);
 
     cargarItinerarios();
@@ -30,7 +30,7 @@ window.onload = function() {
 	            var destino = new google.maps.LatLng(paradaDestino.latitud, paradaDestino.longitud);
 	
 	            var divMapa = `
-	            	<button id="tituloItinerario${j}" class="botonesItinerario" value=${j}>${jsonItinerarios[j].nombre}</button>
+	            	<button id="tituloItinerario${j}" class="nombreItinerario" value=${j}>${jsonItinerarios[j].nombre}</button>
 	                <div id="mapaItinerario${j}" class="mapItinerario"></div>`;
 	            
 	            document.getElementById("contenedorItinerarios").innerHTML += divMapa;
@@ -79,7 +79,7 @@ window.onload = function() {
 
 	
 	function cargarBotones() {
-	    var botones = document.getElementsByClassName("botonesItinerario");
+	    var botones = document.getElementsByClassName("nombreItinerario");
 	
 	    for (var index = 0; index < botones.length; index++) {
 	        let actual = botones[index];

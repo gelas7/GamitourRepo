@@ -1,5 +1,6 @@
 package com.proyecto.publico.search;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,8 +27,7 @@ import com.proyecto.util.Accion;
 public class MostrarPublicoAccion extends Accion {
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
-		response.setCharacterEncoding("UTF8");
-
+		
 		ServiceNoticias sn = new ServiceNoticiasImp();
 		ServiceClientesImp sc = new ServiceClientesImp();
 		ServiceItinerarios si = new ServiceItinerariosImp();
@@ -110,6 +110,9 @@ public class MostrarPublicoAccion extends Accion {
 				break;
 			case "actividades":
 				salida += "ActividadesPublico.jsp";
+				break;
+			case "usuario":
+				salida += "Register.jsp";
 				break;
 			default:
 				System.out.println("Error en eleccion de salida Clientes - MostrarPublicoAccion");
