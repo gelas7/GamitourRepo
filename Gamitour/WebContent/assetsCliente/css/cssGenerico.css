@@ -20,7 +20,7 @@ h2 {
 	color: white;
 }
 
-/* -----------CABECERA MENÚS------------ */
+/* -----------CABECERA MENï¿½S------------ */
 .cabecera {
 	color: rgb(23, 24, 23);
 	background-color: #f4d03f;
@@ -102,10 +102,16 @@ li .dropdown {
 	margin: 95px auto 0 auto;
 }
 
-#contenedorItinerarios, #contenedorParadas, #contenedorActividades,
-	#infoActividad, #contenedorReservas, #contenedorAjustes {
+#contenedorItinerarios, #contenedorActividades, #infoActividad,
+	#contenedorReservas, #contenedorAjustes, #contenedorPruebasC,
+	#contenedorPruebasD {
 	display: flex;
 	flex-flow: row wrap;
+	margin: 0 30px 0 30px;
+}
+
+#contenedorParadas {
+	display: block;
 	margin: 0 30px 0 30px;
 }
 
@@ -114,13 +120,19 @@ li .dropdown {
 	margin: 0 auto 0 auto;
 }
 
-#reservas, #ajustes {
+#reservas, #ajustes, #pruebas {
 	width: 600px;
 	margin: 0 auto 0 auto;
 }
 
 #ajustes, #paradas, #pruebas {
 	display: none;
+}
+
+#pruebas form {
+	color: white;
+	margin: 0 auto 0 auto;
+	text-align: center;
 }
 
 .mapItinerario, .mapParada {
@@ -138,7 +150,7 @@ li .dropdown {
 }
 
 .datosParadas, .datosActividad {
-	width: 480px;
+	width: 80%;
 	margin: 20px auto 35px auto;
 	padding: 10px;
 	text-align: justified;
@@ -147,7 +159,7 @@ li .dropdown {
 }
 
 /* -----------TITULOS Y NOMBRES------------ */
-.nombreItinerario, .nombreActividad, .nombreParada {
+.nombreItinerario, .nombreActividad, .nombreParada, .nombrePrueba {
 	width: 100%;
 	padding: 0;
 	border: none;
@@ -155,15 +167,29 @@ li .dropdown {
 	color: #f4d03f;
 	font-size: 40px;
 	font-weight: 600;
-	cursor: pointer;
 	margin: 20px auto 20px auto;
 	background: none;
 	outline: none;
 	text-align: center;
 }
 
-.nombreItinerario:hover, .nombreActividad:hover, .nombreParada {
+.nombreItinerario:hover, .nombreActividad:hover {
 	color: orange;
+	cursor: pointer;
+}
+
+.nombreParada {
+	display: block;
+	width: 100%;
+	padding: 0;
+	border: none;
+	font-family: 'Cuprum', sans-serif;
+	color: #f4d03f;
+	font-size: 40px;
+	font-weight: 600;
+	margin: 25px auto 20px auto;
+	background: none;
+	outline: none;
 }
 
 /* -----------BOTONES------------ */
@@ -181,10 +207,6 @@ li .dropdown {
 	outline: none;
 }
 
-.boton a {
-	margin-left: 10px;
-}
-
 .boton:hover {
 	color: orange;
 }
@@ -197,6 +219,25 @@ li .dropdown {
 	width: 100%;
 	text-align: center;
 	margin: 20px auto 80px auto;
+}
+
+.botonesPruebas {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cargarPC, .cargarPD {
+	width: 230px;
+	border: none;
+	font-family: 'Cuprum', sans-serif;
+	color: #f4d03f;
+	font-size: 20px;
+	font-weight: 400;
+	cursor: pointer;
+	background: none;
+	outline: none;
+	padding: 0;
+	margin: 10px auto 5px auto;
 }
 
 /**TABLAS FILAS Y COLUMNAS**/

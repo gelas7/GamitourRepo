@@ -3,8 +3,11 @@ window.onload = function() {
 
     var listaItinerarios = document.getElementById("listaItinerarios");
     var jsonItinerarios = JSON.parse(listaItinerarios.value);
-    var botonVolver = document.getElementById("btnItinerarios");
-    botonVolver.addEventListener("click", cargarItinerarios, false);
+    var botonItinerarios = document.getElementById("btnItinerarios");
+    var botonParadas= document.getElementById("btnParadas");
+    botonItinerarios.addEventListener("click", cargarItinerarios, false);
+    botonParadas.addEventListener("click", cargarParadas, false);
+
 
     cargarItinerarios();
     
@@ -84,6 +87,8 @@ window.onload = function() {
 	    document.getElementById('itinerarios').style.display = 'none';
 	    document.getElementById('paradas').style.display = 'block';
 	    document.getElementById('pruebas').style.display = 'none';
+	    
+	    document.getElementById('btnParadas').value = this.value;  //Para cuando queramos volver a paradas
 
 	    $(window).scrollTop(0);
 	    var numItinerario = this.value;
@@ -94,8 +99,13 @@ window.onload = function() {
 	    document.getElementById('contenedorParadas').innerHTML = "";
 		    
 	    for (let parada in paradas) {
-	        divMapa = `	<button class="nombreParada" value="${paradas[parada]}">${paradas[parada].nombre}</button>
-	        			<div id="mapaParada${contador}" class="mapParada"></div>`;
+	        divMapa = `	<a class="nombreParada" value="${parada}-${numItinerario}">${paradas[parada].nombre}</a>
+	        			<div id="mapaParada${contador}" class="mapParada"></div>
+	        			<div class="botonesPruebas">
+	        			<button class="cargarPC" value="${parada}-${numItinerario}">Pruebas Culturales</button>
+	        			<button class="cargarPD" value="${parada}-${numItinerario}">Pruebas Deportivas</button>
+	        			</div>`;
+
 	        if(paradas[parada].gastronomia.length>2 || paradas[parada].historia.length>2 || paradas[parada].anecdotario.length>2){
 		        divMapa += `<div id="indicacionesParada${contador}" class="datosParadas">`;
 	        	if(paradas[parada].gastronomia.length>2)
@@ -145,17 +155,56 @@ window.onload = function() {
 	
 	}
 	
-	function cargarPruebas() {
+	function cargarPruebasC() {
 	    document.getElementById('itinerarios').style.display = 'none';
 	    document.getElementById('paradas').style.display = 'none';
 	    document.getElementById('pruebas').style.display = 'block';
+	    document.getElementById('pruebasC').style.display = 'block';
+	    document.getElementById('pruebasD').style.display = 'none';
 	    $(window).scrollTop(0);
-	    var parada = this.value.value;
 	    
-	    var pruebasC=parada.pruebasculturales;
-	    var pruebasD=parada.pruebasculturales;
+	    var indices = this.value;
+	    var indicesArray = indices.split("-");// 0-0 p.e
+	    var pruebasC = jsonItinerarios[indicesArray[0]].paradas[indicesArray[1]].pruebaculturales;
+        document.getElementById("contenedorPruebasC").innerHTML = "";
 
-	    debugger;
+	    if(pruebasC.length>0){
+	        for (var i = 0; i < pruebasC.length; i++) {
+		        divPrueba = `<a class="nombrePrueba">${pruebasC[i].nombre}</a>
+		        		<form action="">`;
+		        		divPrueba+=`<a>${pruebasC[i].pregunta}</a><br><br>`;
+		        		divPrueba+=`<input type="radio" name="repuesta" value="1">${pruebasC[i].respuesta}<br>`;
+		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta2}<br>`;
+		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta3}<br>`;
+		    }
+		        divPrueba+=`</form>`;
+		        document.getElementById("contenedorPruebasC").innerHTML += divPrueba;
+		}
+
+	}
+	
+	function cargarPruebasD() {
+	    document.getElementById('itinerarios').style.display = 'none';
+	    document.getElementById('paradas').style.display = 'none';
+	    document.getElementById('pruebas').style.display = 'block';
+	    document.getElementById('pruebasC').style.display = 'none';
+	    document.getElementById('pruebasD').style.display = 'block';
+	    $(window).scrollTop(0);
+	    
+	    var indices = this.value;
+	    var indicesArray = indices.split("-");// 0-0 p.e
+	    var pruebasD = jsonItinerarios[indicesArray[0]].paradas[indicesArray[1]].pruebadeportivas;
+        document.getElementById("contenedorPruebasD").innerHTML = "";
+
+	    if(pruebasD.length>0){
+	        for (var i = 0; i < pruebasC.length; i++) {
+		        divPrueba = `<a class="nombrePrueba">${pruebasD[i].nombre}</a>
+		        		<div class="pruebaD">`;
+		    }
+		        divPrueba+=`</div>`;
+		        document.getElementById("contenedorPruebasD").innerHTML += divPrueba;
+		}
+	    		
 	}
 
 	function cargarListenersItinerarios() {
@@ -168,11 +217,15 @@ window.onload = function() {
 	}
 	
 	function cargarListenersParadas() {
-	    var botones = document.getElementsByClassName("nombreParada");
-	
-	    for (var index = 0; index < botones.length; index++) {
-	        let actual = botones[index];
-	        actual.addEventListener("click", cargarPruebas, false);
+	    var botones1 = document.getElementsByClassName("cargarPC");
+	    var botones2 = document.getElementsByClassName("cargarPD");
+	    for (var index = 0; index < botones1.length; index++) {
+	        let actual1 = botones1[index];
+	        actual1.addEventListener("click", cargarPruebasC, false);
+	    }
+	    for (var index = 0; index < botones2.length; index++) {
+	        let actual2 = botones2[index];
+	        actual2.addEventListener("click", cargarPruebasD, false);
 	    }
 	}
 

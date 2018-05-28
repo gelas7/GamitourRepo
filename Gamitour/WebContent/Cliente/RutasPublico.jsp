@@ -52,8 +52,7 @@
 		<div id="paradas">
 			<div>
 				<button class="boton" id="btnItinerarios">
-					<i class="material-icons">arrow_back_ios</i><a>Volver a las
-						rutas</a>
+					<i class="material-icons">arrow_back_ios</i>Volver a las rutas
 				</button>
 			</div>
 			<div id="contenedorParadas"></div>
@@ -62,11 +61,15 @@
 		<div id="pruebas">
 			<div>
 				<button class="boton" id="btnParadas">
-					<i class="material-icons">arrow_back_ios</i><a>Volver a las
-						paradas</a>
+					<i class="material-icons">arrow_back_ios</i>Volver a las paradas
 				</button>
 			</div>
-			<div id="contenedorPruebas"></div>
+			<div id="pruebasC">
+				<div id="contenedorPruebasC"></div>
+			</div>
+			<div id="pruebasD">
+				<div id="contenedorPruebasD"></div>
+			</div>
 		</div>
 	</div>
 

@@ -23,11 +23,11 @@ public class PruebaCultural implements java.io.Serializable {
 	private String nombre;
 	@Expose
 	private String pregunta;
-
+	@Expose
 	private String respuesta;
-
+	@Expose
 	private String respuesta2;
-
+	@Expose
 	private String respuesta3;
 
 	@Expose
