@@ -426,7 +426,9 @@ input:-webkit-autofill {
 	#reservas, #ajustes {
 		width: 380px;
 	}
-	.tituloParada, .nombreItinerario, .nombreActividad {
+	.tituloParada, .nombreItinerario, .nombreActividad, .nombrePrueba {
 		font-size: 30px;
 	}
+
+	
 }
