@@ -14,8 +14,9 @@ window.onload = function() {
 
     function cargarItinerarios(directionsService, directionsDisplay) {
         document.getElementById('paradas').style.display = 'none';
-        document.getElementById('itinerarios').style.display = 'block';
 	    document.getElementById('pruebas').style.display = 'none';
+        document.getElementById('itinerarios').style.display = 'block';
+
 	    
 	    $(window).scrollTop(0);
         var origen, destino = "";
@@ -36,7 +37,7 @@ window.onload = function() {
 	
 	            var divParada = `
 	            	<button class="nombreItinerario" value=${j}>${jsonItinerarios[j].nombre}</button>
-	                <div id="mapaItinerario${j}" class="mapItinerario"></div>`;
+	                <div id="mapaItinerario${j}" class="mapItinerario"></div><br><br>`;
 	            
 	            document.getElementById("contenedorItinerarios").innerHTML += divParada;
 	
@@ -118,7 +119,7 @@ window.onload = function() {
 		        	divParada+=`<a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>`;
 		        if(paradas[parada].anecdotario.length>2)
 		        	divParada+=`<a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br>`;
-		        divParada+=`</div>`;
+		        divParada+=`</div><br><br>`;
 	        }
 	       
 	        document.getElementById("contenedorParadas").innerHTML += divParada;
@@ -182,11 +183,8 @@ window.onload = function() {
 		        		divPrueba+=`<a>${pruebasC[i].pregunta}</a><br><br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="1">${pruebasC[i].respuesta}<br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta2}<br>`;
-		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta3}<br>`;
-		        		divPrueba+=`<p class="submit">
-					        			<input type="submit" disabled="disabled" id="submitReg" value="Enviar respuesta"
-					        			class="inputSubmit">
-		        					</p>`;
+		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta3}<br><br>`;
+		        		divPrueba+=`<input type="submit" disabled="disabled" value="Enviar respuesta" class="submitPC">`;
 		        		divPrueba+=`</form>`;
 				document.getElementById("contenedorPruebasC").innerHTML += divPrueba;
 		    }

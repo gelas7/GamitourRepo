@@ -20,7 +20,7 @@ h2 {
 	color: white;
 }
 
-/* -----------CABECERA MEN�S------------ */
+/* -----------CABECERA MENUS------------ */
 .cabecera {
 	color: rgb(23, 24, 23);
 	background-color: #f4d03f;
@@ -33,10 +33,6 @@ h2 {
 	width: 100%;
 	box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
 	justify-content: center;
-}
-
-.cabecera i {
-	display: none;
 }
 
 ul {
@@ -102,22 +98,18 @@ li .dropdown {
 	margin: 95px auto 0 auto;
 }
 
-#contenedorItinerarios, #contenedorActividades, #infoActividad,
-	#contenedorReservas, #contenedorAjustes, #contenedorPruebasC,
+#contenedorItinerarios, #contenedorAjustes, #contenedorPruebasC,
 	#contenedorPruebasD {
 	display: flex;
 	flex-flow: row wrap;
-	margin: 0 30px 0 30px;
+	margin: 10px auto 0 auto;
 }
 
-#contenedorParadas {
+#contenedorParadas, #contenedorActividades, #contenedorReservas,
+	#contenedorActividad, #infoActividad {
 	display: block;
-	margin: 0 30px 0 30px;
-}
-
-#contenedorActividad {
-	width: 300px;
-	margin: 0 auto 0 auto;
+	margin: 20px auto 0 auto;
+	align-items: center;
 }
 
 #reservas, #ajustes, #pruebas {
@@ -125,35 +117,41 @@ li .dropdown {
 	margin: 0 auto 0 auto;
 }
 
-#ajustes, #paradas, #pruebas {
+#paradas, #pruebas, #actividad {
+	display: none;
+	text-align: center;
+}
+
+#ajustes {
 	display: none;
 }
 
 #pruebas form {
 	color: white;
-	margin: 0 auto 0 auto;
+	margin: 20px auto 20px auto;
 	text-align: center;
 }
 
 .mapItinerario, .mapParada {
 	border: 1px solid #f4d03f;
-	margin: 0 auto 20px auto;
+	margin: 20px auto 0 auto;
 	width: 500px;
 	height: 250px;
 }
 
 .imagenActividad {
 	border: 1px solid #f4d03f;
-	margin: 0 auto 0 auto;
+	margin: 20px auto 0 auto;
+	display: block;
 	width: 270px;
 	height: 250px;
 }
 
 .datosParadas, .datosActividad, .datosPrueba {
 	width: 80%;
-	margin: 20px auto 35px auto;
+	margin: 20px auto 0px auto;
 	padding: 10px;
-	text-align: justified;
+	text-align: justify;
 	color: white;
 	border: 2px solid #f4d03f;
 }
@@ -167,7 +165,7 @@ li .dropdown {
 	color: #f4d03f;
 	font-size: 40px;
 	font-weight: 600;
-	margin: 20px auto 20px auto;
+	margin: 20px auto 0px auto;
 	background: none;
 	outline: none;
 	text-align: center;
@@ -176,20 +174,6 @@ li .dropdown {
 .nombreItinerario:hover, .nombreActividad:hover {
 	color: orange;
 	cursor: pointer;
-}
-
-.nombreParada {
-	display: block;
-	width: 100%;
-	padding: 0;
-	border: none;
-	font-family: 'Cuprum', sans-serif;
-	color: #f4d03f;
-	font-size: 40px;
-	font-weight: 600;
-	margin: 25px auto 20px auto;
-	background: none;
-	outline: none;
 }
 
 /* -----------BOTONES------------ */
@@ -201,7 +185,7 @@ li .dropdown {
 	font-size: 30px;
 	font-weight: 600;
 	cursor: pointer;
-	margin: 20px auto 20px auto;
+	margin: 0 auto 0 auto;
 	border: none;
 	background: none;
 	outline: none;
@@ -211,37 +195,31 @@ li .dropdown {
 	color: orange;
 }
 
-.cabecera i {
-	display: none;
-}
-
-.reservar {
-	width: 100%;
-	text-align: center;
-	margin: 20px auto 80px auto;
-}
-
 .botonesPruebas {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.cargarPC, .cargarPD {
+.cargarPC, .cargarPD, .btnReserva {
 	width: 230px;
 	border: none;
 	font-family: 'Cuprum', sans-serif;
-	color: #f4d03f;
+	color: white;
 	font-size: 20px;
-	font-weight: 400;
+	font-weight: 600;
 	cursor: pointer;
 	background: none;
 	outline: none;
 	padding: 0;
-	margin: 10px auto 5px auto;
+	margin: 15px auto 0 auto;
+}
+
+.btnReserva {
+	display: block;
 }
 
 /**TABLAS FILAS Y COLUMNAS**/
-hr {
+hr, .cabecera i {
 	display: none;
 }
 
@@ -261,21 +239,19 @@ th:hover {
 }
 
 td {
+	color: black;
 	text-align: center;
 	font-size: 17px;
+	text-align: center;
 }
 
-tr td:hover {
+td:hover {
 	background-color: #666;
 	color: white;
 }
 
-tr:nth-child(odd) {
-	background-color: transparent;
-}
-
-tr:nth-child(even) {
-	background-color: transparent;
+tr {
+	background-color: white
 }
 
 table {
@@ -326,18 +302,27 @@ input[name="password1"], input[name="password2"] {
 	text-align: center;
 }
 
-.inputSubmit {
-	font-size: 38px;
-	font-weight: 700;
-	background-color: transparent;
-	color: #f4d03f;
+.submitPC, .submitUser {
 	font-family: 'Francois One', sans-serif;
 	border: none;
 	outline: none;
 	border: none;
 }
 
-.inputSubmit:hover {
+.submitPC {
+	font-size: 25x;
+	font-weight: 400;
+	color: white;
+}
+
+#ajustes .submitUser {
+	font-size: 38px;
+	font-weight: 700;
+	background-color: transparent;
+	color: #f4d03f;
+}
+
+#ajustes .submitUser:hover {
 	color: orange;
 	cursor: pointer;
 }
@@ -384,21 +369,15 @@ input:-webkit-autofill {
 	form label {
 		font-size: 18px;
 	}
-	input {
+	#ajustes input {
 		margin-left: 5px;
 		font-size: 15px;
 	}
-	input[name="email"] {
-		width: 200px;
+	#ajustes input[name="email"] {
+		width: 210px;
 	}
-	input[name="password1"], input[name="password2"] {
-		width: 120px;
-	}
-	.submit {
+	#ajustes .submit {
 		text-align: center;
-	}
-	.inputSubmit {
-		font-size: 34px;
 	}
 	#errorPass {
 		font-size: 15px;
@@ -415,24 +394,17 @@ input:-webkit-autofill {
 		display: none;
 	}
 	.boton {
-		display: block;
 		font-size: 20px;
-		margin: 0 auto 20px auto;
 	}
 	.mapItinerario, .mapParada {
 		width: 300px;
 		height: 200px;
 	}
-	#reservas, #ajustes {
+	#reservas, #ajustes, #pruebas {
 		width: 380px;
 	}
-	.tituloParada, .nombreItinerario, .nombreActividad, .nombrePrueba {
+	.tituloParada, .nombreItinerario, .nombreParada, .nombreActividad,
+		.nombrePrueba {
 		font-size: 30px;
-	}
-	
-	#pruebasC {
-		margin-left: -200px;
-		font-size: 15px;
-		align-items: left;
 	}
 }

@@ -110,8 +110,7 @@
 				</p>
 
 				<p class="submit">
-					<input type="submit" id="submitReg" value="¡Adelante!"
-						class="inputSubmit">
+					<input type="submit" " value="¡Adelante!" class="submitUser">
 				</p>
 
 				<h3>
@@ -134,7 +133,7 @@
 				</p>
 
 				<p class="submit">
-					<input type="submit" value="¡Adelante!" class="inputSubmit">
+					<input type="submit" value="¡Adelante!" class="submitUser">
 				</p>
 
 				<h3>

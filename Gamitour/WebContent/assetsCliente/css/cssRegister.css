@@ -161,7 +161,7 @@ input[name="codigopostal"], input[name="telefono"] {
 	text-align: center;
 }
 
-.inputSubmit {
+.submitUser {
 	font-size: 38px;
 	font-weight: 700;
 	background-color: transparent;
@@ -172,7 +172,7 @@ input[name="codigopostal"], input[name="telefono"] {
 	border: none;
 }
 
-.inputSubmit:hover {
+.submitUser:hover {
 	color: orange;
 	cursor: pointer;
 }

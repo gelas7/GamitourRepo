@@ -116,8 +116,7 @@
 					</p>
 
 					<p class="submit">
-						<input type="submit" id="submitReg" value="Enviar"
-							class="inputSubmit">
+						<input type="submit" value="Enviar" class="submitUser">
 					</p>
 				</form>
 			</div>

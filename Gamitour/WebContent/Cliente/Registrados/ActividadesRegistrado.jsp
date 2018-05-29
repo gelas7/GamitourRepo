@@ -60,9 +60,7 @@
 				</button>
 			</div>
 			<div id="infoActividad"></div>
-			<a class="boton" id="btnReserva"
-				onclick="return confirm('¿Desea confirmar su reserva?')">Reservar la actividad
-			</a>
+			
 		</div>
 
 	</div>

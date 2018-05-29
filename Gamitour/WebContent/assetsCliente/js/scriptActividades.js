@@ -64,7 +64,9 @@ window.onload = function() {
 	    			src="http://ambgubuntu.westeurope.cloudapp.azure.com:8080/subidas/actividades/${actividad.imagen}"></img>`
         }
 	    
-	    infoActividad += `<div class="datosActividad">`;
+	    infoActividad += `<a class="btnReserva" id="btnReserva"
+				onclick="return confirm('¿Desea confirmar su reserva?')">Reservar la actividad
+			</a><div class="datosActividad">`;
 	   
        	if(actividad.fechainicio.length>2)
        		infoActividad+=`<a><b>Fecha:</b> ${actividad.fechainicio}</a><br><br>`;
@@ -74,6 +76,8 @@ window.onload = function() {
         	infoActividad+=`<a><b>Precio:</b> ${actividad.precio}€</a><br>`;
         infoActividad+=`</div>`;
         
+        divInfoActividad.innerHTML += infoActividad;
+
 	    var botonReserva = document.getElementById('btnReserva');
 	    
 	    if(botonReserva!=null)
@@ -81,7 +85,6 @@ window.onload = function() {
 	    	botonReserva.href = `/Gamitour/ReservarActividad.cl?id=${actividad.idactividad}`;
 		}
 	    
-        divInfoActividad.innerHTML += infoActividad;
 
 	}
 }
