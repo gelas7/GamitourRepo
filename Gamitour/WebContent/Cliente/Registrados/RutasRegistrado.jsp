@@ -14,7 +14,8 @@
 <script src="/Gamitour/assetsCliente/js/scriptItinerarios.js"
 	type="text/javascript"></script>
 
-<link rel='stylesheet' href='/Gamitour/assetsCliente/css/cssGenerico.css' />
+<link rel='stylesheet'
+	href='/Gamitour/assetsCliente/css/cssGenerico.css' />
 
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
@@ -36,14 +37,15 @@
 			<li><a href="/Gamitour/Cliente/Registrados/indexRegistrado.jsp"><i
 					class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="#"><i class="material-icons">map</i><span>RUTAS</span></a></li>
-            <li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
+			<li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i
+					class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
 			<li class="dropdown"><a href="#" class="dropbtn"><i
 					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
-					<a href="/Gamitour/MostrarPublico.cl?id=usuario"><i class="material-icons">build</i><span>Mis reservas</span></a>
-					<a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
-				</div>
-			</li>
+					<a href="/Gamitour/MostrarPublico.cl?id=usuario"><i
+						class="material-icons">build</i><span>Mis reservas</span></a> <a
+						href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
+				</div></li>
 		</ul>
 	</div>
 
@@ -58,11 +60,25 @@
 
 		<div id="paradas">
 			<div>
-				<button class="boton"  id="btnItinerarios">
-					<i class="material-icons">arrow_back_ios</i><a>Volver a las rutas</a>
+				<button class="boton" id="btnItinerarios">
+					<i class="material-icons">arrow_back_ios</i>Volver a las rutas
 				</button>
 			</div>
 			<div id="contenedorParadas"></div>
+		</div>
+
+		<div id="pruebas">
+			<div>
+				<button class="boton" id="btnParadas">
+					<i class="material-icons">arrow_back_ios</i>Volver a las paradas
+				</button>
+			</div>
+			<div id="pruebasC">
+				<div id="contenedorPruebasC"></div>
+			</div>
+			<div id="pruebasD">
+				<div id="contenedorPruebasD"></div>
+			</div>
 		</div>
 	</div>
 
