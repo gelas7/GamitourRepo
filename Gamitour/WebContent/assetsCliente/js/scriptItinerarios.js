@@ -99,26 +99,28 @@ window.onload = function() {
 	    document.getElementById('contenedorParadas').innerHTML = "";
 		    
 	    for (let parada in paradas) {
-	        divParada = `<button class="nombreParada" value="${parada}-${numItinerario}">${paradas[parada].nombre}</button>
+	        divParada = `<button class="nombreParada" >${paradas[parada].nombre}</button>
 	        			<div id="mapaParada${contador}" class="mapParada"></div>
-	        			<div class="botonesPruebas">`;
-	        if(paradas[parada].pruebaculturales.length>0)
-	        	divParada += `<button class="cargarPC" value="${parada}-${numItinerario}">Pruebas Culturales</button>`;
-	        if(paradas[parada].pruebadeportivas.length>0)
-	        	divParada += `<button class="cargarPD" value="${parada}-${numItinerario}">Pruebas Deportivas</button>`;
-	        			divParada += `</div>`;
+	        <div class="botonesPruebas">`;
+	        if(paradas[parada].pruebaculturales.length>0){
+	        	divParada += `<button class="cargarPC" value="${numItinerario}-${parada}">Pruebas Culturales</button>`;
+	        }
+	        if(paradas[parada].pruebadeportivas.length>0){
+	        	divParada += `<button class="cargarPD" value="${numItinerario}-${parada}">Pruebas Deportivas</button>`;
+	        }
+	        divParada += `</div>`;
 
 	        if(paradas[parada].gastronomia.length>2 || paradas[parada].historia.length>2 || paradas[parada].anecdotario.length>2){
-		        divParada += `<div id="indicacionesParada${contador}" class="datosParadas">`;
+		        divParada += `<div class="datosParadas">`;
 	        	if(paradas[parada].gastronomia.length>2)
 		        	divParada+=`<a><b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>`;
 		        if(paradas[parada].historia.length>2)
 		        	divParada+=`<a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>`;
 		        if(paradas[parada].anecdotario.length>2)
 		        	divParada+=`<a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br>`;
+		        divParada+=`</div>`;
 	        }
-	        divParada+=`</div>`;
-	        	
+	       
 	        document.getElementById("contenedorParadas").innerHTML += divParada;
 	
 	        contador++;
@@ -202,18 +204,22 @@ window.onload = function() {
 	    
 	    var indices = this.value;
 	    var indicesArray = indices.split("-");// 0-0 p.e
+
 	    var pruebasD = jsonItinerarios[indicesArray[0]].paradas[indicesArray[1]].pruebadeportivas;
         document.getElementById("contenedorPruebasD").innerHTML = "";
+        
+        var divPrueba="";
 
-	    if(pruebasD.length>0){
-	        for (var i = 0; i < pruebasC.length; i++) {
-		        divPrueba = `<a class="nombrePrueba">${pruebasD[i].nombre}</a>
-		        		<div class="pruebaD">`;
-		    }
-		        divPrueba+=`</div>`;
-		        document.getElementById("contenedorPruebasD").innerHTML += divPrueba;
-		}
-	    		
+	    for (var i = 0; i < pruebasD.length; i++) {
+		    divPrueba += `<a class="nombrePrueba">${pruebasD[i].nombre}</a>`;
+	        divPrueba += `<div class="datosPrueba">`;
+			    divPrueba += `<a><b>Explicacion: </b> ${pruebasD[i].explicacion}</a><br><br>`;
+			    divPrueba += `<a><b>Fecha de comienzo: </b> ${pruebasD[i].fechainicio}</a><br><br>`;
+			    divPrueba += `<a><b>Puntos: </b> ${pruebasD[i].puntos}</a><br><br>`;
+		    divPrueba += `</div>`;
+		        
+			document.getElementById("contenedorPruebasD").innerHTML += divPrueba;
+		}   	
 	}
 
 	function cargarListenersItinerarios() {

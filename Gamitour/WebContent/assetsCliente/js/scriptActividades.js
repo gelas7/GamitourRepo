@@ -78,11 +78,10 @@ window.onload = function() {
 	    
 	    if(botonReserva!=null)
 	    {
-	    		botonReserva.href = `/Gamitour/ReservarActividad.cl?id=${actividad.idactividad}`
+	    	botonReserva.href = `/Gamitour/ReservarActividad.cl?id=${actividad.idactividad}`;
+		}
 	    
-		}	
-        divInfoActividad.innerHTML += infoActividad; // Inserto la info de la
-														// actividad
+        divInfoActividad.innerHTML += infoActividad;
 
 	}
 }
