@@ -145,7 +145,7 @@ li .dropdown {
 	height: 250px;
 }
 
-.datosParadas, .datosActividad {
+.datosParadas, .datosActividad, , .datosPrueba {
 	width: 80%;
 	margin: 20px auto 35px auto;
 	padding: 10px;
@@ -210,9 +210,9 @@ li .dropdown {
 	width: 230px;
 	border: none;
 	font-family: 'Cuprum', sans-serif;
-	color: #f4d03f;
+	color: white;
 	font-size: 20px;
-	font-weight: 400;
+	font-weight: 600;
 	cursor: pointer;
 	background: none;
 	outline: none;
@@ -386,7 +386,7 @@ input:-webkit-autofill {
 		font-size: 25px;
 		display: block;
 	}
-	.cabecera span, .datosParadas, .datosActividad {
+	.cabecera span, .datosParadas, .datosActividad, .datosPrueba {
 		display: none;
 	}
 	.boton {
