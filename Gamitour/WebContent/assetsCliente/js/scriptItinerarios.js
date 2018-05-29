@@ -34,11 +34,11 @@ window.onload = function() {
 	            var paradaDestino = jsonItinerarios[j].paradas[jsonItinerarios[j].paradas.length - 1];//
 	            var destino = new google.maps.LatLng(paradaDestino.latitud, paradaDestino.longitud);
 	
-	            var divMapa = `
+	            var divParada = `
 	            	<button class="nombreItinerario" value=${j}>${jsonItinerarios[j].nombre}</button>
 	                <div id="mapaItinerario${j}" class="mapItinerario"></div>`;
 	            
-	            document.getElementById("contenedorItinerarios").innerHTML += divMapa;
+	            document.getElementById("contenedorItinerarios").innerHTML += divParada;
 	
 	            if (jsonItinerarios[j].paradas.length > 2) { // Waypoints
 	                for (var i = 1; i < jsonItinerarios[j].paradas.length - 1; i++) {
@@ -84,40 +84,42 @@ window.onload = function() {
 	
 	
 	function cargarParadas() {
-	    document.getElementById('itinerarios').style.display = 'none';
+
+		document.getElementById('itinerarios').style.display = 'none';
 	    document.getElementById('paradas').style.display = 'block';
 	    document.getElementById('pruebas').style.display = 'none';
-	    
-	    document.getElementById('btnParadas').value = this.value;  //Para cuando queramos volver a paradas
+	    document.getElementById('btnParadas').value = this.value; 
 
 	    $(window).scrollTop(0);
 	    var numItinerario = this.value;
-	    var divMapa, divDatos = "";
+	    var divParada= "";
 	    contador = 0;
 	
 	    var paradas = jsonItinerarios[numItinerario].paradas;
 	    document.getElementById('contenedorParadas').innerHTML = "";
 		    
 	    for (let parada in paradas) {
-	        divMapa = `	<a class="nombreParada" value="${parada}-${numItinerario}">${paradas[parada].nombre}</a>
+	        divParada = `<button class="nombreParada" value="${parada}-${numItinerario}">${paradas[parada].nombre}</button>
 	        			<div id="mapaParada${contador}" class="mapParada"></div>
-	        			<div class="botonesPruebas">
-	        			<button class="cargarPC" value="${parada}-${numItinerario}">Pruebas Culturales</button>
-	        			<button class="cargarPD" value="${parada}-${numItinerario}">Pruebas Deportivas</button>
-	        			</div>`;
+	        			<div class="botonesPruebas">`;
+	        if(paradas[parada].pruebaculturales.length>0)
+	        	divParada += `<button class="cargarPC" value="${parada}-${numItinerario}">Pruebas Culturales</button>`;
+	        if(paradas[parada].pruebadeportivas.length>0)
+	        	divParada += `<button class="cargarPD" value="${parada}-${numItinerario}">Pruebas Deportivas</button>`;
+	        			divParada += `</div>`;
 
 	        if(paradas[parada].gastronomia.length>2 || paradas[parada].historia.length>2 || paradas[parada].anecdotario.length>2){
-		        divMapa += `<div id="indicacionesParada${contador}" class="datosParadas">`;
+		        divParada += `<div id="indicacionesParada${contador}" class="datosParadas">`;
 	        	if(paradas[parada].gastronomia.length>2)
-		        	divMapa+=`<a><b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>`;
+		        	divParada+=`<a><b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>`;
 		        if(paradas[parada].historia.length>2)
-		        	divMapa+=`<a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>`;
+		        	divParada+=`<a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>`;
 		        if(paradas[parada].anecdotario.length>2)
-		        	divMapa+=`<a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br>`;
+		        	divParada+=`<a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br>`;
 	        }
-	        divMapa+=`</div>`;
+	        divParada+=`</div>`;
 	        	
-	        document.getElementById("contenedorParadas").innerHTML += divMapa;
+	        document.getElementById("contenedorParadas").innerHTML += divParada;
 	
 	        contador++;
 	    }
@@ -164,11 +166,14 @@ window.onload = function() {
 	    $(window).scrollTop(0);
 	    
 	    var indices = this.value;
+	    var pruebasC;
 	    var indicesArray = indices.split("-");// 0-0 p.e
-	    var pruebasC = jsonItinerarios[indicesArray[0]].paradas[indicesArray[1]].pruebaculturales;
+	    if(jsonItinerarios[indicesArray[0]].paradas[indicesArray[1]].pruebaculturales!=null)
+	    	pruebasC = jsonItinerarios[indicesArray[0]].paradas[indicesArray[1]].pruebaculturales;
+	    
         document.getElementById("contenedorPruebasC").innerHTML = "";
 
-	    if(pruebasC.length>0){
+        if(pruebasC.length>0){
 	        for (var i = 0; i < pruebasC.length; i++) {
 		        divPrueba = `<a class="nombrePrueba">${pruebasC[i].nombre}</a>
 		        		<form action="">`;
@@ -176,11 +181,15 @@ window.onload = function() {
 		        		divPrueba+=`<input type="radio" name="repuesta" value="1">${pruebasC[i].respuesta}<br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta2}<br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta3}<br>`;
+		        		divPrueba+=`<p class="submit">
+					        			<input type="submit" disabled="disabled" id="submitReg" value="Enviar respuesta"
+					        			class="inputSubmit">
+		        					</p>`;
+		        		divPrueba+=`</form>`;
+				document.getElementById("contenedorPruebasC").innerHTML += divPrueba;
 		    }
-		        divPrueba+=`</form>`;
-		        document.getElementById("contenedorPruebasC").innerHTML += divPrueba;
+		        
 		}
-
 	}
 	
 	function cargarPruebasD() {
