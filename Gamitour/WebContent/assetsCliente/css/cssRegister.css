@@ -6,6 +6,7 @@ html, body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	min-width: 380px;
 }
 
 a {
@@ -114,16 +115,15 @@ input {
 	font-size: 20px;
 }
 
-@-webkit-keyframes autofill {
-    to {
-        color: white;
-        background: transparent;
-    }
+@
+-webkit-keyframes autofill {to { color:white;
+	background: transparent;
 }
 
+}
 input:-webkit-autofill {
-    -webkit-animation-name: autofill;
-    -webkit-animation-fill-mode: both;
+	-webkit-animation-name: autofill;
+	-webkit-animation-fill-mode: both;
 }
 
 input[name="nombre"], input[name="apellidos"], input[name="email"],
@@ -203,9 +203,8 @@ input[name="codigopostal"], input[name="telefono"] {
 	.registro, .login {
 		width: 360px;
 	}
-	
-	.main{
-		margin-top:80px;
+	.main {
+		margin-top: 80px;
 	}
 	input {
 		font-size: 18px;

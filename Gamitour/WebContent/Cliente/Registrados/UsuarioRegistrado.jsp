@@ -95,7 +95,7 @@
 				</button>
 			</div>
 			<div class="contenedorAjustes" id="modificarDatos">
-				<form action="/Gamitour/ModificarDatosCliente.cl" method="post">
+				<form action="/Gamitour/ModificarDatosCliente.cl" method="post" autocomplete="off">
 
 					<h2>Modifique los campos necesarios.</h2>
 

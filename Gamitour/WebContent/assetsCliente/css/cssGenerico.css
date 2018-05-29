@@ -98,17 +98,11 @@ li .dropdown {
 	margin: 95px auto 0 auto;
 }
 
-#contenedorItinerarios, #contenedorAjustes, #contenedorPruebasC,
-	#contenedorPruebasD {
-	display: flex;
-	flex-flow: row wrap;
-	margin: 10px auto 0 auto;
-}
-
 #contenedorParadas, #contenedorActividades, #contenedorReservas,
-	#contenedorActividad, #infoActividad {
+	#contenedorActividad, #contenedorItinerarios, #contenedorAjustes,
+	#contenedorPruebasC, #contenedorPruebasD {
 	display: block;
-	margin: 20px auto 0 auto;
+	margin: 25px auto 0 auto;
 	align-items: center;
 }
 
@@ -147,7 +141,7 @@ li .dropdown {
 	height: 250px;
 }
 
-.datosParadas, .datosActividad, .datosPrueba {
+.datosParadas, .datosActividad, .datosPrueba, #infoActividad {
 	width: 80%;
 	margin: 20px auto 0px auto;
 	padding: 10px;
@@ -165,10 +159,11 @@ li .dropdown {
 	color: #f4d03f;
 	font-size: 40px;
 	font-weight: 600;
-	margin: 20px auto 0px auto;
+	margin: 0 auto 0 auto;
 	background: none;
 	outline: none;
 	text-align: center;
+	width: 100%;
 }
 
 .nombreItinerario:hover, .nombreActividad:hover {
@@ -335,10 +330,9 @@ input[name="password1"], input[name="password2"] {
 }
 
 /**Navegadores**/
--webkit-keyframes autofill {to { color:white;
-	background: transparent;
+-input:-webkit-autofill {
+    background-color: transparent !important;
 }
-
 }
 input:-webkit-autofill {
 	-webkit-animation-name: autofill;

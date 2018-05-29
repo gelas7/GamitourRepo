@@ -179,7 +179,7 @@ window.onload = function() {
         if(pruebasC.length>0){
 	        for (var i = 0; i < pruebasC.length; i++) {
 		        divPrueba = `<a class="nombrePrueba">${pruebasC[i].nombre}</a>
-		        		<form action="">`;
+		        		<form action="" autocomplete="off">`;
 		        		divPrueba+=`<a>${pruebasC[i].pregunta}</a><br><br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="1">${pruebasC[i].respuesta}<br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta2}<br>`;
