@@ -429,6 +429,10 @@ input:-webkit-autofill {
 	.tituloParada, .nombreItinerario, .nombreActividad, .nombrePrueba {
 		font-size: 30px;
 	}
-
 	
+	#pruebasC {
+		margin-left: -200px;
+		font-size: 15px;
+		align-items: left;
+	}
 }
