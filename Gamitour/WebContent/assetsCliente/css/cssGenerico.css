@@ -145,7 +145,7 @@ li .dropdown {
 	height: 250px;
 }
 
-.datosParadas, .datosActividad, , .datosPrueba {
+.datosParadas, .datosActividad, .datosPrueba {
 	width: 80%;
 	margin: 20px auto 35px auto;
 	padding: 10px;
