@@ -44,7 +44,7 @@
 					class="material-icons">map</i><span>RUTAS</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i
 					class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
-			<li><a href="#"><i class="material-icons">person</i><span>INICIAR
+			<li style="background-color:black;"><a href="#"><i class="material-icons">person</i><span style="color:#f4d03f;">INICIAR
 						SESIÓN</span></a></li>
 		</ul>
 	</div>
