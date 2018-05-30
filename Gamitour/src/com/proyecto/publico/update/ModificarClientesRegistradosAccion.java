@@ -14,7 +14,7 @@ import com.proyecto.service.ServiceClientesImp;
 import com.proyecto.service.ServiceRolesImp;
 
 @javax.servlet.annotation.MultipartConfig
-@WebServlet("/RegistrarClientesAccion")
+@WebServlet("/ModificarClientesRegistradosAccion")
 public class ModificarClientesRegistradosAccion extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
