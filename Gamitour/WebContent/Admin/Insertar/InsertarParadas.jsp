@@ -93,7 +93,7 @@
 
 					<p>
 						<label>Ubicación: </label><input type="text" id="search"
-							name="ubicacion" required="required" maxlength="50">
+							name="ubicacion" pattern=".{5,50}" required title="Se requieren entre 5 y 50 caracteres">
 
 						<button type="button" id="btnOK">Obtener coordenadas</button>
 					</p>

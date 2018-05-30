@@ -22,13 +22,11 @@ public class ModificarParadasAccion extends Accion {
 		String id = request.getParameter("id");
 		String nombre = request.getParameter("nombre");
 		String numeroParada = request.getParameter("numeroParada");
-		String ubicacion = request.getParameter("ubicacion");
 		String historia = request.getParameter("historia");
 		String anecdotario = request.getParameter("anecdotario");
 		String gastronomia = request.getParameter("gastronomia");
 		String itinerario = request.getParameter("itinerario");
-		String latitud = request.getParameter("latitud");
-		String longitud = request.getParameter("longitud");
+
 
 		Parada parada = sp.buscarPorClave(Integer.parseInt(id));
 
@@ -36,13 +34,6 @@ public class ModificarParadasAccion extends Accion {
 			parada.setNombre(nombre);
 		if (numeroParada.length()>0)
 			parada.setNumeroParada(Integer.parseInt(numeroParada));
-		if (ubicacion.length()>0 && latitud.length()>0 && longitud.length()>0) {
-			float lat = Float.parseFloat(latitud);
-			float lng = Float.parseFloat(longitud);
-			parada.setUbicacion(ubicacion);
-			parada.setLatitud(lat);
-			parada.setLongitud(lng);
-		}
 		if (historia.length()>0)
 			parada.setHistoria(historia);
 		if (anecdotario.length()>0)

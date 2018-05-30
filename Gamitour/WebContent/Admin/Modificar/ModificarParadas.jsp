@@ -64,22 +64,6 @@
 							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getNumeroParada()%>">
 					</p>
 					<p>
-						<label>Ubicación: </label><input type="text" name="ubicacion"
-							id="search" maxlength="500"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getUbicacion()%>">
-						<button type="button" id="btnOK">Obtener coordenadas</button>
-					</p>
-					<p>
-						<label>Latitud: </label><input type="text" id="lat" name="latitud"
-							onkeypress="return false;"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLatitud()%>">
-					</p>
-					<p>
-						<label>Longitud: </label><input type="text" id="lng"
-							name="longitud" onkeypress="return false;"
-							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getLongitud()%>">
-					</p>
-					<p>
 						<label>Historia: </label>
 						<textarea name="historia" rows="4" cols="50" maxlength="500"
 							placeholder="<%=sp.buscarPorClave(Integer.parseInt(request.getParameter("id"))).getHistoria()%>"></textarea>
