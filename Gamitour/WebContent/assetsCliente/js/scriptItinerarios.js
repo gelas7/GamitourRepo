@@ -122,9 +122,10 @@ window.onload = function() {
 		        if(paradas[parada].anecdotario.length>2)
 		        	divParada+=`<a><i class="material-icons">done</i>
 		        	<b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br>`;
-		        divParada+=`</div><br><br>`;
+		        divParada+=`</div>`;
 	        }
 	       
+	        divParada += `<br><br>`;
 	        document.getElementById("contenedorParadas").innerHTML += divParada;
 	
 	        contador++;
