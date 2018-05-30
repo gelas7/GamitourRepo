@@ -34,12 +34,10 @@
 			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
 					class="material-icons">map</i><span>RUTAS</span></a></li>
 			<li><a href="#"><i class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
-			<li class="dropdown"><a href="#" class="dropbtn"><i
+			<li class="dropdown"><a href="/Gamitour/MostrarPublico.cl?id=usuario" class="dropbtn"><i
 					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
-					<a href="/Gamitour/MostrarPublico.cl?id=usuario"><i
-						class="material-icons">build</i><span>Mis reservas</span></a> <a
-						href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
+					<a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
 				</div></li>
 		</ul>
 	</div>
