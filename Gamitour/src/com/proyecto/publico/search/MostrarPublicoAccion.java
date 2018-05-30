@@ -1,6 +1,5 @@
 package com.proyecto.publico.search;
 
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -92,6 +91,7 @@ public class MostrarPublicoAccion extends Accion {
 				Integer idCliente = cliente.getIdcliente();
 				request.getSession().setAttribute("cliente", cliente);
 				request.getSession().setAttribute("reservasClienteActual", sr.buscarReservasPorIdCliente(idCliente));
+				request.getSession().setAttribute("premiosClienteActual", cliente.getPremios());
 				salida += "UsuarioRegistrado.jsp";
 				break;
 			default:

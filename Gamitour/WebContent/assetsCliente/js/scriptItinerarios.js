@@ -114,11 +114,14 @@ window.onload = function() {
 	        if(paradas[parada].gastronomia.length>2 || paradas[parada].historia.length>2 || paradas[parada].anecdotario.length>2){
 		        divParada += `<div class="datosParadas">`;
 	        	if(paradas[parada].gastronomia.length>2)
-		        	divParada+=`<a><b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>`;
+		        	divParada+=`<a><i class="material-icons">local_dining</i>
+		        	<b>Gastronomia:</b> ${paradas[parada].gastronomia}</a><br><br>`;
 		        if(paradas[parada].historia.length>2)
-		        	divParada+=`<a><b>Historia:</b> ${paradas[parada].historia}</a><br><br>`;
+		        	divParada+=`<a><i class="material-icons">account_balance</i>
+		        	<b>Historia:</b> ${paradas[parada].historia}</a><br><br>`;
 		        if(paradas[parada].anecdotario.length>2)
-		        	divParada+=`<a><b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br>`;
+		        	divParada+=`<a><i class="material-icons">done</i>
+		        	<b>Anecdotario:</b> ${paradas[parada].anecdotario}</a><br>`;
 		        divParada+=`</div><br><br>`;
 	        }
 	       
@@ -179,7 +182,7 @@ window.onload = function() {
         if(pruebasC.length>0){
 	        for (var i = 0; i < pruebasC.length; i++) {
 		        divPrueba = `<a class="nombrePrueba">${pruebasC[i].nombre}</a>
-		        		<form action="">`;
+		        		<form action="" autocomplete="off">`;
 		        		divPrueba+=`<a>${pruebasC[i].pregunta}</a><br><br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="1">${pruebasC[i].respuesta}<br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta2}<br>`;

@@ -41,7 +41,7 @@
 				</h1>
 			</div>
 
-			<form action="../../ModificarClientesAccion" method="post"
+			<form action="../../ModificarClientesAccion" method="post" autocomplete="off"
 				enctype="multipart/form-data">
 
 				<h2 id="modificar">Modifique los campos necesarios.</h2>

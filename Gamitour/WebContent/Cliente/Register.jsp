@@ -53,7 +53,7 @@
 		<div id="registro" class="registro">
 			<h2>Regístrate</h2>
 			<form action="/Gamitour/RegistrarClientesAccion" method="post"
-				enctype="multipart/form-data">
+				enctype="multipart/form-data" autocomplete="off">
 
 				<p>
 					<label for="nombre">Nombre:</label> <input type="text"
@@ -121,7 +121,7 @@
 		</div>
 		<div id="login" class="login">
 			<h2>Inicia sesión</h2>
-			<form action="/Gamitour/BuscarCliente.cl" method="post">
+			<form action="/Gamitour/BuscarCliente.cl" method="post" autocomplete="off">
 				<p>
 					<label for="email">E-mail:</label> <input type="email" name="email"
 						required="required" maxlength="100">

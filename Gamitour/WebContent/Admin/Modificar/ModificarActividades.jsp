@@ -40,7 +40,7 @@
 				</h1>
 			</div>
 
-			<form action="../../ModificarActividades.do" method="get">
+			<form action="../../ModificarActividades.do" method="get" autocomplete="off">
 
 				<h2 id="modificar">Modifique los campos necesarios.</h2>
 				<h3>Los campos en blanco no sufrirán cambios.</h3>

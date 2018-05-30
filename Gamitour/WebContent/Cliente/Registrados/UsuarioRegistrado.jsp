@@ -53,18 +53,25 @@
 
 
 	<div id="contenido">
-
-		<div id="reservas">
-			<button class="boton" id="btnAjustes">
-				<i class="material-icons">build</i><a>Ir a mis ajustes</a>
+		<div class="botonesUser">
+			<button class="botonUser" id="btnAjustes">
+				<i class="material-icons">build</i><a>Ajustes</a>
 			</button>
+			<button class="botonUser" id="btnReservas">
+				<i class="material-icons">check_circle_outline</i><a>Reservas</a>
+			</button>
+			<button class="botonUser" id="btnPremios">
+				<i class="material-icons">attach_money</i><a>Premios</a>
+			</button>
+		</div>
+		<div id="reservas">
 			<div id="contenedorReservas">
-				<table id="tclientes" class="tablesorter">
+				<table class="tablesorter">
 					<thead>
 						<tr>
 							<th>ACTIVIDAD</th>
-							<th>FECHA DE COMPRA</th>
-							<th>FECHA DE ACTIVIDAD</th>
+							<th>FECHA COMPRA</th>
+							<th>FECHA ACTIVIDAD</th>
 							<th>COSTE</th>
 						</tr>
 					</thead>
@@ -88,14 +95,9 @@
 
 
 		<div id="ajustes">
-			<div>
-				<button class="boton" id="btnReservas">
-					<i class="material-icons">arrow_back_ios</i><a>Volver a mis
-						reservas</a>
-				</button>
-			</div>
 			<div class="contenedorAjustes" id="modificarDatos">
-				<form action="/Gamitour/ModificarDatosCliente.cl" method="post">
+				<form action="/Gamitour/ModificarDatosCliente.cl" method="post"
+					autocomplete="off">
 
 					<h2>Modifique los campos necesarios.</h2>
 
@@ -121,8 +123,34 @@
 				</form>
 			</div>
 		</div>
-	</div>
+		
+		<div id="premios">
+			<div id="contenedorPremios">
+				<table id="tclientes" class="tablesorter">
+					<thead>
+						<tr>
+							<th>NOMBRE</th>
+							<th>PUNTOS</th>
+							<th>CADUCIDAD</th>
+							<th>IMAGEN</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${premiosClienteActual}" var="premio">
+							<tr>
+								<td>${premio.nombre}</td>
+								<td>${premio.puntos}</td>
+								<td>${premio.fechaconsumo}</td>
+								<td>${premio.imagen}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
 
+
+	</div>
 </body>
 </html>
 
