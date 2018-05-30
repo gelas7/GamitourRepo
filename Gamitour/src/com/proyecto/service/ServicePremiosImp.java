@@ -47,4 +47,9 @@ public class ServicePremiosImp implements ServicePremios {
 	public Premio buscarPorNombre(String nombre) {
 		return pd.buscarPorNombre(nombre);
 	}
+
+	@Override
+	public List<Premio> buscarPremiosPorIdCliente(Integer idCliente) {
+		return pd.buscarPremiosPorIdCliente(idCliente);
+	}
 }

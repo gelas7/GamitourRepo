@@ -19,5 +19,8 @@ public interface PremiosDAO extends GenericDAO<Premio, Integer> {
 	public Premio buscarPorNombre(String nombre);
 
 	public List<Premio> buscarTodos();
+	
+	public List<Premio> buscarPremiosPorIdCliente(Integer idCliente);
+
 
 }

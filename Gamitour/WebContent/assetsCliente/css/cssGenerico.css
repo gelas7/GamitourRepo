@@ -13,6 +13,10 @@ a {
 	text-decoration: none;
 }
 
+button a {
+	margin-left: 3px;
+}
+
 h2 {
 	display: block;
 	text-align: center;
@@ -100,15 +104,16 @@ li .dropdown {
 
 #contenedorParadas, #contenedorActividades, #infoActividad,
 	#contenedorReservas, #contenedorActividad, #contenedorItinerarios,
-	#contenedorAjustes, #contenedorPruebasC, #contenedorPruebasD {
+	#contenedorAjustes, #contenedorPruebasC, #contenedorPruebasD,
+	#contenedorPremios {
 	display: block;
 	margin: 25px auto 0 auto;
 	align-items: center;
 }
 
-#reservas, #ajustes, #pruebas {
+#reservas, #ajustes, #pruebas, #premios {
 	width: 600px;
-	margin: 0 auto 0 auto;
+	margin: 50px auto 0 auto;
 }
 
 #paradas, #pruebas, #actividad {
@@ -117,7 +122,7 @@ li .dropdown {
 	margin-bottom: 30px;
 }
 
-#ajustes {
+#ajustes, #premios {
 	display: none;
 }
 
@@ -185,15 +190,32 @@ li .dropdown {
 	border: none;
 	background: none;
 	outline: none;
+	cursor: pointer;
 }
 
-.boton:hover {
+.botonUser {
+	flex-shrink: 1;
+	border: none;
+	font-family: 'Cuprum', sans-serif;
+	color: #f4d03f;
+	font-size: 20px;
+	font-weight: 600;
+	cursor: pointer;
+	margin: 20px auto 0 auto;
+	border: none;
+	background: none;
+	outline: none;
+	border: none;
+}
+
+.boton:hover, .botonUser:hover {
 	color: orange;
 }
 
-.botonesPruebas {
+.botonesPruebas, .botonesUser {
 	display: flex;
-	flex-wrap: wrap;
+	margin: 0 auto 0 auto;
+	max-width: 500px;
 }
 
 .cargarPC, .cargarPD, .btnReserva {
@@ -396,7 +418,7 @@ input:-webkit-autofill {
 		width: 300px;
 		height: 200px;
 	}
-	#reservas, #ajustes, #pruebas {
+	#reservas, #ajustes, #pruebas, #premios {
 		width: 380px;
 	}
 	.tituloParada, .nombreItinerario, .nombreParada, .nombreActividad,
