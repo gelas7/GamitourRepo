@@ -33,12 +33,8 @@ public class ReservarActividadAccion extends Accion {
 		if (c != null && a != null) {
 			Reserva r = new Reserva(c,a,"probando",new Date());
 			sr.insertar(r);
-			System.out.println("Reserva OK");
 		}
-		else {
-			rutaSalida = "/Gamitour/errores/reservaIncorrecta.jsp";
-		}
-		
+	
 		return rutaSalida;
 	}
 }

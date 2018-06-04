@@ -26,9 +26,8 @@ h2 {
 
 /* -----------CABECERA MENUS------------ */
 .cabecera {
-	color: rgb(23, 24, 23);
-	background-color: #f4d03f;
-	opacity: 0.9;
+	color: black;
+	background-color: white;
 	justify-content: center;
 	margin-bottom: 25px;
 	position: fixed;
@@ -54,8 +53,8 @@ li {
 }
 
 li a:hover {
-	background-color: rgb(23, 24, 23);
-	color: #f4d03f;
+	background-color: black;
+	color: white;
 }
 
 li a, .dropbtn {
@@ -63,7 +62,7 @@ li a, .dropbtn {
 	display: inline-block;
 	font-size: 20px;
 	font-weight: 600;
-	color: rgb(32, 30, 30);
+	color: black;
 	text-align: center;
 	padding: 16px 0 16px 0;
 	text-decoration: none;
@@ -91,7 +90,7 @@ li .dropdown {
 
 .dropdown:hover .dropdown-content {
 	display: block;
-	background-color: #f9e79f;
+	background-color: white;
 	width: 25%;
 }
 
@@ -102,8 +101,7 @@ li .dropdown {
 	margin: 95px auto 0 auto;
 }
 
-#contenedorParadas, #contenedorActividades, #infoActividad,
-	#contenedorReservas, #contenedorActividad, #contenedorItinerarios,
+#contenedorParadas, #contenedorReservas, #contenedorItinerarios,
 	#contenedorAjustes, #contenedorPruebasC, #contenedorPruebasD,
 	#contenedorPremios {
 	display: block;
@@ -116,7 +114,21 @@ li .dropdown {
 	margin: 50px auto 0 auto;
 }
 
-#paradas, #pruebas, #actividad {
+#contenedorActividades {
+	display: flex;
+	margin: 25px auto 0 auto;
+	flex-wrap: wrap;
+}
+
+#infoActividad {
+	display: block;
+	margin: 25px auto 0 auto;
+	align-items: center;
+	width: 80%;
+	text-align: center;
+}
+
+#paradas, #pruebas {
 	display: none;
 	text-align: center;
 	margin-bottom: 30px;
@@ -127,53 +139,75 @@ li .dropdown {
 }
 
 #pruebas form {
-	color: white;
+	color: black;
 	margin: 20px auto 20px auto;
 	text-align: center;
 }
 
 .mapItinerario, .mapParada {
-	border: 1px solid #f4d03f;
+	border: 1px solid white;
 	margin: 20px auto 0 auto;
-	width: 500px;
+	width: 70%;
+	max-width: 600px;
 	height: 250px;
 }
 
 .imagenActividad {
-	border: 1px solid #f4d03f;
+	border: 1px solid white;
 	margin: 20px auto 0 auto;
 	display: block;
 	width: 270px;
-	height: 250px;
+	height: 220px;
 }
 
 .datosParadas, .datosActividad, .datosPrueba {
-	width: 80%;
 	margin: 20px auto 0px auto;
 	padding: 10px;
 	text-align: justify;
 	color: white;
-	border: 2px solid #f4d03f;
+	border: 1px solid white;
+}
+
+#contenedorActividad {
+	align-items: center;
+	margin: 0 auto 25px auto;
+	text-align: justify;
+	color: black;
+	min-width: 450px;
+}
+
+.contenedorParada, .contenedorPrueba, #actividad {
+	width: 70%;
+	align-items: center;
+	margin: 20px auto 0px auto;
+	padding: 25px;
+	text-align: justify;
+	color: black;
+	border: 1px dashed white;
+}
+
+#actividad {
+	margin-bottom: 25px;
+	display:none;
 }
 
 /* -----------TITULOS Y NOMBRES------------ */
 .nombreItinerario, .nombreActividad, .nombreParada, .nombrePrueba {
-	width: 100%;
+	display: block;
 	padding: 0;
 	border: none;
 	font-family: 'Cuprum', sans-serif;
-	color: #f4d03f;
+	color: white;
 	font-size: 40px;
 	font-weight: 600;
 	margin: 0 auto 0 auto;
 	background: none;
 	outline: none;
 	text-align: center;
-	width: 100%;
 }
 
 .nombreItinerario:hover, .nombreActividad:hover {
-	color: orange;
+	color: #d9d9d9;;
 	cursor: pointer;
 }
 
@@ -182,7 +216,7 @@ li .dropdown {
 	display: block;
 	border: none;
 	font-family: 'Cuprum', sans-serif;
-	color: #f4d03f;
+	color: white;
 	font-size: 30px;
 	font-weight: 600;
 	cursor: pointer;
@@ -197,7 +231,7 @@ li .dropdown {
 	flex-shrink: 1;
 	border: none;
 	font-family: 'Cuprum', sans-serif;
-	color: #f4d03f;
+	color: white;
 	font-size: 20px;
 	font-weight: 600;
 	cursor: pointer;
@@ -209,7 +243,7 @@ li .dropdown {
 }
 
 .boton:hover, .botonUser:hover {
-	color: orange;
+	color: #d9d9d9;;
 }
 
 .botonesPruebas, .botonesUser {
@@ -232,6 +266,10 @@ li .dropdown {
 	margin: 15px auto 0 auto;
 }
 
+.cargarPC:hover, .cargarPD:hover, .btnReserva:hover {
+	color: #d9d9d9;
+}
+
 .btnReserva {
 	display: block;
 }
@@ -248,7 +286,8 @@ td, th {
 }
 
 th {
-	background-color: #f4d03f;
+	background-color: black;
+	color:white;
 	font-weight: 900;
 }
 
@@ -265,11 +304,11 @@ td {
 
 td:hover {
 	background-color: #666;
-	color: white;
+	color: black;
 }
 
 tr {
-	background-color: white
+	background-color: white;
 }
 
 table {
@@ -285,7 +324,7 @@ table a {
 
 table a:hover {
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 /**FORMULARIOS**/
@@ -300,7 +339,7 @@ input {
 	margin-left: 10px;
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px solid #f4d03f;
+	border-bottom: 1px solid white;
 	outline: none;
 	color: white;
 	font-family: 'Dosis', sans-serif;
@@ -330,18 +369,18 @@ input[name="password1"], input[name="password2"] {
 .submitPC {
 	font-size: 25x;
 	font-weight: 400;
-	color: white;
+	color: black;
 }
 
 #ajustes .submitUser {
 	font-size: 38px;
 	font-weight: 700;
 	background-color: transparent;
-	color: #f4d03f;
+	color: white;
 }
 
 #ajustes .submitUser:hover {
-	color: orange;
+	color: #d9d9d9;
 	cursor: pointer;
 }
 
@@ -369,11 +408,11 @@ input:-webkit-autofill {
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-	color: #c9c9c9;
+	color: #d9d9d9;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-	color: #c9c9c9;
+	color: #d9d9d9;
 }
 
 /**MEDIA QUERIES**/
@@ -415,8 +454,7 @@ input:-webkit-autofill {
 		font-size: 20px;
 	}
 	.mapItinerario, .mapParada {
-		width: 300px;
-		height: 200px;
+		height: 180px;
 	}
 	#reservas, #ajustes, #pruebas, #premios {
 		width: 380px;
@@ -424,5 +462,18 @@ input:-webkit-autofill {
 	.tituloParada, .nombreItinerario, .nombreParada, .nombreActividad,
 		.nombrePrueba {
 		font-size: 30px;
+	}
+	#contenedorActividades {
+		flex-direction: column;
+	}
+	#contenedorActividad {
+		min-width: 200px;
+	}
+	.imagenActividad {
+		width: 250px;
+		height: 190px;
+	}
+	.contenedorParada, .contenedorPrueba {
+		padding: 10px;
 	}
 }

@@ -78,12 +78,12 @@ li .dropdown {
 
 li a:hover {
 	background-color: rgb(23, 24, 23);
-	color: #f4d03f;
+	color: white;
 }
 
 .cabecera {
 	color: rgb(23, 24, 23);
-	background-color: #f4d03f;
+	background-color: white;
 	opacity: 0.9;
 	justify-content: center;
 	position: fixed;
@@ -102,7 +102,7 @@ li a:hover {
 	font-weight: 200;
 	font-size: 25px;
 	margin-top: 60px;
-	background: RGB(246, 220, 79);
+	background-color: white;
 	opacity: 0.9;
 	color: rgb(7, 7, 7);
 	padding: 1em;
@@ -110,7 +110,6 @@ li a:hover {
 	float: right;
 	min-width: 200px;
 	text-align: center;
-	background: RGB(246, 220, 79);
 }
 
 .pestanaInicio h1 {
@@ -122,11 +121,10 @@ li a:hover {
 	display: block;
 	width: 85%;
 	padding: 10px;
-	border: none;
 	margin: auto;
 	font-size: 1.3em;
-	background: RGB(216, 192, 49);
-	color: rgb(59, 56, 56);
+	background-color: #d8d8d8;
+	color: black;
 	border-radius: 3px;
 	cursor: pointer;
 	transition: .3s background;
@@ -135,7 +133,7 @@ li a:hover {
 
 .pestanaInicio button:hover {
 	background: black;
-	color: rgba(252, 227, 7, 0.788);
+	color: white;
 }
 
 @media ( max-width : 600px) {

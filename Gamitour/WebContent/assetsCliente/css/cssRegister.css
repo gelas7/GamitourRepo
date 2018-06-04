@@ -15,7 +15,7 @@ a {
 
 .cabecera {
 	color: rgb(23, 24, 23);
-	background-color: #f4d03f;
+	background-color: white;
 	opacity: 0.9;
 	justify-content: center;
 	margin-bottom: 25px;
@@ -52,7 +52,7 @@ a {
 
 .cabecera li a:hover {
 	background-color: rgb(23, 24, 23);
-	color: #f4d03f;
+	color: white;
 }
 
 .cabecera i {
@@ -94,7 +94,7 @@ a {
 }
 
 h3 a:hover {
-	color: #f4d03f;
+	color: white;
 	cursor: pointer;
 }
 
@@ -108,7 +108,7 @@ input {
 	margin-left: 10px;
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px solid #f4d03f;
+	border-bottom: 1px solid white;
 	outline: none;
 	color: white;
 	font-family: 'Dosis', sans-serif;
@@ -152,7 +152,7 @@ input[name="codigopostal"], input[name="telefono"] {
 }
 
 .inputFile:focus+label, .inputFile+label:hover {
-	color: #f4d03f;
+	color: white;
 	cursor: pointer;
 	font-size: 20.1px;
 }
@@ -165,7 +165,7 @@ input[name="codigopostal"], input[name="telefono"] {
 	font-size: 38px;
 	font-weight: 700;
 	background-color: transparent;
-	color: #f4d03f;
+	color: white;
 	font-family: 'Francois One', sans-serif;
 	border: none;
 	outline: none;
@@ -173,7 +173,7 @@ input[name="codigopostal"], input[name="telefono"] {
 }
 
 .submitUser:hover {
-	color: orange;
+	color: #d9d9d9;
 	cursor: pointer;
 }
 
@@ -187,6 +187,9 @@ input[name="codigopostal"], input[name="telefono"] {
 	font-weight: 600;
 }
 
+#logToReg:hover,#regToLog:hover{
+	color:#d9d9d9;
+}
 @media ( max-width : 600px) {
 	html, body {
 		background-image: url("../img/p1.jpg");

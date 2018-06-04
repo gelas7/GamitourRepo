@@ -42,7 +42,7 @@
 					class="material-icons">map</i><span>RUTAS</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i
 					class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
-			<li style="background-color:black;" class="dropdown"><a style="color:#f4d03f;" href="#" class="dropbtn"><i
+			<li style="background-color:black;" class="dropdown"><a style="color:white;" href="#" class="dropbtn"><i
 					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
 				    <a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>

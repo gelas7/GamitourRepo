@@ -65,7 +65,7 @@ window.onload = function() {
         }
 	    
 	    infoActividad += `<a class="btnReserva" id="btnReserva"
-				onclick="return confirm('¿Desea confirmar su reserva?')">Reservar la actividad
+				onclick="return confirm('¿Desea confirmar su reserva?')" >Reservar la actividad
 			</a><div class="datosActividad">`;
 	   
        	if(actividad.fechainicio.length>2)

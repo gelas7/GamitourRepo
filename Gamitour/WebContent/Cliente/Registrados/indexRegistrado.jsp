@@ -25,7 +25,7 @@
 
 	<div class="cabecera">
 		<ul class="menu">
-			<li style="background-color:black;"><a style="color:#f4d03f;" href="#"><i class="material-icons">home</i><span>INICIO</span></a></li>
+			<li style="background-color:black;"><a style="color:white;" href="#"><i class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
 					class="material-icons">map</i><span>RUTAS</span></a></li>
             <li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>

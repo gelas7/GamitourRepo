@@ -100,7 +100,7 @@ window.onload = function() {
 	    document.getElementById('contenedorParadas').innerHTML = "";
 		    
 	    for (let parada in paradas) {
-	        divParada = `<button class="nombreParada" >${paradas[parada].nombre}</button>
+	        divParada = `<div class="contenedorParada"><button class="nombreParada" >${paradas[parada].nombre}</button>
 	        			<div id="mapaParada${contador}" class="mapParada"></div>
 	        <div class="botonesPruebas">`;
 	        if(paradas[parada].pruebaculturales.length>0){
@@ -125,7 +125,7 @@ window.onload = function() {
 		        divParada+=`</div>`;
 	        }
 	       
-	        divParada += `<br><br>`;
+	        divParada += `</div><br><br>`;
 	        document.getElementById("contenedorParadas").innerHTML += divParada;
 	
 	        contador++;
@@ -182,14 +182,14 @@ window.onload = function() {
 
         if(pruebasC.length>0){
 	        for (var i = 0; i < pruebasC.length; i++) {
-		        divPrueba = `<a class="nombrePrueba">${pruebasC[i].nombre}</a>
+		        divPrueba = `<div class="contenedorPrueba"><a class="nombrePrueba">${pruebasC[i].nombre}</a>
 		        		<form action="" autocomplete="off">`;
 		        		divPrueba+=`<a>${pruebasC[i].pregunta}</a><br><br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="1">${pruebasC[i].respuesta}<br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta2}<br>`;
 		        		divPrueba+=`<input type="radio" name="repuesta" value="0">${pruebasC[i].respuesta3}<br><br>`;
 		        		divPrueba+=`<input type="submit" disabled="disabled" value="Enviar respuesta" class="submitPC">`;
-		        		divPrueba+=`</form>`;
+		        		divPrueba+=`</form></div>`;
 				document.getElementById("contenedorPruebasC").innerHTML += divPrueba;
 		    }
 		        
@@ -213,12 +213,12 @@ window.onload = function() {
         var divPrueba="";
 
 	    for (var i = 0; i < pruebasD.length; i++) {
-		    divPrueba += `<a class="nombrePrueba">${pruebasD[i].nombre}</a>`;
+		    divPrueba += `<div class="contenedorPrueba"><a class="nombrePrueba">${pruebasD[i].nombre}</a>`;
 	        divPrueba += `<div class="datosPrueba">`;
 			    divPrueba += `<a><b>Explicacion: </b> ${pruebasD[i].explicacion}</a><br><br>`;
 			    divPrueba += `<a><b>Fecha de comienzo: </b> ${pruebasD[i].fechainicio}</a><br><br>`;
 			    divPrueba += `<a><b>Puntos: </b> ${pruebasD[i].puntos}</a><br><br>`;
-		    divPrueba += `</div>`;
+		    divPrueba += `</div></div>`;
 		        
 			document.getElementById("contenedorPruebasD").innerHTML += divPrueba;
 		}   	
