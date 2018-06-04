@@ -26,7 +26,7 @@ public class Logout extends HttpServlet {
 		
 		session.invalidate();
 		
-		String salida = "/Gamitour/Cliente/index.jsp";
+		String salida = "/Gamitour/MostrarPublico.cl?id=index";
 
 		response.sendRedirect(salida);
 	}
