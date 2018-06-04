@@ -29,7 +29,7 @@
 
 	<div class="cabecera">
 		<ul>
-			<li><a href="/Gamitour/Cliente/index.html"><i
+			<li><a href="/Gamitour/MostrarPublico.cl?id=index"><i
 					class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
 					class="material-icons">map</i><span>RUTAS</span></a></li>

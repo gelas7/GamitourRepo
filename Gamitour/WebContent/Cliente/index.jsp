@@ -1,9 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<html>
 
-<!DOCTYPE html>
-<html lang="es">
 <head>
 <title>Gamiastur</title>
 
@@ -26,20 +22,15 @@
 <body>
 
 	<div class="cabecera">
-		<ul class="menu">
+		<ul>
 			<li style="background-color: black;"><a style="color: white;"
 				href="#"><i class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
-					class="material-icons">map</i><span>RUTAS</span></a></li>
+					class="material-icons"">map</i><span>RUTAS</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i
-					class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
-			<li class="dropdown"><a
-				href="/Gamitour/MostrarPublico.cl?id=usuario" class="dropbtn"><i
-					class="material-icons">person</i><span>MI CUENTA</span></a>
-				<div class="dropdown-content">
-					<a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
-				</div></li>
-
+					class="material-icons"">directions_run</i><span>ACTIVIDADES</span></a></li>
+			<li><a href="/Gamitour/MostrarPublico.cl?id=usuario"><i
+					class="material-icons">person</i><span>INICIAR SESIÓN</span></a></li>
 		</ul>
 	</div>
 
@@ -50,17 +41,17 @@
 			https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" src="/Gamitour/assetsCliente/video/v.mp4"
 			type="video/mp4">
 	</video>
-	
+
 	<div class="pestanaInicio">
 
 		<h1>Bienvenido a Gamiastur</h1>
 
 
-		<p>Tu guÃ­a turÃ­stico en Asturias</p>
+		<p>Tu guía turístico en Asturias</p>
 
 		<p>
 			<button>
-				<i class="material-icons" style="font-size: 48px;">public</i>
+				<i class="material-icons">public</i>
 			</button>
 		</p>
 
@@ -74,7 +65,6 @@
 		<div id="contenedorNoticias"></div>
 
 	</div>
-
 
 
 </body>

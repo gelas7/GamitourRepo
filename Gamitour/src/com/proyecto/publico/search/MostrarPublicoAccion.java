@@ -26,7 +26,7 @@ import com.proyecto.util.Accion;
 public class MostrarPublicoAccion extends Accion {
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
-		
+
 		ServiceNoticias sn = new ServiceNoticiasImp();
 		ServiceClientesImp sc = new ServiceClientesImp();
 		ServiceItinerarios si = new ServiceItinerariosImp();
@@ -34,82 +34,76 @@ public class MostrarPublicoAccion extends Accion {
 		ServiceMultimedias sm = new ServiceMultimediasImp();
 		ServiceReservasImp sr = new ServiceReservasImp();
 
-
-		List<Noticia> listaNoticias = sn.buscarTodos();
-		List<Cliente> listaClientes = sc.buscarTodos();
-		List<Itinerario> listaItinerarios = si.buscarTodos();
-		List<Actividad> listaActividades = sa.buscarTodos();
 		List<Multimedia> listaMultimedias = sm.buscarTodos();
 
-		// JSON con GSON
 		Gson g = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
 
-		String its = g.toJson(listaItinerarios);// Itinerarios-Paradas-Pruebas
-		// System.out.println("Itinerarios: " + its);
-
-		String cls = g.toJson(listaClientes); // Clientes-Premios-Votos-Comentarios-Activiades-Multimedias
-		// System.out.println("Clientes: " + cls);
-
-		String ns = g.toJson(listaNoticias);
-		// System.out.println("Noticias: " + ns);
-
-		String as = g.toJson(listaActividades);
-		// System.out.println("Actividades: " + as);
-
 		String ms = g.toJson(listaMultimedias); // Multimedias-Comentarios-Votos
-		// System.out.println("Multimedias: " + ms);
-
-		request.getSession().setAttribute("listaClientes", cls);
-		request.getSession().setAttribute("listaItinerarios", its);
-		request.getSession().setAttribute("listaNoticias", ns);
-		request.getSession().setAttribute("listaActividades", as);
 		request.getSession().setAttribute("listaMultimedias", ms);
 
-		String solicitud = request.getParameter("id");// Que info debemos mostrar(rutas,infoCliente,actividades...)
+		String solicitud = request.getParameter("id");
 
 		String email = (String) request.getSession().getAttribute("email");
 		String rol = (String) request.getSession().getAttribute("rol");
 
 		String salida = "Cliente/";
 
-		if (email != null && rol != null) { //REGISTRADOS
+		if (email != null && rol != null) { // REGISTRADOS
 			salida += "Registrados/";
 
 			switch (solicitud) {
-			
+
 			case "index":
 				salida += "indexRegistrado.jsp";
+				List<Noticia> listaNoticias = sn.buscarTodos();
+				String ns = g.toJson(listaNoticias);
+				request.getSession().setAttribute("listaNoticias", ns);
 				break;
 			case "rutas":
 				salida += "RutasRegistrado.jsp";
+				List<Itinerario> listaItinerarios = si.buscarTodos();
+				String its = g.toJson(listaItinerarios);
+				request.getSession().setAttribute("listaItinerarios", its);
 				break;
 			case "actividades":
 				salida += "ActividadesRegistrado.jsp";
+				List<Actividad> listaActividades = sa.buscarTodos();
+				String as = g.toJson(listaActividades);
+				request.getSession().setAttribute("listaActividades", as);
 				break;
 			case "usuario":
-				Cliente cliente = sc.buscarClientePorEmail(email);
-				Integer idCliente = cliente.getIdcliente();
-				request.getSession().setAttribute("cliente", cliente);
-				request.getSession().setAttribute("reservasClienteActual", sr.buscarReservasPorIdCliente(idCliente));
-				request.getSession().setAttribute("premiosClienteActual", cliente.getPremios());
 				salida += "UsuarioRegistrado.jsp";
+				Cliente cliente = sc.buscarClientePorEmail(email);
+				request.getSession().setAttribute("cliente", cliente);
+				request.getSession().setAttribute("reservasClienteActual", sr.buscarReservasPorIdCliente(cliente.getIdcliente()));
+				request.getSession().setAttribute("premiosClienteActual", cliente.getPremios());
 				break;
 			default:
 				System.out.println("Error en eleccion de salida Clientes - MostrarPublicoAccion");
 				break;
 			}
 		}
-		
+
 		else {
 			switch (solicitud) {
 			case "index":
-				salida += "index.html";
+				salida += "index.jsp";
+				List<Noticia> listaNoticias = sn.buscarTodos();
+				String ns = g.toJson(listaNoticias);
+				request.getSession().setAttribute("listaNoticias", ns);
+				System.out.println("Noticias: "+ns);
 				break;
 			case "rutas":
 				salida += "RutasPublico.jsp";
+				List<Itinerario> listaItinerarios = si.buscarTodos();
+				String its = g.toJson(listaItinerarios);
+				request.getSession().setAttribute("listaItinerarios", its);
 				break;
 			case "actividades":
 				salida += "ActividadesPublico.jsp";
+				List<Actividad> listaActividades = sa.buscarTodos();
+				String as = g.toJson(listaActividades);
+				request.getSession().setAttribute("listaActividades", as);
 				break;
 			case "usuario":
 				salida += "Register.jsp";
