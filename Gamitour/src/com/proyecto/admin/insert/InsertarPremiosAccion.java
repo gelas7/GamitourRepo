@@ -65,9 +65,9 @@ public class InsertarPremiosAccion extends HttpServlet {
 
 		imagenStream.close();
 
-//		Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
+		Cliente c = sc.buscarPorClave(0);//ADMIN DE PREMIOS
 
-		Premio p = new Premio(null, nombre, descripcion, imagenName, date1, date2, Integer.parseInt(puntos));
+		Premio p = new Premio(c, nombre, descripcion, imagenName, date1, date2, Integer.parseInt(puntos));
 
 		sp.insertar(p);
 

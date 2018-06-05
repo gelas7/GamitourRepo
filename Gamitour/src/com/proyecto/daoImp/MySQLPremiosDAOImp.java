@@ -35,8 +35,7 @@ public class MySQLPremiosDAOImp extends GenericDAOImp<Premio, Integer> implement
 		List<Premio> lista = null;
 		try {
 			sf.getCurrentSession().beginTransaction();
-			Query q = sf.getCurrentSession().createQuery("select p from Premio p where cliente_idcliente=:id");
-			q.setParameter("id", null);
+			Query q = sf.getCurrentSession().createQuery("select p from Premio p where cliente_idcliente=0");
 			lista = q.getResultList();
 			sf.getCurrentSession().getTransaction().commit();
 			
