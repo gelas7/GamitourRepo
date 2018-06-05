@@ -1,7 +1,8 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	background: url("/Gamitour/assetsCliente/img/fondo3.jpeg") no-repeat center center fixed;
+	background: url("/Gamitour/assetsCliente/img/fondo3.jpeg") no-repeat
+		center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -102,13 +103,13 @@ li .dropdown {
 
 #contenedorParadas, #contenedorReservas, #contenedorItinerarios,
 	#contenedorAjustes, #contenedorPruebasC, #contenedorPruebasD,
-	#contenedorPremios {
+	#contenedorPremios, #contenedorPremiosTienda {
 	display: block;
 	margin: 25px auto 0 auto;
 	align-items: center;
 }
 
-#reservas, #ajustes, #pruebas, #premios {
+#reservas, #ajustes, #pruebas, #premios, #tienda {
 	width: 600px;
 	margin: 50px auto 0 auto;
 }
@@ -133,7 +134,7 @@ li .dropdown {
 	margin-bottom: 30px;
 }
 
-#ajustes, #premios {
+#ajustes, #premios, #tienda {
 	display: none;
 }
 
@@ -467,10 +468,10 @@ input:-webkit-autofill {
 	.boton {
 		font-size: 20px;
 	}
-	#reservas, #ajustes, #premios {
+	#reservas, #ajustes, #premios, #tienda {
 		width: 360px;
 	}
-	#reservas td, #premios td, #reservas th, #premios th {
+	#reservas td, #premios td, #reservas th, #premios th, #tienda th {
 		font-size: 14px;
 	}
 	#pruebas {
