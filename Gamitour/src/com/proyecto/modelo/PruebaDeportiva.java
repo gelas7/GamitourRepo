@@ -21,6 +21,7 @@ import com.google.gson.annotations.Expose;
 public class PruebaDeportiva implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
+	@Expose
 	private Integer idpruebadeportiva;
 	private Parada parada;
 	@Expose

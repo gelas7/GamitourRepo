@@ -152,7 +152,7 @@ li .dropdown {
 	height: 250px;
 }
 
-.imagenActividad {
+.imagenActividad, .imagenPrueba {
 	border: 1px solid white;
 	margin: 20px auto 0 auto;
 	display: block;
@@ -161,6 +161,7 @@ li .dropdown {
 }
 
 .datosParadas, .datosActividad, .datosPrueba {
+	background-color: black;
 	margin: 20px auto 0px auto;
 	padding: 10px;
 	text-align: justify;
@@ -176,17 +177,17 @@ li .dropdown {
 }
 
 .contenedorParada, .contenedorPrueba, #actividad {
-	width: 70%;
 	align-items: center;
 	margin: 20px auto 0px auto;
 	padding: 25px;
 	text-align: justify;
 	border: 1px dashed white;
+	width: 70%;
 }
 
 #actividad {
 	margin-bottom: 25px;
-	display:none;
+	display: none;
 }
 
 /* -----------TITULOS Y NOMBRES------------ */
@@ -251,6 +252,7 @@ li .dropdown {
 }
 
 .cargarPC, .cargarPD, .btnReserva {
+	display: flex;
 	width: 230px;
 	border: none;
 	font-family: 'Cuprum', sans-serif;
@@ -262,6 +264,7 @@ li .dropdown {
 	outline: none;
 	padding: 0;
 	margin: 15px auto 0 auto;
+	width: 230px;
 }
 
 .cargarPC:hover, .cargarPD:hover, .btnReserva:hover {
@@ -285,7 +288,7 @@ td, th {
 
 th {
 	background-color: black;
-	color:white;
+	color: white;
 	font-weight: 900;
 }
 
@@ -451,15 +454,20 @@ input:-webkit-autofill {
 	.boton {
 		font-size: 20px;
 	}
-	.mapItinerario, .mapParada {
-		height: 180px;
+	#reservas, #ajustes, #premios {
+		width: 360px;
 	}
-	#reservas, #ajustes, #pruebas, #premios {
-		width: 380px;
+	#reservas td, #premios td, #reservas th, #premios th {
+		font-size: 14px;
+	}
+	#pruebas {
+		width: 300px;
+		font-size: 16px;
 	}
 	.tituloParada, .nombreItinerario, .nombreParada, .nombreActividad,
 		.nombrePrueba {
 		font-size: 30px;
+		width: 270px;
 	}
 	#contenedorActividades {
 		flex-direction: column;
@@ -467,11 +475,16 @@ input:-webkit-autofill {
 	#contenedorActividad {
 		min-width: 200px;
 	}
-	.imagenActividad {
+	.imagenActividad, .imagenPrueba {
 		width: 250px;
 		height: 190px;
 	}
-	.contenedorParada, .contenedorPrueba {
+	.contenedorParada, .contenedorPrueba, #actividad {
 		padding: 10px;
+		border: none;
+		width: 100%;
+	}
+	.botonUser {
+		font-size: 16px;
 	}
 }

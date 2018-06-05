@@ -3,6 +3,10 @@ window.onload = function() {
 
     var listaItinerarios = document.getElementById("listaItinerarios");
     var jsonItinerarios = JSON.parse(listaItinerarios.value);
+    
+    var listaMultimedias = document.getElementById("listaMultimedias");
+    var jsonMultimedias = JSON.parse(listaMultimedias.value);
+    
     var botonItinerarios = document.getElementById("btnItinerarios");
     var botonParadas= document.getElementById("btnParadas");
     botonItinerarios.addEventListener("click", cargarItinerarios, false);
@@ -104,10 +108,10 @@ window.onload = function() {
 	        			<div id="mapaParada${contador}" class="mapParada"></div>
 	        <div class="botonesPruebas">`;
 	        if(paradas[parada].pruebaculturales.length>0){
-	        	divParada += `<button class="cargarPC" value="${numItinerario}-${parada}">Pruebas Culturales</button>`;
+	        	divParada += `<button class="cargarPC" value="${numItinerario}-${parada}"><i class="material-icons">movie_filter</i>Pruebas Culturales</button>`;
 	        }
 	        if(paradas[parada].pruebadeportivas.length>0){
-	        	divParada += `<button class="cargarPD" value="${numItinerario}-${parada}">Pruebas Deportivas</button>`;
+	        	divParada += `<button class="cargarPD" value="${numItinerario}-${parada}"><i class="material-icons">golf_course</i>Pruebas Deportivas</button>`;
 	        }
 	        divParada += `</div>`;
 
@@ -214,11 +218,21 @@ window.onload = function() {
 
 	    for (var i = 0; i < pruebasD.length; i++) {
 		    divPrueba += `<div class="contenedorPrueba"><a class="nombrePrueba">${pruebasD[i].nombre}</a>`;
-	        divPrueba += `<div class="datosPrueba">`;
-			    divPrueba += `<a><b>Explicacion: </b> ${pruebasD[i].explicacion}</a><br><br>`;
-			    divPrueba += `<a><b>Fecha de comienzo: </b> ${pruebasD[i].fechainicio}</a><br><br>`;
-			    divPrueba += `<a><b>Puntos: </b> ${pruebasD[i].puntos}</a><br><br>`;
-		    divPrueba += `</div></div>`;
+		        divPrueba += `<div class="datosPrueba">`;
+				    divPrueba += `<a><b>Explicacion: </b> ${pruebasD[i].explicacion}</a><br><br>`;
+				    divPrueba += `<a><b>Fecha de comienzo: </b> ${pruebasD[i].fechainicio}</a><br><br>`;
+				    divPrueba += `<a><b>Puntos: </b> ${pruebasD[i].puntos}</a><br><br>`;
+			    divPrueba += `</div>`;
+			    divPrueba += `<div class="multimediasPrueba">`;
+			    	for(var j=0; j<jsonMultimedias.length; j++){
+			    		if(jsonMultimedias[j].pruebaDeportivaIdpruebadeportiva==pruebasD[i].idpruebadeportiva){
+			    			divPrueba += `<img class="imagenPrueba" src="http://ambgubuntu.westeurope.cloudapp.azure.com:8080/subidas/multimedias/${jsonMultimedias[j].imagen}"></img>`
+			    		}
+			    	}
+				divPrueba += `</div>`;
+			    
+		    divPrueba += `</div>`;
+
 		        
 			document.getElementById("contenedorPruebasD").innerHTML += divPrueba;
 		}   	

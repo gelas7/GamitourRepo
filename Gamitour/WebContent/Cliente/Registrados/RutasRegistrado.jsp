@@ -51,6 +51,8 @@
 	<div id="contenido">
 
 		<input type="hidden" id="listaItinerarios" value='${listaItinerarios}' />
+		<input type="hidden" id="listaMultimedias" value='${listaMultimedias}' />
+		
 
 		<div id="itinerarios">
 			<div id="contenedorItinerarios"></div>

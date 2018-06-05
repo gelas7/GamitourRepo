@@ -1,5 +1,10 @@
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+
+<!DOCTYPE html>
+<html lang="es">
 <head>
 <title>Gamiastur</title>
 
@@ -22,7 +27,7 @@
 <body>
 
 	<div class="cabecera">
-		<ul>
+		<ul class="menu">
 			<li style="background-color: black;"><a style="color: white;"
 				href="#"><i class="material-icons">home</i><span>INICIO</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=rutas"><i
@@ -30,15 +35,14 @@
 			<li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i
 					class="material-icons"">directions_run</i><span>ACTIVIDADES</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=usuario"><i
-					class="material-icons">person</i><span>INICIAR SESIÓN</span></a></li>
+					class="material-icons">person</i><span>INICIAR SESIÃ“N</span></a></li>
 		</ul>
 	</div>
 
 	<input type="hidden" id="listaNoticias" value='${listaNoticias}' />
 
 	<video id="bgvid" playsinline autoplay muted loop>
-		<source poster="poster="
-			https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" src="/Gamitour/assetsCliente/video/v.mp4"
+		<source poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" src="/Gamitour/assetsCliente/video/v.mp4"
 			type="video/mp4">
 	</video>
 
@@ -47,7 +51,7 @@
 		<h1>Bienvenido a Gamiastur</h1>
 
 
-		<p>Tu guía turístico en Asturias</p>
+		<p>Tu guÃ­a turÃ­stico en Asturias</p>
 
 		<p>
 			<button>
@@ -60,7 +64,7 @@
 
 	<div class="noticias">
 
-		<h1>Noticias</h1>
+		<h1>TablÃ³n de noticias</h1>
 
 		<div id="contenedorNoticias"></div>
 

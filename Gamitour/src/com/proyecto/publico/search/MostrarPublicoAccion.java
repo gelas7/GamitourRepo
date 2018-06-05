@@ -34,15 +34,9 @@ public class MostrarPublicoAccion extends Accion {
 		ServiceMultimedias sm = new ServiceMultimediasImp();
 		ServiceReservasImp sr = new ServiceReservasImp();
 
-		List<Multimedia> listaMultimedias = sm.buscarTodos();
-
 		Gson g = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
 
-		String ms = g.toJson(listaMultimedias); // Multimedias-Comentarios-Votos
-		request.getSession().setAttribute("listaMultimedias", ms);
-
 		String solicitud = request.getParameter("id");
-
 		String email = (String) request.getSession().getAttribute("email");
 		String rol = (String) request.getSession().getAttribute("rol");
 
@@ -64,6 +58,9 @@ public class MostrarPublicoAccion extends Accion {
 				List<Itinerario> listaItinerarios = si.buscarTodos();
 				String its = g.toJson(listaItinerarios);
 				request.getSession().setAttribute("listaItinerarios", its);
+				List<Multimedia> listaMultimedias = sm.buscarTodos();
+				String ms = g.toJson(listaMultimedias); // Multimedias-Comentarios-Votos
+				request.getSession().setAttribute("listaMultimedias", ms);
 				break;
 			case "actividades":
 				salida += "ActividadesRegistrado.jsp";
@@ -75,7 +72,8 @@ public class MostrarPublicoAccion extends Accion {
 				salida += "UsuarioRegistrado.jsp";
 				Cliente cliente = sc.buscarClientePorEmail(email);
 				request.getSession().setAttribute("cliente", cliente);
-				request.getSession().setAttribute("reservasClienteActual", sr.buscarReservasPorIdCliente(cliente.getIdcliente()));
+				request.getSession().setAttribute("reservasClienteActual",
+						sr.buscarReservasPorIdCliente(cliente.getIdcliente()));
 				request.getSession().setAttribute("premiosClienteActual", cliente.getPremios());
 				break;
 			default:
@@ -91,7 +89,6 @@ public class MostrarPublicoAccion extends Accion {
 				List<Noticia> listaNoticias = sn.buscarTodos();
 				String ns = g.toJson(listaNoticias);
 				request.getSession().setAttribute("listaNoticias", ns);
-				System.out.println("Noticias: "+ns);
 				break;
 			case "rutas":
 				salida += "RutasPublico.jsp";

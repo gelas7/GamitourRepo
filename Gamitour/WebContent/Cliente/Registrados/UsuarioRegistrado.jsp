@@ -69,9 +69,9 @@
 					<thead>
 						<tr>
 							<th>ACTIVIDAD</th>
-							<th>FECHA COMPRA</th>
-							<th>FECHA ACTIVIDAD</th>
-							<th>COSTE</th>
+							<th>F.COMPRA</th>
+							<th>F.REALIZACIÓN</th>
+							<th>PRECIO</th>
 						</tr>
 					</thead>
 					<tbody>
