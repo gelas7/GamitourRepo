@@ -33,6 +33,7 @@
 </head>
 
 <body>
+	<%!String url = "http://ambgubuntu.westeurope.cloudapp.azure.com:8080/subidas";%>
 
 	<div class="cabecera">
 		<ul class="menu">
@@ -54,7 +55,8 @@
 
 	<div id="contenido">
 		<div class="infoUser">
-			<button class="puntosUser">Tienes ${cliente.puntosacumulados} puntos</button>
+			<button class="puntosUser">Tienes
+				${cliente.puntosacumulados} puntos</button>
 		</div>
 		<div class="botonesUser">
 			<button class="botonUser" id="btnAjustes">
@@ -70,7 +72,7 @@
 				<i class="material-icons">shop</i><a>Tienda</a>
 			</button>
 		</div>
-		
+
 		<div id="reservas">
 			<div id="contenedorReservas">
 				<table>
@@ -148,15 +150,16 @@
 								<td>${premio.nombre}</td>
 								<td>${premio.puntos}</td>
 								<td>${premio.fechaconsumo}</td>
-								<td>${premio.imagen}</td>
+								<td><img style="width: 40px; height: 40px;"
+									src=" <%=url%>/premios/${premio.imagen}"></img></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
 			</div>
 		</div>
-		
-		
+
+
 		<div id="tienda">
 			<div id="contenedorPremiosTienda">
 				<table>
@@ -174,11 +177,12 @@
 								<td>${premio.nombre}</td>
 								<td>${premio.puntos}</td>
 								<td>${premio.fechaconsumo}</td>
-								<td>${premio.imagen}</td>
+								<td><img style="width: 40px; height: 40px;"
+									src=" <%=url%>/premios/${premio.imagen}"></img></td>
 								<td><a class="comprar"
 									onclick="return confirm('¿Está seguro de que desea canjear este premio?')"
 									href="CanjearPremio.cl?id=${premio.idpremio}"><i
-										class="fas fa-trash-alt"></i> </a></td>
+										class="far fa-money-bill-alt"></i> </a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
