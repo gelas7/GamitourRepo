@@ -39,7 +39,7 @@ public class InsertarPremiosAccion extends HttpServlet {
 		Part imagen = request.getPart("imagen");
 		String fechaactivacion = request.getParameter("fechaactivacion");
 		String fechaconsumo = request.getParameter("fechaconsumo");
-		String cliente = request.getParameter("cliente");
+//		String cliente = request.getParameter("cliente");
 		String puntos = request.getParameter("puntos");
 		Date date1 = null;
 		Date date2 = null;
@@ -65,9 +65,9 @@ public class InsertarPremiosAccion extends HttpServlet {
 
 		imagenStream.close();
 
-		Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
+//		Cliente c = sc.buscarPorClave(Integer.parseInt(cliente));
 
-		Premio p = new Premio(c, nombre, descripcion, imagenName, date1, date2, Integer.parseInt(puntos));
+		Premio p = new Premio(null, nombre, descripcion, imagenName, date1, date2, Integer.parseInt(puntos));
 
 		sp.insertar(p);
 

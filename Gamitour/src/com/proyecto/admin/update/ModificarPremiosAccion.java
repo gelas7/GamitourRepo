@@ -7,8 +7,6 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.proyecto.modelo.Cliente;
-
 import com.proyecto.modelo.Premio;
 import com.proyecto.service.ServiceClientesImp;
 
@@ -30,7 +28,7 @@ public class ModificarPremiosAccion extends Accion {
 		String descripcion = request.getParameter("descripcion");
 		String fechaactivacion = request.getParameter("fechaactivacion");
 		String fechaconsumo = request.getParameter("fechaconsumo");
-		String idCliente = request.getParameter("cliente");
+//		String idCliente = request.getParameter("cliente");
 		String puntos = request.getParameter("puntos");
 		Date date1 = null;
 		Date date2 = null;
@@ -51,10 +49,10 @@ public class ModificarPremiosAccion extends Accion {
 			premio.setNombre(nombre);
 		if (descripcion .length()>0)
 			premio.setDescripcion(descripcion);
-		if (idCliente!=null) {
-			Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
-			premio.setCliente(c);
-		}
+//		if (idCliente!=null) {
+//			Cliente c = sc.buscarPorClave(Integer.parseInt(idCliente));
+//			premio.setCliente(c);
+//		}
 		if (fechaactivacion .length()>0)
 			premio.setFechaactivacion(date1);
 		if (fechaconsumo .length()>0)

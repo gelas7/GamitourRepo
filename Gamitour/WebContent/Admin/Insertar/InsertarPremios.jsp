@@ -47,15 +47,6 @@
 				enctype="multipart/form-data">
 				<h2>Insertar Premio</h2>
 				<p>
-					<label>Cliente: </label><select name="cliente">
-						<option value="" selected disabled>Seleccione un
-							cliente</option>
-						<c:forEach items="${listaClientes}" var="cliente">
-							<option value="${cliente.idcliente}">${cliente.nombre}</option>
-						</c:forEach>
-					</select>
-				</p>
-				<p>
 					<label>Nombre: </label><input type="text" name="nombre"
 						required="required" maxlength="50">
 				</p>

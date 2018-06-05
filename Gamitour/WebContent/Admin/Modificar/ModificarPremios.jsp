@@ -69,14 +69,14 @@
 				<p>
 					<label>Fecha de consumo: </label><input type="date" name="fechaconsumo">
 				</p>
-				<p>
-					<label>Cliente: </label><select name="cliente">
-						<option selected disabled>Seleccione un cliente</option>
-						<c:forEach items="${listaClientes}" var="cliente">
-							<option value="${cliente.idcliente}">${cliente.nombre}</option>
-						</c:forEach>
-					</select>
-				</p>
+<!-- 				<p> -->
+<!-- 					<label>Cliente: </label><select name="cliente"> -->
+<!-- 						<option selected disabled>Seleccione un cliente</option> -->
+<%-- 						<c:forEach items="${listaClientes}" var="cliente"> --%>
+<%-- 							<option value="${cliente.idcliente}">${cliente.nombre}</option> --%>
+<%-- 						</c:forEach> --%>
+<!-- 					</select> -->
+<!-- 				</p> -->
 				<p>
 					<input type="submit" value="Enviar" id="enviar">
 				</p>
