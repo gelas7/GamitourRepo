@@ -28,4 +28,9 @@ public class Temporizador implements ServletContextListener {
 		Timer temporizador = new Timer();
 		temporizador.schedule(new RepartoPremios(), horaDespertar, tiempoRepeticion);
 	}
+
+	@Override
+	public void contextDestroyed(ServletContextEvent arg0) {
+		
+	}
 }

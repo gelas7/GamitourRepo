@@ -33,7 +33,7 @@ window.onload = function() {
 		            	var texto = jsonNoticias[j].texto;
 		            	 if(texto.length>100){
 		            		 texto = texto.substring(0,100);
-		            		 texto = texto.concat("...");
+		            		 texto = texto.concat("... Continuar leyendo");
 		            	 }
 		            		 
 		            	divNoticia+= `<div class="textoNoticia"<a>${texto}</a></div>`;
