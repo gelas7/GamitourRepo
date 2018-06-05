@@ -86,4 +86,8 @@
 		<param-name>pass</param-name>
 		<param-value>Gamitour2018</param-value>
 	</context-param>
+
+	<listener>
+		<listener-class>com.proyecto.util.Temporizador</listener-class>
+	</listener>
 </web-app>

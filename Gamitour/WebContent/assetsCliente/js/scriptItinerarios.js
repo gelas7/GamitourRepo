@@ -2,10 +2,14 @@ window.onload = function() {
 
 
     var listaItinerarios = document.getElementById("listaItinerarios");
-    var jsonItinerarios = JSON.parse(listaItinerarios.value);
+    var jsonItinerarios = "";
+    if(listaItinerarios.value!="")
+    	jsonItinerarios = JSON.parse(listaItinerarios.value);
     
     var listaMultimedias = document.getElementById("listaMultimedias");
-    var jsonMultimedias = JSON.parse(listaMultimedias.value);
+    var jsonMultimedias = "";
+    if(listaMultimedias.value!="")
+    	jsonMultimedias=JSON.parse(listaMultimedias.value);
     
     var botonItinerarios = document.getElementById("btnItinerarios");
     var botonParadas= document.getElementById("btnParadas");

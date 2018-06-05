@@ -1,12 +1,11 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	background: url("../img/fondo3.jpeg") no-repeat center center fixed;
+	background: url("/Gamitour/assetsCliente/img/fondo3.jpeg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	min-width: 380px;
 }
 
 a {
@@ -226,19 +225,22 @@ li .dropdown {
 	cursor: pointer;
 }
 
-.botonUser {
-	flex-shrink: 1;
-	border: none;
+.infoUser {
+	margin: 0 auto 0 auto;
+	display: block;
+}
+
+.puntosUser {
+	display: block;
 	font-family: 'Cuprum', sans-serif;
 	color: white;
 	font-size: 20px;
 	font-weight: 600;
-	cursor: pointer;
-	margin: 20px auto 0 auto;
-	border: none;
+	margin: 0 auto 0 auto;
 	background: none;
 	outline: none;
-	border: none;
+	border: 1px solid white;
+	padding: 10px;
 }
 
 .boton:hover, .botonUser:hover {
@@ -247,12 +249,23 @@ li .dropdown {
 
 .botonesPruebas, .botonesUser {
 	display: flex;
+	margin: 20px auto 0 auto;
+	max-width: 400px;
+}
+
+.botonUser {
+	font-family: 'Cuprum', sans-serif;
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	cursor: pointer;
 	margin: 0 auto 0 auto;
-	max-width: 500px;
+	background: none;
+	outline: none;
+	border: none;
 }
 
 .cargarPC, .cargarPD, .btnReserva {
-	display: flex;
 	width: 230px;
 	border: none;
 	font-family: 'Cuprum', sans-serif;
@@ -263,7 +276,7 @@ li .dropdown {
 	background: none;
 	outline: none;
 	padding: 0;
-	margin: 15px auto 0 auto;
+	margin: 0 auto 0 auto;
 	width: 230px;
 }
 
@@ -305,7 +318,7 @@ td {
 
 td:hover {
 	background-color: #666;
-	color: black;
+	color: white;
 }
 
 tr {
@@ -484,7 +497,7 @@ input:-webkit-autofill {
 		border: none;
 		width: 100%;
 	}
-	.botonUser {
+	.botonUser, .puntosUser {
 		font-size: 16px;
 	}
 }

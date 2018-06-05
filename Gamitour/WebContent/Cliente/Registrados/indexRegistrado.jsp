@@ -45,11 +45,6 @@
 	</div>
 
 	<input type="hidden" id="listaNoticias" value='${listaNoticias}' />
-
-	<video id="bgvid" playsinline autoplay muted loop>
-		<source poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" src="/Gamitour/assetsCliente/video/v.mp4"
-			type="video/mp4">
-	</video>
 	
 	<div class="pestanaInicio">
 

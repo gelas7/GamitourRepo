@@ -14,7 +14,7 @@ public class MySQLMultimediasDAOImp extends GenericDAOImp<Multimedia, Integer> i
 		super(sf);
 	}
 	
-	public List<Multimedia> mostrarMultimediasPorPd(String idprueba)
+	public List<Multimedia> buscarPorPD(String idprueba)
 	{
 		List<Multimedia> lista = null;
 		try {

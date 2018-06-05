@@ -22,6 +22,7 @@ public class Premio implements java.io.Serializable{
 
 	
 	private static final long serialVersionUID = 1L;
+	@Expose
 	private Integer idpremio;
 	private Cliente cliente;
 	@Expose

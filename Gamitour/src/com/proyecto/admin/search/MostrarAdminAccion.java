@@ -71,15 +71,11 @@ public class MostrarAdminAccion extends Accion {
 		List<Multimedia> listaMultimedias = sm.buscarTodos();
 		List<Reserva> listaReservas = srv.buscarTodos();
 
-		// Guardo estos como atributos puesto que solo los necesito
-		// en Mostrar y no en otras paginas
-		request.setAttribute("listaPremios", listaPremios);
-		request.setAttribute("listaVotos", listaVotos);
-		request.setAttribute("listaPruebasCulturales", listaPruebasCulturales);
-		request.setAttribute("listaNoticias", listaNoticias);
-		request.setAttribute("listaComentarios", listaComentarios);
-
-		// Guardo estos en sesion puesto que los necesito además en otros formularios
+		request.getSession().setAttribute("listaPremios", listaPremios);
+		request.getSession().setAttribute("listaVotos", listaVotos);
+		request.getSession().setAttribute("listaPruebasCulturales", listaPruebasCulturales);
+		request.getSession().setAttribute("listaNoticias", listaNoticias);
+		request.getSession().setAttribute("listaComentarios", listaComentarios);
 		request.getSession().setAttribute("listaClientes", listaClientes);
 		request.getSession().setAttribute("listaItinerarios", listaItinerarios);
 		request.getSession().setAttribute("listaParadas", listaParadas);
@@ -89,10 +85,8 @@ public class MostrarAdminAccion extends Accion {
 		request.getSession().setAttribute("listaReservas", listaReservas);
 		request.getSession().setAttribute("listaActividades", listaActividades);
 
-
-
 		// Aqui guardo el nombre de la tabla que se esta manejando actualmente
-		request.setAttribute("divActual", request.getParameter("div"));
+		request.getSession().setAttribute("divActual", request.getParameter("div"));
 
 		return "Admin/MostrarAdmin.jsp";
 	}

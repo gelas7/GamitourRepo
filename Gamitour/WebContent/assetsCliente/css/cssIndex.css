@@ -1,24 +1,16 @@
 html, body {
-	height: 100%;
 	padding: 0;
 	margin: 0;
+	background: url("/Gamitour/assetsCliente/img/nieve.jpg") no-repeat
+		center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 a {
 	text-decoration: none;
-}
-
-video {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -100;
-	transform: translateX(-50%) translateY(-50%);
-	transition: 1s opacity;
 }
 
 a {
@@ -142,13 +134,25 @@ li a:hover {
 	font-size: 22px;
 	margin-top: 60px;
 	background-color: white;
-	opacity: 0.9;
-	color: rgb(7, 7, 7);
+	opacity: 0.8;
+	color: black;
 	padding: 1em;
-	width: 450px;
+	width: 430px;
 	float: left;
 	min-width: 200px;
 	text-align: center;
+	background-size: auto;
+}
+
+.noticia {
+	display: none;
+}
+
+.noticias h1 {
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-top: 0;
+	text-transform: uppercase;
 }
 
 .imagenNoticia {
@@ -173,11 +177,6 @@ li a:hover {
 	text-align: center;
 }
 
-/* .nombreNoticia:hover { */
-/* 	color: #d9d9d9; */
-/* 	cursor: pointer; */
-/* } */
-
 .textoNoticia {
 	margin: 20px auto 0px auto;
 	padding: 10px;
@@ -185,17 +184,6 @@ li a:hover {
 	color: black;
 	width: 400px;
 	overflow-wrap: break-word;
-}
-
-.noticia {
-	display: none;
-}
-
-.noticias h1 {
-	font-size: 30px;
-	text-transform : uppercase;
-	margin-top: 0;
-	text-transform: uppercase;
 }
 
 @media ( max-width : 950px) {
@@ -206,11 +194,7 @@ li a:hover {
 
 @media ( max-width : 600px) {
 	html, body {
-		background: url("../img/p1.jpg");
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
+
 	}
 	.pestanaInicio {
 		float: left;
@@ -223,9 +207,7 @@ li a:hover {
 	.pestanaInicio h1 {
 		font-size: 1.5em;
 	}
-	video {
-		display: none;
-	}
+
 	.cabecera i {
 		font-size: 25px;
 		display: block;

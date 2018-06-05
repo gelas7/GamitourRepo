@@ -18,8 +18,8 @@ import com.proyecto.service.ServiceItinerarios;
 import com.proyecto.service.ServiceItinerariosImp;
 import com.proyecto.service.ServiceMultimedias;
 import com.proyecto.service.ServiceMultimediasImp;
-import com.proyecto.service.ServiceNoticias;
 import com.proyecto.service.ServiceNoticiasImp;
+import com.proyecto.service.ServicePremiosImp;
 import com.proyecto.service.ServiceReservasImp;
 import com.proyecto.util.Accion;
 
@@ -27,12 +27,13 @@ public class MostrarPublicoAccion extends Accion {
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 
-		ServiceNoticias sn = new ServiceNoticiasImp();
+		ServiceNoticiasImp sn = new ServiceNoticiasImp();
 		ServiceClientesImp sc = new ServiceClientesImp();
 		ServiceItinerarios si = new ServiceItinerariosImp();
 		ServiceActividadesImp sa = new ServiceActividadesImp();
 		ServiceMultimedias sm = new ServiceMultimediasImp();
 		ServiceReservasImp sr = new ServiceReservasImp();
+		ServicePremiosImp sp = new ServicePremiosImp();
 
 		Gson g = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
 
@@ -75,7 +76,9 @@ public class MostrarPublicoAccion extends Accion {
 				request.getSession().setAttribute("reservasClienteActual",
 						sr.buscarReservasPorIdCliente(cliente.getIdcliente()));
 				request.getSession().setAttribute("premiosClienteActual", cliente.getPremios());
+				request.getSession().setAttribute("premiosLibres", sp.buscarPremiosNoAsignados());
 				break;
+
 			default:
 				System.out.println("Error en eleccion de salida Clientes - MostrarPublicoAccion");
 				break;

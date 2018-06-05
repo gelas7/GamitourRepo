@@ -21,6 +21,7 @@ public interface PremiosDAO extends GenericDAO<Premio, Integer> {
 	public List<Premio> buscarTodos();
 	
 	public List<Premio> buscarPremiosPorIdCliente(Integer idCliente);
-
+	
+	public List<Premio> buscarPremiosNoAsignados();
 
 }

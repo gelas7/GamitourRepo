@@ -63,7 +63,7 @@
 				</p>
 				<p>
 					<label for="password">Password:</label> <input type="password"
-						name="password" required="required" maxlength="20">
+						name="password" required="required"  pattern=".{6,20}" required title="Se requieren entre 6 y 20 caracteres">
 				</p>
 				<p>
 					<label for="telefono">Teléfono:</label> <input type="tel"

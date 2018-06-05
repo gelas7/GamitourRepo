@@ -46,6 +46,7 @@ import com.proyecto.publico.delete.EliminarReservasClienteAccion;
 import com.proyecto.publico.insert.ReservarActividadAccion;
 import com.proyecto.publico.search.BuscarClienteAccion;
 import com.proyecto.publico.search.MostrarPublicoAccion;
+import com.proyecto.publico.update.CanjearPremioAccion;
 
 public abstract class Accion {
 
@@ -67,6 +68,9 @@ public abstract class Accion {
 			break;	
 		case "EliminarReservasCliente":
 			accion = new EliminarReservasClienteAccion();
+			break;
+		case "CanjearPremio":
+			accion = new CanjearPremioAccion();
 			break;
 			
 		//ADMIN

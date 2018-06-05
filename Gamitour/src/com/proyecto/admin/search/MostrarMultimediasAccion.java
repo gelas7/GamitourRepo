@@ -15,7 +15,7 @@ public class MostrarMultimediasAccion extends Accion {
 		ServicePruebasDeportivasImp spd = new ServicePruebasDeportivasImp();
 
 		String id = request.getParameter("id");
-		request.getSession().setAttribute("listaMultimedias", sm.mostrarMultimediasPorPd(id));
+		request.getSession().setAttribute("listaMultimedias", sm.buscarPorPD(id));
 
 		request.setAttribute("nombrePruebaDeportiva", spd.buscarPorClave(Integer.parseInt(id)).getNombre());
 

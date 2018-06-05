@@ -42,16 +42,20 @@
 					class="material-icons">map</i><span>RUTAS</span></a></li>
 			<li><a href="/Gamitour/MostrarPublico.cl?id=actividades"><i
 					class="material-icons">directions_run</i><span>ACTIVIDADES</span></a></li>
-			<li style="background-color:black;" class="dropdown"><a style="color:white;" href="#" class="dropbtn"><i
+			<li style="background-color: black;" class="dropdown"><a
+				style="color: white;" href="#" class="dropbtn"><i
 					class="material-icons">person</i><span>MI CUENTA</span></a>
 				<div class="dropdown-content">
-				    <a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
+					<a href="/Gamitour/Logout"><i class="material-icons">exit_to_app</i><span>Logout</span></a>
 				</div></li>
 		</ul>
 	</div>
 
 
 	<div id="contenido">
+		<div class="infoUser">
+			<button class="puntosUser">Tienes ${cliente.puntosacumulados} puntos</button>
+		</div>
 		<div class="botonesUser">
 			<button class="botonUser" id="btnAjustes">
 				<i class="material-icons">build</i><a>Ajustes</a>
@@ -62,10 +66,14 @@
 			<button class="botonUser" id="btnPremios">
 				<i class="material-icons">attach_money</i><a>Premios</a>
 			</button>
+			<button class="botonUser" id="btnTienda">
+				<i class="material-icons">shop</i><a>Tienda</a>
+			</button>
 		</div>
+		
 		<div id="reservas">
 			<div id="contenedorReservas">
-				<table class="tablesorter">
+				<table>
 					<thead>
 						<tr>
 							<th>ACTIVIDAD</th>
@@ -122,10 +130,10 @@
 				</form>
 			</div>
 		</div>
-		
+
 		<div id="premios">
 			<div id="contenedorPremios">
-				<table id="tclientes" class="tablesorter">
+				<table>
 					<thead>
 						<tr>
 							<th>NOMBRE</th>
@@ -141,6 +149,36 @@
 								<td>${premio.puntos}</td>
 								<td>${premio.fechaconsumo}</td>
 								<td>${premio.imagen}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		
+		<div id="tienda">
+			<div id="contenedorPremiosTienda">
+				<table>
+					<thead>
+						<tr>
+							<th>NOMBRE</th>
+							<th>PUNTOS</th>
+							<th>CADUCIDAD</th>
+							<th>IMAGEN</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${premiosLibres}" var="premio">
+							<tr>
+								<td>${premio.nombre}</td>
+								<td>${premio.puntos}</td>
+								<td>${premio.fechaconsumo}</td>
+								<td>${premio.imagen}</td>
+								<td><a class="comprar"
+									onclick="return confirm('¿Está seguro de que desea canjear este premio?')"
+									href="CanjearPremio.cl?id=${premio.idpremio}"><i
+										class="fas fa-trash-alt"></i> </a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

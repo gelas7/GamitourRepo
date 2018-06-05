@@ -30,4 +30,20 @@ public class MySQLPremiosDAOImp extends GenericDAOImp<Premio, Integer> implement
 		return lista;
 	}
 
+	@Override
+	public List<Premio> buscarPremiosNoAsignados() {
+		List<Premio> lista = null;
+		try {
+			sf.getCurrentSession().beginTransaction();
+			Query q = sf.getCurrentSession().createQuery("select p from Premio p where cliente_idcliente=:id");
+			q.setParameter("id", null);
+			lista = q.getResultList();
+			sf.getCurrentSession().getTransaction().commit();
+			
+		} catch (RuntimeException e) {
+			sf.getCurrentSession().getTransaction().rollback();
+		}
+		return lista;
+	}
+
 }

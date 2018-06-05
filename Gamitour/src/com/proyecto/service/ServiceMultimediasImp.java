@@ -48,8 +48,8 @@ public class ServiceMultimediasImp implements ServiceMultimedias{
 	}
 
 	@Override
-	public List<Multimedia> mostrarMultimediasPorPd(String idprueba) {
-		return mtd.mostrarMultimediasPorPd(idprueba);
+	public List<Multimedia> buscarPorPD(String idprueba) {
+		return mtd.buscarPorPD(idprueba);
 	}
 
 	
