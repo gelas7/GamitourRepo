@@ -1,8 +1,8 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	background: url("/Gamitour/assetsCliente/img/fondo3.jpeg") no-repeat
-		center center fixed;
+	background: url("/Gamitour/assetsCliente/img/montanaOscura.jpg")
+		no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -286,7 +286,7 @@ li .dropdown {
 }
 
 .btnReserva {
-	margin-top:20px;
+	margin-top: 20px;
 	display: block;
 }
 
@@ -434,7 +434,6 @@ input:-webkit-autofill {
 /**MEDIA QUERIES**/
 @media ( max-width : 600px) {
 	html, body {
-		
 	}
 	h2 {
 		font-size: 20px;

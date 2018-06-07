@@ -1,7 +1,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	background: url("../img/fondo3.jpeg") no-repeat center center fixed;
+	background: url("/Gamitour/assetsCliente/img/montanaOscura.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -192,9 +192,7 @@ input[name="codigopostal"], input[name="telefono"] {
 }
 @media ( max-width : 600px) {
 	html, body {
-		background-image: url("../img/p1.jpg");
-		background-size: 100%;
-		background-color: rgb(90, 88, 88);
+
 	}
 	.cabecera i {
 		font-size: 25px;

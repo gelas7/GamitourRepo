@@ -98,6 +98,9 @@ public class MostrarPublicoAccion extends Accion {
 				List<Itinerario> listaItinerarios = si.buscarTodos();
 				String its = g.toJson(listaItinerarios);
 				request.getSession().setAttribute("listaItinerarios", its);
+				List<Multimedia> listaMultimedias = sm.buscarTodos();
+				String ms = g.toJson(listaMultimedias); // Multimedias-Comentarios-Votos
+				request.getSession().setAttribute("listaMultimedias", ms);
 				break;
 			case "actividades":
 				salida += "ActividadesPublico.jsp";

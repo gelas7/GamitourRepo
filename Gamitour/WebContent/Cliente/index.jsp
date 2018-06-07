@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+	<contenido>
 	<div class="cabecera">
 		<ul class="menu">
 			<li style="background-color: black;"><a style="color: white;"
@@ -65,7 +65,7 @@
 
 	</div>
 
-
+	</contenido>
 </body>
 
 </html>
